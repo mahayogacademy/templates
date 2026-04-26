@@ -468,7 +468,7 @@ export default function MahayogMeditation() {
               Beginning the Path
             </h2>
             <p className="text-sm text-white/70 max-w-md mx-auto leading-relaxed">
-              Three steps from where you are now to an awakened, lifelong practice.
+              Three steps from where you are now to awakening.
             </p>
           </div>
 
