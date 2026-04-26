@@ -184,11 +184,14 @@ export default function MahayogMeditation() {
             <h2 className="font-['Cormorant_Garamond'] text-4xl md:text-5xl font-light text-[#3d3830] mt-2 mb-6 leading-snug">
               Himalayan Siddha Mahayog
             </h2>
-            <p className="text-base leading-relaxed text-[#5a5248] mb-8">
-              Himalayan Siddha Mahāyog Meditation is the revival of an ancient Vedic spiritual science known as Surat-Śhabda Yoga — a path for transformation through direct experience and self-discovery, open to all.
+            <p className="text-base leading-relaxed text-[#5a5248] mb-6">
+              Himalayan Siddha Mahāyog Meditation is the revival of an ancient Vedic spiritual science known as Surat-Śhabda Yoga. It is a path for transformation through direct experience and self-discovery that can be practiced by all.
+            </p>
+            <p className="text-base leading-relaxed text-[#5a5248] mb-6">
+              Mahayog brings together two powerful practices: Ajapa Japa, automatic inner chanting of the Divine Name that continues in the background of awareness and Nāda-anusandhān, listening to the inner sound. These are activated through Shaktipat, a transmission of spiritual energy from enlightened Guru, His Holiness Jagadguru Mahayogi Siddhababa, to the student, which awakens inner awareness (Kundalini Shakti).
             </p>
             <p className="text-base leading-relaxed text-[#5a5248]">
-              Mahayog unites two powerful practices: <strong className="text-[#3d3830] font-medium">Ajapa Japa</strong> — automatic inner chanting of the Divine Name — and <strong className="text-[#3d3830] font-medium">Nāda-anusandhān</strong> — listening to the inner sound. These are awakened through <strong className="text-[#3d3830] font-medium">Shaktipat</strong>, a transmission of spiritual energy from the enlightened Guru to the student.
+              With this meditative path, Hatha, Mantra, Laya, and Raja Yoga naturally manifest within the practitioner. By practicing Mahayog, all four yoga types unfold.
             </p>
           </div>
 
