@@ -137,7 +137,7 @@ export function TempleAtDawn() {
             {[
               { title: "Swastha",    label: "Holistic Health",      desc: "Cultivating vitality across all dimensions of existence.",          img: "/__mockup/images/pillar-swastha.png" },
               { title: "Sikshya",   label: "Authentic Education",   desc: "Awakening inner intelligence through sacred Vedic learning.",       img: "/__mockup/images/pillar-sikshya.png" },
-              { title: "Sanskar",   label: "Character & Values",    desc: "Refining the mind through positive impressions and ritual.",        img: "/__mockup/images/pillar-sanskar.png" },
+              { title: "Sanskar",   label: "Character & Values",    desc: "Refine the self through positive impressions and ritual.",           img: "/__mockup/images/pillar-sanskar.png" },
               { title: "Sadvritta", label: "Ethical Conduct",       desc: "Living in harmony with natural laws and universal truth.",          img: "/__mockup/images/pillar-sadvritta.png" },
               { title: "Samriddhi", label: "Collective Prosperity", desc: "Fostering abundance that uplifts the welfare of all.",              img: "/__mockup/images/pillar-samriddhi.png" },
               { title: "Shanti",    label: "Peace",                 desc: "Realising the profound stillness at the core of all being.",        img: "/__mockup/images/pillar-shanti.png" },
