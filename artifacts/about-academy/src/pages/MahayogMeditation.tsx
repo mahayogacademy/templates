@@ -550,11 +550,11 @@ export default function MahayogMeditation() {
               );
               const byTitle = Object.fromEntries(flat.map((x) => [x.title, x]));
               const order = [
-                "Inner Peace",
-                "Anahad Nāda",
-                "Relief from Suffering",
-                "Ajapa Japa",
                 "Positive Transformation",
+                "Relief from Suffering",
+                "Inner Peace",
+                "Ajapa Japa",
+                "Anahad Nāda",
                 "Accelerated Growth",
               ];
               return order.map((title) => {
