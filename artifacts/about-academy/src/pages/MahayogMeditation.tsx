@@ -458,16 +458,16 @@ export default function MahayogMeditation() {
       </section>
 
       {/* ── YOUR JOURNEY ── standalone hero-weight section */}
-      <section className="py-24 px-6 bg-[#2d2720]">
+      <section className="py-24 px-6 bg-[#c4701e]">
         <div className="max-w-5xl mx-auto">
 
           {/* Header */}
           <div className="text-center mb-16">
-            <span className="uppercase tracking-[0.3em] text-xs text-[#e8c56a]/80 font-medium">Your Journey</span>
-            <h2 className="font-['Cormorant_Garamond'] text-4xl md:text-5xl font-light text-[#f5ede0] mt-3 mb-4 leading-snug">
+            <span className="uppercase tracking-[0.3em] text-xs text-white/70 font-medium">Your Journey</span>
+            <h2 className="font-['Cormorant_Garamond'] text-4xl md:text-5xl font-light text-white mt-3 mb-4 leading-snug">
               Beginning the Path
             </h2>
-            <p className="text-sm text-[#a89880] max-w-md mx-auto leading-relaxed">
+            <p className="text-sm text-white/70 max-w-md mx-auto leading-relaxed">
               Three steps from where you are now to an awakened, lifelong practice.
             </p>
           </div>
@@ -475,7 +475,7 @@ export default function MahayogMeditation() {
           {/* Steps */}
           <div className="flex flex-col md:flex-row items-start gap-6 md:gap-0 relative mb-16">
             {/* Connecting line desktop */}
-            <div className="hidden md:block absolute top-[44px] left-[calc(16.66%+36px)] right-[calc(16.66%+36px)] h-px bg-gradient-to-r from-[#b8892a]/20 via-[#e8c56a] to-[#b8892a]/20" />
+            <div className="hidden md:block absolute top-[44px] left-[calc(16.66%+36px)] right-[calc(16.66%+36px)] h-px bg-gradient-to-r from-white/10 via-white/50 to-white/10" />
 
             {[
               {
@@ -499,16 +499,16 @@ export default function MahayogMeditation() {
             ].map((item, i) => (
               <div key={item.step} className="flex-1 flex flex-col items-center text-center px-6 md:px-10 relative">
                 {/* Badge */}
-                <div className="relative z-10 w-[88px] h-[88px] rounded-full border-2 border-[#e8c56a]/60 bg-[#3d3728] flex flex-col items-center justify-center mb-6 shadow-[0_0_32px_rgba(232,197,106,0.15)]">
-                  <span className="font-['Cormorant_Garamond'] text-3xl font-semibold text-[#e8c56a] leading-none">{item.step}</span>
+                <div className="relative z-10 w-[88px] h-[88px] rounded-full border-2 border-white/50 bg-white/15 flex flex-col items-center justify-center mb-6 shadow-[0_0_32px_rgba(255,255,255,0.1)]">
+                  <span className="font-['Cormorant_Garamond'] text-3xl font-semibold text-white leading-none">{item.step}</span>
                 </div>
                 {/* Mobile arrow */}
                 {i < 2 && (
-                  <div className="md:hidden text-[#e8c56a]/30 text-3xl mb-6">↓</div>
+                  <div className="md:hidden text-white/40 text-3xl mb-6">↓</div>
                 )}
-                <span className="text-[10px] uppercase tracking-[0.25em] text-[#e8c56a]/60 font-medium mb-2">{item.sub}</span>
-                <h4 className="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#f5ede0] mb-3 leading-snug">{item.title}</h4>
-                <p className="text-sm text-[#a89880] leading-relaxed max-w-[220px]">{item.desc}</p>
+                <span className="text-[10px] uppercase tracking-[0.25em] text-white/60 font-medium mb-2">{item.sub}</span>
+                <h4 className="font-['Cormorant_Garamond'] text-2xl font-semibold text-white mb-3 leading-snug">{item.title}</h4>
+                <p className="text-sm text-white/75 leading-relaxed max-w-[220px]">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -517,12 +517,12 @@ export default function MahayogMeditation() {
           <div className="text-center">
             <a
               href="#register"
-              className="inline-flex items-center gap-3 px-10 py-4 rounded-full bg-[#b8892a] hover:bg-[#d4a843] text-white font-medium tracking-wide text-sm transition-all duration-300 shadow-[0_4px_24px_rgba(184,137,42,0.35)] hover:shadow-[0_4px_32px_rgba(184,137,42,0.55)] hover:scale-105"
+              className="inline-flex items-center gap-3 px-10 py-4 rounded-full bg-white hover:bg-[#fdf6ec] text-[#c4701e] font-semibold tracking-wide text-sm transition-all duration-300 shadow-[0_4px_24px_rgba(0,0,0,0.15)] hover:shadow-[0_4px_32px_rgba(0,0,0,0.2)] hover:scale-105"
             >
               Register for the Workshop
               <ArrowRight className="w-4 h-4" strokeWidth={2} />
             </a>
-            <p className="text-xs text-[#6b6158] mt-4">Upcoming dates available — limited places per retreat.</p>
+            <p className="text-xs text-white/50 mt-4">Upcoming dates available — limited places per retreat.</p>
           </div>
 
         </div>
