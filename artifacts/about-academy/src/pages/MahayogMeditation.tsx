@@ -547,7 +547,7 @@ export default function MahayogMeditation() {
               cat.items.map((b) => (
                 <div
                   key={b.title}
-                  className="break-inside-avoid mb-4 p-5 bg-[#eddfc8] rounded-xl border border-[#dcc9a8] shadow-sm hover:shadow-md hover:border-[#b8892a]/50 transition-all duration-300 group"
+                  className="break-inside-avoid mb-4 p-5 bg-white rounded-xl border-2 border-[#c4a872] shadow-sm hover:shadow-md hover:border-[#b8892a] transition-all duration-300 group"
                 >
                   {/* Category tag */}
                   <span
