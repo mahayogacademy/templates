@@ -141,19 +141,22 @@ export default function MahayogMeditation() {
             <h2 className="font-['Cormorant_Garamond'] text-4xl font-light text-[#3d3830] mt-2 mb-6 leading-snug">
               What is Meditation?
             </h2>
-            <p className="text-base leading-relaxed text-[#5a5248] mb-8">
-              Meditation is a process of inner alignment, where the mind naturally settles and awareness turns toward its source. Its ultimate aim is to realize the true Self and Ultimate Reality — freeing oneself from ignorance and ego.
+            <p className="text-base leading-relaxed text-[#5a5248] mb-4">
+              Meditation is a process of inner alignment, where the mind naturally settles and awareness turns toward its source.
             </p>
-            <div className="space-y-3">
+            <p className="text-base leading-relaxed text-[#5a5248] mb-4">
+              Its ultimate aim is to realize the true Self and Ultimate Reality—freeing oneself from ignorance and ego. Along the way, practitioners often experience:
+            </p>
+            <div className="space-y-2">
               {[
-                "Deep inner peace and emotional balance",
-                "Reduced stress, fear, and mental agitation",
-                "Increased clarity, compassion, and resilience",
-                "A growing sense of meaning, love, and inner joy",
+                "deep inner peace and emotional balance",
+                "reduced stress, fear, and mental agitation",
+                "increased clarity, compassion, and resilience",
+                "a growing sense of meaning, love, and inner joy",
               ].map((point) => (
                 <div key={point} className="flex items-start gap-3">
                   <div className="w-1.5 h-1.5 rounded-full bg-[#b8892a] mt-2 shrink-0" />
-                  <span className="text-sm text-[#6b6158] leading-relaxed">{point}</span>
+                  <span className="text-base text-[#5a5248] leading-relaxed">{point}</span>
                 </div>
               ))}
             </div>
