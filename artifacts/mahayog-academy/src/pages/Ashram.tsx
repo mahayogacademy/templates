@@ -241,9 +241,6 @@ export default function Ashram() {
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent to-white/10" />
                 </div>
                 <div className="flex-1 p-6">
-                  <span className="text-[10px] uppercase tracking-[0.2em] text-[#b8892a] font-semibold mb-2 block">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
                   <h3 className="font-['Cormorant_Garamond'] text-xl font-semibold text-[#3d3830] mb-2 leading-snug">{item.title}</h3>
                   <div className="h-px w-6 bg-[#d4a843]/50 mb-3" />
                   <p className="text-sm leading-relaxed text-[#5a5248]">{item.desc}</p>
