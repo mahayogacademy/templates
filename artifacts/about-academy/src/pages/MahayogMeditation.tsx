@@ -356,6 +356,13 @@ export default function MahayogMeditation() {
           </div>
 
           {/* ── Journey sequence ── */}
+          <div className="flex items-center gap-4 mb-12">
+            <div className="flex-1 h-px bg-[#c8b99a]/40" />
+            <div className="w-1.5 h-1.5 rounded-full bg-[#b8892a]/60" />
+            <div className="w-1 h-1 rounded-full bg-[#b8892a]/40" />
+            <div className="w-1.5 h-1.5 rounded-full bg-[#b8892a]/60" />
+            <div className="flex-1 h-px bg-[#c8b99a]/40" />
+          </div>
           <div className="text-center mb-12">
             <span className="uppercase tracking-[0.25em] text-xs text-[#b8892a] font-medium">Your Journey</span>
             <h3 className="font-['Cormorant_Garamond'] text-3xl font-light text-[#3d3830] mt-2">
