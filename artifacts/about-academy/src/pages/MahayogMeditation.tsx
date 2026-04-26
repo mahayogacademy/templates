@@ -165,7 +165,7 @@ const BENEFIT_CATEGORIES = [
         icon: "nada",
         title: "Anahad Nāda",
         subtitle: "Inner Divine Sound",
-        desc: "The mystic unstruck sound of the universe becomes audible — perceived as a flute, bell, harp, or cosmic roar — lifting awareness to higher states.",
+        desc: "The mystic unstruck sound of the universe becomes audible, often perceived as a flute, bell, harp, or cosmic roar, lifting awareness to higher states.",
       },
     ],
   },
