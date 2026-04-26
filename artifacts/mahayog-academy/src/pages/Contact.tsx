@@ -91,7 +91,7 @@ export default function Contact() {
                 How Can We Help?
               </h2>
               <p className="text-sm leading-relaxed text-[#5a5248]">
-                Whether you are planning a visit, exploring our programmes, or simply seeking guidance on the spiritual path, we would be glad to hear from you. Our team — a dedicated group of volunteers — will respond as soon as they can.
+                Whether you are planning a visit, exploring our programmes, or simply seeking guidance on the spiritual path, we would be glad to hear from you. Our team, a dedicated group of volunteers, will respond as soon as they can.
               </p>
             </div>
 
@@ -137,14 +137,6 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className="h-px bg-[#e8dece]" />
-
-            <div className="bg-[#fdf6ec] rounded-2xl border border-[#e8d5b0] p-6">
-              <p className="font-['Cormorant_Garamond'] text-xl font-light text-[#3d3830] leading-relaxed italic">
-                "The door of the Ashram is open to all who come with sincerity and an open heart."
-              </p>
-              <p className="text-xs text-[#b8892a] mt-3 uppercase tracking-widest font-medium">Jagadguru Mahayogi Siddhababa</p>
-            </div>
           </div>
 
           {/* RIGHT — Form */}
