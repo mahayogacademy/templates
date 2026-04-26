@@ -495,7 +495,7 @@ export default function MahayogMeditation() {
                 step: "03",
                 sub: "The unfolding",
                 title: "Continue at Home",
-                desc: "Return home with an awakened practice. Meditate daily as Kundalini continues to rise and deepen — supported by the Guru's ongoing grace.",
+                desc: "Return home with an awakened practice. Meditate daily as Kundalini continues to rise and deepen, supported by the Guru's ongoing grace.",
               },
             ].map((item, i) => (
               <div key={item.step} className="flex-1 flex flex-col items-center text-center px-6 md:px-10 relative">
