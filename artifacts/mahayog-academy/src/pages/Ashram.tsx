@@ -132,7 +132,7 @@ const INTERNATIONAL_CENTERS = [
   { country: "Canada", cities: ["Ottawa", "Calgary", "Edmonton", "Vancouver"] },
   { country: "United States", cities: ["Dallas", "Lubbock"] },
   { country: "United Kingdom", cities: ["London", "Reading", "Dartford"] },
-  { country: "Denmark", cities: [] },
+  { country: "Denmark", cities: ["Copenhagen"] },
   { country: "Australia", cities: [] },
 ];
 
