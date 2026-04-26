@@ -542,51 +542,42 @@ export default function MahayogMeditation() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
-            {BENEFIT_CATEGORIES.map((cat) => (
-              <div key={cat.label}>
-                {/* Category header */}
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-1 h-5 rounded-full" style={{ background: cat.color }} />
+          <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 [column-fill:_balance]">
+            {BENEFIT_CATEGORIES.flatMap((cat) =>
+              cat.items.map((b) => (
+                <div
+                  key={b.title}
+                  className="break-inside-avoid mb-4 p-5 bg-[#eddfc8] rounded-xl border border-[#dcc9a8] shadow-sm hover:shadow-md hover:border-[#b8892a]/50 transition-all duration-300 group"
+                >
+                  {/* Category tag */}
                   <span
-                    className="text-xs uppercase tracking-[0.2em] font-semibold"
-                    style={{ color: cat.color }}
+                    className="inline-block text-[9px] uppercase tracking-[0.2em] font-semibold px-2 py-0.5 rounded-full mb-3"
+                    style={{ color: cat.color, background: `${cat.color}22` }}
                   >
                     {cat.label}
                   </span>
-                </div>
 
-                {/* Cards stacked within column */}
-                <div className="flex flex-col gap-3">
-                  {cat.items.map((b) => (
+                  {/* Icon + title */}
+                  <div className="flex items-center gap-3 mb-3">
                     <div
-                      key={b.title}
-                      className="p-4 bg-[#eddfc8] rounded-xl border border-[#dcc9a8] shadow-sm hover:shadow-md hover:border-[#b8892a]/50 transition-all duration-300 group"
+                      className="shrink-0 w-10 h-10 rounded-full flex items-center justify-center transition-transform duration-300 group-hover:scale-110"
+                      style={{ background: `${cat.color}30`, border: `1.5px solid ${cat.color}70` }}
                     >
-                      <div className="flex items-center gap-3">
-                        <div
-                          className="shrink-0 w-9 h-9 rounded-full flex items-center justify-center transition-all duration-300 group-hover:scale-110"
-                          style={{ background: `${cat.color}30`, border: `1.5px solid ${cat.color}70` }}
-                        >
-                          <BenefitIcon type={b.icon} />
-                        </div>
-                        <div>
-                          <h3 className="font-['Cormorant_Garamond'] text-lg font-semibold text-[#2d2011] leading-tight">
-                            {b.title}
-                          </h3>
-                          <p className="text-[10px] uppercase tracking-[0.15em] text-[#7a5014]">{b.subtitle}</p>
-                        </div>
-                      </div>
-                      <div className="overflow-hidden max-h-0 group-hover:max-h-40 transition-all duration-500 ease-in-out">
-                        <div className="mt-3 bg-white/80 rounded-lg px-3 py-2.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
-                          <p className="text-sm text-[#3d3830] leading-relaxed">{b.desc}</p>
-                        </div>
-                      </div>
+                      <BenefitIcon type={b.icon} />
                     </div>
-                  ))}
+                    <div>
+                      <h3 className="font-['Cormorant_Garamond'] text-xl font-semibold text-[#2d2011] leading-tight">
+                        {b.title}
+                      </h3>
+                      <p className="text-[10px] uppercase tracking-[0.15em] text-[#7a5014]">{b.subtitle}</p>
+                    </div>
+                  </div>
+
+                  {/* Description always visible */}
+                  <p className="text-sm text-[#5a5248] leading-relaxed">{b.desc}</p>
                 </div>
-              </div>
-            ))}
+              ))
+            )}
           </div>
         </div>
       </section>
