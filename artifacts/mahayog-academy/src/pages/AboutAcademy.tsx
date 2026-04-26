@@ -33,7 +33,7 @@ export default function AboutAcademy() {
       {/* ── HERO ── */}
       <section className="relative h-[80vh] flex items-center justify-center overflow-hidden">
         <img
-          src="/images/academy-hero.png"
+          src={`${import.meta.env.BASE_URL}images/academy-hero.png`}
           alt="Himalayan mountain valley"
           className="absolute inset-0 w-full h-full object-cover"
         />
@@ -89,7 +89,7 @@ export default function AboutAcademy() {
           </div>
           <div>
             <img
-              src="/images/meditation-nature.png"
+              src={`${import.meta.env.BASE_URL}images/meditation-nature.png`}
               alt="Meditation practice in the mountains"
               className="w-full rounded-2xl object-cover shadow-md"
               style={{ height: "460px" }}
@@ -113,12 +113,12 @@ export default function AboutAcademy() {
 
           <div className="grid grid-cols-2 md:grid-cols-3 gap-5">
             {[
-              { title: "Swastha",    label: "Holistic Health",      desc: "Cultivating vitality across all dimensions of existence.",       img: "/images/pillar-swastha.png" },
-              { title: "Sikshya",   label: "Authentic Education",   desc: "Awakening inner intelligence through sacred Vedic learning.",    img: "/images/pillar-sikshya.png" },
-              { title: "Sanskar",   label: "Character & Values",    desc: "Refining the self through positive impressions and ritual.",     img: "/images/pillar-sanskar.png" },
-              { title: "Sadvritta", label: "Ethical Conduct",       desc: "Living in harmony with natural laws and universal truth.",       img: "/images/pillar-sadvritta.png" },
-              { title: "Samriddhi", label: "Collective Prosperity", desc: "Fostering abundance that uplifts the welfare of all.",           img: "/images/pillar-samriddhi.png" },
-              { title: "Shanti",    label: "Peace",                 desc: "Realising the profound stillness at the core of all being.",     img: "/images/pillar-shanti.png" },
+              { title: "Swastha",    label: "Holistic Health",      desc: "Cultivating vitality across all dimensions of existence.",       img: `${import.meta.env.BASE_URL}images/pillar-swastha.png` },
+              { title: "Sikshya",   label: "Authentic Education",   desc: "Awakening inner intelligence through sacred Vedic learning.",    img: `${import.meta.env.BASE_URL}images/pillar-sikshya.png` },
+              { title: "Sanskar",   label: "Character & Values",    desc: "Refining the self through positive impressions and ritual.",     img: `${import.meta.env.BASE_URL}images/pillar-sanskar.png` },
+              { title: "Sadvritta", label: "Ethical Conduct",       desc: "Living in harmony with natural laws and universal truth.",       img: `${import.meta.env.BASE_URL}images/pillar-sadvritta.png` },
+              { title: "Samriddhi", label: "Collective Prosperity", desc: "Fostering abundance that uplifts the welfare of all.",           img: `${import.meta.env.BASE_URL}images/pillar-samriddhi.png` },
+              { title: "Shanti",    label: "Peace",                 desc: "Realising the profound stillness at the core of all being.",     img: `${import.meta.env.BASE_URL}images/pillar-shanti.png` },
             ].map((p) => (
               <div
                 key={p.title}
@@ -162,7 +162,7 @@ export default function AboutAcademy() {
       <section id="discover" className="relative py-20 px-6 overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/images/academy-hero.png"
+            src={`${import.meta.env.BASE_URL}images/academy-hero.png`}
             alt=""
             aria-hidden="true"
             className="w-full h-full object-cover object-top"
@@ -182,28 +182,28 @@ export default function AboutAcademy() {
               {
                 title: "Mahayog Meditation",
                 desc: "Explore Mahayog — a complete, time-tested system for inner transformation rooted in the Vedic tradition.",
-                img: "/images/meditation-hero.png",
+                img: `${import.meta.env.BASE_URL}images/meditation-hero.png`,
                 tag: "Practice",
                 href: "/meditation",
               },
               {
                 title: "Programs & Courses",
                 desc: "Discover courses in yoga, meditation, and Vedic philosophy designed for seekers at every stage of the journey.",
-                img: "/images/meditation-nature.png",
+                img: `${import.meta.env.BASE_URL}images/meditation-nature.png`,
                 tag: "Learn",
                 href: "#",
               },
               {
                 title: "The Ashram",
                 desc: "Step into a place of stillness and renewal — our Himalayan ashram offers a sanctuary for deep practice and retreat.",
-                img: "/images/discover-ashram.png",
+                img: `${import.meta.env.BASE_URL}images/discover-ashram.png`,
                 tag: "Retreat",
                 href: "#",
               },
               {
                 title: "Enlightened Guru Siddhababa",
                 desc: "Learn about the life and divine mission of His Holiness Jagadguru Mahayogi Siddhababa — the heart of the Academy.",
-                img: "/images/saint-siddhababa.png",
+                img: `${import.meta.env.BASE_URL}images/saint-siddhababa.png`,
                 tag: "Lineage",
                 href: "#",
               },

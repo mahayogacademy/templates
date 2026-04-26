@@ -385,7 +385,7 @@ export default function MahayogMeditation() {
       {/* ── HERO ── */}
       <section className="relative h-[85vh] flex items-center justify-center overflow-hidden">
         <img
-          src="/images/meditation-hero.png"
+          src={`${import.meta.env.BASE_URL}images/meditation-hero.png`}
           alt="Meditating at sunrise in the Himalayas"
           className="absolute inset-0 w-full h-full object-cover"
         />
@@ -443,7 +443,7 @@ export default function MahayogMeditation() {
           </div>
           <div className="relative">
             <img
-              src="/images/meditation-nature.png"
+              src={`${import.meta.env.BASE_URL}images/meditation-nature.png`}
               alt="Meditating in nature"
               className="w-full rounded-2xl object-cover shadow-md"
               style={{ height: "420px" }}
@@ -491,7 +491,7 @@ export default function MahayogMeditation() {
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-14 items-center mb-20">
             <img
-              src="/images/meditation-howitworks.png"
+              src={`${import.meta.env.BASE_URL}images/meditation-howitworks.png`}
               alt="Meditating in a Himalayan ashram"
               className="w-full rounded-2xl object-cover shadow-md order-2 md:order-1"
               style={{ height: "400px" }}
@@ -670,7 +670,7 @@ export default function MahayogMeditation() {
       {/* ── ANCIENT ORIGINS ── */}
       <section id="origins" className="relative py-20 px-6 overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/images/meditation-origins.png" alt="" aria-hidden className="w-full h-full object-cover" />
+          <img src={`${import.meta.env.BASE_URL}images/meditation-origins.png`} alt="" aria-hidden className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-b from-[#faf9f6]/95 via-[#faf9f6]/75 to-[#faf9f6]/95" />
           <div className="absolute inset-0 bg-[#f5ece0]/40" />
         </div>
@@ -706,7 +706,7 @@ export default function MahayogMeditation() {
                   </a>
                 </div>
                 <img
-                  src="/images/gurudev-sketch.png"
+                  src={`${import.meta.env.BASE_URL}images/gurudev-sketch.png`}
                   alt="Jagadguru Mahayogi Siddhababa — sketch portrait"
                   className="w-32 shrink-0 rounded-xl object-cover shadow-sm"
                 />
@@ -718,7 +718,7 @@ export default function MahayogMeditation() {
               {/* Featured Ramanandacharya portrait */}
               <div className="bg-white/70 backdrop-blur-sm border border-[#e0d0b8] rounded-2xl p-4 flex gap-4 items-center mb-2">
                 <img
-                  src="/images/saint-ramananda.jpg"
+                  src={`${import.meta.env.BASE_URL}images/saint-ramananda.jpg`}
                   alt="Jagadguru Ramanandacharya"
                   className="w-20 h-24 rounded-xl object-cover object-top shadow-md border border-[#e0d0b8] shrink-0"
                 />
@@ -730,10 +730,10 @@ export default function MahayogMeditation() {
               </div>
               <p className="text-[10px] uppercase tracking-[0.25em] text-[#b8892a] font-medium mb-1">Prominent Practitioners</p>
               {[
-                { name: "Kabir", img: "/images/saint-kabir.jpg", years: "c. 1440–1518" },
-                { name: "Ravidas", img: "/images/saint-ravidas.jpg", years: "c. 1450–1520" },
-                { name: "Tulsidas", img: "/images/saint-tulsidas.jpg", years: "c. 1532–1623" },
-                { name: "Mira Bai", img: "/images/saint-mirabai.jpg", years: "c. 1498–1547" },
+                { name: "Kabir", img: `${import.meta.env.BASE_URL}images/saint-kabir.jpg`, years: "c. 1440–1518" },
+                { name: "Ravidas", img: `${import.meta.env.BASE_URL}images/saint-ravidas.jpg`, years: "c. 1450–1520" },
+                { name: "Tulsidas", img: `${import.meta.env.BASE_URL}images/saint-tulsidas.jpg`, years: "c. 1532–1623" },
+                { name: "Mira Bai", img: `${import.meta.env.BASE_URL}images/saint-mirabai.jpg`, years: "c. 1498–1547" },
               ].map((s) => (
                 <div key={s.name} className="flex items-center gap-3 bg-white/60 backdrop-blur-sm border border-[#e0d0b8] rounded-xl p-2.5 hover:bg-white/80 transition-all duration-200">
                   <img
