@@ -611,9 +611,8 @@ export default function MahayogMeditation() {
       {/* ── ANCIENT ORIGINS ── */}
       <section id="origins" className="relative py-20 px-6 overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/images/meditation-origins.png" alt="" aria-hidden className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#faf9f6] via-[#faf9f6]/85 to-[#faf9f6]" />
-          <div className="absolute inset-0 bg-[#f5ece0]/55" />
+          <img src="/images/meditation-nature.png" alt="" aria-hidden className="w-full h-full object-cover object-center" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#f5e8c8]/93 via-[#f0ddb0]/88 to-[#f5e8c8]/93" />
         </div>
         <div className="relative z-10 max-w-6xl mx-auto">
           <div className="grid md:grid-cols-[1fr_280px] gap-12 items-start">
