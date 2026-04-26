@@ -626,19 +626,9 @@ export default function MahayogMeditation() {
               <p className="text-base leading-relaxed text-[#5a5248] mb-5">
                 Himalayan Siddha Mahāyog is the revival of Surat-Śhabda Yoga — literally the "union of the soul (surat) with the divine Word or sound (shabd)." According to Guru Nanak, communion with the divine Sound Current is "the only effective means" for liberating the soul.
               </p>
-              <div className="flex gap-5 items-start mb-5">
-                <p className="text-base leading-relaxed text-[#5a5248] flex-1">
-                  Nearly 600–700 years ago, the great Saint Jagadguru Ramanandacharya propagated this divine knowledge for the upliftment of people. His lineage included luminaries such as Kabir, Ravidas, Tulsidas, and Mira Bai — all of whom emphasized that sincere chanting of the Divine Name and listening to the inner sound can lead to the highest realization.
-                </p>
-                <div className="shrink-0 text-center">
-                  <img
-                    src="/images/saint-ramananda.jpg"
-                    alt="Jagadguru Ramanandacharya"
-                    className="w-24 h-28 rounded-xl object-cover object-top shadow-md border border-[#e0d0b8]"
-                  />
-                  <p className="text-[10px] text-[#9a8878] mt-1.5 leading-tight">Jagadguru<br/>Ramanandacharya</p>
-                </div>
-              </div>
+              <p className="text-base leading-relaxed text-[#5a5248] mb-5">
+                Nearly 600–700 years ago, the great Saint Jagadguru Ramanandacharya propagated this divine knowledge for the upliftment of people. His lineage included luminaries such as Kabir, Ravidas, Tulsidas, and Mira Bai — all of whom emphasized that sincere chanting of the Divine Name and listening to the inner sound can lead to the highest realization.
+              </p>
               <p className="text-base leading-relaxed text-[#5a5248] mb-8">
                 Over time, this inner yogic science became esoteric, surviving only among a few Himalayan sages for 200–400 years, rarely taught openly. Its contemporary resurgence is considered a divine blessing for humanity.
               </p>
@@ -659,6 +649,19 @@ export default function MahayogMeditation() {
 
             {/* Right: saint portraits */}
             <div className="flex flex-col gap-3">
+              {/* Featured Ramanandacharya portrait */}
+              <div className="bg-white/70 backdrop-blur-sm border border-[#e0d0b8] rounded-2xl p-4 flex gap-4 items-center mb-2">
+                <img
+                  src="/images/saint-ramananda.jpg"
+                  alt="Jagadguru Ramanandacharya"
+                  className="w-20 h-24 rounded-xl object-cover object-top shadow-md border border-[#e0d0b8] shrink-0"
+                />
+                <div>
+                  <p className="font-['Cormorant_Garamond'] text-base font-semibold text-[#3d3830] leading-tight">Jagadguru Ramanandacharya</p>
+                  <p className="text-[11px] text-[#9a8878] mt-1">c. 1400 CE</p>
+                  <p className="text-xs text-[#5a5248] mt-2 leading-relaxed">Propagator of Surat-Śhabda Yoga for the upliftment of humanity</p>
+                </div>
+              </div>
               <p className="text-[10px] uppercase tracking-[0.25em] text-[#b8892a] font-medium mb-1">The Lineage</p>
               {[
                 { name: "Jagadguru Ramanandacharya", img: "/images/saint-ramananda.jpg", years: "c. 1400 CE" },
