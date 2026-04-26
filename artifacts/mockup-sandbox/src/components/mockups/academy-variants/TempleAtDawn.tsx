@@ -1,4 +1,4 @@
-import { ArrowRight, Wind, BookOpen, ShieldCheck, Sprout, Sun, HeartHandshake } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 export function TempleAtDawn() {
   return (
@@ -141,25 +141,40 @@ export function TempleAtDawn() {
 
           <div className="grid grid-cols-2 md:grid-cols-3 gap-5">
             {[
-              { title: "Swastha",    label: "Holistic health and well-being",       desc: "Cultivating vitality across all dimensions of existence.",         icon: Sun },
-              { title: "Sikshya",   label: "Lifelong learning and self-development", desc: "Awakening inner intelligence through authentic education.",       icon: BookOpen },
-              { title: "Sanskar",   label: "Cultivation of character and values",    desc: "Refining the mind through positive impressions and practice.",    icon: HeartHandshake },
-              { title: "Sadvritta", label: "Ethical conduct",                        desc: "Living in harmony with natural laws and universal truth.",        icon: ShieldCheck },
-              { title: "Samriddhi", label: "Collective prosperity",                  desc: "Fostering abundance that supports the welfare of all.",           icon: Sprout },
-              { title: "Shanti",    label: "Peace",                                  desc: "Realising the profound stillness at the core of being.",          icon: Wind },
+              { title: "Swastha",    label: "Holistic Health",      desc: "Cultivating vitality across all dimensions of existence.",          img: "/__mockup/images/pillar-swastha.png" },
+              { title: "Sikshya",   label: "Authentic Education",   desc: "Awakening inner intelligence through sacred Vedic learning.",       img: "/__mockup/images/pillar-sikshya.png" },
+              { title: "Sanskar",   label: "Character & Values",    desc: "Refining the mind through positive impressions and ritual.",        img: "/__mockup/images/pillar-sanskar.png" },
+              { title: "Sadvritta", label: "Ethical Conduct",       desc: "Living in harmony with natural laws and universal truth.",          img: "/__mockup/images/pillar-sadvritta.png" },
+              { title: "Samriddhi", label: "Collective Prosperity", desc: "Fostering abundance that uplifts the welfare of all.",              img: "/__mockup/images/pillar-samriddhi.png" },
+              { title: "Shanti",    label: "Peace",                 desc: "Realising the profound stillness at the core of all being.",        img: "/__mockup/images/pillar-shanti.png" },
             ].map((p) => (
               <div
                 key={p.title}
-                className="bg-white rounded-2xl p-6 shadow-sm border border-[#ede4d5] hover:shadow-md hover:border-[#d4a843] transition-all duration-300 group"
+                className="group relative overflow-hidden rounded-2xl shadow-md hover:shadow-xl transition-all duration-500 cursor-default"
+                style={{ height: "260px" }}
               >
-                <div className="w-10 h-10 rounded-xl bg-[#fdf3e3] flex items-center justify-center mb-4 group-hover:bg-[#f5e4c0] transition-colors duration-300">
-                  <p.icon className="w-5 h-5 text-[#b8892a]" strokeWidth={1.5} />
+                {/* Photo background */}
+                <img
+                  src={p.img}
+                  alt={p.title}
+                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+                {/* Gradient — lighter at top, richer at bottom */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#1a1206]/85 via-[#1a1206]/30 to-transparent" />
+                {/* Gold top accent line that widens on hover */}
+                <div className="absolute top-0 left-0 h-[3px] w-10 bg-[#d4a843] group-hover:w-full transition-all duration-500" />
+
+                {/* Content pinned to bottom */}
+                <div className="absolute bottom-0 left-0 right-0 p-5">
+                  <h3 className="font-['Cormorant_Garamond'] text-3xl font-semibold text-white leading-none mb-1">
+                    {p.title}
+                  </h3>
+                  <p className="text-[10px] uppercase tracking-widest text-[#e8c56a] mb-2 font-medium">{p.label}</p>
+                  {/* Description slides up on hover */}
+                  <p className="text-xs text-white/75 leading-relaxed max-h-0 overflow-hidden group-hover:max-h-16 transition-all duration-500">
+                    {p.desc}
+                  </p>
                 </div>
-                <h3 className="font-['Cormorant_Garamond'] text-3xl font-medium text-[#3d3830] mb-1">
-                  {p.title}
-                </h3>
-                <p className="text-xs uppercase tracking-wider text-[#b8892a] mb-3 font-medium">{p.label}</p>
-                <p className="text-sm text-[#6b6158] leading-relaxed">{p.desc}</p>
               </div>
             ))}
           </div>

@@ -18,3 +18,39 @@ id = "Ptx0uA2MkVdaPdKp6JZf0"
 uri = "file://artifacts/mockup-sandbox/public/images/academy-lotus.png"
 type = "image"
 title = "generated_image"
+
+[[generated]]
+id = "jra7x4eI4AmCyerMO_uqk"
+uri = "file://artifacts/mockup-sandbox/public/images/pillar-swastha.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "s9SaJjwsOE6Jz-YeBpfke"
+uri = "file://artifacts/mockup-sandbox/public/images/pillar-sikshya.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "bRNOA3h_ucSNSkAcSDHod"
+uri = "file://artifacts/mockup-sandbox/public/images/pillar-sanskar.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "cY3NOSWDh5fRhAyDP24_3"
+uri = "file://artifacts/mockup-sandbox/public/images/pillar-sadvritta.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "yWz_FCjFEtl1IZAfEKNDk"
+uri = "file://artifacts/mockup-sandbox/public/images/pillar-samriddhi.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "Uace1N9jg1tObG6rDVeeO"
+uri = "file://artifacts/mockup-sandbox/public/images/pillar-shanti.png"
+type = "image"
+title = "generated_image"
