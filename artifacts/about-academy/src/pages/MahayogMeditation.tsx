@@ -119,10 +119,10 @@ export default function MahayogMeditation() {
             <div className="h-px w-12 bg-[#e8c56a]" />
           </div>
           <h1 className="font-['Cormorant_Garamond'] text-5xl md:text-7xl font-light text-white leading-tight mb-4">
-            Mahayog Meditation
+            Himalayan Siddha Mahayog Meditation
           </h1>
           <p className="text-lg text-[#f0e4c8] tracking-widest uppercase font-light mb-8">
-            Himalayan Siddha · Ancient Vedic Science
+            The Vedic Science of Self-Realization
           </p>
           <a
             href="#what-is"
