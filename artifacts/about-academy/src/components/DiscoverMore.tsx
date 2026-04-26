@@ -7,7 +7,7 @@ export default function DiscoverMore() {
       title: "Mahayog Meditation",
       description: "Experience the profound inner stillness through guided ancient techniques.",
       icon: Compass,
-      link: "#"
+      link: "/meditation"
     },
     {
       title: "Programs and Courses",
