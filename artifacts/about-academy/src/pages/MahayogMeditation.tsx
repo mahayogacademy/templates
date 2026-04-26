@@ -126,32 +126,125 @@ function VennDiagram() {
   );
 }
 
-const BENEFITS = [
+const BENEFIT_CATEGORIES = [
   {
-    title: "Inner Peace & Emotional Balance",
-    desc: "A deepening calmness of mind arises — restless thoughts slow, and peace emerges from within, independent of external circumstances. Compassion, forgiveness, and equanimity naturally develop alongside a felt sense of divine grace in daily life.",
+    label: "Mind & Heart",
+    color: "#e8c56a",
+    items: [
+      {
+        icon: "peace",
+        title: "Inner Peace",
+        subtitle: "Emotional Balance",
+        desc: "Restless thoughts slow; peace emerges from within. Compassion, equanimity, and a felt sense of divine grace naturally develop in daily life.",
+      },
+      {
+        icon: "relief",
+        title: "Relief from Suffering",
+        subtitle: "Dissolving Blockages",
+        desc: "Sorrows, fears, and anxieties gradually diminish. Lifelong phobias often fade as Kundalini dissolves mental and physical blockages.",
+      },
+      {
+        icon: "transform",
+        title: "Positive Transformation",
+        subtitle: "Renewed Outlook",
+        desc: "Negative habits lose their grip; joy, optimism, and resilience arise — not as forced attitudes, but as the result of genuine inner fulfillment.",
+      },
+    ],
   },
   {
-    title: "Relief from Suffering",
-    desc: "As Kundalini ascends, it dissolves mental and physical blockages. Sorrows, fears, and anxieties gradually diminish. Lifelong phobias often fade, ailments are alleviated, and the overall karmic weight on the soul feels lighter.",
+    label: "Inner Experiences",
+    color: "#c4855a",
+    items: [
+      {
+        icon: "ajapa",
+        title: "Ajapa Japa",
+        subtitle: "Effortless Divine Name",
+        desc: "The sacred primordial Name (Rām) begins reverberating inside continuously — 'without japa, the japa happens' — whether working, resting, or sleeping.",
+      },
+      {
+        icon: "nada",
+        title: "Anahad Nāda",
+        subtitle: "Inner Divine Sound",
+        desc: "The mystic unstruck sound of the universe becomes audible — perceived as a flute, bell, harp, or cosmic roar — lifting awareness to higher states.",
+      },
+    ],
   },
   {
-    title: "Positive Transformation",
-    desc: "A life-affirming outlook naturally develops. Negative habits lose their grip; joy, optimism, and resilience arise from within — not as forced attitudes, but as the result of genuine inner fulfillment.",
-  },
-  {
-    title: "Ajapa Japa — Effortless Divine Name",
-    desc: "Without deliberate effort, the sacred primordial Name (Rām) begins reverberating inside continuously. This phenomenon — 'without japa, the japa happens' — continues whether one is working, resting, or sleeping.",
-  },
-  {
-    title: "Anahad Nāda — Inner Divine Sound",
-    desc: "Seekers begin to hear the mystic Anahad Nāda — the unstruck, subtle sound of the universe. Perceived as a flute, bell, harp, or cosmic roar, this inner sound lifts the seeker to higher states of consciousness.",
-  },
-  {
-    title: "Accelerated Spiritual Growth",
-    desc: "The Guru's Shaktipat immediately awakens Kundalini — the foundational energy for all spiritual progress. What might otherwise take lifetimes of effort unfolds in an accelerated, protected manner under the Guru's ongoing grace.",
+    label: "Spiritual Evolution",
+    color: "#7a9e7e",
+    items: [
+      {
+        icon: "growth",
+        title: "Accelerated Growth",
+        subtitle: "Under the Guru's Grace",
+        desc: "What might otherwise take lifetimes of effort unfolds in an accelerated, protected manner through Shaktipat and the Guru's ongoing guidance.",
+      },
+    ],
   },
 ];
+
+function BenefitIcon({ type }: { type: string }) {
+  const s = { fill: "none", strokeLinecap: "round" as const, strokeLinejoin: "round" as const, stroke: "#b8892a" };
+  switch (type) {
+    case "peace":
+      return (
+        <svg viewBox="0 0 32 32" className="w-9 h-9">
+          <circle cx="16" cy="16" r="2.5" fill="#b8892a" />
+          <circle cx="16" cy="16" r="7" strokeWidth="1.5" {...s} />
+          <circle cx="16" cy="16" r="12" strokeWidth="1" strokeDasharray="2 3" {...s} />
+        </svg>
+      );
+    case "relief":
+      return (
+        <svg viewBox="0 0 32 32" className="w-9 h-9">
+          <circle cx="16" cy="16" r="5" strokeWidth="1.5" {...s} />
+          {([[16,3],[16,29],[3,16],[29,16],[7,7],[25,25],[25,7],[7,25]] as [number,number][]).map(([x,y], i) => {
+            const dx = x - 16, dy = y - 16;
+            const len = Math.sqrt(dx*dx+dy*dy);
+            const x2 = 16 + dx/len*8, y2 = 16 + dy/len*8;
+            return <line key={i} x1={x} y1={y} x2={x2} y2={y2} strokeWidth="1.5" {...s} />;
+          })}
+        </svg>
+      );
+    case "transform":
+      return (
+        <svg viewBox="0 0 32 32" className="w-9 h-9">
+          <circle cx="16" cy="16" r="11" strokeWidth="1.2" strokeDasharray="3 3" {...s} />
+          <polyline points="11,20 16,10 21,20" strokeWidth="1.8" {...s} />
+          <line x1="16" y1="10" x2="16" y2="22" strokeWidth="1.8" {...s} />
+        </svg>
+      );
+    case "ajapa":
+      return (
+        <svg viewBox="0 0 32 32" className="w-9 h-9">
+          <path d="M10 22 Q8 16 12 12 Q16 8 16 12 Q16 18 10 22Z" strokeWidth="1.5" {...s} />
+          <path d="M16 12 Q20 8 22 12 Q24 17 20 20" strokeWidth="1.5" {...s} />
+          <path d="M8 24 Q16 28 24 24" strokeWidth="1.5" {...s} />
+          <circle cx="16" cy="27" r="1.2" fill="#b8892a" />
+        </svg>
+      );
+    case "nada":
+      return (
+        <svg viewBox="0 0 32 32" className="w-9 h-9">
+          <line x1="16" y1="6" x2="16" y2="26" strokeWidth="1.8" {...s} />
+          <path d="M11 10 C7 13 7 19 11 22" strokeWidth="1.5" {...s} />
+          <path d="M7 7 C1 12 1 20 7 25" strokeWidth="1.2" {...s} />
+          <path d="M21 10 C25 13 25 19 21 22" strokeWidth="1.5" {...s} />
+          <path d="M25 7 C31 12 31 20 25 25" strokeWidth="1.2" {...s} />
+        </svg>
+      );
+    case "growth":
+      return (
+        <svg viewBox="0 0 32 32" className="w-9 h-9">
+          <path d="M16 26 C16 26 9 20 9 13 C9 9 12 6 16 6 C20 6 23 9 23 13 C23 20 16 26 16 26Z" strokeWidth="1.5" {...s} />
+          <path d="M12 18 C8 17 5 19 4 22" strokeWidth="1.2" {...s} />
+          <path d="M20 18 C24 17 27 19 28 22" strokeWidth="1.2" {...s} />
+          <circle cx="16" cy="13" r="2.5" strokeWidth="1.2" {...s} />
+        </svg>
+      );
+    default: return null;
+  }
+}
 
 const FAQS = [
   {
@@ -420,7 +513,7 @@ export default function MahayogMeditation() {
       {/* ── BENEFITS ── */}
       <section id="benefits" className="py-20 px-6">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
+          <div className="text-center mb-14">
             <span className="uppercase tracking-[0.25em] text-xs text-[#b8892a] font-medium">What Unfolds</span>
             <h2 className="font-['Cormorant_Garamond'] text-4xl md:text-5xl font-light text-[#3d3830] mt-2 mb-4">
               Benefits of the Practice
@@ -429,26 +522,45 @@ export default function MahayogMeditation() {
               These changes happen gradually and organically as a result of the awakened Kundalini and the Guru's ongoing grace.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 gap-5">
-            {BENEFITS.map((b, i) => (
-              <div
-                key={b.title}
-                className="flex gap-5 p-6 bg-white rounded-2xl border border-[#ede4d5] shadow-sm hover:shadow-md hover:border-[#d4a843]/50 transition-all duration-300 group"
-              >
-                <div className="shrink-0 pt-0.5">
-                  <span className="font-['Cormorant_Garamond'] text-2xl font-light text-[#d4a843]/50 group-hover:text-[#d4a843]/80 transition-colors duration-300 leading-none select-none">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
-                </div>
-                <div>
-                  <h3 className="font-['Cormorant_Garamond'] text-xl font-semibold text-[#3d3830] mb-2 leading-snug">
-                    {b.title}
-                  </h3>
-                  <p className="text-sm text-[#6b6158] leading-relaxed">{b.desc}</p>
-                </div>
+
+          {BENEFIT_CATEGORIES.map((cat) => (
+            <div key={cat.label} className="mb-14">
+              {/* Category header */}
+              <div className="flex items-center gap-4 mb-7">
+                <div className="h-px flex-1 bg-[#e8dece]" />
+                <span
+                  className="px-4 py-1 rounded-full text-xs uppercase tracking-[0.2em] font-medium border"
+                  style={{ color: cat.color, borderColor: `${cat.color}60`, background: `${cat.color}12` }}
+                >
+                  {cat.label}
+                </span>
+                <div className="h-px flex-1 bg-[#e8dece]" />
               </div>
-            ))}
-          </div>
+
+              {/* Cards */}
+              <div className={`grid gap-5 ${cat.items.length === 3 ? "md:grid-cols-3" : cat.items.length === 2 ? "md:grid-cols-2 max-w-3xl mx-auto" : "max-w-sm mx-auto"}`}>
+                {cat.items.map((b) => (
+                  <div
+                    key={b.title}
+                    className="flex flex-col items-center text-center p-7 bg-white rounded-2xl border border-[#ede4d5] shadow-sm hover:shadow-md hover:border-[#d4a843]/40 transition-all duration-300 group"
+                  >
+                    {/* Icon badge */}
+                    <div
+                      className="w-16 h-16 rounded-full flex items-center justify-center mb-4 transition-all duration-300 group-hover:scale-110"
+                      style={{ background: `${cat.color}18`, border: `1.5px solid ${cat.color}50` }}
+                    >
+                      <BenefitIcon type={b.icon} />
+                    </div>
+                    <h3 className="font-['Cormorant_Garamond'] text-xl font-semibold text-[#3d3830] leading-snug mb-0.5">
+                      {b.title}
+                    </h3>
+                    <p className="text-[11px] uppercase tracking-[0.18em] text-[#b8892a] mb-3">{b.subtitle}</p>
+                    <p className="text-sm text-[#6b6158] leading-relaxed">{b.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
