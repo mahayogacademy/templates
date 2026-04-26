@@ -150,3 +150,27 @@ id = "EVW_H_N2k1VTUJESHRyGW"
 uri = "file://artifacts/mahayog-academy/public/images/discover-ashram.png"
 type = "image"
 title = "himalayan-ashram"
+
+[[generated]]
+id = "vucZ1UXxVTA5sd4f67XZd"
+uri = "file://artifacts/mahayog-academy/public/images/ashram-hero.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "KsnDEa3KKYQ8Wr7XwK0-a"
+uri = "file://artifacts/mahayog-academy/public/images/ashram-meditation-hall.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "Q5TNSlt1GNjtW_Wsvg_Go"
+uri = "file://artifacts/mahayog-academy/public/images/ashram-satsang.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "rIKaPEUnyAjX-EkuwMhN1"
+uri = "file://artifacts/mahayog-academy/public/images/ashram-seva.png"
+type = "image"
+title = "generated_image"

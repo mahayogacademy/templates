@@ -6,6 +6,7 @@ import NotFound from "@/pages/not-found";
 import Home from "@/pages/Home";
 import AboutAcademy from "@/pages/AboutAcademy";
 import MahayogMeditation from "@/pages/MahayogMeditation";
+import Ashram from "@/pages/Ashram";
 
 const queryClient = new QueryClient();
 
@@ -15,6 +16,7 @@ function Router() {
       <Route path="/" component={Home} />
       <Route path="/about" component={AboutAcademy} />
       <Route path="/meditation" component={MahayogMeditation} />
+      <Route path="/ashram" component={Ashram} />
       <Route component={NotFound} />
     </Switch>
   );
