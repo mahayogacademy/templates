@@ -1,0 +1,20 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "vI1o5_OizYR0kGuYKvOjQ"
+uri = "file://artifacts/mockup-sandbox/public/images/academy-hero.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "0hQtMj_BjNsgWR7pPbKUT"
+uri = "file://artifacts/mockup-sandbox/public/images/academy-meditation.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "Ptx0uA2MkVdaPdKp6JZf0"
+uri = "file://artifacts/mockup-sandbox/public/images/academy-lotus.png"
+type = "image"
+title = "generated_image"
