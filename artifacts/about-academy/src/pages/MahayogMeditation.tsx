@@ -163,8 +163,8 @@ export default function MahayogMeditation() {
           </div>
           <div className="relative">
             <img
-              src="/images/meditation-benefits.png"
-              alt="Inner stillness through meditation"
+              src="/images/meditation-nature.png"
+              alt="Meditating in nature"
               className="w-full rounded-2xl object-cover shadow-md"
               style={{ height: "420px" }}
             />
