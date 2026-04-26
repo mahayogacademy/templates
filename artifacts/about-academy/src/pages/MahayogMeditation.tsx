@@ -115,15 +115,13 @@ function VennDiagram() {
         </text>
       </svg>
 
-      {/* Description panel */}
-      <div className="w-full max-w-md min-h-[96px] rounded-2xl border border-[#e0d0b8] bg-white/80 px-6 py-4 text-center transition-all duration-300">
-        {activeName && (
-          <>
-            <p className="font-['Cormorant_Garamond'] text-xl font-semibold text-[#b8892a] mb-1">{activeName}</p>
-            <p className="text-sm text-[#5a5248] leading-relaxed">{activeDesc}</p>
-          </>
-        )}
-      </div>
+      {/* Description panel — only shown on hover */}
+      {activeName && (
+        <div className="w-full max-w-md rounded-2xl border border-[#e0d0b8] bg-white/80 px-6 py-4 text-center transition-all duration-300">
+          <p className="font-['Cormorant_Garamond'] text-xl font-semibold text-[#b8892a] mb-1">{activeName}</p>
+          <p className="text-sm text-[#5a5248] leading-relaxed">{activeDesc}</p>
+        </div>
+      )}
     </div>
   );
 }
