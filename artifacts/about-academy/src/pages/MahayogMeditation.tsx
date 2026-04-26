@@ -98,19 +98,19 @@ function VennDiagram() {
 
         {/* Centre — Mahayog */}
         <circle
-          cx="250" cy="250" r="58"
+          cx="250" cy="250" r="82"
           fill="#3d3830"
           fillOpacity={hovered === "mahayog" ? 1 : 0.90}
           style={{ cursor: "pointer", transition: "fill-opacity 0.25s" }}
           onMouseEnter={() => setHovered("mahayog")}
           onMouseLeave={() => setHovered(null)}
         />
-        <text x="250" y="244" textAnchor="middle" fontFamily="'Cormorant Garamond', serif"
-          fontSize="16" fill="white" fontStyle="italic" style={{ pointerEvents: "none" }}>
+        <text x="250" y="241" textAnchor="middle" fontFamily="'Cormorant Garamond', serif"
+          fontSize="20" fill="white" fontStyle="italic" style={{ pointerEvents: "none" }}>
           Mahāyog
         </text>
-        <text x="250" y="263" textAnchor="middle" fontFamily="'Cormorant Garamond', serif"
-          fontSize="11" fill="#e8c56a" letterSpacing="1.5" style={{ pointerEvents: "none" }}>
+        <text x="250" y="264" textAnchor="middle" fontFamily="'Cormorant Garamond', serif"
+          fontSize="13" fill="#e8c56a" letterSpacing="2" style={{ pointerEvents: "none" }}>
           MEDITATION
         </text>
       </svg>
