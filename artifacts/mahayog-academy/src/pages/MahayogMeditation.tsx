@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { ArrowRight, ChevronDown } from "lucide-react";
 import { Link } from "wouter";
+import Nav from "@/components/Nav";
 
 // viewBox 500×500; circles at corners offset 90px from centre (250,250), r=140
 // Label positions are inside each circle's unique outer quadrant
@@ -365,22 +366,7 @@ export default function MahayogMeditation() {
     <div className="bg-[#faf9f6] text-[#3d3830]" style={{ scrollBehavior: "smooth" }}>
       <SidebarNav />
 
-      {/* ── STICKY NAV ── */}
-      <nav className="sticky top-0 z-50 bg-[#faf9f6]/95 backdrop-blur-sm border-b border-[#e8dece]">
-        <div className="max-w-6xl mx-auto px-6 flex items-center justify-between h-14">
-          <Link href="/">
-            <span className="font-['Cormorant_Garamond'] text-lg font-semibold text-[#b8892a] tracking-wide cursor-pointer hover:text-[#9d7422] transition-colors">
-              Mahayogi Siddhababa Academy
-            </span>
-          </Link>
-          <div className="flex items-center gap-7">
-            <a href="#what-is" className="text-sm text-[#6b6158] hover:text-[#b8892a] transition-colors tracking-wide">What is Mahayog</a>
-            <a href="#benefits" className="text-sm text-[#6b6158] hover:text-[#b8892a] transition-colors tracking-wide">Benefits</a>
-            <a href="#origins" className="text-sm text-[#6b6158] hover:text-[#b8892a] transition-colors tracking-wide">Origins</a>
-            <a href="#faq" className="text-sm bg-[#b8892a] text-white px-4 py-1.5 rounded-full hover:bg-[#9d7422] transition-colors tracking-wide">FAQ</a>
-          </div>
-        </div>
-      </nav>
+      <Nav />
 
       {/* ── HERO ── */}
       <section className="relative h-[85vh] flex items-center justify-center overflow-hidden">

@@ -1,34 +1,11 @@
 import { ArrowRight } from "lucide-react";
 import { Link } from "wouter";
+import Nav from "@/components/Nav";
 
 export default function AboutAcademy() {
   return (
     <div className="bg-[#faf9f6] text-[#3d3830]" style={{ scrollBehavior: "smooth" }}>
-
-      {/* ── STICKY NAVIGATION ── */}
-      <nav className="sticky top-0 z-50 bg-[#faf9f6]/95 backdrop-blur-sm border-b border-[#e8dece]">
-        <div className="max-w-6xl mx-auto px-6 flex items-center justify-between h-14">
-          <Link href="/">
-            <span className="font-['Cormorant_Garamond'] text-lg font-semibold text-[#b8892a] tracking-wide cursor-pointer hover:text-[#9d7422] transition-colors">
-              Mahayogi Siddhababa Academy
-            </span>
-          </Link>
-          <div className="flex items-center gap-8">
-            <a href="#foundation" className="text-sm text-[#6b6158] hover:text-[#b8892a] transition-colors duration-200 tracking-wide">
-              Our Foundation
-            </a>
-            <a href="#wellbeing" className="text-sm text-[#6b6158] hover:text-[#b8892a] transition-colors duration-200 tracking-wide">
-              Approach to Well-being
-            </a>
-            <a href="#pillars" className="text-sm text-[#6b6158] hover:text-[#b8892a] transition-colors duration-200 tracking-wide">
-              Pillars of Service
-            </a>
-            <a href="#discover" className="text-sm bg-[#b8892a] text-white px-4 py-1.5 rounded-full hover:bg-[#9d7422] transition-colors duration-200 tracking-wide">
-              Explore
-            </a>
-          </div>
-        </div>
-      </nav>
+      <Nav />
 
       {/* ── HERO ── */}
       <section className="relative h-[80vh] flex items-center justify-center overflow-hidden">
