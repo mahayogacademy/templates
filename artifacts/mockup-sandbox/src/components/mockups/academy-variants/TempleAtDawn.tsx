@@ -187,35 +187,49 @@ export function TempleAtDawn() {
       </section>
 
       {/* ── DISCOVER MORE ── */}
-      <section id="discover" className="py-20 px-6">
-        <div className="max-w-6xl mx-auto">
+      <section id="discover" className="relative py-20 px-6 overflow-hidden">
+        {/* Background image with heavy cream fade — echoes the hero */}
+        <div className="absolute inset-0">
+          <img
+            src="/__mockup/images/academy-hero.png"
+            alt=""
+            aria-hidden="true"
+            className="w-full h-full object-cover object-top"
+          />
+          {/* Fade: cream top → transparent middle → cream bottom */}
+          <div className="absolute inset-0 bg-gradient-to-b from-[#faf9f6] via-[#faf9f6]/80 to-[#faf9f6]" />
+          {/* Extra warm tint layer */}
+          <div className="absolute inset-0 bg-[#f5ece0]/60" />
+        </div>
+
+        <div className="relative z-10 max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <span className="uppercase tracking-[0.25em] text-xs text-[#b8892a] font-medium">Continue Your Journey</span>
             <h2 className="font-['Cormorant_Garamond'] text-4xl font-light text-[#3d3830] mt-2">Discover More</h2>
           </div>
 
-          <div className="divide-y divide-[#e8dece]">
+          <div className="divide-y divide-[#d8c9b0]/60">
             {[
               {
-                num: "01",
                 title: "Mahayog Meditation",
-                subtitle: "Ancient Science of Awakening",
                 desc: "Explore Mahayog — a complete, time-tested system for inner transformation rooted in the Vedic tradition.",
                 img: "/__mockup/images/academy-hero.png",
                 tag: "Practice",
               },
               {
-                num: "02",
                 title: "Programs & Courses",
-                subtitle: "Structured Learning Paths",
                 desc: "Discover courses in yoga, meditation, and Vedic philosophy designed for seekers at every stage of the journey.",
                 img: "/__mockup/images/academy-meditation.png",
                 tag: "Learn",
               },
               {
-                num: "03",
+                title: "The Ashram",
+                desc: "Step into a place of stillness and renewal — our Himalayan ashram offers a sanctuary for deep practice and retreat.",
+                img: "/__mockup/images/discover-ashram.png",
+                tag: "Retreat",
+              },
+              {
                 title: "Enlightened Guru Siddhababa",
-                subtitle: "Life, Mission & Wisdom",
                 desc: "Learn about the life and divine mission of His Holiness Jagadguru Mahayogi Siddhababa — the heart of the Academy.",
                 img: "/__mockup/images/discover-guru.png",
                 tag: "Lineage",
@@ -224,13 +238,8 @@ export function TempleAtDawn() {
               <a
                 key={item.title}
                 href="#"
-                className="group flex items-center gap-8 py-8 hover:bg-[#fdf7ef] transition-colors duration-300 px-4 -mx-4 rounded-xl"
+                className="group flex items-center gap-8 py-7 hover:bg-white/50 transition-colors duration-300 px-4 -mx-4 rounded-xl"
               >
-                {/* Number */}
-                <span className="font-['Cormorant_Garamond'] text-5xl font-light text-[#d4a843]/40 group-hover:text-[#d4a843]/70 transition-colors duration-300 w-14 shrink-0 leading-none select-none">
-                  {item.num}
-                </span>
-
                 {/* Thumbnail */}
                 <div className="w-24 h-20 rounded-xl overflow-hidden shrink-0 shadow-sm">
                   <img
@@ -252,7 +261,7 @@ export function TempleAtDawn() {
                 </div>
 
                 {/* Arrow */}
-                <div className="shrink-0 w-9 h-9 rounded-full border border-[#d4a843]/40 flex items-center justify-center group-hover:bg-[#b8892a] group-hover:border-[#b8892a] transition-all duration-300">
+                <div className="shrink-0 w-9 h-9 rounded-full border border-[#d4a843]/50 flex items-center justify-center group-hover:bg-[#b8892a] group-hover:border-[#b8892a] transition-all duration-300">
                   <ArrowRight className="w-4 h-4 text-[#b8892a] group-hover:text-white transition-colors duration-300" strokeWidth={1.5} />
                 </div>
               </a>
