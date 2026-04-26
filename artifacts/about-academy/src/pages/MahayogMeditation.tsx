@@ -458,7 +458,7 @@ export default function MahayogMeditation() {
       </section>
 
       {/* ── YOUR JOURNEY ── standalone hero-weight section */}
-      <section className="py-24 px-6 bg-[#1e3a28]">
+      <section className="py-24 px-6 bg-[#7a5a14]">
         <div className="max-w-5xl mx-auto">
 
           {/* Header */}
@@ -517,7 +517,7 @@ export default function MahayogMeditation() {
           <div className="text-center">
             <a
               href="#register"
-              className="inline-flex items-center gap-3 px-10 py-4 rounded-full bg-[#b8892a] hover:bg-[#d4a843] text-white font-semibold tracking-wide text-sm transition-all duration-300 shadow-[0_4px_24px_rgba(184,137,42,0.4)] hover:shadow-[0_4px_32px_rgba(184,137,42,0.6)] hover:scale-105"
+              className="inline-flex items-center gap-3 px-10 py-4 rounded-full bg-white hover:bg-[#fdf6ec] text-[#7a5a14] font-semibold tracking-wide text-sm transition-all duration-300 shadow-[0_4px_24px_rgba(0,0,0,0.2)] hover:shadow-[0_4px_32px_rgba(0,0,0,0.25)] hover:scale-105"
             >
               Register for the Workshop
               <ArrowRight className="w-4 h-4" strokeWidth={2} />
