@@ -530,56 +530,51 @@ export default function MahayogMeditation() {
       </section>
 
       {/* ── BENEFITS ── */}
-      <section id="benefits" className="py-20 px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-14">
+      <section id="benefits" className="py-14 px-6">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-10">
             <span className="uppercase tracking-[0.25em] text-xs text-[#b8892a] font-medium">What Unfolds</span>
-            <h2 className="font-['Cormorant_Garamond'] text-4xl md:text-5xl font-light text-[#3d3830] mt-2 mb-4">
+            <h2 className="font-['Cormorant_Garamond'] text-4xl font-light text-[#3d3830] mt-2 mb-3">
               Benefits of the Practice
             </h2>
             <p className="text-sm text-[#7a7068] max-w-xl mx-auto leading-relaxed">
-              These changes happen gradually and organically as a result of the awakened Kundalini and the Guru's ongoing grace.
+              These changes happen gradually and organically through awakened Kundalini and the Guru's grace.
             </p>
           </div>
 
-          {BENEFIT_CATEGORIES.map((cat) => (
-            <div key={cat.label} className="mb-14">
-              {/* Category header */}
-              <div className="flex items-center gap-4 mb-7">
-                <div className="h-px flex-1 bg-[#e8dece]" />
-                <span
-                  className="px-4 py-1 rounded-full text-xs uppercase tracking-[0.2em] font-medium border"
-                  style={{ color: cat.color, borderColor: `${cat.color}60`, background: `${cat.color}12` }}
+          <div className="grid md:grid-cols-2 gap-4">
+            {BENEFIT_CATEGORIES.flatMap((cat) =>
+              cat.items.map((b) => (
+                <div
+                  key={b.title}
+                  className="flex items-start gap-4 p-5 bg-white rounded-xl border border-[#ede4d5] shadow-sm hover:shadow-md hover:border-[#d4a843]/40 transition-all duration-300 group"
                 >
-                  {cat.label}
-                </span>
-                <div className="h-px flex-1 bg-[#e8dece]" />
-              </div>
-
-              {/* Cards */}
-              <div className={`grid gap-5 ${cat.items.length === 3 ? "md:grid-cols-3" : cat.items.length === 2 ? "md:grid-cols-2 max-w-3xl mx-auto" : "max-w-sm mx-auto"}`}>
-                {cat.items.map((b) => (
+                  {/* Icon badge */}
                   <div
-                    key={b.title}
-                    className="flex flex-col items-center text-center p-7 bg-white rounded-2xl border border-[#ede4d5] shadow-sm hover:shadow-md hover:border-[#d4a843]/40 transition-all duration-300 group"
+                    className="shrink-0 w-11 h-11 rounded-full flex items-center justify-center transition-all duration-300 group-hover:scale-110"
+                    style={{ background: `${cat.color}18`, border: `1.5px solid ${cat.color}50` }}
                   >
-                    {/* Icon badge */}
-                    <div
-                      className="w-16 h-16 rounded-full flex items-center justify-center mb-4 transition-all duration-300 group-hover:scale-110"
-                      style={{ background: `${cat.color}18`, border: `1.5px solid ${cat.color}50` }}
-                    >
-                      <BenefitIcon type={b.icon} />
+                    <BenefitIcon type={b.icon} />
+                  </div>
+                  <div className="min-w-0">
+                    <div className="flex items-center gap-2 mb-0.5 flex-wrap">
+                      <h3 className="font-['Cormorant_Garamond'] text-lg font-semibold text-[#3d3830] leading-snug">
+                        {b.title}
+                      </h3>
+                      <span
+                        className="text-[10px] uppercase tracking-[0.15em] px-2 py-0.5 rounded-full font-medium"
+                        style={{ color: cat.color, background: `${cat.color}18` }}
+                      >
+                        {cat.label}
+                      </span>
                     </div>
-                    <h3 className="font-['Cormorant_Garamond'] text-xl font-semibold text-[#3d3830] leading-snug mb-0.5">
-                      {b.title}
-                    </h3>
-                    <p className="text-[11px] uppercase tracking-[0.18em] text-[#b8892a] mb-3">{b.subtitle}</p>
+                    <p className="text-xs text-[#b8892a] mb-1 tracking-wide">{b.subtitle}</p>
                     <p className="text-sm text-[#6b6158] leading-relaxed">{b.desc}</p>
                   </div>
-                ))}
-              </div>
-            </div>
-          ))}
+                </div>
+              ))
+            )}
+          </div>
         </div>
       </section>
 
