@@ -190,20 +190,29 @@ export default function Ashram() {
       </section>
 
       {/* ── THREE PILLARS ── */}
-      <section className="py-20 px-6">
-        <div className="max-w-6xl mx-auto">
+      <section className="relative py-20 px-6 overflow-hidden">
+        {/* Background image with warm overlay */}
+        <img
+          src={`${b}images/ashram-hero.png`}
+          alt=""
+          aria-hidden
+          className="absolute inset-0 w-full h-full object-cover object-center scale-105"
+        />
+        <div className="absolute inset-0 bg-[#faf0e0]/88" />
+
+        <div className="relative z-10 max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <span className="uppercase tracking-[0.25em] text-xs text-[#b8892a] font-medium">The Foundation of Practice</span>
             <h2 className="font-['Cormorant_Garamond'] text-4xl md:text-5xl font-light text-[#3d3830] mt-2 mb-4">
               Three Pillars of Practice
             </h2>
-            <p className="text-sm text-[#7a7068] max-w-xl mx-auto leading-relaxed">
+            <p className="text-sm text-[#6b5f54] max-w-xl mx-auto leading-relaxed">
               The Guru Ashram is a rare place where seekers can engage in all three together in a supportive and loving setting.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             {PILLARS.map((p) => (
-              <div key={p.sanskrit} className="bg-white border border-[#e8dece] rounded-2xl p-8 hover:shadow-lg hover:shadow-[#b8892a]/8 transition-all duration-300">
+              <div key={p.sanskrit} className="bg-white/80 backdrop-blur-sm border border-[#e8d5b0] rounded-2xl p-8 hover:shadow-xl hover:shadow-[#b8892a]/12 hover:bg-white/95 transition-all duration-300">
                 <div className="w-10 h-10 rounded-full bg-[#fdf6ec] border border-[#e8c56a]/50 flex items-center justify-center mb-5">
                   <span className="text-[#b8892a] text-sm">{p.icon}</span>
                 </div>
