@@ -1,4 +1,5 @@
 import Nav from "@/components/Nav";
+import { Link } from "wouter";
 import { ArrowRight } from "lucide-react";
 
 const b = import.meta.env.BASE_URL;
@@ -354,10 +355,12 @@ export default function Ashram() {
           <p className="text-[#f0e4c8] text-base leading-relaxed mb-8 max-w-lg mx-auto">
             The Guru Ashram welcomes sincere seekers from all backgrounds. Whether for a day visit, a weekend, or an extended stay, come and experience a place where ancient wisdom is lived.
           </p>
-          <button className="inline-flex items-center gap-2 bg-[#b8892a] hover:bg-[#9d7422] text-white text-sm px-8 py-3.5 rounded-full tracking-wider transition-colors duration-200">
-            Get in Touch
-            <ArrowRight className="w-4 h-4" strokeWidth={1.5} />
-          </button>
+          <Link href="/contact">
+            <span className="inline-flex items-center gap-2 bg-[#b8892a] hover:bg-[#9d7422] text-white text-sm px-8 py-3.5 rounded-full tracking-wider transition-colors duration-200 cursor-pointer">
+              Get in Touch
+              <ArrowRight className="w-4 h-4" strokeWidth={1.5} />
+            </span>
+          </Link>
         </div>
       </section>
 

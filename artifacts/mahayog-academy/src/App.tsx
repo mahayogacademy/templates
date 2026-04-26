@@ -7,6 +7,7 @@ import Home from "@/pages/Home";
 import AboutAcademy from "@/pages/AboutAcademy";
 import MahayogMeditation from "@/pages/MahayogMeditation";
 import Ashram from "@/pages/Ashram";
+import Contact from "@/pages/Contact";
 
 const queryClient = new QueryClient();
 
@@ -17,6 +18,7 @@ function Router() {
       <Route path="/about" component={AboutAcademy} />
       <Route path="/meditation" component={MahayogMeditation} />
       <Route path="/ashram" component={Ashram} />
+      <Route path="/contact" component={Contact} />
       <Route component={NotFound} />
     </Switch>
   );
