@@ -133,7 +133,7 @@ const INTERNATIONAL_CENTERS = [
   { country: "United States", cities: ["Dallas", "Lubbock"] },
   { country: "United Kingdom", cities: ["London", "Reading", "Dartford"] },
   { country: "Denmark", cities: ["Copenhagen"] },
-  { country: "Australia", cities: [] },
+  { country: "Australia", cities: ["Sydney", "Adelaide"] },
 ];
 
 export default function Ashram() {
