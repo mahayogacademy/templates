@@ -561,24 +561,26 @@ export default function MahayogMeditation() {
                   {cat.items.map((b) => (
                     <div
                       key={b.title}
-                      className="p-4 bg-[#fdf6ec] rounded-xl border border-[#e8d9c4] shadow-sm hover:shadow-md hover:border-[#d4a843]/40 transition-all duration-300 group"
+                      className="p-4 bg-[#2d2720] rounded-xl border border-[#4a3d35] shadow-sm hover:shadow-md hover:border-[#b8892a]/50 transition-all duration-300 group"
                     >
                       <div className="flex items-center gap-3">
                         <div
                           className="shrink-0 w-9 h-9 rounded-full flex items-center justify-center transition-all duration-300 group-hover:scale-110"
-                          style={{ background: `${cat.color}18`, border: `1.5px solid ${cat.color}50` }}
+                          style={{ background: `${cat.color}25`, border: `1.5px solid ${cat.color}60` }}
                         >
                           <BenefitIcon type={b.icon} />
                         </div>
                         <div>
-                          <h3 className="font-['Cormorant_Garamond'] text-lg font-semibold text-[#3d3830] leading-tight">
+                          <h3 className="font-['Cormorant_Garamond'] text-lg font-semibold text-white leading-tight">
                             {b.title}
                           </h3>
                           <p className="text-[10px] uppercase tracking-[0.15em] text-[#b8892a]">{b.subtitle}</p>
                         </div>
                       </div>
                       <div className="overflow-hidden max-h-0 group-hover:max-h-40 transition-all duration-500 ease-in-out">
-                        <p className="text-sm text-[#6b6158] leading-relaxed pt-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">{b.desc}</p>
+                        <div className="mt-3 bg-white rounded-lg px-3 py-2.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
+                          <p className="text-sm text-[#5a5248] leading-relaxed">{b.desc}</p>
+                        </div>
                       </div>
                     </div>
                   ))}
