@@ -489,7 +489,7 @@ export default function MahayogMeditation() {
                 step: "02",
                 sub: "The initiation",
                 title: "5-Day Workshop",
-                desc: "Attend a 5-day workshop. Receive Shaktipat Dīkṣā from Jagadguru Mahayogi Siddhababa. Kundalini awakening and the inner journey begins under direct guidance.",
+                desc: "Attend a 5-day workshop. Receive Shaktipat Dīkṣā from Siddhababa. Kundalini awakening and the inner journey begins under direct guidance.",
               },
               {
                 step: "03",
