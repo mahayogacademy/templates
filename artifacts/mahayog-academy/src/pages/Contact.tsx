@@ -118,8 +118,8 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="text-xs uppercase tracking-widest text-[#b8892a] font-medium mb-1">Email</p>
-                  <a href="mailto:info@mahayogisiddhababa.org" className="text-sm text-[#5a5248] hover:text-[#b8892a] transition-colors">
-                    info@mahayogisiddhababa.org
+                  <a href="mailto:info@siddhamahayog.org" className="text-sm text-[#5a5248] hover:text-[#b8892a] transition-colors">
+                    info@siddhamahayog.org
                   </a>
                 </div>
               </div>
@@ -131,7 +131,7 @@ export default function Contact() {
                 <div>
                   <p className="text-xs uppercase tracking-widest text-[#b8892a] font-medium mb-1">Response Time</p>
                   <p className="text-sm text-[#5a5248]">
-                    We aim to respond within 3–5 working days. The Academy is run entirely by volunteers.
+                    We aim to respond within 3–5 working days. As a volunteer-run organization, we appreciate your patience.
                   </p>
                 </div>
               </div>
