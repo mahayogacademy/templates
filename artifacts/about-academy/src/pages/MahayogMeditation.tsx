@@ -138,16 +138,16 @@ const BENEFIT_CATEGORIES = [
         desc: "Restless thoughts slow; peace emerges from within. Compassion, equanimity, and a felt sense of divine grace naturally develop in daily life.",
       },
       {
-        icon: "relief",
-        title: "Relief from Suffering",
-        subtitle: "Dissolving Blockages",
-        desc: "Sorrows, fears, and anxieties gradually diminish. Lifelong phobias often fade as Kundalini dissolves mental and physical blockages.",
-      },
-      {
         icon: "transform",
         title: "Positive Transformation",
         subtitle: "Renewed Outlook",
         desc: "Negative habits lose their grip; joy, optimism, and resilience arise — not as forced attitudes, but as the result of genuine inner fulfillment.",
+      },
+      {
+        icon: "relief",
+        title: "Relief from Suffering",
+        subtitle: "Dissolving Blockages",
+        desc: "Sorrows, fears, and anxieties gradually diminish. Lifelong phobias often fade as Kundalini dissolves mental and physical blockages.",
       },
     ],
   },
