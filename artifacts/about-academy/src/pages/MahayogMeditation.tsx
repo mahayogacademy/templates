@@ -499,15 +499,15 @@ export default function MahayogMeditation() {
             ].map((item, i) => (
               <div key={item.step} className="flex-1 flex flex-col items-center text-center px-6 md:px-10 relative">
                 {/* Badge */}
-                <div className="relative z-10 w-[88px] h-[88px] rounded-full border-2 border-white/50 bg-white/15 flex flex-col items-center justify-center mb-6 shadow-[0_0_32px_rgba(255,255,255,0.1)]">
-                  <span className="font-['Cormorant_Garamond'] text-3xl font-semibold text-white leading-none">{item.step}</span>
+                <div className="relative z-10 w-[96px] h-[96px] rounded-full border-2 border-[#b8892a] bg-[#b8892a]/20 flex flex-col items-center justify-center mb-6 shadow-[0_0_32px_rgba(184,137,42,0.35)]">
+                  <span className="font-['Cormorant_Garamond'] text-4xl font-bold text-[#e8c06a] leading-none">{item.step}</span>
                 </div>
                 {/* Mobile arrow */}
                 {i < 2 && (
-                  <div className="md:hidden text-white/40 text-3xl mb-6">↓</div>
+                  <div className="md:hidden text-[#b8892a]/70 text-3xl mb-6">↓</div>
                 )}
                 <span className="text-[10px] uppercase tracking-[0.25em] text-white/60 font-medium mb-2">{item.sub}</span>
-                <h4 className="font-['Cormorant_Garamond'] text-2xl font-semibold text-white mb-3 leading-snug">{item.title}</h4>
+                <h4 className="font-['Cormorant_Garamond'] text-3xl font-semibold text-[#f0d898] mb-3 leading-snug">{item.title}</h4>
                 <p className="text-sm text-white/75 leading-relaxed max-w-[220px]">{item.desc}</p>
               </div>
             ))}
