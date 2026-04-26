@@ -649,20 +649,14 @@ export default function MahayogMeditation() {
                 { name: "Ravidas", img: "/images/saint-ravidas.jpg", years: "c. 1450–1520" },
                 { name: "Tulsidas", img: "/images/saint-tulsidas.jpg", years: "c. 1532–1623" },
                 { name: "Mira Bai", img: "/images/saint-mirabai.jpg", years: "c. 1498–1547" },
-                { name: "Jagadguru Mahayogi Siddhababa", img: null, initials: "MS", years: "Present day" },
+                { name: "Jagadguru Mahayogi Siddhababa", img: "/images/saint-siddhababa.png", years: "Present day" },
               ].map((s) => (
                 <div key={s.name} className="flex items-center gap-3 bg-white/60 backdrop-blur-sm border border-[#e0d0b8] rounded-xl p-2.5 hover:bg-white/80 transition-all duration-200">
-                  {s.img ? (
-                    <img
-                      src={s.img}
-                      alt={s.name}
-                      className="w-12 h-12 rounded-lg object-cover object-top shrink-0 shadow-sm"
-                    />
-                  ) : (
-                    <div className="w-12 h-12 rounded-lg shrink-0 bg-[#b8892a] flex items-center justify-center shadow-sm">
-                      <span className="font-['Cormorant_Garamond'] text-white text-lg font-semibold">{s.initials}</span>
-                    </div>
-                  )}
+                  <img
+                    src={s.img}
+                    alt={s.name}
+                    className="w-12 h-12 rounded-lg object-cover object-top shrink-0 shadow-sm"
+                  />
                   <div>
                     <p className="font-['Cormorant_Garamond'] text-sm font-semibold text-[#3d3830] leading-tight">{s.name}</p>
                     <p className="text-[10px] text-[#9a8878] mt-0.5">{s.years}</p>
