@@ -325,11 +325,16 @@ export default function MahayogMeditation() {
             <VennDiagram />
           </div>
 
-          {/* How it works */}
-          <div className="grid md:grid-cols-2 gap-14 items-center">
+        </div>
+      </section>
+
+      {/* ── HOW IT WORKS ── */}
+      <section className="py-20 px-6 bg-[#ede8de]">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-14 items-center mb-20">
             <img
-              src="/images/meditation-kundalini.png"
-              alt="Kundalini energy visualization"
+              src="/images/meditation-origins.png"
+              alt="Himalayan meditation origins"
               className="w-full rounded-2xl object-cover shadow-md order-2 md:order-1"
               style={{ height: "400px" }}
             />
@@ -348,6 +353,59 @@ export default function MahayogMeditation() {
                 Jagadguru Mahayogi Siddhababa can awaken a person's Kundalini Shakti by mere glance, touch, mantra, or pure intention at a distance.
               </p>
             </div>
+          </div>
+
+          {/* ── Journey sequence ── */}
+          <div className="text-center mb-12">
+            <span className="uppercase tracking-[0.25em] text-xs text-[#b8892a] font-medium">Your Journey</span>
+            <h3 className="font-['Cormorant_Garamond'] text-3xl font-light text-[#3d3830] mt-2">
+              Beginning the Path
+            </h3>
+          </div>
+
+          <div className="flex flex-col md:flex-row items-stretch gap-0 relative">
+            {/* Connecting line — desktop only */}
+            <div className="hidden md:block absolute top-[52px] left-[calc(16.66%+32px)] right-[calc(16.66%+32px)] h-px bg-gradient-to-r from-[#b8892a]/30 via-[#b8892a] to-[#b8892a]/30" />
+
+            {[
+              {
+                step: "01",
+                title: "Register",
+                sub: "Begin here",
+                desc: "Express your intention to receive Shaktipat initiation by registering for an upcoming retreat or intensive with Jagadguru Mahayogi Siddhababa.",
+                icon: "✦",
+              },
+              {
+                step: "02",
+                title: "5-Day Workshop",
+                sub: "The initiation",
+                desc: "Attend a guided 5-day immersive workshop. Receive Shaktipat Dīkṣā from the Guru. Kundalini awakens and the inner journey begins under direct guidance.",
+                icon: "◈",
+              },
+              {
+                step: "03",
+                title: "Continue at Home",
+                sub: "The unfolding",
+                desc: "Return home with an awakened practice. Meditate daily as Kundalini continues to rise, purify, and deepen — supported by the Guru's ongoing grace.",
+                icon: "❋",
+              },
+            ].map((item, i) => (
+              <div key={item.step} className="flex-1 flex flex-col items-center text-center px-6 md:px-8 relative">
+                {/* Number badge */}
+                <div className="relative z-10 w-16 h-16 rounded-full bg-[#3d3830] border-4 border-[#ede8de] flex items-center justify-center mb-5 shadow-md">
+                  <span className="font-['Cormorant_Garamond'] text-lg font-semibold text-[#e8c56a] leading-none">
+                    {item.step}
+                  </span>
+                </div>
+                {/* Arrow between steps — mobile */}
+                {i < 2 && (
+                  <div className="md:hidden text-[#b8892a]/50 text-2xl mb-5 rotate-90">→</div>
+                )}
+                <span className="text-[10px] uppercase tracking-[0.2em] text-[#b8892a] font-medium mb-1">{item.sub}</span>
+                <h4 className="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#3d3830] mb-3">{item.title}</h4>
+                <p className="text-sm text-[#6b6158] leading-relaxed max-w-[240px]">{item.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
