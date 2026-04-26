@@ -192,24 +192,6 @@ export default function MahayogMeditation() {
             </p>
           </div>
 
-          {/* Sanskrit verse */}
-          <div className="relative max-w-2xl mx-auto mb-14">
-            <div className="absolute left-0 top-0 bottom-0 w-[3px] bg-gradient-to-b from-[#d4a843] to-[#b8892a] rounded-full" />
-            <div className="pl-8 py-2">
-              <p className="font-['Cormorant_Garamond'] text-xl italic text-[#5a4a2a] leading-loose mb-3">
-                "हथो, मंत्रो, लय, राज योगो अंतर भूमिका कर्मात,<br />
-                एका एव चतुर्धयाम महायोगौ विदीयते।"
-              </p>
-              <p className="text-sm text-[#7a7068] italic leading-relaxed mb-2">
-                "Hatho, Mantro, Laya, Raj Yogo Antar Bhumika Karmat,<br />
-                Eka Eva Chaturdhayaam Mahayogau Vidiyate."
-              </p>
-              <p className="text-xs uppercase tracking-widest text-[#b8892a] font-semibold">
-                All four yogas culminate in Mahayog
-              </p>
-            </div>
-          </div>
-
           {/* How it works */}
           <div className="grid md:grid-cols-2 gap-14 items-center">
             <img
