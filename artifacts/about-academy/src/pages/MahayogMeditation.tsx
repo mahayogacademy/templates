@@ -561,20 +561,20 @@ export default function MahayogMeditation() {
                   {cat.items.map((b) => (
                     <div
                       key={b.title}
-                      className="p-4 bg-[#2d2720] rounded-xl border border-[#4a3d35] shadow-sm hover:shadow-md hover:border-[#b8892a]/50 transition-all duration-300 group"
+                      className="p-4 bg-[#c4a882] rounded-xl border border-[#b09268] shadow-sm hover:shadow-md hover:border-[#8a6830]/60 transition-all duration-300 group"
                     >
                       <div className="flex items-center gap-3">
                         <div
                           className="shrink-0 w-9 h-9 rounded-full flex items-center justify-center transition-all duration-300 group-hover:scale-110"
-                          style={{ background: `${cat.color}25`, border: `1.5px solid ${cat.color}60` }}
+                          style={{ background: `rgba(255,255,255,0.25)`, border: `1.5px solid rgba(255,255,255,0.45)` }}
                         >
                           <BenefitIcon type={b.icon} />
                         </div>
                         <div>
-                          <h3 className="font-['Cormorant_Garamond'] text-lg font-semibold text-white leading-tight">
+                          <h3 className="font-['Cormorant_Garamond'] text-lg font-semibold text-[#2d2011] leading-tight">
                             {b.title}
                           </h3>
-                          <p className="text-[10px] uppercase tracking-[0.15em] text-[#b8892a]">{b.subtitle}</p>
+                          <p className="text-[10px] uppercase tracking-[0.15em] text-[#6b4c14]">{b.subtitle}</p>
                         </div>
                       </div>
                       <div className="overflow-hidden max-h-0 group-hover:max-h-40 transition-all duration-500 ease-in-out">
