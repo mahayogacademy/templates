@@ -662,14 +662,12 @@ export default function MahayogMeditation() {
                   <p className="text-xs text-[#5a5248] mt-2 leading-relaxed">Propagator of Surat-Śhabda Yoga for the upliftment of humanity</p>
                 </div>
               </div>
-              <p className="text-[10px] uppercase tracking-[0.25em] text-[#b8892a] font-medium mb-1">The Lineage</p>
+              <p className="text-[10px] uppercase tracking-[0.25em] text-[#b8892a] font-medium mb-1">Prominent Practitioners</p>
               {[
-                { name: "Jagadguru Ramanandacharya", img: "/images/saint-ramananda.jpg", years: "c. 1400 CE" },
                 { name: "Kabir", img: "/images/saint-kabir.jpg", years: "c. 1440–1518" },
                 { name: "Ravidas", img: "/images/saint-ravidas.jpg", years: "c. 1450–1520" },
                 { name: "Tulsidas", img: "/images/saint-tulsidas.jpg", years: "c. 1532–1623" },
                 { name: "Mira Bai", img: "/images/saint-mirabai.jpg", years: "c. 1498–1547" },
-                { name: "Jagadguru Mahayogi Siddhababa", img: "/images/saint-siddhababa.png", years: "Present day" },
               ].map((s) => (
                 <div key={s.name} className="flex items-center gap-3 bg-white/60 backdrop-blur-sm border border-[#e0d0b8] rounded-xl p-2.5 hover:bg-white/80 transition-all duration-200">
                   <img
