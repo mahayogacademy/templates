@@ -448,65 +448,77 @@ export default function MahayogMeditation() {
             </div>
           </div>
 
-          {/* ── Journey sequence ── */}
-          <div className="flex items-center gap-4 mb-12">
-            <div className="flex-1 h-px bg-[#c8b99a]/40" />
-            <div className="w-1.5 h-1.5 rounded-full bg-[#b8892a]/60" />
-            <div className="w-1 h-1 rounded-full bg-[#b8892a]/40" />
-            <div className="w-1.5 h-1.5 rounded-full bg-[#b8892a]/60" />
-            <div className="flex-1 h-px bg-[#c8b99a]/40" />
-          </div>
-          <div className="text-center mb-12">
-            <span className="uppercase tracking-[0.25em] text-xs text-[#b8892a] font-medium">Your Journey</span>
-            <h3 className="font-['Cormorant_Garamond'] text-3xl font-light text-[#3d3830] mt-2">
+        </div>
+      </section>
+
+      {/* ── YOUR JOURNEY ── standalone hero-weight section */}
+      <section className="py-24 px-6 bg-[#2d2720]">
+        <div className="max-w-5xl mx-auto">
+
+          {/* Header */}
+          <div className="text-center mb-16">
+            <span className="uppercase tracking-[0.3em] text-xs text-[#e8c56a]/80 font-medium">Your Journey</span>
+            <h2 className="font-['Cormorant_Garamond'] text-4xl md:text-5xl font-light text-[#f5ede0] mt-3 mb-4 leading-snug">
               Beginning the Path
-            </h3>
+            </h2>
+            <p className="text-sm text-[#a89880] max-w-md mx-auto leading-relaxed">
+              Three steps from where you are now to an awakened, lifelong practice.
+            </p>
           </div>
 
-          <div className="flex flex-col md:flex-row items-stretch gap-0 relative">
-            {/* Connecting line — desktop only */}
-            <div className="hidden md:block absolute top-[52px] left-[calc(16.66%+32px)] right-[calc(16.66%+32px)] h-px bg-gradient-to-r from-[#b8892a]/30 via-[#b8892a] to-[#b8892a]/30" />
+          {/* Steps */}
+          <div className="flex flex-col md:flex-row items-start gap-6 md:gap-0 relative mb-16">
+            {/* Connecting line desktop */}
+            <div className="hidden md:block absolute top-[44px] left-[calc(16.66%+36px)] right-[calc(16.66%+36px)] h-px bg-gradient-to-r from-[#b8892a]/20 via-[#e8c56a] to-[#b8892a]/20" />
 
             {[
               {
                 step: "01",
-                title: "Register",
                 sub: "Begin here",
+                title: "Register",
                 desc: "Express your intention to receive Shaktipat initiation by registering for an upcoming retreat or intensive with Jagadguru Mahayogi Siddhababa.",
-                icon: "✦",
               },
               {
                 step: "02",
-                title: "5-Day Workshop",
                 sub: "The initiation",
-                desc: "Attend a guided 5-day immersive workshop. Receive Shaktipat Dīkṣā from the Guru. Kundalini awakens and the inner journey begins under direct guidance.",
-                icon: "◈",
+                title: "5-Day Workshop",
+                desc: "Attend an immersive 5-day workshop. Receive Shaktipat Dīkṣā directly from the Guru. Kundalini awakens and the inner journey begins under direct guidance.",
               },
               {
                 step: "03",
-                title: "Continue at Home",
                 sub: "The unfolding",
-                desc: "Return home with an awakened practice. Meditate daily as Kundalini continues to rise, purify, and deepen — supported by the Guru's ongoing grace.",
-                icon: "❋",
+                title: "Continue at Home",
+                desc: "Return home with an awakened practice. Meditate daily as Kundalini continues to rise and deepen — supported by the Guru's ongoing grace.",
               },
             ].map((item, i) => (
-              <div key={item.step} className="flex-1 flex flex-col items-center text-center px-6 md:px-8 relative">
-                {/* Number badge */}
-                <div className="relative z-10 w-16 h-16 rounded-full bg-[#3d3830] border-4 border-[#ede8de] flex items-center justify-center mb-5 shadow-md">
-                  <span className="font-['Cormorant_Garamond'] text-lg font-semibold text-[#e8c56a] leading-none">
-                    {item.step}
-                  </span>
+              <div key={item.step} className="flex-1 flex flex-col items-center text-center px-6 md:px-10 relative">
+                {/* Badge */}
+                <div className="relative z-10 w-[88px] h-[88px] rounded-full border-2 border-[#e8c56a]/60 bg-[#3d3728] flex flex-col items-center justify-center mb-6 shadow-[0_0_32px_rgba(232,197,106,0.15)]">
+                  <span className="font-['Cormorant_Garamond'] text-3xl font-semibold text-[#e8c56a] leading-none">{item.step}</span>
                 </div>
-                {/* Arrow between steps — mobile */}
+                {/* Mobile arrow */}
                 {i < 2 && (
-                  <div className="md:hidden text-[#b8892a]/50 text-2xl mb-5 rotate-90">→</div>
+                  <div className="md:hidden text-[#e8c56a]/30 text-3xl mb-6">↓</div>
                 )}
-                <span className="text-[10px] uppercase tracking-[0.2em] text-[#b8892a] font-medium mb-1">{item.sub}</span>
-                <h4 className="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#3d3830] mb-3">{item.title}</h4>
-                <p className="text-sm text-[#6b6158] leading-relaxed max-w-[240px]">{item.desc}</p>
+                <span className="text-[10px] uppercase tracking-[0.25em] text-[#e8c56a]/60 font-medium mb-2">{item.sub}</span>
+                <h4 className="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#f5ede0] mb-3 leading-snug">{item.title}</h4>
+                <p className="text-sm text-[#a89880] leading-relaxed max-w-[220px]">{item.desc}</p>
               </div>
             ))}
           </div>
+
+          {/* CTA */}
+          <div className="text-center">
+            <a
+              href="#register"
+              className="inline-flex items-center gap-3 px-10 py-4 rounded-full bg-[#b8892a] hover:bg-[#d4a843] text-white font-medium tracking-wide text-sm transition-all duration-300 shadow-[0_4px_24px_rgba(184,137,42,0.35)] hover:shadow-[0_4px_32px_rgba(184,137,42,0.55)] hover:scale-105"
+            >
+              Register for the Workshop
+              <ArrowRight className="w-4 h-4" strokeWidth={2} />
+            </a>
+            <p className="text-xs text-[#6b6158] mt-4">Upcoming dates available — limited places per retreat.</p>
+          </div>
+
         </div>
       </section>
 
