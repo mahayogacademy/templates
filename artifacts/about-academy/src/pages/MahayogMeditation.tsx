@@ -385,10 +385,6 @@ export default function MahayogMeditation() {
               className="w-full rounded-2xl object-cover shadow-md"
               style={{ height: "420px" }}
             />
-            <div className="absolute -bottom-5 -left-5 w-24 h-24 rounded-2xl bg-[#f5ece0] border border-[#e8d5b0] flex flex-col items-center justify-center shadow-sm">
-              <span className="font-['Cormorant_Garamond'] text-3xl font-semibold text-[#b8892a] leading-none">4</span>
-              <span className="text-[9px] uppercase tracking-wider text-[#9a8f84] mt-0.5">Yogas in One</span>
-            </div>
           </div>
         </div>
       </section>
