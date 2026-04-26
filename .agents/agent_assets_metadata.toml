@@ -66,3 +66,27 @@ id = "Rwq2UQYcypTrsgvvHdm19"
 uri = "file://artifacts/mockup-sandbox/public/images/discover-ashram.png"
 type = "image"
 title = "generated_image"
+
+[[generated]]
+id = "elAGzfgmvKb2t5Cz7Mh03"
+uri = "file://artifacts/about-academy/public/images/meditation-hero.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "_YZw2ZZuKmzneVv9LZa5n"
+uri = "file://artifacts/about-academy/public/images/meditation-kundalini.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "KURdpiEHkZkgp5pEHMn62"
+uri = "file://artifacts/about-academy/public/images/meditation-origins.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "bXhDroeXd4xFUroWDLafS"
+uri = "file://artifacts/about-academy/public/images/meditation-benefits.png"
+type = "image"
+title = "generated_image"
