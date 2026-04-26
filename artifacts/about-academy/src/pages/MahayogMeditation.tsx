@@ -159,7 +159,7 @@ const BENEFIT_CATEGORIES = [
         icon: "ajapa",
         title: "Ajapa Japa",
         subtitle: "Effortless Divine Name",
-        desc: "The sacred primordial Name (Rām) begins reverberating inside continuously — 'without japa, the japa happens' — whether working, resting, or sleeping.",
+        desc: "The sacred primordial Name (Rām) begins reverberating inside continuously. 'Without japa, the japa happens' — whether working, resting, or sleeping.",
       },
       {
         icon: "nada",
