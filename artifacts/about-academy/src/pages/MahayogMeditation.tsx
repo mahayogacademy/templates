@@ -474,8 +474,9 @@ export default function MahayogMeditation() {
 
           {/* Steps */}
           <div className="flex flex-col md:flex-row items-start gap-6 md:gap-0 relative mb-16">
-            {/* Connecting line desktop */}
-            <div className="hidden md:block absolute top-[44px] left-[calc(16.66%+36px)] right-[calc(16.66%+36px)] h-px bg-gradient-to-r from-white/10 via-white/50 to-white/10" />
+            {/* Connecting lines desktop — two segments that stop at each circle's edge */}
+            <div className="hidden md:block absolute top-[48px] left-[calc(16.66%+48px)] w-[calc(33.33%-96px)] h-px bg-gradient-to-r from-white/20 to-white/50" />
+            <div className="hidden md:block absolute top-[48px] left-[calc(50%+48px)] w-[calc(33.33%-96px)] h-px bg-gradient-to-r from-white/50 to-white/20" />
 
             {[
               {
@@ -517,7 +518,7 @@ export default function MahayogMeditation() {
           <div className="text-center">
             <a
               href="#register"
-              className="inline-flex items-center gap-3 px-10 py-4 rounded-full bg-white hover:bg-[#b8892a] text-[#2d2720] hover:text-white font-semibold tracking-wide text-sm transition-all duration-300 shadow-[0_4px_24px_rgba(0,0,0,0.2)] hover:shadow-[0_4px_32px_rgba(184,137,42,0.5)] hover:scale-105"
+              className="inline-flex items-center gap-3 px-10 py-4 rounded-full bg-[#b8892a] hover:bg-[#d4a843] text-white font-semibold tracking-wide text-sm transition-all duration-300 shadow-[0_4px_24px_rgba(184,137,42,0.4)] hover:shadow-[0_4px_32px_rgba(184,137,42,0.65)] hover:scale-105"
             >
               Register for the Workshop
               <ArrowRight className="w-4 h-4" strokeWidth={2} />
