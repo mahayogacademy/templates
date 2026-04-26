@@ -153,19 +153,30 @@ export function TempleAtDawn() {
                   alt={p.title}
                   className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
-                {/* Gradient — lighter at top, richer at bottom */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#1a1206]/85 via-[#1a1206]/30 to-transparent" />
+                {/* Gradient — stronger dark band at bottom for legibility */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0e0a04]/95 via-[#1a1206]/50 to-transparent" />
                 {/* Gold top accent line that widens on hover */}
                 <div className="absolute top-0 left-0 h-[3px] w-10 bg-[#d4a843] group-hover:w-full transition-all duration-500" />
 
                 {/* Content pinned to bottom */}
                 <div className="absolute bottom-0 left-0 right-0 p-5">
-                  <h3 className="font-['Cormorant_Garamond'] text-3xl font-semibold text-white leading-none mb-1">
+                  <h3
+                    className="font-['Cormorant_Garamond'] text-3xl font-semibold text-white leading-none mb-1"
+                    style={{ textShadow: "0 1px 6px rgba(0,0,0,0.6)" }}
+                  >
                     {p.title}
                   </h3>
-                  <p className="text-[10px] uppercase tracking-widest text-[#e8c56a] mb-2 font-medium">{p.label}</p>
+                  <p
+                    className="text-[10px] uppercase tracking-widest text-[#f0d47a] mb-2 font-semibold"
+                    style={{ textShadow: "0 1px 4px rgba(0,0,0,0.5)" }}
+                  >
+                    {p.label}
+                  </p>
                   {/* Description slides up on hover */}
-                  <p className="text-xs text-white/75 leading-relaxed max-h-0 overflow-hidden group-hover:max-h-16 transition-all duration-500">
+                  <p
+                    className="text-xs text-white/90 leading-relaxed max-h-0 overflow-hidden group-hover:max-h-16 transition-all duration-500"
+                    style={{ textShadow: "0 1px 4px rgba(0,0,0,0.6)" }}
+                  >
                     {p.desc}
                   </p>
                 </div>
