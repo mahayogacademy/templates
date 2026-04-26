@@ -561,7 +561,7 @@ export default function MahayogMeditation() {
                   {cat.items.map((b) => (
                     <div
                       key={b.title}
-                      className="p-4 bg-white rounded-xl border border-[#ede4d5] shadow-sm hover:shadow-md hover:border-[#d4a843]/40 transition-all duration-300 group"
+                      className="p-4 bg-[#fdf6ec] rounded-xl border border-[#e8d9c4] shadow-sm hover:shadow-md hover:border-[#d4a843]/40 transition-all duration-300 group"
                     >
                       <div className="flex items-center gap-3">
                         <div
