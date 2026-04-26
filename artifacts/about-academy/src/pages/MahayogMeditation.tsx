@@ -2,6 +2,142 @@ import { useState } from "react";
 import { ArrowRight, ChevronDown } from "lucide-react";
 import { Link } from "wouter";
 
+const YOGAS = [
+  {
+    id: "hatha",
+    name: "Hatha",
+    cx: 155, cy: 155,
+    fill: "#e8c56a", stroke: "#d4a843",
+    labelX: 88, labelY: 92,
+    desc: "Purification and mastery of the physical body through postures (asanas) and breath control (pranayama), creating a strong, receptive vessel for higher awareness.",
+  },
+  {
+    id: "mantra",
+    name: "Mantra",
+    cx: 245, cy: 155,
+    fill: "#c4855a", stroke: "#b8743e",
+    labelX: 312, labelY: 92,
+    desc: "The repetition and internalization of sacred sound and divine names to harmonize the mind, purify speech, and awaken inner vibrations of consciousness.",
+  },
+  {
+    id: "laya",
+    name: "Laya",
+    cx: 155, cy: 245,
+    fill: "#7a9e7e", stroke: "#5e8862",
+    labelX: 88, labelY: 308,
+    desc: "Dissolution of individual consciousness into the universal through deep absorption — focusing on subtle energy centers (chakras) and the inner sound (nāda).",
+  },
+  {
+    id: "raja",
+    name: "Raja",
+    cx: 245, cy: 245,
+    fill: "#b8892a", stroke: "#9d7422",
+    labelX: 312, labelY: 308,
+    desc: "The royal path of meditation — mastery of the mind through concentration, contemplation, and ultimate absorption (samādhi), leading to direct Self-realization.",
+  },
+];
+
+const MAHAYOG_DESC = "Mahāyog naturally integrates all four yoga paths. As Kundalini awakens through Shaktipat initiation, each yoga unfolds organically within the practitioner — without effort or deliberate technique.";
+
+function VennDiagram() {
+  const [hovered, setHovered] = useState<string | null>(null);
+  const activeYoga = YOGAS.find(y => y.id === hovered);
+  const isMahayog = hovered === "mahayog";
+  const activeDesc = isMahayog ? MAHAYOG_DESC : activeYoga?.desc;
+  const activeName = isMahayog ? "Mahāyog Meditation" : activeYoga ? `${activeYoga.name} Yoga` : null;
+
+  return (
+    <div className="flex flex-col items-center gap-5">
+      <svg viewBox="0 0 400 400" className="w-full max-w-sm" xmlns="http://www.w3.org/2000/svg">
+        {YOGAS.map((y) => (
+          <g key={y.id}>
+            <circle
+              cx={y.cx} cy={y.cy} r={108}
+              fill={y.fill}
+              fillOpacity={hovered === y.id ? 0.55 : hovered ? 0.18 : 0.28}
+              stroke={y.stroke}
+              strokeWidth={hovered === y.id ? 2 : 1.5}
+              style={{ cursor: "pointer", transition: "fill-opacity 0.25s" }}
+              onMouseEnter={() => setHovered(y.id)}
+              onMouseLeave={() => setHovered(null)}
+            />
+            {/* Yoga name label */}
+            <text
+              x={y.labelX} y={y.labelY}
+              textAnchor="middle"
+              fontFamily="'Cormorant Garamond', serif"
+              fontSize="17"
+              fill={hovered === y.id ? "#3d3830" : "#5a4a2a"}
+              fontWeight="700"
+              style={{ pointerEvents: "none", transition: "opacity 0.2s" }}
+            >
+              {y.name}
+            </text>
+            <text
+              x={y.labelX} y={y.labelY + 18}
+              textAnchor="middle"
+              fontFamily="'Cormorant Garamond', serif"
+              fontSize="14"
+              fill={hovered === y.id ? "#3d3830" : "#7a6a58"}
+              style={{ pointerEvents: "none" }}
+            >
+              Yoga
+            </text>
+          </g>
+        ))}
+
+        {/* Centre — Mahayog */}
+        <circle
+          cx="200" cy="200" r="48"
+          fill="#3d3830"
+          fillOpacity={hovered === "mahayog" ? 1 : 0.88}
+          style={{ cursor: "pointer", transition: "fill-opacity 0.25s" }}
+          onMouseEnter={() => setHovered("mahayog")}
+          onMouseLeave={() => setHovered(null)}
+        />
+        <text
+          x="200" y="196"
+          textAnchor="middle"
+          fontFamily="'Cormorant Garamond', serif"
+          fontSize="14"
+          fill="white"
+          fontStyle="italic"
+          style={{ pointerEvents: "none" }}
+        >
+          Mahāyog
+        </text>
+        <text
+          x="200" y="213"
+          textAnchor="middle"
+          fontFamily="'Cormorant Garamond', serif"
+          fontSize="10"
+          fill="#e8c56a"
+          letterSpacing="1"
+          style={{ pointerEvents: "none" }}
+        >
+          MEDITATION
+        </text>
+      </svg>
+
+      {/* Description panel */}
+      <div
+        className="w-full max-w-sm min-h-[88px] rounded-2xl border border-[#e0d0b8] bg-white/80 px-5 py-4 text-center transition-all duration-300"
+        style={{ opacity: activeName ? 1 : 0 }}
+      >
+        {activeName && (
+          <>
+            <p className="font-['Cormorant_Garamond'] text-lg font-semibold text-[#b8892a] mb-1">{activeName}</p>
+            <p className="text-sm text-[#5a5248] leading-relaxed">{activeDesc}</p>
+          </>
+        )}
+        {!activeName && (
+          <p className="text-sm text-[#9a8f84] italic mt-4">Hover over each section to learn more</p>
+        )}
+      </div>
+    </div>
+  );
+}
+
 const BENEFITS = [
   {
     title: "Inner Peace & Emotional Balance",
@@ -198,37 +334,7 @@ export default function MahayogMeditation() {
             </div>
 
             {/* Venn Diagram */}
-            <div className="flex items-center justify-center">
-              <svg viewBox="0 0 400 400" className="w-full max-w-sm" xmlns="http://www.w3.org/2000/svg">
-                {/* Four overlapping circles */}
-                <circle cx="155" cy="155" r="108" fill="#e8c56a" fillOpacity="0.28" stroke="#d4a843" strokeWidth="1.5"/>
-                <circle cx="245" cy="155" r="108" fill="#c4855a" fillOpacity="0.22" stroke="#b8743e" strokeWidth="1.5"/>
-                <circle cx="155" cy="245" r="108" fill="#7a9e7e" fillOpacity="0.22" stroke="#5e8862" strokeWidth="1.5"/>
-                <circle cx="245" cy="245" r="108" fill="#b8892a" fillOpacity="0.22" stroke="#9d7422" strokeWidth="1.5"/>
-
-                {/* Centre circle — Mahayog */}
-                <circle cx="200" cy="200" r="46" fill="#3d3830" fillOpacity="0.88"/>
-                <text x="200" y="196" textAnchor="middle" fontFamily="'Cormorant Garamond', serif" fontSize="13" fill="white" fontStyle="italic">Mahāyog</text>
-                <text x="200" y="212" textAnchor="middle" fontFamily="'Cormorant Garamond', serif" fontSize="10" fill="#e8c56a" letterSpacing="1">MEDITATION</text>
-
-                {/* Labels — positioned in each circle's unique outer area */}
-                {/* Hatha — top left */}
-                <text x="96" y="105" textAnchor="middle" fontFamily="'Cormorant Garamond', serif" fontSize="15" fill="#3d3830" fontWeight="600">Hatha</text>
-                <text x="96" y="122" textAnchor="middle" fontFamily="'Cormorant Garamond', serif" fontSize="13" fill="#5a4a2a">Yoga</text>
-
-                {/* Mantra — top right */}
-                <text x="304" y="105" textAnchor="middle" fontFamily="'Cormorant Garamond', serif" fontSize="15" fill="#3d3830" fontWeight="600">Mantra</text>
-                <text x="304" y="122" textAnchor="middle" fontFamily="'Cormorant Garamond', serif" fontSize="13" fill="#5a4a2a">Yoga</text>
-
-                {/* Laya — bottom left */}
-                <text x="96" y="296" textAnchor="middle" fontFamily="'Cormorant Garamond', serif" fontSize="15" fill="#3d3830" fontWeight="600">Laya</text>
-                <text x="96" y="313" textAnchor="middle" fontFamily="'Cormorant Garamond', serif" fontSize="13" fill="#5a4a2a">Yoga</text>
-
-                {/* Raja — bottom right */}
-                <text x="304" y="296" textAnchor="middle" fontFamily="'Cormorant Garamond', serif" fontSize="15" fill="#3d3830" fontWeight="600">Raja</text>
-                <text x="304" y="313" textAnchor="middle" fontFamily="'Cormorant Garamond', serif" fontSize="13" fill="#5a4a2a">Yoga</text>
-              </svg>
-            </div>
+            <VennDiagram />
           </div>
 
           {/* How it works */}
