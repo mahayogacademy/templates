@@ -531,7 +531,7 @@ export default function MahayogMeditation() {
 
       {/* ── BENEFITS ── */}
       <section id="benefits" className="py-14 px-6">
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <div className="text-center mb-10">
             <span className="uppercase tracking-[0.25em] text-xs text-[#b8892a] font-medium">What Unfolds</span>
             <h2 className="font-['Cormorant_Garamond'] text-4xl font-light text-[#3d3830] mt-2 mb-3">
@@ -542,38 +542,47 @@ export default function MahayogMeditation() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-4">
-            {BENEFIT_CATEGORIES.flatMap((cat) =>
-              cat.items.map((b) => (
-                <div
-                  key={b.title}
-                  className="flex items-start gap-4 p-5 bg-white rounded-xl border border-[#ede4d5] shadow-sm hover:shadow-md hover:border-[#d4a843]/40 transition-all duration-300 group"
-                >
-                  {/* Icon badge */}
-                  <div
-                    className="shrink-0 w-11 h-11 rounded-full flex items-center justify-center transition-all duration-300 group-hover:scale-110"
-                    style={{ background: `${cat.color}18`, border: `1.5px solid ${cat.color}50` }}
+          <div className="grid md:grid-cols-3 gap-6">
+            {BENEFIT_CATEGORIES.map((cat) => (
+              <div key={cat.label}>
+                {/* Category header */}
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-1 h-5 rounded-full" style={{ background: cat.color }} />
+                  <span
+                    className="text-xs uppercase tracking-[0.2em] font-semibold"
+                    style={{ color: cat.color }}
                   >
-                    <BenefitIcon type={b.icon} />
-                  </div>
-                  <div className="min-w-0">
-                    <div className="flex items-center gap-2 mb-0.5 flex-wrap">
-                      <h3 className="font-['Cormorant_Garamond'] text-lg font-semibold text-[#3d3830] leading-snug">
-                        {b.title}
-                      </h3>
-                      <span
-                        className="text-[10px] uppercase tracking-[0.15em] px-2 py-0.5 rounded-full font-medium"
-                        style={{ color: cat.color, background: `${cat.color}18` }}
-                      >
-                        {cat.label}
-                      </span>
-                    </div>
-                    <p className="text-xs text-[#b8892a] mb-1 tracking-wide">{b.subtitle}</p>
-                    <p className="text-sm text-[#6b6158] leading-relaxed">{b.desc}</p>
-                  </div>
+                    {cat.label}
+                  </span>
                 </div>
-              ))
-            )}
+
+                {/* Cards stacked within column */}
+                <div className="flex flex-col gap-3">
+                  {cat.items.map((b) => (
+                    <div
+                      key={b.title}
+                      className="p-4 bg-white rounded-xl border border-[#ede4d5] shadow-sm hover:shadow-md hover:border-[#d4a843]/40 transition-all duration-300 group"
+                    >
+                      <div className="flex items-center gap-3 mb-2">
+                        <div
+                          className="shrink-0 w-9 h-9 rounded-full flex items-center justify-center transition-all duration-300 group-hover:scale-110"
+                          style={{ background: `${cat.color}18`, border: `1.5px solid ${cat.color}50` }}
+                        >
+                          <BenefitIcon type={b.icon} />
+                        </div>
+                        <div>
+                          <h3 className="font-['Cormorant_Garamond'] text-lg font-semibold text-[#3d3830] leading-tight">
+                            {b.title}
+                          </h3>
+                          <p className="text-[10px] uppercase tracking-[0.15em] text-[#b8892a]">{b.subtitle}</p>
+                        </div>
+                      </div>
+                      <p className="text-sm text-[#6b6158] leading-relaxed">{b.desc}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
