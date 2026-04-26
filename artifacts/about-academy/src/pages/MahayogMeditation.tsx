@@ -624,7 +624,7 @@ export default function MahayogMeditation() {
                 Ancient Origins & Revival
               </h2>
               <p className="text-base leading-relaxed text-[#5a5248] mb-5">
-                Himalayan Siddha Mahāyog is the revival of Surat-Śhabda Yoga — literally the "union of the soul (surat) with the divine Word or sound (shabd)." According to Guru Nanak, communion with the divine Sound Current is "the only effective means" for liberating the soul.
+                Himalayan Siddha Mahāyog is the revival of Surat-Śhabda Yoga — literally the "union of the soul (surat) with the divine Word or sound (shabd)." Communion with the divine Sound Current is known to be the only effective means for liberating the soul, according to spiritual luminaries such as Guru Nanak.
               </p>
               <p className="text-base leading-relaxed text-[#5a5248] mb-5">
                 Nearly 600–700 years ago, the great Saint Jagadguru Ramanandacharya propagated this divine knowledge for the upliftment of people. His lineage included luminaries such as Kabir, Ravidas, Tulsidas, and Mira Bai — all of whom emphasized that sincere chanting of the Divine Name and listening to the inner sound can lead to the highest realization.
