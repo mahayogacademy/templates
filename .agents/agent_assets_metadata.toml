@@ -90,3 +90,9 @@ id = "bXhDroeXd4xFUroWDLafS"
 uri = "file://artifacts/about-academy/public/images/meditation-benefits.png"
 type = "image"
 title = "generated_image"
+
+[[generated]]
+id = "6urrcDNEBQMwpV8fzgSU_"
+uri = "file://artifacts/about-academy/public/images/meditation-howitworks.png"
+type = "image"
+title = "ashram meditation how it works"

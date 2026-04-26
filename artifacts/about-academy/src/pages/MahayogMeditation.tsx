@@ -333,8 +333,8 @@ export default function MahayogMeditation() {
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-14 items-center mb-20">
             <img
-              src="/images/meditation-origins.png"
-              alt="Himalayan meditation origins"
+              src="/images/meditation-howitworks.png"
+              alt="Meditating in a Himalayan ashram"
               className="w-full rounded-2xl object-cover shadow-md order-2 md:order-1"
               style={{ height: "400px" }}
             />
