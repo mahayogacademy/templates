@@ -152,7 +152,7 @@ const BENEFIT_CATEGORIES = [
     ],
   },
   {
-    label: "Inner Experiences",
+    label: "Deep Transformation",
     color: "#c4855a",
     items: [
       {
