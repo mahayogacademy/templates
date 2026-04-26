@@ -542,42 +542,58 @@ export default function MahayogMeditation() {
             </p>
           </div>
 
-          <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 [column-fill:_balance]">
-            {BENEFIT_CATEGORIES.flatMap((cat) =>
-              cat.items.map((b) => (
-                <div
-                  key={b.title}
-                  className="break-inside-avoid mb-4 p-5 bg-white rounded-xl border-2 border-[#c4a872] shadow-sm hover:shadow-md hover:border-[#b8892a] transition-all duration-300 group"
-                >
-                  {/* Category tag */}
-                  <span
-                    className="inline-block text-[9px] uppercase tracking-[0.2em] font-semibold px-2 py-0.5 rounded-full mb-3"
-                    style={{ color: cat.color, background: `${cat.color}22` }}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {(() => {
+              // Build a lookup of items by title for flexible ordering
+              const flat = BENEFIT_CATEGORIES.flatMap((cat) =>
+                cat.items.map((b) => ({ ...b, catLabel: cat.label, catColor: cat.color }))
+              );
+              const byTitle = Object.fromEntries(flat.map((x) => [x.title, x]));
+              const order = [
+                "Inner Peace",
+                "Anahad Nāda",
+                "Relief from Suffering",
+                "Ajapa Japa",
+                "Positive Transformation",
+                "Accelerated Growth",
+              ];
+              return order.map((title) => {
+                const b = byTitle[title];
+                return (
+                  <div
+                    key={b.title}
+                    className="flex flex-col p-5 bg-white rounded-xl border-2 border-[#c4a872] shadow-sm hover:shadow-md hover:border-[#b8892a] transition-all duration-300 group"
                   >
-                    {cat.label}
-                  </span>
-
-                  {/* Icon + title */}
-                  <div className="flex items-center gap-3 mb-3">
-                    <div
-                      className="shrink-0 w-10 h-10 rounded-full flex items-center justify-center transition-transform duration-300 group-hover:scale-110"
-                      style={{ background: `${cat.color}30`, border: `1.5px solid ${cat.color}70` }}
+                    {/* Category tag */}
+                    <span
+                      className="inline-block text-[9px] uppercase tracking-[0.2em] font-semibold px-2 py-0.5 rounded-full mb-3 self-start"
+                      style={{ color: b.catColor, background: `${b.catColor}22` }}
                     >
-                      <BenefitIcon type={b.icon} />
-                    </div>
-                    <div>
-                      <h3 className="font-['Cormorant_Garamond'] text-xl font-semibold text-[#2d2011] leading-tight">
-                        {b.title}
-                      </h3>
-                      <p className="text-[10px] uppercase tracking-[0.15em] text-[#7a5014]">{b.subtitle}</p>
-                    </div>
-                  </div>
+                      {b.catLabel}
+                    </span>
 
-                  {/* Description always visible */}
-                  <p className="text-sm text-[#5a5248] leading-relaxed">{b.desc}</p>
-                </div>
-              ))
-            )}
+                    {/* Icon + title */}
+                    <div className="flex items-center gap-3 mb-3">
+                      <div
+                        className="shrink-0 w-10 h-10 rounded-full flex items-center justify-center transition-transform duration-300 group-hover:scale-110"
+                        style={{ background: `${b.catColor}30`, border: `1.5px solid ${b.catColor}70` }}
+                      >
+                        <BenefitIcon type={b.icon} />
+                      </div>
+                      <div>
+                        <h3 className="font-['Cormorant_Garamond'] text-xl font-semibold text-[#2d2011] leading-tight">
+                          {b.title}
+                        </h3>
+                        <p className="text-[10px] uppercase tracking-[0.15em] text-[#7a5014]">{b.subtitle}</p>
+                      </div>
+                    </div>
+
+                    {/* Description */}
+                    <p className="text-sm text-[#5a5248] leading-relaxed flex-1">{b.desc}</p>
+                  </div>
+                );
+              });
+            })()}
           </div>
         </div>
       </section>
