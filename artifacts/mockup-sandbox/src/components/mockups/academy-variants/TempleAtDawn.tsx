@@ -109,18 +109,12 @@ export function TempleAtDawn() {
           </div>
 
           {/* Image column */}
-          <div className="flex flex-col gap-4">
+          <div>
             <img
               src="/__mockup/images/academy-meditation.png"
               alt="Meditation practice in the mountains"
               className="w-full rounded-2xl object-cover shadow-md"
-              style={{ height: "260px" }}
-            />
-            <img
-              src="/__mockup/images/academy-lotus.png"
-              alt="Lotus in calm waters"
-              className="w-full rounded-2xl object-cover shadow-md"
-              style={{ height: "180px" }}
+              style={{ height: "460px" }}
             />
           </div>
         </div>
