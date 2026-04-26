@@ -28,18 +28,26 @@ const ASHRAM_LIFE = [
   {
     title: "Sacred Living Spaces",
     desc: "Simple, serene accommodations designed to support spiritual practice, inner contemplation, and a life free from unnecessary distraction.",
+    img: "ashram-life-accommodation.png",
+    alt: "Simple ashram accommodation",
   },
   {
     title: "Daily Satsang",
     desc: "Regular spiritual discourses and Q&A sessions with Gurudev and senior practitioners — guidance for every stage of the path.",
+    img: "ashram-life-satsang.png",
+    alt: "Satsang gathering with the Guru",
   },
   {
     title: "Seva Opportunities",
     desc: "Contribute meaningfully to ashram life through selfless service — a powerful spiritual practice in its own right. All forms of seva are equally valued.",
+    img: "ashram-life-seva.png",
+    alt: "Devotees performing seva",
   },
   {
     title: "Sattvic Meals",
     desc: "Nourishing vegetarian meals prepared with love, following Ayurvedic principles — food as medicine, offered as prasad.",
+    img: "ashram-life-meals.png",
+    alt: "Sattvic prasad thali",
   },
 ];
 
@@ -223,12 +231,21 @@ export default function Ashram() {
           </div>
           <div className="grid md:grid-cols-2 gap-5">
             {ASHRAM_LIFE.map((item, i) => (
-              <div key={i} className="flex gap-5 p-6 bg-white rounded-2xl border border-[#e8dece] hover:shadow-md transition-shadow duration-300">
-                <div className="shrink-0 w-8 h-8 rounded-full bg-[#fdf6ec] border border-[#e8c56a]/60 flex items-center justify-center mt-0.5">
-                  <span className="text-[#b8892a] text-xs font-semibold font-['Cormorant_Garamond']">{String(i + 1).padStart(2, "0")}</span>
+              <div key={i} className="flex gap-0 bg-white rounded-2xl border border-[#e8dece] hover:shadow-lg hover:shadow-[#b8892a]/8 hover:border-[#d4a843]/40 transition-all duration-300 overflow-hidden">
+                <div className="shrink-0 w-36 relative">
+                  <img
+                    src={`${b}images/${item.img}`}
+                    alt={item.alt}
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent to-white/10" />
                 </div>
-                <div>
-                  <h3 className="font-['Cormorant_Garamond'] text-xl font-semibold text-[#3d3830] mb-2">{item.title}</h3>
+                <div className="flex-1 p-6">
+                  <span className="text-[10px] uppercase tracking-[0.2em] text-[#b8892a] font-semibold mb-2 block">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <h3 className="font-['Cormorant_Garamond'] text-xl font-semibold text-[#3d3830] mb-2 leading-snug">{item.title}</h3>
+                  <div className="h-px w-6 bg-[#d4a843]/50 mb-3" />
                   <p className="text-sm leading-relaxed text-[#5a5248]">{item.desc}</p>
                 </div>
               </div>

@@ -174,3 +174,27 @@ id = "rIKaPEUnyAjX-EkuwMhN1"
 uri = "file://artifacts/mahayog-academy/public/images/ashram-seva.png"
 type = "image"
 title = "generated_image"
+
+[[generated]]
+id = "OWgbVCZwciWZV9_e8AtHr"
+uri = "file://artifacts/mahayog-academy/public/images/ashram-life-accommodation.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "_aqVTGdOWJp1Q5yeiyFjN"
+uri = "file://artifacts/mahayog-academy/public/images/ashram-life-satsang.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "Jw9tjUsNBhUpFCrQ_RynW"
+uri = "file://artifacts/mahayog-academy/public/images/ashram-life-seva.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "pPxpAZjqLeqT4kKREfg-q"
+uri = "file://artifacts/mahayog-academy/public/images/ashram-life-meals.png"
+type = "image"
+title = "generated_image"
