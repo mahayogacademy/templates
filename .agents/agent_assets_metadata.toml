@@ -102,3 +102,51 @@ id = "F6FkMsFRL5JX2lLg1XSs7"
 uri = "file://artifacts/about-academy/public/images/meditation-nature.png"
 type = "image"
 title = "himalayan-meditator-nature"
+
+[[generated]]
+id = "HRcr_t10kssbR1Ut_SO01"
+uri = "file://artifacts/mahayog-academy/public/images/academy-hero.png"
+type = "image"
+title = "himalayan-valley-hero"
+
+[[generated]]
+id = "b2KICAlYwOw-8lvQtIHp9"
+uri = "file://artifacts/mahayog-academy/public/images/pillar-swastha.png"
+type = "image"
+title = "yoga-wellness-swastha"
+
+[[generated]]
+id = "bLTovZUpvFmLJxUDo9vuh"
+uri = "file://artifacts/mahayog-academy/public/images/pillar-sikshya.png"
+type = "image"
+title = "vedic-texts-sikshya"
+
+[[generated]]
+id = "euqT99llYv6DcEozH8f3T"
+uri = "file://artifacts/mahayog-academy/public/images/pillar-sanskar.png"
+type = "image"
+title = "havan-ritual-sanskar"
+
+[[generated]]
+id = "IEb23UmkdBAft7GrO6XfE"
+uri = "file://artifacts/mahayog-academy/public/images/pillar-sadvritta.png"
+type = "image"
+title = "river-harmony-sadvritta"
+
+[[generated]]
+id = "HwqYZ9ninOzZMhRYW9rkZ"
+uri = "file://artifacts/mahayog-academy/public/images/pillar-samriddhi.png"
+type = "image"
+title = "community-prosperity-samriddhi"
+
+[[generated]]
+id = "YrXJPwizKdhdSMceb_yXU"
+uri = "file://artifacts/mahayog-academy/public/images/pillar-shanti.png"
+type = "image"
+title = "mountain-lake-shanti"
+
+[[generated]]
+id = "EVW_H_N2k1VTUJESHRyGW"
+uri = "file://artifacts/mahayog-academy/public/images/discover-ashram.png"
+type = "image"
+title = "himalayan-ashram"
