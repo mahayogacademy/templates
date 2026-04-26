@@ -2,37 +2,39 @@ import { useState } from "react";
 import { ArrowRight, ChevronDown } from "lucide-react";
 import { Link } from "wouter";
 
+// viewBox 500×500; circles at corners offset 90px from centre (250,250), r=140
+// Label positions are inside each circle's unique outer quadrant
 const YOGAS = [
   {
     id: "hatha",
-    name: "Hatha",
-    cx: 155, cy: 155,
+    name: "Hatha Yoga",
+    cx: 160, cy: 160, r: 140,
     fill: "#e8c56a", stroke: "#d4a843",
-    labelX: 88, labelY: 92,
+    labelX: 105, labelY: 105,
     desc: "Purification and mastery of the physical body through postures (asanas) and breath control (pranayama), creating a strong, receptive vessel for higher awareness.",
   },
   {
     id: "mantra",
-    name: "Mantra",
-    cx: 245, cy: 155,
+    name: "Mantra Yoga",
+    cx: 340, cy: 160, r: 140,
     fill: "#c4855a", stroke: "#b8743e",
-    labelX: 312, labelY: 92,
+    labelX: 395, labelY: 105,
     desc: "The repetition and internalization of sacred sound and divine names to harmonize the mind, purify speech, and awaken inner vibrations of consciousness.",
   },
   {
     id: "laya",
-    name: "Laya",
-    cx: 155, cy: 245,
+    name: "Laya Yoga",
+    cx: 160, cy: 340, r: 140,
     fill: "#7a9e7e", stroke: "#5e8862",
-    labelX: 88, labelY: 308,
+    labelX: 105, labelY: 395,
     desc: "Dissolution of individual consciousness into the universal through deep absorption — focusing on subtle energy centers (chakras) and the inner sound (nāda).",
   },
   {
     id: "raja",
-    name: "Raja",
-    cx: 245, cy: 245,
+    name: "Raja Yoga",
+    cx: 340, cy: 340, r: 140,
     fill: "#b8892a", stroke: "#9d7422",
-    labelX: 312, labelY: 308,
+    labelX: 395, labelY: 395,
     desc: "The royal path of meditation — mastery of the mind through concentration, contemplation, and ultimate absorption (samādhi), leading to direct Self-realization.",
   },
 ];
@@ -44,42 +46,50 @@ function VennDiagram() {
   const activeYoga = YOGAS.find(y => y.id === hovered);
   const isMahayog = hovered === "mahayog";
   const activeDesc = isMahayog ? MAHAYOG_DESC : activeYoga?.desc;
-  const activeName = isMahayog ? "Mahāyog Meditation" : activeYoga ? `${activeYoga.name} Yoga` : null;
+  const activeName = isMahayog ? "Mahāyog Meditation" : activeYoga?.name ?? null;
 
   return (
-    <div className="flex flex-col items-center gap-5">
-      <svg viewBox="0 0 400 400" className="w-full max-w-sm" xmlns="http://www.w3.org/2000/svg">
+    <div className="flex flex-col items-center gap-4 w-full">
+
+      {/* Hover hint — fades out once user starts interacting */}
+      <div className={`flex items-center gap-2 transition-opacity duration-500 ${hovered ? "opacity-0" : "opacity-100"}`}>
+        <span className="w-1.5 h-1.5 rounded-full bg-[#b8892a] animate-ping inline-block" />
+        <span className="text-xs uppercase tracking-[0.2em] text-[#b8892a] font-medium">Hover each circle to explore</span>
+        <span className="w-1.5 h-1.5 rounded-full bg-[#b8892a] animate-ping inline-block" />
+      </div>
+
+      <svg viewBox="0 0 500 500" className="w-full max-w-md" xmlns="http://www.w3.org/2000/svg">
         {YOGAS.map((y) => (
           <g key={y.id}>
             <circle
-              cx={y.cx} cy={y.cy} r={108}
+              cx={y.cx} cy={y.cy} r={y.r}
               fill={y.fill}
-              fillOpacity={hovered === y.id ? 0.55 : hovered ? 0.18 : 0.28}
+              fillOpacity={hovered === y.id ? 0.60 : hovered ? 0.15 : 0.30}
               stroke={y.stroke}
-              strokeWidth={hovered === y.id ? 2 : 1.5}
-              style={{ cursor: "pointer", transition: "fill-opacity 0.25s" }}
+              strokeWidth={hovered === y.id ? 2.5 : 1.5}
+              style={{ cursor: "pointer", transition: "fill-opacity 0.3s, stroke-width 0.2s" }}
               onMouseEnter={() => setHovered(y.id)}
               onMouseLeave={() => setHovered(null)}
             />
-            {/* Yoga name label */}
+            {/* Two-line label: "Hatha" + "Yoga" — centered inside the circle's outer quadrant */}
             <text
               x={y.labelX} y={y.labelY}
               textAnchor="middle"
               fontFamily="'Cormorant Garamond', serif"
-              fontSize="17"
-              fill={hovered === y.id ? "#3d3830" : "#5a4a2a"}
+              fontSize="20"
               fontWeight="700"
-              style={{ pointerEvents: "none", transition: "opacity 0.2s" }}
+              fill={hovered === y.id ? "#2a1f08" : "#3d3830"}
+              style={{ pointerEvents: "none", transition: "fill 0.2s" }}
             >
-              {y.name}
+              {y.name.split(" ")[0]}
             </text>
             <text
-              x={y.labelX} y={y.labelY + 18}
+              x={y.labelX} y={y.labelY + 24}
               textAnchor="middle"
               fontFamily="'Cormorant Garamond', serif"
-              fontSize="14"
-              fill={hovered === y.id ? "#3d3830" : "#7a6a58"}
-              style={{ pointerEvents: "none" }}
+              fontSize="17"
+              fill={hovered === y.id ? "#5a3e10" : "#6b5a3e"}
+              style={{ pointerEvents: "none", transition: "fill 0.2s" }}
             >
               Yoga
             </text>
@@ -88,50 +98,32 @@ function VennDiagram() {
 
         {/* Centre — Mahayog */}
         <circle
-          cx="200" cy="200" r="48"
+          cx="250" cy="250" r="58"
           fill="#3d3830"
-          fillOpacity={hovered === "mahayog" ? 1 : 0.88}
+          fillOpacity={hovered === "mahayog" ? 1 : 0.90}
           style={{ cursor: "pointer", transition: "fill-opacity 0.25s" }}
           onMouseEnter={() => setHovered("mahayog")}
           onMouseLeave={() => setHovered(null)}
         />
-        <text
-          x="200" y="196"
-          textAnchor="middle"
-          fontFamily="'Cormorant Garamond', serif"
-          fontSize="14"
-          fill="white"
-          fontStyle="italic"
-          style={{ pointerEvents: "none" }}
-        >
+        <text x="250" y="244" textAnchor="middle" fontFamily="'Cormorant Garamond', serif"
+          fontSize="16" fill="white" fontStyle="italic" style={{ pointerEvents: "none" }}>
           Mahāyog
         </text>
-        <text
-          x="200" y="213"
-          textAnchor="middle"
-          fontFamily="'Cormorant Garamond', serif"
-          fontSize="10"
-          fill="#e8c56a"
-          letterSpacing="1"
-          style={{ pointerEvents: "none" }}
-        >
+        <text x="250" y="263" textAnchor="middle" fontFamily="'Cormorant Garamond', serif"
+          fontSize="11" fill="#e8c56a" letterSpacing="1.5" style={{ pointerEvents: "none" }}>
           MEDITATION
         </text>
       </svg>
 
       {/* Description panel */}
-      <div
-        className="w-full max-w-sm min-h-[88px] rounded-2xl border border-[#e0d0b8] bg-white/80 px-5 py-4 text-center transition-all duration-300"
-        style={{ opacity: activeName ? 1 : 0 }}
-      >
-        {activeName && (
+      <div className="w-full max-w-md min-h-[96px] rounded-2xl border border-[#e0d0b8] bg-white/80 px-6 py-4 text-center transition-all duration-300">
+        {activeName ? (
           <>
-            <p className="font-['Cormorant_Garamond'] text-lg font-semibold text-[#b8892a] mb-1">{activeName}</p>
+            <p className="font-['Cormorant_Garamond'] text-xl font-semibold text-[#b8892a] mb-1">{activeName}</p>
             <p className="text-sm text-[#5a5248] leading-relaxed">{activeDesc}</p>
           </>
-        )}
-        {!activeName && (
-          <p className="text-sm text-[#9a8f84] italic mt-4">Hover over each section to learn more</p>
+        ) : (
+          <p className="text-sm text-[#9a8f84] italic pt-3">Hover over each section to learn more</p>
         )}
       </div>
     </div>
