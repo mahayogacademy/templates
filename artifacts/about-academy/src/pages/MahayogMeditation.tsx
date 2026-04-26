@@ -179,20 +179,56 @@ export default function MahayogMeditation() {
       {/* ── WHAT IS HIMALAYAN SIDDHA MAHAYOG ── */}
       <section className="py-20 px-6 bg-[#fdf6ec]">
         <div className="max-w-6xl mx-auto">
-          <div className="max-w-3xl mx-auto text-center mb-14">
-            <span className="uppercase tracking-[0.25em] text-xs text-[#b8892a] font-medium">The Practice</span>
-            <h2 className="font-['Cormorant_Garamond'] text-4xl md:text-5xl font-light text-[#3d3830] mt-2 mb-6 leading-snug">
-              Himalayan Siddha Mahayog
-            </h2>
-            <p className="text-base leading-relaxed text-[#5a5248] mb-6">
-              Himalayan Siddha Mahāyog Meditation is the revival of an ancient Vedic spiritual science known as Surat-Śhabda Yoga. It is a path for transformation through direct experience and self-discovery that can be practiced by all.
-            </p>
-            <p className="text-base leading-relaxed text-[#5a5248] mb-6">
-              Mahayog brings together two powerful practices: Ajapa Japa, automatic inner chanting of the Divine Name that continues in the background of awareness and Nāda-anusandhān, listening to the inner sound. These are activated through Shaktipat, a transmission of spiritual energy from enlightened Guru, His Holiness Jagadguru Mahayogi Siddhababa, to the student, which awakens inner awareness (Kundalini Shakti).
-            </p>
-            <p className="text-base leading-relaxed text-[#5a5248]">
-              With this meditative path, Hatha, Mantra, Laya, and Raja Yoga naturally manifest within the practitioner. By practicing Mahayog, all four yoga types unfold.
-            </p>
+          <div className="grid md:grid-cols-2 gap-14 items-center mb-14">
+            {/* Text */}
+            <div>
+              <span className="uppercase tracking-[0.25em] text-xs text-[#b8892a] font-medium">The Practice</span>
+              <h2 className="font-['Cormorant_Garamond'] text-4xl md:text-5xl font-light text-[#3d3830] mt-2 mb-6 leading-snug">
+                Himalayan Siddha Mahayog
+              </h2>
+              <p className="text-base leading-relaxed text-[#5a5248] mb-6">
+                Himalayan Siddha Mahāyog Meditation is the revival of an ancient Vedic spiritual science known as Surat-Śhabda Yoga. It is a path for transformation through direct experience and self-discovery that can be practiced by all.
+              </p>
+              <p className="text-base leading-relaxed text-[#5a5248] mb-6">
+                Mahayog brings together two powerful practices: Ajapa Japa, automatic inner chanting of the Divine Name that continues in the background of awareness and Nāda-anusandhān, listening to the inner sound. These are activated through Shaktipat, a transmission of spiritual energy from enlightened Guru, His Holiness Jagadguru Mahayogi Siddhababa, to the student, which awakens inner awareness (Kundalini Shakti).
+              </p>
+              <p className="text-base leading-relaxed text-[#5a5248]">
+                With this meditative path, Hatha, Mantra, Laya, and Raja Yoga naturally manifest within the practitioner. By practicing Mahayog, all four yoga types unfold.
+              </p>
+            </div>
+
+            {/* Venn Diagram */}
+            <div className="flex items-center justify-center">
+              <svg viewBox="0 0 400 400" className="w-full max-w-sm" xmlns="http://www.w3.org/2000/svg">
+                {/* Four overlapping circles */}
+                <circle cx="155" cy="155" r="108" fill="#e8c56a" fillOpacity="0.28" stroke="#d4a843" strokeWidth="1.5"/>
+                <circle cx="245" cy="155" r="108" fill="#c4855a" fillOpacity="0.22" stroke="#b8743e" strokeWidth="1.5"/>
+                <circle cx="155" cy="245" r="108" fill="#7a9e7e" fillOpacity="0.22" stroke="#5e8862" strokeWidth="1.5"/>
+                <circle cx="245" cy="245" r="108" fill="#b8892a" fillOpacity="0.22" stroke="#9d7422" strokeWidth="1.5"/>
+
+                {/* Centre circle — Mahayog */}
+                <circle cx="200" cy="200" r="46" fill="#3d3830" fillOpacity="0.88"/>
+                <text x="200" y="196" textAnchor="middle" fontFamily="'Cormorant Garamond', serif" fontSize="13" fill="white" fontStyle="italic">Mahāyog</text>
+                <text x="200" y="212" textAnchor="middle" fontFamily="'Cormorant Garamond', serif" fontSize="10" fill="#e8c56a" letterSpacing="1">MEDITATION</text>
+
+                {/* Labels — positioned in each circle's unique outer area */}
+                {/* Hatha — top left */}
+                <text x="96" y="105" textAnchor="middle" fontFamily="'Cormorant Garamond', serif" fontSize="15" fill="#3d3830" fontWeight="600">Hatha</text>
+                <text x="96" y="122" textAnchor="middle" fontFamily="'Cormorant Garamond', serif" fontSize="13" fill="#5a4a2a">Yoga</text>
+
+                {/* Mantra — top right */}
+                <text x="304" y="105" textAnchor="middle" fontFamily="'Cormorant Garamond', serif" fontSize="15" fill="#3d3830" fontWeight="600">Mantra</text>
+                <text x="304" y="122" textAnchor="middle" fontFamily="'Cormorant Garamond', serif" fontSize="13" fill="#5a4a2a">Yoga</text>
+
+                {/* Laya — bottom left */}
+                <text x="96" y="296" textAnchor="middle" fontFamily="'Cormorant Garamond', serif" fontSize="15" fill="#3d3830" fontWeight="600">Laya</text>
+                <text x="96" y="313" textAnchor="middle" fontFamily="'Cormorant Garamond', serif" fontSize="13" fill="#5a4a2a">Yoga</text>
+
+                {/* Raja — bottom right */}
+                <text x="304" y="296" textAnchor="middle" fontFamily="'Cormorant Garamond', serif" fontSize="15" fill="#3d3830" fontWeight="600">Raja</text>
+                <text x="304" y="313" textAnchor="middle" fontFamily="'Cormorant Garamond', serif" fontSize="13" fill="#5a4a2a">Yoga</text>
+              </svg>
+            </div>
           </div>
 
           {/* How it works */}
