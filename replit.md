@@ -16,6 +16,26 @@ pnpm workspace monorepo using TypeScript. Each package manages its own dependenc
 - **API codegen**: Orval (from OpenAPI spec)
 - **Build**: esbuild (CJS bundle)
 
+## Artifacts
+
+### about-academy (previewPath: `/`)
+- **Kind**: react-vite
+- **Purpose**: Spiritual website for Mahayogi Siddhababa Spiritual Academy — "About the Academy" page
+- **Tech**: React + Vite + Tailwind + Framer Motion + Cormorant Garamond / Inter fonts
+- **Design**: Warm cream/gold/saffron palette; calm, minimal, spiritual aesthetic
+- **Sections**: Hero, Academy Description, Well-being Approach, Six Pillars of Service, Discover More
+- **Structure**: 
+  - `src/pages/AboutAcademy.tsx` — main page composer
+  - `src/components/HeroSection.tsx`
+  - `src/components/AcademyDescription.tsx`
+  - `src/components/WellBeingSection.tsx`
+  - `src/components/SixPillars.tsx`
+  - `src/components/DiscoverMore.tsx`
+
+### api-server (previewPath: `/api`)
+- **Kind**: Express API server
+- **Purpose**: Shared backend API
+
 ## Key Commands
 
 - `pnpm run typecheck` — full typecheck across all packages
