@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/mahayog-academy/"
+title = "Mahayog Academy Website"
+version = "1.0.0"
+id = "artifacts/mahayog-academy"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/mahayog-academy/" ]
+localPort = 25469
+
+[services.development]
+run = "pnpm --filter @workspace/mahayog-academy run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/mahayog-academy", "run", "build" ]
+publicDir = "artifacts/mahayog-academy/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "25469"
+BASE_PATH = "/mahayog-academy/"
