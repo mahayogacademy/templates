@@ -588,11 +588,13 @@ export default function MahayogMeditation() {
                       </div>
                     </div>
 
-                    {/* Read more hint — fades out on hover */}
-                    <p className="mt-2 text-[11px] text-[#b8892a] tracking-wide flex items-center gap-1 transition-opacity duration-200 group-hover:opacity-0">
-                      <span>Read more</span>
-                      <span>›</span>
-                    </p>
+                    {/* Read more hint — collapses on hover */}
+                    <div className="overflow-hidden max-h-6 group-hover:max-h-0 transition-all duration-300 ease-in-out">
+                      <p className="mt-2 text-[11px] text-[#b8892a] tracking-wide flex items-center gap-1 opacity-100 group-hover:opacity-0 transition-opacity duration-200">
+                        <span>Read more</span>
+                        <span>›</span>
+                      </p>
+                    </div>
 
                     {/* Description — slides in on hover */}
                     <div className="overflow-hidden max-h-0 group-hover:max-h-48 transition-all duration-500 ease-in-out">
