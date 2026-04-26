@@ -418,26 +418,18 @@ export default function MahayogMeditation() {
             <VennDiagram />
           </div>
 
-          {/* ── Connector to How It Works ── */}
-          <div className="flex flex-col items-center mt-16 pb-0 select-none">
-            <div className="w-px h-10 bg-gradient-to-b from-transparent to-[#b8892a]/50" />
-            <div className="flex items-center gap-3 my-3">
-              <div className="w-10 h-px bg-[#b8892a]/30" />
-              <div className="w-1.5 h-1.5 rounded-full bg-[#b8892a]/50" />
-              <span className="text-[9px] uppercase tracking-[0.32em] text-[#b8892a]/60 font-medium">How It Works</span>
-              <div className="w-1.5 h-1.5 rounded-full bg-[#b8892a]/50" />
-              <div className="w-10 h-px bg-[#b8892a]/30" />
-            </div>
-            <div className="w-px h-10 bg-gradient-to-b from-[#b8892a]/50 to-[#b8892a]/10" />
-            <div className="w-2 h-2 rounded-full bg-[#b8892a]/40 -mb-[5px] relative z-10" />
-          </div>
-
         </div>
       </section>
 
       {/* ── HOW IT WORKS ── */}
-      <section className="pt-10 pb-20 px-6 bg-white">
-        <div className="max-w-6xl mx-auto">
+      <section className="pt-0 pb-20 bg-white">
+        {/* Wave top edge — white wave cuts into the cream section above */}
+        <div className="w-full -mt-14 relative z-10">
+          <svg viewBox="0 0 1440 90" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" className="w-full block">
+            <path d="M0,90 C240,20 480,70 720,35 C960,0 1200,55 1440,25 L1440,90 L0,90 Z" fill="white"/>
+          </svg>
+        </div>
+        <div className="max-w-6xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-14 items-center mb-20">
             <img
               src="/images/meditation-howitworks.png"
