@@ -400,7 +400,7 @@ export default function MahayogMeditation() {
             {/* Text */}
             <div>
               <span className="uppercase tracking-[0.25em] text-xs text-[#b8892a] font-medium">The Practice</span>
-              <h2 className="font-['Cormorant_Garamond'] text-4xl md:text-5xl font-light text-[#3d3830] mt-2 mb-6 leading-snug">
+              <h2 className="font-['Cormorant_Garamond'] text-4xl md:text-5xl font-light text-[#3d3830] mt-2 mb-6 leading-tight">
                 Himalayan Siddha Mahayog
               </h2>
               <p className="text-base leading-relaxed text-[#5a5248] mb-6">
