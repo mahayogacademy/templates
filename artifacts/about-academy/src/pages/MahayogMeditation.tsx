@@ -561,11 +561,12 @@ export default function MahayogMeditation() {
                   {cat.items.map((b) => (
                     <div
                       key={b.title}
-                      className="p-4 bg-[#c4a882] rounded-xl border border-[#b09268] shadow-sm hover:shadow-md hover:border-[#8a6830]/60 transition-all duration-300 group"
+                      className="relative p-4 bg-[#c4a882] rounded-xl border border-[#b09268] shadow-sm hover:shadow-md hover:border-[#8a6830]/60 transition-all duration-300 group overflow-hidden"
                     >
-                      <div className="flex items-center gap-3">
+                      {/* Default state: icon + title */}
+                      <div className="flex items-center gap-3 transition-opacity duration-300 group-hover:opacity-0">
                         <div
-                          className="shrink-0 w-9 h-9 rounded-full flex items-center justify-center transition-all duration-300 group-hover:scale-110"
+                          className="shrink-0 w-9 h-9 rounded-full flex items-center justify-center"
                           style={{ background: `rgba(255,255,255,0.25)`, border: `1.5px solid rgba(255,255,255,0.45)` }}
                         >
                           <BenefitIcon type={b.icon} />
@@ -577,10 +578,10 @@ export default function MahayogMeditation() {
                           <p className="text-[10px] uppercase tracking-[0.15em] text-[#6b4c14]">{b.subtitle}</p>
                         </div>
                       </div>
-                      <div className="overflow-hidden max-h-0 group-hover:max-h-40 transition-all duration-500 ease-in-out">
-                        <div className="mt-3 bg-white rounded-lg px-3 py-2.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
-                          <p className="text-sm text-[#5a5248] leading-relaxed">{b.desc}</p>
-                        </div>
+                      {/* Hover overlay: white panel covering full card */}
+                      <div className="absolute inset-0 bg-white rounded-xl p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center">
+                        <p className="text-[10px] uppercase tracking-[0.15em] text-[#b8892a] mb-1">{b.title}</p>
+                        <p className="text-sm text-[#5a5248] leading-relaxed">{b.desc}</p>
                       </div>
                     </div>
                   ))}
