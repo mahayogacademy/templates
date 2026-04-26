@@ -483,7 +483,7 @@ export default function MahayogMeditation() {
                 step: "01",
                 sub: "Begin here",
                 title: "Register",
-                desc: "Express your intention to receive Shaktipat initiation by registering for an upcoming retreat or intensive with Jagadguru Mahayogi Siddhababa.",
+                desc: "Express your intention to receive Shaktipat initiation by registering for an upcoming workshop.",
               },
               {
                 step: "02",
