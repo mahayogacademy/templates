@@ -93,6 +93,49 @@ const ARTICLES = [
   },
 ];
 
+const NEPAL_CENTERS = [
+  {
+    name: "Jagadguru Ramanadacharya Seva Peeth",
+    aka: "Shree Ram Tarak Brahma Peeth",
+    city: "Baharachettra, Sunsari",
+    role: "Head Ashram",
+    featured: true,
+  },
+  {
+    name: "Mahayogi Siddhababa Spiritual Academy",
+    city: "Kathmandu",
+    note: "Naya Bazar, Balaju (next to Bishumati Bridge)",
+    featured: false,
+  },
+  {
+    name: "Pokhara Center",
+    city: "Pokhara",
+    note: "Narayanthan, Nadipur",
+    featured: false,
+  },
+  {
+    name: "Chitwan Center",
+    city: "Chitwan",
+    note: "",
+    featured: false,
+  },
+  {
+    name: "Surkhet Center",
+    city: "Surkhet",
+    note: "",
+    featured: false,
+  },
+];
+
+const INTERNATIONAL_CENTERS = [
+  { country: "India", cities: ["Jaipur"] },
+  { country: "Canada", cities: ["Ottawa", "Calgary", "Edmonton", "Vancouver"] },
+  { country: "United States", cities: [] },
+  { country: "United Kingdom", cities: [] },
+  { country: "Denmark", cities: [] },
+  { country: "Australia", cities: [] },
+];
+
 export default function Ashram() {
   return (
     <div className="bg-[#faf9f6] text-[#3d3830]" style={{ scrollBehavior: "smooth" }}>
@@ -387,6 +430,92 @@ export default function Ashram() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ── CENTERS ── */}
+      <section className="py-24 px-6 bg-gradient-to-b from-[#faf9f6] to-[#f5ede0]">
+        <div className="max-w-6xl mx-auto">
+
+          {/* Header */}
+          <div className="text-center mb-16">
+            <span className="uppercase tracking-[0.25em] text-xs text-[#b8892a] font-medium">A Growing Community</span>
+            <h2 className="font-['Cormorant_Garamond'] text-4xl font-light text-[#3d3830] mt-2">Centers & Ashrams</h2>
+            <p className="text-sm text-[#7a7068] mt-4 max-w-xl mx-auto leading-relaxed">
+              From the sacred foothills of the Himalayas to cities across the world, the teachings of Gurudev reach seekers wherever they are.
+            </p>
+          </div>
+
+          {/* ── Nepal ── */}
+          <div className="mb-16">
+            <div className="flex items-center gap-4 mb-8">
+              <div className="h-px flex-1 bg-[#e8dece]" />
+              <span className="font-['Cormorant_Garamond'] text-xl font-semibold text-[#b8892a] tracking-wide">Nepal</span>
+              <div className="h-px flex-1 bg-[#e8dece]" />
+            </div>
+
+            {/* Head Ashram — featured */}
+            <div className="bg-white border border-[#e8dece] rounded-2xl p-8 mb-5 relative overflow-hidden">
+              <div className="absolute top-0 left-0 w-1 h-full bg-[#b8892a] rounded-l-2xl" />
+              <div className="pl-4">
+                <span className="inline-block text-[10px] uppercase tracking-[0.25em] text-[#b8892a] font-semibold bg-[#b8892a]/8 px-3 py-1 rounded-full mb-3">Head Ashram</span>
+                <h3 className="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#3d3830] mb-1 leading-snug">
+                  Jagadguru Ramanadacharya Seva Peeth
+                </h3>
+                <p className="text-xs text-[#9a8f84] italic mb-3">also known as Shree Ram Tarak Brahma Peeth</p>
+                <div className="flex items-center gap-2 text-sm text-[#5a5248]">
+                  <svg className="w-3.5 h-3.5 text-[#b8892a] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                  </svg>
+                  Baharachettra, Sunsari, Nepal
+                </div>
+              </div>
+            </div>
+
+            {/* Other Nepal centers */}
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              {NEPAL_CENTERS.filter(c => !c.featured).map((c, i) => (
+                <div key={i} className="bg-white border border-[#e8dece] rounded-xl p-5 hover:border-[#d4a843]/50 hover:shadow-sm transition-all duration-200">
+                  <p className="text-[10px] uppercase tracking-[0.2em] text-[#b8892a] font-semibold mb-2">{c.city}</p>
+                  <p className="font-['Cormorant_Garamond'] text-lg font-semibold text-[#3d3830] leading-snug mb-1">{c.name}</p>
+                  {c.note ? (
+                    <p className="text-xs text-[#9a8f84] leading-relaxed">{c.note}</p>
+                  ) : (
+                    <p className="text-xs text-[#c0b8b0] italic">Details coming soon</p>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* ── International ── */}
+          <div>
+            <div className="flex items-center gap-4 mb-8">
+              <div className="h-px flex-1 bg-[#e8dece]" />
+              <span className="font-['Cormorant_Garamond'] text-xl font-semibold text-[#b8892a] tracking-wide">International</span>
+              <div className="h-px flex-1 bg-[#e8dece]" />
+            </div>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+              {INTERNATIONAL_CENTERS.map((c, i) => (
+                <div key={i} className="bg-white border border-[#e8dece] rounded-xl p-6 hover:border-[#d4a843]/50 hover:shadow-sm transition-all duration-200">
+                  <p className="font-['Cormorant_Garamond'] text-xl font-semibold text-[#3d3830] mb-3">{c.country}</p>
+                  {c.cities.length > 0 ? (
+                    <div className="flex flex-wrap gap-2">
+                      {c.cities.map((city, j) => (
+                        <span key={j} className="text-xs bg-[#f5ede0] text-[#7a6a58] px-3 py-1 rounded-full border border-[#e8dece]">
+                          {city}
+                        </span>
+                      ))}
+                    </div>
+                  ) : (
+                    <p className="text-xs text-[#c0b8b0] italic">Details coming soon</p>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+
         </div>
       </section>
 
