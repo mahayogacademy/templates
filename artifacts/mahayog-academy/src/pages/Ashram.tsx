@@ -269,23 +269,22 @@ export default function Ashram() {
             <h2 className="font-['Cormorant_Garamond'] text-4xl font-light text-[#3d3830] mt-2">Daily Schedule</h2>
           </div>
           <div className="grid md:grid-cols-2 gap-x-16 gap-y-0">
-            {SCHEDULE.map((s, i) => {
-              const isLeft = i < Math.ceil(SCHEDULE.length / 2);
-              const isFirst = i === 0;
-              const isMidFirst = i === Math.ceil(SCHEDULE.length / 2);
-              return (
-                <div
-                  key={i}
-                  className={`flex items-center gap-5 py-4 border-b border-[#e8dece]/60 last:border-b-0 ${!isLeft && isMidFirst ? "md:border-t-0" : ""}`}
-                >
-                  <span className="font-['Cormorant_Garamond'] text-sm text-[#b8892a] font-semibold min-w-[70px] tracking-wide">
-                    {s.time}
-                  </span>
-                  <div className="w-px h-5 bg-[#d4a843]/50 shrink-0" />
-                  <span className="text-sm text-[#5a5248]">{s.item}</span>
-                </div>
-              );
-            })}
+            {[SCHEDULE.slice(0, Math.ceil(SCHEDULE.length / 2)), SCHEDULE.slice(Math.ceil(SCHEDULE.length / 2))].map((col, colIdx) => (
+              <div key={colIdx} className="flex flex-col">
+                {col.map((s, i) => (
+                  <div
+                    key={i}
+                    className="flex items-center gap-5 py-4 border-b border-[#e8dece]/60 last:border-b-0"
+                  >
+                    <span className="font-['Cormorant_Garamond'] text-sm text-[#b8892a] font-semibold min-w-[70px] tracking-wide">
+                      {s.time}
+                    </span>
+                    <div className="w-px h-5 bg-[#d4a843]/50 shrink-0" />
+                    <span className="text-sm text-[#5a5248]">{s.item}</span>
+                  </div>
+                ))}
+              </div>
+            ))}
           </div>
         </div>
       </section>
