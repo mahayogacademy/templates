@@ -314,7 +314,7 @@ export default function MahayogMeditation() {
                 Himalayan Siddha Mahāyog Meditation is the revival of an ancient Vedic spiritual science known as Surat-Śhabda Yoga. It is a path for transformation through direct experience and self-discovery that can be practiced by all.
               </p>
               <p className="text-base leading-relaxed text-[#5a5248] mb-6">
-                Mahayog brings together two powerful practices: Ajapa Japa, automatic inner chanting of the Divine Name that continues in the background of awareness and Nāda-anusandhān, listening to the inner sound. These are activated through Shaktipat, a transmission of spiritual energy from enlightened Guru, His Holiness Jagadguru Mahayogi Siddhababa, to the student, which awakens inner awareness (Kundalini Shakti).
+                Mahayog brings together two powerful practices: <span className="text-[#b8892a] font-semibold italic">Ajapa Japa</span>, automatic inner chanting of the Divine Name that continues in the background of awareness and <span className="text-[#b8892a] font-semibold italic">Nāda-anusandhān</span>, listening to the inner sound. These are activated through <span className="text-[#b8892a] font-semibold italic">Shaktipat</span>, a transmission of spiritual energy from enlightened Guru, His Holiness Jagadguru Mahayogi Siddhababa, to the student, which awakens inner awareness (Kundalini Shakti).
               </p>
               <p className="text-base leading-relaxed text-[#5a5248]">
                 With this meditative path, Hatha, Mantra, Laya, and Raja Yoga naturally manifest within the practitioner. By practicing Mahayog, all four yoga types unfold.
@@ -339,10 +339,10 @@ export default function MahayogMeditation() {
                 The Practitioner as Observer
               </h3>
               <p className="text-base leading-relaxed text-[#5a5248] mb-5">
-                In Mahayog, the practitioner is not an active "doer" but an "observer" — meditative experiences and states manifest automatically. This practice cannot be learned from books alone; it is awakened experientially through Shaktipat initiation.
+                In Mahayog, the practitioner is not an active "doer" but an "observer" — meditative experiences and states manifest automatically. This practice cannot be learned from books alone; it is awakened experientially through <span className="text-[#b8892a] font-semibold italic">Shaktipat</span> initiation.
               </p>
               <p className="text-base leading-relaxed text-[#5a5248] mb-5">
-                Upon receiving Shaktipat Dīkṣā, a spark is transmitted that awakens the dormant Kundalini energy coiled at the base of the spine. The Kundalini Shakti begins to rise through the subtle chakra system, purifying and opening the seeker's inner energy channels (nāḍīs).
+                Upon receiving <span className="text-[#b8892a] font-semibold italic">Shaktipat</span> Dīkṣā, a spark is transmitted that awakens the dormant Kundalini energy coiled at the base of the spine. The Kundalini Shakti begins to rise through the subtle chakra system, purifying and opening the seeker's inner energy channels (nāḍīs).
               </p>
               <p className="text-base leading-relaxed text-[#5a5248]">
                 Jagadguru Mahayogi Siddhababa can awaken a person's Kundalini Shakti by mere glance, touch, mantra, or pure intention at a distance.
