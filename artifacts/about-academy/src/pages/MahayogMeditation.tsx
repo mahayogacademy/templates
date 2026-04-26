@@ -588,8 +588,18 @@ export default function MahayogMeditation() {
                       </div>
                     </div>
 
-                    {/* Description */}
-                    <p className="text-sm text-[#5a5248] leading-relaxed flex-1">{b.desc}</p>
+                    {/* Description — revealed on hover */}
+                    <div className="relative mt-auto">
+                      <div className="overflow-hidden max-h-[2.8rem] group-hover:max-h-40 transition-all duration-500 ease-in-out">
+                        <p className="text-sm text-[#5a5248] leading-relaxed">{b.desc}</p>
+                      </div>
+                      {/* Gradient fade + hint — hidden on hover */}
+                      <div className="absolute inset-x-0 bottom-0 h-8 bg-gradient-to-t from-white to-transparent pointer-events-none transition-opacity duration-300 group-hover:opacity-0" />
+                      <p className="mt-1 text-[10px] text-[#b8892a] tracking-wide flex items-center gap-1 transition-opacity duration-200 group-hover:opacity-0">
+                        <span>Hover to read</span>
+                        <span className="text-xs">›</span>
+                      </p>
+                    </div>
                   </div>
                 );
               });
