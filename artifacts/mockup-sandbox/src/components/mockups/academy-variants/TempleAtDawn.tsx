@@ -194,44 +194,66 @@ export function TempleAtDawn() {
             <h2 className="font-['Cormorant_Garamond'] text-4xl font-light text-[#3d3830] mt-2">Discover More</h2>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="divide-y divide-[#e8dece]">
             {[
               {
+                num: "01",
                 title: "Mahayog Meditation",
-                desc: "Explore the ancient science of Mahayog — a complete system for inner transformation and awakening.",
-                color: "from-[#3d2b0d] to-[#6b4a1c]",
+                subtitle: "Ancient Science of Awakening",
+                desc: "Explore Mahayog — a complete, time-tested system for inner transformation rooted in the Vedic tradition.",
                 img: "/__mockup/images/academy-hero.png",
+                tag: "Practice",
               },
               {
-                title: "Programs and Courses",
-                desc: "Discover structured learning paths in yoga, meditation, and Vedic philosophy for all levels.",
-                color: "from-[#1c3828] to-[#2e5c40]",
+                num: "02",
+                title: "Programs & Courses",
+                subtitle: "Structured Learning Paths",
+                desc: "Discover courses in yoga, meditation, and Vedic philosophy designed for seekers at every stage of the journey.",
                 img: "/__mockup/images/academy-meditation.png",
+                tag: "Learn",
               },
               {
+                num: "03",
                 title: "Enlightened Guru Siddhababa",
-                desc: "Learn about the life, mission, and divine wisdom of His Holiness Jagadguru Mahayogi Siddhababa.",
-                color: "from-[#2c1f0a] to-[#5a3e16]",
-                img: "/__mockup/images/academy-lotus.png",
+                subtitle: "Life, Mission & Wisdom",
+                desc: "Learn about the life and divine mission of His Holiness Jagadguru Mahayogi Siddhababa — the heart of the Academy.",
+                img: "/__mockup/images/discover-guru.png",
+                tag: "Lineage",
               },
-            ].map((card) => (
+            ].map((item) => (
               <a
-                key={card.title}
+                key={item.title}
                 href="#"
-                className="group relative overflow-hidden rounded-2xl h-64 flex flex-col justify-end p-6 shadow-md hover:shadow-xl transition-shadow duration-300"
+                className="group flex items-center gap-8 py-8 hover:bg-[#fdf7ef] transition-colors duration-300 px-4 -mx-4 rounded-xl"
               >
-                <img
-                  src={card.img}
-                  alt={card.title}
-                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                <div className={`absolute inset-0 bg-gradient-to-t ${card.color} opacity-75`} />
-                <div className="relative z-10">
-                  <h3 className="font-['Cormorant_Garamond'] text-xl font-semibold text-white mb-1">{card.title}</h3>
-                  <p className="text-xs text-white/70 leading-relaxed mb-3 line-clamp-2">{card.desc}</p>
-                  <span className="inline-flex items-center gap-1.5 text-[#e8c56a] text-xs font-medium tracking-wide group-hover:gap-3 transition-all duration-300">
-                    Learn More <ArrowRight className="w-3 h-3" strokeWidth={2} />
+                {/* Number */}
+                <span className="font-['Cormorant_Garamond'] text-5xl font-light text-[#d4a843]/40 group-hover:text-[#d4a843]/70 transition-colors duration-300 w-14 shrink-0 leading-none select-none">
+                  {item.num}
+                </span>
+
+                {/* Thumbnail */}
+                <div className="w-24 h-20 rounded-xl overflow-hidden shrink-0 shadow-sm">
+                  <img
+                    src={item.img}
+                    alt={item.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+
+                {/* Text */}
+                <div className="flex-1 min-w-0">
+                  <span className="text-[10px] uppercase tracking-[0.2em] text-[#b8892a] font-semibold mb-1 block">
+                    {item.tag}
                   </span>
+                  <h3 className="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#3d3830] leading-snug mb-1 group-hover:text-[#9d7422] transition-colors duration-300">
+                    {item.title}
+                  </h3>
+                  <p className="text-sm text-[#7a7068] leading-relaxed line-clamp-2">{item.desc}</p>
+                </div>
+
+                {/* Arrow */}
+                <div className="shrink-0 w-9 h-9 rounded-full border border-[#d4a843]/40 flex items-center justify-center group-hover:bg-[#b8892a] group-hover:border-[#b8892a] transition-all duration-300">
+                  <ArrowRight className="w-4 h-4 text-[#b8892a] group-hover:text-white transition-colors duration-300" strokeWidth={1.5} />
                 </div>
               </a>
             ))}
