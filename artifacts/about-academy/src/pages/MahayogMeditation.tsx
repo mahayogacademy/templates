@@ -638,6 +638,13 @@ export default function MahayogMeditation() {
                   <p className="text-base leading-relaxed text-[#5a5248]">
                     In the present era, Surat-Śhabda Yoga has been re-introduced as Himalayan Siddha Mahayog by <strong className="text-[#3d3830]">Anant Shri Vibhushit Jagadguru Ramanandacharya Swami Ramakrishnacharya Ji Maharaj</strong> — known to devotees as Mahayogi Siddhababa. In 2019, an assembly of spiritual leaders from all major Hindu monastic lineages honored him with the title Jagadguru ("universal teacher"), recognizing his mastery of samādhi and his unique ability to transmit that state to others. Under his guidance, thousands of people have received Kundalini awakening and tangible spiritual experiences.
                   </p>
+                  <a
+                    href="#"
+                    className="inline-flex items-center gap-1.5 mt-4 text-sm font-medium text-[#b8892a] hover:text-[#96711e] transition-colors duration-200 group"
+                  >
+                    Learn More
+                    <span className="transition-transform duration-200 group-hover:translate-x-0.5">›</span>
+                  </a>
                 </div>
                 <img
                   src="/images/gurudev-sketch.png"
