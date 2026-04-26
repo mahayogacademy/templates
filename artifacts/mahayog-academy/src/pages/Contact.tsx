@@ -74,7 +74,7 @@ export default function Contact() {
             Get in Touch
           </h1>
           <p className="text-[#f0e4c8] text-base tracking-widest uppercase font-light">
-            We Welcome All Sincere Seekers
+            We Welcome All Seekers
           </p>
         </div>
       </section>
