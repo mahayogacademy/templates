@@ -599,25 +599,52 @@ export default function MahayogMeditation() {
           <div className="absolute inset-0 bg-[#f5ece0]/55" />
         </div>
         <div className="relative z-10 max-w-6xl mx-auto">
-          <div className="max-w-3xl">
-            <span className="uppercase tracking-[0.25em] text-xs text-[#b8892a] font-medium">A Living Tradition</span>
-            <h2 className="font-['Cormorant_Garamond'] text-4xl font-light text-[#3d3830] mt-2 mb-6 leading-snug">
-              Ancient Origins & Revival
-            </h2>
-            <p className="text-base leading-relaxed text-[#5a5248] mb-5">
-              Himalayan Siddha Mahāyog is the revival of Surat-Śhabda Yoga — literally the "union of the soul (surat) with the divine Word or sound (shabd)." According to Guru Nanak, communion with the divine Sound Current is "the only effective means" for liberating the soul.
-            </p>
-            <p className="text-base leading-relaxed text-[#5a5248] mb-5">
-              Nearly 600–700 years ago, the great Saint Jagadguru Ramanandacharya propagated this divine knowledge for the upliftment of people. His lineage included luminaries such as Kabir, Ravidas, Tulsidas, and Mira Bai — all of whom emphasized that sincere chanting of the Divine Name and listening to the inner sound can lead to the highest realization.
-            </p>
-            <p className="text-base leading-relaxed text-[#5a5248] mb-8">
-              Over time, this inner yogic science became esoteric, surviving only among a few Himalayan sages for 200–400 years, rarely taught openly. Its contemporary resurgence is considered a divine blessing for humanity.
-            </p>
-            <div className="bg-white/70 backdrop-blur-sm border border-[#e0d0b8] rounded-2xl p-7">
-              <span className="uppercase tracking-[0.2em] text-xs text-[#b8892a] font-semibold block mb-3">Revival by the Guru</span>
-              <p className="text-base leading-relaxed text-[#5a5248]">
-                In the present era, Surat-Śhabda Yoga has been re-introduced as Himalayan Siddha Mahayog by <strong className="text-[#3d3830]">Anant Shri Vibhushit Jagadguru Ramanandacharya Swami Ramakrishnacharya Ji Maharaj</strong> — known to devotees as Mahayogi Siddhababa. In 2019, an assembly of spiritual leaders from all major Hindu monastic lineages honored him with the title Jagadguru ("universal teacher"), recognizing his mastery of samādhi and his unique ability to transmit that state to others. Under his guidance, thousands of people have received Kundalini awakening and tangible spiritual experiences.
+          <div className="grid md:grid-cols-[1fr_280px] gap-12 items-start">
+            {/* Left: text */}
+            <div>
+              <span className="uppercase tracking-[0.25em] text-xs text-[#b8892a] font-medium">A Living Tradition</span>
+              <h2 className="font-['Cormorant_Garamond'] text-4xl font-light text-[#3d3830] mt-2 mb-6 leading-snug">
+                Ancient Origins & Revival
+              </h2>
+              <p className="text-base leading-relaxed text-[#5a5248] mb-5">
+                Himalayan Siddha Mahāyog is the revival of Surat-Śhabda Yoga — literally the "union of the soul (surat) with the divine Word or sound (shabd)." According to Guru Nanak, communion with the divine Sound Current is "the only effective means" for liberating the soul.
               </p>
+              <p className="text-base leading-relaxed text-[#5a5248] mb-5">
+                Nearly 600–700 years ago, the great Saint Jagadguru Ramanandacharya propagated this divine knowledge for the upliftment of people. His lineage included luminaries such as Kabir, Ravidas, Tulsidas, and Mira Bai — all of whom emphasized that sincere chanting of the Divine Name and listening to the inner sound can lead to the highest realization.
+              </p>
+              <p className="text-base leading-relaxed text-[#5a5248] mb-8">
+                Over time, this inner yogic science became esoteric, surviving only among a few Himalayan sages for 200–400 years, rarely taught openly. Its contemporary resurgence is considered a divine blessing for humanity.
+              </p>
+              <div className="bg-white/70 backdrop-blur-sm border border-[#e0d0b8] rounded-2xl p-7">
+                <span className="uppercase tracking-[0.2em] text-xs text-[#b8892a] font-semibold block mb-3">Revival by the Guru</span>
+                <p className="text-base leading-relaxed text-[#5a5248]">
+                  In the present era, Surat-Śhabda Yoga has been re-introduced as Himalayan Siddha Mahayog by <strong className="text-[#3d3830]">Anant Shri Vibhushit Jagadguru Ramanandacharya Swami Ramakrishnacharya Ji Maharaj</strong> — known to devotees as Mahayogi Siddhababa. In 2019, an assembly of spiritual leaders from all major Hindu monastic lineages honored him with the title Jagadguru ("universal teacher"), recognizing his mastery of samādhi and his unique ability to transmit that state to others. Under his guidance, thousands of people have received Kundalini awakening and tangible spiritual experiences.
+                </p>
+              </div>
+            </div>
+
+            {/* Right: saint portraits */}
+            <div className="flex flex-col gap-3">
+              <p className="text-[10px] uppercase tracking-[0.25em] text-[#b8892a] font-medium mb-1">The Lineage</p>
+              {[
+                { name: "Jagadguru Ramanandacharya", img: "/images/saint-ramananda.jpg", years: "c. 1400 CE" },
+                { name: "Kabir", img: "/images/saint-kabir.jpg", years: "c. 1440–1518" },
+                { name: "Ravidas", img: "/images/saint-ravidas.jpg", years: "c. 1450–1520" },
+                { name: "Tulsidas", img: "/images/saint-tulsidas.jpg", years: "c. 1532–1623" },
+                { name: "Mira Bai", img: "/images/saint-mirabai.jpg", years: "c. 1498–1547" },
+              ].map((s) => (
+                <div key={s.name} className="flex items-center gap-3 bg-white/60 backdrop-blur-sm border border-[#e0d0b8] rounded-xl p-2.5 hover:bg-white/80 transition-all duration-200">
+                  <img
+                    src={s.img}
+                    alt={s.name}
+                    className="w-12 h-12 rounded-lg object-cover object-top shrink-0 shadow-sm"
+                  />
+                  <div>
+                    <p className="font-['Cormorant_Garamond'] text-sm font-semibold text-[#3d3830] leading-tight">{s.name}</p>
+                    <p className="text-[10px] text-[#9a8878] mt-0.5">{s.years}</p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
