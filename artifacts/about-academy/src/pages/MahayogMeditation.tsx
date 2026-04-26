@@ -578,7 +578,9 @@ export default function MahayogMeditation() {
                         </div>
                       </div>
                       <div className="overflow-hidden max-h-0 group-hover:max-h-40 transition-all duration-500 ease-in-out">
-                        <p className="text-sm text-[#2d2011] leading-relaxed pt-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">{b.desc}</p>
+                        <div className="mt-3 bg-[#f5e9d5] rounded-lg px-3 py-2.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
+                          <p className="text-sm text-[#2d2011] leading-relaxed">{b.desc}</p>
+                        </div>
                       </div>
                     </div>
                   ))}
