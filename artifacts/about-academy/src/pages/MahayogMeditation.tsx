@@ -632,11 +632,18 @@ export default function MahayogMeditation() {
               <p className="text-base leading-relaxed text-[#5a5248] mb-8">
                 Over time, this inner yogic science became esoteric, surviving only among a few Himalayan sages for 200–400 years, rarely taught openly. Its contemporary resurgence is considered a divine blessing for humanity.
               </p>
-              <div className="bg-white/70 backdrop-blur-sm border border-[#e0d0b8] rounded-2xl p-7">
-                <span className="uppercase tracking-[0.2em] text-xs text-[#b8892a] font-semibold block mb-3">Revival by the Guru</span>
-                <p className="text-base leading-relaxed text-[#5a5248]">
-                  In the present era, Surat-Śhabda Yoga has been re-introduced as Himalayan Siddha Mahayog by <strong className="text-[#3d3830]">Anant Shri Vibhushit Jagadguru Ramanandacharya Swami Ramakrishnacharya Ji Maharaj</strong> — known to devotees as Mahayogi Siddhababa. In 2019, an assembly of spiritual leaders from all major Hindu monastic lineages honored him with the title Jagadguru ("universal teacher"), recognizing his mastery of samādhi and his unique ability to transmit that state to others. Under his guidance, thousands of people have received Kundalini awakening and tangible spiritual experiences.
-                </p>
+              <div className="bg-white/70 backdrop-blur-sm border border-[#e0d0b8] rounded-2xl p-7 flex gap-6 items-start">
+                <div className="flex-1">
+                  <span className="uppercase tracking-[0.2em] text-xs text-[#b8892a] font-semibold block mb-3">Revival by the Guru</span>
+                  <p className="text-base leading-relaxed text-[#5a5248]">
+                    In the present era, Surat-Śhabda Yoga has been re-introduced as Himalayan Siddha Mahayog by <strong className="text-[#3d3830]">Anant Shri Vibhushit Jagadguru Ramanandacharya Swami Ramakrishnacharya Ji Maharaj</strong> — known to devotees as Mahayogi Siddhababa. In 2019, an assembly of spiritual leaders from all major Hindu monastic lineages honored him with the title Jagadguru ("universal teacher"), recognizing his mastery of samādhi and his unique ability to transmit that state to others. Under his guidance, thousands of people have received Kundalini awakening and tangible spiritual experiences.
+                  </p>
+                </div>
+                <img
+                  src="/images/gurudev-sketch.png"
+                  alt="Jagadguru Mahayogi Siddhababa — sketch portrait"
+                  className="w-32 shrink-0 rounded-xl object-cover shadow-sm"
+                />
               </div>
             </div>
 
