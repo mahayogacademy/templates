@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ArrowRight, ChevronDown } from "lucide-react";
 import { Link } from "wouter";
 
@@ -298,9 +298,72 @@ function FAQItem({ q, a }: { q: string; a: string }) {
   );
 }
 
+const NAV_SECTIONS = [
+  { id: "what-is",      label: "What is Meditation" },
+  { id: "mahayog",      label: "Himalayan Mahayog"  },
+  { id: "how-it-works", label: "How It Works"       },
+  { id: "benefits",     label: "Benefits"           },
+  { id: "origins",      label: "Ancient Origins"    },
+  { id: "faq",          label: "FAQ"                },
+];
+
+function SidebarNav() {
+  const [active, setActive] = useState<string>("");
+
+  useEffect(() => {
+    const observers: IntersectionObserver[] = [];
+    NAV_SECTIONS.forEach(({ id }) => {
+      const el = document.getElementById(id);
+      if (!el) return;
+      const obs = new IntersectionObserver(
+        ([entry]) => { if (entry.isIntersecting) setActive(id); },
+        { rootMargin: "-40% 0px -55% 0px", threshold: 0 }
+      );
+      obs.observe(el);
+      observers.push(obs);
+    });
+    return () => observers.forEach((o) => o.disconnect());
+  }, []);
+
+  return (
+    <nav className="hidden xl:flex fixed right-7 top-1/2 -translate-y-1/2 z-40 flex-col items-end gap-5">
+      {NAV_SECTIONS.map(({ id, label }) => {
+        const isActive = active === id;
+        return (
+          <a
+            key={id}
+            href={`#${id}`}
+            className="group flex items-center gap-3"
+            onClick={(e) => { e.preventDefault(); document.getElementById(id)?.scrollIntoView({ behavior: "smooth" }); }}
+          >
+            <span
+              className={`text-xs tracking-widest uppercase transition-all duration-300 ${
+                isActive
+                  ? "text-[#b8892a] opacity-100 translate-x-0"
+                  : "text-[#9a8e7e] opacity-0 group-hover:opacity-100 translate-x-2 group-hover:translate-x-0"
+              }`}
+              style={{ fontFamily: "Inter, sans-serif" }}
+            >
+              {label}
+            </span>
+            <span
+              className={`block rounded-full transition-all duration-300 ${
+                isActive
+                  ? "w-2.5 h-2.5 bg-[#b8892a]"
+                  : "w-1.5 h-1.5 bg-[#c4b49a] group-hover:bg-[#b8892a] group-hover:scale-125"
+              }`}
+            />
+          </a>
+        );
+      })}
+    </nav>
+  );
+}
+
 export default function MahayogMeditation() {
   return (
     <div className="bg-[#faf9f6] text-[#3d3830]" style={{ scrollBehavior: "smooth" }}>
+      <SidebarNav />
 
       {/* ── STICKY NAV ── */}
       <nav className="sticky top-0 z-50 bg-[#faf9f6]/95 backdrop-blur-sm border-b border-[#e8dece]">
@@ -390,7 +453,7 @@ export default function MahayogMeditation() {
       </section>
 
       {/* ── WHAT IS HIMALAYAN SIDDHA MAHAYOG ── */}
-      <section className="py-20 px-6 bg-[#fdf6ec]">
+      <section id="mahayog" className="py-20 px-6 bg-[#fdf6ec]">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-14 items-center mb-14">
             {/* Text */}
@@ -418,7 +481,7 @@ export default function MahayogMeditation() {
       </section>
 
       {/* ── HOW IT WORKS ── */}
-      <section className="pt-0 pb-20 bg-white">
+      <section id="how-it-works" className="pt-0 pb-20 bg-white">
         {/* Wave top edge — white wave cuts into the cream section above */}
         <div className="w-full -mt-14 relative z-10">
           <svg viewBox="0 0 1440 90" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" className="w-full block">
