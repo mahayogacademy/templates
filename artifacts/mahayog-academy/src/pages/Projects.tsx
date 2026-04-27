@@ -245,7 +245,7 @@ export default function Projects() {
               className="absolute inset-0 w-full h-full object-cover object-center"
             />
             {/* Dark gradient overlay */}
-            <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/50 to-black/65" />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/70 to-black/80" />
             {/* Content */}
             <div className="relative flex flex-col items-center justify-center text-center px-8 md:px-20 py-16">
               <span className="font-['Cormorant_Garamond'] text-6xl font-light text-[#d4a843]/60 leading-none mb-2 select-none">"</span>
