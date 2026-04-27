@@ -126,49 +126,50 @@ export default function Projects() {
           </div>
 
           {/* Programs offered */}
-          <div className="grid md:grid-cols-2 gap-12 mb-16">
-            <div>
-              <p className="text-[10px] uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-5">Programs Offered at Each Center</p>
-              <div className="space-y-3">
-                {HANUMAN_PROGRAMS.map((p, i) => (
-                  <div key={i} className="flex items-start gap-3">
-                    <div className="w-1 h-1 rounded-full bg-[#b8892a] mt-2 shrink-0" />
-                    <p className="text-sm text-[#5a5248]">{p}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Quote */}
-            <div className="flex items-center">
-              <blockquote className="relative pl-6 border-l-2 border-[#b8892a]/40">
-                <p className="font-['Cormorant_Garamond'] text-xl md:text-2xl font-light italic text-[#3d3830] leading-relaxed mb-4">
-                  "The body is temporary; it will pass. Let us leave behind something of lasting value that teaches sanskar and sanskriti to future generations."
-                </p>
-                <cite className="text-xs uppercase tracking-[0.2em] text-[#b8892a] font-semibold not-italic">
-                  Jagadguru Mahayogi Siddhababa
-                </cite>
-              </blockquote>
+          <div className="mb-14">
+            <p className="text-[10px] uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-6">Programs Offered at Each Center</p>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+              {HANUMAN_PROGRAMS.map((p, i) => (
+                <div key={i} className="flex items-center gap-3 py-3 px-4 bg-white border border-[#e8dece] rounded-xl">
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" className="shrink-0">
+                    <path d="M12 2C12 2 15 9 22 12C22 12 15 15 12 22C12 22 9 15 2 12C2 12 9 9 12 2Z" stroke="#b8892a" strokeWidth="1.5" fill="none"/>
+                  </svg>
+                  <p className="text-sm text-[#5a5248] leading-snug">{p}</p>
+                </div>
+              ))}
             </div>
           </div>
 
+          {/* Quote */}
+          <div className="relative mb-14 py-14 px-8 md:px-16 bg-[#f5ede0] rounded-2xl text-center overflow-hidden">
+            <div className="absolute top-5 left-8 font-['Cormorant_Garamond'] text-8xl leading-none text-[#d4a843]/20 select-none">"</div>
+            <div className="absolute bottom-0 right-8 font-['Cormorant_Garamond'] text-8xl leading-none text-[#d4a843]/20 select-none">"</div>
+            <p className="relative font-['Cormorant_Garamond'] text-2xl md:text-3xl font-light italic text-[#3d3830] leading-relaxed max-w-2xl mx-auto mb-5">
+              The body is temporary; it will pass. Let us leave behind something of lasting value that teaches sanskar and sanskriti to future generations.
+            </p>
+            <div className="h-px w-10 bg-[#b8892a]/50 mx-auto mb-4" />
+            <cite className="text-xs uppercase tracking-[0.25em] text-[#b8892a] font-semibold not-italic">
+              Jagadguru Mahayogi Siddhababa
+            </cite>
+          </div>
+
           {/* Ways to contribute */}
-          <div className="bg-[#f5ede0]/70 rounded-2xl p-8">
-            <p className="text-[10px] uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-6">Ways to Contribute</p>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <h4 className="font-['Cormorant_Garamond'] text-lg font-semibold text-[#3d3830] mb-2">Land Contribution</h4>
+          <div className="mb-2">
+            <p className="text-[10px] uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-8">Ways to Contribute</p>
+            <div className="grid md:grid-cols-2 gap-0 divide-y md:divide-y-0 md:divide-x divide-[#e8dece]">
+              <div className="md:pr-10 pb-8 md:pb-0">
+                <h4 className="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#3d3830] mb-3">Land Contribution</h4>
                 <p className="text-sm text-[#7a7068] leading-relaxed">Donate private land, facilitate allocation of government land, or help identify and restore neglected or historic temple sites across Nepal.</p>
               </div>
-              <div>
-                <h4 className="font-['Cormorant_Garamond'] text-lg font-semibold text-[#3d3830] mb-2">Financial Support</h4>
+              <div className="md:pl-10 pt-8 md:pt-0">
+                <h4 className="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#3d3830] mb-3">Financial Support</h4>
                 <p className="text-sm text-[#7a7068] leading-relaxed">Monetary or in-kind donations are welcomed toward construction, educational programming, daily sadhana activities, and ongoing temple maintenance.</p>
               </div>
             </div>
-            <div className="mt-6 pt-6 border-t border-[#e8dece]">
+            <div className="mt-10 text-center">
               <Link href="/contact">
-                <span className="inline-flex items-center gap-2 text-sm text-[#b8892a] font-medium hover:text-[#9d7422] transition-colors cursor-pointer">
-                  Get in touch to support this initiative
+                <span className="inline-flex items-center gap-2 bg-[#b8892a] hover:bg-[#9d7422] text-white text-sm px-8 py-3.5 rounded-full tracking-wider transition-colors duration-200 cursor-pointer">
+                  Get in Touch to Contribute
                   <ArrowRight className="w-4 h-4" strokeWidth={1.5} />
                 </span>
               </Link>
