@@ -10,6 +10,7 @@ import Ashram from "@/pages/Ashram";
 import Contact from "@/pages/Contact";
 import Projects from "@/pages/Projects";
 import FounderGuru from "@/pages/FounderGuru";
+import Lineage from "@/pages/Lineage";
 
 const queryClient = new QueryClient();
 
@@ -23,6 +24,7 @@ function Router() {
       <Route path="/contact" component={Contact} />
       <Route path="/projects" component={Projects} />
       <Route path="/founder-guru" component={FounderGuru} />
+      <Route path="/lineage" component={Lineage} />
       <Route component={NotFound} />
     </Switch>
   );
