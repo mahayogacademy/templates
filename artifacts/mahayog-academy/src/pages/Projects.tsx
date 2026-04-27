@@ -97,8 +97,9 @@ export default function Projects() {
         <div className="max-w-5xl mx-auto">
 
           {/* Project header + portrait image */}
-          <div className="grid md:grid-cols-[1fr_320px] gap-12 items-start mb-14">
-            {/* Left: text */}
+          <div className="grid md:grid-cols-[1fr_300px] gap-12 items-start mb-14">
+
+            {/* Left: header + description + feature items */}
             <div>
               <div className="flex items-start gap-6 mb-8">
                 <span className="font-['Cormorant_Garamond'] text-8xl font-light text-[#e8dece] leading-none select-none shrink-0">01</span>
@@ -110,32 +111,34 @@ export default function Projects() {
                   <p className="font-['Cormorant_Garamond'] text-xl italic text-[#9a8f84] mt-1">A Sacred Sat-Sankalpa</p>
                 </div>
               </div>
-              <div className="h-px bg-[#e8dece] mb-8" />
-              <p className="text-base text-[#5a5248] leading-relaxed">
+              <div className="h-px bg-[#e8dece] mb-6" />
+              <p className="text-base text-[#5a5248] leading-relaxed mb-8">
                 Jagadguru Mahayogi Siddhababa has undertaken a sacred vow to establish 108 Hanuman Temples across Nepal — a visionary initiative dedicated to spiritual renewal, cultural preservation, and social upliftment. These temples are envisioned not only as places of worship, but as vibrant community centers rooted in Sanatan Dharma, built with and managed by local communities.
               </p>
+
+              {/* Feature items — stacked below description */}
+              <div className="space-y-4">
+                {HANUMAN_FEATURES.map((f, i) => (
+                  <div key={i} className="flex gap-4 p-4 bg-[#fdf6ec] rounded-xl">
+                    <span className="font-['Cormorant_Garamond'] text-2xl font-light text-[#d4a843]/60 leading-none shrink-0 w-6 pt-0.5">{i + 1}</span>
+                    <div>
+                      <p className="font-['Cormorant_Garamond'] text-lg font-semibold text-[#3d3830] leading-snug mb-1">{f.title}</p>
+                      <p className="text-sm text-[#7a7068] leading-relaxed">{f.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
 
             {/* Right: portrait image */}
-            <div className="rounded-2xl overflow-hidden shadow-md shadow-[#b8892a]/10 hidden md:block">
+            <div className="rounded-2xl overflow-hidden shadow-md shadow-[#b8892a]/10 hidden md:block sticky top-20">
               <img
                 src={`${b}images/hanuman-temple-portrait.png`}
                 alt="Lord Hanuman statue at a Nepali temple"
-                className="w-full h-full object-cover object-top"
-                style={{ minHeight: "420px" }}
+                className="w-full object-cover object-top"
+                style={{ minHeight: "520px" }}
               />
             </div>
-          </div>
-
-          {/* Three pillars grid */}
-          <div className="grid md:grid-cols-3 gap-6 mb-16">
-            {HANUMAN_FEATURES.map((f, i) => (
-              <div key={i} className="bg-white border border-[#e8dece] rounded-2xl p-6">
-                <div className="w-8 h-px bg-[#b8892a] mb-4" />
-                <h3 className="font-['Cormorant_Garamond'] text-xl font-semibold text-[#3d3830] mb-3 leading-snug">{f.title}</h3>
-                <p className="text-sm text-[#7a7068] leading-relaxed">{f.desc}</p>
-              </div>
-            ))}
           </div>
 
           {/* Programs offered */}
