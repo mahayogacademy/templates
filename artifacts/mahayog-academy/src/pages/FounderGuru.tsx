@@ -94,7 +94,7 @@ export default function FounderGuru() {
                 Anant Shri Vibhushit Jagadguru Ramanandacharya Swami Ramakrishnacharya Ji Maharaj is popularly known as Jagadguru Mahayogi Siddhababa — and simply as <span className="italic text-[#3d3830]">Gurudev</span> by his students. He is a realized saint in the Ramanandi (Sri Vaishnava) tradition.
               </p>
               <p className="text-base text-[#5a5248] leading-relaxed mb-8">
-                His Holiness is a Tridandi sannyasi renowned for his mastery of scriptures, yoga, and Kundalini science. Through his teaching, personal guidance, and the institutions he has established, he guides individuals and communities seeking well-being, purpose, and inner peace.
+                His Holiness is a Tridandi sannyasi renowned for his mastery of scriptures, yoga, Ayurveda, and Kundalini science. Through his teaching, personal guidance, and the institutions he has established, he guides individuals and communities seeking well-being, purpose, and inner peace.
               </p>
 
               {/* Central quote */}
