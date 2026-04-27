@@ -549,10 +549,10 @@ export default function FounderGuru() {
 
             <div className="grid sm:grid-cols-2 gap-4 mb-10">
               {[
-                { label: "Spiritual Revival through Himalayan Siddha Mahayog Meditation", note: "Spiritual Revival", img: "ashram-meditation-hall.png" },
-                { label: "Green Revolution for Nepal's agricultural empowerment and independence", note: "Ecology", img: "ashram-garden.jpg" },
-                { label: "Jagadguru Shriramanandacharya Gurukul (Grades 6–12)", note: "Education", img: "ashram-extra-procession.jpg" },
-                { label: "Nepal's first Ayurveda University", note: "Education", img: "ashram-cows-sunset.jpg" },
+                { label: "Spiritual Revival through Himalayan Siddha Mahayog Meditation", note: "Spiritual Revival", img: "initiative-meditation.png" },
+                { label: "Green Revolution for Nepal's agricultural empowerment and independence", note: "Ecology", img: "initiative-green-revolution.png" },
+                { label: "Jagadguru Shriramanandacharya Gurukul (Grades 6–12)", note: "Education", img: "initiative-gurukul.png" },
+                { label: "Nepal's first Ayurveda University", note: "Education", img: "initiative-ayurveda.png" },
                 { label: "108 Hanuman Temples across Nepal", note: "Sacred Infrastructure", img: "ashram-hanuman-wide.jpg" },
                 { label: "A historic Ram Temple in Nepal", note: "Sacred Infrastructure", img: "ram-mandir-1.jpg" },
               ].map((item, i) => (
