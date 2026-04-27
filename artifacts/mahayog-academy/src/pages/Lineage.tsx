@@ -179,19 +179,42 @@ export default function Lineage() {
       </section>
 
       {/* ── CLOSING QUOTE BANNER ── */}
-      <section className="bg-[#2e2820] py-16 px-6 text-center">
-        <div className="flex items-center justify-center gap-4 mb-7">
-          <div className="h-px w-12 bg-[#e8c56a]/40" />
-          <GoldDiamond />
-          <div className="h-px w-12 bg-[#e8c56a]/40" />
+      <section className="relative py-24 px-6 text-center overflow-hidden">
+        {/* Background photo */}
+        <div className="absolute inset-0">
+          <img
+            src={`${b}images/guru-hero-new.jpg`}
+            alt=""
+            aria-hidden
+            className="w-full h-full object-cover"
+            style={{ objectPosition: "center 40%" }}
+          />
+          <div className="absolute inset-0 bg-[#1a0e06]/82" />
+          {/* Subtle vignette */}
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0d0804]/60 via-transparent to-[#0d0804]/40" />
         </div>
-        <p className="font-['Cormorant_Garamond'] text-2xl md:text-3xl font-light italic text-[#f0e4c8] leading-relaxed max-w-2xl mx-auto">
-          "The Guru is the grace that flows through an unbroken chain of awakening."
-        </p>
-        <div className="flex items-center justify-center gap-4 mt-7">
-          <div className="h-px w-12 bg-[#e8c56a]/40" />
-          <GoldDiamond />
-          <div className="h-px w-12 bg-[#e8c56a]/40" />
+
+        {/* Content */}
+        <div className="relative z-10">
+          <div className="flex items-center justify-center gap-5 mb-8">
+            <div className="h-px w-16 bg-[#e8c56a]/50" />
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+              <path d="M12 2C12 2 15 9 22 12C22 12 15 15 12 22C12 22 9 15 2 12C2 12 9 9 12 2Z" fill="#e8c56a" fillOpacity="0.7"/>
+            </svg>
+            <div className="h-px w-16 bg-[#e8c56a]/50" />
+          </div>
+
+          <p className="font-['Cormorant_Garamond'] text-3xl md:text-4xl font-light italic text-[#f5ead8] leading-relaxed max-w-2xl mx-auto tracking-wide">
+            "The Guru is the grace that flows through an unbroken chain of awakening."
+          </p>
+
+          <div className="flex items-center justify-center gap-5 mt-8">
+            <div className="h-px w-16 bg-[#e8c56a]/50" />
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+              <path d="M12 2C12 2 15 9 22 12C22 12 15 15 12 22C12 22 9 15 2 12C2 12 9 9 12 2Z" fill="#e8c56a" fillOpacity="0.7"/>
+            </svg>
+            <div className="h-px w-16 bg-[#e8c56a]/50" />
+          </div>
         </div>
       </section>
     </div>
