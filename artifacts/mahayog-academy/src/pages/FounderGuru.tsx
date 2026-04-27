@@ -445,7 +445,7 @@ export default function FounderGuru() {
               <p className="text-[10px] uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-6">Key Teachings</p>
               <div className="grid sm:grid-cols-2 gap-x-12 gap-y-0">
                 {TEACHINGS.map((t, i) => (
-                  <div key={i} className="flex items-start gap-4 py-5 border-b border-[#e8dece]">
+                  <div key={i} className="flex items-start gap-4 py-3 border-b border-[#e8dece]">
                     <svg className="shrink-0 mt-[3px]" width="10" height="10" viewBox="0 0 24 24" fill="none">
                       <path d="M12 2C12 2 15 9 22 12C22 12 15 15 12 22C12 22 9 15 2 12C2 12 9 9 12 2Z" fill="#b8892a" fillOpacity="0.5"/>
                     </svg>
