@@ -148,7 +148,8 @@ export default function Lineage() {
 
             {/* Last guru — full width, prominent */}
             <div className="flex flex-col items-center text-center">
-              <div className="relative w-52 h-52 shrink-0 rounded-full ring-[3px] ring-[#b8892a]">
+              <div className="relative w-64 h-64 shrink-0">
+                <div className="absolute inset-0 rounded-full shadow-[0_0_0_2px_#b8892a,0_0_0_6px_#f2ead8,0_0_0_8px_#c9a55a40]" />
                 <img
                   src={`${b}images/siddhababa-formal.jpg`}
                   alt={lastGuru.name}
