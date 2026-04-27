@@ -294,3 +294,9 @@ id = "kJuG_sjPj_sq6sYAvxpAW"
 uri = "file://artifacts/mahayog-academy/public/images/lineage-hero.png"
 type = "image"
 title = "himalayan lineage hero"
+
+[[generated]]
+id = "NeJ-dTObGAlPhD2shunQr"
+uri = "file://artifacts/mahayog-academy/public/images/lineage-banner-bg.png"
+type = "image"
+title = "lineage quote banner background"

@@ -183,7 +183,7 @@ export default function Lineage() {
         {/* Background photo */}
         <div className="absolute inset-0">
           <img
-            src={`${b}images/guru-hero-new.jpg`}
+            src={`${b}images/lineage-banner-bg.png`}
             alt=""
             aria-hidden
             className="w-full h-full object-cover"
