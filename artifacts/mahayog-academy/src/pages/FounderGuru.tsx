@@ -498,7 +498,7 @@ export default function FounderGuru() {
 
             <div className="grid sm:grid-cols-2 gap-3 mb-10">
               {[
-                { label: "Spiritual Revival through Himalayan Siddha Mahayog Meditation", note: "Global outreach" },
+                { label: "Spiritual Revival through Himalayan Siddha Mahayog Meditation", note: "Spiritual Revival" },
                 { label: "Nepal's first Ayurveda University", note: "Education" },
                 { label: "Green Revolution for Nepal's agricultural empowerment and independence", note: "Ecology" },
                 { label: "Hanuman Temple Akhanda Kīrtan — continuous 24-hour Ram mantra chanting, ongoing since 2019", note: "Devotional practice" },
