@@ -128,7 +128,7 @@ export default function FounderGuru() {
             Jagadguru Mahayogi Siddhababa
           </h1>
           <p className="text-[#f0e4c8] text-base tracking-widest uppercase font-light mt-4">
-            The Role of Guru in Yoga Philosophy
+            Enlightened Acharya
           </p>
         </div>
       </section>
