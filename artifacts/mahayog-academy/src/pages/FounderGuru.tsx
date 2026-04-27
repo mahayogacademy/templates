@@ -573,7 +573,7 @@ export default function FounderGuru() {
                 },
                 {
                   year: "2017–Present",
-                  name: "Continuous Shree Ramarchan Mahāyajña",
+                  name: "Shree Ramarchan Mahāyajña",
                   desc: "Performed an unprecedented 74 times within four months during the observance of 2024 Chaturmās.",
                 },
               ].map((yajna, i) => (
