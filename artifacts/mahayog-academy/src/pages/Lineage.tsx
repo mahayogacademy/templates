@@ -153,11 +153,12 @@ export default function Lineage() {
                 <img
                   src={`${b}images/siddhababa-formal.jpg`}
                   alt={lastGuru.name}
-                  className="w-full h-full object-cover object-top rounded-full"
+                  className="w-full h-full object-cover rounded-full"
+                  style={{ objectPosition: "center 25%" }}
                 />
               </div>
               <div className="mt-5">
-                <p className="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#3d3830] leading-snug max-w-xs mx-auto">
+                <p className="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#3d3830] leading-snug max-w-sm mx-auto">
                   {lastGuru.name}
                 </p>
                 <p className="text-[11px] text-[#b8892a] font-semibold uppercase tracking-[0.22em] mt-2">{lastGuru.sub}</p>
