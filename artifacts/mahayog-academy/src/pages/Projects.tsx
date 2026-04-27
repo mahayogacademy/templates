@@ -96,32 +96,35 @@ export default function Projects() {
       <section className="py-24 px-6">
         <div className="max-w-5xl mx-auto">
 
-          {/* Project header */}
-          <div className="mb-14">
-            <div className="flex items-start gap-6 mb-8">
-              <span className="font-['Cormorant_Garamond'] text-8xl font-light text-[#e8dece] leading-none select-none shrink-0">01</span>
-              <div className="pt-4">
-                <p className="text-[10px] uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-2">National Mission · Nepal</p>
-                <h2 className="font-['Cormorant_Garamond'] text-4xl md:text-5xl font-light text-[#3d3830] leading-tight">
-                  108 Hanuman Temples
-                </h2>
-                <p className="font-['Cormorant_Garamond'] text-xl italic text-[#9a8f84] mt-1">A Sacred Sat-Sankalpa</p>
+          {/* Project header + portrait image */}
+          <div className="grid md:grid-cols-[1fr_320px] gap-12 items-start mb-14">
+            {/* Left: text */}
+            <div>
+              <div className="flex items-start gap-6 mb-8">
+                <span className="font-['Cormorant_Garamond'] text-8xl font-light text-[#e8dece] leading-none select-none shrink-0">01</span>
+                <div className="pt-4">
+                  <p className="text-[10px] uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-2">National Mission · Nepal</p>
+                  <h2 className="font-['Cormorant_Garamond'] text-4xl md:text-5xl font-light text-[#3d3830] leading-tight">
+                    108 Hanuman Temples
+                  </h2>
+                  <p className="font-['Cormorant_Garamond'] text-xl italic text-[#9a8f84] mt-1">A Sacred Sat-Sankalpa</p>
+                </div>
               </div>
+              <div className="h-px bg-[#e8dece] mb-8" />
+              <p className="text-base text-[#5a5248] leading-relaxed">
+                Jagadguru Mahayogi Siddhababa has undertaken a sacred vow to establish 108 Hanuman Temples across Nepal — a visionary initiative dedicated to spiritual renewal, cultural preservation, and social upliftment. These temples are envisioned not only as places of worship, but as vibrant community centers rooted in Sanatan Dharma, built with and managed by local communities.
+              </p>
             </div>
-            <div className="h-px bg-[#e8dece] mb-8" />
-            <p className="text-base text-[#5a5248] leading-relaxed max-w-3xl">
-              Jagadguru Mahayogi Siddhababa has undertaken a sacred vow to establish 108 Hanuman Temples across Nepal — a visionary initiative dedicated to spiritual renewal, cultural preservation, and social upliftment. These temples are envisioned not only as places of worship, but as vibrant community centers rooted in Sanatan Dharma, built with and managed by local communities.
-            </p>
-          </div>
 
-          {/* Temple image */}
-          <div className="mb-14 rounded-2xl overflow-hidden">
-            <img
-              src={`${b}images/hanuman-temple.png`}
-              alt="A Hanuman temple in Nepal"
-              className="w-full object-cover object-top"
-              style={{ height: "380px" }}
-            />
+            {/* Right: portrait image */}
+            <div className="rounded-2xl overflow-hidden shadow-md shadow-[#b8892a]/10 hidden md:block">
+              <img
+                src={`${b}images/hanuman-temple-portrait.png`}
+                alt="Lord Hanuman statue at a Nepali temple"
+                className="w-full h-full object-cover object-top"
+                style={{ minHeight: "420px" }}
+              />
+            </div>
           </div>
 
           {/* Three pillars grid */}

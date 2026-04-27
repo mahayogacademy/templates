@@ -204,3 +204,9 @@ id = "fGF6OXBol6O8CbEsiScsr"
 uri = "file://artifacts/mahayog-academy/public/images/hanuman-temple.png"
 type = "image"
 title = "generated_image"
+
+[[generated]]
+id = "jagX4MJHKq_CiRaVpr5oy"
+uri = "file://artifacts/mahayog-academy/public/images/hanuman-temple-portrait.png"
+type = "image"
+title = "generated_image"
