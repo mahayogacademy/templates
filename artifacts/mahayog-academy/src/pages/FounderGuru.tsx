@@ -496,7 +496,7 @@ export default function FounderGuru() {
               Under his guidance, numerous spiritual, educational, and cultural initiatives are being established — each grounded in the conviction that inner realization must serve the world.
             </p>
 
-            <div className="space-y-4 mb-12">
+            <div className="grid sm:grid-cols-2 gap-3 mb-10">
               {[
                 { label: "Spiritual Revival through Himalayan Siddha Mahayog Meditation", note: "Global outreach" },
                 { label: "Nepal's first Ayurveda University", note: "Education" },
@@ -505,12 +505,12 @@ export default function FounderGuru() {
                 { label: "108 Hanuman Temples across Nepal", note: "Sacred infrastructure" },
                 { label: "A historic Ram Temple in Nepal", note: "Sacred infrastructure" },
               ].map((item, i) => (
-                <div key={i} className="flex items-start gap-5 p-5 bg-[#faf9f6] border border-[#e8dece] rounded-xl">
+                <div key={i} className="flex items-start gap-4 p-4 bg-[#faf9f6] border border-[#e8dece] rounded-xl">
                   <span className="mt-[5px] shrink-0 w-1.5 h-1.5 rotate-45 bg-[#b8892a]/70 inline-block" />
                   <div className="flex-1 min-w-0">
                     <p className="text-sm text-[#3d3830] leading-relaxed">{item.label}</p>
+                    <p className="text-[10px] uppercase tracking-[0.2em] text-[#b8892a] font-semibold mt-1">{item.note}</p>
                   </div>
-                  <span className="shrink-0 text-[10px] uppercase tracking-[0.2em] text-[#b8892a] font-semibold whitespace-nowrap hidden sm:block">{item.note}</span>
                 </div>
               ))}
             </div>
