@@ -422,7 +422,7 @@ export default function FounderGuru() {
                 </p>
                 <Link href="/meet" onClick={() => window.scrollTo(0, 0)}>
                   <span className="inline-flex items-center gap-2 px-7 py-3 bg-[#b8892a] text-white text-sm rounded-full hover:bg-[#9d7422] transition-colors cursor-pointer">
-                    View Schedule &amp; Darshan <ArrowRight className="w-4 h-4" strokeWidth={1.5} />
+                    Get Darshan <ArrowRight className="w-4 h-4" strokeWidth={1.5} />
                   </span>
                 </Link>
               </div>
