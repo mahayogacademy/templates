@@ -125,7 +125,9 @@ export default function FounderGuru() {
             {[
               { label: "Life", anchor: "#life" },
               { label: "Teachings", anchor: "#teachings" },
-              { label: "Ashrams & Global Presence", anchor: "#ashrams" },
+              { label: "Ashrams", anchor: "#ashrams" },
+              { label: "Key Initiatives", anchor: "#initiatives" },
+              { label: "Yajñas", anchor: "#yajnas" },
             ].map((item, i, arr) => (
               <a
                 key={item.anchor}
@@ -408,6 +410,129 @@ export default function FounderGuru() {
                   Visit Ashram Page <ArrowRight className="w-4 h-4" strokeWidth={1.5} />
                 </span>
               </Link>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* ── KEY INITIATIVES SECTION ── */}
+      <section className="py-24 px-6 bg-white border-t border-[#e8dece]">
+        <div className="max-w-5xl mx-auto">
+          <div id="initiatives" className="scroll-mt-24">
+
+            <div className="flex items-start gap-6 mb-10">
+              <span className="font-['Cormorant_Garamond'] text-8xl font-light text-[#e8dece] leading-none select-none shrink-0">IV</span>
+              <div className="pt-4">
+                <p className="text-[10px] uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-1">Spiritual, Educational & Cultural Work</p>
+                <h2 className="font-['Cormorant_Garamond'] text-4xl font-light text-[#3d3830] leading-tight">Key Initiatives &amp; Projects</h2>
+              </div>
+            </div>
+
+            <div className="h-px bg-[#e8dece] mb-8" />
+
+            <p className="text-base text-[#5a5248] leading-relaxed max-w-2xl mb-10">
+              Under his guidance, numerous spiritual, educational, and cultural initiatives are being established — each grounded in the conviction that inner realization must serve the world.
+            </p>
+
+            <div className="space-y-4 mb-12">
+              {[
+                { label: "Spiritual Revival through Himalayan Siddha Mahayog Meditation", note: "Global outreach" },
+                { label: "Nepal's first Ayurveda University", note: "Education" },
+                { label: "Green Revolution for Nepal's agricultural empowerment and independence", note: "Ecology" },
+                { label: "Hanuman Temple Akhanda Kīrtan — continuous 24-hour Ram mantra chanting, ongoing since 2019", note: "Devotional practice" },
+                { label: "108 Hanuman Temples across Nepal", note: "Sacred infrastructure" },
+                { label: "A historic Ram Temple in Nepal", note: "Sacred infrastructure" },
+              ].map((item, i) => (
+                <div key={i} className="flex items-start gap-5 p-5 bg-[#faf9f6] border border-[#e8dece] rounded-xl">
+                  <span className="mt-[5px] shrink-0 w-1.5 h-1.5 rotate-45 bg-[#b8892a]/70 inline-block" />
+                  <div className="flex-1 min-w-0">
+                    <p className="text-sm text-[#3d3830] leading-relaxed">{item.label}</p>
+                  </div>
+                  <span className="shrink-0 text-[10px] uppercase tracking-[0.2em] text-[#b8892a] font-semibold whitespace-nowrap hidden sm:block">{item.note}</span>
+                </div>
+              ))}
+            </div>
+
+            <Link href="/projects">
+              <span className="inline-flex items-center gap-2 px-6 py-3 border border-[#b8892a] text-[#b8892a] text-sm rounded-full hover:bg-[#b8892a] hover:text-white transition-colors cursor-pointer">
+                View Detailed Project Pages <ArrowRight className="w-4 h-4" strokeWidth={1.5} />
+              </span>
+            </Link>
+
+          </div>
+        </div>
+      </section>
+
+      {/* ── YAJNAS SECTION ── */}
+      <section className="py-24 px-6">
+        <div className="max-w-5xl mx-auto">
+          <div id="yajnas" className="scroll-mt-24">
+
+            <div className="flex items-start gap-6 mb-10">
+              <span className="font-['Cormorant_Garamond'] text-8xl font-light text-[#e8dece] leading-none select-none shrink-0">V</span>
+              <div className="pt-4">
+                <p className="text-[10px] uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-1">Ancient Vedic Observances</p>
+                <h2 className="font-['Cormorant_Garamond'] text-4xl font-light text-[#3d3830] leading-tight">Revival of Historic Yajñas</h2>
+              </div>
+            </div>
+
+            <div className="h-px bg-[#e8dece] mb-8" />
+
+            <div className="grid md:grid-cols-2 gap-10 mb-12">
+              <p className="text-base text-[#5a5248] leading-relaxed">
+                His Holiness has revitalized rare Vedic observances that had gradually diminished over time. These yajñas have been conducted according to advanced Vedic science, requiring precise knowledge, discipline, and alignment with seasonal and ecological cycles.
+              </p>
+              <p className="text-base text-[#5a5248] leading-relaxed">
+                Through focused mantra vibration and ritual precision, these observances are understood to support both atmospheric purification and inner transformation.
+              </p>
+            </div>
+
+            <div className="space-y-4">
+              {[
+                {
+                  year: "2019",
+                  name: "Shree Ram Tārak Brahma Mahāyajña",
+                  desc: "Conducted in Nepal after a gap of 705 years — marking a profound moment of spiritual revival.",
+                },
+                {
+                  year: "2023",
+                  name: "Atirudri Mahāyajña",
+                  desc: "Performed for the first time in Nepal's recorded history, within the sacred precincts of Pashupatinath Temple.",
+                },
+                {
+                  year: "2024",
+                  name: "Sankat Mochan Shree Hanumad Mahāyajña",
+                  desc: "Conducted with the participation of Dhirendra Shastri Ji Maharaj (Bageshwar Dham Sarkar) as Guest of Honour.",
+                },
+                {
+                  year: "2017–Present",
+                  name: "Continuous Shree Ramarchan Mahāyajña",
+                  desc: "Performed an unprecedented 74 times within four months during the observance of 2024 Chaturmās.",
+                },
+                {
+                  year: "2025",
+                  name: "Ramchandi Mahāyajña",
+                  desc: "The most recent in a continuing lineage of Vedic ritual restoration under his guidance.",
+                },
+              ].map((yajna, i) => (
+                <div key={i} className="flex gap-6 items-start p-6 bg-white border border-[#e8dece] rounded-2xl">
+                  <div className="shrink-0 w-24 text-right">
+                    <span className="text-xs uppercase tracking-[0.2em] text-[#b8892a] font-semibold leading-none">{yajna.year}</span>
+                  </div>
+                  <div className="w-px bg-[#e8dece] self-stretch shrink-0" />
+                  <div>
+                    <p className="font-['Cormorant_Garamond'] text-xl font-semibold text-[#3d3830] mb-1">{yajna.name}</p>
+                    <p className="text-sm text-[#7a7068] leading-relaxed">{yajna.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-10 border-l-2 border-[#b8892a]/40 pl-6 py-1">
+              <p className="text-base italic text-[#5a5248] leading-relaxed font-['Cormorant_Garamond'] text-lg">
+                Across all these initiatives, His Holiness emphasizes that spiritual realization finds its fullest expression in service — to humanity, to culture, and to the natural world.
+              </p>
             </div>
 
           </div>
