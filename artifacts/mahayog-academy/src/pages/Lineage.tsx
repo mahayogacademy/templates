@@ -28,7 +28,7 @@ function GoldDiamond() {
   );
 }
 
-function GuruCard({ guru, index }: { guru: typeof GURUS[number]; index: number }) {
+function GuruCard({ guru }: { guru: typeof GURUS[number] }) {
   return (
     <div className="flex flex-col items-center text-center w-48">
       <div className="relative w-44 h-44 shrink-0">
@@ -38,9 +38,6 @@ function GuruCard({ guru, index }: { guru: typeof GURUS[number]; index: number }
           alt={guru.name}
           className="w-full h-full object-cover object-top rounded-full"
         />
-        <div className="absolute -top-1 -left-1 w-7 h-7 rounded-full bg-[#b8892a] flex items-center justify-center shadow">
-          <span className="text-white text-[11px] font-bold leading-none">{index}</span>
-        </div>
       </div>
       <p className="font-['Cormorant_Garamond'] text-[15px] font-medium text-[#4a4038] leading-snug mt-3 px-1">
         {guru.name}
@@ -109,7 +106,7 @@ export default function Lineage() {
               <div key={rowIdx} className="flex flex-col items-center w-full">
                 {/* Row of 2 gurus with arrow */}
                 <div className="flex items-center justify-center gap-4 w-full">
-                  <GuruCard guru={row[0]} index={rowIdx * 2 + 1} />
+                  <GuruCard guru={row[0]} />
 
                   {/* Horizontal arrow */}
                   <div className="flex items-center gap-1 shrink-0 pb-10">
@@ -119,7 +116,7 @@ export default function Lineage() {
                     </svg>
                   </div>
 
-                  <GuruCard guru={row[1]} index={rowIdx * 2 + 2} />
+                  <GuruCard guru={row[1]} />
                 </div>
 
                 {/* Vertical connector down to next row */}
@@ -143,9 +140,6 @@ export default function Lineage() {
                   alt={lastGuru.name}
                   className="w-full h-full object-cover object-top rounded-full"
                 />
-                <div className="absolute -top-1 -left-1 w-8 h-8 rounded-full bg-[#b8892a] flex items-center justify-center shadow">
-                  <span className="text-white text-xs font-bold leading-none">10</span>
-                </div>
               </div>
               <div className="mt-5">
                 <p className="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#3d3830] leading-snug max-w-xs mx-auto">
