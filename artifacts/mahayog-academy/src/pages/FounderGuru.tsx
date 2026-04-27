@@ -418,7 +418,7 @@ export default function FounderGuru() {
                   Meet Siddhababa
                 </h3>
                 <p className="text-sm text-[#5a5248] leading-relaxed max-w-lg mb-5">
-                  His Holiness holds audience, teachings, and darshan at the ashram and select global locations. View his schedule and find out how you can receive his guidance in person.
+                  His Holiness holds audience, teachings, and darshan at the ashram, select global locations and online. View his schedule or contact us to find out how you can receive his guidance.
                 </p>
                 <Link href="/meet" onClick={() => window.scrollTo(0, 0)}>
                   <span className="inline-flex items-center gap-2 px-7 py-3 bg-[#b8892a] text-white text-sm rounded-full hover:bg-[#9d7422] transition-colors cursor-pointer">
