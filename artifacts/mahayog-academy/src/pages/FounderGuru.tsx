@@ -34,7 +34,7 @@ const PILLARS = [
 const CENTERS = [
   { region: "Nepal", cities: ["Kathmandu", "Pokhara", "Surkhet", "Tikapur", "Chitwan", "Devghat", "Barahachettra Dham"] },
   { region: "India", cities: ["Jaipur", "Nashik"] },
-  { region: "Global", cities: ["North America", "Europe", "Australia"] },
+  { region: "Global", cities: ["India", "North America", "Europe", "Australia"] },
 ];
 
 const CREDENTIALS = [
