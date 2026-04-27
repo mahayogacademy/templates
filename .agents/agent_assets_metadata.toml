@@ -222,3 +222,9 @@ id = "INz7Gmo4HTZsdO3E2j4IO"
 uri = "file://artifacts/mahayog-academy/public/images/financial-support.png"
 type = "image"
 title = "devotional offering temple"
+
+[[generated]]
+id = "nTuJudRZdh2OhkcWMYBhE"
+uri = "file://artifacts/mahayog-academy/public/images/hanuman-ghost-bg.png"
+type = "image"
+title = "hanuman ghost background"

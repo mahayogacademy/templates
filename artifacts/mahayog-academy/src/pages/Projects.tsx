@@ -157,7 +157,18 @@ export default function Projects() {
           </div>
 
           {/* Ways to contribute — banner */}
-          <div className="mb-10 -mx-6 px-8 md:px-14 py-12 bg-[#2e2820]">
+          <div className="mb-10 -mx-6 px-8 md:px-14 py-12 bg-[#2e2820] relative overflow-hidden">
+            {/* Ghosted Hanuman background */}
+            <div
+              className="absolute right-0 top-0 h-full w-72 pointer-events-none select-none"
+              style={{ opacity: 0.13 }}
+            >
+              <img
+                src={`${b}images/hanuman-ghost-bg.png`}
+                alt=""
+                className="h-full w-full object-cover object-center"
+              />
+            </div>
 
             {/* Top row: label + heading + CTA */}
             <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10">
