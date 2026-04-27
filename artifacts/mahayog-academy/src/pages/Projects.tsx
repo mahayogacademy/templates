@@ -135,7 +135,7 @@ export default function Projects() {
               <a
                 key={item.anchor}
                 href={item.anchor}
-                className={`flex-1 text-center py-2.5 text-sm text-[#5a5248] hover:bg-[#fdf6ec] hover:text-[#b8892a] transition-colors tracking-wide ${i < arr.length - 1 ? "border-r border-[#e8dece]" : ""}`}
+                className={`flex-1 text-center py-2.5 text-sm text-[#5a5248] hover:bg-[#e8dece] hover:text-[#7a5c1e] transition-colors tracking-wide ${i < arr.length - 1 ? "border-r border-[#e8dece]" : ""}`}
               >
                 {item.label}
               </a>
