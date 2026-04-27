@@ -9,6 +9,7 @@ import MahayogMeditation from "@/pages/MahayogMeditation";
 import Ashram from "@/pages/Ashram";
 import Contact from "@/pages/Contact";
 import Projects from "@/pages/Projects";
+import FounderGuru from "@/pages/FounderGuru";
 
 const queryClient = new QueryClient();
 
@@ -21,6 +22,7 @@ function Router() {
       <Route path="/ashram" component={Ashram} />
       <Route path="/contact" component={Contact} />
       <Route path="/projects" component={Projects} />
+      <Route path="/founder-guru" component={FounderGuru} />
       <Route component={NotFound} />
     </Switch>
   );
