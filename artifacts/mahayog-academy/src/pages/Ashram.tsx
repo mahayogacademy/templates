@@ -24,6 +24,11 @@ const GALLERY_BOT = [
   { src: "ashram-extra-IMG_7998_1777303631687.jpg",          alt: "Wide ashram grounds with Himalayan hills in the distance",  caption: "Ashram Grounds" },
   { src: "ashram-extra-IMG_8099_1777303638539.jpg",          alt: "Garden walkway lined with topiary and mountain views",      caption: "Garden Path" },
   { src: "ashram-extra-IMG_8009_1777303646025.jpg",          alt: "Ashram temple and flag with green hills behind",            caption: "Temple Grounds" },
+  { src: "ashram-extra-calf-hay.jpg",                        alt: "Newborn sacred calf resting in hay at the ashram",          caption: "New Life" },
+  { src: "ashram-extra-cow-portrait.jpg",                    alt: "Sacred cow looking into the camera at the ashram",          caption: "Gau Seva" },
+  { src: "ashram-extra-cow-calf-bond.jpg",                   alt: "Mother cow nuzzling her calf in the ashram barn",           caption: "Divine Bond" },
+  { src: "ashram-extra-river-diyas.jpg",                     alt: "Lit diyas floating on the sacred river at dusk",            caption: "River Aarti" },
+  { src: "ashram-extra-procession.jpg",                      alt: "Devotees in procession carrying sacred vessels",            caption: "Sacred Procession" },
 ];
 
 const b = import.meta.env.BASE_URL;
