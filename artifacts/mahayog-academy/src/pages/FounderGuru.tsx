@@ -193,7 +193,7 @@ export default function FounderGuru() {
                     />
                   </button>
                   {openCredential === i && (
-                    <div className="px-6 pb-6 bg-[#fdf6ec]/50">
+                    <div className="px-6 pt-4 pb-6 bg-[#fdf6ec]/50">
                       <p className="text-sm text-[#7a7068] leading-relaxed mb-3 italic border-l-2 border-[#b8892a]/30 pl-4">{c.teaser}</p>
                       {c.body.split("\n\n").map((para, j) => (
                         <p key={j} className="text-sm text-[#5a5248] leading-relaxed mb-3 last:mb-0">{para}</p>
