@@ -140,29 +140,111 @@ export default function FounderGuru() {
               </div>
             </div>
 
-            <div className="h-px bg-[#e8dece] mb-8" />
+            <div className="h-px bg-[#e8dece] mb-12" />
 
-            <div className="grid md:grid-cols-2 gap-10 mb-10">
-              <div className="space-y-5">
-                <p className="text-base text-[#5a5248] leading-relaxed">
-                  Swami Ramakrishnacharya's life is a testament to yogic profundity. From a young age he achieved deep Samādhi — the highest state of yogic absorption. At the request of students and devotees, he has publicly demonstrated <span className="italic">Bhu Samadhi</span> (underground burial in meditation) on multiple occasions, astonishing onlookers by remaining in meditation beneath the earth for days.
-                </p>
-                <p className="text-base text-[#5a5248] leading-relaxed">
-                  These demonstrations have kindled widespread curiosity and faith in the power of authentic Vedic yoga, drawing seekers from across Nepal, India, and the world to his guidance.
-                </p>
+            {/* Editorial photo rows */}
+            <div className="space-y-16">
+
+              {/* Row 1 — Early Life */}
+              <div className="grid md:grid-cols-[340px_1fr] gap-10 items-center">
+                <div className="rounded-2xl overflow-hidden shadow-sm shadow-[#b8892a]/10">
+                  <img
+                    src={`${b}images/guru-early-life.jpg`}
+                    alt="Siddhababa in meditation in his early years"
+                    className="w-full object-cover"
+                    style={{ maxHeight: "420px", objectPosition: "top" }}
+                  />
+                </div>
+                <div>
+                  <p className="text-[10px] uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-3">Early Life</p>
+                  <h3 className="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#3d3830] mb-4 leading-snug">
+                    Spiritual Foundations from a Young Age
+                  </h3>
+                  <p className="text-base text-[#5a5248] leading-relaxed mb-4">
+                    From a young age, Swami Ramakrishnacharya demonstrated a remarkable depth of yogic absorption. While still a young man, he achieved deep Samādhi — the highest state of meditative union — a feat that took most seekers a lifetime of practice.
+                  </p>
+                  <p className="text-base text-[#5a5248] leading-relaxed">
+                    Drawn inward from early life, his path was not one of gradual accumulation but of direct realization. His bearing even then conveyed the stillness of a realized soul, long before the world came to know his name.
+                  </p>
+                </div>
               </div>
-              <div className="space-y-5">
-                <p className="text-base text-[#5a5248] leading-relaxed">
-                  In 2019, an assembly of spiritual leaders from all major Hindu monastic lineages — Vaishnava, Shaiva, Shakta, Smarta — honored him with the title <span className="italic">Jagadguru</span> ("world-teacher" or universal teacher), formally recognizing him as a successor of Ramanandacharya and a Guru capable of guiding the entire world.
-                </p>
-                <p className="text-base text-[#5a5248] leading-relaxed">
-                  Under the guidance of his own Guru (Param Pujya Sri Narayan Das Ji Maharaj of Nasik), he revived Surat-Shabd Yoga practice and formulated it as <span className="font-medium text-[#3d3830]">Himalayan Siddha Mahayog</span> — sacred knowledge, known only to few ascetics in Himalayan caves, now made accessible to sincere seekers worldwide.
-                </p>
+
+              {/* Row 2 — Pokhara Samadhi */}
+              <div className="grid md:grid-cols-[1fr_340px] gap-10 items-center">
+                <div>
+                  <p className="text-[10px] uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-3">Bhu Samadhi · Pokhara</p>
+                  <h3 className="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#3d3830] mb-4 leading-snug">
+                    Underground Burial in Meditation
+                  </h3>
+                  <p className="text-base text-[#5a5248] leading-relaxed mb-4">
+                    At the request of students and devotees, His Holiness has publicly demonstrated <span className="italic">Bhu Samadhi</span> — the yogic practice of remaining in deep meditation underground, sealed within an enclosed space for multiple days. This was performed in Pokhara, Nepal, witnessed by thousands.
+                  </p>
+                  <p className="text-base text-[#5a5248] leading-relaxed">
+                    These demonstrations astonished onlookers with their evidence of mastery over bodily processes — breathing, pulse, and consciousness — possible only through the most refined yogic attainment.
+                  </p>
+                </div>
+                <div className="rounded-2xl overflow-hidden shadow-sm shadow-[#b8892a]/10">
+                  <img
+                    src={`${b}images/guru-samadhi-pokhara.jpg`}
+                    alt="Siddhababa entering Bhu Samadhi in Pokhara"
+                    className="w-full object-cover"
+                    style={{ maxHeight: "380px", objectPosition: "center" }}
+                  />
+                </div>
               </div>
+
+              {/* Row 3 — Underground Bhu Samadhi */}
+              <div className="grid md:grid-cols-[340px_1fr] gap-10 items-center">
+                <div className="rounded-2xl overflow-hidden shadow-sm shadow-[#b8892a]/10">
+                  <img
+                    src={`${b}images/guru-bhu-samadhi.jpg`}
+                    alt="Siddhababa in Bhu Samadhi underground"
+                    className="w-full object-cover"
+                    style={{ maxHeight: "380px", objectPosition: "center" }}
+                  />
+                </div>
+                <div>
+                  <p className="text-[10px] uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-3">Bhu Samadhi · Underground</p>
+                  <h3 className="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#3d3830] mb-4 leading-snug">
+                    Days Beneath the Earth
+                  </h3>
+                  <p className="text-base text-[#5a5248] leading-relaxed mb-4">
+                    On further occasions, His Holiness entered a sealed underground chamber — a brick-lined pit covered and monitored — and remained in uninterrupted Samādhi for days. Witnesses recorded no signs of ordinary breath or movement throughout the duration.
+                  </p>
+                  <p className="text-base text-[#5a5248] leading-relaxed">
+                    These demonstrations have kindled widespread curiosity and deep faith in the living reality of Vedic yoga, drawing sincere seekers from across Nepal, India, and the wider world to his guidance.
+                  </p>
+                </div>
+              </div>
+
+              {/* Row 4 — Recognition and Blessing */}
+              <div className="grid md:grid-cols-[1fr_340px] gap-10 items-center">
+                <div>
+                  <p className="text-[10px] uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-3">Recognition · 2019</p>
+                  <h3 className="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#3d3830] mb-4 leading-snug">
+                    Honored as Jagadguru
+                  </h3>
+                  <p className="text-base text-[#5a5248] leading-relaxed mb-4">
+                    In 2019, an assembly of spiritual leaders from all major Hindu monastic lineages — Vaishnava, Shaiva, Shakta, and Smarta — honored him with the title <span className="italic">Jagadguru</span> ("world-teacher"), formally recognizing him as a successor of Ramanandacharya and a Guru capable of guiding the entire world.
+                  </p>
+                  <p className="text-base text-[#5a5248] leading-relaxed">
+                    Under his own Guru (Param Pujya Sri Narayan Das Ji Maharaj of Nasik), he revived Surat-Shabd Yoga and formulated it as <span className="font-medium text-[#3d3830]">Himalayan Siddha Mahayog</span> — sacred knowledge once known only to Himalayan ascetics, now made accessible to sincere seekers worldwide.
+                  </p>
+                </div>
+                <div className="rounded-2xl overflow-hidden shadow-sm shadow-[#b8892a]/10">
+                  <img
+                    src={`${b}images/guru-blessing.jpg`}
+                    alt="Siddhababa receiving recognition after Samadhi"
+                    className="w-full object-cover"
+                    style={{ maxHeight: "400px", objectPosition: "top" }}
+                  />
+                </div>
+              </div>
+
             </div>
 
             {/* Shaktipat highlight */}
-            <div className="bg-white border border-[#e8dece] rounded-2xl p-8 flex gap-7 items-start">
+            <div className="bg-white border border-[#e8dece] rounded-2xl p-8 flex gap-7 items-start mt-14">
               <div className="shrink-0 w-12 h-12 rounded-full bg-[#fdf6ec] border border-[#e8c56a]/40 flex items-center justify-center">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                   <path d="M12 2C12 2 15 9 22 12C22 12 15 15 12 22C12 22 9 15 2 12C2 12 9 9 12 2Z" stroke="#b8892a" strokeWidth="1.5" fill="none"/>
