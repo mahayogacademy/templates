@@ -119,7 +119,7 @@ export default function Projects() {
             <img
               src={`${b}images/hanuman-temple.png`}
               alt="A Hanuman temple in Nepal"
-              className="w-full object-cover object-center"
+              className="w-full object-cover object-top"
               style={{ height: "380px" }}
             />
           </div>
