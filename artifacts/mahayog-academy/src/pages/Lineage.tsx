@@ -79,9 +79,9 @@ export default function Lineage() {
         </div>
       </section>
 
-      {/* ── INTRO ── */}
-      <section className="py-16 px-6">
-        <div className="max-w-2xl mx-auto text-center">
+      {/* ── INTRO + PARAMPARA CHAIN (shared bg) ── */}
+      <section className="px-6 bg-[#f2ead8]">
+        <div className="max-w-2xl mx-auto text-center py-16">
           <p className="text-base text-[#5a5248] leading-relaxed mb-5">
             Himalayan Siddha Mahayog arises from a living lineage of Himalayan Siddha Yogis who refined a precise science of meditation and inner awakening through direct experience.
           </p>
@@ -89,13 +89,21 @@ export default function Lineage() {
             For thousands of years, this knowledge has been transmitted from realized teacher to prepared student, preserving wisdom with clarity, responsibility, and depth of practice. This lineage is currently entrusted to His Holiness Jagadguru Ramanandacharya Swami Ramakrishnacharya Ji Maharaj (Mahayogi Siddhababa), as the present Āchārya.
           </p>
         </div>
+
+        {/* Divider */}
+        <div className="max-w-3xl mx-auto flex items-center gap-4 pb-2">
+          <div className="flex-1 h-px bg-[#c9a55a]/40" />
+          <GoldDiamond />
+          <div className="flex-1 h-px bg-[#c9a55a]/40" />
+        </div>
+
       </section>
 
       {/* ── PARAMPARA CHAIN ── */}
       <section className="pb-24 px-6 bg-[#f2ead8]">
         <div className="max-w-3xl mx-auto">
 
-          <div className="text-center mb-10 pt-14">
+          <div className="text-center mb-10 pt-10">
             <p className="text-[10px] uppercase tracking-[0.35em] text-[#b8892a] font-semibold mb-2">The Disciplic Succession</p>
             <h2 className="font-['Cormorant_Garamond'] text-3xl font-light text-[#3d3830]">Guru Paramparā</h2>
             <div className="h-px w-12 bg-[#b8892a]/30 mx-auto mt-4" />
