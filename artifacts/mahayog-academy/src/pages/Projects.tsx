@@ -167,7 +167,7 @@ export default function Projects() {
                   Be Part of Building Something Sacred
                 </h3>
                 <p className="text-sm text-[#9a8f84] leading-relaxed max-w-lg">
-                  When you contribute to this mission, your gift outlives you. Each temple becomes a living center of prayer, learning, and community — a legacy rooted in dharma for generations to come.
+                  Your gift becomes a lasting legacy—each temple a living center of prayer, learning, and community, rooted in dharma for generations to come.
                 </p>
               </div>
               <div className="shrink-0">
