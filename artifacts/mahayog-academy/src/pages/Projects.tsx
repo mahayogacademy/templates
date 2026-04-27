@@ -117,9 +117,9 @@ export default function Projects() {
           {/* Temple image */}
           <div className="mb-14 rounded-2xl overflow-hidden">
             <img
-              src={`${b}images/hanuman-temple.png`}
+              src={`${b}images/hanuman-temple.jpg`}
               alt="A Hanuman temple in Nepal"
-              className="w-full object-cover"
+              className="w-full object-cover object-left-top"
               style={{ height: "380px" }}
             />
           </div>
