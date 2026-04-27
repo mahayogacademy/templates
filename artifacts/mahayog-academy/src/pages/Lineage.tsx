@@ -76,13 +76,13 @@ export default function Lineage() {
       </section>
 
       {/* ── PARAMPARA CHAIN ── */}
-      <section className="pb-32 px-6">
+      <section className="pb-32 px-6 bg-[#2e2820]">
         <div className="max-w-sm mx-auto">
 
-          <div className="text-center mb-16">
-            <p className="text-[10px] uppercase tracking-[0.35em] text-[#b8892a] font-semibold mb-2">The Disciplic Succession</p>
-            <h2 className="font-['Cormorant_Garamond'] text-3xl font-light text-[#3d3830]">Guru Paramparā</h2>
-            <div className="h-px w-12 bg-[#b8892a]/30 mx-auto mt-4" />
+          <div className="text-center mb-16 pt-16">
+            <p className="text-[10px] uppercase tracking-[0.35em] text-[#e8c56a] font-semibold mb-2">The Disciplic Succession</p>
+            <h2 className="font-['Cormorant_Garamond'] text-3xl font-light text-white">Guru Paramparā</h2>
+            <div className="h-px w-12 bg-[#e8c56a]/30 mx-auto mt-4" />
           </div>
 
           <div className="flex flex-col items-center">
@@ -118,8 +118,8 @@ export default function Lineage() {
                     <p
                       className={`font-['Cormorant_Garamond'] leading-snug ${
                         isLast
-                          ? "text-2xl font-semibold text-[#3d3830]"
-                          : "text-lg font-medium text-[#4a4038]"
+                          ? "text-2xl font-semibold text-white"
+                          : "text-lg font-medium text-[#e8dece]"
                       }`}
                     >
                       {guru.name}
@@ -128,7 +128,7 @@ export default function Lineage() {
                       <p className="text-[11px] text-[#b8892a] font-semibold uppercase tracking-[0.22em] mt-1.5">{guru.sub}</p>
                     )}
                     {isLast && (
-                      <p className="text-xs text-[#a89880] mt-1 italic">Present Āchārya</p>
+                      <p className="text-xs text-[#e8c56a]/70 mt-1 italic">Present Āchārya</p>
                     )}
                   </div>
 
@@ -146,13 +146,13 @@ export default function Lineage() {
           </div>
 
           {/* Closing quote */}
-          <div className="mt-20 text-center border-t border-[#e8dece] pt-10">
+          <div className="mt-20 text-center border-t border-white/10 pt-10">
             <div className="flex items-center justify-center gap-3 mb-5">
-              <div className="h-px w-8 bg-[#b8892a]/30" />
+              <div className="h-px w-8 bg-[#e8c56a]/30" />
               <GoldDiamond />
-              <div className="h-px w-8 bg-[#b8892a]/30" />
+              <div className="h-px w-8 bg-[#e8c56a]/30" />
             </div>
-            <p className="text-[#7a7068] font-['Cormorant_Garamond'] text-xl italic leading-relaxed max-w-xs mx-auto">
+            <p className="text-[#c8b89a] font-['Cormorant_Garamond'] text-xl italic leading-relaxed max-w-xs mx-auto">
               "The Guru is not a person. The Guru is the grace that flows through an unbroken chain of awakening."
             </p>
           </div>
