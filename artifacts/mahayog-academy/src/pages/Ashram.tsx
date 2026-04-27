@@ -262,8 +262,8 @@ export default function Ashram() {
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-14 items-center">
           <div>
             <img
-              src={`${b}images/ashram-gurudev-seated.jpg`}
-              alt="Jagadguru Mahayogi Siddhababa seated on the Guru peetham"
+              src={`${b}images/ashram-satsang.png`}
+              alt="Evening satsang"
               className="w-full rounded-2xl object-cover shadow-md"
               style={{ height: "400px" }}
             />
