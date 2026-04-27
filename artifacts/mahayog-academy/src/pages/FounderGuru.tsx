@@ -567,14 +567,14 @@ export default function FounderGuru() {
                   desc: "Conducted with the participation of Dhirendra Shastri Ji Maharaj (Bageshwar Dham Sarkar) as Guest of Honour.",
                 },
                 {
-                  year: "2017–Present",
-                  name: "Continuous Shree Ramarchan Mahāyajña",
-                  desc: "Performed an unprecedented 74 times within four months during the observance of 2024 Chaturmās.",
-                },
-                {
                   year: "2025",
                   name: "Ramchandi Mahāyajña",
                   desc: "Invoking Maa Chandi and Lord Ram for protection, inner transformation, and the welfare of all.",
+                },
+                {
+                  year: "2017–Present",
+                  name: "Continuous Shree Ramarchan Mahāyajña",
+                  desc: "Performed an unprecedented 74 times within four months during the observance of 2024 Chaturmās.",
                 },
               ].map((yajna, i) => (
                 <div key={i} className="flex gap-6 items-start p-6 bg-white border border-[#e8dece] rounded-2xl">
