@@ -553,8 +553,8 @@ export default function FounderGuru() {
                 { label: "Green Revolution for Nepal's agricultural empowerment and independence", note: "Ecology", img: "initiative-green-revolution.png", href: null },
                 { label: "Jagadguru Shriramanandacharya Gurukul (Grades 6–12)", note: "Education", img: "initiative-gurukul.png", href: "/gurukul" },
                 { label: "Nepal's first Ayurveda University", note: "Education", img: "initiative-ayurveda.png", href: null },
-                { label: "108 Hanuman Temples across Nepal", note: "Sacred Infrastructure", img: "initiative-hanuman-temples.jpg", pos: "center center", href: "/hanuman-temples" },
-                { label: "A historic Ram Temple in Nepal", note: "Sacred Infrastructure", img: "ram-mandir-1.jpg", pos: "center center", href: "/ram-temple" },
+                { label: "108 Hanuman Temples across Nepal", note: "Sacred Infrastructure", img: "initiative-hanuman-temples.jpg", pos: "center center", href: "/projects#project-01" },
+                { label: "A historic Ram Temple in Nepal", note: "Sacred Infrastructure", img: "ram-mandir-1.jpg", pos: "center center", href: "/projects#project-02" },
               ].map((item, i) => {
                 const inner = (
                   <>
@@ -579,7 +579,7 @@ export default function FounderGuru() {
                   </>
                 );
                 return item.href ? (
-                  <Link key={i} href={item.href} onClick={() => window.scrollTo(0, 0)}>
+                  <Link key={i} href={item.href} onClick={() => { if (!item.href?.includes('#')) window.scrollTo(0, 0); }}>
                     <div className="flex flex-col bg-[#faf9f6] border border-[#e8dece] rounded-xl overflow-hidden group cursor-pointer hover:border-[#b8892a]/50 hover:shadow-md transition-all duration-300">
                       {inner}
                     </div>
