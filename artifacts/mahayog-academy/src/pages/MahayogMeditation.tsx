@@ -300,7 +300,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
 }
 
 const NAV_SECTIONS = [
-  { id: "what-is",      label: "What is Meditation", short: "Basics"         },
+  { id: "what-is",      label: "What is Meditation", short: "Foundations"         },
   { id: "mahayog",      label: "Himalayan Mahayog",  short: "Mahayog"        },
   { id: "how-it-works", label: "How It Works",       short: "How It Works"   },
   { id: "benefits",     label: "Benefits",           short: "Benefits"       },
