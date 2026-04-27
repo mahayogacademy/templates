@@ -18,7 +18,7 @@ const GALLERY_BOT = [
   { src: "ashram-extra-IMG_7604_1777303599506.jpg",          alt: "Devotees gathered for satsang at the center",              caption: "Community Satsang" },
   { src: "ashram-extra-calf-hay.jpg",                        alt: "Newborn sacred calf resting in hay at the ashram",         caption: "New Life" },
   { src: "ashram-extra-IMG_7797_1777303606369.jpg",          alt: "The ornate temple altar adorned with flowers and deities", caption: "The Sacred Altar" },
-  { src: "ashram-extra-panchamukhi.jpg",                     alt: "Panchamukhi Hanuman deity adorned with garlands",          caption: "Panchamukhi Hanuman", objectPosition: "center 40%" },
+  { src: "ashram-extra-panchamukhi.jpg",                     alt: "Panchamukhi Hanuman deity adorned with garlands",          caption: "Panchamukhi Hanuman", objectPosition: "center 65%" },
   { src: "ashram-extra-IMG_7688_1777303609347.jpg",          alt: "Devotees preparing prasad in the ashram kitchen",          caption: "Prasad Preparation" },
   { src: "ashram-extra-IMG_0034_1777303590698.jpg",          alt: "Devotee harvesting herbs in the ashram garden",            caption: "Herb Garden Harvest" },
   { src: "ashram-extra-cow-portrait.jpg",                    alt: "Sacred cow looking into the camera at the ashram",         caption: "Gau Seva" },
