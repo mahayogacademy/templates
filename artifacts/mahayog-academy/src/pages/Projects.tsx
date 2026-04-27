@@ -237,16 +237,26 @@ export default function Projects() {
           </div>
 
           {/* Quote */}
-          <div className="relative py-14 px-8 md:px-16 text-center overflow-hidden">
-            <div className="absolute top-4 left-6 font-['Cormorant_Garamond'] text-8xl leading-none text-[#d4a843]/15 select-none">"</div>
-            <div className="absolute bottom-0 right-6 font-['Cormorant_Garamond'] text-8xl leading-none text-[#d4a843]/15 select-none">"</div>
-            <p className="relative font-['Cormorant_Garamond'] text-2xl md:text-3xl font-light italic text-[#3d3830] leading-relaxed max-w-2xl mx-auto mb-5">
-              The body is temporary; it will pass. Let us leave behind something of lasting value that teaches sanskar and sanskriti to future generations.
-            </p>
-            <div className="h-px w-10 bg-[#b8892a]/50 mx-auto mb-4" />
-            <cite className="text-xs uppercase tracking-[0.25em] text-[#b8892a] font-semibold not-italic">
-              Jagadguru Mahayogi Siddhababa
-            </cite>
+          <div className="relative -mx-6 overflow-hidden" style={{ minHeight: "320px" }}>
+            {/* Background image */}
+            <img
+              src={`${b}images/quote-banner-bg.png`}
+              alt=""
+              className="absolute inset-0 w-full h-full object-cover object-center"
+            />
+            {/* Dark gradient overlay */}
+            <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/50 to-black/65" />
+            {/* Content */}
+            <div className="relative flex flex-col items-center justify-center text-center px-8 md:px-20 py-16">
+              <span className="font-['Cormorant_Garamond'] text-6xl font-light text-[#d4a843]/60 leading-none mb-2 select-none">"</span>
+              <p className="font-['Cormorant_Garamond'] text-2xl md:text-3xl font-light italic text-white leading-relaxed max-w-2xl mb-6">
+                The body is temporary; it will pass. Let us leave behind something of lasting value that teaches sanskar and sanskriti to future generations.
+              </p>
+              <div className="h-px w-10 bg-[#d4a843]/60 mb-4" />
+              <cite className="text-xs uppercase tracking-[0.25em] text-[#d4a843] font-semibold not-italic">
+                Jagadguru Mahayogi Siddhababa
+              </cite>
+            </div>
           </div>
 
         </div>
