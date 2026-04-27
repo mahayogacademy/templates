@@ -548,7 +548,7 @@ export default function Ashram() {
             <div className="flex flex-wrap gap-2">
               {[
                 { name: "Gau Seva",         sub: "Care of Sacred Cows" },
-                { name: "Hanuman Aarti",    sub: "Temple Worship" },
+                { name: "Hanuman Pūjā",     sub: "Temple Worship" },
                 { name: "Akhanda Kīrtan",   sub: "Continuous Chanting" },
                 { name: "Brahmand Bhojan",  sub: "Prasad Distribution" },
               ].map((s) => (
