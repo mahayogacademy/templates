@@ -553,8 +553,8 @@ export default function FounderGuru() {
                 { label: "Green Revolution for Nepal's agricultural empowerment and independence", note: "Ecology", img: "initiative-green-revolution.png" },
                 { label: "Jagadguru Shriramanandacharya Gurukul (Grades 6–12)", note: "Education", img: "initiative-gurukul.png" },
                 { label: "Nepal's first Ayurveda University", note: "Education", img: "initiative-ayurveda.png" },
-                { label: "108 Hanuman Temples across Nepal", note: "Sacred Infrastructure", img: "ashram-hanuman-wide.jpg" },
-                { label: "A historic Ram Temple in Nepal", note: "Sacred Infrastructure", img: "ram-mandir-1.jpg" },
+                { label: "108 Hanuman Temples across Nepal", note: "Sacred Infrastructure", img: "ashram-hanuman-wide.jpg", pos: "center bottom" },
+                { label: "A historic Ram Temple in Nepal", note: "Sacred Infrastructure", img: "ram-mandir-1.jpg", pos: "center center" },
               ].map((item, i) => (
                 <div key={i} className="flex flex-col bg-[#faf9f6] border border-[#e8dece] rounded-xl overflow-hidden">
                   <div className="h-36 overflow-hidden shrink-0">
@@ -563,6 +563,7 @@ export default function FounderGuru() {
                       alt=""
                       aria-hidden
                       className="w-full h-full object-cover"
+                      style={{ objectPosition: item.pos ?? "center center" }}
                     />
                   </div>
                   <div className="p-5">
