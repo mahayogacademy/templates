@@ -279,14 +279,16 @@ export default function Projects() {
             </div>
 
             {/* Yugas */}
-            <div className="mt-5 p-5 bg-[#fdf6ec] border border-[#e8dece] rounded-xl">
-              <p className="text-xs text-[#9a8f84] mb-3 uppercase tracking-[0.2em] font-medium">The Four Yugas — Cycle of Time</p>
-              <div className="flex flex-wrap gap-3">
+            <div className="mt-5">
+              <p className="text-xs text-[#9a8f84] mb-4 uppercase tracking-[0.2em] font-medium">The Four Yugas — Cycle of Time</p>
+              <div className="grid grid-cols-4 divide-x divide-[#e8dece] border border-[#e8dece] rounded-xl overflow-hidden">
                 {YUGAS.map((y, i) => (
-                  <span key={i} className="font-['Cormorant_Garamond'] text-base font-semibold text-[#5a5248] flex items-center gap-2">
-                    {y}
-                    {i < YUGAS.length - 1 && <span className="text-[#d4a843]/60 font-light">·</span>}
-                  </span>
+                  <div key={i} className="flex flex-col items-center py-5 px-3 bg-[#fdf6ec]">
+                    <span className="font-['Cormorant_Garamond'] text-3xl font-light text-[#b8892a]/40 leading-none mb-2">
+                      {["I","II","III","IV"][i]}
+                    </span>
+                    <p className="font-['Cormorant_Garamond'] text-sm font-semibold text-[#5a5248] text-center leading-snug">{y}</p>
+                  </div>
                 ))}
               </div>
             </div>
@@ -294,12 +296,12 @@ export default function Projects() {
 
           {/* Architectural highlights */}
           <div className="mb-16">
-            <p className="text-[10px] uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-6">Architectural Highlights</p>
-            <div className="grid md:grid-cols-2 gap-5">
+            <p className="text-[10px] uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-2">Architectural Highlights</p>
+            <div className="h-px bg-[#e8dece] mb-0" />
+            <div>
               {ARCH_HIGHLIGHTS.map((a, i) => (
-                <div key={i} className="bg-white border border-[#e8dece] rounded-2xl p-6 hover:shadow-sm transition-shadow duration-200">
-                  <div className="w-8 h-px bg-[#b8892a] mb-4" />
-                  <h4 className="font-['Cormorant_Garamond'] text-xl font-semibold text-[#3d3830] mb-2 leading-snug">{a.title}</h4>
+                <div key={i} className="grid md:grid-cols-[1fr_2fr] gap-6 py-6 border-b border-[#e8dece] items-start">
+                  <h4 className="font-['Cormorant_Garamond'] text-xl font-semibold text-[#3d3830] leading-snug">{a.title}</h4>
                   <p className="text-sm text-[#7a7068] leading-relaxed">{a.desc}</p>
                 </div>
               ))}
