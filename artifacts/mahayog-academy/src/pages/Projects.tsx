@@ -131,12 +131,11 @@ export default function Projects() {
             </div>
 
             {/* Right: portrait image */}
-            <div className="rounded-2xl overflow-hidden shadow-md shadow-[#b8892a]/10 hidden md:block sticky top-20">
+            <div className="rounded-2xl overflow-hidden shadow-md shadow-[#b8892a]/10 hidden md:block sticky top-20 aspect-square">
               <img
                 src={`${b}images/hanuman-temple-portrait.png`}
                 alt="Lord Hanuman statue at a Nepali temple"
-                className="w-full object-cover object-top"
-                style={{ minHeight: "520px" }}
+                className="w-full h-full object-cover object-top"
               />
             </div>
           </div>
@@ -255,12 +254,11 @@ export default function Projects() {
             </div>
 
             {/* Right: feature image */}
-            <div className="rounded-2xl overflow-hidden shadow-md shadow-[#b8892a]/10 hidden md:block sticky top-20">
+            <div className="rounded-2xl overflow-hidden shadow-md shadow-[#b8892a]/10 hidden md:block sticky top-20 aspect-square">
               <img
                 src={`${b}images/ram-mandir-3.jpg`}
                 alt="Ram Mandir architectural rendering with Hanuman statue"
-                className="w-full object-cover object-top"
-                style={{ minHeight: "520px" }}
+                className="w-full h-full object-cover object-top"
               />
             </div>
           </div>
