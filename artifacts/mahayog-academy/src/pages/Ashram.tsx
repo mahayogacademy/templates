@@ -455,31 +455,31 @@ export default function Ashram() {
       <section className="relative py-20 px-6 overflow-hidden">
         <div className="absolute inset-0">
           <img src={`${b}images/akhanda-kirtan-bg.png`} alt="" aria-hidden className="w-full h-full object-cover object-center" />
-          <div className="absolute inset-0 bg-[#1a0a02]/70" />
+          <div className="absolute inset-0 bg-[#fdf6ec]/82" />
         </div>
         <div className="relative z-10 max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <p className="text-[10px] uppercase tracking-[0.3em] text-[#e8c56a] font-semibold mb-3">Continuous since 2010</p>
-            <h2 className="font-['Cormorant_Garamond'] text-4xl font-light text-[#fdf6ec] leading-snug mb-6">
+            <p className="text-[10px] uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-3">Continuous since 2010</p>
+            <h2 className="font-['Cormorant_Garamond'] text-4xl font-light text-[#2e2820] leading-snug mb-6">
               Akhanda Kīrtan
             </h2>
             <div className="h-px w-10 bg-[#b8892a]/50 mb-6" />
-            <p className="text-base text-[#c8bfb0] leading-relaxed mb-4">
+            <p className="text-base text-[#4a4038] leading-relaxed mb-4">
               The Hanuman Temple at the ashram holds an unbroken stream of devotional chanting — the Ram mantra has been recited continuously, 24 hours a day, without interruption since 2010.
             </p>
-            <p className="text-base text-[#c8bfb0] leading-relaxed">
-              <span className="italic font-['Cormorant_Garamond'] text-[#e8dece]">Akhanda</span> means "unbroken" — this living practice embodies the ideal of constant remembrance, filling the ashram with an ever-present current of sacred sound that supports all who enter.
+            <p className="text-base text-[#4a4038] leading-relaxed">
+              <span className="italic font-['Cormorant_Garamond'] text-[#2e2820]">Akhanda</span> means "unbroken" — this living practice embodies the ideal of constant remembrance, filling the ashram with an ever-present current of sacred sound that supports all who enter.
             </p>
           </div>
           <div className="flex flex-col items-center text-center">
-            <div className="w-36 h-36 rounded-full border border-[#b8892a]/40 flex items-center justify-center mb-6 bg-[#1a0a02]/60 backdrop-blur-sm">
+            <div className="w-36 h-36 rounded-full border border-[#b8892a]/50 flex items-center justify-center mb-6 bg-white/60 backdrop-blur-sm">
               <div className="text-center">
-                <p className="font-['Cormorant_Garamond'] text-5xl font-light text-[#e8c56a] leading-none">24</p>
-                <p className="text-[10px] uppercase tracking-[0.3em] text-[#9a8f84] mt-1">hrs / day</p>
+                <p className="font-['Cormorant_Garamond'] text-5xl font-light text-[#b8892a] leading-none">24</p>
+                <p className="text-[10px] uppercase tracking-[0.3em] text-[#6a6058] mt-1">hrs / day</p>
               </div>
             </div>
-            <p className="font-['Cormorant_Garamond'] text-2xl italic text-[#e8dece] mb-2">Rām Nām</p>
-            <p className="text-xs uppercase tracking-[0.3em] text-[#9a8f84]">Unbroken · Continuous · Since 2010</p>
+            <p className="font-['Cormorant_Garamond'] text-2xl italic text-[#2e2820] mb-2">Rām Nām</p>
+            <p className="text-xs uppercase tracking-[0.3em] text-[#6a6058]">Unbroken · Continuous · Since 2010</p>
           </div>
         </div>
       </section>
