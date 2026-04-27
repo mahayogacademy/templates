@@ -139,10 +139,62 @@ export default function Projects() {
             </div>
           </div>
 
+          {/* Ways to contribute */}
+          <div className="rounded-2xl overflow-hidden mb-10">
+            {/* Header bar */}
+            <div className="bg-[#1a0f05] px-10 py-8 text-center">
+              <p className="text-[10px] uppercase tracking-[0.35em] text-[#e8c56a] font-semibold mb-2">Support This Mission</p>
+              <h3 className="font-['Cormorant_Garamond'] text-3xl md:text-4xl font-light text-white leading-tight">
+                Be Part of Building Something Sacred
+              </h3>
+              <p className="text-sm text-[#c8b89a] mt-3 max-w-lg mx-auto leading-relaxed">
+                Every temple built is a lasting gift to future generations. Your contribution — of land, resources, or finances — directly plants a seed of dharma across Nepal.
+              </p>
+            </div>
+
+            {/* Two options */}
+            <div className="grid md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-[#e8c56a]/20 bg-[#2a1a08]">
+              <div className="px-10 py-8">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-8 h-8 rounded-full border border-[#e8c56a]/40 flex items-center justify-center shrink-0">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+                      <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" stroke="#e8c56a" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M9 22V12h6v10" stroke="#e8c56a" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </div>
+                  <h4 className="font-['Cormorant_Garamond'] text-xl font-semibold text-[#f0e4c8]">Land Contribution</h4>
+                </div>
+                <p className="text-sm text-[#c8b89a] leading-relaxed">Donate private land, facilitate allocation of government land, or help identify and restore neglected or historic temple sites across Nepal.</p>
+              </div>
+              <div className="px-10 py-8">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-8 h-8 rounded-full border border-[#e8c56a]/40 flex items-center justify-center shrink-0">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+                      <path d="M12 2C12 2 15 9 22 12C22 12 15 15 12 22C12 22 9 15 2 12C2 12 9 9 12 2Z" stroke="#e8c56a" strokeWidth="1.5" fill="none"/>
+                    </svg>
+                  </div>
+                  <h4 className="font-['Cormorant_Garamond'] text-xl font-semibold text-[#f0e4c8]">Financial Support</h4>
+                </div>
+                <p className="text-sm text-[#c8b89a] leading-relaxed">Monetary or in-kind donations toward construction, educational programming, daily sadhana activities, and ongoing temple maintenance.</p>
+              </div>
+            </div>
+
+            {/* CTA */}
+            <div className="bg-[#b8892a] px-10 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+              <p className="text-sm text-white/90 font-medium">Ready to contribute to this sacred initiative?</p>
+              <Link href="/contact">
+                <span className="inline-flex items-center gap-2 bg-white text-[#8a6520] text-sm font-semibold px-7 py-3 rounded-full hover:bg-[#fdf6ec] transition-colors duration-200 cursor-pointer tracking-wide whitespace-nowrap">
+                  Get in Touch
+                  <ArrowRight className="w-4 h-4" strokeWidth={2} />
+                </span>
+              </Link>
+            </div>
+          </div>
+
           {/* Quote */}
-          <div className="relative mb-14 py-14 px-8 md:px-16 bg-[#f5ede0] rounded-2xl text-center overflow-hidden">
-            <div className="absolute top-5 left-8 font-['Cormorant_Garamond'] text-8xl leading-none text-[#d4a843]/20 select-none">"</div>
-            <div className="absolute bottom-0 right-8 font-['Cormorant_Garamond'] text-8xl leading-none text-[#d4a843]/20 select-none">"</div>
+          <div className="relative py-14 px-8 md:px-16 text-center overflow-hidden">
+            <div className="absolute top-4 left-6 font-['Cormorant_Garamond'] text-8xl leading-none text-[#d4a843]/15 select-none">"</div>
+            <div className="absolute bottom-0 right-6 font-['Cormorant_Garamond'] text-8xl leading-none text-[#d4a843]/15 select-none">"</div>
             <p className="relative font-['Cormorant_Garamond'] text-2xl md:text-3xl font-light italic text-[#3d3830] leading-relaxed max-w-2xl mx-auto mb-5">
               The body is temporary; it will pass. Let us leave behind something of lasting value that teaches sanskar and sanskriti to future generations.
             </p>
@@ -150,29 +202,6 @@ export default function Projects() {
             <cite className="text-xs uppercase tracking-[0.25em] text-[#b8892a] font-semibold not-italic">
               Jagadguru Mahayogi Siddhababa
             </cite>
-          </div>
-
-          {/* Ways to contribute */}
-          <div className="mb-2">
-            <p className="text-[10px] uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-8">Ways to Contribute</p>
-            <div className="grid md:grid-cols-2 gap-0 divide-y md:divide-y-0 md:divide-x divide-[#e8dece]">
-              <div className="md:pr-10 pb-8 md:pb-0">
-                <h4 className="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#3d3830] mb-3">Land Contribution</h4>
-                <p className="text-sm text-[#7a7068] leading-relaxed">Donate private land, facilitate allocation of government land, or help identify and restore neglected or historic temple sites across Nepal.</p>
-              </div>
-              <div className="md:pl-10 pt-8 md:pt-0">
-                <h4 className="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#3d3830] mb-3">Financial Support</h4>
-                <p className="text-sm text-[#7a7068] leading-relaxed">Monetary or in-kind donations are welcomed toward construction, educational programming, daily sadhana activities, and ongoing temple maintenance.</p>
-              </div>
-            </div>
-            <div className="mt-10 text-center">
-              <Link href="/contact">
-                <span className="inline-flex items-center gap-2 bg-[#b8892a] hover:bg-[#9d7422] text-white text-sm px-8 py-3.5 rounded-full tracking-wider transition-colors duration-200 cursor-pointer">
-                  Get in Touch to Contribute
-                  <ArrowRight className="w-4 h-4" strokeWidth={1.5} />
-                </span>
-              </Link>
-            </div>
           </div>
 
         </div>
