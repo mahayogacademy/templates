@@ -1,16 +1,16 @@
 import { useState } from "react";
 import Nav from "@/components/Nav";
 import { Link } from "wouter";
-import { ArrowRight, ChevronLeft, ChevronRight, ChevronDown } from "lucide-react";
+import { ArrowRight, ChevronLeft, ChevronRight, ChevronDown, Flame, Heart, Shield, Sparkles, Users } from "lucide-react";
 
 const b = import.meta.env.BASE_URL;
 
 const TEACHINGS = [
-  "Inner development through Mahayog Meditation, self-inquiry and introspection",
-  "Befriending the mind and refining character",
-  "Ethical living grounded in awareness and responsibility",
-  "Devotion and discernment",
-  "Seva (selfless service) as a natural expression of inner realization",
+  { icon: Flame,    text: "Inner development through Mahayog Meditation, self-inquiry and introspection" },
+  { icon: Heart,    text: "Befriending the mind and refining character" },
+  { icon: Shield,   text: "Ethical living grounded in awareness and responsibility" },
+  { icon: Sparkles, text: "Devotion and discernment" },
+  { icon: Users,    text: "Seva (selfless service) as a natural expression of inner realization" },
 ];
 
 const PILLARS = [
@@ -444,12 +444,12 @@ export default function FounderGuru() {
             <div className="mb-8">
               <p className="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#3d3830] mb-6">Key Teachings</p>
               <div className="grid sm:grid-cols-2 gap-x-12 gap-y-0">
-                {TEACHINGS.map((t, i) => (
+                {TEACHINGS.map(({ icon: Icon, text }, i) => (
                   <div key={i} className="flex items-start gap-4 py-3 border-b border-[#e8dece]">
-                    <svg className="shrink-0 mt-[3px]" width="10" height="10" viewBox="0 0 24 24" fill="none">
-                      <path d="M12 2C12 2 15 9 22 12C22 12 15 15 12 22C12 22 9 15 2 12C2 12 9 9 12 2Z" fill="#b8892a" fillOpacity="0.5"/>
-                    </svg>
-                    <span className="text-base text-[#5a5248] leading-relaxed">{t}</span>
+                    <span className="shrink-0 mt-[2px] w-8 h-8 flex items-center justify-center rounded-full bg-[#fdf6ec]">
+                      <Icon className="w-4 h-4 text-[#b8892a]" strokeWidth={1.5} />
+                    </span>
+                    <span className="text-base text-[#5a5248] leading-relaxed">{text}</span>
                   </div>
                 ))}
               </div>
