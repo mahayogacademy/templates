@@ -531,6 +531,34 @@ export default function Ashram() {
         </div>
       </section>
 
+      {/* ── ASHRAM SEVA CTA ── */}
+      <section className="py-16 px-6 bg-[#f5ece0] border-t border-b border-[#e2d0b8]">
+        <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
+          <div className="md:max-w-xl">
+            <div className="flex items-center gap-3 mb-3">
+              <div className="h-px w-8 bg-[#b8892a]/60" />
+              <span className="text-[10px] uppercase tracking-[0.3em] text-[#b8892a] font-semibold">Offer Your Support</span>
+            </div>
+            <h2 className="font-['Cormorant_Garamond'] text-3xl md:text-4xl font-light text-[#2e2820] leading-snug mb-3">
+              Participate in Ashram Seva
+            </h2>
+            <p className="text-sm text-[#5a5248] leading-relaxed">
+              The ashram is sustained entirely through the generosity and devotion of sincere seekers. By contributing to Ashram Seva, you become part of this sacred mission — supporting the ongoing work of spiritual education, prasad distribution, gau seva, and the care of this living spiritual home.
+            </p>
+          </div>
+          <div className="shrink-0">
+            <Link href="/donate">
+              <button className="inline-flex items-center gap-2.5 bg-[#b8892a] hover:bg-[#9d7422] text-white text-sm px-8 py-4 rounded-full tracking-wider transition-colors duration-200 shadow-md shadow-[#b8892a]/20">
+                Offer Seva
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* ── PLAN A VISIT CTA ── */}
       <section id="visit" className="relative py-24 px-6 overflow-hidden">
         <div className="absolute inset-0">
