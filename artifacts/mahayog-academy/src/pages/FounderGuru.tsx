@@ -526,8 +526,18 @@ export default function FounderGuru() {
       </section>
 
       {/* ── YAJNAS SECTION ── */}
-      <section className="py-24 px-6">
-        <div className="max-w-5xl mx-auto">
+      <section className="relative py-24 px-6 overflow-hidden">
+        {/* Background photo */}
+        <div className="absolute inset-0">
+          <img
+            src={`${b}images/ram-mandir-1.jpg`}
+            alt=""
+            aria-hidden
+            className="w-full h-full object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-[#faf9f6]/88" />
+        </div>
+        <div className="relative max-w-5xl mx-auto">
           <div id="yajnas" className="scroll-mt-24">
 
             <div className="flex items-start gap-6 mb-10">
