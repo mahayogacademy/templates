@@ -157,29 +157,26 @@ export default function Projects() {
           </div>
 
           {/* Ways to contribute — banner */}
-          <div className="mb-10 -mx-6 px-8 md:px-14 py-12 bg-[#2e2820] relative overflow-hidden">
-            {/* Ghosted Hanuman background */}
-            <div
-              className="absolute right-0 top-0 h-full w-72 pointer-events-none select-none"
-              style={{ opacity: 0.13 }}
-            >
-              <img
-                src={`${b}images/hanuman-ghost-bg.png`}
-                alt=""
-                className="h-full w-full object-cover object-center"
-              />
-            </div>
+          <div className="mb-10 -mx-6 px-8 md:px-14 py-12 bg-[#2e2820]">
 
-            {/* Top row: label + heading + CTA */}
-            <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10">
-              <div>
+            {/* Top row: label + heading + icon + CTA */}
+            <div className="flex flex-col md:flex-row md:items-center gap-8 mb-10">
+              <div className="flex-1">
                 <p className="text-[10px] uppercase tracking-[0.3em] text-[#d4a843] font-semibold mb-3">Support This Mission</p>
-                <h3 className="font-['Cormorant_Garamond'] text-3xl md:text-4xl font-light text-[#faf9f6] leading-snug max-w-xl mb-3">
+                <h3 className="font-['Cormorant_Garamond'] text-3xl md:text-4xl font-light text-[#faf9f6] leading-snug mb-3">
                   Be Part of Building Something Sacred
                 </h3>
                 <p className="text-sm text-[#9a8f84] leading-relaxed max-w-lg">
                   Your gift becomes a lasting legacy—each temple a living center of prayer, learning, and community, rooted in dharma for generations to come.
                 </p>
+              </div>
+              {/* Hanuman icon — sits between heading and button */}
+              <div className="shrink-0 hidden md:block">
+                <img
+                  src={`${b}images/hanuman-icon.png`}
+                  alt="Lord Hanuman"
+                  className="w-24 h-24 object-contain"
+                />
               </div>
               <div className="shrink-0">
                 <Link href="/contact">
