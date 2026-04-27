@@ -81,6 +81,11 @@ const SAMADHI_SLIDES = [
   { src: "bhu-samadhi-6.jpg",         alt: "Swamiji performing Omkara path and blessings after samadhi — Chatara 2008", caption: "Blessings After Samadhi · Chatara, 2008" },
   { src: "bhu-samadhi-7.jpg",         alt: "Swamiji receiving felicitation after completing the samadhi — Chatara 2008", caption: "Felicitation · Chatara, 2008" },
   { src: "bhu-samadhi-8.jpg",         alt: "Thousands of people gathered to witness the Bhu Samadhi — Chatara 2008",    caption: "Thousands Gathered · Chatara, 2008" },
+  { src: "pokhara-samadhi-2.jpg",     alt: "Swamiji in prayer and pranams before entering the Samadhi — Pokhara 2017",  caption: "Pre-Samadhi Prayer · Pokhara, 2017" },
+  { src: "pokhara-samadhi-1.jpg",     alt: "Swamiji lying at rest inside the samadhi chamber — Pokhara 2017",           caption: "Entering the Samadhi · Pokhara, 2017" },
+  { src: "pokhara-samadhi-3.jpg",     alt: "Medical doctors monitoring vital signs during Bhu Samadhi — Pokhara 2017",  caption: "Medical Monitoring · Pokhara, 2017" },
+  { src: "pokhara-samadhi-4.jpg",     alt: "Swamiji emerging from the samadhi, observed by witnesses and media — Pokhara 2017", caption: "Emergence · Pokhara, 2017" },
+  { src: "pokhara-samadhi-5.jpg",     alt: "Swamiji after completing Bhu Samadhi — Pokhara 2017",                       caption: "After the Samadhi · Pokhara, 2017" },
 ];
 
 export default function FounderGuru() {
