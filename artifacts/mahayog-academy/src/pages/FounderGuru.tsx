@@ -71,8 +71,16 @@ const CREDENTIALS = [
 ];
 
 const SAMADHI_SLIDES = [
-  { src: "guru-samadhi-pokhara.jpg", alt: "Siddhababa in Bhu Samadhi — Pokhara", caption: "Bhu Samadhi · Pokhara" },
-  { src: "guru-bhu-samadhi.jpg",    alt: "Siddhababa in underground Bhu Samadhi", caption: "Bhu Samadhi · Underground" },
+  { src: "guru-samadhi-pokhara.jpg",  alt: "Siddhababa in Bhu Samadhi — Pokhara",                               caption: "Bhu Samadhi · Pokhara" },
+  { src: "guru-bhu-samadhi.jpg",      alt: "Siddhababa in underground Bhu Samadhi",                             caption: "Bhu Samadhi · Underground" },
+  { src: "bhu-samadhi-1.jpg",         alt: "Swamiji lying in the samadhi pit before sealing — Chatara 2008",   caption: "Entering the Samadhi · Chatara, 2008" },
+  { src: "bhu-samadhi-2.jpg",         alt: "Devotees sealing the samadhi with a wooden board — Chatara 2008",  caption: "Sealing the Samadhi · Chatara, 2008" },
+  { src: "bhu-samadhi-4.jpg",         alt: "21 kg of barley sown over the samadhi mound — Chatara 2008",       caption: "Barley Sown Above the Samadhi · Chatara, 2008" },
+  { src: "bhu-samadhi-3.jpg",         alt: "Devotees cutting the barley grown over the samadhi — Chatara 2008",caption: "Cutting the Barley · Chatara, 2008" },
+  { src: "bhu-samadhi-5.jpg",         alt: "Swamiji emerging from samadhi, still in deep stillness — Chatara 2008", caption: "Emerging from Samadhi · Chatara, 2008" },
+  { src: "bhu-samadhi-6.jpg",         alt: "Swamiji performing Omkara path and blessings after samadhi — Chatara 2008", caption: "Blessings After Samadhi · Chatara, 2008" },
+  { src: "bhu-samadhi-7.jpg",         alt: "Swamiji receiving felicitation after completing the samadhi — Chatara 2008", caption: "Felicitation · Chatara, 2008" },
+  { src: "bhu-samadhi-8.jpg",         alt: "Thousands of people gathered to witness the Bhu Samadhi — Chatara 2008",    caption: "Thousands Gathered · Chatara, 2008" },
 ];
 
 export default function FounderGuru() {
