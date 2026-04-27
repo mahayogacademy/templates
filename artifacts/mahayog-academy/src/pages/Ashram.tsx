@@ -192,7 +192,7 @@ export default function Ashram() {
       </div>
 
       {/* ── HERO ── */}
-      <section className="relative h-[80vh] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[58vh] min-h-[400px] flex items-center justify-center overflow-hidden">
         <img
           src={`${b}images/ashram-hero.png`}
           alt="The Guru Ashram at Barahachetra, Nepal"

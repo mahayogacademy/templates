@@ -96,7 +96,7 @@ export default function Projects() {
       )}
 
       {/* ── HERO ── */}
-      <section className="relative h-[52vh] min-h-[380px] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[58vh] min-h-[400px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
             src={`${b}images/ashram-hero.png`}
@@ -104,7 +104,7 @@ export default function Projects() {
             aria-hidden
             className="w-full h-full object-cover object-center"
           />
-          <div className="absolute inset-0 bg-[#1a0f05]/72" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#1a0f05]/70 via-[#2c1a08]/40 to-[#faf9f6]" />
         </div>
         <div className="relative z-10 text-center px-6">
           <div className="flex items-center justify-center gap-3 mb-5">

@@ -8,13 +8,13 @@ export default function AboutAcademy() {
       <Nav />
 
       {/* ── HERO ── */}
-      <section className="relative h-[80vh] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[58vh] min-h-[400px] flex items-center justify-center overflow-hidden">
         <img
           src={`${import.meta.env.BASE_URL}images/academy-hero.png`}
           alt="Himalayan mountain valley"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#2c1f0a]/60 via-[#3d2b0d]/40 to-[#faf9f6]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#1a0f05]/70 via-[#2c1a08]/40 to-[#faf9f6]" />
         <div className="relative z-10 text-center px-6 max-w-3xl mx-auto">
           <div className="flex items-center justify-center gap-3 mb-6">
             <div className="h-px w-12 bg-[#e8c56a]" />

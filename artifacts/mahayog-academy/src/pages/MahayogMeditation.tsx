@@ -369,7 +369,7 @@ export default function MahayogMeditation() {
       <Nav />
 
       {/* ── HERO ── */}
-      <section className="relative h-[85vh] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[58vh] min-h-[400px] flex items-center justify-center overflow-hidden">
         <img
           src={`${import.meta.env.BASE_URL}images/meditation-hero.png`}
           alt="Meditating at sunrise in the Himalayas"
