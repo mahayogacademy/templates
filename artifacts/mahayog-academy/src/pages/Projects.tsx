@@ -143,8 +143,8 @@ export default function Projects() {
 
           {/* Programs offered */}
           <div className="mb-14">
-            <p className="text-[10px] uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-6">Programs Offered at Each Center</p>
-            <div className="grid grid-cols-1 md:grid-cols-2 bg-[#fdf3e3] rounded-xl px-6 py-2">
+            <p className="text-[10px] uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-6">Programs Offered at Each Hanuman Temple</p>
+            <div className="grid grid-cols-1 md:grid-cols-2">
               {HANUMAN_PROGRAMS.map((p, i) => (
                 <div key={i} className="flex items-center gap-3 py-3.5 border-b border-[#e8dece]">
                   <svg width="8" height="8" viewBox="0 0 24 24" fill="#b8892a" className="shrink-0">
