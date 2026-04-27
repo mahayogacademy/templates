@@ -15,11 +15,12 @@ export default function ScrollToTop() {
     <button
       onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
       aria-label="Back to top"
-      className="fixed bottom-8 right-8 z-50 w-11 h-11 rounded-full bg-[#b8892a] hover:bg-[#9d7422] text-white shadow-lg shadow-[#b8892a]/30 flex items-center justify-center transition-all duration-300 hover:scale-110"
+      className="fixed bottom-7 right-7 z-50 flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#faf9f6]/90 border border-[#d4b896] text-[#b8892a] text-xs tracking-wider backdrop-blur-sm shadow-sm hover:bg-white hover:border-[#b8892a] transition-all duration-200"
     >
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
         <path d="M18 15l-6-6-6 6" />
       </svg>
+      Top
     </button>
   );
 }
