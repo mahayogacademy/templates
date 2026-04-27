@@ -334,21 +334,6 @@ export default function FounderGuru() {
 
             </div>
 
-            {/* Shaktipat highlight */}
-            <div className="bg-white border border-[#e8dece] rounded-2xl p-8 flex gap-7 items-start mt-14">
-              <div className="shrink-0 w-12 h-12 rounded-full bg-[#fdf6ec] border border-[#e8c56a]/40 flex items-center justify-center">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                  <path d="M12 2C12 2 15 9 22 12C22 12 15 15 12 22C12 22 9 15 2 12C2 12 9 9 12 2Z" stroke="#b8892a" strokeWidth="1.5" fill="none"/>
-                </svg>
-              </div>
-              <div>
-                <p className="text-[10px] uppercase tracking-[0.25em] text-[#b8892a] font-semibold mb-2">Shaktipāt Dīkṣā</p>
-                <p className="font-['Cormorant_Garamond'] text-xl font-semibold text-[#3d3830] mb-2">Transmission of Spiritual Energy</p>
-                <p className="text-sm text-[#7a7068] leading-relaxed">
-                  His Holiness initiates seekers through Shaktipāt Dīkṣā — the ancient method of transmitting spiritual energy (śakti) from Guru to student. This transmission awakens the inner Kundalini, setting in motion a profound, organic process of inner development that unfolds naturally within the practitioner.
-                </p>
-              </div>
-            </div>
           </div>
 
           {/* Divider */}
