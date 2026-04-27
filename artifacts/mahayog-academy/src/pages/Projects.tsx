@@ -130,7 +130,7 @@ export default function Projects() {
           <div className="flex border border-[#e8dece] rounded-full overflow-hidden">
             {[
               { label: "108 Hanuman Temples", anchor: "#project-01" },
-              { label: "Ram Mandir at Devghat", anchor: "#project-02" },
+              { label: "Ram Mandir", anchor: "#project-02" },
             ].map((item, i, arr) => (
               <a
                 key={item.anchor}
