@@ -547,16 +547,16 @@ export default function FounderGuru() {
               Under his guidance, numerous spiritual, educational, and cultural initiatives are being established — each grounded in the conviction that inner realization must serve the world.
             </p>
 
-            <div className="grid sm:grid-cols-2 gap-4 mb-10">
+            <div className="grid sm:grid-cols-2 gap-4">
               {[
-                { label: "Spiritual Revival through Himalayan Siddha Mahayog Meditation", note: "Spiritual Revival", img: "initiative-meditation.png" },
-                { label: "Green Revolution for Nepal's agricultural empowerment and independence", note: "Ecology", img: "initiative-green-revolution.png" },
-                { label: "Jagadguru Shriramanandacharya Gurukul (Grades 6–12)", note: "Education", img: "initiative-gurukul.png" },
-                { label: "Nepal's first Ayurveda University", note: "Education", img: "initiative-ayurveda.png" },
-                { label: "108 Hanuman Temples across Nepal", note: "Sacred Infrastructure", img: "initiative-hanuman-temples.jpg", pos: "center center" },
-                { label: "A historic Ram Temple in Nepal", note: "Sacred Infrastructure", img: "ram-mandir-1.jpg", pos: "center center" },
+                { label: "Spiritual Revival through Himalayan Siddha Mahayog Meditation", note: "Spiritual Revival", img: "initiative-meditation.png", href: "/meditation" },
+                { label: "Green Revolution for Nepal's agricultural empowerment and independence", note: "Ecology", img: "initiative-green-revolution.png", href: null },
+                { label: "Jagadguru Shriramanandacharya Gurukul (Grades 6–12)", note: "Education", img: "initiative-gurukul.png", href: "/gurukul" },
+                { label: "Nepal's first Ayurveda University", note: "Education", img: "initiative-ayurveda.png", href: null },
+                { label: "108 Hanuman Temples across Nepal", note: "Sacred Infrastructure", img: "initiative-hanuman-temples.jpg", pos: "center center", href: "/hanuman-temples" },
+                { label: "A historic Ram Temple in Nepal", note: "Sacred Infrastructure", img: "ram-mandir-1.jpg", pos: "center center", href: "/ram-temple" },
               ].map((item, i) => (
-                <div key={i} className="flex flex-col bg-[#faf9f6] border border-[#e8dece] rounded-xl overflow-hidden">
+                <div key={i} className="flex flex-col bg-[#faf9f6] border border-[#e8dece] rounded-xl overflow-hidden group">
                   <div className="h-36 overflow-hidden shrink-0">
                     <img
                       src={`${b}images/${item.img}`}
@@ -568,17 +568,20 @@ export default function FounderGuru() {
                   </div>
                   <div className="p-5">
                     <p className="text-[10px] uppercase tracking-[0.2em] text-[#b8892a] font-semibold mb-2">{item.note}</p>
-                    <p className="text-sm text-[#3d3830] leading-relaxed">{item.label}</p>
+                    {item.href ? (
+                      <Link href={item.href} onClick={() => window.scrollTo(0, 0)}>
+                        <span className="text-sm text-[#3d3830] leading-relaxed hover:text-[#b8892a] transition-colors cursor-pointer inline-flex items-start gap-1">
+                          {item.label}
+                          <ArrowRight className="w-3.5 h-3.5 shrink-0 mt-[3px] opacity-50" strokeWidth={1.5} />
+                        </span>
+                      </Link>
+                    ) : (
+                      <p className="text-sm text-[#3d3830] leading-relaxed">{item.label}</p>
+                    )}
                   </div>
                 </div>
               ))}
             </div>
-
-            <Link href="/projects">
-              <span className="inline-flex items-center gap-2 px-6 py-3 border border-[#b8892a] text-[#b8892a] text-sm rounded-full hover:bg-[#b8892a] hover:text-white transition-colors cursor-pointer">
-                View Detailed Project Pages <ArrowRight className="w-4 h-4" strokeWidth={1.5} />
-              </span>
-            </Link>
 
           </div>
         </div>
