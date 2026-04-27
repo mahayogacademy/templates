@@ -504,7 +504,7 @@ export default function FounderGuru() {
                 { label: "Hanuman Temple Akhanda Kīrtan — continuous 24-hour Ram mantra chanting, ongoing since 2019", note: "Devotional practice" },
                 { label: "108 Hanuman Temples across Nepal", note: "Sacred infrastructure" },
                 { label: "A historic Ram Temple in Nepal", note: "Sacred infrastructure" },
-                { label: "Jagadguru Shriramanandacharya Gurukul — blending modern academic excellence with ancient Vedic wisdom: \"Western Mind & Eastern Philosophy\"", note: "Education" },
+                { label: "Jagadguru Shriramanandacharya Gurukul (Grades 6–12) — blending modern academic excellence with ancient Vedic wisdom: \"Western Mind & Eastern Philosophy\"", note: "Education" },
               ].map((item, i) => (
                 <div key={i} className="flex items-start gap-4 p-4 bg-[#faf9f6] border border-[#e8dece] rounded-xl">
                   <span className="mt-[5px] shrink-0 w-1.5 h-1.5 rotate-45 bg-[#b8892a]/70 inline-block" />
