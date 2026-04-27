@@ -173,7 +173,7 @@ export default function Projects() {
               <div className="shrink-0">
                 <Link href="/contact">
                   <span className="inline-flex items-center gap-2 bg-[#b8892a] hover:bg-[#9d7422] text-white text-sm font-medium px-8 py-3.5 rounded-full tracking-widest transition-colors duration-200 cursor-pointer">
-                    Get in Touch
+                    Support the Mission
                     <ArrowRight className="w-4 h-4" strokeWidth={1.5} />
                   </span>
                 </Link>
