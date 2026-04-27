@@ -498,6 +498,35 @@ export default function Ashram() {
         </div>
       </section>
 
+      {/* ── AKHANDA KIRTAN ── */}
+      <section className="py-20 px-6 bg-[#2e2820]">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <p className="text-[10px] uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-3">Continuous since 2019</p>
+            <h2 className="font-['Cormorant_Garamond'] text-4xl font-light text-[#fdf6ec] leading-snug mb-6">
+              Akhanda Kīrtan
+            </h2>
+            <div className="h-px w-10 bg-[#b8892a]/50 mb-6" />
+            <p className="text-base text-[#c8bfb0] leading-relaxed mb-4">
+              The Hanuman Temple at the ashram holds an unbroken stream of devotional chanting — the Ram mantra has been recited continuously, 24 hours a day, without interruption since 2019.
+            </p>
+            <p className="text-base text-[#c8bfb0] leading-relaxed">
+              <span className="italic font-['Cormorant_Garamond'] text-[#e8dece]">Akhanda</span> means "unbroken" — this living practice embodies the ideal of constant remembrance, filling the ashram with an ever-present current of sacred sound that supports all who enter.
+            </p>
+          </div>
+          <div className="flex flex-col items-center text-center">
+            <div className="w-36 h-36 rounded-full border border-[#b8892a]/40 flex items-center justify-center mb-6 bg-[#3d3428]">
+              <div className="text-center">
+                <p className="font-['Cormorant_Garamond'] text-5xl font-light text-[#b8892a] leading-none">24</p>
+                <p className="text-[10px] uppercase tracking-[0.3em] text-[#9a8f84] mt-1">hrs / day</p>
+              </div>
+            </div>
+            <p className="font-['Cormorant_Garamond'] text-2xl italic text-[#e8dece] mb-2">Rām Nām</p>
+            <p className="text-xs uppercase tracking-[0.3em] text-[#9a8f84]">Unbroken · Continuous · Since 2019</p>
+          </div>
+        </div>
+      </section>
+
       {/* ── PLAN A VISIT CTA ── */}
       <section id="visit" className="relative py-24 px-6 overflow-hidden">
         <div className="absolute inset-0">

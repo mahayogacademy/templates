@@ -502,7 +502,6 @@ export default function FounderGuru() {
                 { label: "Green Revolution for Nepal's agricultural empowerment and independence", note: "Ecology" },
                 { label: "Jagadguru Shriramanandacharya Gurukul (Grades 6–12)", note: "Education" },
                 { label: "Nepal's first Ayurveda University", note: "Education" },
-                { label: "Hanuman Temple Akhanda Kīrtan — continuous 24-hour Ram mantra chanting, ongoing since 2019", note: "Spiritual Revival" },
                 { label: "108 Hanuman Temples across Nepal", note: "Sacred infrastructure" },
                 { label: "A historic Ram Temple in Nepal", note: "Sacred infrastructure" },
               ].map((item, i) => (
