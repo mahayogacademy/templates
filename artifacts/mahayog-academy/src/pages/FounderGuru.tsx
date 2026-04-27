@@ -449,7 +449,7 @@ export default function FounderGuru() {
                     <svg className="shrink-0 mt-[3px]" width="10" height="10" viewBox="0 0 24 24" fill="none">
                       <path d="M12 2C12 2 15 9 22 12C22 12 15 15 12 22C12 22 9 15 2 12C2 12 9 9 12 2Z" fill="#b8892a" fillOpacity="0.5"/>
                     </svg>
-                    <span className="text-sm text-[#5a5248] leading-relaxed">{t}</span>
+                    <span className="text-base text-[#3d3830] leading-relaxed">{t}</span>
                   </div>
                 ))}
               </div>
