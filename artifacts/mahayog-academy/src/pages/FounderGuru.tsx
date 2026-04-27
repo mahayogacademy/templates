@@ -547,20 +547,27 @@ export default function FounderGuru() {
               Under his guidance, numerous spiritual, educational, and cultural initiatives are being established — each grounded in the conviction that inner realization must serve the world.
             </p>
 
-            <div className="grid sm:grid-cols-2 gap-3 mb-10">
+            <div className="grid sm:grid-cols-2 gap-4 mb-10">
               {[
-                { label: "Spiritual Revival through Himalayan Siddha Mahayog Meditation", note: "Spiritual Revival" },
-                { label: "Green Revolution for Nepal's agricultural empowerment and independence", note: "Ecology" },
-                { label: "Jagadguru Shriramanandacharya Gurukul (Grades 6–12)", note: "Education" },
-                { label: "Nepal's first Ayurveda University", note: "Education" },
-                { label: "108 Hanuman Temples across Nepal", note: "Sacred infrastructure" },
-                { label: "A historic Ram Temple in Nepal", note: "Sacred infrastructure" },
+                { label: "Spiritual Revival through Himalayan Siddha Mahayog Meditation", note: "Spiritual Revival", img: "ashram-meditation-hall.png" },
+                { label: "Green Revolution for Nepal's agricultural empowerment and independence", note: "Ecology", img: "ashram-garden.jpg" },
+                { label: "Jagadguru Shriramanandacharya Gurukul (Grades 6–12)", note: "Education", img: "ashram-extra-procession.jpg" },
+                { label: "Nepal's first Ayurveda University", note: "Education", img: "ashram-cows-sunset.jpg" },
+                { label: "108 Hanuman Temples across Nepal", note: "Sacred Infrastructure", img: "ashram-hanuman-wide.jpg" },
+                { label: "A historic Ram Temple in Nepal", note: "Sacred Infrastructure", img: "ram-mandir-1.jpg" },
               ].map((item, i) => (
-                <div key={i} className="flex items-start gap-4 p-4 bg-[#faf9f6] border border-[#e8dece] rounded-xl">
-                  <span className="mt-[5px] shrink-0 w-1.5 h-1.5 rotate-45 bg-[#b8892a]/70 inline-block" />
-                  <div className="flex-1 min-w-0">
+                <div key={i} className="flex flex-col bg-[#faf9f6] border border-[#e8dece] rounded-xl overflow-hidden">
+                  <div className="h-36 overflow-hidden shrink-0">
+                    <img
+                      src={`${b}images/${item.img}`}
+                      alt=""
+                      aria-hidden
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="p-5">
+                    <p className="text-[10px] uppercase tracking-[0.2em] text-[#b8892a] font-semibold mb-2">{item.note}</p>
                     <p className="text-sm text-[#3d3830] leading-relaxed">{item.label}</p>
-                    <p className="text-[10px] uppercase tracking-[0.2em] text-[#b8892a] font-semibold mt-1">{item.note}</p>
                   </div>
                 </div>
               ))}
