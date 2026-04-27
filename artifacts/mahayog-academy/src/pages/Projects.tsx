@@ -1,6 +1,7 @@
+import { useState } from "react";
 import Nav from "@/components/Nav";
 import { Link } from "wouter";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, X } from "lucide-react";
 
 const b = import.meta.env.BASE_URL;
 
@@ -58,10 +59,41 @@ const ARCH_HIGHLIGHTS = [
   },
 ];
 
+const RAM_GALLERY = [
+  { src: "ram-mandir-1.jpg", alt: "Ram Mandir — aerial perspective" },
+  { src: "ram-mandir-2.jpg", alt: "Ram Mandir — top-down yantra view" },
+  { src: "ram-mandir-3.jpg", alt: "Ram Mandir — front view with Hanuman statue" },
+  { src: "ram-mandir-4.jpg", alt: "Ram Mandir — wide campus view" },
+  { src: "ram-mandir-5.jpg", alt: "Ram Mandir — panoramic rendering" },
+];
+
 export default function Projects() {
+  const [lightbox, setLightbox] = useState<string | null>(null);
+
   return (
     <div className="bg-[#faf9f6] text-[#3d3830]">
       <Nav />
+
+      {/* Lightbox overlay */}
+      {lightbox && (
+        <div
+          className="fixed inset-0 z-50 bg-black/85 flex items-center justify-center p-4 md:p-10"
+          onClick={() => setLightbox(null)}
+        >
+          <button
+            className="absolute top-5 right-5 text-white/70 hover:text-white transition-colors"
+            onClick={() => setLightbox(null)}
+          >
+            <X className="w-7 h-7" strokeWidth={1.5} />
+          </button>
+          <img
+            src={lightbox}
+            alt="Enlarged rendering"
+            className="max-w-full max-h-full rounded-xl shadow-2xl object-contain"
+            onClick={e => e.stopPropagation()}
+          />
+        </div>
+      )}
 
       {/* ── HERO ── */}
       <section className="relative h-[52vh] min-h-[380px] flex items-center justify-center overflow-hidden">
@@ -311,20 +343,22 @@ export default function Projects() {
           {/* Photo gallery */}
           <div className="mb-16">
             <p className="text-[10px] uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-6">Architectural Renderings</p>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-              <div className="col-span-2 rounded-xl overflow-hidden h-56">
-                <img src={`${b}images/ram-mandir-1.jpg`} alt="Ram Mandir aerial view" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
-              </div>
-              <div className="rounded-xl overflow-hidden h-56">
-                <img src={`${b}images/ram-mandir-2.jpg`} alt="Ram Mandir top view yantra" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
-              </div>
-              <div className="rounded-xl overflow-hidden h-56">
-                <img src={`${b}images/ram-mandir-4.jpg`} alt="Ram Mandir wide view" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
-              </div>
-              <div className="col-span-2 md:col-span-4 rounded-xl overflow-hidden h-48">
-                <img src={`${b}images/ram-mandir-5.jpg`} alt="Ram Mandir panoramic view" className="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-500" />
-              </div>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+              {RAM_GALLERY.map((img, i) => (
+                <div
+                  key={i}
+                  className={`rounded-xl overflow-hidden cursor-zoom-in ${i === 4 ? "col-span-2 md:col-span-3 h-52" : "h-52"}`}
+                  onClick={() => setLightbox(`${b}images/${img.src}`)}
+                >
+                  <img
+                    src={`${b}images/${img.src}`}
+                    alt={img.alt}
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+              ))}
             </div>
+            <p className="text-xs text-[#9a8f84] mt-3 text-center tracking-wide">Click any image to enlarge</p>
           </div>
 
           {/* What it will be */}
