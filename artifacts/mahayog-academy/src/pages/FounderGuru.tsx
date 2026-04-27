@@ -1,6 +1,7 @@
+import { useState } from "react";
 import Nav from "@/components/Nav";
 import { Link } from "wouter";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 
 const b = import.meta.env.BASE_URL;
 
@@ -36,7 +37,14 @@ const CENTERS = [
   { region: "Global", cities: ["North America", "Europe", "Australia"] },
 ];
 
+const SAMADHI_SLIDES = [
+  { src: "guru-samadhi-pokhara.jpg", alt: "Siddhababa in Bhu Samadhi — Pokhara", caption: "Bhu Samadhi · Pokhara" },
+  { src: "guru-bhu-samadhi.jpg",    alt: "Siddhababa in underground Bhu Samadhi", caption: "Bhu Samadhi · Underground" },
+];
+
 export default function FounderGuru() {
+  const [samadhiSlide, setSamadhiSlide] = useState(0);
+
   return (
     <div className="bg-[#faf9f6] text-[#3d3830]">
       <Nav />
@@ -169,51 +177,66 @@ export default function FounderGuru() {
                 </div>
               </div>
 
-              {/* Row 2 — Pokhara Samadhi */}
+              {/* Row 2 — Bhu Samadhi (carousel + text) */}
               <div className="grid md:grid-cols-[1fr_340px] gap-10 items-center">
                 <div>
-                  <p className="text-[10px] uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-3">Bhu Samadhi · Pokhara</p>
+                  <p className="text-[10px] uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-3">Bhu Samadhi</p>
                   <h3 className="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#3d3830] mb-4 leading-snug">
                     Underground Burial in Meditation
                   </h3>
                   <p className="text-base text-[#5a5248] leading-relaxed mb-4">
-                    At the request of students and devotees, His Holiness has publicly demonstrated <span className="italic">Bhu Samadhi</span> — the yogic practice of remaining in deep meditation underground, sealed within an enclosed space for multiple days. This was performed in Pokhara, Nepal, witnessed by thousands.
+                    At the request of students and devotees, His Holiness has publicly demonstrated <span className="italic">Bhu Samadhi</span> — the yogic practice of remaining in deep meditation underground, sealed within an enclosed space for multiple days. These demonstrations were performed across Nepal and witnessed by thousands.
                   </p>
                   <p className="text-base text-[#5a5248] leading-relaxed">
-                    These demonstrations astonished onlookers with their evidence of mastery over bodily processes — breathing, pulse, and consciousness — possible only through the most refined yogic attainment.
+                    His Holiness entered sealed underground chambers — brick-lined pits covered and monitored — and remained in uninterrupted Samādhi for days. Witnesses recorded no signs of ordinary breath or movement. These events have kindled deep faith in the living reality of Vedic yoga, drawing sincere seekers from across the world to his guidance.
                   </p>
                 </div>
-                <div className="rounded-2xl overflow-hidden shadow-sm shadow-[#b8892a]/10">
-                  <img
-                    src={`${b}images/guru-samadhi-pokhara.jpg`}
-                    alt="Siddhababa entering Bhu Samadhi in Pokhara"
-                    className="w-full object-cover"
-                    style={{ maxHeight: "380px", objectPosition: "center" }}
-                  />
-                </div>
-              </div>
 
-              {/* Row 3 — Underground Bhu Samadhi */}
-              <div className="grid md:grid-cols-[340px_1fr] gap-10 items-center">
-                <div className="rounded-2xl overflow-hidden shadow-sm shadow-[#b8892a]/10">
-                  <img
-                    src={`${b}images/guru-bhu-samadhi.jpg`}
-                    alt="Siddhababa in Bhu Samadhi underground"
-                    className="w-full object-cover"
-                    style={{ maxHeight: "380px", objectPosition: "center" }}
-                  />
-                </div>
-                <div>
-                  <p className="text-[10px] uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-3">Bhu Samadhi · Underground</p>
-                  <h3 className="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#3d3830] mb-4 leading-snug">
-                    Days Beneath the Earth
-                  </h3>
-                  <p className="text-base text-[#5a5248] leading-relaxed mb-4">
-                    On further occasions, His Holiness entered a sealed underground chamber — a brick-lined pit covered and monitored — and remained in uninterrupted Samādhi for days. Witnesses recorded no signs of ordinary breath or movement throughout the duration.
-                  </p>
-                  <p className="text-base text-[#5a5248] leading-relaxed">
-                    These demonstrations have kindled widespread curiosity and deep faith in the living reality of Vedic yoga, drawing sincere seekers from across Nepal, India, and the wider world to his guidance.
-                  </p>
+                {/* Carousel */}
+                <div className="relative rounded-2xl overflow-hidden shadow-sm shadow-[#b8892a]/10">
+                  <div className="relative" style={{ height: "400px" }}>
+                    {SAMADHI_SLIDES.map((slide, i) => (
+                      <img
+                        key={i}
+                        src={`${b}images/${slide.src}`}
+                        alt={slide.alt}
+                        className="absolute inset-0 w-full h-full object-cover transition-opacity duration-500"
+                        style={{ opacity: samadhiSlide === i ? 1 : 0 }}
+                      />
+                    ))}
+                    {/* Caption */}
+                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent px-4 py-3">
+                      <p className="text-[10px] uppercase tracking-[0.25em] text-[#e8c56a] font-semibold">
+                        {SAMADHI_SLIDES[samadhiSlide].caption}
+                      </p>
+                    </div>
+                    {/* Prev / Next */}
+                    <button
+                      onClick={() => setSamadhiSlide(i => (i - 1 + SAMADHI_SLIDES.length) % SAMADHI_SLIDES.length)}
+                      className="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/30 hover:bg-black/50 flex items-center justify-center transition-colors"
+                      aria-label="Previous"
+                    >
+                      <ChevronLeft className="w-4 h-4 text-white" strokeWidth={1.5} />
+                    </button>
+                    <button
+                      onClick={() => setSamadhiSlide(i => (i + 1) % SAMADHI_SLIDES.length)}
+                      className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/30 hover:bg-black/50 flex items-center justify-center transition-colors"
+                      aria-label="Next"
+                    >
+                      <ChevronRight className="w-4 h-4 text-white" strokeWidth={1.5} />
+                    </button>
+                  </div>
+                  {/* Dots */}
+                  <div className="flex justify-center gap-2 py-3 bg-white border-t border-[#e8dece]">
+                    {SAMADHI_SLIDES.map((_, i) => (
+                      <button
+                        key={i}
+                        onClick={() => setSamadhiSlide(i)}
+                        className={`w-1.5 h-1.5 rounded-full transition-colors ${samadhiSlide === i ? "bg-[#b8892a]" : "bg-[#d9cfc4]"}`}
+                        aria-label={`Slide ${i + 1}`}
+                      />
+                    ))}
+                  </div>
                 </div>
               </div>
 
