@@ -154,6 +154,38 @@ export default function FounderGuru() {
 
           </div>
 
+          {/* ── SPIRITUAL CREDENTIALS ACCORDION ── */}
+          <div className="mb-20">
+            <p className="text-[10px] uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-5">Titles &amp; Recognitions</p>
+            <div className="divide-y divide-[#e8dece] border border-[#e8dece] rounded-2xl overflow-hidden">
+              {CREDENTIALS.map((c, i) => (
+                <div key={i} className="bg-white">
+                  <button
+                    onClick={() => setOpenCredential(openCredential === i ? null : i)}
+                    className="w-full flex items-start justify-between gap-4 px-6 py-5 text-left hover:bg-[#fdf6ec] transition-colors"
+                  >
+                    <div className="flex-1 min-w-0">
+                      <p className="font-['Cormorant_Garamond'] text-xl font-semibold text-[#3d3830] leading-tight">{c.title}</p>
+                      <p className="text-sm text-[#a89880] italic mt-1">{c.sub}</p>
+                    </div>
+                    <ChevronDown
+                      className={`shrink-0 mt-1 w-4 h-4 text-[#b8892a] transition-transform duration-200 ${openCredential === i ? "rotate-180" : ""}`}
+                      strokeWidth={1.5}
+                    />
+                  </button>
+                  {openCredential === i && (
+                    <div className="px-6 pb-6 bg-[#fdf6ec]/50">
+                      <p className="text-sm text-[#7a7068] leading-relaxed mb-3 italic border-l-2 border-[#b8892a]/30 pl-4">{c.teaser}</p>
+                      {c.body.split("\n\n").map((para, j) => (
+                        <p key={j} className="text-sm text-[#5a5248] leading-relaxed mb-3 last:mb-0">{para}</p>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+
           {/* ── SECTION ANCHOR NAV ── */}
           <div className="flex flex-wrap gap-0 border border-[#e8dece] rounded-xl overflow-hidden mb-20">
             {[
@@ -316,38 +348,6 @@ export default function FounderGuru() {
                   His Holiness initiates seekers through Shaktipāt Dīkṣā — the ancient method of transmitting spiritual energy (śakti) from Guru to student. This transmission awakens the inner Kundalini, setting in motion a profound, organic process of inner development that unfolds naturally within the practitioner.
                 </p>
               </div>
-            </div>
-          </div>
-
-          {/* ── SPIRITUAL CREDENTIALS ACCORDION ── */}
-          <div className="mb-16 mt-16">
-            <p className="text-[10px] uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-5">Titles &amp; Recognitions</p>
-            <div className="divide-y divide-[#e8dece] border border-[#e8dece] rounded-2xl overflow-hidden">
-              {CREDENTIALS.map((c, i) => (
-                <div key={i} className="bg-white">
-                  <button
-                    onClick={() => setOpenCredential(openCredential === i ? null : i)}
-                    className="w-full flex items-start justify-between gap-4 px-6 py-5 text-left hover:bg-[#fdf6ec] transition-colors"
-                  >
-                    <div className="flex-1 min-w-0">
-                      <p className="font-['Cormorant_Garamond'] text-xl font-semibold text-[#3d3830] leading-tight mb-0.5">{c.title}</p>
-                      <p className="text-xs uppercase tracking-[0.2em] text-[#b8892a] font-medium">{c.sub}</p>
-                    </div>
-                    <ChevronDown
-                      className={`shrink-0 mt-1 w-4 h-4 text-[#b8892a] transition-transform duration-200 ${openCredential === i ? "rotate-180" : ""}`}
-                      strokeWidth={1.5}
-                    />
-                  </button>
-                  {openCredential === i && (
-                    <div className="px-6 pb-6 bg-[#fdf6ec]/50">
-                      <p className="text-sm text-[#7a7068] leading-relaxed mb-3 italic border-l-2 border-[#b8892a]/30 pl-4">{c.teaser}</p>
-                      {c.body.split("\n\n").map((para, j) => (
-                        <p key={j} className="text-sm text-[#5a5248] leading-relaxed mb-3 last:mb-0">{para}</p>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              ))}
             </div>
           </div>
 
