@@ -11,9 +11,19 @@ const GALLERY_TOP = [
 ];
 
 const GALLERY_BOT = [
-  { src: "ashram-prasad-1.jpg",      alt: "Devotees receiving prasad at the long community table", caption: "Prasad Seva" },
-  { src: "ashram-cows-1.jpg",        alt: "Devotee caring for sacred cows at the ashram gate",    caption: "Caring for the Sacred" },
-  { src: "ashram-hanuman-close.jpg", alt: "The golden Hanuman statue at the ashram temple",       caption: "The Hanuman Temple" },
+  { src: "ashram-prasad-1.jpg",                              alt: "Devotees receiving prasad at the community table",          caption: "Prasad Seva" },
+  { src: "ashram-cows-1.jpg",                                alt: "Devotee caring for sacred cows at the ashram gate",         caption: "Caring for the Sacred" },
+  { src: "ashram-hanuman-close.jpg",                         alt: "The golden Hanuman statue at the ashram temple",            caption: "The Hanuman Temple" },
+  { src: "ashram-extra-IMG_0034_1777303590698.jpg",          alt: "Devotee harvesting herbs in the ashram garden",             caption: "Herb Garden Harvest" },
+  { src: "ashram-extra-IMG_7604_1777303599506.jpg",          alt: "Devotees gathered for satsang at the center",               caption: "Community Satsang" },
+  { src: "ashram-extra-IMG_7797_1777303606369.jpg",          alt: "The ornate temple altar adorned with flowers and deities",  caption: "The Sacred Altar" },
+  { src: "ashram-extra-IMG_7688_1777303609347.jpg",          alt: "Devotees preparing prasad in the ashram kitchen",           caption: "Prasad Preparation" },
+  { src: "ashram-extra-IMG_7693_1777303612187.jpg",          alt: "Devotee serving blessed food to the community",             caption: "Prasad Distribution" },
+  { src: "ashram-extra-IMG_7898_1777303621687.jpg",          alt: "Devotees planting and tending the ashram fields",           caption: "Seva in the Fields" },
+  { src: "ashram-extra-IMG_7933_1777303625151.jpg",          alt: "Scenic river and forested hills near the ashram",           caption: "Sacred Land" },
+  { src: "ashram-extra-IMG_7998_1777303631687.jpg",          alt: "Wide ashram grounds with Himalayan hills in the distance",  caption: "Ashram Grounds" },
+  { src: "ashram-extra-IMG_8099_1777303638539.jpg",          alt: "Garden walkway lined with topiary and mountain views",      caption: "Garden Path" },
+  { src: "ashram-extra-IMG_8009_1777303646025.jpg",          alt: "Ashram temple and flag with green hills behind",            caption: "Temple Grounds" },
 ];
 
 const b = import.meta.env.BASE_URL;
