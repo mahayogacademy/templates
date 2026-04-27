@@ -125,9 +125,9 @@ export default function FounderGuru() {
             {[
               { label: "Life", anchor: "#life" },
               { label: "Teachings", anchor: "#teachings" },
-              { label: "Ashrams", anchor: "#ashrams" },
               { label: "Key Initiatives", anchor: "#initiatives" },
               { label: "Yajñas", anchor: "#yajnas" },
+              { label: "Ashrams", anchor: "#ashrams" },
             ].map((item, i, arr) => (
               <a
                 key={item.anchor}
@@ -357,72 +357,13 @@ export default function FounderGuru() {
         </div>
       </div>
 
-      {/* ── ASHRAMS SECTION ── */}
-      <section className="py-24 px-6">
-        <div className="max-w-5xl mx-auto">
-
-          <div id="ashrams" className="scroll-mt-24">
-
-            <div className="flex items-start gap-6 mb-10">
-              <span className="font-['Cormorant_Garamond'] text-8xl font-light text-[#e8dece] leading-none select-none shrink-0">III</span>
-              <div className="pt-4">
-                <p className="text-[10px] uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-1">Centers of Practice</p>
-                <h2 className="font-['Cormorant_Garamond'] text-4xl font-light text-[#3d3830] leading-tight">
-                  Ashrams &amp; Global Presence
-                </h2>
-              </div>
-            </div>
-
-            <div className="h-px bg-[#e8dece] mb-8" />
-
-            <p className="text-base text-[#5a5248] leading-relaxed max-w-2xl mb-12">
-              Under his guidance, ashrams and meditation centers have been established across Nepal, India, and internationally. These centers serve as spaces for practice, learning, service, and community — supporting reflection, education, and collective well-being.
-            </p>
-
-            {/* Centers grid */}
-            <div className="grid md:grid-cols-3 gap-6 mb-12">
-              {CENTERS.map((region) => (
-                <div key={region.region} className="bg-white border border-[#e8dece] rounded-2xl p-7">
-                  <p className="text-[10px] uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-4">{region.region}</p>
-                  <ul className="space-y-2.5">
-                    {region.cities.map((city) => (
-                      <li key={city} className="flex items-center gap-3 text-sm text-[#5a5248]">
-                        <span className="shrink-0 w-1 h-1 rounded-full bg-[#b8892a]/50" />
-                        {city}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-
-            {/* Head ashram callout */}
-            <div className="bg-white border border-[#e8dece] rounded-2xl p-8 flex flex-col md:flex-row md:items-center justify-between gap-6">
-              <div>
-                <p className="text-[10px] uppercase tracking-[0.25em] text-[#b8892a] font-semibold mb-2">Head Ashram</p>
-                <p className="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#3d3830] mb-1">
-                  Jagadguru Ramanandacharya Sewa Pith
-                </p>
-                <p className="text-sm text-[#7a7068]">Barahachettra Dham, Chatara, Sunsari, Nepal</p>
-              </div>
-              <Link href="/ashram">
-                <span className="shrink-0 inline-flex items-center gap-2 px-6 py-3 border border-[#b8892a] text-[#b8892a] text-sm rounded-full hover:bg-[#b8892a] hover:text-white transition-colors cursor-pointer whitespace-nowrap">
-                  Visit Ashram Page <ArrowRight className="w-4 h-4" strokeWidth={1.5} />
-                </span>
-              </Link>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
       {/* ── KEY INITIATIVES SECTION ── */}
       <section className="py-24 px-6 bg-white border-t border-[#e8dece]">
         <div className="max-w-5xl mx-auto">
           <div id="initiatives" className="scroll-mt-24">
 
             <div className="flex items-start gap-6 mb-10">
-              <span className="font-['Cormorant_Garamond'] text-8xl font-light text-[#e8dece] leading-none select-none shrink-0">IV</span>
+              <span className="font-['Cormorant_Garamond'] text-8xl font-light text-[#e8dece] leading-none select-none shrink-0">III</span>
               <div className="pt-4">
                 <p className="text-[10px] uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-1">Spiritual, Educational & Cultural Work</p>
                 <h2 className="font-['Cormorant_Garamond'] text-4xl font-light text-[#3d3830] leading-tight">Key Initiatives &amp; Projects</h2>
@@ -470,7 +411,7 @@ export default function FounderGuru() {
           <div id="yajnas" className="scroll-mt-24">
 
             <div className="flex items-start gap-6 mb-10">
-              <span className="font-['Cormorant_Garamond'] text-8xl font-light text-[#e8dece] leading-none select-none shrink-0">V</span>
+              <span className="font-['Cormorant_Garamond'] text-8xl font-light text-[#e8dece] leading-none select-none shrink-0">IV</span>
               <div className="pt-4">
                 <p className="text-[10px] uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-1">Ancient Vedic Observances</p>
                 <h2 className="font-['Cormorant_Garamond'] text-4xl font-light text-[#3d3830] leading-tight">Revival of Historic Yajñas</h2>
@@ -533,6 +474,64 @@ export default function FounderGuru() {
               <p className="text-base italic text-[#5a5248] leading-relaxed font-['Cormorant_Garamond'] text-lg">
                 Across all these initiatives, His Holiness emphasizes that spiritual realization finds its fullest expression in service — to humanity, to culture, and to the natural world.
               </p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* ── ASHRAMS SECTION ── */}
+      <section className="py-24 px-6 bg-white border-t border-[#e8dece]">
+        <div className="max-w-5xl mx-auto">
+          <div id="ashrams" className="scroll-mt-24">
+
+            <div className="flex items-start gap-6 mb-10">
+              <span className="font-['Cormorant_Garamond'] text-8xl font-light text-[#e8dece] leading-none select-none shrink-0">V</span>
+              <div className="pt-4">
+                <p className="text-[10px] uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-1">Centers of Practice</p>
+                <h2 className="font-['Cormorant_Garamond'] text-4xl font-light text-[#3d3830] leading-tight">
+                  Ashrams &amp; Global Presence
+                </h2>
+              </div>
+            </div>
+
+            <div className="h-px bg-[#e8dece] mb-8" />
+
+            <p className="text-base text-[#5a5248] leading-relaxed max-w-2xl mb-12">
+              Under his guidance, ashrams and meditation centers have been established across Nepal, India, and internationally. These centers serve as spaces for practice, learning, service, and community — supporting reflection, education, and collective well-being.
+            </p>
+
+            {/* Centers grid */}
+            <div className="grid md:grid-cols-3 gap-6 mb-12">
+              {CENTERS.map((region) => (
+                <div key={region.region} className="bg-white border border-[#e8dece] rounded-2xl p-7">
+                  <p className="text-[10px] uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-4">{region.region}</p>
+                  <ul className="space-y-2.5">
+                    {region.cities.map((city) => (
+                      <li key={city} className="flex items-center gap-3 text-sm text-[#5a5248]">
+                        <span className="shrink-0 w-1 h-1 rounded-full bg-[#b8892a]/50" />
+                        {city}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+
+            {/* Head ashram callout */}
+            <div className="bg-[#faf9f6] border border-[#e8dece] rounded-2xl p-8 flex flex-col md:flex-row md:items-center justify-between gap-6">
+              <div>
+                <p className="text-[10px] uppercase tracking-[0.25em] text-[#b8892a] font-semibold mb-2">Head Ashram</p>
+                <p className="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#3d3830] mb-1">
+                  Jagadguru Ramanandacharya Sewa Pith
+                </p>
+                <p className="text-sm text-[#7a7068]">Barahachettra Dham, Chatara, Sunsari, Nepal</p>
+              </div>
+              <Link href="/ashram">
+                <span className="shrink-0 inline-flex items-center gap-2 px-6 py-3 border border-[#b8892a] text-[#b8892a] text-sm rounded-full hover:bg-[#b8892a] hover:text-white transition-colors cursor-pointer whitespace-nowrap">
+                  Visit Ashram Page <ArrowRight className="w-4 h-4" strokeWidth={1.5} />
+                </span>
+              </Link>
             </div>
 
           </div>
