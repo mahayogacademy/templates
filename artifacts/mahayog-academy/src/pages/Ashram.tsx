@@ -542,9 +542,22 @@ export default function Ashram() {
             <h2 className="font-['Cormorant_Garamond'] text-3xl md:text-4xl font-light text-[#2e2820] leading-snug mb-3">
               Participate in Ashram Seva
             </h2>
-            <p className="text-sm text-[#5a5248] leading-relaxed">
-              The ashram is sustained entirely through the generosity and devotion of sincere seekers. By contributing to Ashram Seva, you become part of this sacred mission — supporting the ongoing work of spiritual education, prasad distribution, gau seva, and the care of this living spiritual home.
+            <p className="text-sm text-[#5a5248] leading-relaxed mb-6">
+              The ashram is sustained entirely through the generosity and devotion of seekers. By contributing to Ashram Seva, you become part of this sacred mission — supporting the ongoing work of spiritual education, prasad distribution, gau seva, and the care of this living spiritual home.
             </p>
+            <div className="flex flex-wrap gap-2">
+              {[
+                { name: "Gau Seva",         sub: "Care of Sacred Cows" },
+                { name: "Hanuman Aarti",    sub: "Temple Worship" },
+                { name: "Akhanda Kīrtan",   sub: "Continuous Chanting" },
+                { name: "Brahmand Bhojan",  sub: "Prasad Distribution" },
+              ].map((s) => (
+                <div key={s.name} className="flex flex-col px-4 py-2.5 rounded-xl bg-white border border-[#e2d0b8]">
+                  <span className="text-xs font-semibold text-[#2e2820] tracking-wide">{s.name}</span>
+                  <span className="text-[10px] text-[#9a8f84] tracking-wide mt-0.5">{s.sub}</span>
+                </div>
+              ))}
+            </div>
           </div>
           <div className="shrink-0">
             <Link href="/donate">
