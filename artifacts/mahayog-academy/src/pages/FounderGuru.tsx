@@ -644,7 +644,7 @@ export default function FounderGuru() {
                 <p className="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#3d3830] mb-1">
                   Jagadguru Ramanandacharya Sewa Pith
                 </p>
-                <p className="text-sm text-[#7a7068]">Barahachettra Dham, Chatara, Sunsari, Nepal</p>
+                <p className="text-sm text-[#7a7068]">Chatara, Barahachettra Dham, Sunsari, Nepal</p>
               </div>
               <Link href="/ashram">
                 <span className="shrink-0 inline-flex items-center gap-2 px-6 py-3 border border-[#b8892a] text-[#b8892a] text-sm rounded-full hover:bg-[#b8892a] hover:text-white transition-colors cursor-pointer whitespace-nowrap">
