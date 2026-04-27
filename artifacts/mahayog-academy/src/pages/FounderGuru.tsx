@@ -570,9 +570,11 @@ export default function FounderGuru() {
                     <p className="text-[10px] uppercase tracking-[0.2em] text-[#b8892a] font-semibold mb-2">{item.note}</p>
                     {item.href ? (
                       <Link href={item.href} onClick={() => window.scrollTo(0, 0)}>
-                        <span className="text-sm text-[#3d3830] leading-relaxed hover:text-[#b8892a] transition-colors cursor-pointer inline-flex items-start gap-1">
-                          {item.label}
-                          <ArrowRight className="w-3.5 h-3.5 shrink-0 mt-[3px] opacity-50" strokeWidth={1.5} />
+                        <span className="text-sm text-[#3d3830] leading-relaxed hover:text-[#b8892a] transition-colors cursor-pointer inline-flex items-start gap-1 group/link">
+                          <span className="underline decoration-[#b8892a]/30 underline-offset-2 group-hover/link:decoration-[#b8892a] transition-all">
+                            {item.label}
+                          </span>
+                          <ArrowRight className="w-3.5 h-3.5 shrink-0 mt-[3px] opacity-40 group-hover/link:opacity-100 group-hover/link:translate-x-0.5 transition-all" strokeWidth={1.5} />
                         </span>
                       </Link>
                     ) : (
