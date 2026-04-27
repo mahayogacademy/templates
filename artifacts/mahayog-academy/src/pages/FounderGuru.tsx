@@ -413,7 +413,7 @@ export default function FounderGuru() {
                 />
               </div>
               <div className="flex-1 text-center md:text-left">
-                <p className="text-[10px] uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-2">In Person</p>
+                <p className="text-[10px] uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-2">Darshan &amp; Satsang</p>
                 <h3 className="font-['Cormorant_Garamond'] text-3xl font-light text-[#3d3830] mb-2 leading-snug">
                   Meet Siddhababa
                 </h3>
