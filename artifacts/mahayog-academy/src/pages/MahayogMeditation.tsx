@@ -300,13 +300,63 @@ function FAQItem({ q, a }: { q: string; a: string }) {
 }
 
 const NAV_SECTIONS = [
-  { id: "what-is",      label: "What is Meditation" },
-  { id: "mahayog",      label: "Himalayan Mahayog"  },
-  { id: "how-it-works", label: "How It Works"       },
-  { id: "benefits",     label: "Benefits"           },
-  { id: "origins",      label: "Ancient Origins"    },
-  { id: "faq",          label: "FAQ"                },
+  { id: "what-is",      label: "What is Meditation", short: "The Practice"   },
+  { id: "mahayog",      label: "Himalayan Mahayog",  short: "Mahayog"        },
+  { id: "how-it-works", label: "How It Works",       short: "How It Works"   },
+  { id: "benefits",     label: "Benefits",           short: "Benefits"       },
+  { id: "origins",      label: "Ancient Origins",    short: "Origins"        },
+  { id: "faq",          label: "FAQ",                short: "FAQ"            },
 ];
+
+function HorizontalSectionNav() {
+  const [active, setActive] = useState<string>("");
+
+  useEffect(() => {
+    const observers: IntersectionObserver[] = [];
+    NAV_SECTIONS.forEach(({ id }) => {
+      const el = document.getElementById(id);
+      if (!el) return;
+      const obs = new IntersectionObserver(
+        ([entry]) => { if (entry.isIntersecting) setActive(id); },
+        { rootMargin: "-35% 0px -55% 0px", threshold: 0 }
+      );
+      obs.observe(el);
+      observers.push(obs);
+    });
+    return () => observers.forEach((o) => o.disconnect());
+  }, []);
+
+  return (
+    <div className="sticky top-[60px] z-30 flex justify-center px-4 py-3 bg-[#faf9f6]/80 backdrop-blur-sm border-b border-[#e8dcc8]/60">
+      <div className="flex w-full max-w-4xl rounded-full border border-[#ddd0ba] bg-white overflow-hidden">
+        {NAV_SECTIONS.map(({ id, short }, i) => {
+          const isActive = active === id;
+          return (
+            <a
+              key={id}
+              href={`#${id}`}
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+              }}
+              className={`relative flex-1 flex items-center justify-center py-3 px-2 text-[11px] tracking-widest uppercase font-medium transition-colors duration-200 whitespace-nowrap ${
+                isActive ? "text-[#b8892a]" : "text-[#7a7060] hover:text-[#3d3830]"
+              }`}
+            >
+              {i > 0 && (
+                <span className="absolute left-0 top-1/2 -translate-y-1/2 h-4 w-px bg-[#ddd0ba]" />
+              )}
+              {short}
+              {isActive && (
+                <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-6 h-px bg-[#b8892a]" />
+              )}
+            </a>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
 
 function SidebarNav() {
   const [active, setActive] = useState<string>("");
@@ -398,6 +448,8 @@ export default function MahayogMeditation() {
           </a>
         </div>
       </section>
+
+      <HorizontalSectionNav />
 
       {/* ── WHAT IS MEDITATION ── */}
       <section id="what-is" className="py-20 px-6">
