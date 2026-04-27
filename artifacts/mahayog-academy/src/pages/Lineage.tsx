@@ -175,18 +175,23 @@ export default function Lineage() {
             </div>
           </div>
 
-          {/* Closing quote */}
-          <div className="mt-16 text-center border-t border-[#d4c4a8]/60 pt-10">
-            <div className="flex items-center justify-center gap-3 mb-5">
-              <div className="h-px w-8 bg-[#b8892a]/30" />
-              <GoldDiamond />
-              <div className="h-px w-8 bg-[#b8892a]/30" />
-            </div>
-            <p className="text-[#7a7068] font-['Cormorant_Garamond'] text-xl italic leading-relaxed max-w-sm mx-auto">
-              "The Guru is not a person. The Guru is the grace that flows through an unbroken chain of awakening."
-            </p>
-          </div>
+        </div>
+      </section>
 
+      {/* ── CLOSING QUOTE BANNER ── */}
+      <section className="bg-[#2e2820] py-16 px-6 text-center">
+        <div className="flex items-center justify-center gap-4 mb-7">
+          <div className="h-px w-12 bg-[#e8c56a]/40" />
+          <GoldDiamond />
+          <div className="h-px w-12 bg-[#e8c56a]/40" />
+        </div>
+        <p className="font-['Cormorant_Garamond'] text-2xl md:text-3xl font-light italic text-[#f0e4c8] leading-relaxed max-w-2xl mx-auto">
+          "The Guru is the grace that flows through an unbroken chain of awakening."
+        </p>
+        <div className="flex items-center justify-center gap-4 mt-7">
+          <div className="h-px w-12 bg-[#e8c56a]/40" />
+          <GoldDiamond />
+          <div className="h-px w-12 bg-[#e8c56a]/40" />
         </div>
       </section>
     </div>
