@@ -215,7 +215,7 @@ export default function Projects() {
             <div className="flex flex-col md:flex-row md:items-center gap-8 mb-10">
               <div className="flex-1">
                 <h3 className="font-['Cormorant_Garamond'] text-3xl md:text-4xl font-light text-[#faf9f6] leading-snug mb-3">
-                  Be Part of Building Something Sacred
+                  A Sacred Legacy in the Making
                 </h3>
                 <p className="text-sm text-[#9a8f84] leading-relaxed max-w-lg">
                   Your gift becomes a lasting legacy—each temple a living center of prayer, learning, and community, rooted in dharma for generations to come.
