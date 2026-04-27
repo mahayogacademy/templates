@@ -673,7 +673,7 @@ export default function FounderGuru() {
             <div>
               <p className="text-[10px] uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-2">For Devotees</p>
               <h3 className="font-['Cormorant_Garamond'] text-3xl font-light text-[#3d3830] mb-3 leading-snug">
-                Blessing Photo of His Holiness
+                Blessings Photo of His Holiness
               </h3>
               <p className="text-sm text-[#5a5248] leading-relaxed max-w-md mb-6">
                 A high-resolution photo of Jagadguru Mahayogi Siddhababa for personal devotional use — suitable for printing and altar placement.
