@@ -11,6 +11,7 @@ import Contact from "@/pages/Contact";
 import Projects from "@/pages/Projects";
 import FounderGuru from "@/pages/FounderGuru";
 import Lineage from "@/pages/Lineage";
+import ScrollToTop from "@/components/ScrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -36,6 +37,7 @@ function App() {
       <TooltipProvider>
         <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, "")}>
           <Router />
+          <ScrollToTop />
         </WouterRouter>
         <Toaster />
       </TooltipProvider>
