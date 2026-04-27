@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Nav from "@/components/Nav";
 import { Link } from "wouter";
-import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowRight, ChevronLeft, ChevronRight, ChevronDown } from "lucide-react";
 
 const b = import.meta.env.BASE_URL;
 
@@ -37,6 +37,39 @@ const CENTERS = [
   { region: "Global", cities: ["North America", "Europe", "Australia"] },
 ];
 
+const CREDENTIALS = [
+  {
+    title: "Jagadguru",
+    sub: "Guru of the World",
+    teaser: "A title reserved for rare masters whose influence extends beyond sectarian boundaries.",
+    body: `The term "Jagadguru" is derived from the Sanskrit jagat (world or cosmos) and guru (one who dispels darkness). In 2019, this title was formally bestowed upon His Holiness by an international assembly of realized sages representing all six major Sanātana Dharma lineages: Vaiṣṇavism, Śaivism, Śāktism, Smārtism, Sauryaism, and Gāṇapatyaism.\n\nDuring the ceremony, his mastery of samādhi, his capacity to guide others into higher states of awareness, and his completion of the Shree Ram Tārak Brahma Mahāyajña were especially noted. His monastic name was formally conferred as Jagadguru Shree Ramanandacharya Swami Shree Ramakrishnacharya Ji Maharaj, and he was bestowed the tridaṇḍam — the sacred staff symbolizing complete dedication of body, mind, and speech to divine service.\n\nHe has also been honoured with the titles Ananta Shree and Prabal Janasewa Shree, the latter awarded by the former President of Nepal, Dr. Ram Baran Yadav, in recognition of his service to society.`,
+  },
+  {
+    title: "Shaktipat Acharya",
+    sub: "Transmission of Kundalini Awakening",
+    teaser: "The sacred capacity to awaken dormant spiritual energy within a sincere seeker.",
+    body: `Śakti refers to the primordial spiritual energy, often described as Kundalini, while pāta signifies descent. Shaktipat is the sacred transmission through which a realized Guru awakens this dormant energy within a sincere seeker.\n\nJagadguru Mahayogi Siddhababa is recognized as a Shaktipat Acharya, imparting this awakening through various means — glance, mantra, touch, or pure intention — according to the readiness of the seeker. This transmission initiates the inner journey of transformation under the guidance of the Guru's grace.`,
+  },
+  {
+    title: "Samādhi Siddha Puruṣa",
+    sub: "Master of Samādhi",
+    teaser: "His Holiness attained mastery of samādhi from a very young age.",
+    body: `His Holiness attained mastery of samādhi — the highest state of yogic absorption — from a very young age. In later years, at the request of his disciples, he publicly demonstrated bhū-samādhi (underground samādhi) on multiple occasions, drawing wide attention to the experiential depth of yogic realization described in the Vedic tradition.\n\nThese demonstrations have inspired renewed inquiry into Vedic science and direct spiritual experience, highlighting the practical power of disciplined inner practice.`,
+  },
+  {
+    title: "Ayurveda Acharya",
+    sub: "Master of the Ancient Science of Life",
+    teaser: "A master of Āyurveda including rare diagnostic methods such as Nāḍi Vijñāna.",
+    body: `His Holiness is a master of Āyurveda, the ancient science of life and holistic healing. He teaches classical Ayurvedic knowledge, including diagnostic methods that are increasingly rare today, such as Nāḍi Vijñāna (pulse diagnosis).\n\nUnder his guidance, Ayurvedic remedies are prepared and distributed to support free and accessible healthcare for those in need. He is also working toward the establishment of Nepal's first Ayurveda University, dedicated to preserving and advancing this sacred medical tradition.`,
+  },
+  {
+    title: "Master of Himalayan Siddha Mahayog",
+    sub: "Brahmavidyā — Knowledge of Ultimate Truth",
+    teaser: "A powerful meditative path revived from Himalayan sages, now accessible to seekers worldwide.",
+    body: `Himalayan Siddha Mahayog is a powerful and accessible meditative path, recognized as Brahmavidyā — the knowledge of ultimate truth. This practice unfolds through the grace of the Guru and uniquely begins with Kundalini awakening (Shaktipat). Mahayog activates a complete system for physical, mental, and spiritual wellbeing, ultimately guiding the practitioner toward self-realization.\n\nJagadguru Mahayogi Siddhababa revived this sacred practice, which had been concealed and preserved by Himalayan sages for over four centuries. Through his guidance, it is now accessible to seekers worldwide. This living Vedic tradition has been transmitted through an unbroken lineage of enlightened Gurus. His Holiness serves as the present Āchārya of this Brahmavidyā, having received the responsibility from his revered Guru, His Holiness Narayan Das Ji Maharaj.`,
+  },
+];
+
 const SAMADHI_SLIDES = [
   { src: "guru-samadhi-pokhara.jpg", alt: "Siddhababa in Bhu Samadhi — Pokhara", caption: "Bhu Samadhi · Pokhara" },
   { src: "guru-bhu-samadhi.jpg",    alt: "Siddhababa in underground Bhu Samadhi", caption: "Bhu Samadhi · Underground" },
@@ -44,6 +77,7 @@ const SAMADHI_SLIDES = [
 
 export default function FounderGuru() {
   const [samadhiSlide, setSamadhiSlide] = useState(0);
+  const [openCredential, setOpenCredential] = useState<number | null>(null);
 
   return (
     <div className="bg-[#faf9f6] text-[#3d3830]">
@@ -91,10 +125,10 @@ export default function FounderGuru() {
               </h2>
               <div className="h-px bg-[#e8dece] mb-6" />
               <p className="text-base text-[#5a5248] leading-relaxed mb-5">
-                Anant Shri Vibhushit Jagadguru Ramanandacharya Swami Ramakrishnacharya Ji Maharaj is popularly known as Jagadguru Mahayogi Siddhababa — and simply as <span className="italic text-[#3d3830]">Gurudev</span> by his students. He is a realized saint in the Ramanandi (Sri Vaishnava) tradition.
+                Jagadguru Mahayogi Siddhababa — known as <span className="italic text-[#3d3830]">Gurudev</span> by his students — is a Himalayan yogi, Tridaṇḍa-dhārī sādhu, and master of yoga. Deeply versed in the scriptures, Kundalini yoga, classical yogic disciplines, and world religions, he embodies a life of renunciation, realization, and service.
               </p>
               <p className="text-base text-[#5a5248] leading-relaxed mb-8">
-                His Holiness is a Tridandi sannyasi renowned for his mastery of scriptures, yoga, Ayurveda, and Kundalini science. Through his teaching, personal guidance, and the institutions he has established, he guides individuals and communities seeking well-being, purpose, and inner peace.
+                Through his teaching, personal guidance, and the institutions he has established, he guides individuals and communities seeking well-being, purpose, and inner peace — drawing seekers from across Nepal, India, and the world.
               </p>
 
               {/* Central quote */}
@@ -118,6 +152,38 @@ export default function FounderGuru() {
               />
             </div>
 
+          </div>
+
+          {/* ── SPIRITUAL CREDENTIALS ACCORDION ── */}
+          <div className="mb-20">
+            <p className="text-[10px] uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-5">Titles &amp; Recognitions</p>
+            <div className="divide-y divide-[#e8dece] border border-[#e8dece] rounded-2xl overflow-hidden">
+              {CREDENTIALS.map((c, i) => (
+                <div key={i} className="bg-white">
+                  <button
+                    onClick={() => setOpenCredential(openCredential === i ? null : i)}
+                    className="w-full flex items-start justify-between gap-4 px-6 py-5 text-left hover:bg-[#fdf6ec] transition-colors"
+                  >
+                    <div className="flex-1 min-w-0">
+                      <p className="font-['Cormorant_Garamond'] text-xl font-semibold text-[#3d3830] leading-tight mb-0.5">{c.title}</p>
+                      <p className="text-xs uppercase tracking-[0.2em] text-[#b8892a] font-medium">{c.sub}</p>
+                    </div>
+                    <ChevronDown
+                      className={`shrink-0 mt-1 w-4 h-4 text-[#b8892a] transition-transform duration-200 ${openCredential === i ? "rotate-180" : ""}`}
+                      strokeWidth={1.5}
+                    />
+                  </button>
+                  {openCredential === i && (
+                    <div className="px-6 pb-6 bg-[#fdf6ec]/50">
+                      <p className="text-sm text-[#7a7068] leading-relaxed mb-3 italic border-l-2 border-[#b8892a]/30 pl-4">{c.teaser}</p>
+                      {c.body.split("\n\n").map((para, j) => (
+                        <p key={j} className="text-sm text-[#5a5248] leading-relaxed mb-3 last:mb-0">{para}</p>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
           </div>
 
           {/* ── SECTION ANCHOR NAV ── */}
