@@ -3,15 +3,18 @@ import Nav from "@/components/Nav";
 import { Link } from "wouter";
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 
-const GALLERY = [
-  { src: "ashram-hanuman-sunset.jpg",  alt: "Hanuman statue silhouette at golden sunset",        caption: "Sewa Pith Ashram · Nepal" },
-  { src: "ashram-hanuman-wide.jpg",    alt: "Ashram grounds with Hanuman statue and green lawn",  caption: "Ashram Grounds" },
-  { src: "ashram-prasad-2.jpg",        alt: "Devotees gathered for prasad — a moment of joy",    caption: "Community Prasad" },
-  { src: "ashram-garden.jpg",          alt: "Devotees tending the ashram herb garden",            caption: "Sacred Garden" },
-  { src: "ashram-cows-sunset.jpg",     alt: "Sacred cows grazing at sunset on ashram grounds",   caption: "Goshala at Sunset" },
-  { src: "ashram-cows-1.jpg",          alt: "Devotee with sacred cows at the ashram gate",       caption: "Caring for the Sacred" },
-  { src: "ashram-prasad-1.jpg",        alt: "Devotees receiving prasad at the long community table", caption: "Prasad Seva" },
-  { src: "ashram-hanuman-close.jpg",   alt: "The golden Hanuman statue at the ashram temple",    caption: "The Hanuman Temple" },
+const GALLERY_TOP = [
+  { src: "ashram-hanuman-sunset.jpg", alt: "Hanuman statue silhouette at golden sunset",       caption: "Sewa Pith Ashram · Nepal" },
+  { src: "ashram-cows-sunset.jpg",    alt: "Sacred cows grazing at sunset on ashram grounds",  caption: "Goshala at Sunset" },
+  { src: "ashram-hanuman-wide.jpg",   alt: "Ashram grounds with Hanuman statue and green lawn", caption: "Ashram Grounds" },
+  { src: "ashram-garden.jpg",         alt: "Devotees tending the ashram herb garden",           caption: "Sacred Garden" },
+];
+
+const GALLERY_BOT = [
+  { src: "ashram-prasad-2.jpg",     alt: "Devotees gathered joyfully for prasad",                  caption: "Community Prasad" },
+  { src: "ashram-prasad-1.jpg",     alt: "Devotees receiving prasad at the long community table",  caption: "Prasad Seva" },
+  { src: "ashram-cows-1.jpg",       alt: "Devotee caring for sacred cows at the ashram gate",     caption: "Caring for the Sacred" },
+  { src: "ashram-hanuman-close.jpg", alt: "The golden Hanuman statue at the ashram temple",        caption: "The Hanuman Temple" },
 ];
 
 const b = import.meta.env.BASE_URL;
@@ -151,11 +154,12 @@ const INTERNATIONAL_CENTERS = [
 export default function Ashram() {
   const [topIdx, setTopIdx] = useState(0);
   const [botIdx, setBotIdx] = useState(0);
-  const n = GALLERY.length;
-  const prevTop = () => setTopIdx((i) => (i - 1 + n) % n);
-  const nextTop = () => setTopIdx((i) => (i + 1) % n);
-  const prevBot = () => setBotIdx((i) => (i - 1 + n) % n);
-  const nextBot = () => setBotIdx((i) => (i + 1) % n);
+  const nt = GALLERY_TOP.length;
+  const nb = GALLERY_BOT.length;
+  const prevTop = () => setTopIdx((i) => (i - 1 + nt) % nt);
+  const nextTop = () => setTopIdx((i) => (i + 1) % nt);
+  const prevBot = () => setBotIdx((i) => (i - 1 + nb) % nb);
+  const nextBot = () => setBotIdx((i) => (i + 1) % nb);
 
   return (
     <div className="bg-[#faf9f6] text-[#3d3830]" style={{ scrollBehavior: "smooth" }}>
@@ -302,25 +306,23 @@ export default function Ashram() {
           <div className="relative overflow-hidden rounded-2xl mb-3" style={{ height: "360px" }}>
             <img
               key={topIdx}
-              src={`${b}images/${GALLERY[topIdx].src}`}
-              alt={GALLERY[topIdx].alt}
+              src={`${b}images/${GALLERY_TOP[topIdx].src}`}
+              alt={GALLERY_TOP[topIdx].alt}
               className="w-full h-full object-cover transition-opacity duration-500"
               style={{ filter: "brightness(1.06) saturate(1.18) contrast(1.02)" }}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/35 to-transparent" />
             <p className="absolute bottom-4 left-5 text-xs text-white/90 tracking-[0.2em] uppercase font-medium">
-              {GALLERY[topIdx].caption}
+              {GALLERY_TOP[topIdx].caption}
             </p>
-            {/* Arrows */}
             <button onClick={prevTop} className="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-black/30 hover:bg-black/50 flex items-center justify-center transition-colors">
               <ChevronLeft className="w-5 h-5 text-white" strokeWidth={1.5} />
             </button>
             <button onClick={nextTop} className="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-black/30 hover:bg-black/50 flex items-center justify-center transition-colors">
               <ChevronRight className="w-5 h-5 text-white" strokeWidth={1.5} />
             </button>
-            {/* Dots */}
             <div className="absolute bottom-4 right-5 flex gap-1.5">
-              {GALLERY.map((_, i) => (
+              {GALLERY_TOP.map((_, i) => (
                 <button key={i} onClick={() => setTopIdx(i)} className={`w-1.5 h-1.5 rounded-full transition-all ${i === topIdx ? "bg-white scale-125" : "bg-white/40"}`} />
               ))}
             </div>
@@ -330,7 +332,7 @@ export default function Ashram() {
           <div className="relative">
             <div className="grid grid-cols-3 gap-3">
               {[0, 1, 2].map((offset) => {
-                const img = GALLERY[(botIdx + offset) % n];
+                const img = GALLERY_BOT[(botIdx + offset) % nb];
                 return (
                   <div key={offset} className="relative overflow-hidden rounded-2xl" style={{ height: "240px" }}>
                     <img
@@ -345,16 +347,14 @@ export default function Ashram() {
                 );
               })}
             </div>
-            {/* Arrows */}
             <button onClick={prevBot} className="absolute -left-4 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white border border-[#e8dece] shadow-sm hover:border-[#b8892a] flex items-center justify-center transition-colors z-10">
               <ChevronLeft className="w-4 h-4 text-[#b8892a]" strokeWidth={1.5} />
             </button>
             <button onClick={nextBot} className="absolute -right-4 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white border border-[#e8dece] shadow-sm hover:border-[#b8892a] flex items-center justify-center transition-colors z-10">
               <ChevronRight className="w-4 h-4 text-[#b8892a]" strokeWidth={1.5} />
             </button>
-            {/* Dots */}
             <div className="flex justify-center gap-1.5 mt-4">
-              {GALLERY.map((_, i) => (
+              {GALLERY_BOT.map((_, i) => (
                 <button key={i} onClick={() => setBotIdx(i)} className={`w-1.5 h-1.5 rounded-full transition-all ${i === botIdx ? "bg-[#b8892a] scale-125" : "bg-[#d4a843]/30"}`} />
               ))}
             </div>
