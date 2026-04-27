@@ -41,7 +41,7 @@ const CREDENTIALS = [
   {
     title: "Jagadguru",
     sub: "Guru of the World",
-    teaser: "A title reserved for rare masters whose influence extends beyond sectarian boundaries.",
+    teaser: "A title reserved for a rare master whose influence extends beyond sectarian boundaries.",
     body: `The term "Jagadguru" is derived from the Sanskrit jagat (world or cosmos) and guru (one who dispels darkness). In 2019, this title was formally bestowed upon His Holiness by an international assembly of realized sages representing all six major Sanātana Dharma lineages: Vaiṣṇavism, Śaivism, Śāktism, Smārtism, Sauryaism, and Gāṇapatyaism.\n\nDuring the ceremony, his mastery of samādhi, his capacity to guide others into higher states of awareness, and his completion of the Shree Ram Tārak Brahma Mahāyajña were especially noted. His monastic name was formally conferred as Jagadguru Shree Ramanandacharya Swami Shree Ramakrishnacharya Ji Maharaj, and he was bestowed the tridaṇḍam — the sacred staff symbolizing complete dedication of body, mind, and speech to divine service.\n\nHe has also been honoured with the titles Ananta Shree and Prabal Janasewa Shree, the latter awarded by the former President of Nepal, Dr. Ram Baran Yadav, in recognition of his service to society.`,
   },
   {
