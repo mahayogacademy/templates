@@ -114,6 +114,16 @@ export default function Projects() {
             </p>
           </div>
 
+          {/* Temple image */}
+          <div className="mb-14 rounded-2xl overflow-hidden">
+            <img
+              src={`${b}images/hanuman-temple.png`}
+              alt="A Hanuman temple in Nepal"
+              className="w-full object-cover"
+              style={{ height: "380px" }}
+            />
+          </div>
+
           {/* Three pillars grid */}
           <div className="grid md:grid-cols-3 gap-6 mb-16">
             {HANUMAN_FEATURES.map((f, i) => (

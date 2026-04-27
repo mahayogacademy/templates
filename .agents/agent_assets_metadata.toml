@@ -198,3 +198,9 @@ id = "pPxpAZjqLeqT4kKREfg-q"
 uri = "file://artifacts/mahayog-academy/public/images/ashram-life-meals.png"
 type = "image"
 title = "generated_image"
+
+[[generated]]
+id = "fGF6OXBol6O8CbEsiScsr"
+uri = "file://artifacts/mahayog-academy/public/images/hanuman-temple.png"
+type = "image"
+title = "generated_image"
