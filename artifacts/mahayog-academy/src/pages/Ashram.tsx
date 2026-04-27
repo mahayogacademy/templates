@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Nav from "@/components/Nav";
 import { Link } from "wouter";
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
@@ -163,6 +163,13 @@ const INTERNATIONAL_CENTERS = [
 export default function Ashram() {
   const [topIdx, setTopIdx] = useState(0);
   const [botIdx, setBotIdx] = useState(0);
+
+  useEffect(() => {
+    [...GALLERY_TOP, ...GALLERY_BOT].forEach(({ src }) => {
+      const img = new Image();
+      img.src = `${b}images/${src}`;
+    });
+  }, []);
   const nt = GALLERY_TOP.length;
   const nb = GALLERY_BOT.length;
   const prevTop = () => setTopIdx((i) => (i - 1 + nt) % nt);
