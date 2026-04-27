@@ -62,7 +62,7 @@ export default function Lineage() {
       {/* ── HERO ── */}
       <section className="relative h-[58vh] min-h-[400px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src={`${b}images/guru-hero-new.jpg`} alt="" aria-hidden className="w-full h-full object-cover" style={{ objectPosition: "center 30%" }} />
+          <img src={`${b}images/lineage-hero.png`} alt="" aria-hidden className="w-full h-full object-cover" style={{ objectPosition: "center center" }} />
           <div className="absolute inset-0 bg-gradient-to-b from-[#1a0f05]/60 via-[#1a0f05]/72 to-[#1a0f05]/88" />
         </div>
         <div className="relative z-10 text-center px-6">
