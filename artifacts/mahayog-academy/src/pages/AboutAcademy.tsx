@@ -166,7 +166,7 @@ export default function AboutAcademy() {
               {
                 title: "Programs & Courses",
                 desc: "Discover courses in yoga, meditation, and Vedic philosophy designed for seekers at every stage of the journey.",
-                img: `${import.meta.env.BASE_URL}images/meditation-nature.png`,
+                img: `${import.meta.env.BASE_URL}images/discover-programs.png`,
                 tag: "Learn",
                 href: "#",
               },
