@@ -241,7 +241,15 @@ export default function FounderGuru() {
               </div>
 
               {/* Row 4 — Recognition and Blessing */}
-              <div className="grid md:grid-cols-[1fr_340px] gap-10 items-center">
+              <div className="grid md:grid-cols-[340px_1fr] gap-10 items-center">
+                <div className="rounded-2xl overflow-hidden shadow-sm shadow-[#b8892a]/10">
+                  <img
+                    src={`${b}images/guru-blessing.jpg`}
+                    alt="Siddhababa receiving recognition after Samadhi"
+                    className="w-full object-cover"
+                    style={{ maxHeight: "400px", objectPosition: "top" }}
+                  />
+                </div>
                 <div>
                   <p className="text-[10px] uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-3">Recognition · 2019</p>
                   <h3 className="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#3d3830] mb-4 leading-snug">
@@ -253,14 +261,6 @@ export default function FounderGuru() {
                   <p className="text-base text-[#5a5248] leading-relaxed">
                     Under his own Guru (Param Pujya Sri Narayan Das Ji Maharaj of Nasik), he revived Surat-Shabd Yoga and formulated it as <span className="font-medium text-[#3d3830]">Himalayan Siddha Mahayog</span> — sacred knowledge once known only to Himalayan ascetics, now made accessible to sincere seekers worldwide.
                   </p>
-                </div>
-                <div className="rounded-2xl overflow-hidden shadow-sm shadow-[#b8892a]/10">
-                  <img
-                    src={`${b}images/guru-blessing.jpg`}
-                    alt="Siddhababa receiving recognition after Samadhi"
-                    className="w-full object-cover"
-                    style={{ maxHeight: "400px", objectPosition: "top" }}
-                  />
                 </div>
               </div>
 
