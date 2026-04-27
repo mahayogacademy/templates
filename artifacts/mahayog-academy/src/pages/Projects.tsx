@@ -124,8 +124,28 @@ export default function Projects() {
         </div>
       </section>
 
+      {/* ── SECTION ANCHOR NAV ── */}
+      <div className="bg-[#faf9f6] border-b border-[#e8dece]">
+        <div className="max-w-5xl mx-auto px-6 py-3">
+          <div className="flex border border-[#e8dece] rounded-full overflow-hidden">
+            {[
+              { label: "108 Hanuman Temples", anchor: "#project-01" },
+              { label: "Ram Mandir at Devghat", anchor: "#project-02" },
+            ].map((item, i, arr) => (
+              <a
+                key={item.anchor}
+                href={item.anchor}
+                className={`flex-1 text-center py-2.5 text-sm text-[#5a5248] hover:bg-[#fdf6ec] hover:text-[#b8892a] transition-colors tracking-wide ${i < arr.length - 1 ? "border-r border-[#e8dece]" : ""}`}
+              >
+                {item.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+
       {/* ── PROJECT 01: 108 HANUMAN TEMPLES ── */}
-      <section className="py-24 px-6">
+      <section id="project-01" className="py-24 px-6 scroll-mt-16">
         <div className="max-w-5xl mx-auto">
 
           {/* Project header + portrait image */}
@@ -269,7 +289,7 @@ export default function Projects() {
       </div>
 
       {/* ── PROJECT 02: RAM MANDIR ── */}
-      <section className="py-24 px-6">
+      <section id="project-02" className="py-24 px-6 scroll-mt-16">
         <div className="max-w-5xl mx-auto">
 
           {/* Project header */}
