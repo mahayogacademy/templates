@@ -67,6 +67,12 @@ const CREDENTIALS = [
     teaser: "A powerful meditative path revived from Himalayan sages, now accessible to seekers worldwide.",
     body: `Himalayan Siddha Mahayog is a powerful and accessible meditative path, recognized as Brahmavidyā — the knowledge of ultimate truth. This practice unfolds through the grace of the Guru and uniquely begins with Kundalini awakening (Shaktipat). Mahayog activates a complete system for physical, mental, and spiritual wellbeing, ultimately guiding the practitioner toward self-realization.\n\nJagadguru Mahayogi Siddhababa revived this sacred practice, which had been concealed and preserved by Himalayan sages for over four centuries. Through his guidance, it is now accessible to seekers worldwide. This living Vedic tradition has been transmitted through an unbroken lineage of enlightened Gurus. His Holiness serves as the present Āchārya of this Brahmavidyā, having received the responsibility from his revered Guru, His Holiness Narayan Das Ji Maharaj.`,
   },
+  {
+    title: "Prabal Janasewa Shree",
+    sub: "State Honour for Exemplary Public Service — Awarded by the President of Nepal",
+    teaser: "A title of national distinction conferred by the President of Nepal for selfless service to society.",
+    body: `Prabal Janasewa Shree is one of Nepal's most distinguished state honours, awarded for exemplary, selfless service to the public.\n\nThis title was personally conferred upon His Holiness Jagadguru Mahayogi Siddhababa by Dr. Ram Baran Yadav, former President of Nepal, in recognition of His Holiness's tireless contributions to the spiritual, cultural, educational, and humanitarian welfare of the nation and its people.`,
+  },
 ];
 
 const JAGADGURU_SLIDES = [
@@ -591,6 +597,7 @@ export default function FounderGuru() {
                 { label: "Green Revolution for Nepal's agricultural empowerment and independence", note: "Ecology", img: "initiative-green-revolution.png", href: null },
                 { label: "Jagadguru Shriramanandacharya Gurukul (Grades 6–12)", note: "Education", img: "initiative-gurukul.png", href: "/gurukul" },
                 { label: "Nepal's first Ayurveda University", note: "Education", img: "initiative-ayurveda.png", href: null },
+                { label: "Restoration of the Cow as Nepal's National Animal", note: "Cultural & Ecological Advocacy", img: "initiative-green-revolution.png", href: null },
                 { label: "108 Hanuman Temples across Nepal", note: "Sacred Infrastructure", img: "initiative-hanuman-temples.jpg", pos: "center center", href: "/projects#project-01" },
                 { label: "A historic Ram Temple in Nepal", note: "Sacred Infrastructure", img: "ram-mandir-1.jpg", pos: "center center", href: "/projects#project-02" },
               ].map((item, i) => {
