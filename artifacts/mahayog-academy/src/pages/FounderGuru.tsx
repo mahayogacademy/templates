@@ -108,12 +108,12 @@ export default function FounderGuru() {
       <section className="relative h-[58vh] min-h-[400px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src={`${b}images/saint-siddhababa.png`}
+            src={`${b}images/guru-hero-new.jpg`}
             alt=""
             aria-hidden
-            className="w-full h-full object-cover object-top"
+            className="w-full h-full object-cover object-center"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#1a0f05]/55 via-[#1a0f05]/65 to-[#1a0f05]/80" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#1a0f05]/60 via-[#1a0f05]/70 to-[#1a0f05]/85" />
         </div>
         <div className="relative z-10 text-center px-6">
           <div className="flex items-center justify-center gap-3 mb-5">
