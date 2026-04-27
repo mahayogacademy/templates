@@ -210,3 +210,15 @@ id = "jagX4MJHKq_CiRaVpr5oy"
 uri = "file://artifacts/mahayog-academy/public/images/hanuman-temple-portrait.png"
 type = "image"
 title = "generated_image"
+
+[[generated]]
+id = "dUZYF9AXiG26DUeA66CGS"
+uri = "file://artifacts/mahayog-academy/public/images/land-contribution.png"
+type = "image"
+title = "nepal land hillside"
+
+[[generated]]
+id = "INz7Gmo4HTZsdO3E2j4IO"
+uri = "file://artifacts/mahayog-academy/public/images/financial-support.png"
+type = "image"
+title = "devotional offering temple"

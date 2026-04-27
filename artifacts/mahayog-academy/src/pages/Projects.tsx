@@ -163,9 +163,12 @@ export default function Projects() {
             <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10">
               <div>
                 <p className="text-[10px] uppercase tracking-[0.3em] text-[#d4a843] font-semibold mb-3">Support This Mission</p>
-                <h3 className="font-['Cormorant_Garamond'] text-3xl md:text-4xl font-light text-[#faf9f6] leading-snug max-w-xl">
+                <h3 className="font-['Cormorant_Garamond'] text-3xl md:text-4xl font-light text-[#faf9f6] leading-snug max-w-xl mb-3">
                   Be Part of Building Something Sacred
                 </h3>
+                <p className="text-sm text-[#9a8f84] leading-relaxed max-w-lg">
+                  When you contribute to this mission, your gift outlives you. Each temple becomes a living center of prayer, learning, and community — a legacy rooted in dharma for generations to come.
+                </p>
               </div>
               <div className="shrink-0">
                 <Link href="/contact">
@@ -180,17 +183,23 @@ export default function Projects() {
             {/* Divider */}
             <div className="h-px bg-white/10 mb-8" />
 
-            {/* Bottom row: contribution types inline */}
-            <div className="flex flex-col md:flex-row gap-8 md:gap-16">
+            {/* Bottom row: contribution types with images */}
+            <div className="flex flex-col md:flex-row gap-6 md:gap-8">
               <div className="flex-1">
-                <p className="text-[10px] uppercase tracking-[0.25em] text-[#d4a843] font-semibold mb-2">Land</p>
-                <p className="font-['Cormorant_Garamond'] text-lg font-semibold text-[#e8dece] mb-1">Land Contribution</p>
+                <div className="rounded-xl overflow-hidden mb-4 h-44">
+                  <img src={`${b}images/land-contribution.png`} alt="Land contribution" className="w-full h-full object-cover" />
+                </div>
+                <p className="text-[10px] uppercase tracking-[0.25em] text-[#d4a843] font-semibold mb-1">Land</p>
+                <p className="font-['Cormorant_Garamond'] text-lg font-semibold text-[#e8dece] mb-2">Land Contribution</p>
                 <p className="text-sm text-[#9a8f84] leading-relaxed">Donate private land, facilitate government allocation, or help identify and restore historic temple sites across Nepal.</p>
               </div>
               <div className="w-px bg-white/10 hidden md:block" />
               <div className="flex-1">
-                <p className="text-[10px] uppercase tracking-[0.25em] text-[#d4a843] font-semibold mb-2">Finance</p>
-                <p className="font-['Cormorant_Garamond'] text-lg font-semibold text-[#e8dece] mb-1">Financial Support</p>
+                <div className="rounded-xl overflow-hidden mb-4 h-44">
+                  <img src={`${b}images/financial-support.png`} alt="Financial support" className="w-full h-full object-cover" />
+                </div>
+                <p className="text-[10px] uppercase tracking-[0.25em] text-[#d4a843] font-semibold mb-1">Finance</p>
+                <p className="font-['Cormorant_Garamond'] text-lg font-semibold text-[#e8dece] mb-2">Financial Support</p>
                 <p className="text-sm text-[#9a8f84] leading-relaxed">Monetary or in-kind donations toward construction, educational programming, sadhana activities, and ongoing temple maintenance.</p>
               </div>
             </div>
