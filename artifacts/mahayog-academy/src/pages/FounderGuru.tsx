@@ -154,6 +154,25 @@ export default function FounderGuru() {
 
           </div>
 
+          {/* ── SECTION ANCHOR NAV ── */}
+          <div className="flex flex-wrap gap-0 border border-[#e8dece] rounded-xl overflow-hidden mb-12">
+            {[
+              { label: "Life", anchor: "#life" },
+              { label: "Teachings", anchor: "#teachings" },
+              { label: "Key Initiatives", anchor: "#initiatives" },
+              { label: "Yajñas", anchor: "#yajnas" },
+              { label: "Ashrams", anchor: "#ashrams" },
+            ].map((item, i, arr) => (
+              <a
+                key={item.anchor}
+                href={item.anchor}
+                className={`flex-1 text-center py-3 text-sm text-[#5a5248] hover:bg-[#fdf6ec] hover:text-[#b8892a] transition-colors tracking-wide ${i < arr.length - 1 ? "border-r border-[#e8dece]" : ""}`}
+              >
+                {item.label}
+              </a>
+            ))}
+          </div>
+
           {/* ── SPIRITUAL CREDENTIALS ACCORDION ── */}
           <div className="mb-20">
             <p className="text-[10px] uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-5">Titles &amp; Recognitions</p>
@@ -184,25 +203,6 @@ export default function FounderGuru() {
                 </div>
               ))}
             </div>
-          </div>
-
-          {/* ── SECTION ANCHOR NAV ── */}
-          <div className="flex flex-wrap gap-0 border border-[#e8dece] rounded-xl overflow-hidden mb-20">
-            {[
-              { label: "Life", anchor: "#life" },
-              { label: "Teachings", anchor: "#teachings" },
-              { label: "Key Initiatives", anchor: "#initiatives" },
-              { label: "Yajñas", anchor: "#yajnas" },
-              { label: "Ashrams", anchor: "#ashrams" },
-            ].map((item, i, arr) => (
-              <a
-                key={item.anchor}
-                href={item.anchor}
-                className={`flex-1 text-center py-3 text-sm text-[#5a5248] hover:bg-[#fdf6ec] hover:text-[#b8892a] transition-colors tracking-wide ${i < arr.length - 1 ? "border-r border-[#e8dece]" : ""}`}
-              >
-                {item.label}
-              </a>
-            ))}
           </div>
 
           {/* ── LIFE SECTION ── */}
