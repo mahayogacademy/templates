@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Nav from "@/components/Nav";
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 import { ArrowRight, ChevronLeft, ChevronRight, ChevronDown, Flame, Heart, Shield, Sparkles, Users } from "lucide-react";
 
 const b = import.meta.env.BASE_URL;
@@ -98,6 +98,15 @@ export default function FounderGuru() {
   const [samadhiSlide, setSamadhiSlide] = useState(0);
   const [jagadguruSlide, setJagadguruSlide] = useState(0);
   const [openCredential, setOpenCredential] = useState<number | null>(null);
+  const [, navigate] = useLocation();
+
+  function goToAnchor(path: string, anchor: string) {
+    navigate(path);
+    setTimeout(() => {
+      const el = document.getElementById(anchor);
+      if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 120);
+  }
 
   return (
     <div className="bg-[#faf9f6] text-[#3d3830]">
@@ -578,16 +587,28 @@ export default function FounderGuru() {
                     </div>
                   </>
                 );
-                return item.href ? (
-                  <Link key={i} href={item.href} onClick={() => { if (!item.href?.includes('#')) window.scrollTo(0, 0); }}>
+                if (!item.href) {
+                  return (
+                    <div key={i} className="flex flex-col bg-[#faf9f6] border border-[#e8dece] rounded-xl overflow-hidden group">
+                      {inner}
+                    </div>
+                  );
+                }
+                const [path, anchor] = item.href.split('#');
+                return anchor ? (
+                  <div
+                    key={i}
+                    className="flex flex-col bg-[#faf9f6] border border-[#e8dece] rounded-xl overflow-hidden group cursor-pointer hover:border-[#b8892a]/50 hover:shadow-md transition-all duration-300"
+                    onClick={() => goToAnchor(path, anchor)}
+                  >
+                    {inner}
+                  </div>
+                ) : (
+                  <Link key={i} href={item.href} onClick={() => window.scrollTo(0, 0)}>
                     <div className="flex flex-col bg-[#faf9f6] border border-[#e8dece] rounded-xl overflow-hidden group cursor-pointer hover:border-[#b8892a]/50 hover:shadow-md transition-all duration-300">
                       {inner}
                     </div>
                   </Link>
-                ) : (
-                  <div key={i} className="flex flex-col bg-[#faf9f6] border border-[#e8dece] rounded-xl overflow-hidden group">
-                    {inner}
-                  </div>
                 );
               })}
             </div>
