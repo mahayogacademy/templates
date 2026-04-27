@@ -590,11 +590,17 @@ export default function FounderGuru() {
               ))}
             </div>
 
-            <div className="mt-10 border-l-2 border-[#b8892a]/40 pl-6 py-1">
+            <div className="mt-10 border-l-2 border-[#b8892a]/40 pl-6 py-1 mb-10">
               <p className="text-base italic text-[#5a5248] leading-relaxed font-['Cormorant_Garamond'] text-lg">
                 Across all these initiatives, His Holiness emphasizes that spiritual realization finds its fullest expression in service — to humanity, to culture, and to the natural world.
               </p>
             </div>
+
+            <Link href="/events">
+              <span className="inline-flex items-center gap-2 px-6 py-3 border border-[#b8892a] text-[#b8892a] text-sm rounded-full hover:bg-[#b8892a] hover:text-white transition-colors cursor-pointer">
+                View Upcoming Events <ArrowRight className="w-4 h-4" strokeWidth={1.5} />
+              </span>
+            </Link>
 
           </div>
         </div>
