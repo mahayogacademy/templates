@@ -362,9 +362,10 @@ export default function Projects() {
           </div>
 
           {/* What it will be */}
-          <div className="bg-[#1a0f05] rounded-2xl px-10 py-10 mb-10">
-            <p className="text-[10px] uppercase tracking-[0.3em] text-[#e8c56a] font-semibold mb-6">A Spiritual and Educational Landmark</p>
-            <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-y-4 gap-x-8">
+          <div className="mb-10">
+            <p className="text-[10px] uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-3">A Spiritual and Educational Landmark</p>
+            <div className="h-px bg-[#e8dece] mb-0" />
+            <div className="grid sm:grid-cols-2 md:grid-cols-3">
               {[
                 "A center for devotion",
                 "A hub for Vedic knowledge",
@@ -373,9 +374,11 @@ export default function Projects() {
                 "A spiritual pilgrimage destination",
                 "A symbol of science, spirituality, and culture",
               ].map((item, i) => (
-                <div key={i} className="flex items-start gap-3">
-                  <div className="w-1 h-1 rounded-full bg-[#e8c56a] mt-1.5 shrink-0" />
-                  <p className="text-sm text-[#f0e4c8]">{item}</p>
+                <div key={i} className="flex items-center gap-3 py-4 border-b border-[#e8dece] pr-6">
+                  <svg width="7" height="7" viewBox="0 0 24 24" fill="#b8892a" className="shrink-0">
+                    <path d="M12 2C12 2 15 9 22 12C22 12 15 15 12 22C12 22 9 15 2 12C2 12 9 9 12 2Z"/>
+                  </svg>
+                  <p className="font-['Cormorant_Garamond'] text-base font-semibold text-[#3d3830]">{item}</p>
                 </div>
               ))}
             </div>
