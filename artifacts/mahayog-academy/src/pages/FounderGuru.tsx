@@ -574,7 +574,7 @@ export default function FounderGuru() {
                 {
                   year: "2025",
                   name: "Ramchandi Mahāyajña",
-                  desc: "Invoking divine grace, protection, and inner transformation through sacred ceremony dedicated to Maa Chandi and Lord Ram.",
+                  desc: "Invoking Maa Chandi and Lord Ram for protection, inner transformation, and the welfare of all.",
                 },
               ].map((yajna, i) => (
                 <div key={i} className="flex gap-6 items-start p-6 bg-white border border-[#e8dece] rounded-2xl">
