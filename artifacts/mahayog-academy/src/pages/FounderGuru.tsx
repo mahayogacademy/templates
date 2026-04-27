@@ -235,33 +235,6 @@ export default function FounderGuru() {
             </div>
           </div>
 
-          {/* ── MEET SIDDHABABA CTA ── */}
-          <div className="mb-20 rounded-2xl border border-[#e8dece] bg-white overflow-hidden">
-            <div className="flex flex-col md:flex-row items-center gap-10 p-8">
-              <div className="shrink-0 w-24 h-24 rounded-full overflow-hidden border-2 border-[#e8dece] shadow-md">
-                <img
-                  src={`${b}images/gurudev-download.jpg`}
-                  alt="His Holiness Jagadguru Mahayogi Siddhababa"
-                  className="w-full h-full object-cover object-top"
-                />
-              </div>
-              <div className="flex-1 text-center md:text-left">
-                <p className="text-[10px] uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-2">In Person</p>
-                <h3 className="font-['Cormorant_Garamond'] text-3xl font-light text-[#3d3830] mb-2 leading-snug">
-                  Meet Siddhababa
-                </h3>
-                <p className="text-sm text-[#5a5248] leading-relaxed max-w-lg mb-5">
-                  His Holiness holds audience, teachings, and darshan at the ashram and select global locations. View his schedule and find out how you can receive his guidance in person.
-                </p>
-                <Link href="/meet" onClick={() => window.scrollTo(0, 0)}>
-                  <span className="inline-flex items-center gap-2 px-7 py-3 bg-[#b8892a] text-white text-sm rounded-full hover:bg-[#9d7422] transition-colors cursor-pointer">
-                    View Schedule &amp; Darshan <ArrowRight className="w-4 h-4" strokeWidth={1.5} />
-                  </span>
-                </Link>
-              </div>
-            </div>
-          </div>
-
           {/* ── LIFE SECTION ── */}
           <div id="life" className="mb-24 scroll-mt-24">
 
@@ -427,6 +400,33 @@ export default function FounderGuru() {
 
             </div>
 
+          </div>
+
+          {/* ── MEET SIDDHABABA CTA ── */}
+          <div className="mb-24 rounded-2xl border border-[#e8dece] bg-white overflow-hidden">
+            <div className="flex flex-col md:flex-row items-center gap-10 p-8">
+              <div className="shrink-0 w-24 h-24 rounded-full overflow-hidden border-2 border-[#e8dece] shadow-md">
+                <img
+                  src={`${b}images/gurudev-download.jpg`}
+                  alt="His Holiness Jagadguru Mahayogi Siddhababa"
+                  className="w-full h-full object-cover object-top"
+                />
+              </div>
+              <div className="flex-1 text-center md:text-left">
+                <p className="text-[10px] uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-2">In Person</p>
+                <h3 className="font-['Cormorant_Garamond'] text-3xl font-light text-[#3d3830] mb-2 leading-snug">
+                  Meet Siddhababa
+                </h3>
+                <p className="text-sm text-[#5a5248] leading-relaxed max-w-lg mb-5">
+                  His Holiness holds audience, teachings, and darshan at the ashram and select global locations. View his schedule and find out how you can receive his guidance in person.
+                </p>
+                <Link href="/meet" onClick={() => window.scrollTo(0, 0)}>
+                  <span className="inline-flex items-center gap-2 px-7 py-3 bg-[#b8892a] text-white text-sm rounded-full hover:bg-[#9d7422] transition-colors cursor-pointer">
+                    View Schedule &amp; Darshan <ArrowRight className="w-4 h-4" strokeWidth={1.5} />
+                  </span>
+                </Link>
+              </div>
+            </div>
           </div>
 
           {/* Divider */}
