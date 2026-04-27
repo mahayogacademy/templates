@@ -640,28 +640,28 @@ export default function Ashram() {
 
             {/* ── Nepal ── */}
             <div className="md:pr-12 pb-10 md:pb-0">
-              <p className="text-[10px] uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-7">Nepal</p>
+              <p className="text-xs uppercase tracking-[0.25em] text-[#b8892a] font-medium mb-7">Nepal</p>
 
               {/* Head Ashram */}
               <div className="mb-7 pb-7 border-b border-[#e8dece]">
-                <span className="text-[9px] uppercase tracking-[0.2em] text-white bg-[#b8892a] px-2.5 py-1 rounded font-semibold inline-block mb-2">Head Ashram</span>
-                <p className="font-['Cormorant_Garamond'] text-xl font-semibold text-[#3d3830] leading-snug">
+                <span className="text-[10px] uppercase tracking-[0.2em] text-white bg-[#b8892a] px-2.5 py-1 rounded font-medium inline-block mb-3">Head Ashram</span>
+                <p className="font-['Cormorant_Garamond'] text-xl font-light text-[#3d3830] leading-snug">
                   Jagadguru Ramanadacharya Seva Peeth
                 </p>
-                <p className="text-[11px] text-[#9a8f84] italic mt-0.5">Shree Ram Tarak Brahma Peeth</p>
-                <p className="text-xs text-[#7a7068] mt-2">Baharachettra, Sunsari, Nepal</p>
+                <p className="text-sm text-[#9a8f84] italic mt-1">Shree Ram Tarak Brahma Peeth</p>
+                <p className="text-sm text-[#7a7068] mt-1">Baharachettra, Sunsari, Nepal</p>
               </div>
 
               {/* Other Nepal centers */}
               <div className="space-y-5">
                 {NEPAL_CENTERS.filter(c => !c.featured).map((c, i) => (
                   <div key={i} className="flex items-start gap-4">
-                    <div className="w-1 h-1 rounded-full bg-[#b8892a] mt-2 shrink-0" />
+                    <div className="w-1 h-1 rounded-full bg-[#b8892a] mt-2.5 shrink-0" />
                     <div>
-                      <p className="text-[11px] uppercase tracking-[0.18em] text-[#b8892a] font-semibold leading-none mb-1">{c.city}</p>
+                      <p className="font-['Cormorant_Garamond'] text-lg font-light text-[#3d3830] leading-snug">{c.city}</p>
                       {c.note
-                        ? <p className="text-sm text-[#5a5248]">{c.note}</p>
-                        : <p className="text-sm text-[#b0a89e] italic">Details coming soon</p>
+                        ? <p className="text-sm text-[#7a7068] mt-0.5">{c.note}</p>
+                        : <p className="text-sm text-[#b0a89e] italic mt-0.5">Details coming soon</p>
                       }
                     </div>
                   </div>
@@ -671,16 +671,16 @@ export default function Ashram() {
 
             {/* ── International ── */}
             <div className="md:pl-12 pt-10 md:pt-0">
-              <p className="text-[10px] uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-7">International</p>
+              <p className="text-xs uppercase tracking-[0.25em] text-[#b8892a] font-medium mb-7">International</p>
               <div className="space-y-5">
                 {INTERNATIONAL_CENTERS.map((c, i) => (
                   <div key={i} className="flex items-start gap-4">
-                    <div className="w-1 h-1 rounded-full bg-[#b8892a] mt-2 shrink-0" />
+                    <div className="w-1 h-1 rounded-full bg-[#b8892a] mt-2.5 shrink-0" />
                     <div>
-                      <p className="font-['Cormorant_Garamond'] text-lg font-semibold text-[#3d3830] leading-none mb-1">{c.country}</p>
+                      <p className="font-['Cormorant_Garamond'] text-lg font-light text-[#3d3830] leading-snug">{c.country}</p>
                       {c.cities.length > 0
-                        ? <p className="text-sm text-[#7a7068]">{c.cities.join(" · ")}</p>
-                        : <p className="text-sm text-[#b0a89e] italic">Details coming soon</p>
+                        ? <p className="text-sm text-[#7a7068] mt-0.5">{c.cities.join(" · ")}</p>
+                        : <p className="text-sm text-[#b0a89e] italic mt-0.5">Details coming soon</p>
                       }
                     </div>
                   </div>
