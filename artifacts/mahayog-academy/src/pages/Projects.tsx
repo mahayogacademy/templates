@@ -119,8 +119,8 @@ export default function Projects() {
               {/* Feature items — stacked below description */}
               <div>
                 {HANUMAN_FEATURES.map((f, i) => (
-                  <div key={i} className="flex gap-4 py-4 border-b border-[#e8dece]">
-                    <span className="font-['Cormorant_Garamond'] text-2xl font-light text-[#d4a843]/60 leading-none shrink-0 w-6 pt-0.5">{i + 1}</span>
+                  <div key={i} className="flex gap-4 py-4 border-b border-[#e8dece] pl-3 border-l-2 border-l-[#b8892a]">
+                    <span className="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#b8892a] leading-none shrink-0 w-6 pt-0.5">{i + 1}</span>
                     <div>
                       <p className="font-['Cormorant_Garamond'] text-lg font-semibold text-[#3d3830] leading-snug mb-1">{f.title}</p>
                       <p className="text-sm text-[#7a7068] leading-relaxed">{f.desc}</p>
