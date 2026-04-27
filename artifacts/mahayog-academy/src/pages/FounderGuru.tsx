@@ -352,12 +352,24 @@ export default function FounderGuru() {
 
             <div className="h-px bg-[#e8dece] mb-8" />
 
-            <p className="text-base text-[#5a5248] leading-relaxed max-w-2xl mb-4">
-              His Holiness emphasizes three foundational principles for joyful and meaningful living. At the heart of his guidance is the practice of <span className="italic text-[#3d3830]">Himalayan Siddha Mahayog Meditation</span> — an integrated system for fostering mental and physical well-being and inner spiritual development.
-            </p>
-            <p className="text-base text-[#5a5248] leading-relaxed max-w-2xl mb-12">
-              His teachings are intended for people from all walks of life. Rather than encouraging withdrawal from the world, they emphasize living with awareness — where spiritual practice strengthens one's capacity to engage fully and responsibly with family, work, and society alongside the journey to self-realization.
-            </p>
+            <div className="grid md:grid-cols-2 gap-12 items-center mb-12">
+              <div>
+                <p className="text-base text-[#5a5248] leading-relaxed mb-4">
+                  His Holiness emphasizes three foundational principles for joyful and meaningful living. At the heart of his guidance is the practice of <span className="italic text-[#3d3830]">Himalayan Siddha Mahayog Meditation</span> — an integrated system for fostering mental and physical well-being and inner spiritual development.
+                </p>
+                <p className="text-base text-[#5a5248] leading-relaxed">
+                  His teachings are intended for people from all walks of life. Rather than encouraging withdrawal from the world, they emphasize living with awareness — where spiritual practice strengthens one's capacity to engage fully and responsibly with family, work, and society alongside the journey to self-realization.
+                </p>
+              </div>
+              <div>
+                <img
+                  src={`${b}images/guru-teachings.jpg`}
+                  alt="Jagadguru Mahayogi Siddhababa giving spiritual teachings to a group of students"
+                  className="w-full rounded-2xl object-cover shadow-md"
+                  style={{ height: "340px" }}
+                />
+              </div>
+            </div>
 
             {/* Three pillars */}
             <div className="grid md:grid-cols-3 gap-6 mb-14">
