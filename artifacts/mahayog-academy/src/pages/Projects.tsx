@@ -156,48 +156,42 @@ export default function Projects() {
             </div>
           </div>
 
-          {/* Ways to contribute */}
-          <div className="mb-10 -mx-6 md:mx-0 overflow-hidden md:rounded-2xl grid md:grid-cols-[3fr_2fr]">
+          {/* Ways to contribute — banner */}
+          <div className="mb-10 -mx-6 px-8 md:px-14 py-12 bg-[#2e2820]">
 
-            {/* Left: dark panel — heading + CTA */}
-            <div className="bg-[#2e2820] px-8 py-12 flex flex-col justify-between gap-10">
+            {/* Top row: label + heading + CTA */}
+            <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10">
               <div>
-                <p className="text-[10px] uppercase tracking-[0.3em] text-[#d4a843] font-semibold mb-4">Support This Mission</p>
-                <h3 className="font-['Cormorant_Garamond'] text-3xl md:text-4xl font-light text-[#faf9f6] leading-snug mb-5">
+                <p className="text-[10px] uppercase tracking-[0.3em] text-[#d4a843] font-semibold mb-3">Support This Mission</p>
+                <h3 className="font-['Cormorant_Garamond'] text-3xl md:text-4xl font-light text-[#faf9f6] leading-snug max-w-xl">
                   Be Part of Building Something Sacred
                 </h3>
-                <p className="text-sm text-[#b8a990] leading-relaxed max-w-sm">
-                  Every temple built is a lasting gift to future generations. Your contribution — of land, resources, or finances — directly plants a seed of dharma across Nepal.
-                </p>
               </div>
-              <div>
+              <div className="shrink-0">
                 <Link href="/contact">
                   <span className="inline-flex items-center gap-2 bg-[#b8892a] hover:bg-[#9d7422] text-white text-sm font-medium px-8 py-3.5 rounded-full tracking-widest transition-colors duration-200 cursor-pointer">
-                    Get in Touch to Contribute
+                    Get in Touch
                     <ArrowRight className="w-4 h-4" strokeWidth={1.5} />
                   </span>
                 </Link>
               </div>
             </div>
 
-            {/* Right: contribution types */}
-            <div className="bg-[#fdf6ec] px-8 py-12 flex flex-col justify-center gap-8">
-              <div>
-                <div className="flex items-center gap-2 mb-3">
-                  <div className="w-5 h-px bg-[#b8892a]" />
-                  <p className="text-[10px] uppercase tracking-[0.25em] text-[#b8892a] font-semibold">Land</p>
-                </div>
-                <h4 className="font-['Cormorant_Garamond'] text-xl font-semibold text-[#3d3830] mb-2">Land Contribution</h4>
-                <p className="text-sm text-[#7a7068] leading-relaxed">Donate private land, facilitate government allocation, or help identify and restore historic temple sites across Nepal.</p>
+            {/* Divider */}
+            <div className="h-px bg-white/10 mb-8" />
+
+            {/* Bottom row: contribution types inline */}
+            <div className="flex flex-col md:flex-row gap-8 md:gap-16">
+              <div className="flex-1">
+                <p className="text-[10px] uppercase tracking-[0.25em] text-[#d4a843] font-semibold mb-2">Land</p>
+                <p className="font-['Cormorant_Garamond'] text-lg font-semibold text-[#e8dece] mb-1">Land Contribution</p>
+                <p className="text-sm text-[#9a8f84] leading-relaxed">Donate private land, facilitate government allocation, or help identify and restore historic temple sites across Nepal.</p>
               </div>
-              <div className="h-px bg-[#e8dece]" />
-              <div>
-                <div className="flex items-center gap-2 mb-3">
-                  <div className="w-5 h-px bg-[#b8892a]" />
-                  <p className="text-[10px] uppercase tracking-[0.25em] text-[#b8892a] font-semibold">Finance</p>
-                </div>
-                <h4 className="font-['Cormorant_Garamond'] text-xl font-semibold text-[#3d3830] mb-2">Financial Support</h4>
-                <p className="text-sm text-[#7a7068] leading-relaxed">Monetary or in-kind donations toward construction, educational programming, sadhana activities, and ongoing temple maintenance.</p>
+              <div className="w-px bg-white/10 hidden md:block" />
+              <div className="flex-1">
+                <p className="text-[10px] uppercase tracking-[0.25em] text-[#d4a843] font-semibold mb-2">Finance</p>
+                <p className="font-['Cormorant_Garamond'] text-lg font-semibold text-[#e8dece] mb-1">Financial Support</p>
+                <p className="text-sm text-[#9a8f84] leading-relaxed">Monetary or in-kind donations toward construction, educational programming, sadhana activities, and ongoing temple maintenance.</p>
               </div>
             </div>
 
