@@ -497,11 +497,12 @@ export default function FounderGuru() {
                 <div className="absolute top-0 left-0 w-1 h-full bg-[#b8892a]" />
                 <div className="flex flex-col md:flex-row md:items-center justify-between gap-8 px-10 py-9 pl-12">
                   <div>
-                    <p className="text-[10px] uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-3">Featured Course · Developed &amp; Instructed by His Holiness</p>
+                    <p className="text-[10px] uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-3">Featured Course</p>
                     <h3 className="font-['Cormorant_Garamond'] text-3xl font-semibold text-[#3d3830] mb-2">
                       Vedanta Philosophy
                     </h3>
                     <p className="text-sm text-[#7a7068] leading-relaxed">A comprehensive 300-hour study of Vedāntic thought, guided directly by Jagadguru Mahayogi Siddhababa.</p>
+                    <p className="text-xs text-[#a89880] italic mt-2">Developed &amp; instructed by His Holiness</p>
                   </div>
                   <div className="flex items-center gap-4 shrink-0">
                     <span className="px-4 py-2 rounded-full bg-[#fdf6ec] border border-[#e8c56a]/40 text-xs uppercase tracking-[0.2em] text-[#b8892a] font-semibold whitespace-nowrap">
@@ -520,11 +521,12 @@ export default function FounderGuru() {
                 <div className="absolute top-0 left-0 w-1 h-full bg-[#b8892a]" />
                 <div className="flex flex-col md:flex-row md:items-center justify-between gap-8 px-10 py-9 pl-12">
                   <div>
-                    <p className="text-[10px] uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-3">Featured Course · Developed &amp; Instructed by His Holiness</p>
+                    <p className="text-[10px] uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-3">Featured Course</p>
                     <h3 className="font-['Cormorant_Garamond'] text-3xl font-semibold text-[#3d3830] mb-2">
                       Himalayan Siddha Mahayog Meditation
                     </h3>
                     <p className="text-sm text-[#7a7068] leading-relaxed">An integrated system of meditation practice for inner well-being and spiritual development, transmitted by His Holiness.</p>
+                    <p className="text-xs text-[#a89880] italic mt-2">Developed &amp; instructed by His Holiness</p>
                   </div>
                   <div className="flex items-center gap-4 shrink-0">
                     <span className="px-4 py-2 rounded-full bg-[#fdf6ec] border border-[#e8c56a]/40 text-xs uppercase tracking-[0.2em] text-[#b8892a] font-semibold whitespace-nowrap">
