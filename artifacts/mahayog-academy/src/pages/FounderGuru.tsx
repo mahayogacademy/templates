@@ -489,6 +489,9 @@ export default function FounderGuru() {
                     <p className="text-sm text-[#7a7068]">An integrated system of meditation practice for inner well-being and spiritual development, transmitted by His Holiness.</p>
                   </div>
                   <div className="flex items-center gap-4 shrink-0">
+                    <span className="px-4 py-1.5 rounded-full bg-[#fdf6ec] border border-[#e8c56a]/40 text-xs uppercase tracking-[0.2em] text-[#b8892a] font-semibold whitespace-nowrap">
+                      10 Hours
+                    </span>
                     <Link href="/meditation" onClick={() => window.scrollTo(0, 0)}>
                       <span className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#b8892a] text-white text-sm rounded-full hover:bg-[#9d7422] transition-colors cursor-pointer whitespace-nowrap">
                         Learn More <ArrowRight className="w-4 h-4" strokeWidth={1.5} />
