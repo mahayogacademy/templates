@@ -162,7 +162,6 @@ export default function Projects() {
             {/* Top row: label + heading + icon + CTA */}
             <div className="flex flex-col md:flex-row md:items-center gap-8 mb-10">
               <div className="flex-1">
-                <p className="text-[10px] uppercase tracking-[0.3em] text-[#d4a843] font-semibold mb-3">Support This Mission</p>
                 <h3 className="font-['Cormorant_Garamond'] text-3xl md:text-4xl font-light text-[#faf9f6] leading-snug mb-3">
                   Be Part of Building Something Sacred
                 </h3>
