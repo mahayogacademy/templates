@@ -455,7 +455,7 @@ export default function Ashram() {
       <section className="relative py-20 px-6 overflow-hidden">
         <div className="absolute inset-0">
           <img src={`${b}images/akhanda-kirtan-bg.png`} alt="" aria-hidden className="w-full h-full object-cover object-center" />
-          <div className="absolute inset-0 bg-[#fdf6ec]/88" />
+          <div className="absolute inset-0 bg-[#fdf6ec]/91" />
         </div>
         <div className="relative z-10 max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div>
