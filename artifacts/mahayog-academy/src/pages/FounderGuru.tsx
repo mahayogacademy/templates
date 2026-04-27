@@ -716,7 +716,7 @@ export default function FounderGuru() {
                 Make Contact <ArrowRight className="w-4 h-4" strokeWidth={1.5} />
               </span>
             </Link>
-            <Link href="/meditation">
+            <Link href="/meditation" onClick={() => window.scrollTo(0, 0)}>
               <span className="inline-flex items-center gap-2 px-8 py-3.5 border border-white/20 text-[#e8dece] rounded-full text-sm hover:border-[#b8892a]/60 hover:text-[#b8892a] transition-colors cursor-pointer">
                 Explore the Practice
               </span>
