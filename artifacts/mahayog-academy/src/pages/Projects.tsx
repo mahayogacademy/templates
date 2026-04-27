@@ -99,7 +99,7 @@ export default function Projects() {
       <section className="relative h-[58vh] min-h-[400px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src={`${b}images/ashram-hero.png`}
+            src={`${b}images/projects-hero.png`}
             alt=""
             aria-hidden
             className="w-full h-full object-cover object-center"
