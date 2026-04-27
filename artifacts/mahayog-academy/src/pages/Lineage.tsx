@@ -47,11 +47,13 @@ function GuruCard({ guru }: { guru: typeof GURUS[number] }) {
 }
 
 export default function Lineage() {
+  // Pair gurus 1–8 (indices 0–7); guru 9 (Vaishnav Bhagawandas) is centered alone; guru 10 (Siddhababa) is the large closing portrait
   const rows: typeof GURUS[] = [];
-  for (let i = 0; i < GURUS.length - 1; i += 2) {
+  for (let i = 0; i < GURUS.length - 2; i += 2) {
     rows.push(GURUS.slice(i, i + 2) as typeof GURUS);
   }
-  const lastGuru = GURUS[GURUS.length - 1];
+  const penultimateGuru = GURUS[GURUS.length - 2]; // Vaishnav Bhagawandas
+  const lastGuru = GURUS[GURUS.length - 1];        // Siddhababa
 
   return (
     <div className="bg-[#faf9f6] text-[#3d3830]">
@@ -131,12 +133,25 @@ export default function Lineage() {
               </div>
             ))}
 
+            {/* Penultimate guru — Vaishnav Bhagawandas — centered alone */}
+            <GuruCard guru={penultimateGuru} />
+
+            {/* Connector down to Siddhababa */}
+            <div className="flex flex-col items-center my-3">
+              <div className="w-px h-5 bg-[#c9a55a]/40" />
+              <GoldDiamond />
+              <div className="w-px h-5 bg-[#c9a55a]/40" />
+              <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+                <path d="M6 8L1 1h10L6 8z" fill="#c9a55a" fillOpacity="0.5"/>
+              </svg>
+            </div>
+
             {/* Last guru — full width, prominent */}
             <div className="flex flex-col items-center text-center">
               <div className="relative w-52 h-52 shrink-0">
                 <div className="absolute inset-0 rounded-full shadow-[0_0_0_3px_#b8892a,0_0_0_7px_#f2ead8,0_0_0_9px_#b8892a44,0_8px_32px_rgba(184,137,42,0.18)]" />
                 <img
-                  src={`${b}images/${lastGuru.img}`}
+                  src={`${b}images/siddhababa-formal.jpg`}
                   alt={lastGuru.name}
                   className="w-full h-full object-cover object-top rounded-full"
                 />
