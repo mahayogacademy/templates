@@ -245,15 +245,15 @@ export default function Projects() {
               className="absolute inset-0 w-full h-full object-cover object-center"
             />
             {/* Dark gradient overlay */}
-            <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/70 to-black/80" />
+            <div className="absolute inset-0 bg-white/70" />
             {/* Content */}
             <div className="relative flex flex-col items-center justify-center text-center px-8 md:px-20 py-16">
-              <span className="font-['Cormorant_Garamond'] text-6xl font-light text-[#d4a843]/60 leading-none mb-2 select-none">"</span>
-              <p className="font-['Cormorant_Garamond'] text-2xl md:text-3xl font-light italic text-white leading-relaxed max-w-2xl mb-6">
+              <span className="font-['Cormorant_Garamond'] text-6xl font-light text-[#b8892a]/40 leading-none mb-2 select-none">"</span>
+              <p className="font-['Cormorant_Garamond'] text-2xl md:text-3xl font-light italic text-[#3d3830] leading-relaxed max-w-2xl mb-6">
                 The body is temporary; it will pass. Let us leave behind something of lasting value that teaches sanskar and sanskriti to future generations.
               </p>
-              <div className="h-px w-10 bg-[#d4a843]/60 mb-4" />
-              <cite className="text-xs uppercase tracking-[0.25em] text-[#d4a843] font-semibold not-italic">
+              <div className="h-px w-10 bg-[#b8892a]/50 mb-4" />
+              <cite className="text-xs uppercase tracking-[0.25em] text-[#b8892a] font-semibold not-italic">
                 Jagadguru Mahayogi Siddhababa
               </cite>
             </div>
