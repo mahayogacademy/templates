@@ -66,8 +66,8 @@ export default function AboutAcademy() {
           </div>
           <div>
             <img
-              src={`${import.meta.env.BASE_URL}images/meditation-nature.png`}
-              alt="Meditation practice in the mountains"
+              src={`${import.meta.env.BASE_URL}images/about-ancient-wisdom.png`}
+              alt="Ancient Sanskrit manuscripts and sacred texts by lamplight"
               className="w-full rounded-2xl object-cover shadow-md"
               style={{ height: "460px" }}
             />
