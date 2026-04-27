@@ -555,34 +555,41 @@ export default function FounderGuru() {
                 { label: "Nepal's first Ayurveda University", note: "Education", img: "initiative-ayurveda.png", href: null },
                 { label: "108 Hanuman Temples across Nepal", note: "Sacred Infrastructure", img: "initiative-hanuman-temples.jpg", pos: "center center", href: "/hanuman-temples" },
                 { label: "A historic Ram Temple in Nepal", note: "Sacred Infrastructure", img: "ram-mandir-1.jpg", pos: "center center", href: "/ram-temple" },
-              ].map((item, i) => (
-                <div key={i} className="flex flex-col bg-[#faf9f6] border border-[#e8dece] rounded-xl overflow-hidden group">
-                  <div className="h-36 overflow-hidden shrink-0">
-                    <img
-                      src={`${b}images/${item.img}`}
-                      alt=""
-                      aria-hidden
-                      className="w-full h-full object-cover"
-                      style={{ objectPosition: item.pos ?? "center center" }}
-                    />
-                  </div>
-                  <div className="p-5">
-                    <p className="text-[10px] uppercase tracking-[0.2em] text-[#b8892a] font-semibold mb-2">{item.note}</p>
-                    {item.href ? (
-                      <Link href={item.href} onClick={() => window.scrollTo(0, 0)}>
-                        <span className="text-sm text-[#3d3830] leading-relaxed hover:text-[#b8892a] transition-colors cursor-pointer inline-flex items-start gap-1 group/link">
-                          <span className="underline decoration-[#b8892a]/30 underline-offset-2 group-hover/link:decoration-[#b8892a] transition-all">
-                            {item.label}
-                          </span>
-                          <ArrowRight className="w-3.5 h-3.5 shrink-0 mt-[3px] opacity-40 group-hover/link:opacity-100 group-hover/link:translate-x-0.5 transition-all" strokeWidth={1.5} />
+              ].map((item, i) => {
+                const inner = (
+                  <>
+                    <div className="h-36 overflow-hidden shrink-0">
+                      <img
+                        src={`${b}images/${item.img}`}
+                        alt=""
+                        aria-hidden
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        style={{ objectPosition: item.pos ?? "center center" }}
+                      />
+                    </div>
+                    <div className="p-5 flex flex-col flex-1">
+                      <p className="text-[10px] uppercase tracking-[0.2em] text-[#b8892a] font-semibold mb-2">{item.note}</p>
+                      <p className="text-sm text-[#3d3830] leading-relaxed flex-1">{item.label}</p>
+                      {item.href && (
+                        <span className="mt-3 inline-flex items-center gap-1 text-[11px] text-[#b8892a] font-medium tracking-wide opacity-0 group-hover:opacity-100 transition-opacity">
+                          Learn more <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" strokeWidth={2} />
                         </span>
-                      </Link>
-                    ) : (
-                      <p className="text-sm text-[#3d3830] leading-relaxed">{item.label}</p>
-                    )}
+                      )}
+                    </div>
+                  </>
+                );
+                return item.href ? (
+                  <Link key={i} href={item.href} onClick={() => window.scrollTo(0, 0)}>
+                    <div className="flex flex-col bg-[#faf9f6] border border-[#e8dece] rounded-xl overflow-hidden group cursor-pointer hover:border-[#b8892a]/50 hover:shadow-md transition-all duration-300">
+                      {inner}
+                    </div>
+                  </Link>
+                ) : (
+                  <div key={i} className="flex flex-col bg-[#faf9f6] border border-[#e8dece] rounded-xl overflow-hidden group">
+                    {inner}
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
 
           </div>
