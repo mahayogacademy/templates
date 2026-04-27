@@ -134,7 +134,7 @@ export default function FounderGuru() {
       </section>
 
       {/* ── INTRO: TWO-COLUMN ── */}
-      <section className="py-24 px-6">
+      <section className="pt-24 pb-10 px-6">
         <div className="max-w-5xl mx-auto">
           <div className="grid md:grid-cols-[1fr_300px] gap-12 items-start mb-16">
 
