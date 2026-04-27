@@ -175,7 +175,7 @@ export default function Projects() {
                 <img
                   src={`${b}images/gadha-icon.png`}
                   alt="Gadha — Hanuman Ji's mace"
-                  className="w-24 h-24 object-contain"
+                  className="w-36 h-36 object-contain"
                 />
               </div>
               <div className="shrink-0">
