@@ -270,6 +270,99 @@ export default function Ashram() {
         </div>
       </section>
 
+      {/* ── PHOTO GALLERY ── */}
+      <section className="py-16 px-6">
+        <div className="max-w-6xl mx-auto">
+          <div className="mb-10">
+            <span className="uppercase tracking-[0.25em] text-xs text-[#b8892a] font-medium">Life at the Ashram</span>
+            <h2 className="font-['Cormorant_Garamond'] text-4xl font-light text-[#3d3830] mt-2">A Glimpse Within</h2>
+          </div>
+          <div className="space-y-3">
+
+            {/* Row 1 — full-width sunset banner */}
+            <div className="relative overflow-hidden rounded-2xl" style={{ height: "360px" }}>
+              <img
+                src={`${b}images/ashram-hanuman-sunset.jpg`}
+                alt="Hanuman statue at golden sunset, Sewa Pith Ashram"
+                className="w-full h-full object-cover"
+                style={{ filter: "brightness(1.06) saturate(1.2) contrast(1.03)" }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
+              <p className="absolute bottom-4 left-5 text-xs text-white/90 tracking-[0.2em] uppercase font-medium">Sewa Pith Ashram · Nepal</p>
+            </div>
+
+            {/* Row 2 — three columns */}
+            <div className="grid grid-cols-3 gap-3">
+              <div className="relative overflow-hidden rounded-2xl" style={{ height: "240px" }}>
+                <img
+                  src={`${b}images/ashram-hanuman-wide.jpg`}
+                  alt="Ashram grounds with Hanuman statue"
+                  className="w-full h-full object-cover"
+                  style={{ filter: "brightness(1.05) saturate(1.15) contrast(1.02)" }}
+                />
+              </div>
+              <div className="relative overflow-hidden rounded-2xl" style={{ height: "240px" }}>
+                <img
+                  src={`${b}images/ashram-prasad-2.jpg`}
+                  alt="Community prasad meal — devotees gathered in joy"
+                  className="w-full h-full object-cover"
+                  style={{ filter: "brightness(1.07) saturate(1.15) contrast(1.02)" }}
+                />
+              </div>
+              <div className="relative overflow-hidden rounded-2xl" style={{ height: "240px" }}>
+                <img
+                  src={`${b}images/ashram-garden.jpg`}
+                  alt="Devotees tending the ashram herb garden"
+                  className="w-full h-full object-cover object-center"
+                  style={{ filter: "brightness(1.06) saturate(1.12) contrast(1.02)" }}
+                />
+              </div>
+            </div>
+
+            {/* Row 3 — split: wide left, stacked right */}
+            <div className="grid grid-cols-2 gap-3">
+              <div className="relative overflow-hidden rounded-2xl" style={{ height: "270px" }}>
+                <img
+                  src={`${b}images/ashram-cows-sunset.jpg`}
+                  alt="Sacred cows grazing at sunset on ashram grounds"
+                  className="w-full h-full object-cover"
+                  style={{ filter: "brightness(1.08) saturate(1.2) contrast(1.02)" }}
+                />
+              </div>
+              <div className="grid grid-rows-2 gap-3" style={{ height: "270px" }}>
+                <div className="relative overflow-hidden rounded-2xl">
+                  <img
+                    src={`${b}images/ashram-cows-1.jpg`}
+                    alt="Devotee with sacred cows at the ashram gate"
+                    className="w-full h-full object-cover"
+                    style={{ filter: "brightness(1.06) saturate(1.15) contrast(1.02)" }}
+                  />
+                </div>
+                <div className="relative overflow-hidden rounded-2xl">
+                  <img
+                    src={`${b}images/ashram-prasad-1.jpg`}
+                    alt="Devotees receiving prasad — a moment of community"
+                    className="w-full h-full object-cover"
+                    style={{ filter: "brightness(1.07) saturate(1.15) contrast(1.02)" }}
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Row 4 — full-width Hanuman close */}
+            <div className="relative overflow-hidden rounded-2xl" style={{ height: "320px" }}>
+              <img
+                src={`${b}images/ashram-hanuman-close.jpg`}
+                alt="The golden Hanuman statue at the ashram temple"
+                className="w-full h-full object-cover object-top"
+                style={{ filter: "brightness(1.06) saturate(1.15) contrast(1.02)" }}
+              />
+            </div>
+
+          </div>
+        </div>
+      </section>
+
       {/* ── ASHRAM LIFE ── */}
       <section className="py-20 px-6 bg-gradient-to-b from-[#fdf6ec] to-[#faf9f6]">
         <div className="max-w-6xl mx-auto">
