@@ -140,7 +140,7 @@ export default function Projects() {
           </div>
 
           {/* Ways to contribute */}
-          <div className="mb-10">
+          <div className="mb-10 -mx-6 px-6 py-12 bg-[#f0e6d3]">
             <div className="text-center mb-10">
               <p className="text-[10px] uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-2">Support This Mission</p>
               <h3 className="font-['Cormorant_Garamond'] text-3xl md:text-4xl font-light text-[#3d3830]">
