@@ -173,8 +173,8 @@ export default function Projects() {
               {/* Hanuman icon — sits between heading and button */}
               <div className="shrink-0 hidden md:block">
                 <img
-                  src={`${b}images/hanuman-icon.png`}
-                  alt="Lord Hanuman"
+                  src={`${b}images/gadha-icon.png`}
+                  alt="Gadha — Hanuman Ji's mace"
                   className="w-24 h-24 object-contain"
                 />
               </div>
