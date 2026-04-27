@@ -70,6 +70,13 @@ const CREDENTIALS = [
   },
 ];
 
+const JAGADGURU_SLIDES = [
+  { src: "jagadguru-1.jpg", alt: "Siddhababa blessed by a senior saint at the Jagadguru felicitation ceremony", caption: "Blessing of the Senior Saints" },
+  { src: "jagadguru-2.jpg", alt: "Siddhababa receiving the Jagadguru citation from assembled spiritual leaders, 2019", caption: "Receiving the Jagadguru Citation · 2019" },
+  { src: "jagadguru-3.jpg", alt: "Siddhababa holding the tridanda staff alongside senior saints at the ceremony", caption: "With the Tridanda — Symbol of Jagadguru" },
+  { src: "jagadguru-4.jpg", alt: "The public announcement declaring Siddhababa as Jagadguru before a large gathering, 2019", caption: "The Public Proclamation · 2019" },
+];
+
 const SAMADHI_SLIDES = [
   { src: "guru-samadhi-pokhara.jpg",  alt: "Siddhababa in Bhu Samadhi — Pokhara",                               caption: "Bhu Samadhi · Pokhara" },
   { src: "guru-bhu-samadhi.jpg",      alt: "Siddhababa in underground Bhu Samadhi",                             caption: "Bhu Samadhi · Underground" },
@@ -90,6 +97,7 @@ const SAMADHI_SLIDES = [
 
 export default function FounderGuru() {
   const [samadhiSlide, setSamadhiSlide] = useState(0);
+  const [jagadguruSlide, setJagadguruSlide] = useState(0);
   const [openCredential, setOpenCredential] = useState<number | null>(null);
 
   return (
@@ -322,14 +330,50 @@ export default function FounderGuru() {
               </div>
 
               {/* Row 4 — Recognition and Blessing */}
-              <div className="grid md:grid-cols-[340px_1fr] gap-10 items-center">
-                <div className="rounded-2xl overflow-hidden shadow-sm shadow-[#b8892a]/10">
-                  <img
-                    src={`${b}images/guru-blessing.jpg`}
-                    alt="Siddhababa receiving recognition after Samadhi"
-                    className="w-full object-cover"
-                    style={{ maxHeight: "400px", objectPosition: "top" }}
-                  />
+              <div className="grid md:grid-cols-[380px_1fr] gap-10 items-center">
+                {/* Jagadguru carousel */}
+                <div className="rounded-2xl overflow-hidden shadow-sm shadow-[#b8892a]/10 border border-[#e8dece]">
+                  <div className="relative" style={{ height: "320px" }}>
+                    {JAGADGURU_SLIDES.map((slide, i) => (
+                      <img
+                        key={i}
+                        src={`${b}images/${slide.src}`}
+                        alt={slide.alt}
+                        className="absolute inset-0 w-full h-full object-cover transition-opacity duration-500"
+                        style={{ opacity: jagadguruSlide === i ? 1 : 0 }}
+                      />
+                    ))}
+                    {/* Caption */}
+                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent px-4 py-3">
+                      <p className="text-white text-xs font-light tracking-wide">{JAGADGURU_SLIDES[jagadguruSlide].caption}</p>
+                    </div>
+                    {/* Prev/Next */}
+                    <button
+                      onClick={() => setJagadguruSlide(i => (i - 1 + JAGADGURU_SLIDES.length) % JAGADGURU_SLIDES.length)}
+                      className="absolute left-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-black/40 hover:bg-black/60 flex items-center justify-center"
+                      aria-label="Previous"
+                    >
+                      <ChevronLeft className="w-4 h-4 text-white" strokeWidth={1.5} />
+                    </button>
+                    <button
+                      onClick={() => setJagadguruSlide(i => (i + 1) % JAGADGURU_SLIDES.length)}
+                      className="absolute right-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-black/40 hover:bg-black/60 flex items-center justify-center"
+                      aria-label="Next"
+                    >
+                      <ChevronRight className="w-4 h-4 text-white" strokeWidth={1.5} />
+                    </button>
+                  </div>
+                  {/* Dots */}
+                  <div className="flex justify-center gap-2 py-3 bg-white border-t border-[#e8dece]">
+                    {JAGADGURU_SLIDES.map((_, i) => (
+                      <button
+                        key={i}
+                        onClick={() => setJagadguruSlide(i)}
+                        className={`w-1.5 h-1.5 rounded-full transition-colors ${jagadguruSlide === i ? "bg-[#b8892a]" : "bg-[#d9cfc4]"}`}
+                        aria-label={`Slide ${i + 1}`}
+                      />
+                    ))}
+                  </div>
                 </div>
                 <div>
                   <p className="text-[10px] uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-3">Recognition · 2019</p>
