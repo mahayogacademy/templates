@@ -245,8 +245,8 @@ export default function Ashram() {
           </div>
           <div>
             <img
-              src={`${b}images/ashram-meditation-hall.png`}
-              alt="Morning meditation at the ashram"
+              src={`${b}images/ashram-koshi-river.jpg`}
+              alt="The sacred Kaushiki (Koshi) River flowing through the misty hills of Nepal"
               className="w-full rounded-2xl object-cover shadow-md"
               style={{ height: "420px" }}
             />
