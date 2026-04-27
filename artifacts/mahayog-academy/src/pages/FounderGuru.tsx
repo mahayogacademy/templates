@@ -78,6 +78,27 @@ export default function FounderGuru() {
         </div>
       </section>
 
+      {/* ── STICKY SECTION NAV ── */}
+      <div className="sticky top-16 z-40 bg-[#faf9f6]/95 backdrop-blur-sm border-b border-[#e8dece]">
+        <div className="max-w-5xl mx-auto px-6 py-3">
+          <div className="flex border border-[#e8dece] rounded-full overflow-hidden">
+            {[
+              { label: "Life",                    anchor: "#life" },
+              { label: "Teachings",               anchor: "#teachings" },
+              { label: "Ashrams & Global Presence", anchor: "#ashrams" },
+            ].map((item, i, arr) => (
+              <a
+                key={item.anchor}
+                href={item.anchor}
+                className={`flex-1 text-center py-2.5 text-sm text-[#5a5248] hover:bg-[#fdf6ec] hover:text-[#b8892a] transition-colors tracking-wide ${i < arr.length - 1 ? "border-r border-[#e8dece]" : ""}`}
+              >
+                {item.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+
       {/* ── INTRO: TWO-COLUMN ── */}
       <section className="py-24 px-6">
         <div className="max-w-5xl mx-auto">
@@ -120,25 +141,8 @@ export default function FounderGuru() {
 
           </div>
 
-          {/* ── SECTION ANCHOR NAV ── */}
-          <div className="flex flex-wrap gap-0 border border-[#e8dece] rounded-xl overflow-hidden mb-20">
-            {[
-              { label: "Life", anchor: "#life" },
-              { label: "Teachings", anchor: "#teachings" },
-              { label: "Ashrams & Global Presence", anchor: "#ashrams" },
-            ].map((item, i, arr) => (
-              <a
-                key={item.anchor}
-                href={item.anchor}
-                className={`flex-1 text-center py-3 text-sm text-[#5a5248] hover:bg-[#fdf6ec] hover:text-[#b8892a] transition-colors tracking-wide ${i < arr.length - 1 ? "border-r border-[#e8dece]" : ""}`}
-              >
-                {item.label}
-              </a>
-            ))}
-          </div>
-
           {/* ── LIFE SECTION ── */}
-          <div id="life" className="mb-24 scroll-mt-24">
+          <div id="life" className="mb-24 scroll-mt-32">
 
             <div className="flex items-start gap-6 mb-10">
               <span className="font-['Cormorant_Garamond'] text-8xl font-light text-[#e8dece] leading-none select-none shrink-0">I</span>
@@ -287,7 +291,7 @@ export default function FounderGuru() {
           <div className="h-px bg-[#e8dece] mb-24" />
 
           {/* ── TEACHINGS SECTION ── */}
-          <div id="teachings" className="mb-24 scroll-mt-24">
+          <div id="teachings" className="mb-24 scroll-mt-32">
 
             <div className="flex items-start gap-6 mb-10">
               <span className="font-['Cormorant_Garamond'] text-8xl font-light text-[#e8dece] leading-none select-none shrink-0">II</span>
@@ -359,7 +363,7 @@ export default function FounderGuru() {
       <section className="py-24 px-6">
         <div className="max-w-5xl mx-auto">
 
-          <div id="ashrams" className="scroll-mt-24">
+          <div id="ashrams" className="scroll-mt-32">
 
             <div className="flex items-start gap-6 mb-10">
               <span className="font-['Cormorant_Garamond'] text-8xl font-light text-[#e8dece] leading-none select-none shrink-0">III</span>
