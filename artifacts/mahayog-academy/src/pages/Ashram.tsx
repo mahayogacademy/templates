@@ -7,10 +7,10 @@ const GALLERY_TOP = [
   { src: "ashram-hanuman-sunset.jpg", alt: "Hanuman statue silhouette at golden sunset",       caption: "Sewa Pith Ashram · Nepal" },
   { src: "ashram-cows-sunset.jpg",    alt: "Sacred cows grazing at sunset on ashram grounds",  caption: "Goshala at Sunset" },
   { src: "ashram-hanuman-wide.jpg",   alt: "Ashram grounds with Hanuman statue and green lawn", caption: "Ashram Grounds" },
-  { src: "ashram-garden.jpg",         alt: "Devotees tending the ashram herb garden",           caption: "Sacred Garden" },
 ];
 
 const GALLERY_BOT = [
+  { src: "ashram-garden.jpg",         alt: "Devotees tending the ashram herb garden",           caption: "Sacred Garden" },
   { src: "ashram-prasad-1.jpg",                              alt: "Devotees receiving prasad at the community table",          caption: "Prasad Seva" },
   { src: "ashram-cows-1.jpg",                                alt: "Devotee caring for sacred cows at the ashram gate",         caption: "Caring for the Sacred" },
   { src: "ashram-hanuman-close.jpg",                         alt: "The golden Hanuman statue at the ashram temple",            caption: "The Hanuman Temple" },
