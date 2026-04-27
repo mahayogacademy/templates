@@ -11,10 +11,9 @@ const GALLERY_TOP = [
 ];
 
 const GALLERY_BOT = [
-  { src: "ashram-prasad-2.jpg",     alt: "Devotees gathered joyfully for prasad",                  caption: "Community Prasad" },
-  { src: "ashram-prasad-1.jpg",     alt: "Devotees receiving prasad at the long community table",  caption: "Prasad Seva" },
-  { src: "ashram-cows-1.jpg",       alt: "Devotee caring for sacred cows at the ashram gate",     caption: "Caring for the Sacred" },
-  { src: "ashram-hanuman-close.jpg", alt: "The golden Hanuman statue at the ashram temple",        caption: "The Hanuman Temple" },
+  { src: "ashram-prasad-1.jpg",      alt: "Devotees receiving prasad at the long community table", caption: "Prasad Seva" },
+  { src: "ashram-cows-1.jpg",        alt: "Devotee caring for sacred cows at the ashram gate",    caption: "Caring for the Sacred" },
+  { src: "ashram-hanuman-close.jpg", alt: "The golden Hanuman statue at the ashram temple",       caption: "The Hanuman Temple" },
 ];
 
 const b = import.meta.env.BASE_URL;
