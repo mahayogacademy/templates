@@ -231,24 +231,38 @@ export default function Projects() {
         <div className="max-w-5xl mx-auto">
 
           {/* Project header */}
-          <div className="mb-14">
-            <div className="flex items-start gap-6 mb-8">
-              <span className="font-['Cormorant_Garamond'] text-8xl font-light text-[#e8dece] leading-none select-none shrink-0">02</span>
-              <div className="pt-4">
-                <p className="text-[10px] uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-2">Chatara Dham · Sunsari, Nepal</p>
-                <h2 className="font-['Cormorant_Garamond'] text-4xl md:text-5xl font-light text-[#3d3830] leading-tight">
-                  Ram Mandir
-                </h2>
-                <p className="font-['Cormorant_Garamond'] text-xl italic text-[#9a8f84] mt-1">Dev Sabha — The Divine Assembly</p>
+          <div className="grid md:grid-cols-[1fr_300px] gap-12 items-start mb-14">
+
+            {/* Left: text */}
+            <div>
+              <div className="flex items-start gap-6 mb-8">
+                <span className="font-['Cormorant_Garamond'] text-8xl font-light text-[#e8dece] leading-none select-none shrink-0">02</span>
+                <div className="pt-4">
+                  <p className="text-[10px] uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-2">Chatara Dham · Sunsari, Nepal</p>
+                  <h2 className="font-['Cormorant_Garamond'] text-4xl md:text-5xl font-light text-[#3d3830] leading-tight">
+                    Ram Mandir
+                  </h2>
+                  <p className="font-['Cormorant_Garamond'] text-xl italic text-[#9a8f84] mt-1">Dev Sabha — The Divine Assembly</p>
+                </div>
               </div>
+              <div className="h-px bg-[#e8dece] mb-6" />
+              <p className="text-base text-[#5a5248] leading-relaxed mb-4">
+                A historic Ram Mandir will be built at Jagadguru Ramanadacharya Seva Peeth (Tarak Brahma Peeth), Chatara Dham — envisioned as a sacred replica of Dev Sabha, the divine assembly of the 33 koti devatas, with Lord Ram, Maa Sita and their divine family at the center.
+              </p>
+              <p className="text-base text-[#5a5248] leading-relaxed">
+                This temple will not only be a place of worship, but a living spiritual and cosmological experience — its architecture based on the structure of the universe as described in Vedic scripture and realized through the spiritual insight of Jagadguru Mahayogi Siddhababa.
+              </p>
             </div>
-            <div className="h-px bg-[#e8dece] mb-8" />
-            <p className="text-base text-[#5a5248] leading-relaxed max-w-3xl mb-4">
-              A historic Ram Mandir will be built at Jagadguru Ramanadacharya Seva Peeth (Tarak Brahma Peeth), Chatara Dham — envisioned as a sacred replica of Dev Sabha, the divine assembly of the 33 koti devatas, with Lord Ram, Maa Sita and their divine family at the center.
-            </p>
-            <p className="text-base text-[#5a5248] leading-relaxed max-w-3xl">
-              This temple will not only be a place of worship, but a living spiritual and cosmological experience — its architecture based on the structure of the universe as described in Vedic scripture and realized through the spiritual insight of Jagadguru Mahayogi Siddhababa. Visitors will journey through the temple as they would journey through creation itself.
-            </p>
+
+            {/* Right: feature image */}
+            <div className="rounded-2xl overflow-hidden shadow-md shadow-[#b8892a]/10 hidden md:block sticky top-20">
+              <img
+                src={`${b}images/ram-mandir-3.jpg`}
+                alt="Ram Mandir architectural rendering with Hanuman statue"
+                className="w-full object-cover object-top"
+                style={{ minHeight: "520px" }}
+              />
+            </div>
           </div>
 
           {/* Cosmological journey */}
@@ -291,6 +305,25 @@ export default function Projects() {
                   <p className="text-sm text-[#7a7068] leading-relaxed">{a.desc}</p>
                 </div>
               ))}
+            </div>
+          </div>
+
+          {/* Photo gallery */}
+          <div className="mb-16">
+            <p className="text-[10px] uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-6">Architectural Renderings</p>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+              <div className="col-span-2 rounded-xl overflow-hidden h-56">
+                <img src={`${b}images/ram-mandir-1.jpg`} alt="Ram Mandir aerial view" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+              </div>
+              <div className="rounded-xl overflow-hidden h-56">
+                <img src={`${b}images/ram-mandir-2.jpg`} alt="Ram Mandir top view yantra" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+              </div>
+              <div className="rounded-xl overflow-hidden h-56">
+                <img src={`${b}images/ram-mandir-4.jpg`} alt="Ram Mandir wide view" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+              </div>
+              <div className="col-span-2 md:col-span-4 rounded-xl overflow-hidden h-48">
+                <img src={`${b}images/ram-mandir-5.jpg`} alt="Ram Mandir panoramic view" className="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-500" />
+              </div>
             </div>
           </div>
 
