@@ -170,14 +170,6 @@ export default function Projects() {
                   Your gift becomes a lasting legacy—each temple a living center of prayer, learning, and community, rooted in dharma for generations to come.
                 </p>
               </div>
-              {/* Hanuman icon — sits between heading and button */}
-              <div className="shrink-0 hidden md:block">
-                <img
-                  src={`${b}images/gadha-icon.png`}
-                  alt="Gadha — Hanuman Ji's mace"
-                  className="w-36 h-36 object-contain"
-                />
-              </div>
               <div className="shrink-0">
                 <Link href="/contact">
                   <span className="inline-flex items-center gap-2 bg-[#b8892a] hover:bg-[#9d7422] text-white text-sm font-medium px-8 py-3.5 rounded-full tracking-widest transition-colors duration-200 cursor-pointer">
