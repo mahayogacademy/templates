@@ -142,16 +142,16 @@ export default function Projects() {
           </div>
 
           {/* Programs offered */}
-          <div className="mb-14 -mx-6 px-8 py-10 bg-gradient-to-br from-[#b8892a] to-[#8a6318] rounded-none md:rounded-2xl md:mx-0">
-            <p className="text-[10px] uppercase tracking-[0.3em] text-[#f5dfa0] font-semibold mb-6">Programs Offered at Each Center</p>
-            <div className="flex flex-wrap gap-3">
+          <div className="mb-14">
+            <p className="text-[10px] uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-6">Programs Offered at Each Center</p>
+            <div className="grid grid-cols-1 md:grid-cols-2">
               {HANUMAN_PROGRAMS.map((p, i) => (
-                <span key={i} className="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm border border-white/25 text-[#fdf6ec] text-sm px-4 py-2 rounded-full">
-                  <svg width="6" height="6" viewBox="0 0 24 24" fill="#f5dfa0" className="shrink-0">
+                <div key={i} className="flex items-center gap-3 py-3.5 border-b border-[#e8dece]">
+                  <svg width="8" height="8" viewBox="0 0 24 24" fill="#b8892a" className="shrink-0">
                     <path d="M12 2C12 2 15 9 22 12C22 12 15 15 12 22C12 22 9 15 2 12C2 12 9 9 12 2Z"/>
                   </svg>
-                  {p}
-                </span>
+                  <p className="text-sm text-[#5a5248]">{p}</p>
+                </div>
               ))}
             </div>
           </div>
