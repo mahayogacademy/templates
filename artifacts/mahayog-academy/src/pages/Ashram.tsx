@@ -1,6 +1,18 @@
+import { useState } from "react";
 import Nav from "@/components/Nav";
 import { Link } from "wouter";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
+
+const GALLERY = [
+  { src: "ashram-hanuman-sunset.jpg",  alt: "Hanuman statue silhouette at golden sunset",        caption: "Sewa Pith Ashram · Nepal" },
+  { src: "ashram-hanuman-wide.jpg",    alt: "Ashram grounds with Hanuman statue and green lawn",  caption: "Ashram Grounds" },
+  { src: "ashram-prasad-2.jpg",        alt: "Devotees gathered for prasad — a moment of joy",    caption: "Community Prasad" },
+  { src: "ashram-garden.jpg",          alt: "Devotees tending the ashram herb garden",            caption: "Sacred Garden" },
+  { src: "ashram-cows-sunset.jpg",     alt: "Sacred cows grazing at sunset on ashram grounds",   caption: "Goshala at Sunset" },
+  { src: "ashram-cows-1.jpg",          alt: "Devotee with sacred cows at the ashram gate",       caption: "Caring for the Sacred" },
+  { src: "ashram-prasad-1.jpg",        alt: "Devotees receiving prasad at the long community table", caption: "Prasad Seva" },
+  { src: "ashram-hanuman-close.jpg",   alt: "The golden Hanuman statue at the ashram temple",    caption: "The Hanuman Temple" },
+];
 
 const b = import.meta.env.BASE_URL;
 
@@ -137,6 +149,14 @@ const INTERNATIONAL_CENTERS = [
 ];
 
 export default function Ashram() {
+  const [topIdx, setTopIdx] = useState(0);
+  const [botIdx, setBotIdx] = useState(0);
+  const n = GALLERY.length;
+  const prevTop = () => setTopIdx((i) => (i - 1 + n) % n);
+  const nextTop = () => setTopIdx((i) => (i + 1) % n);
+  const prevBot = () => setBotIdx((i) => (i - 1 + n) % n);
+  const nextBot = () => setBotIdx((i) => (i + 1) % n);
+
   return (
     <div className="bg-[#faf9f6] text-[#3d3830]" style={{ scrollBehavior: "smooth" }}>
       <Nav />
@@ -277,89 +297,69 @@ export default function Ashram() {
             <span className="uppercase tracking-[0.25em] text-xs text-[#b8892a] font-medium">Life at the Ashram</span>
             <h2 className="font-['Cormorant_Garamond'] text-4xl font-light text-[#3d3830] mt-2">A Glimpse Within</h2>
           </div>
-          <div className="space-y-3">
 
-            {/* Row 1 — full-width sunset banner */}
-            <div className="relative overflow-hidden rounded-2xl" style={{ height: "360px" }}>
-              <img
-                src={`${b}images/ashram-hanuman-sunset.jpg`}
-                alt="Hanuman statue at golden sunset, Sewa Pith Ashram"
-                className="w-full h-full object-cover"
-                style={{ filter: "brightness(1.06) saturate(1.2) contrast(1.03)" }}
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
-              <p className="absolute bottom-4 left-5 text-xs text-white/90 tracking-[0.2em] uppercase font-medium">Sewa Pith Ashram · Nepal</p>
+          {/* ── TOP CAROUSEL — full-width banner ── */}
+          <div className="relative overflow-hidden rounded-2xl mb-3" style={{ height: "360px" }}>
+            <img
+              key={topIdx}
+              src={`${b}images/${GALLERY[topIdx].src}`}
+              alt={GALLERY[topIdx].alt}
+              className="w-full h-full object-cover transition-opacity duration-500"
+              style={{ filter: "brightness(1.06) saturate(1.18) contrast(1.02)" }}
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/35 to-transparent" />
+            <p className="absolute bottom-4 left-5 text-xs text-white/90 tracking-[0.2em] uppercase font-medium">
+              {GALLERY[topIdx].caption}
+            </p>
+            {/* Arrows */}
+            <button onClick={prevTop} className="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-black/30 hover:bg-black/50 flex items-center justify-center transition-colors">
+              <ChevronLeft className="w-5 h-5 text-white" strokeWidth={1.5} />
+            </button>
+            <button onClick={nextTop} className="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-black/30 hover:bg-black/50 flex items-center justify-center transition-colors">
+              <ChevronRight className="w-5 h-5 text-white" strokeWidth={1.5} />
+            </button>
+            {/* Dots */}
+            <div className="absolute bottom-4 right-5 flex gap-1.5">
+              {GALLERY.map((_, i) => (
+                <button key={i} onClick={() => setTopIdx(i)} className={`w-1.5 h-1.5 rounded-full transition-all ${i === topIdx ? "bg-white scale-125" : "bg-white/40"}`} />
+              ))}
             </div>
-
-            {/* Row 2 — three columns */}
-            <div className="grid grid-cols-3 gap-3">
-              <div className="relative overflow-hidden rounded-2xl" style={{ height: "240px" }}>
-                <img
-                  src={`${b}images/ashram-hanuman-wide.jpg`}
-                  alt="Ashram grounds with Hanuman statue"
-                  className="w-full h-full object-cover"
-                  style={{ filter: "brightness(1.05) saturate(1.15) contrast(1.02)" }}
-                />
-              </div>
-              <div className="relative overflow-hidden rounded-2xl" style={{ height: "240px" }}>
-                <img
-                  src={`${b}images/ashram-prasad-2.jpg`}
-                  alt="Community prasad meal — devotees gathered in joy"
-                  className="w-full h-full object-cover"
-                  style={{ filter: "brightness(1.07) saturate(1.15) contrast(1.02)" }}
-                />
-              </div>
-              <div className="relative overflow-hidden rounded-2xl" style={{ height: "240px" }}>
-                <img
-                  src={`${b}images/ashram-garden.jpg`}
-                  alt="Devotees tending the ashram herb garden"
-                  className="w-full h-full object-cover object-center"
-                  style={{ filter: "brightness(1.06) saturate(1.12) contrast(1.02)" }}
-                />
-              </div>
-            </div>
-
-            {/* Row 3 — split: wide left, stacked right */}
-            <div className="grid grid-cols-2 gap-3">
-              <div className="relative overflow-hidden rounded-2xl" style={{ height: "270px" }}>
-                <img
-                  src={`${b}images/ashram-cows-sunset.jpg`}
-                  alt="Sacred cows grazing at sunset on ashram grounds"
-                  className="w-full h-full object-cover"
-                  style={{ filter: "brightness(1.08) saturate(1.2) contrast(1.02)" }}
-                />
-              </div>
-              <div className="grid grid-rows-2 gap-3" style={{ height: "270px" }}>
-                <div className="relative overflow-hidden rounded-2xl">
-                  <img
-                    src={`${b}images/ashram-cows-1.jpg`}
-                    alt="Devotee with sacred cows at the ashram gate"
-                    className="w-full h-full object-cover"
-                    style={{ filter: "brightness(1.06) saturate(1.15) contrast(1.02)" }}
-                  />
-                </div>
-                <div className="relative overflow-hidden rounded-2xl">
-                  <img
-                    src={`${b}images/ashram-prasad-1.jpg`}
-                    alt="Devotees receiving prasad — a moment of community"
-                    className="w-full h-full object-cover"
-                    style={{ filter: "brightness(1.07) saturate(1.15) contrast(1.02)" }}
-                  />
-                </div>
-              </div>
-            </div>
-
-            {/* Row 4 — full-width Hanuman close */}
-            <div className="relative overflow-hidden rounded-2xl" style={{ height: "320px" }}>
-              <img
-                src={`${b}images/ashram-hanuman-close.jpg`}
-                alt="The golden Hanuman statue at the ashram temple"
-                className="w-full h-full object-cover object-top"
-                style={{ filter: "brightness(1.06) saturate(1.15) contrast(1.02)" }}
-              />
-            </div>
-
           </div>
+
+          {/* ── BOTTOM CAROUSEL — three tiles ── */}
+          <div className="relative">
+            <div className="grid grid-cols-3 gap-3">
+              {[0, 1, 2].map((offset) => {
+                const img = GALLERY[(botIdx + offset) % n];
+                return (
+                  <div key={offset} className="relative overflow-hidden rounded-2xl" style={{ height: "240px" }}>
+                    <img
+                      src={`${b}images/${img.src}`}
+                      alt={img.alt}
+                      className="w-full h-full object-cover transition-opacity duration-500"
+                      style={{ filter: "brightness(1.06) saturate(1.15) contrast(1.02)" }}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+                    <p className="absolute bottom-3 left-3 text-[10px] text-white/85 tracking-[0.15em] uppercase">{img.caption}</p>
+                  </div>
+                );
+              })}
+            </div>
+            {/* Arrows */}
+            <button onClick={prevBot} className="absolute -left-4 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white border border-[#e8dece] shadow-sm hover:border-[#b8892a] flex items-center justify-center transition-colors z-10">
+              <ChevronLeft className="w-4 h-4 text-[#b8892a]" strokeWidth={1.5} />
+            </button>
+            <button onClick={nextBot} className="absolute -right-4 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white border border-[#e8dece] shadow-sm hover:border-[#b8892a] flex items-center justify-center transition-colors z-10">
+              <ChevronRight className="w-4 h-4 text-[#b8892a]" strokeWidth={1.5} />
+            </button>
+            {/* Dots */}
+            <div className="flex justify-center gap-1.5 mt-4">
+              {GALLERY.map((_, i) => (
+                <button key={i} onClick={() => setBotIdx(i)} className={`w-1.5 h-1.5 rounded-full transition-all ${i === botIdx ? "bg-[#b8892a] scale-125" : "bg-[#d4a843]/30"}`} />
+              ))}
+            </div>
+          </div>
+
         </div>
       </section>
 
