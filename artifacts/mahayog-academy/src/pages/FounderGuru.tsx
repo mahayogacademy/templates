@@ -440,17 +440,19 @@ export default function FounderGuru() {
               ))}
             </div>
 
-            {/* Key teachings list */}
-            <div className="bg-[#fdf6ec] border border-[#e8c56a]/30 rounded-2xl px-8 py-7 mb-8">
-              <p className="text-[10px] uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-5">Key Teachings</p>
-              <ul className="space-y-3">
+            {/* Key teachings grid */}
+            <div className="mb-8">
+              <p className="text-[10px] uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-6">Key Teachings</p>
+              <div className="grid sm:grid-cols-2 gap-x-12 gap-y-0">
                 {TEACHINGS.map((t, i) => (
-                  <li key={i} className="flex items-start gap-4">
-                    <span className="mt-[5px] shrink-0 w-1.5 h-1.5 rotate-45 bg-[#b8892a]/60 inline-block" />
+                  <div key={i} className="flex items-start gap-4 py-5 border-b border-[#e8dece]">
+                    <svg className="shrink-0 mt-[3px]" width="10" height="10" viewBox="0 0 24 24" fill="none">
+                      <path d="M12 2C12 2 15 9 22 12C22 12 15 15 12 22C12 22 9 15 2 12C2 12 9 9 12 2Z" fill="#b8892a" fillOpacity="0.5"/>
+                    </svg>
                     <span className="text-sm text-[#5a5248] leading-relaxed">{t}</span>
-                  </li>
+                  </div>
                 ))}
-              </ul>
+              </div>
             </div>
 
             {/* Featured courses */}
