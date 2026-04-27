@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Nav from "@/components/Nav";
 import { Link } from "wouter";
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
@@ -173,12 +173,6 @@ export default function Ashram() {
   const [topIdx, setTopIdx] = useState(0);
   const [botIdx, setBotIdx] = useState(0);
 
-  useEffect(() => {
-    [...GALLERY_TOP, ...GALLERY_BOT].forEach(({ src }) => {
-      const img = new Image();
-      img.src = `${b}images/${src}`;
-    });
-  }, []);
   const nt = GALLERY_TOP.length;
   const nb = GALLERY_BOT.length;
   const prevTop = () => setTopIdx((i) => (i - 1 + nt) % nt);
@@ -189,6 +183,13 @@ export default function Ashram() {
   return (
     <div className="bg-[#faf9f6] text-[#3d3830]" style={{ scrollBehavior: "smooth" }}>
       <Nav />
+
+      {/* ── IMAGE PRELOADER ── */}
+      <div aria-hidden="true" className="absolute w-0 h-0 overflow-hidden pointer-events-none">
+        {[...GALLERY_TOP, ...GALLERY_BOT].map(({ src }) => (
+          <img key={src} src={`${b}images/${src}`} alt="" fetchPriority="low" />
+        ))}
+      </div>
 
       {/* ── HERO ── */}
       <section className="relative h-[80vh] flex items-center justify-center overflow-hidden">
