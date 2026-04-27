@@ -240,3 +240,21 @@ id = "XmpGsh8XMQxVY8y8JNIhE"
 uri = "file://artifacts/mahayog-academy/public/images/gadha-icon.png"
 type = "image"
 title = "golden gadha mace icon"
+
+[[generated]]
+id = "lU_mQx0J81N2bQtIWxrjO"
+uri = "file://artifacts/mahayog-academy/public/images/ram-expertise.png"
+type = "image"
+title = "architects temple blueprints"
+
+[[generated]]
+id = "JePpQFKgKYNhKtxgR8ooX"
+uri = "file://artifacts/mahayog-academy/public/images/ram-culture.png"
+type = "image"
+title = "nepal cultural ceremony heritage"
+
+[[generated]]
+id = "VVn3Y_WhiF73wXlL1Xg8g"
+uri = "file://artifacts/mahayog-academy/public/images/ram-finance.png"
+type = "image"
+title = "devotional financial offering temple"

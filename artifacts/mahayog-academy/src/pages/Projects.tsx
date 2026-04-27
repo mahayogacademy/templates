@@ -408,20 +408,29 @@ export default function Projects() {
             <div className="h-px bg-white/10 mb-8" />
 
             {/* Bottom row: three contribution types */}
-            <div className="flex flex-col md:flex-row gap-8 md:gap-0">
-              <div className="flex-1 md:pr-8">
+            <div className="flex flex-col md:flex-row gap-6 md:gap-8">
+              <div className="flex-1">
+                <div className="rounded-xl overflow-hidden mb-4 h-40">
+                  <img src={`${b}images/ram-expertise.png`} alt="Professional skills" className="w-full h-full object-cover" />
+                </div>
                 <p className="text-[10px] uppercase tracking-[0.25em] text-[#d4a843] font-semibold mb-1">Expertise</p>
                 <p className="font-['Cormorant_Garamond'] text-lg font-semibold text-[#e8dece] mb-2">Professional Skills</p>
                 <p className="text-sm text-[#9a8f84] leading-relaxed">Architecture, engineering, construction, Vastu, design, and related professional fields.</p>
               </div>
               <div className="w-px bg-white/10 hidden md:block" />
-              <div className="flex-1 md:px-8">
+              <div className="flex-1">
+                <div className="rounded-xl overflow-hidden mb-4 h-40">
+                  <img src={`${b}images/ram-culture.png`} alt="Cultural knowledge" className="w-full h-full object-cover" />
+                </div>
                 <p className="text-[10px] uppercase tracking-[0.25em] text-[#d4a843] font-semibold mb-1">Culture</p>
                 <p className="font-['Cormorant_Garamond'] text-lg font-semibold text-[#e8dece] mb-2">Cultural Knowledge</p>
                 <p className="text-sm text-[#9a8f84] leading-relaxed">Documentation and contribution of Nepal's diverse cultural traditions and heritage.</p>
               </div>
               <div className="w-px bg-white/10 hidden md:block" />
-              <div className="flex-1 md:pl-8">
+              <div className="flex-1">
+                <div className="rounded-xl overflow-hidden mb-4 h-40">
+                  <img src={`${b}images/ram-finance.png`} alt="Financial support" className="w-full h-full object-cover" />
+                </div>
                 <p className="text-[10px] uppercase tracking-[0.25em] text-[#d4a843] font-semibold mb-1">Finance</p>
                 <p className="font-['Cormorant_Garamond'] text-lg font-semibold text-[#e8dece] mb-2">Financial Support</p>
                 <p className="text-sm text-[#9a8f84] leading-relaxed">Monetary donations or in-kind support toward construction and development.</p>
