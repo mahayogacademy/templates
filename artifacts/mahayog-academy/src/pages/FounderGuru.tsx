@@ -236,7 +236,7 @@ export default function FounderGuru() {
           </div>
 
           {/* ── LIFE SECTION ── */}
-          <div id="life" className="mb-24 scroll-mt-24">
+          <div id="life" className="mb-12 scroll-mt-24">
 
             <div className="flex items-start gap-6 mb-10">
               <span className="font-['Cormorant_Garamond'] text-8xl font-light text-[#e8dece] leading-none select-none shrink-0">I</span>
@@ -403,7 +403,7 @@ export default function FounderGuru() {
           </div>
 
           {/* ── MEET SIDDHABABA CTA ── */}
-          <div className="mb-24 rounded-2xl border border-[#e8dece] bg-white overflow-hidden">
+          <div className="mb-12 rounded-2xl border border-[#e8dece] bg-white overflow-hidden">
             <div className="flex flex-col md:flex-row items-center gap-10 p-8">
               <div className="shrink-0 w-24 h-24 rounded-full overflow-hidden border-2 border-[#e8dece] shadow-md">
                 <img
