@@ -343,11 +343,11 @@ export default function Projects() {
           {/* Photo gallery */}
           <div className="mb-16">
             <p className="text-[10px] uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-6">Architectural Renderings</p>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+            <div className="grid grid-cols-6 gap-3">
               {RAM_GALLERY.map((img, i) => (
                 <div
                   key={i}
-                  className={`rounded-xl overflow-hidden cursor-zoom-in ${i === 4 ? "col-span-2 md:col-span-3 h-52" : "h-52"}`}
+                  className={`rounded-xl overflow-hidden cursor-zoom-in h-52 ${i < 3 ? "col-span-2" : "col-span-3"}`}
                   onClick={() => setLightbox(`${b}images/${img.src}`)}
                 >
                   <img
