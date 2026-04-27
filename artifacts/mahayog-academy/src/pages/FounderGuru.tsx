@@ -111,7 +111,8 @@ export default function FounderGuru() {
             src={`${b}images/guru-hero-new.jpg`}
             alt=""
             aria-hidden
-            className="w-full h-full object-cover object-center"
+            className="w-full h-full object-cover"
+            style={{ objectPosition: "35% center" }}
           />
           <div className="absolute inset-0 bg-gradient-to-b from-[#1a0f05]/60 via-[#1a0f05]/70 to-[#1a0f05]/85" />
         </div>
