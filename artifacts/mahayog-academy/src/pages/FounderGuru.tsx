@@ -628,19 +628,12 @@ export default function FounderGuru() {
               Under his guidance, ashrams and meditation centers have been established across Nepal, India, and internationally. These centers serve as spaces for practice, learning, service, and community — supporting reflection, education, and collective well-being.
             </p>
 
-            {/* Centers grid */}
-            <div className="grid md:grid-cols-3 gap-6 mb-12">
+            {/* Centers inline list */}
+            <div className="flex flex-col sm:flex-row gap-y-3 gap-x-10 mb-12 flex-wrap">
               {CENTERS.map((region) => (
-                <div key={region.region} className="bg-white border border-[#e8dece] rounded-2xl p-7">
-                  <p className="text-[10px] uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-4">{region.region}</p>
-                  <ul className="space-y-2.5">
-                    {region.cities.map((city) => (
-                      <li key={city} className="flex items-center gap-3 text-sm text-[#5a5248]">
-                        <span className="shrink-0 w-1 h-1 rounded-full bg-[#b8892a]/50" />
-                        {city}
-                      </li>
-                    ))}
-                  </ul>
+                <div key={region.region} className="flex items-baseline gap-3 text-sm">
+                  <span className="text-[10px] uppercase tracking-[0.25em] text-[#b8892a] font-semibold shrink-0">{region.region}</span>
+                  <span className="text-[#5a5248]">{region.cities.join(" · ")}</span>
                 </div>
               ))}
             </div>
