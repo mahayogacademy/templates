@@ -381,31 +381,53 @@ export default function Projects() {
             </div>
           </div>
 
-          {/* How to contribute */}
-          <div className="bg-[#f5ede0]/70 rounded-2xl p-8">
-            <p className="text-[10px] uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-6">How You Can Contribute</p>
-            <div className="grid md:grid-cols-3 gap-6">
-              <div>
-                <h4 className="font-['Cormorant_Garamond'] text-lg font-semibold text-[#3d3830] mb-2">Expertise</h4>
-                <p className="text-sm text-[#7a7068] leading-relaxed">Architecture, engineering, construction, Vastu, design, and related fields.</p>
+          {/* How to contribute — banner */}
+          <div className="-mx-6 px-8 md:px-14 py-12 bg-[#2e2820]">
+
+            {/* Top row: heading + CTA */}
+            <div className="flex flex-col md:flex-row md:items-center gap-8 mb-10">
+              <div className="flex-1">
+                <h3 className="font-['Cormorant_Garamond'] text-3xl md:text-4xl font-light text-[#faf9f6] leading-snug mb-3">
+                  Help Bring This Vision to Life
+                </h3>
+                <p className="text-sm text-[#9a8f84] leading-relaxed max-w-lg">
+                  This temple is a gift to Nepal and to the world. Whether through expertise, cultural knowledge, or financial support, your contribution shapes something that will endure for centuries.
+                </p>
               </div>
-              <div>
-                <h4 className="font-['Cormorant_Garamond'] text-lg font-semibold text-[#3d3830] mb-2">Cultural Knowledge</h4>
-                <p className="text-sm text-[#7a7068] leading-relaxed">Documentation and contribution of Nepal's diverse cultural traditions and heritage.</p>
-              </div>
-              <div>
-                <h4 className="font-['Cormorant_Garamond'] text-lg font-semibold text-[#3d3830] mb-2">Financial Support</h4>
-                <p className="text-sm text-[#7a7068] leading-relaxed">Monetary donations or in-kind support toward construction and development.</p>
+              <div className="shrink-0">
+                <Link href="/contact">
+                  <span className="inline-flex items-center gap-2 bg-[#b8892a] hover:bg-[#9d7422] text-white text-sm font-medium px-8 py-3.5 rounded-full tracking-widest transition-colors duration-200 cursor-pointer">
+                    Support the Mission
+                    <ArrowRight className="w-4 h-4" strokeWidth={1.5} />
+                  </span>
+                </Link>
               </div>
             </div>
-            <div className="mt-6 pt-6 border-t border-[#e8dece]">
-              <Link href="/contact">
-                <span className="inline-flex items-center gap-2 text-sm text-[#b8892a] font-medium hover:text-[#9d7422] transition-colors cursor-pointer">
-                  Get in touch to support this initiative
-                  <ArrowRight className="w-4 h-4" strokeWidth={1.5} />
-                </span>
-              </Link>
+
+            {/* Divider */}
+            <div className="h-px bg-white/10 mb-8" />
+
+            {/* Bottom row: three contribution types */}
+            <div className="flex flex-col md:flex-row gap-8 md:gap-0">
+              <div className="flex-1 md:pr-8">
+                <p className="text-[10px] uppercase tracking-[0.25em] text-[#d4a843] font-semibold mb-1">Expertise</p>
+                <p className="font-['Cormorant_Garamond'] text-lg font-semibold text-[#e8dece] mb-2">Professional Skills</p>
+                <p className="text-sm text-[#9a8f84] leading-relaxed">Architecture, engineering, construction, Vastu, design, and related professional fields.</p>
+              </div>
+              <div className="w-px bg-white/10 hidden md:block" />
+              <div className="flex-1 md:px-8">
+                <p className="text-[10px] uppercase tracking-[0.25em] text-[#d4a843] font-semibold mb-1">Culture</p>
+                <p className="font-['Cormorant_Garamond'] text-lg font-semibold text-[#e8dece] mb-2">Cultural Knowledge</p>
+                <p className="text-sm text-[#9a8f84] leading-relaxed">Documentation and contribution of Nepal's diverse cultural traditions and heritage.</p>
+              </div>
+              <div className="w-px bg-white/10 hidden md:block" />
+              <div className="flex-1 md:pl-8">
+                <p className="text-[10px] uppercase tracking-[0.25em] text-[#d4a843] font-semibold mb-1">Finance</p>
+                <p className="font-['Cormorant_Garamond'] text-lg font-semibold text-[#e8dece] mb-2">Financial Support</p>
+                <p className="text-sm text-[#9a8f84] leading-relaxed">Monetary donations or in-kind support toward construction and development.</p>
+              </div>
             </div>
+
           </div>
 
         </div>
