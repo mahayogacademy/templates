@@ -253,7 +253,7 @@ export default function Projects() {
                 The body is temporary; it will pass. Let us leave behind something of lasting value that teaches sanskar and sanskriti to future generations.
               </p>
               <div className="h-px w-10 bg-[#b8892a]/50 mb-4" />
-              <cite className="text-xs uppercase tracking-[0.25em] text-[#b8892a] font-semibold not-italic">
+              <cite className="text-xs uppercase tracking-[0.25em] text-[#3d3830] font-semibold not-italic">
                 Jagadguru Mahayogi Siddhababa
               </cite>
             </div>
