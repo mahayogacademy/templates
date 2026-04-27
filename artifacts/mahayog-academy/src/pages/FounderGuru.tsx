@@ -72,7 +72,7 @@ const CREDENTIALS = [
 
 const JAGADGURU_SLIDES = [
   { src: "jagadguru-1.jpg", alt: "Siddhababa blessed by Nritya Gopal Das Ji Maharaj, head of Ayodhya's largest temple", caption: "Blessings by Nritya Gopal Das Ji Maharaj, head of Ayodhya's largest temple" },
-  { src: "jagadguru-2.jpg", alt: "Siddhababa receiving the Jagadguru recognition — the formal scroll being presented, 2019", caption: "Receiving the Jagadguru Recognition · 2019" },
+  { src: "jagadguru-2.jpg", alt: "Siddhababa receiving the Jagadguru recognition — the formal scroll being presented, 2019", caption: "Receiving the Jagadguru Recognition · 2019", objectPosition: "left center" },
   { src: "jagadguru-3.jpg", alt: "Siddhababa holding the tridanda staff alongside senior saints at the ceremony", caption: "With the Tridanda — Swamiji holding the ceremonial staff with senior saints" },
   { src: "jagadguru-4.jpg", alt: "The public proclamation declaring Siddhababa as Jagadguru before a large gathering, 2019", caption: "The Public Proclamation · 2019" },
 ];
@@ -340,7 +340,7 @@ export default function FounderGuru() {
                         src={`${b}images/${slide.src}`}
                         alt={slide.alt}
                         className="absolute inset-0 w-full h-full object-cover transition-opacity duration-500"
-                        style={{ opacity: jagadguruSlide === i ? 1 : 0 }}
+                        style={{ opacity: jagadguruSlide === i ? 1 : 0, objectPosition: slide.objectPosition ?? "center" }}
                       />
                     ))}
                     {/* Caption */}
