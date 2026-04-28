@@ -35,7 +35,7 @@ const MEDITATION_STEPS = [
 
 const ic = "w-full bg-white/70 border border-[#c8a050]/40 text-[#3d3830] placeholder-[#b0956a] rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#b8892a] transition-colors";
 const sc = `${ic} appearance-none`;
-const lc = "block text-[10px] uppercase tracking-[0.2em] text-[#7a4a08] mb-1.5 font-medium";
+const lc = "block font-['Cormorant_Garamond'] text-base font-semibold text-[#7a4a08] mb-2 leading-snug";
 const hc = "font-['Cormorant_Garamond'] text-xl font-light text-[#3d2008] mb-2";
 const hint = "text-xs text-[#7a5a30]";
 
