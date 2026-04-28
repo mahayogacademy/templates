@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { ArrowRight, ChevronDown } from "lucide-react";
 import { Link } from "wouter";
 import Nav from "@/components/Nav";
+import EnrolmentForm from "@/components/EnrolmentForm";
 
 // viewBox 500×500; circles at corners offset 90px from centre (250,250), r=140
 // Label positions are inside each circle's unique outer quadrant
@@ -820,6 +821,20 @@ export default function MahayogMeditation() {
             ))}
           </div>
         </div>
+      </section>
+
+      {/* ── REGISTER ── */}
+      <section
+        id="register"
+        className="py-20 px-6"
+        style={{ background: "radial-gradient(ellipse at 50% 0%, #f0a832 0%, #d4821a 45%, #a85c10 100%)" }}
+      >
+        <div className="max-w-2xl mx-auto text-center mb-10">
+          <span className="uppercase tracking-[0.25em] text-xs text-[#5a2e04] font-medium">Register</span>
+          <h2 className="font-['Cormorant_Garamond'] text-4xl font-light text-[#2e1405] mt-2">Meditation Registration</h2>
+          <p className="text-sm text-[#2e1405] mt-3">Begin your journey into Himalayan Siddha Mahāyog Meditation.</p>
+        </div>
+        <EnrolmentForm program="meditation" />
       </section>
 
       {/* ── FOOTER ── */}
