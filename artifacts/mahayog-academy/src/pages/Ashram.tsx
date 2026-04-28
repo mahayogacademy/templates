@@ -627,8 +627,12 @@ export default function Ashram() {
       </section>
 
       {/* ── CENTERS ── */}
-      <section className="py-20 px-6 bg-[#f5ede0]/60">
-        <div className="max-w-5xl mx-auto">
+      <section className="relative py-20 px-6 overflow-hidden">
+        <div className="absolute inset-0">
+          <img src={`${b}images/ashram-koshi-river.jpg`} alt="" aria-hidden className="w-full h-full object-cover object-center" />
+          <div className="absolute inset-0 bg-[#faf6ee]/91" />
+        </div>
+        <div className="relative z-10 max-w-5xl mx-auto">
 
           {/* Header */}
           <div className="text-center mb-14">
