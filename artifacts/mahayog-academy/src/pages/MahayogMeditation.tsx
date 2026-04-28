@@ -344,7 +344,7 @@ function HorizontalSectionNav() {
               }}
               className={`relative flex-1 flex items-center justify-center py-3 px-2 text-[11px] tracking-widest uppercase font-medium transition-all duration-200 whitespace-nowrap ${
                 id === "register"
-                  ? "bg-[#2e1405] text-[#e8c97a] hover:bg-[#1a0c03] rounded-r-full"
+                  ? "text-[#b8892a] hover:text-[#96711e]"
                   : isActive ? "text-[#b8892a]" : "text-[#7a7060] hover:text-[#3d3830]"
               }`}
             >
@@ -352,7 +352,7 @@ function HorizontalSectionNav() {
                 <span className="absolute left-0 top-1/2 -translate-y-1/2 h-4 w-px bg-[#ddd0ba]" />
               )}
               {short}
-              {isActive && (
+              {(isActive || id === "register") && (
                 <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-6 h-px bg-[#b8892a]" />
               )}
             </a>
