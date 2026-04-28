@@ -344,14 +344,14 @@ export default function EnrolmentForm({ program }: { program: Program }) {
                 <div className="px-4 py-3 space-y-2">
                   {isNepal ? <>
                     <p className="text-xs text-[#5a3c10] leading-relaxed">
-                      <span className="font-semibold">Attendance is by donation</span> — there is no fixed fee. Contributions may be offered at the center at your discretion.
+                      There is no fixed fee for initiation. Donations (<span className="font-semibold">Guru dakshina</span>) are welcome.
                     </p>
                     <p className="text-xs text-[#5a3c10] leading-relaxed">
                       A <span className="font-semibold">physical registration form</span> is also available at your center for those who prefer not to register online.
                     </p>
                   </> : (
                     <p className="text-xs text-[#5a3c10] leading-relaxed">
-                      A <span className="font-semibold">Zoom link</span> will be shared with you by email before the workshop begins. Attendance is by donation — there is no fixed fee.
+                      A <span className="font-semibold">Zoom link</span> will be shared with you by email before the workshop begins. There is no fixed fee for initiation. Donations (<span className="font-semibold">Guru dakshina</span>) are welcome.
                     </p>
                   )}
                 </div>
