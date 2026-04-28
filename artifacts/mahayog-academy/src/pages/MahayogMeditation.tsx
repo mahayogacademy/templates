@@ -317,7 +317,7 @@ const FAQ_GROUPS: { theme: string; items: { q: string; a: string }[] }[] = [
       },
       {
         q: "Can I join if I miss a day?",
-        a: "No — full attendance across all five days is required for program completion and to receive initiation. If you are unable to commit to the full five days for a given month, we encourage you to register for a future intake instead. Workshops run every month, beginning on the first Saturday.",
+        a: "No — full attendance across all five days is required for program completion and to receive initiation. If you are unable to commit to the full five days for a given month, we encourage you to register for a future intake instead. Regular workshops are held monthly, typically beginning on the first Saturday — additional programmes may also be scheduled throughout the year.",
       },
     ],
   },
