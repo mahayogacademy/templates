@@ -31,11 +31,12 @@ function getUpcomingWorkshops(count = 3) {
     const start = getFirstSaturdayOfMonth(target.getFullYear(), target.getMonth());
     const end = new Date(start);
     end.setDate(start.getDate() + 4);
-    const fmt = (d: Date) => d.toLocaleString("en-GB", { day: "numeric", month: "long" });
+    const fmtDay = (d: Date) => d.toLocaleString("en-GB", { weekday: "short" });
+    const fmtDate = (d: Date) => d.toLocaleString("en-GB", { day: "numeric", month: "long" });
     const year = start.getFullYear();
     return {
       key: `${year}-${start.getMonth() + 1}`,
-      label: `${fmt(start)} – ${fmt(end)} ${year}`,
+      label: `${fmtDay(start)} ${fmtDate(start)} – ${fmtDay(end)} ${fmtDate(end)} ${year}`,
     };
   });
 }
@@ -333,10 +334,14 @@ export default function EnrolmentForm({ program }: { program: Program }) {
                 ))}
               </div>
 
-              <div className="bg-[#f5ece0]/70 border border-[#c8a050]/20 rounded-xl p-4 space-y-2 mt-1">
-                <p className="text-[11px] text-[#7a5a30] leading-relaxed">
-                  <span className="font-semibold text-[#7a4a08]">Full attendance across all 5 days is required</span> for completion of the meditation program and to receive initiation.
+              <div className="bg-[#7a4a08]/8 border border-[#b8892a]/50 rounded-xl px-4 py-3 mt-1 flex gap-3 items-start">
+                <span className="text-[#b8892a] text-base mt-0.5 shrink-0">◆</span>
+                <p className="font-['Cormorant_Garamond'] text-sm font-semibold text-[#7a4a08] leading-snug">
+                  Full attendance across all 5 days is required for completion of the meditation program and to receive initiation.
                 </p>
+              </div>
+
+              <div className="bg-[#f5ece0]/70 border border-[#c8a050]/20 rounded-xl p-4 space-y-2">
                 {isNepal ? <>
                   <p className="text-[11px] text-[#7a5a30] leading-relaxed">
                     <span className="font-semibold text-[#7a4a08]">Attendance is by donation</span> — there is no fixed fee. Contributions may be offered at the center at your discretion.
