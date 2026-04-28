@@ -368,7 +368,7 @@ export default function VedantaCourse() {
                 {/* Step 3 – Center */}
                 {step === 3 && <>
                   <p className="font-['Cormorant_Garamond'] text-xl font-light text-[#3d2008] mb-1">Preferred Center</p>
-                  <p className="text-xs text-[#7a5a30] mb-4">Select the center closest to you. If yours is not listed, please contact us.</p>
+                  <p className="text-xs text-[#7a5a30] mb-4">Select the center closest to you.</p>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     {CENTERS.map(c => (
                       <button
