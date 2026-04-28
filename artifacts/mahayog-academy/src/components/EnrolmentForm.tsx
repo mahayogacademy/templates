@@ -26,12 +26,11 @@ const VEDANTA_STEPS = [
 
 const MEDITATION_STEPS = [
   { num: 1, label: "Personal",    slot: "personal" },
-  { num: 2, label: "Background",  slot: "m-background" },
-  { num: 3, label: "Experience",  slot: "m-experience" },
-  { num: 4, label: "Health",      slot: "m-health" },
-  { num: 5, label: "Center",      slot: "center" },
-  { num: 6, label: "Reference",   slot: "reference" },
-  { num: 7, label: "Login",       slot: "login" },
+  { num: 2, label: "Experience",  slot: "m-experience" },
+  { num: 3, label: "Health",      slot: "m-health" },
+  { num: 4, label: "Center",      slot: "center" },
+  { num: 5, label: "Reference",   slot: "reference" },
+  { num: 6, label: "Login",       slot: "login" },
 ];
 
 const ic = "w-full bg-white/70 border border-[#c8a050]/40 text-[#3d3830] placeholder-[#b0956a] rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#b8892a] transition-colors";
@@ -146,6 +145,12 @@ export default function EnrolmentForm({ program }: { program: Program }) {
               <label className={lc}>Place of Birth</label>
               <input className={ic} value={form.placeOfBirth} onChange={e => set("placeOfBirth", e.target.value)} />
             </div>
+            {program === "meditation" && (
+              <div>
+                <label className={lc}>Occupation</label>
+                <input className={ic} placeholder="e.g. Teacher, Engineer, Student…" value={form.occupation} onChange={e => set("occupation", e.target.value)} />
+              </div>
+            )}
           </>}
 
           {/* ── VEDANTA: Education & Background ── */}
@@ -166,15 +171,6 @@ export default function EnrolmentForm({ program }: { program: Program }) {
             <div>
               <label className={lc}>Profession</label>
               <input className={ic} value={form.profession} onChange={e => set("profession", e.target.value)} />
-            </div>
-          </>}
-
-          {/* ── MEDITATION: Background ── */}
-          {slot === "m-background" && <>
-            <p className={hc}>Background</p>
-            <div>
-              <label className={lc}>Occupation</label>
-              <input className={ic} placeholder="e.g. Teacher, Engineer, Student…" value={form.occupation} onChange={e => set("occupation", e.target.value)} />
             </div>
           </>}
 
