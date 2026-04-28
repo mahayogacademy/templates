@@ -334,6 +334,9 @@ export default function EnrolmentForm({ program }: { program: Program }) {
               </div>
 
               <div className="bg-[#f5ece0]/70 border border-[#c8a050]/20 rounded-xl p-4 space-y-2 mt-1">
+                <p className="text-[11px] text-[#7a5a30] leading-relaxed">
+                  <span className="font-semibold text-[#7a4a08]">Full attendance across all 5 days is required</span> for completion of the meditation program and to receive initiation.
+                </p>
                 {isNepal ? <>
                   <p className="text-[11px] text-[#7a5a30] leading-relaxed">
                     <span className="font-semibold text-[#7a4a08]">Attendance is by donation</span> — there is no fixed fee. Contributions may be offered at the center at your discretion.
