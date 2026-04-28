@@ -330,7 +330,7 @@ const FAQ_GROUPS: { theme: string; items: { q: string; a: string }[] }[] = [
       },
       {
         q: "What time zone are online sessions held in?",
-        a: "Online sessions are currently scheduled in Nepal Standard Time (NPT, UTC+5:45). The confirmed daily schedule, including times converted for common international time zones, will be sent to you with the Zoom link before the workshop.",
+        a: "Session times are based on the time zone of the center conducting the workshop and may vary. The confirmed schedule for your selected intake — including the relevant time zone — will be sent to you with the Zoom link before the workshop begins. We recommend checking the time difference for your location once you receive this.",
       },
       {
         q: "What equipment do I need?",
