@@ -266,7 +266,7 @@ export default function VedantaCourse() {
         <div className="max-w-2xl mx-auto text-center mb-10">
           <span className="uppercase tracking-[0.25em] text-xs text-[#5a2e04] font-medium">Enrol</span>
           <h2 className="font-['Cormorant_Garamond'] text-4xl font-light text-[#2e1405] mt-2">Course Enrolment</h2>
-          <p className="text-sm text-[#6a3a10]/80 mt-3">Complete the form below to register for the Vedanta Philosophy Course.</p>
+          <p className="text-sm text-[#2e1405] mt-3">Complete the form below to register for the Vedanta Philosophy Course.</p>
         </div>
 
         {submitted ? (
