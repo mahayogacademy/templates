@@ -58,9 +58,9 @@ export default function VedantaCourse() {
       {/* ── HERO ── */}
       <section className="relative h-[58vh] min-h-[400px] flex items-center justify-center overflow-hidden">
         <img
-          src={`${b}images/guru-teachings.jpg`}
-          alt="Vedanta teachings"
-          className="absolute inset-0 w-full h-full object-cover object-top"
+          src={`${b}images/vedanta-hero.png`}
+          alt="Ancient Vedanta philosophy — sacred manuscripts and Himalayan dawn"
+          className="absolute inset-0 w-full h-full object-cover object-center"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#1a0f05]/70 via-[#2c1a08]/40 to-[#faf9f6]" />
         <div className="relative z-10 text-center px-6 max-w-3xl mx-auto">
