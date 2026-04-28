@@ -334,7 +334,7 @@ const FAQ_GROUPS: { theme: string; items: { q: string; a: string }[] }[] = [
       },
       {
         q: "What equipment do I need?",
-        a: "A stable internet connection and a device with a camera and microphone are required — a laptop or desktop is recommended for the best experience. A quiet, private space where you can sit undisturbed during sessions is important.",
+        a: "A stable internet connection and a device with a camera and microphone are required — a laptop or desktop is recommended for the best experience. A quiet, private space where you can sit undisturbed during sessions is important. Please ensure your camera is on throughout the sessions, as the instructor uses video to observe posture and ensure techniques are being practised correctly.",
       },
     ],
   },
