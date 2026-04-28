@@ -290,7 +290,7 @@ export default function VedantaCourse() {
                 <div key={s.num} className="flex items-center flex-1 last:flex-none">
                   <div className="flex flex-col items-center gap-1">
                     <div className={`w-8 h-8 rounded-full flex items-center justify-center text-xs font-semibold transition-colors duration-200 ${
-                      step > s.num ? "bg-[#b8892a] text-white" : step === s.num ? "bg-[#b8892a] text-white ring-2 ring-[#b8892a]/30" : "bg-white text-[#a09080] border border-[#ddd0b8]"
+                      step > s.num ? "bg-[#2e1405] text-white" : step === s.num ? "bg-[#2e1405] text-white ring-2 ring-[#2e1405]/30" : "bg-white text-[#a09080] border border-[#ddd0b8]"
                     }`}>
                       {step > s.num ? "✓" : s.num}
                     </div>
@@ -450,12 +450,12 @@ export default function VedantaCourse() {
                   <button
                     type="button"
                     onClick={() => setStep(s => s + 1)}
-                    className="px-8 py-3 rounded-full bg-[#b8892a] hover:bg-[#9d7422] text-white text-sm tracking-wider transition-colors"
+                    className="px-8 py-3 rounded-full bg-[#2e1405] hover:bg-[#1a0c03] text-white text-sm tracking-wider transition-colors"
                   >
                     Continue →
                   </button>
                 ) : (
-                  <button type="submit" className="px-8 py-3 rounded-full bg-[#b8892a] hover:bg-[#9d7422] text-white text-sm tracking-wider transition-colors font-medium">
+                  <button type="submit" className="px-8 py-3 rounded-full bg-[#2e1405] hover:bg-[#1a0c03] text-white text-sm tracking-wider transition-colors font-medium">
                     Complete Enrolment
                   </button>
                 )}
