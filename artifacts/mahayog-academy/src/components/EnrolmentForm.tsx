@@ -1,6 +1,58 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
 type Program = "vedanta" | "meditation";
+
+function CountryCombobox({ value, onChange, selectClass, inputClass }: {
+  value: string; onChange: (v: string) => void; selectClass: string; inputClass: string;
+}) {
+  const [query, setQuery] = useState(value);
+  const [open, setOpen] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  const filtered = query.trim()
+    ? COUNTRIES.filter(c => c.toLowerCase().startsWith(query.toLowerCase())).slice(0, 8)
+    : [];
+
+  useEffect(() => {
+    function handler(e: MouseEvent) {
+      if (ref.current && !ref.current.contains(e.target as Node)) setOpen(false);
+    }
+    document.addEventListener("mousedown", handler);
+    return () => document.removeEventListener("mousedown", handler);
+  }, []);
+
+  function select(country: string) {
+    onChange(country);
+    setQuery(country);
+    setOpen(false);
+  }
+
+  return (
+    <div ref={ref} className="relative">
+      <input
+        className={inputClass}
+        placeholder="Type to search country…"
+        value={query}
+        onFocus={() => setOpen(true)}
+        onChange={e => { setQuery(e.target.value); onChange(""); setOpen(true); }}
+        autoComplete="off"
+      />
+      {open && filtered.length > 0 && (
+        <ul className="absolute z-50 w-full bg-white border border-[#c8a050]/40 rounded-xl shadow-lg mt-1 overflow-auto max-h-52">
+          {filtered.map(c => (
+            <li
+              key={c}
+              onMouseDown={() => select(c)}
+              className={`px-4 py-2 text-sm cursor-pointer hover:bg-[#b8892a]/10 text-[#3d2008] ${c === value ? "font-medium text-[#7a4a08]" : ""}`}
+            >
+              {c}
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+}
 
 const NEPAL_CENTERS_LIST = [
   { id: "kathmandu", name: "Kathmandu Center",    loc: "Nanakmath, Balaju" },
@@ -206,10 +258,7 @@ export default function EnrolmentForm({ program }: { program: Program }) {
             )}
             <div>
               <label className={plc}>Country You Live In</label>
-              <select className={sc} value={form.country} onChange={e => set("country", e.target.value)}>
-                <option value="">Select country…</option>
-                {COUNTRIES.map(c => <option key={c} value={c}>{c}</option>)}
-              </select>
+              <CountryCombobox value={form.country} onChange={v => set("country", v)} selectClass={sc} inputClass={ic} />
             </div>
             <div>
               <label className={plc}>Languages Spoken</label>
