@@ -350,7 +350,7 @@ export default function EnrolmentForm({ program }: { program: Program }) {
                     A <span className="font-semibold text-[#7a4a08]">physical registration form</span> is also available at your center for those who prefer not to register online.
                   </p>
                 </> : (
-                  <p className="text-[11px] text-[#7a5a30] leading-relaxed">
+                  <p className="font-['Cormorant_Garamond'] text-sm font-semibold text-[#7a4a08] leading-snug">
                     A Zoom link will be shared with you via email before the workshop begins. Attendance is by donation — there is no fixed fee.
                   </p>
                 )}
