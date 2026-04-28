@@ -215,9 +215,9 @@ export default function EnrolmentForm({ program }: { program: Program }) {
 
           {/* ── MEDITATION: Health Information ── */}
           {slot === "m-health" && <>
-            <p className={hc}>Health Information <span className="text-sm text-[#7a5a30] font-sans font-normal">(Voluntary)</span></p>
+            <p className={hc}>Voluntary Health Information</p>
             <div>
-              <label className="block text-sm text-[#7a4a08] font-medium mb-2 leading-snug">Do you have any injuries or limitations that may affect sitting, movement, or breathwork? *</label>
+              <label className="block font-['Cormorant_Garamond'] text-base font-semibold text-[#7a4a08] mb-2 leading-snug">Do you have any injuries or limitations that may affect sitting, movement, or breathwork? *</label>
               <div className="flex gap-6 mt-2">
                 {["Yes", "No"].map(v => (
                   <label key={v} className="flex items-center gap-2 cursor-pointer">
@@ -234,7 +234,7 @@ export default function EnrolmentForm({ program }: { program: Program }) {
               </div>
             )}
             <div>
-              <label className="block text-sm text-[#7a4a08] font-medium mb-2 leading-snug">Is there anything about your physical or mental well-being the instructor should be aware of?</label>
+              <label className="block font-['Cormorant_Garamond'] text-base font-semibold text-[#7a4a08] mb-2 leading-snug">Is there anything about your physical or mental well-being the instructor should be aware of?</label>
               <textarea rows={3} className={`${ic} resize-none`} placeholder="This helps the instructor better support your practice…" value={form.instructorAwareness} onChange={e => set("instructorAwareness", e.target.value)} />
             </div>
             <div className="bg-[#f5ece0]/70 border border-[#c8a050]/20 rounded-xl p-4 space-y-2.5">
