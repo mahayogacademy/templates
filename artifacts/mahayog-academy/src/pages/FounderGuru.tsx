@@ -597,7 +597,7 @@ export default function FounderGuru() {
                 { label: "Green Revolution for Nepal's agricultural empowerment and independence", note: "Ecology", img: "initiative-green-revolution.png", href: null },
                 { label: "Jagadguru Shriramanandacharya Gurukul (Grades 6–12)", note: "Education", img: "initiative-gurukul.png", href: "/gurukul" },
                 { label: "Nepal's first Ayurveda University", note: "Education", img: "initiative-ayurveda.png", href: null },
-                { label: "Restoration of the Cow as Nepal's National Animal", note: "Cultural & Ecological Advocacy", img: "ashram-extra-cow-portrait.jpg", href: null },
+                { label: "Restoration of the Cow as Nepal's National Animal", note: "Cultural & Ecological Advocacy", img: "ashram-cows-sunset.jpg", pos: "center center", href: null },
                 { label: "108 Hanuman Temples across Nepal", note: "Sacred Infrastructure", img: "initiative-hanuman-temples.jpg", pos: "center center", href: "/projects#project-01" },
                 { label: "A historic Ram Temple in Nepal", note: "Sacred Infrastructure", img: "ram-mandir-1.jpg", pos: "center center", href: "/projects#project-02" },
               ].map((item, i) => {
