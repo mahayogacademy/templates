@@ -304,8 +304,8 @@ export default function EnrolmentForm({ program }: { program: Program }) {
               <p className={hc}>Workshop Dates</p>
               <p className={`${hint} mb-1`}>
                 {isNepal
-                  ? "5-day in-person workshops are held at the start of each month at your chosen center. Select your preferred intake below."
-                  : "5-day online workshops are held at the start of each month. Select your preferred intake below."}
+                  ? "5-day in-person workshops begin on the first Saturday of each month at your chosen center. Select your preferred intake below."
+                  : "5-day online workshops begin on the first Saturday of each month. Select your preferred intake below."}
               </p>
 
               <div className="flex flex-col gap-3 mt-3">
