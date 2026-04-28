@@ -13,8 +13,8 @@ const NEPAL_CENTERS_LIST = [
 const INTL_CENTERS_LIST = [
   { id: "canada",    name: "Canada Center",      loc: "" },
   { id: "uk",        name: "UK Center",           loc: "" },
-  { id: "usa",       name: "USA Center",          loc: "Texas" },
-  { id: "australia", name: "Australia Center",    loc: "Sydney" },
+  { id: "usa",       name: "USA Center",          loc: "" },
+  { id: "australia", name: "Australia Center",    loc: "" },
 ];
 
 const GOAL_OPTIONS = ["Stress reduction", "Mental clarity", "Spiritual growth", "Emotional healing"];
