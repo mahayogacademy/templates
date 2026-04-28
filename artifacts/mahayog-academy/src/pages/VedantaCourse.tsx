@@ -258,11 +258,15 @@ export default function VedantaCourse() {
       </section>
 
       {/* ── REGISTER ── */}
-      <section id="register" className="py-20 px-6 bg-[#f5ece0]">
+      <section
+        id="register"
+        className="py-20 px-6"
+        style={{ background: "radial-gradient(ellipse at 50% 0%, #8c5210 0%, #4a2808 45%, #1c0e04 100%)" }}
+      >
         <div className="max-w-2xl mx-auto text-center mb-10">
-          <span className="uppercase tracking-[0.25em] text-xs text-[#b8892a] font-medium">Enrol</span>
-          <h2 className="font-['Cormorant_Garamond'] text-4xl font-light text-[#3d3830] mt-2">Course Enrolment</h2>
-          <p className="text-sm text-[#7a7068] mt-3">Complete the form below to register for the Vedanta Philosophy Course.</p>
+          <span className="uppercase tracking-[0.25em] text-xs text-[#e8b860] font-medium">Enrol</span>
+          <h2 className="font-['Cormorant_Garamond'] text-4xl font-light text-[#f5e8cc] mt-2">Course Enrolment</h2>
+          <p className="text-sm text-[#c4a87a] mt-3">Complete the form below to register for the Vedanta Philosophy Course.</p>
         </div>
 
         {submitted ? (
@@ -290,7 +294,7 @@ export default function VedantaCourse() {
                     }`}>
                       {step > s.num ? "✓" : s.num}
                     </div>
-                    <span className={`text-[9px] uppercase tracking-wider hidden sm:block ${step === s.num ? "text-[#b8892a]" : "text-[#a09080]"}`}>{s.label}</span>
+                    <span className={`text-[9px] uppercase tracking-wider hidden sm:block ${step === s.num ? "text-[#e8b860]" : "text-[#c4a87a]/60"}`}>{s.label}</span>
                   </div>
                   {i < STEPS.length - 1 && (
                     <div className={`flex-1 h-px mx-1 mb-4 transition-colors duration-200 ${step > s.num ? "bg-[#b8892a]" : "bg-[#ddd0b8]"}`} />
