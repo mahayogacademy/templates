@@ -36,6 +36,7 @@ const MEDITATION_STEPS = [
 const ic = "w-full bg-white/70 border border-[#c8a050]/40 text-[#3d3830] placeholder-[#b0956a] rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#b8892a] transition-colors";
 const sc = `${ic} appearance-none`;
 const lc = "block font-['Cormorant_Garamond'] text-base font-semibold text-[#7a4a08] mb-2 leading-snug";
+const plc = "block text-[10px] uppercase tracking-[0.2em] text-[#7a4a08] mb-1.5 font-medium";
 const hc = "font-['Cormorant_Garamond'] text-xl font-light text-[#3d2008] mb-2";
 const hint = "text-xs text-[#7a5a30]";
 
@@ -114,17 +115,17 @@ export default function EnrolmentForm({ program }: { program: Program }) {
             <p className={hc}>Personal Details</p>
             <div className="grid grid-cols-2 gap-4">
               <div>
-                <label className={lc}>First Name *</label>
+                <label className={plc}>First Name *</label>
                 <input required className={ic} value={form.firstName} onChange={e => set("firstName", e.target.value)} />
               </div>
               <div>
-                <label className={lc}>Last Name *</label>
+                <label className={plc}>Last Name *</label>
                 <input required className={ic} value={form.lastName} onChange={e => set("lastName", e.target.value)} />
               </div>
             </div>
             <div className="grid grid-cols-2 gap-4">
               <div>
-                <label className={lc}>Gender *</label>
+                <label className={plc}>Gender *</label>
                 <select required className={sc} value={form.gender} onChange={e => set("gender", e.target.value)}>
                   <option value="">Select</option>
                   <option>Male</option>
@@ -133,21 +134,21 @@ export default function EnrolmentForm({ program }: { program: Program }) {
                 </select>
               </div>
               <div>
-                <label className={lc}>Date of Birth *</label>
+                <label className={plc}>Date of Birth *</label>
                 <input required type="date" className={ic} value={form.dob} onChange={e => set("dob", e.target.value)} />
               </div>
             </div>
             <div>
-              <label className={lc}>Mobile Number *</label>
+              <label className={plc}>Mobile Number *</label>
               <input required className={ic} placeholder="+1 555 000 0000" value={form.mobile} onChange={e => set("mobile", e.target.value)} />
             </div>
             <div>
-              <label className={lc}>Place of Birth</label>
+              <label className={plc}>Place of Birth</label>
               <input className={ic} value={form.placeOfBirth} onChange={e => set("placeOfBirth", e.target.value)} />
             </div>
             {program === "meditation" && (
               <div>
-                <label className={lc}>Occupation</label>
+                <label className={plc}>Occupation</label>
                 <input className={ic} placeholder="e.g. Teacher, Engineer, Student…" value={form.occupation} onChange={e => set("occupation", e.target.value)} />
               </div>
             )}
