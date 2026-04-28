@@ -347,7 +347,7 @@ const FAQ_GROUPS: { theme: string; items: { q: string; a: string }[] }[] = [
       },
       {
         q: "When should I register?",
-        a: "We recommend registering as early as possible, as space at in-person centers is limited. Registration typically closes a few days before the workshop date. If you miss a particular month's intake, you are welcome to register for the following month — workshops run on the first Saturday of every month.",
+        a: "We recommend registering as early as possible, as spaces are limited. Registration typically closes a few days before the workshop date. If you miss a particular month's intake, you are welcome to register for the following month — workshops run on the first Saturday of every month.",
       },
       {
         q: "Can I cancel or reschedule?",
