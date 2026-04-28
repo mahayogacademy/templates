@@ -97,8 +97,8 @@ export default function VedantaCourse() {
             { label: "Language",  value: "Nepali" },
           ].map((s) => (
             <div key={s.label} className="flex flex-col items-center px-8 py-5 gap-0.5">
-              <span className="text-[10px] uppercase tracking-[0.25em] text-[#b8892a]/70 font-medium">{s.label}</span>
-              <span className="font-['Cormorant_Garamond'] text-lg font-light text-[#e8dcc8]">{s.value}</span>
+              <span className="text-[10px] uppercase tracking-[0.25em] text-[#c8a050] font-medium">{s.label}</span>
+              <span className="font-['Cormorant_Garamond'] text-lg font-light text-white">{s.value}</span>
             </div>
           ))}
         </div>
