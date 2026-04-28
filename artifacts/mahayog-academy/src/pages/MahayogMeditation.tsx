@@ -309,7 +309,7 @@ const FAQ_GROUPS: { theme: string; items: { q: string; a: string }[] }[] = [
     items: [
       {
         q: "What happens during the 5-day workshop?",
-        a: "The workshop is a structured, immersive introduction to Mahayog Meditation, culminating in the transmission of Shaktipat initiation by Jagadguru Mahayogi Siddhababa — in person or through his direct representatives.\n\nEach day includes guided meditation sessions, teachings on Kundalini, the subtle body, and the stages of inner awakening, and open time for questions. The program builds progressively, preparing each participant to receive initiation safely and with awareness.\n\nFull attendance across all five days is essential. The days build upon each other and initiation is offered only to those who have completed the full program.",
+        a: "The workshop is a structured, immersive introduction to Mahayog Meditation, culminating in the transmission of Shaktipat initiation by Jagadguru Mahayogi Siddhababa — in person or through his direct representatives.\n\nEach day includes guided meditation sessions, teachings on Kundalini, the subtle body, and the stages of inner awakening, and open time for questions. The program builds progressively, preparing each participant to receive initiation safely and with awareness.\n\nFull attendance across all five days is essential. The days build upon each other and initiation is complete for those who have participated in the full program.",
       },
       {
         q: "What are the daily timings?",
