@@ -3,10 +3,10 @@ import { useState } from "react";
 type Program = "vedanta" | "meditation";
 
 const NEPAL_CENTERS_LIST = [
+  { id: "kathmandu", name: "Kathmandu Center",    loc: "Nanakmath, Balaju" },
   { id: "chitwan",   name: "Chitwan Center",      loc: "Bharatpur, Chitwan" },
   { id: "pokhara",   name: "Pokhara Center",      loc: "Nadipur, Pokhara" },
   { id: "surkhet",   name: "Surkhet Center",      loc: "Ganesh Chowk, Surkhet" },
-  { id: "kathmandu", name: "Kathmandu Center",    loc: "Nanakmath, Balaju" },
   { id: "chatara",   name: "Chatara Main Center", loc: "Hanuman Mandir, Chatara" },
 ];
 
