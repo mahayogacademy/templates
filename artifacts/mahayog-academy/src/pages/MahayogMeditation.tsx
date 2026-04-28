@@ -274,6 +274,10 @@ const FAQS = [
     q: "What is the Chakra System?",
     a: "Chakras are subtle energy centers — focal points of consciousness, formed at the junctions where the three main subtle energy channels (sushumna, ida, and pingala) converge.\n\nIn Mahayog, chakras are not stimulated or controlled. Through the natural rising of Kundalini, they are engaged as needed for the practitioner. While over 32,000 chakras exist, seven are considered primary:\n\nMuladhara (base of spine) — Stability, grounding\nSvadhisthana (lower abdomen) — Flow, creativity\nManipur (solar plexus) — Will, inner strength\nAnahata (heart) — Compassion, balance\nVishuddha (throat) — Expression, truthfulness\nAjna (between eyebrows) — Insight, perception\nSahasrara (crown) — Stillness, unity, expanded awareness",
   },
+  {
+    q: "Is there a fee for the Mahayog Meditation program?",
+    a: "There is no fixed fee for participation or initiation. The teachings are offered freely as a spiritual gift.\n\nDonations — known in the yogic tradition as Guru dakshina — are welcomed as an expression of gratitude and reciprocity, and may be offered at the center at your discretion. No one is turned away for inability to contribute.\n\nFor those attending in person at a Nepal center, contributions may be made directly at the center. For international participants joining online, guidance on offering Guru dakshina will be shared alongside the workshop details.",
+  },
 ];
 
 function FAQItem({ q, a }: { q: string; a: string }) {
