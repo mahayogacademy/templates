@@ -2,14 +2,17 @@ import { useState } from "react";
 
 type Program = "vedanta" | "meditation";
 
-const CENTERS = [
-  { id: "canada",    name: "Canada Center",      loc: "" },
-  { id: "uk",        name: "UK Center",           loc: "" },
+const NEPAL_CENTERS_LIST = [
   { id: "chitwan",   name: "Chitwan Center",      loc: "Bharatpur, Chitwan" },
   { id: "pokhara",   name: "Pokhara Center",      loc: "Nadipur, Pokhara" },
   { id: "surkhet",   name: "Surkhet Center",      loc: "Ganesh Chowk, Surkhet" },
   { id: "kathmandu", name: "Kathmandu Center",    loc: "Nanakmath, Balaju" },
   { id: "chatara",   name: "Chatara Main Center", loc: "Hanuman Mandir, Chatara" },
+];
+
+const INTL_CENTERS_LIST = [
+  { id: "canada",    name: "Canada Center",      loc: "" },
+  { id: "uk",        name: "UK Center",           loc: "" },
   { id: "usa",       name: "USA Center",          loc: "Texas" },
   { id: "australia", name: "Australia Center",    loc: "Sydney" },
 ];
@@ -282,21 +285,28 @@ export default function EnrolmentForm({ program }: { program: Program }) {
           {slot === "center" && <>
             <p className={hc}>Preferred Center</p>
             <p className={`${hint} mb-4`}>Select the center closest to you.</p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              {CENTERS.map(c => (
-                <button
-                  type="button"
-                  key={c.id}
-                  onClick={() => set("center", c.id)}
-                  className={`text-left px-4 py-3 rounded-xl border transition-colors duration-150 ${
-                    form.center === c.id
-                      ? "border-[#b8892a] bg-[#b8892a]/10"
-                      : "border-[#c8a050]/40 bg-white/50 hover:border-[#b8892a]/60"
-                  }`}
-                >
-                  <p className={`text-sm font-medium ${form.center === c.id ? "text-[#7a4a08]" : "text-[#3d2008]"}`}>{c.name}</p>
-                  {c.loc && <p className="text-[11px] text-[#7a5a30] mt-0.5">{c.loc}</p>}
-                </button>
+            <div className="space-y-4">
+              {[{ label: "Nepal", list: NEPAL_CENTERS_LIST }, { label: "International", list: INTL_CENTERS_LIST }].map(group => (
+                <div key={group.label}>
+                  <p className="text-[10px] uppercase tracking-[0.2em] text-[#b8892a] font-medium mb-2">{group.label}</p>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    {group.list.map(c => (
+                      <button
+                        type="button"
+                        key={c.id}
+                        onClick={() => set("center", c.id)}
+                        className={`text-left px-4 py-3 rounded-xl border transition-colors duration-150 ${
+                          form.center === c.id
+                            ? "border-[#b8892a] bg-[#b8892a]/10"
+                            : "border-[#c8a050]/40 bg-white/50 hover:border-[#b8892a]/60"
+                        }`}
+                      >
+                        <p className={`text-sm font-medium ${form.center === c.id ? "text-[#7a4a08]" : "text-[#3d2008]"}`}>{c.name}</p>
+                        {c.loc && <p className="text-[11px] text-[#7a5a30] mt-0.5">{c.loc}</p>}
+                      </button>
+                    ))}
+                  </div>
+                </div>
               ))}
             </div>
           </>}
