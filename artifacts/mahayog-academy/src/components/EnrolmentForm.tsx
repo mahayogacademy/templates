@@ -334,26 +334,27 @@ export default function EnrolmentForm({ program }: { program: Program }) {
                 ))}
               </div>
 
-              <div className="bg-[#7a4a08]/8 border border-[#b8892a]/50 rounded-xl px-4 py-3 mt-1 flex gap-3 items-start">
-                <span className="text-[#b8892a] text-base mt-0.5 shrink-0">◆</span>
-                <p className="font-['Cormorant_Garamond'] text-sm font-semibold text-[#7a4a08] leading-snug">
-                  Full attendance across all 5 days is required for completion of the meditation program and to receive initiation.
-                </p>
-              </div>
-
-              <div className="bg-[#f5ece0]/70 border border-[#c8a050]/20 rounded-xl p-4 space-y-2">
-                {isNepal ? <>
-                  <p className="text-[11px] text-[#7a5a30] leading-relaxed">
-                    <span className="font-semibold text-[#7a4a08]">Attendance is by donation</span> — there is no fixed fee. Contributions may be offered at the center at your discretion.
+              <div className="bg-[#fdf6ec] border border-[#c8a050]/40 rounded-xl overflow-hidden mt-1">
+                <div className="bg-[#b8892a]/10 border-b border-[#c8a050]/30 px-4 py-3 flex gap-2.5 items-start">
+                  <span className="text-[#b8892a] text-xs mt-0.5 shrink-0">◆</span>
+                  <p className="text-xs font-semibold text-[#5a3005] leading-relaxed">
+                    Full attendance across all 5 days is required for completion of the meditation program and to receive initiation.
                   </p>
-                  <p className="text-[11px] text-[#7a5a30] leading-relaxed">
-                    A <span className="font-semibold text-[#7a4a08]">physical registration form</span> is also available at your center for those who prefer not to register online.
-                  </p>
-                </> : (
-                  <p className="font-['Cormorant_Garamond'] text-sm font-semibold text-[#7a4a08] leading-snug">
-                    A Zoom link will be shared with you via email before the workshop begins. Attendance is by donation — there is no fixed fee.
-                  </p>
-                )}
+                </div>
+                <div className="px-4 py-3 space-y-2">
+                  {isNepal ? <>
+                    <p className="text-xs text-[#5a3c10] leading-relaxed">
+                      <span className="font-semibold">Attendance is by donation</span> — there is no fixed fee. Contributions may be offered at the center at your discretion.
+                    </p>
+                    <p className="text-xs text-[#5a3c10] leading-relaxed">
+                      A <span className="font-semibold">physical registration form</span> is also available at your center for those who prefer not to register online.
+                    </p>
+                  </> : (
+                    <p className="text-xs text-[#5a3c10] leading-relaxed">
+                      A <span className="font-semibold">Zoom link</span> will be shared with you by email before the workshop begins. Attendance is by donation — there is no fixed fee.
+                    </p>
+                  )}
+                </div>
               </div>
             </>;
           })()}
