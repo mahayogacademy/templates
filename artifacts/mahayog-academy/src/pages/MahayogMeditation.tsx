@@ -443,10 +443,10 @@ export default function MahayogMeditation() {
             The Vedic Science of Self-Realization
           </p>
           <a
-            href="#what-is"
+            href="#register"
             className="inline-flex items-center gap-2 bg-[#b8892a] hover:bg-[#9d7422] text-white text-sm px-7 py-3 rounded-full tracking-wider transition-colors duration-200"
           >
-            Begin Exploring <ArrowRight className="w-4 h-4" strokeWidth={1.5} />
+            Register <ArrowRight className="w-4 h-4" strokeWidth={1.5} />
           </a>
         </div>
       </section>
