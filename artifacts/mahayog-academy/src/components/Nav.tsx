@@ -4,7 +4,6 @@ import { ChevronDown } from "lucide-react";
 
 const EXPLORE = [
   { label: "About the Academy",  href: "/about" },
-  { label: "Meditation",         href: "/meditation" },
   { label: "Ashram & Centers",   href: "/ashram" },
   { label: "Projects",           href: "/projects" },
   { label: "Founder Guru",       href: "/founder-guru" },
