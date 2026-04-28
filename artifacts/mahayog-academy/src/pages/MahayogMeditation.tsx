@@ -313,7 +313,7 @@ const FAQ_GROUPS: { theme: string; items: { q: string; a: string }[] }[] = [
       },
       {
         q: "What are the daily timings?",
-        a: "Session timings vary slightly by center. As a general guide, morning sessions begin around 6:00 AM and run for approximately two hours each day. Confirmed timings will be communicated to you after registration. For in-person centers, contact your center directly for the exact schedule.",
+        a: "Session timings vary by center. As a general guide, morning sessions begin around 6:00 AM and evening sessions begin around 6:00 PM. Sessions run for approximately two hours each day. Confirmed timings will be communicated to you after registration. For in-person centers, contact your center directly for the exact schedule.",
       },
       {
         q: "Can I join if I miss a day?",
