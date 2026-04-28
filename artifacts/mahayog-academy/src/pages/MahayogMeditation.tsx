@@ -343,7 +343,7 @@ const FAQ_GROUPS: { theme: string; items: { q: string; a: string }[] }[] = [
     items: [
       {
         q: "Is there a fee for the Mahayog Meditation program?",
-        a: "There is no fixed fee for participation or initiation. The teachings are offered freely as a spiritual gift.\n\nDonations — known in the yogic tradition as Guru dakshina — are welcomed as an expression of gratitude and reciprocity, and may be offered at the center at your discretion. No one is turned away for inability to contribute.\n\nFor those attending in person at a Nepal center, contributions may be made directly at the center. For international participants joining online, guidance on offering Guru dakshina will be shared alongside the workshop details.",
+        a: "There is no fixed fee for participation or initiation. The teachings are offered freely as a spiritual gift.\n\nDonations, known in the yogic tradition as Guru dakshina, are welcomed as an expression of gratitude and reciprocity, and may be offered at the center at your discretion. No one is turned away for inability to contribute.\n\nFor those attending in person at a Nepal center, contributions may be made directly at the center. For international participants joining online, guidance on offering Guru dakshina will be shared alongside the workshop details.",
       },
       {
         q: "When should I register?",
