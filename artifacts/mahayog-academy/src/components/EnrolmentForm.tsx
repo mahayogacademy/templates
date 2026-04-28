@@ -18,12 +18,25 @@ const GOAL_OPTIONS = ["Stress reduction", "Mental clarity", "Spiritual growth", 
 
 const NEPAL_CENTER_IDS = new Set(["chitwan", "pokhara", "surkhet", "kathmandu", "chatara"]);
 
+function getFirstSaturdayOfMonth(year: number, month: number): Date {
+  const d = new Date(year, month, 1);
+  const daysUntilSat = (6 - d.getDay() + 7) % 7;
+  return new Date(year, month, 1 + daysUntilSat);
+}
+
 function getUpcomingWorkshops(count = 3) {
   const now = new Date();
   return Array.from({ length: count }, (_, i) => {
-    const d = new Date(now.getFullYear(), now.getMonth() + i + 1, 1);
-    const month = d.toLocaleString("en-GB", { month: "long" });
-    return { key: `${d.getFullYear()}-${d.getMonth() + 1}`, label: `1–5 ${month} ${d.getFullYear()}` };
+    const target = new Date(now.getFullYear(), now.getMonth() + i + 1, 1);
+    const start = getFirstSaturdayOfMonth(target.getFullYear(), target.getMonth());
+    const end = new Date(start);
+    end.setDate(start.getDate() + 4);
+    const fmt = (d: Date) => d.toLocaleString("en-GB", { day: "numeric", month: "long" });
+    const year = start.getFullYear();
+    return {
+      key: `${year}-${start.getMonth() + 1}`,
+      label: `${fmt(start)} – ${fmt(end)} ${year}`,
+    };
   });
 }
 
