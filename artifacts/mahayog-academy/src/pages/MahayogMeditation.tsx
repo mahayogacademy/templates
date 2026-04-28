@@ -357,6 +357,9 @@ function HorizontalSectionNav() {
                     <path d="M12 2C12 2 15 9 22 12C22 12 15 15 12 22C12 22 9 15 2 12C2 12 9 9 12 2Z"/>
                   </svg>
                   {short}
+                  <svg width="7" height="7" viewBox="0 0 24 24" fill="#b8892a" className="shrink-0">
+                    <path d="M12 2C12 2 15 9 22 12C22 12 15 15 12 22C12 22 9 15 2 12C2 12 9 9 12 2Z"/>
+                  </svg>
                 </span>
               ) : short}
               {(isActive || id === "register") && (
