@@ -351,8 +351,13 @@ function HorizontalSectionNav() {
               {i > 0 && (
                 <span className="absolute left-0 top-1/2 -translate-y-1/2 h-4 w-px bg-[#ddd0ba]" />
               )}
+              {id === "register" && (
+                <svg className="absolute top-1 left-1/2 -translate-x-1/2" width="7" height="7" viewBox="0 0 24 24" fill="none">
+                  <path d="M12 2C12 2 15 9 22 12C22 12 15 15 12 22C12 22 9 15 2 12C2 12 9 9 12 2Z" stroke="#b8892a" strokeWidth="2" fill="#b8892a"/>
+                </svg>
+              )}
               {short}
-              {(isActive || id === "register") && (
+              {isActive && id !== "register" && (
                 <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-6 h-px bg-[#b8892a]" />
               )}
             </a>
