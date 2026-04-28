@@ -70,6 +70,7 @@ const INTL_CENTERS_LIST = [
 ];
 
 const GOAL_OPTIONS = ["Stress reduction", "Mental clarity", "Spiritual growth", "Emotional healing"];
+const LANGUAGE_OPTIONS = ["English", "Nepali", "Hindi", "Spanish", "French", "German", "Portuguese", "Arabic", "Mandarin", "Japanese", "Korean"];
 
 const NEPAL_CENTER_IDS = new Set(["chitwan", "pokhara", "surkhet", "kathmandu", "chatara"]);
 
@@ -159,7 +160,7 @@ export default function EnrolmentForm({ program }: { program: Program }) {
     meditatedBefore: "", meditationTypes: "",
     goals: [] as string[], goalsOther: "",
     hasInjuries: "", injuriesDesc: "", instructorAwareness: "",
-    country: "", center: "", workshopDate: "", languages: "",
+    country: "", center: "", workshopDate: "", languages: [] as string[], languagesOther: "",
     refererName: "", refererRelation: "", refererMobile: "",
     email: "", password: "",
   });
@@ -168,6 +169,10 @@ export default function EnrolmentForm({ program }: { program: Program }) {
   const toggleGoal = (g: string) => setFormState(f => ({
     ...f,
     goals: f.goals.includes(g) ? f.goals.filter(x => x !== g) : [...f.goals, g],
+  }));
+  const toggleLanguage = (l: string) => setFormState(f => ({
+    ...f,
+    languages: f.languages.includes(l) ? f.languages.filter(x => x !== l) : [...f.languages, l],
   }));
 
   function handleSubmit(e: React.FormEvent) {
@@ -262,7 +267,25 @@ export default function EnrolmentForm({ program }: { program: Program }) {
             </div>
             <div>
               <label className={plc}>Languages Spoken</label>
-              <input className={ic} placeholder="e.g. English, Nepali, Hindi…" value={form.languages} onChange={e => set("languages", e.target.value)} />
+              <div className="flex flex-wrap gap-2 mt-1">
+                {LANGUAGE_OPTIONS.map(l => (
+                  <label key={l} className={`flex items-center gap-2 cursor-pointer px-3 py-2 rounded-xl border transition-colors ${
+                    form.languages.includes(l) ? "border-[#b8892a] bg-[#b8892a]/10" : "border-[#c8a050]/40 bg-white/40 hover:border-[#b8892a]/50"
+                  }`}>
+                    <input type="checkbox" checked={form.languages.includes(l)} onChange={() => toggleLanguage(l)} className="accent-[#b8892a] w-4 h-4 shrink-0" />
+                    <span className="text-sm text-[#3d2008]">{l}</span>
+                  </label>
+                ))}
+                <label className={`flex items-center gap-2 cursor-pointer px-3 py-2 rounded-xl border transition-colors ${
+                  form.languages.includes("Other") ? "border-[#b8892a] bg-[#b8892a]/10" : "border-[#c8a050]/40 bg-white/40 hover:border-[#b8892a]/50"
+                }`}>
+                  <input type="checkbox" checked={form.languages.includes("Other")} onChange={() => toggleLanguage("Other")} className="accent-[#b8892a] w-4 h-4 shrink-0" />
+                  <span className="text-sm text-[#3d2008]">Other</span>
+                </label>
+              </div>
+              {form.languages.includes("Other") && (
+                <input className={`${ic} mt-2`} placeholder="Please specify…" value={form.languagesOther} onChange={e => set("languagesOther", e.target.value)} />
+              )}
             </div>
           </>}
 
