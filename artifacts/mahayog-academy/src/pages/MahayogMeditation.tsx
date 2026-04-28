@@ -284,7 +284,7 @@ const FAQ_GROUPS: { theme: string; items: { q: string; a: string }[] }[] = [
     items: [
       {
         q: "Who can attend?",
-        a: "The Mahayog Meditation program is open to sincere seekers of all backgrounds, nationalities, and spiritual traditions. No prior experience with yoga or meditation is required — the only prerequisite is a genuine openness to inner exploration and a willingness to attend the full 5 days.",
+        a: "The Mahayog Meditation program is open to sincere seekers of all backgrounds, nationalities, and spiritual traditions. No prior experience with yoga or meditation is required — the only prerequisite is a genuine openness to inner exploration and a commitment to attend the full 5 days.",
       },
       {
         q: "Do I need prior meditation experience?",
