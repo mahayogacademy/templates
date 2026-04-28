@@ -249,34 +249,128 @@ function BenefitIcon({ type }: { type: string }) {
   }
 }
 
-const FAQS = [
+const FAQ_GROUPS: { theme: string; items: { q: string; a: string }[] }[] = [
   {
-    q: "What is Kundalini?",
-    a: "Kundalini is the dormant cosmic energy of transformation that lies at the base of the spine. It is the power of higher consciousness within every individual, waiting to be awakened. To experience the full potential of human life, no matter the spiritual path, Kundalini awakening is foundational. It is the bedrock of spiritual advancement.\n\nKundalini has been recognized across cultures: in Hinduism as the coiled serpent energy, in Tantric traditions as Shakti, in Chinese medicine as Qi, in Taoism through Tai Chi and Qigong, and in Western mysticism through Kabbalah. Across all traditions, awakening this latent energy is viewed as a means to realize one's highest potential.",
+    theme: "Understanding Mahayog",
+    items: [
+      {
+        q: "What is Kundalini?",
+        a: "Kundalini is the dormant cosmic energy of transformation that lies at the base of the spine. It is the power of higher consciousness within every individual, waiting to be awakened. To experience the full potential of human life, no matter the spiritual path, Kundalini awakening is foundational. It is the bedrock of spiritual advancement.\n\nKundalini has been recognized across cultures: in Hinduism as the coiled serpent energy, in Tantric traditions as Shakti, in Chinese medicine as Qi, in Taoism through Tai Chi and Qigong, and in Western mysticism through Kabbalah. Across all traditions, awakening this latent energy is viewed as a means to realize one's highest potential.",
+      },
+      {
+        q: "What is Kundalini Awakening?",
+        a: "Kundalini awakening refers to the activation of the latent spiritual energy within a person, leading to expanded awareness and inner transformation. Regardless of one's spiritual path, Kundalini awakening is the foundation for true inner evolution and self-realization.",
+      },
+      {
+        q: "How to Awaken the Kundalini Safely?",
+        a: "Through Guru Grace (The Automatic Method): Jagadguru Mahayogi Siddhababa can awaken a seeker's Kundalini through touch, sight, mantra, or pure intention. This initiation — known as Shaktipat — sparks automatic deep purification, heightened awareness, and accelerated transformation.\n\nWith the guidance of an enlightened Master, Kundalini rises naturally, safely, and in alignment with the seeker's individual journey.\n\nPersonal Effort (The Manual Method): Many attempt to awaken Kundalini through books or online guides. This approach carries significant risks without proper guidance — the energy is potent and can cause physical, emotional, and psychological imbalances if not properly directed.",
+      },
+      {
+        q: "What happens once Kundalini is Awakened?",
+        a: "After awakening, the practitioner becomes the observer during meditation. Experiences depend on where the Kundalini focuses across the three body types:\n\n• Physical Body — Gross sensations such as automatic asanas, mudras, shaking, and mantra recitation.\n• Subtle Body — Inner visualizations, energy flow through the 72,000 nāḍīs (energy channels).\n• Causal Body — Deep internal transformation through the cleansing of Samskaras, felt as growing contentment and inner peace.\n\nEach individual's experience will be unique, as the Kundalini moves through the chakra system according to the practitioner's individual constitution.",
+      },
+      {
+        q: "What are the Stages of Kundalini Awakening?",
+        a: "Kundalini awakening is not a single moment, but a gradual inner unfolding through three broad phases:\n\n1. Awakening Begins — During Mahayog Meditation training, the Guru raises the Kundalini from its dormant position. Practitioners often report increased clarity, sensitivity, and awareness of inner movement.\n\n2. Purification — As inner energy becomes active, unresolved impressions surface. The Kundalini purifies body and mind. Emotional patterns begin to be released; dreams become more vivid; awareness refines.\n\n3. Integration — The flow of energy stabilizes. Awareness becomes naturally expressed through daily life — characterized by steadiness, discernment, and ease. Inner silence and clarity begin to inform relationships, work, and service.",
+      },
+      {
+        q: "What is the Chakra System?",
+        a: "Chakras are subtle energy centers — focal points of consciousness, formed at the junctions where the three main subtle energy channels (sushumna, ida, and pingala) converge.\n\nIn Mahayog, chakras are not stimulated or controlled. Through the natural rising of Kundalini, they are engaged as needed for the practitioner. While over 32,000 chakras exist, seven are considered primary:\n\nMuladhara (base of spine) — Stability, grounding\nSvadhisthana (lower abdomen) — Flow, creativity\nManipur (solar plexus) — Will, inner strength\nAnahata (heart) — Compassion, balance\nVishuddha (throat) — Expression, truthfulness\nAjna (between eyebrows) — Insight, perception\nSahasrara (crown) — Stillness, unity, expanded awareness",
+      },
+    ],
   },
   {
-    q: "What is Kundalini Awakening?",
-    a: "Kundalini awakening refers to the activation of the latent spiritual energy within a person, leading to expanded awareness and inner transformation. Regardless of one's spiritual path, Kundalini awakening is the foundation for true inner evolution and self-realization.",
+    theme: "Eligibility & Preparation",
+    items: [
+      {
+        q: "Who can attend?",
+        a: "The Mahayog Meditation program is open to sincere seekers of all backgrounds, nationalities, and spiritual traditions. No prior experience with yoga or meditation is required — the only prerequisite is a genuine openness to inner exploration and a willingness to attend the full 5 days.",
+      },
+      {
+        q: "Do I need prior meditation experience?",
+        a: "No. The program welcomes complete beginners as well as experienced practitioners. The initiation process is guided entirely by the Guru's transmission — it does not depend on prior technique or knowledge. Come as you are.",
+      },
+      {
+        q: "Are there health or age requirements?",
+        a: "There is no strict age minimum, though participants under 18 may be asked to attend with a parent or guardian. The voluntary health section in the registration form helps the instructor be aware of any relevant conditions so appropriate support can be offered.\n\nThose with significant medical or psychiatric conditions are encouraged to consult a healthcare provider before attending, and to share relevant details in the health section of the form.",
+      },
+      {
+        q: "What should I wear or bring?",
+        a: "Comfortable, loose-fitting clothing in natural fabrics is recommended. White or soft, neutral tones are traditional for meditation practice, though not required. Bring a water bottle, and if attending in Nepal, a shawl or light wrap can be useful for seated sessions. All essential materials will be provided by the center.",
+      },
+      {
+        q: "What languages are sessions conducted in?",
+        a: "Sessions at Nepal centers are conducted primarily in Nepali, with English support available where needed. International online sessions are conducted in English. If you have specific language accessibility needs, please note this when registering.",
+      },
+    ],
   },
   {
-    q: "How to Awaken the Kundalini Safely?",
-    a: "Through Guru Grace (The Automatic Method): Jagadguru Mahayogi Siddhababa can awaken a seeker's Kundalini through touch, sight, mantra, or pure intention. This initiation — known as Shaktipat — sparks automatic deep purification, heightened awareness, and accelerated transformation.\n\nWith the guidance of an enlightened Master, Kundalini rises naturally, safely, and in alignment with the seeker's individual journey.\n\nPersonal Effort (The Manual Method): Many attempt to awaken Kundalini through books or online guides. This approach carries significant risks without proper guidance — the energy is potent and can cause physical, emotional, and psychological imbalances if not properly directed.",
+    theme: "The Workshop",
+    items: [
+      {
+        q: "What happens during the 5-day workshop?",
+        a: "The workshop is a structured, immersive introduction to Mahayog Meditation, culminating in the transmission of Shaktipat initiation by Jagadguru Mahayogi Siddhababa — in person or through his direct representatives.\n\nEach day includes guided meditation sessions, teachings on Kundalini, the subtle body, and the stages of inner awakening, and open time for questions. The program builds progressively, preparing each participant to receive initiation safely and with awareness.\n\nFull attendance across all five days is essential. The days build upon each other and initiation is offered only to those who have completed the full program.",
+      },
+      {
+        q: "What are the daily timings?",
+        a: "Session timings vary slightly by center. As a general guide, morning sessions begin around 7:00 AM and the day concludes by early evening. Confirmed timings will be communicated to you after registration. For in-person centers, contact your center directly for the exact schedule.",
+      },
+      {
+        q: "Can I join if I miss a day?",
+        a: "No — full attendance across all five days is required for program completion and to receive initiation. If you are unable to commit to the full five days for a given month, we encourage you to register for a future intake instead. Workshops run every month, beginning on the first Saturday.",
+      },
+    ],
   },
   {
-    q: "What happens once Kundalini is Awakened?",
-    a: "After awakening, the practitioner becomes the observer during meditation. Experiences depend on where the Kundalini focuses across the three body types:\n\n• Physical Body — Gross sensations such as automatic asanas, mudras, shaking, and mantra recitation.\n• Subtle Body — Inner visualizations, energy flow through the 72,000 nāḍīs (energy channels).\n• Causal Body — Deep internal transformation through the cleansing of Samskaras, felt as growing contentment and inner peace.\n\nEach individual's experience will be unique, as the Kundalini moves through the chakra system according to the practitioner's individual constitution.",
+    theme: "Online Participants",
+    items: [
+      {
+        q: "How will I receive the Zoom link?",
+        a: "Once your registration is confirmed, the Zoom link for your selected workshop will be sent to the email address you provide — typically a few days before the workshop begins. Please check your spam or promotions folder if you do not see it in your inbox.",
+      },
+      {
+        q: "What time zone are online sessions held in?",
+        a: "Online sessions are currently scheduled in Nepal Standard Time (NPT, UTC+5:45). The confirmed daily schedule, including times converted for common international time zones, will be sent to you with the Zoom link before the workshop.",
+      },
+      {
+        q: "What equipment do I need?",
+        a: "A stable internet connection and a device with a camera and microphone are required — a laptop or desktop is recommended for the best experience. A quiet, private space where you can sit undisturbed during sessions is important. Headphones improve audio quality during guided meditation.",
+      },
+    ],
   },
   {
-    q: "What are the Stages of Kundalini Awakening?",
-    a: "Kundalini awakening is not a single moment, but a gradual inner unfolding through three broad phases:\n\n1. Awakening Begins — During Mahayog Meditation training, the Guru raises the Kundalini from its dormant position. Practitioners often report increased clarity, sensitivity, and awareness of inner movement.\n\n2. Purification — As inner energy becomes active, unresolved impressions surface. The Kundalini purifies body and mind. Emotional patterns begin to be released; dreams become more vivid; awareness refines.\n\n3. Integration — The flow of energy stabilizes. Awareness becomes naturally expressed through daily life — characterized by steadiness, discernment, and ease. Inner silence and clarity begin to inform relationships, work, and service.",
+    theme: "Fees & Registration",
+    items: [
+      {
+        q: "Is there a fee for the Mahayog Meditation program?",
+        a: "There is no fixed fee for participation or initiation. The teachings are offered freely as a spiritual gift.\n\nDonations — known in the yogic tradition as Guru dakshina — are welcomed as an expression of gratitude and reciprocity, and may be offered at the center at your discretion. No one is turned away for inability to contribute.\n\nFor those attending in person at a Nepal center, contributions may be made directly at the center. For international participants joining online, guidance on offering Guru dakshina will be shared alongside the workshop details.",
+      },
+      {
+        q: "When should I register?",
+        a: "We recommend registering as early as possible, as space at in-person centers is limited. Registration typically closes a few days before the workshop date. If you miss a particular month's intake, you are welcome to register for the following month — workshops run on the first Saturday of every month.",
+      },
+      {
+        q: "Can I cancel or reschedule?",
+        a: "If you are unable to attend your selected workshop, please notify your center as soon as possible. Your registration can be transferred to a future monthly intake. As there is no fee involved, there is no financial penalty — we simply ask for timely notice so your place can be offered to another seeker.",
+      },
+    ],
   },
   {
-    q: "What is the Chakra System?",
-    a: "Chakras are subtle energy centers — focal points of consciousness, formed at the junctions where the three main subtle energy channels (sushumna, ida, and pingala) converge.\n\nIn Mahayog, chakras are not stimulated or controlled. Through the natural rising of Kundalini, they are engaged as needed for the practitioner. While over 32,000 chakras exist, seven are considered primary:\n\nMuladhara (base of spine) — Stability, grounding\nSvadhisthana (lower abdomen) — Flow, creativity\nManipur (solar plexus) — Will, inner strength\nAnahata (heart) — Compassion, balance\nVishuddha (throat) — Expression, truthfulness\nAjna (between eyebrows) — Insight, perception\nSahasrara (crown) — Stillness, unity, expanded awareness",
-  },
-  {
-    q: "Is there a fee for the Mahayog Meditation program?",
-    a: "There is no fixed fee for participation or initiation. The teachings are offered freely as a spiritual gift.\n\nDonations — known in the yogic tradition as Guru dakshina — are welcomed as an expression of gratitude and reciprocity, and may be offered at the center at your discretion. No one is turned away for inability to contribute.\n\nFor those attending in person at a Nepal center, contributions may be made directly at the center. For international participants joining online, guidance on offering Guru dakshina will be shared alongside the workshop details.",
+    theme: "After Initiation",
+    items: [
+      {
+        q: "What happens after I receive initiation?",
+        a: "Initiation is a beginning, not an end. Once Kundalini is awakened, the energy continues to purify and unfold naturally through your daily meditation practice. After the workshop you will receive guidance on how to maintain and deepen your practice independently.",
+      },
+      {
+        q: "How do I continue my practice?",
+        a: "Participants receive instruction in Mahayog self-practice, which can be maintained at home without additional equipment or guidance. Ongoing resources — including teachings, group sittings (satsang), and access to the broader Mahayog community — are available through your center and through this website.",
+      },
+      {
+        q: "Is there ongoing support after initiation?",
+        a: "Yes. Mahayog is not a one-time event — it is a living practice. Your local center provides regular satsang (community gatherings) and access to the Guru's teachings. International participants are also supported through online satsang and the global Mahayog network.",
+      },
+    ],
   },
 ];
 
@@ -833,9 +927,19 @@ export default function MahayogMeditation() {
               Frequently Asked Questions
             </h2>
           </div>
-          <div>
-            {FAQS.map((f) => (
-              <FAQItem key={f.q} q={f.q} a={f.a} />
+          <div className="space-y-10">
+            {FAQ_GROUPS.map((group) => (
+              <div key={group.theme}>
+                <div className="flex items-center gap-3 mb-1">
+                  <span className="text-[#b8892a] text-xs">◆</span>
+                  <span className="uppercase tracking-[0.2em] text-xs text-[#b8892a] font-medium">{group.theme}</span>
+                </div>
+                <div>
+                  {group.items.map((f) => (
+                    <FAQItem key={f.q} q={f.q} a={f.a} />
+                  ))}
+                </div>
+              </div>
             ))}
           </div>
         </div>
