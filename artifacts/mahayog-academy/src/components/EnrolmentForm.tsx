@@ -7,7 +7,7 @@ const NEPAL_CENTERS_LIST = [
   { id: "chitwan",   name: "Chitwan Center",      loc: "Bharatpur, Chitwan" },
   { id: "pokhara",   name: "Pokhara Center",      loc: "Nadipur, Pokhara" },
   { id: "surkhet",   name: "Surkhet Center",      loc: "Ganesh Chowk, Surkhet" },
-  { id: "chatara",   name: "Chatara Main Center", loc: "Hanuman Mandir, Chatara" },
+  { id: "chatara",   name: "Chatara Guru Ashram", loc: "Hanuman Mandir, Chatara" },
 ];
 
 const INTL_CENTERS_LIST = [
