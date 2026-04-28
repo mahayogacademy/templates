@@ -13,7 +13,7 @@ const EXPLORE = [
 const EXPERIENCE = [
   { label: "Himalayan Siddha Mahayog Meditation", href: "/meditation" },
   { label: "Vedanta Philosophy Course",           href: "/vedanta" },
-  { label: "Ashram Life",                         href: "/ashram-life" },
+  { label: "Ashram Life",                         href: "/ashram" },
   { label: "Guru Darshan",                        href: "/guru-darshan" },
   { label: "Events",                              href: "/events" },
   { label: "Gurukul",                             href: "/gurukul" },
