@@ -63,9 +63,9 @@ const STEPS = [
   { num: 6, label: "Login" },
 ];
 
-const inputCls = "w-full bg-white border border-[#ddd0b8] text-[#3d3830] placeholder-[#b0a090] rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#b8892a] transition-colors";
+const inputCls = "w-full bg-[#1e0d03]/60 border border-[#7a4e18] text-[#f5e8cc] placeholder-[#9a6a30] rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#e8b860] transition-colors";
 const selectCls = `${inputCls} appearance-none`;
-const labelCls = "block text-[10px] uppercase tracking-[0.2em] text-[#b8892a] mb-1.5 font-medium";
+const labelCls = "block text-[10px] uppercase tracking-[0.2em] text-[#e8b860] mb-1.5 font-medium";
 
 export default function VedantaCourse() {
   const [step, setStep] = useState(1);
@@ -294,7 +294,7 @@ export default function VedantaCourse() {
                     }`}>
                       {step > s.num ? "✓" : s.num}
                     </div>
-                    <span className={`text-[9px] uppercase tracking-wider hidden sm:block ${step === s.num ? "text-[#e8b860]" : "text-[#c4a87a]/60"}`}>{s.label}</span>
+                    <span className={`text-[9px] uppercase tracking-wider hidden sm:block ${step === s.num ? "text-[#e8b860]" : "text-[#c4a87a]"}`}>{s.label}</span>
                   </div>
                   {i < STEPS.length - 1 && (
                     <div className={`flex-1 h-px mx-1 mb-4 transition-colors duration-200 ${step > s.num ? "bg-[#b8892a]" : "bg-[#ddd0b8]"}`} />
@@ -304,11 +304,11 @@ export default function VedantaCourse() {
             </div>
 
             <form onSubmit={handleSubmit}>
-              <div className="bg-white border border-[#e8dece] rounded-2xl p-7 space-y-5 shadow-sm">
+              <div className="bg-[#2e1505]/75 backdrop-blur-sm border border-[#8c5a20]/50 rounded-2xl p-7 space-y-5">
 
                 {/* Step 1 – Personal Details */}
                 {step === 1 && <>
-                  <p className="font-['Cormorant_Garamond'] text-xl font-light text-[#3d3830] mb-2">Personal Details</p>
+                  <p className="font-['Cormorant_Garamond'] text-xl font-light text-[#f5e8cc] mb-2">Personal Details</p>
                   <div className="grid grid-cols-2 gap-4">
                     <div>
                       <label className={labelCls}>First Name *</label>
@@ -346,7 +346,7 @@ export default function VedantaCourse() {
 
                 {/* Step 2 – Education */}
                 {step === 2 && <>
-                  <p className="font-['Cormorant_Garamond'] text-xl font-light text-[#3d3830] mb-2">Education & Background</p>
+                  <p className="font-['Cormorant_Garamond'] text-xl font-light text-[#f5e8cc] mb-2">Education & Background</p>
                   <div>
                     <label className={labelCls}>Highest Education *</label>
                     <select required className={selectCls} value={form.education} onChange={e => set("education", e.target.value)}>
@@ -357,7 +357,7 @@ export default function VedantaCourse() {
                   <div>
                     <label className={labelCls}>Education Major</label>
                     <input className={inputCls} placeholder="e.g. Philosophy, Engineering…" value={form.educationMajor} onChange={e => set("educationMajor", e.target.value)} />
-                    <p className="text-[10px] text-[#9a8f84] mt-1">Please be as specific as possible.</p>
+                    <p className="text-[10px] text-[#c4a87a] mt-1">Please be as specific as possible.</p>
                   </div>
                   <div>
                     <label className={labelCls}>Profession</label>
@@ -367,8 +367,8 @@ export default function VedantaCourse() {
 
                 {/* Step 3 – Center */}
                 {step === 3 && <>
-                  <p className="font-['Cormorant_Garamond'] text-xl font-light text-[#3d3830] mb-1">Preferred Center</p>
-                  <p className="text-xs text-[#7a7068] mb-4">Select the center closest to you. If yours is not listed, please contact us.</p>
+                  <p className="font-['Cormorant_Garamond'] text-xl font-light text-[#f5e8cc] mb-1">Preferred Center</p>
+                  <p className="text-xs text-[#c4a87a] mb-4">Select the center closest to you. If yours is not listed, please contact us.</p>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     {CENTERS.map(c => (
                       <button
@@ -377,12 +377,12 @@ export default function VedantaCourse() {
                         onClick={() => set("center", c.id)}
                         className={`text-left px-4 py-3 rounded-xl border transition-colors duration-150 ${
                           form.center === c.id
-                            ? "border-[#b8892a] bg-[#b8892a]/8"
-                            : "border-[#e0d4c0] bg-[#fdf8f2] hover:border-[#b8892a]/50"
+                            ? "border-[#e8b860] bg-[#e8b860]/10"
+                            : "border-[#7a4e18]/50 bg-[#1e0d03]/40 hover:border-[#e8b860]/50"
                         }`}
                       >
-                        <p className={`text-sm font-medium ${form.center === c.id ? "text-[#b8892a]" : "text-[#3d3830]"}`}>{c.name}</p>
-                        {c.loc && <p className="text-[11px] text-[#9a8f84] mt-0.5">{c.loc}</p>}
+                        <p className={`text-sm font-medium ${form.center === c.id ? "text-[#e8b860]" : "text-[#f5e8cc]"}`}>{c.name}</p>
+                        {c.loc && <p className="text-[11px] text-[#c4a87a] mt-0.5">{c.loc}</p>}
                       </button>
                     ))}
                   </div>
@@ -390,7 +390,7 @@ export default function VedantaCourse() {
 
                 {/* Step 4 – Emergency Contact */}
                 {step === 4 && <>
-                  <p className="font-['Cormorant_Garamond'] text-xl font-light text-[#3d3830] mb-2">Emergency Contact</p>
+                  <p className="font-['Cormorant_Garamond'] text-xl font-light text-[#f5e8cc] mb-2">Emergency Contact</p>
                   <div>
                     <label className={labelCls}>Contact Name *</label>
                     <input required className={inputCls} value={form.emergencyName} onChange={e => set("emergencyName", e.target.value)} />
@@ -407,8 +407,8 @@ export default function VedantaCourse() {
 
                 {/* Step 5 – Reference */}
                 {step === 5 && <>
-                  <p className="font-['Cormorant_Garamond'] text-xl font-light text-[#3d3830] mb-1">Reference <span className="text-sm text-[#9a8f84] font-sans font-normal">(Optional)</span></p>
-                  <p className="text-xs text-[#7a7068] mb-4">If someone referred you to this course, please share their details.</p>
+                  <p className="font-['Cormorant_Garamond'] text-xl font-light text-[#f5e8cc] mb-1">Reference <span className="text-sm text-[#c4a87a] font-sans font-normal">(Optional)</span></p>
+                  <p className="text-xs text-[#c4a87a] mb-4">If someone referred you to this course, please share their details.</p>
                   <div>
                     <label className={labelCls}>Referrer's Name</label>
                     <input className={inputCls} value={form.refererName} onChange={e => set("refererName", e.target.value)} />
@@ -425,8 +425,8 @@ export default function VedantaCourse() {
 
                 {/* Step 6 – Login */}
                 {step === 6 && <>
-                  <p className="font-['Cormorant_Garamond'] text-xl font-light text-[#3d3830] mb-1">Login Details</p>
-                  <p className="text-xs text-[#7a7068] mb-4">These credentials will give you access to your student portal, where the Zoom class link will be available. Please save them carefully.</p>
+                  <p className="font-['Cormorant_Garamond'] text-xl font-light text-[#f5e8cc] mb-1">Login Details</p>
+                  <p className="text-xs text-[#c4a87a] mb-4">These credentials will give you access to your student portal, where the Zoom class link will be available. Please save them carefully.</p>
                   <div>
                     <label className={labelCls}>Email Address *</label>
                     <input required type="email" className={inputCls} value={form.email} onChange={e => set("email", e.target.value)} />
@@ -441,7 +441,7 @@ export default function VedantaCourse() {
               {/* Navigation */}
               <div className="flex items-center justify-between mt-6">
                 {step > 1 ? (
-                  <button type="button" onClick={() => setStep(s => s - 1)} className="px-6 py-3 rounded-full border border-[#ddd0b8] text-[#b8892a] text-sm hover:border-[#b8892a] transition-colors">
+                  <button type="button" onClick={() => setStep(s => s - 1)} className="px-6 py-3 rounded-full border border-[#7a4e18] text-[#e8b860] text-sm hover:border-[#e8b860] transition-colors">
                     ← Back
                   </button>
                 ) : <div />}
