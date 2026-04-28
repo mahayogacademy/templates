@@ -308,6 +308,7 @@ const NAV_SECTIONS = [
   { id: "benefits",     label: "Benefits",           short: "Benefits"       },
   { id: "origins",      label: "Ancient Origins",    short: "Origins"        },
   { id: "faq",          label: "FAQ",                short: "FAQ"            },
+  { id: "register",     label: "Register",           short: "Register"       },
 ];
 
 function HorizontalSectionNav() {
@@ -342,7 +343,9 @@ function HorizontalSectionNav() {
                 document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
               }}
               className={`relative flex-1 flex items-center justify-center py-3 px-2 text-[11px] tracking-widest uppercase font-medium transition-colors duration-200 whitespace-nowrap ${
-                isActive ? "text-[#b8892a]" : "text-[#7a7060] hover:text-[#3d3830]"
+                id === "register"
+                  ? "text-[#b8892a] hover:text-[#96711e]"
+                  : isActive ? "text-[#b8892a]" : "text-[#7a7060] hover:text-[#3d3830]"
               }`}
             >
               {i > 0 && (
