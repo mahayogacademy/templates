@@ -300,7 +300,7 @@ const FAQ_GROUPS: { theme: string; items: { q: string; a: string }[] }[] = [
       },
       {
         q: "What languages are sessions conducted in?",
-        a: "Sessions at Nepal centers are conducted primarily in Nepali, with English support available where needed. International online sessions are conducted in the language or languages of those present — our priority is that every participant can fully understand and engage. If you have specific language accessibility needs, please note this when registering.",
+        a: "Sessions at Nepal centers are conducted primarily in Nepali, with English support available where needed. International online sessions are conducted primarily in English, Nepali, or Hindi — whichever best serves the participants present. To help us accommodate you, please indicate the languages you speak in the registration form.",
       },
     ],
   },
