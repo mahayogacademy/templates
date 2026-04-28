@@ -276,8 +276,16 @@ export default function EnrolmentForm({ program }: { program: Program }) {
                     <span className="text-sm text-[#3d2008]">{l}</span>
                   </label>
                 ))}
+                <label className={`flex items-center gap-2 cursor-pointer px-3 py-2 rounded-xl border transition-colors ${
+                  form.languages.includes("Other") ? "border-[#b8892a] bg-[#b8892a]/10" : "border-[#c8a050]/40 bg-white/40 hover:border-[#b8892a]/50"
+                }`}>
+                  <input type="checkbox" checked={form.languages.includes("Other")} onChange={() => toggleLanguage("Other")} className="accent-[#b8892a] w-4 h-4 shrink-0" />
+                  <span className="text-sm text-[#3d2008]">Other</span>
+                </label>
               </div>
-              <input className={`${ic} mt-2`} placeholder="Other language(s)… e.g. Swahili, Bengali" value={form.languagesOther} onChange={e => set("languagesOther", e.target.value)} />
+              {form.languages.includes("Other") && (
+                <input className={`${ic} mt-2`} placeholder="Please specify… e.g. Swahili, Bengali" value={form.languagesOther} onChange={e => set("languagesOther", e.target.value)} />
+              )}
             </div>
           </>}
 
