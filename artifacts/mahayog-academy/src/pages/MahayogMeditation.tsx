@@ -342,9 +342,9 @@ function HorizontalSectionNav() {
                 e.preventDefault();
                 document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
               }}
-              className={`relative flex-1 flex items-center justify-center py-3 px-2 text-[11px] tracking-widest uppercase font-medium transition-colors duration-200 whitespace-nowrap ${
+              className={`relative flex-1 flex items-center justify-center py-3 px-2 text-[11px] tracking-widest uppercase font-medium transition-all duration-200 whitespace-nowrap ${
                 id === "register"
-                  ? "text-[#b8892a] hover:text-[#96711e]"
+                  ? "bg-[#2e1405] text-[#e8c97a] hover:bg-[#1a0c03] rounded-r-full"
                   : isActive ? "text-[#b8892a]" : "text-[#7a7060] hover:text-[#3d3830]"
               }`}
             >
