@@ -16,6 +16,17 @@ const CENTERS = [
 
 const GOAL_OPTIONS = ["Stress reduction", "Mental clarity", "Spiritual growth", "Emotional healing"];
 
+const NEPAL_CENTER_IDS = new Set(["chitwan", "pokhara", "surkhet", "kathmandu", "chatara"]);
+
+function getUpcomingWorkshops(count = 3) {
+  const now = new Date();
+  return Array.from({ length: count }, (_, i) => {
+    const d = new Date(now.getFullYear(), now.getMonth() + i + 1, 1);
+    const month = d.toLocaleString("en-GB", { month: "long" });
+    return { key: `${d.getFullYear()}-${d.getMonth() + 1}`, label: `1–5 ${month} ${d.getFullYear()}` };
+  });
+}
+
 const VEDANTA_STEPS = [
   { num: 1, label: "Personal",   slot: "personal" },
   { num: 2, label: "Education",  slot: "v-education" },
@@ -29,8 +40,9 @@ const MEDITATION_STEPS = [
   { num: 2, label: "Experience",  slot: "m-experience" },
   { num: 3, label: "Health",      slot: "m-health" },
   { num: 4, label: "Center",      slot: "center" },
-  { num: 5, label: "Reference",   slot: "reference" },
-  { num: 6, label: "Login",       slot: "login" },
+  { num: 5, label: "Workshop",    slot: "m-workshop" },
+  { num: 6, label: "Reference",   slot: "reference" },
+  { num: 7, label: "Login",       slot: "login" },
 ];
 
 const ic = "w-full bg-white/70 border border-[#c8a050]/40 text-[#3d3830] placeholder-[#b0956a] rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#b8892a] transition-colors";
@@ -51,7 +63,7 @@ export default function EnrolmentForm({ program }: { program: Program }) {
     meditatedBefore: "", meditationTypes: "",
     goals: [] as string[], goalsOther: "",
     hasInjuries: "", injuriesDesc: "", instructorAwareness: "",
-    center: "",
+    center: "", workshopDate: "",
     refererName: "", refererRelation: "", refererMobile: "",
     email: "", password: "",
   });
@@ -270,6 +282,60 @@ export default function EnrolmentForm({ program }: { program: Program }) {
               ))}
             </div>
           </>}
+
+          {/* ── MEDITATION: Workshop Dates ── */}
+          {slot === "m-workshop" && (() => {
+            const isNepal = NEPAL_CENTER_IDS.has(form.center);
+            const workshops = getUpcomingWorkshops(3);
+            return <>
+              <p className={hc}>Workshop Dates</p>
+              <p className={`${hint} mb-1`}>
+                {isNepal
+                  ? "5-day in-person workshops are held at the start of each month at your chosen center. Select your preferred intake below."
+                  : "5-day online workshops are held at the start of each month. Select your preferred intake below."}
+              </p>
+
+              <div className="flex flex-col gap-3 mt-3">
+                {workshops.map(w => (
+                  <button
+                    type="button"
+                    key={w.key}
+                    onClick={() => set("workshopDate", w.key)}
+                    className={`text-left px-5 py-4 rounded-xl border transition-colors duration-150 flex items-center justify-between ${
+                      form.workshopDate === w.key
+                        ? "border-[#b8892a] bg-[#b8892a]/10"
+                        : "border-[#c8a050]/40 bg-white/50 hover:border-[#b8892a]/60"
+                    }`}
+                  >
+                    <div>
+                      <p className={`font-['Cormorant_Garamond'] text-base font-semibold ${form.workshopDate === w.key ? "text-[#7a4a08]" : "text-[#3d2008]"}`}>{w.label}</p>
+                      <p className="text-[11px] text-[#7a5a30] mt-0.5">{isNepal ? "In Person · 5 Days" : "Online · 5 Days"}</p>
+                    </div>
+                    {form.workshopDate === w.key && (
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                        <path d="M12 2C12 2 15 9 22 12C22 12 15 15 12 22C12 22 9 15 2 12C2 12 9 9 12 2Z" stroke="#b8892a" strokeWidth="1.5" fill="#b8892a" fillOpacity="0.3"/>
+                      </svg>
+                    )}
+                  </button>
+                ))}
+              </div>
+
+              <div className="bg-[#f5ece0]/70 border border-[#c8a050]/20 rounded-xl p-4 space-y-2 mt-1">
+                {isNepal ? <>
+                  <p className="text-[11px] text-[#7a5a30] leading-relaxed">
+                    <span className="font-semibold text-[#7a4a08]">Attendance is by donation</span> — there is no fixed fee. Contributions may be offered at the center at your discretion.
+                  </p>
+                  <p className="text-[11px] text-[#7a5a30] leading-relaxed">
+                    A <span className="font-semibold text-[#7a4a08]">physical registration form</span> is also available at your center for those who prefer not to register online.
+                  </p>
+                </> : (
+                  <p className="text-[11px] text-[#7a5a30] leading-relaxed">
+                    A Zoom link will be shared with you via email before the workshop begins. Attendance is by donation — there is no fixed fee.
+                  </p>
+                )}
+              </div>
+            </>;
+          })()}
 
           {/* ── SHARED: Reference ── */}
           {slot === "reference" && <>
