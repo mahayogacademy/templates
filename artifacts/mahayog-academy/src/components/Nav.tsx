@@ -58,8 +58,16 @@ export default function Nav() {
 
         {/* ── Logo ── */}
         <Link href="/">
-          <span className="font-['Cormorant_Garamond'] text-xl font-semibold text-[#b8892a] tracking-wide cursor-pointer hover:text-[#9d7422] transition-colors">
-            Mahayogi Siddhababa Academy
+          <span className="flex items-center gap-3 cursor-pointer group">
+            <img
+              src={`${import.meta.env.BASE_URL}images/logo.png`}
+              alt="Mahayogi Siddhababa Spiritual Academy logo"
+              className="h-10 w-10 rounded-full object-cover shrink-0"
+            />
+            <span className="font-['Cormorant_Garamond'] text-[#b8892a] tracking-wide group-hover:text-[#9d7422] transition-colors leading-tight">
+              <span className="block text-lg font-semibold">Mahayogi Siddhababa</span>
+              <span className="block text-sm font-medium tracking-[0.12em] text-[#c4a050]">Spiritual Academy</span>
+            </span>
           </span>
         </Link>
 
