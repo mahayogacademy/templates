@@ -296,7 +296,7 @@ const FAQ_GROUPS: { theme: string; items: { q: string; a: string }[] }[] = [
       },
       {
         q: "What should I wear or bring?",
-        a: "Comfortable, loose-fitting clothing in natural fabrics is recommended. White or soft, neutral tones are traditional for meditation practice, though not required. Bring a water bottle, and if attending in Nepal, a shawl or light wrap can be useful for seated sessions. All essential materials will be provided by the center.",
+        a: "Comfortable, loose-fitting clothing in natural fabrics is recommended. White or soft, neutral tones are traditional for meditation practice, though not required. Bring a water bottle. A shawl or light wrap can be useful for seated sessions. All essential materials will be provided by the center.",
       },
       {
         q: "What languages are sessions conducted in?",
