@@ -77,7 +77,7 @@ export default function EnrolmentForm({ program }: { program: Program }) {
     meditatedBefore: "", meditationTypes: "",
     goals: [] as string[], goalsOther: "",
     hasInjuries: "", injuriesDesc: "", instructorAwareness: "",
-    center: "", workshopDate: "",
+    center: "", workshopDate: "", languages: "",
     refererName: "", refererRelation: "", refererMobile: "",
     email: "", password: "",
   });
@@ -178,6 +178,10 @@ export default function EnrolmentForm({ program }: { program: Program }) {
                 <input className={ic} placeholder="e.g. Teacher, Engineer, Student…" value={form.occupation} onChange={e => set("occupation", e.target.value)} />
               </div>
             )}
+            <div>
+              <label className={plc}>Languages Spoken</label>
+              <input className={ic} placeholder="e.g. English, Nepali, Hindi…" value={form.languages} onChange={e => set("languages", e.target.value)} />
+            </div>
           </>}
 
           {/* ── VEDANTA: Education & Background ── */}
