@@ -171,10 +171,6 @@ export default function EnrolmentForm({ program }: { program: Program }) {
               <label className={plc}>Mobile Number *</label>
               <input required className={ic} placeholder="+1 555 000 0000" value={form.mobile} onChange={e => set("mobile", e.target.value)} />
             </div>
-            <div>
-              <label className={plc}>Country You Were Born In</label>
-              <input className={ic} value={form.placeOfBirth} onChange={e => set("placeOfBirth", e.target.value)} />
-            </div>
             {program === "meditation" && (
               <div>
                 <label className={plc}>Occupation</label>
