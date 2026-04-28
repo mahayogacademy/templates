@@ -3,6 +3,7 @@ import { ArrowRight, ChevronDown } from "lucide-react";
 import { Link } from "wouter";
 import Nav from "@/components/Nav";
 import EnrolmentForm from "@/components/EnrolmentForm";
+import FloatingRegisterButton from "@/components/FloatingRegisterButton";
 
 // viewBox 500×500; circles at corners offset 90px from centre (250,250), r=140
 // Label positions are inside each circle's unique outer quadrant
@@ -822,6 +823,8 @@ export default function MahayogMeditation() {
           </div>
         </div>
       </section>
+
+      <FloatingRegisterButton label="Register" />
 
       {/* ── REGISTER ── */}
       <section

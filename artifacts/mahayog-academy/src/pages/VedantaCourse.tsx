@@ -3,6 +3,7 @@ import Nav from "@/components/Nav";
 import { Link } from "wouter";
 import { ChevronDown, ArrowRight } from "lucide-react";
 import EnrolmentForm from "@/components/EnrolmentForm";
+import FloatingRegisterButton from "@/components/FloatingRegisterButton";
 
 const b = import.meta.env.BASE_URL;
 
@@ -228,6 +229,8 @@ export default function VedantaCourse() {
         </div>
         <EnrolmentForm program="vedanta" />
       </section>
+
+      <FloatingRegisterButton label="Enrol Now" />
 
       {/* ── FOOTER ── */}
       <footer className="py-10 px-6 border-t border-[#e8dece] bg-[#fdf6ec]">
