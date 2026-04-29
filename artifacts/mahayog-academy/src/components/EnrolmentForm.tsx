@@ -266,7 +266,10 @@ export default function EnrolmentForm({ program }: { program: Program }) {
               <CountryCombobox value={form.country} onChange={v => set("country", v)} selectClass={sc} inputClass={ic} />
             </div>
             <div>
-              <label className={plc}>Languages Spoken</label>
+              <div className="flex items-baseline gap-2">
+                <label className={plc}>Languages Spoken</label>
+                <span className="text-[11px] text-[#a07840] italic">Select all that apply</span>
+              </div>
               <div className="flex flex-wrap gap-2 mt-1">
                 {LANGUAGE_OPTIONS.map(l => (
                   <label key={l} className={`flex items-center gap-2 cursor-pointer px-3 py-2 rounded-xl border transition-colors ${
