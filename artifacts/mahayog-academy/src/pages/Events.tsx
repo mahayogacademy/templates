@@ -513,62 +513,58 @@ export default function Events() {
                       const badge = BADGE[ev.kind];
                       const accent = KIND_ACCENT[ev.kind];
 
-                      /* ── Featured card (rich Academy events) ── */
+                      /* ── Featured card (rich Academy events) — same size as compact tiles ── */
                       if (isRich) return (
                         <div key={ev.id}
-                          className="rounded-xl overflow-hidden border border-[#e2d8c8] bg-white hover:border-[#c8a870] hover:shadow-md transition-all duration-200 flex flex-col sm:flex-row group">
+                          className="rounded-xl overflow-hidden border border-[#e2d8c8] bg-white hover:border-[#c8a870] hover:shadow-md transition-all duration-200 flex items-stretch group">
                           {/* Accent bar */}
                           <div className={`w-1.5 shrink-0 ${accent}`} />
-                          {/* Image */}
-                          {ev.img && (
-                            <div className="relative sm:w-52 md:w-64 shrink-0 h-44 sm:h-auto overflow-hidden">
-                              <img src={`${b}images/${ev.img}`} alt={ev.title}
-                                className={`w-full h-full object-cover ${ev.imgPos ?? "object-center"} transition-transform duration-500 group-hover:scale-105`} />
-                            </div>
-                          )}
+                          {/* Date box — same as compact tiles */}
+                          <div className="shrink-0 w-16 flex flex-col items-center justify-center py-5 px-2 border-r border-[#ece5d8]">
+                            <span className="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#2c1a08] leading-none">{dateNum}</span>
+                            <span className="text-[10px] uppercase tracking-[0.15em] text-[#b8892a] font-semibold leading-none mt-1">{dateMon}</span>
+                          </div>
                           {/* Content */}
-                          <div className="flex-1 px-6 py-5 flex flex-col justify-between">
-                            <div>
-                              <div className="flex items-center gap-2 mb-2.5">
-                                <span className={`text-[10px] uppercase tracking-[0.2em] font-semibold px-2.5 py-0.5 rounded-full ${badge}`}>
-                                  {ev.kindLabel}
-                                </span>
-                                {ev.recurring && (
-                                  <span className="text-[10px] uppercase tracking-[0.18em] text-[#4a7a5a] font-semibold">Annual</span>
-                                )}
-                              </div>
-                              <h3 className="font-['Cormorant_Garamond'] text-2xl md:text-3xl font-light text-[#2c1a08] leading-snug mb-1">
-                                {ev.title}
-                              </h3>
-                              {ev.subtitle && (
-                                <p className="text-xs text-[#7a6e5a] italic mb-3">{ev.subtitle}</p>
+                          <div className="flex-1 px-5 py-4 flex flex-col justify-center">
+                            <div className="flex items-center gap-2 mb-1.5">
+                              <span className={`text-[10px] uppercase tracking-[0.2em] font-semibold px-2.5 py-0.5 rounded-full ${badge}`}>
+                                {ev.kindLabel}
+                              </span>
+                              {ev.recurring && (
+                                <span className="text-[10px] uppercase tracking-[0.18em] text-[#4a7a5a] font-semibold">Annual</span>
                               )}
-                              <div className="flex flex-wrap gap-x-4 gap-y-1.5">
-                                <span className="flex items-center gap-1.5 text-xs text-[#7a6e5a]">
-                                  <CalendarDays size={11} className="text-[#b8892a]" />{ev.date}
-                                </span>
+                            </div>
+                            <p className="font-['Cormorant_Garamond'] text-lg font-normal text-[#2c1a08] leading-tight">
+                              {ev.title}
+                            </p>
+                            {ev.subtitle && (
+                              <p className="text-xs text-[#7a6e5a] mt-1 leading-relaxed">{ev.subtitle}</p>
+                            )}
+                            {(ev.time || ev.location) && (
+                              <div className="flex flex-wrap gap-x-3 gap-y-0.5 mt-1">
                                 {ev.time && (
-                                  <span className="flex items-center gap-1.5 text-xs text-[#7a6e5a]">
-                                    <Clock size={11} className="text-[#b8892a]" />{ev.time}
+                                  <span className="flex items-center gap-1 text-[11px] text-[#9a8f84]">
+                                    <Clock size={10} className="text-[#b8892a]" />{ev.time}
                                   </span>
                                 )}
                                 {Icon && ev.location && (
-                                  <span className="flex items-center gap-1.5 text-xs text-[#7a6e5a]">
-                                    <Icon size={11} className="text-[#b8892a]" />{ev.location}
+                                  <span className="flex items-center gap-1 text-[11px] text-[#9a8f84]">
+                                    <Icon size={10} className="text-[#b8892a]" />{ev.location}
                                   </span>
                                 )}
                               </div>
-                            </div>
-                            {ev.cta && (
-                              <div className="mt-4 pt-4 border-t border-[#f0ebe3]">
-                                <Link href={ev.cta.href}>
-                                  <span className="inline-flex items-center gap-2 bg-[#b8892a] hover:bg-[#c9981f] text-white text-[11px] px-5 py-2 rounded-full tracking-widest uppercase transition-all duration-200 cursor-pointer shadow-sm">
-                                    {ev.cta.label} <ArrowRight size={11} />
-                                  </span>
-                                </Link>
-                              </div>
                             )}
                           </div>
+                          {/* Inline CTA */}
+                          {ev.cta && (
+                            <div className="shrink-0 flex items-center pr-5 pl-2">
+                              <Link href={ev.cta.href}>
+                                <span className="flex items-center gap-1 text-xs font-semibold text-[#b8892a] group-hover:text-[#8a6418] transition-colors cursor-pointer whitespace-nowrap uppercase tracking-[0.1em]">
+                                  {ev.cta.label} <ArrowRight size={12} />
+                                </span>
+                              </Link>
+                            </div>
+                          )}
                         </div>
                       );
 
