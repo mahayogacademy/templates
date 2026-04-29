@@ -624,24 +624,37 @@ export default function Events() {
 
       {/* ── PAST EVENTS ── */}
       <section className="max-w-5xl mx-auto px-6 py-20">
-        <div className="flex items-center gap-4 mb-10">
-          <p className="text-xs uppercase tracking-[0.25em] text-[#7a6e5a] font-medium">Recent Gatherings</p>
+        <div className="flex items-center gap-4 mb-8">
+          <p className="text-xs uppercase tracking-[0.25em] text-[#b8892a] font-medium whitespace-nowrap">Past Events</p>
           <div className="flex-1 h-px bg-[#e8dece]" />
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {PAST.map(p => (
-            <div key={p.title} className="rounded-xl bg-[#fdf8f0] border border-[#e8dece] p-6">
-              <div className="w-8 h-8 rounded-full bg-[#b8892a]/10 flex items-center justify-center mb-4">
-                <CalendarDays size={14} className="text-[#b8892a]" />
+        <div className="space-y-3">
+          {PAST.map(p => {
+            const parts = p.date.split(" ");
+            const isRecurring = p.date.toLowerCase().includes("recurring");
+            const monthAbbr = isRecurring ? "●" : (parts[0] ?? "").slice(0, 3).toUpperCase();
+            const yearAbbr  = isRecurring ? "Various" : (parts[1] ?? "").slice(2);
+            return (
+              <div key={p.title}
+                className="rounded-xl overflow-hidden border border-[#ddd4be] bg-[#faf8f4] flex items-stretch opacity-90">
+                {/* Date column */}
+                <div className="shrink-0 w-16 flex flex-col items-center justify-center py-5 px-2 border-r border-[#e8e0d0]">
+                  <span className="font-['Cormorant_Garamond'] text-lg font-semibold text-[#8a7860] leading-none">{monthAbbr}</span>
+                  <span className="text-[10px] uppercase tracking-[0.1em] text-[#b8892a]/70 font-semibold leading-none mt-1">'{yearAbbr}</span>
+                </div>
+                {/* Content */}
+                <div className="flex-1 px-5 py-4">
+                  <p className="font-['Cormorant_Garamond'] text-2xl font-normal text-[#6a4e28] leading-tight">
+                    {p.title}
+                  </p>
+                  <p className="text-sm text-[#8a7860] mt-1 leading-relaxed">{p.summary}</p>
+                  <p className="flex items-center gap-1 text-xs text-[#a09080] mt-1.5">
+                    <MapPin size={10} className="text-[#b8892a]/60 shrink-0" />{p.location}
+                  </p>
+                </div>
               </div>
-              <h4 className="font-['Cormorant_Garamond'] text-xl font-semibold text-[#2c1a08] leading-snug mb-2">{p.title}</h4>
-              <div className="flex flex-wrap gap-2 mb-3">
-                <span className="text-xs text-[#9a8f84]">{p.date}</span>
-                <span className="text-xs text-[#9a8f84]">· {p.location}</span>
-              </div>
-              <p className="text-sm text-[#5a5248] leading-relaxed">{p.summary}</p>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </section>
 
