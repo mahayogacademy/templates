@@ -132,7 +132,7 @@ const MILESTONES = [
     year: "2008 · 2015 · 2017",
     title: "Bhu-Samadhi of Jagadguru Mahayogi Siddhababa",
     titleHtml: "<em>Bhu-Samadhi</em> of Jagadguru Mahayogi Siddhababa",
-    desc: "The sacred passing (Bhu-Samadhi) of Jagadguru Mahayogi Siddhababa's own revered Guru, a pivotal moment in the lineage, observed with deep ceremony, Vedic rites, and collective grief and gratitude by thousands of disciples. His Holiness continues to carry forward this sacred mission.",
+    desc: "The sacred passing of Jagadguru Mahayogi Siddhababa's revered Guru, marked with Vedic rites and collective devotion. His Holiness continues to carry forward this sacred mission.",
     badge: "Lineage",
     img: "bhu-samadhi-1.jpg",
   },
@@ -146,7 +146,7 @@ const MILESTONES = [
   {
     year: "2021",
     title: "Himalayan Siddha Mahayog Anuṣṭhān (COVID-19)",
-    desc: "In response to the global COVID-19 pandemic, Jagadguru Mahayogi Siddhababa led an extended collective anuṣṭhān, a sustained spiritual observance of prayer, mantra, havan, and meditation, invoking healing and protection for the world. Seekers across continents joined online.",
+    desc: "Jagadguru Mahayogi Siddhababa led a collective anuṣṭhān of prayer, mantra, and havan, invoking healing and protection for the world during the pandemic. Seekers across continents joined online.",
     badge: "Special Anuṣṭhān",
     img: "ashram-extra-sanyasi-river.jpg",
   },
