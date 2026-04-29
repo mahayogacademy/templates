@@ -135,22 +135,16 @@ const PAST = [
     summary: "Seekers worldwide gathered to offer blessings and prayers on the occasion of His Holiness's birthday, marked with puja, satsang, and Bhandara.",
   },
   {
-    title: "Mahashivaratri, Rudra-Abhishek & Bhandara",
+    title: "Mahashivaratri",
     date: "February 2026",
     location: "Local Centres & Ashram",
     summary: "An overnight vigil of Shiva puja, Rudra-Abhishek, chanting, and Bhandara at the ashram and affiliated centres globally.",
   },
   {
-    title: "Ram Navami, Ramcharitmanas Parayan & Havan",
+    title: "Ram Navami",
     date: "April 2026",
     location: "Guru Ashram, Nepal",
     summary: "The appearance of Bhagwan Shri Ram celebrated through nine-day Manas path, havan, Sundarkanda recitation, and prasad distribution.",
-  },
-  {
-    title: "Guru Purnima Darshan Mahotsav 2025",
-    date: "July 2025",
-    location: "Guru Ashram, Nepal",
-    summary: "Over two thousand seekers gathered for the annual Guru Purnima Mahotsav, the largest gathering of the year, with darshan, puja, and collective meditation.",
   },
   {
     title: "International Meditation Workshop",
