@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { ArrowRight, ChevronDown } from "lucide-react";
 import { Link } from "wouter";
 import Nav from "@/components/Nav";
-import EnrolmentForm from "@/components/EnrolmentForm";
 import FloatingRegisterButton from "@/components/FloatingRegisterButton";
 
 // viewBox 500×500; circles at corners offset 90px from centre (250,250), r=140
@@ -553,12 +552,12 @@ export default function MahayogMeditation() {
           <p className="text-lg text-[#f0e4c8] tracking-widest uppercase font-light mb-8">
             The Vedic Science of Self-Realization
           </p>
-          <a
-            href="#register"
+          <Link
+            href="/register?for=meditation"
             className="inline-flex items-center gap-2 bg-[#b8892a] hover:bg-[#9d7422] text-white text-sm px-7 py-3 rounded-full tracking-wider transition-colors duration-200"
           >
             Register <ArrowRight className="w-4 h-4" strokeWidth={1.5} />
-          </a>
+          </Link>
         </div>
       </section>
 
@@ -726,13 +725,13 @@ export default function MahayogMeditation() {
 
           {/* CTA */}
           <div className="text-center">
-            <a
-              href="#register"
+            <Link
+              href="/register?for=meditation"
               className="inline-flex items-center gap-3 px-10 py-4 rounded-full bg-[#b8892a] hover:bg-[#d4a843] text-white font-semibold tracking-wide text-sm transition-all duration-300 shadow-[0_4px_24px_rgba(184,137,42,0.4)] hover:shadow-[0_4px_32px_rgba(184,137,42,0.65)] hover:scale-105"
             >
               Register for the Workshop
               <ArrowRight className="w-4 h-4" strokeWidth={2} />
-            </a>
+            </Link>
             <p className="text-xs text-white/50 mt-4">Upcoming dates available — limited places per retreat.</p>
           </div>
 
@@ -945,21 +944,7 @@ export default function MahayogMeditation() {
         </div>
       </section>
 
-      <FloatingRegisterButton label="Register" />
-
-      {/* ── REGISTER ── */}
-      <section
-        id="register"
-        className="py-20 px-6"
-        style={{ background: "radial-gradient(ellipse at 50% 0%, #f0a832 0%, #d4821a 45%, #a85c10 100%)" }}
-      >
-        <div className="max-w-2xl mx-auto text-center mb-10">
-          <span className="uppercase tracking-[0.25em] text-xs text-[#5a2e04] font-medium">Register</span>
-          <h2 className="font-['Cormorant_Garamond'] text-4xl font-light text-[#2e1405] mt-2">Meditation Registration</h2>
-          <p className="text-sm text-[#2e1405] mt-3">Begin your journey into Himalayan Siddha Mahāyog Meditation.</p>
-        </div>
-        <EnrolmentForm program="meditation" />
-      </section>
+      <FloatingRegisterButton label="Register" href="/register?for=meditation" />
 
       {/* ── FOOTER ── */}
       <footer className="py-10 px-6 border-t border-[#e8dece] bg-[#f5ede0]">

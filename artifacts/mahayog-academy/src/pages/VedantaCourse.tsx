@@ -2,7 +2,6 @@ import { useState } from "react";
 import Nav from "@/components/Nav";
 import { Link } from "wouter";
 import { ChevronDown, ArrowRight } from "lucide-react";
-import EnrolmentForm from "@/components/EnrolmentForm";
 import FloatingRegisterButton from "@/components/FloatingRegisterButton";
 
 const b = import.meta.env.BASE_URL;
@@ -71,12 +70,12 @@ export default function VedantaCourse() {
           <p className="text-base text-[#f0e4c8] tracking-widest uppercase font-light mb-8">
             The Science of Self & Reality
           </p>
-          <a
-            href="#register"
+          <Link
+            href="/register?for=vedanta"
             className="inline-flex items-center gap-2 bg-[#b8892a] hover:bg-[#9d7422] text-white text-sm px-7 py-3 rounded-full tracking-wider transition-colors duration-200"
           >
             Register <ArrowRight className="w-4 h-4" strokeWidth={1.5} />
-          </a>
+          </Link>
         </div>
       </section>
 
@@ -216,21 +215,7 @@ export default function VedantaCourse() {
         </div>
       </section>
 
-      {/* ── REGISTER ── */}
-      <section
-        id="register"
-        className="py-20 px-6"
-        style={{ background: "radial-gradient(ellipse at 50% 0%, #f0a832 0%, #d4821a 45%, #a85c10 100%)" }}
-      >
-        <div className="max-w-2xl mx-auto text-center mb-10">
-          <span className="uppercase tracking-[0.25em] text-xs text-[#5a2e04] font-medium">Enrol</span>
-          <h2 className="font-['Cormorant_Garamond'] text-4xl font-light text-[#2e1405] mt-2">Course Enrolment</h2>
-          <p className="text-sm text-[#2e1405] mt-3">Complete the form below to register for the Vedanta Philosophy Course.</p>
-        </div>
-        <EnrolmentForm program="vedanta" />
-      </section>
-
-      <FloatingRegisterButton label="Enrol Now" />
+      <FloatingRegisterButton label="Enrol Now" href="/register?for=vedanta" />
 
       {/* ── FOOTER ── */}
       <footer className="py-10 px-6 border-t border-[#e8dece] bg-[#fdf6ec]">
