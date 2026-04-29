@@ -5,7 +5,7 @@ import { MapPin, Monitor, CalendarDays, Clock, ChevronRight, ArrowRight, Globe, 
 
 const b = import.meta.env.BASE_URL;
 
-type EventKind = "all" | "festival" | "retreat" | "ekadashi" | "course";
+type EventKind = "all" | "festival" | "retreat" | "ekadashi" | "course" | "special";
 type ViewMode = "list" | "calendar";
 
 // ── DATA ──────────────────────────────────────────────────────────────────────
@@ -53,8 +53,8 @@ const UPCOMING: AnyEvent[] = [
   },
   {
     id: 3,
-    kind: "festival" as EventKind,
-    kindLabel: "Annual Festival",
+    kind: "special" as EventKind,
+    kindLabel: "Special Event",
     recurring: true,
     title: "Guru Purnima Darshan Mahotsav",
     subtitle: "The Most Sacred Day of the Guru–Disciple Relationship",
@@ -90,9 +90,11 @@ const UPCOMING: AnyEvent[] = [
   // ── Vedic Calendar 2026 ── compact entries (source: drikpanchang.com, NPT)
   // May
   { id: 100, compact: true, kind: "ekadashi", kindLabel: "Ekadashi",  title: "Apara Ekadashi",                    subtitle: "Sacred fast for the removal of sins and merit of ancestors",                                          date: "13 May 2026",  dateObj: new Date(2026, 4, 13) },
+  { id: 200, compact: true, kind: "special",  kindLabel: "Special",   title: "International Meditation Day",       subtitle: "A global day to turn inward — honouring the transformative power of meditation",                      date: "21 May 2026",  dateObj: new Date(2026, 4, 21) },
   { id: 101, compact: true, kind: "ekadashi", kindLabel: "Ekadashi",  title: "Padmini Ekadashi (Adhika)",          subtitle: "Rare Adhika Masa Ekadashi — especially auspicious for fasting and prayer",                           date: "27 May 2026",  dateObj: new Date(2026, 4, 27) },
   // June
   { id: 102, compact: true, kind: "ekadashi", kindLabel: "Ekadashi",  title: "Paramā Ekadashi (Adhika)",           subtitle: "Culminating Ekadashi of the Adhika (intercalary) month",                                            date: "11 Jun 2026",  dateObj: new Date(2026, 5, 11) },
+  { id: 201, compact: true, kind: "special",  kindLabel: "Special",   title: "International Yoga Day",             subtitle: "Celebrated globally on the summer solstice — marking yoga's gift to humanity",                        date: "21 Jun 2026",  dateObj: new Date(2026, 5, 21) },
   { id: 103, compact: true, kind: "ekadashi", kindLabel: "Ekadashi",  title: "Nirjala Ekadashi",                   subtitle: "The most potent Ekadashi — observed without water, conferring the merit of all Ekadashis",           date: "25 Jun 2026",  dateObj: new Date(2026, 5, 25) },
   // July
   { id: 104, compact: true, kind: "ekadashi", kindLabel: "Ekadashi",  title: "Yogini Ekadashi",                    subtitle: "Fasting this day is said to cure disease and purify accumulated karma",                              date: "11 Jul 2026",  dateObj: new Date(2026, 6, 11) },
@@ -215,8 +217,9 @@ const MILESTONES = [
 
 const KIND_LABELS: { value: EventKind; label: string }[] = [
   { value: "all",      label: "All" },
+  { value: "special",  label: "Special Events" },
   { value: "retreat",  label: "Retreats" },
-  { value: "festival", label: "Festivals" },
+  { value: "festival", label: "Annual Festivals" },
   { value: "ekadashi", label: "Ekadashi" },
   { value: "course",   label: "Courses" },
 ];
@@ -378,6 +381,7 @@ export default function Events() {
     festival: "bg-[#b8892a]",
     ekadashi: "bg-[#c8a84a]/60",
     course:   "bg-[#6a5a9a]",
+    special:  "bg-[#c06030]",
   };
 
   return (
@@ -433,32 +437,22 @@ export default function Events() {
         </div>
 
         {/* Filter tabs (list view only) */}
-        {view === "list" && (() => {
-          const FILTER_COLORS: Record<EventKind, { active: string; idle: string }> = {
-            all:      { active: "bg-[#b8892a] text-white border-[#b8892a]",      idle: "text-[#b8892a] border-[#c8a850] hover:bg-[#b8892a]/10" },
-            retreat:  { active: "bg-[#3a6a48] text-white border-[#3a6a48]",      idle: "text-[#3a6a48] border-[#5a8a68] hover:bg-[#3a6a48]/10" },
-            festival: { active: "bg-[#b85a18] text-white border-[#b85a18]",      idle: "text-[#b85a18] border-[#c87038] hover:bg-[#b85a18]/10" },
-            ekadashi: { active: "bg-[#8a6820] text-white border-[#8a6820]",      idle: "text-[#8a6820] border-[#a88838] hover:bg-[#8a6820]/10" },
-            course:   { active: "bg-[#5a4a88] text-white border-[#5a4a88]",      idle: "text-[#5a4a88] border-[#7a6aa8] hover:bg-[#5a4a88]/10" },
-          };
-          return (
-            <div className="flex gap-3 overflow-x-auto pb-2 mb-8 scrollbar-hide">
-              {KIND_LABELS.map(k => {
-                const c = FILTER_COLORS[k.value];
-                return (
-                  <button
-                    key={k.value}
-                    onClick={() => setFilter(k.value)}
-                    className={`whitespace-nowrap px-6 py-2.5 rounded-full text-sm font-semibold uppercase tracking-[0.14em] border-2 transition-all duration-200 cursor-pointer shadow-sm ${
-                      filter === k.value ? c.active : `bg-white ${c.idle}`
-                    }`}>
-                    {k.label}
-                  </button>
-                );
-              })}
-            </div>
-          );
-        })()}
+        {view === "list" && (
+          <div className="flex gap-3 overflow-x-auto pb-2 mb-8 scrollbar-hide">
+            {KIND_LABELS.map(k => (
+              <button
+                key={k.value}
+                onClick={() => setFilter(k.value)}
+                className={`whitespace-nowrap px-6 py-2.5 rounded-full text-sm font-semibold uppercase tracking-[0.14em] border-2 transition-all duration-200 cursor-pointer shadow-sm ${
+                  filter === k.value
+                    ? "bg-[#3d3020] text-white border-[#3d3020]"
+                    : "bg-white text-[#6a5c48] border-[#d8cebb] hover:border-[#b8892a] hover:text-[#3d3020]"
+                }`}>
+                {k.label}
+              </button>
+            ))}
+          </div>
+        )}
 
         {/* List view — compact row layout, grouped by month */}
         {view === "list" && (() => {
@@ -511,6 +505,7 @@ export default function Events() {
                         festival: "bg-[#b85a18]/12 text-[#8a3808]",
                         ekadashi: "bg-[#b8892a]/12 text-[#7a5818]",
                         course:   "bg-[#5a4a88]/12 text-[#3a2a68]",
+                        special:  "bg-[#c06030]/12 text-[#8a3810]",
                       };
                       const badge = BADGE[ev.kind];
                       const accent = KIND_ACCENT[ev.kind];
