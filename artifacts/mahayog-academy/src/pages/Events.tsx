@@ -127,28 +127,6 @@ const UPCOMING: AnyEvent[] = [
   { id: 130, compact: true, kind: "ekadashi", kindLabel: "Ekadashi",  title: "Mokshada Ekadashi · Gita Jayanti",   subtitle: "The Bhagavad Gita was revealed on this day, the Ekadashi of liberation",                         date: "20 Dec 2026",  dateObj: new Date(2026, 11, 20)},
 ];
 
-const PAST = [
-  {
-    title: "Gurudev's Vardapan Mahotsav (Birthday Celebration)",
-    date: "February 2026",
-    location: "Ashram, Nepal & Online",
-    summary: "Seekers worldwide gathered to offer blessings and prayers on the occasion of His Holiness's birthday, marked with puja, satsang, and Bhandara.",
-  },
-  {
-    title: "Mahashivaratri",
-    date: "February 2026",
-    location: "Local Centres & Ashram",
-    summary: "An overnight vigil of Shiva puja, Rudra-Abhishek, chanting, and Bhandara at the ashram and affiliated centres globally.",
-  },
-  {
-    title: "Ram Navami",
-    date: "April 2026",
-    location: "Guru Ashram, Nepal",
-    summary: "The appearance of Bhagwan Shri Ram celebrated through nine-day Manas path, havan, Sundarkanda recitation, and prasad distribution.",
-  },
-
-];
-
 const MILESTONES = [
   {
     year: "2016",
@@ -348,7 +326,6 @@ function CalendarView({ events }: { events: AnyEvent[] }) {
 export default function Events() {
   const [filter, setFilter] = useState<EventKind>("all");
   const [view, setView] = useState<ViewMode>("list");
-  const [showAllPast, setShowAllPast] = useState(false);
 
   const visible = filter === "all"
     ? UPCOMING.filter(e => e.kind !== "ekadashi")
@@ -604,50 +581,6 @@ export default function Events() {
             "Where seekers gather with sincerity, the presence of the Guru is never absent."
           </p>
         </div>
-      </section>
-
-      {/* ── PAST EVENTS ── */}
-      <section className="max-w-5xl mx-auto px-6 py-20">
-        <div className="flex items-center gap-4 mb-8">
-          <p className="text-xs uppercase tracking-[0.25em] text-[#b8892a] font-medium whitespace-nowrap">Past Events</p>
-          <div className="flex-1 h-px bg-[#e8dece]" />
-        </div>
-        <div className="space-y-3">
-          {(showAllPast ? PAST : PAST.slice(0, 1)).map(p => {
-            const parts = p.date.split(" ");
-            const isRecurring = p.date.toLowerCase().includes("recurring");
-            const monthAbbr = isRecurring ? "●" : (parts[0] ?? "").slice(0, 3).toUpperCase();
-            const yearAbbr  = isRecurring ? "Various" : (parts[1] ?? "").slice(2);
-            return (
-              <div key={p.title}
-                className="rounded-xl overflow-hidden border border-[#ddd4be] bg-[#faf8f4] flex items-stretch opacity-90">
-                {/* Date column */}
-                <div className="shrink-0 w-16 flex flex-col items-center justify-center py-5 px-2 border-r border-[#e8e0d0]">
-                  <span className="font-['Cormorant_Garamond'] text-lg font-semibold text-[#8a7860] leading-none">{monthAbbr}</span>
-                  <span className="text-[10px] uppercase tracking-[0.1em] text-[#b8892a]/70 font-semibold leading-none mt-1">'{yearAbbr}</span>
-                </div>
-                {/* Content */}
-                <div className="flex-1 px-5 py-4">
-                  <p className="font-['Cormorant_Garamond'] text-2xl font-normal text-[#6a4e28] leading-tight">
-                    {p.title}
-                  </p>
-                  <p className="text-sm text-[#8a7860] mt-1 leading-relaxed">{p.summary}</p>
-                  <p className="flex items-center gap-1 text-xs text-[#a09080] mt-1.5">
-                    <MapPin size={10} className="text-[#b8892a]/60 shrink-0" />{p.location}
-                  </p>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-        {PAST.length > 1 && (
-          <button
-            onClick={() => setShowAllPast(v => !v)}
-            className="mt-5 text-sm text-[#8a7860] hover:text-[#b8892a] underline underline-offset-4 transition-colors"
-          >
-            {showAllPast ? "Show less" : `View all past events (${PAST.length})`}
-          </button>
-        )}
       </section>
 
       {/* ── HISTORIC MILESTONES ── */}
