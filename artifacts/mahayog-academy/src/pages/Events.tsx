@@ -612,15 +612,8 @@ export default function Events() {
 
                 {/* Year pill, top left */}
                 <div className="absolute top-4 left-4">
-                  <span className="font-['Cormorant_Garamond'] text-sm font-semibold text-white bg-[#b8892a]/80 backdrop-blur-sm px-3 py-1 rounded-full">
+                  <span className="font-['Cormorant_Garamond'] text-2xl font-semibold text-white bg-[#b8892a]/80 backdrop-blur-sm px-4 py-1.5 rounded-full">
                     {m.year}
-                  </span>
-                </div>
-
-                {/* Badge, top right */}
-                <div className="absolute top-4 right-4">
-                  <span className="text-[9px] uppercase tracking-[0.18em] text-[#e8c56a] border border-[#e8c56a]/40 px-2.5 py-1 rounded-full font-medium bg-black/30 backdrop-blur-sm">
-                    {m.badge}
                   </span>
                 </div>
 
