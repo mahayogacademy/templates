@@ -589,7 +589,7 @@ export default function Events() {
           <div className="text-center mb-16">
             <p className="text-xs uppercase tracking-[0.25em] text-[#b8892a] font-medium mb-4">A Legacy of Sacred Service</p>
             <h2 className="font-['Cormorant_Garamond'] text-4xl md:text-5xl font-light text-[#2c1a08] leading-snug mb-4">
-              Historic Milestones
+              Historic Events
             </h2>
             <p className="text-[#6a5c48] text-base max-w-xl mx-auto leading-relaxed">
               Over the years, Jagadguru Mahayogi Siddhababa has presided over some of the most significant spiritual events in the lineage, grand Mahayagyas, collective anuṣṭhāns, and historic moments of grace.
