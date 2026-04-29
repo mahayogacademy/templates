@@ -523,7 +523,7 @@ export default function Events() {
                               {ev.title}
                             </p>
                             {ev.subtitle && (
-                              <p className="text-xs text-[#7a6e5a] mt-1 leading-relaxed">{ev.subtitle}</p>
+                              <p className="text-sm text-[#7a6e5a] mt-1 leading-relaxed">{ev.subtitle}</p>
                             )}
                             {(ev.time || ev.location) && (
                               <div className="flex flex-wrap gap-x-3 gap-y-0.5 mt-1.5">
@@ -570,7 +570,7 @@ export default function Events() {
                               {ev.title}
                             </p>
                             {ev.subtitle && (
-                              <p className="text-xs text-[#7a6e5a] mt-1 leading-relaxed">{ev.subtitle}</p>
+                              <p className="text-sm text-[#7a6e5a] mt-1 leading-relaxed">{ev.subtitle}</p>
                             )}
                           </div>
                         </div>
