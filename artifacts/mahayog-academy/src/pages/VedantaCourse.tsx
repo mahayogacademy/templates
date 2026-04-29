@@ -294,38 +294,69 @@ export default function VedantaCourse() {
       </section>
 
       {/* ── CTA BANNER ── */}
-      <section className="relative py-24 px-6 overflow-hidden"
-        style={{ background: "linear-gradient(135deg, #1e0e03 0%, #3a1a05 50%, #2a1204 100%)" }}
+      <section className="relative py-28 px-6 overflow-hidden"
+        style={{ background: "linear-gradient(160deg, #110800 0%, #2e1504 45%, #1a0c02 100%)" }}
       >
+        {/* light ray sunburst — SVG radiating lines */}
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+          <svg viewBox="0 0 800 500" className="absolute w-full h-full opacity-[0.13]" preserveAspectRatio="xMidYMid slice">
+            {Array.from({ length: 36 }).map((_, i) => {
+              const angle = (i * 10 * Math.PI) / 180;
+              const x2 = 400 + Math.cos(angle) * 520;
+              const y2 = 250 + Math.sin(angle) * 520;
+              return (
+                <line key={i} x1="400" y1="250" x2={x2} y2={y2}
+                  stroke="#e8c56a" strokeWidth={i % 3 === 0 ? "1.5" : "0.8"}
+                  strokeLinecap="round"
+                />
+              );
+            })}
+          </svg>
+        </div>
+
+        {/* inner glow core */}
         <div className="absolute inset-0 pointer-events-none"
-          style={{ background: "radial-gradient(ellipse at 50% 60%, rgba(184,137,42,0.18) 0%, transparent 65%)" }}
+          style={{ background: "radial-gradient(ellipse 55% 55% at 50% 50%, rgba(212,160,48,0.22) 0%, rgba(184,137,42,0.08) 40%, transparent 70%)" }}
         />
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#b8892a]/50 to-transparent" />
+        {/* soft outer haze */}
+        <div className="absolute inset-0 pointer-events-none"
+          style={{ background: "radial-gradient(ellipse 90% 80% at 50% 50%, rgba(90,40,8,0.4) 0%, transparent 100%)" }}
+        />
+
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#b8892a]/40 to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#b8892a]/20 to-transparent" />
 
         <div className="relative z-10 max-w-2xl mx-auto text-center">
+          {/* floating diamond ornament */}
           <div className="flex items-center justify-center gap-3 mb-6">
-            <div className="h-px w-14 bg-[#e8c56a]/30" />
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-              <path d="M12 2C12 2 15 9 22 12C22 12 15 15 12 22C12 22 9 15 2 12C2 12 9 9 12 2Z" stroke="#e8c56a" strokeWidth="1.2" fill="none"/>
+            <div className="h-px w-16 bg-gradient-to-r from-transparent to-[#e8c56a]/50" />
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <path d="M12 2C12 2 15 9 22 12C22 12 15 15 12 22C12 22 9 15 2 12C2 12 9 9 12 2Z" stroke="#e8c56a" strokeWidth="1" fill="rgba(232,197,106,0.15)"/>
             </svg>
-            <div className="h-px w-14 bg-[#e8c56a]/30" />
+            <div className="h-px w-16 bg-gradient-to-l from-transparent to-[#e8c56a]/50" />
           </div>
-          <h2 className="font-['Cormorant_Garamond'] text-5xl md:text-6xl font-light text-white leading-tight mb-4">
-            Begin the Study<br />of Self & Reality
+
+          <h2 className="font-['Cormorant_Garamond'] text-5xl md:text-6xl font-light text-white leading-tight mb-4"
+            style={{ textShadow: "0 0 60px rgba(212,160,48,0.5), 0 2px 20px rgba(0,0,0,0.6)" }}
+          >
+            Begin the Study<br />of Self &amp; Reality
           </h2>
+
           <p className="text-[#c8b08a] text-base leading-relaxed mb-10 max-w-md mx-auto">
             The course is open for enrolment. Join a daily programme of Vedanta and meditation guided by His Holiness Jagadguru Mahayogi Siddhababa.
           </p>
+
           <Link
             href="/register?for=vedanta"
-            className="inline-flex items-center gap-3 bg-[#b8892a] hover:bg-[#d4a030] text-white text-sm px-10 py-4 rounded-full tracking-widest transition-all duration-300 shadow-lg shadow-[#b8892a]/20 hover:shadow-[#b8892a]/40"
+            className="inline-flex items-center gap-3 bg-[#b8892a] hover:bg-[#d4a030] text-white text-sm px-10 py-4 rounded-full tracking-widest transition-all duration-300 shadow-lg shadow-[#b8892a]/30 hover:shadow-[#b8892a]/50"
+            style={{ boxShadow: "0 0 30px rgba(184,137,42,0.3), 0 4px 20px rgba(0,0,0,0.4)" }}
           >
             Enrol in the Course
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
               <path d="M5 12h14M12 5l7 7-7 7"/>
             </svg>
           </Link>
-          <p className="text-[#7a6248] text-xs mt-6 tracking-wide">Open to all seekers · Join any time · Offered freely</p>
+          <p className="text-[#5a4228] text-xs mt-6 tracking-wide">Open to all seekers · Join any time · Offered freely</p>
         </div>
       </section>
 
