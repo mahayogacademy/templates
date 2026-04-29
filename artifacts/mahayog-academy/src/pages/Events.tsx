@@ -526,7 +526,7 @@ export default function Events() {
                           </div>
                           {/* Content */}
                           <div className="flex-1 px-5 py-4 flex flex-col justify-center">
-                            <p className="font-['Cormorant_Garamond'] text-xl font-normal text-[#2c1a08] leading-tight">
+                            <p className="font-['Cormorant_Garamond'] text-2xl font-normal text-[#2c1a08] leading-tight">
                               {ev.title}
                             </p>
                             {ev.subtitle && (
@@ -576,7 +576,7 @@ export default function Events() {
 
                           {/* Text */}
                           <div className="flex-1 px-5 py-4 flex flex-col justify-center">
-                            <p className="font-['Cormorant_Garamond'] text-xl font-normal text-[#2c1a08] leading-tight">
+                            <p className="font-['Cormorant_Garamond'] text-2xl font-normal text-[#2c1a08] leading-tight">
                               {ev.title}
                             </p>
                             {ev.subtitle && (
