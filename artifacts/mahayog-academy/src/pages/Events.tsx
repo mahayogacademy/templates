@@ -129,7 +129,7 @@ const UPCOMING: AnyEvent[] = [
 
 const MILESTONES = [
   {
-    year: "2016",
+    year: "2008 · 2015 · 2017",
     title: "Bhu-Samadhi of Jagadguru Mahayogi Siddhababa",
     titleHtml: "<em>Bhu-Samadhi</em> of Jagadguru Mahayogi Siddhababa",
     desc: "The sacred passing (Bhu-Samadhi) of Jagadguru Mahayogi Siddhababa's own revered Guru, a pivotal moment in the lineage, observed with deep ceremony, Vedic rites, and collective grief and gratitude by thousands of disciples. His Holiness continues to carry forward this sacred mission.",
