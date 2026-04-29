@@ -83,7 +83,7 @@ const UPCOMING: AnyEvent[] = [
     locationIcon: Monitor,
     desc: "A five-day monthly intensive in the living practice of Himalayan Siddha Mahayog. Each cycle begins on the first Saturday of the month and guides participants through authentic meditation, pranayama, and self-inquiry under the guidance of senior teachers.",
     note: "Open to all. No prior experience needed.",
-    cta: { label: "Join a Cycle", href: "/mahayog-course" },
+    cta: { label: "Enrol Now", href: "/mahayog-course" },
   },
   {
     id: 4,
