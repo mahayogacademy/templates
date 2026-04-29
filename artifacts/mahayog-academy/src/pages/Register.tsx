@@ -2,8 +2,95 @@ import { useState } from "react";
 import Nav from "@/components/Nav";
 import EnrolmentForm from "@/components/EnrolmentForm";
 import { useSearch } from "wouter";
+import { ChevronDown } from "lucide-react";
 
 const b = import.meta.env.BASE_URL;
+
+const FAQS: Record<"meditation" | "vedanta", { q: string; a: string }[]> = {
+  meditation: [
+    {
+      q: "Who can attend?",
+      a: "The Mahayog Meditation program is open to sincere seekers of all backgrounds, nationalities, and spiritual traditions. No prior experience with yoga or meditation is required — the only prerequisite is a genuine openness to inner exploration and a commitment to attend the full 5 days.",
+    },
+    {
+      q: "Do I need prior meditation experience?",
+      a: "No. The program welcomes complete beginners as well as experienced practitioners. The initiation process is guided entirely by the Guru's transmission — it does not depend on prior technique or knowledge. Come as you are.",
+    },
+    {
+      q: "What happens during the 5-day workshop?",
+      a: "The workshop is a structured, immersive introduction to Mahayog Meditation, culminating in the transmission of Shaktipat initiation by Jagadguru Mahayogi Siddhababa — in person or through his direct representatives.\n\nEach day includes guided meditation sessions, teachings on Kundalini, the subtle body, and the stages of inner awakening, and open time for questions. The program builds progressively, preparing each participant to receive initiation safely and with awareness.\n\nFull attendance across all five days is essential.",
+    },
+    {
+      q: "Is there a fee?",
+      a: "There is no fixed fee for participation or initiation. The teachings are offered freely as a spiritual gift.\n\nDonations — known in the yogic tradition as Guru dakshina — are welcomed as an expression of gratitude and may be offered at the center at your discretion. No one is turned away for inability to contribute.",
+    },
+    {
+      q: "When should I register?",
+      a: "We recommend registering as early as possible, as spaces are limited. Registration typically closes a few days before the workshop date. If you miss a particular month's intake, you are welcome to register for the following month — workshops run on the first Saturday of every month.",
+    },
+    {
+      q: "Can I cancel or reschedule?",
+      a: "If you are unable to attend your selected workshop, please notify your center as soon as possible. Your registration can be transferred to a future monthly intake. As there is no fee involved, there is no financial penalty — we simply ask for timely notice so your place can be offered to another seeker.",
+    },
+    {
+      q: "What happens after I receive initiation?",
+      a: "Initiation is a beginning, not an end. Once Kundalini is awakened, the energy continues to purify and unfold naturally through your daily meditation practice. After the workshop you will receive guidance on how to maintain and deepen your practice independently.",
+    },
+  ],
+  vedanta: [
+    {
+      q: "Who is this course for?",
+      a: "The Vedanta Philosophy Course is open to sincere seekers of all backgrounds and traditions — whether you are new to Vedanta or have some prior exposure. A genuine desire to understand the nature of the Self and Reality is all that is needed.",
+    },
+    {
+      q: "How long does the course take to complete?",
+      a: "The course comprises 267 recorded lectures, structured across 11 progressive modules. Participants study at their own pace and may take as long as they need. There is no fixed deadline — the course is designed to unfold gradually, in alignment with your life.",
+    },
+    {
+      q: "Is the course delivered online or in-person?",
+      a: "The course is available in both formats. Lectures may be accessed online through your student portal. In-person study circles and satsang gatherings are also held at select centers — check with your nearest center for availability.",
+    },
+    {
+      q: "What language are the lectures delivered in?",
+      a: "The course is primarily delivered in Nepali. English support and translated materials are available for international participants. Please indicate your language preferences in the registration form so we can best support you.",
+    },
+    {
+      q: "Is there a fee?",
+      a: "The course is offered freely as a gift of knowledge. Guru dakshina — a voluntary offering of gratitude — may be made at your discretion at any center. No seeker is ever turned away on account of an inability to contribute.",
+    },
+    {
+      q: "Can I study at my own pace?",
+      a: "Yes. The course is self-paced. You may progress through the lectures according to your own schedule and revisit any module as needed. Regular live satsangs and Q&A sessions are offered to complement self-study.",
+    },
+    {
+      q: "What will I gain from this course?",
+      a: "A deep, systematic understanding of Vedantic philosophy — including the nature of Brahman, the Self (Ātman), the three bodies, the five sheaths, the mind, and the path of liberation (Moksha). Beyond intellectual understanding, the course aims to support genuine inner transformation through the integration of knowledge and practice.",
+    },
+  ],
+};
+
+function FAQItem({ q, a }: { q: string; a: string }) {
+  const [open, setOpen] = useState(false);
+  return (
+    <div className="border-b border-[#e8dece] last:border-0">
+      <button
+        onClick={() => setOpen(!open)}
+        className="w-full flex items-center justify-between py-5 text-left gap-6 group"
+      >
+        <span className="font-['Cormorant_Garamond'] text-xl font-semibold text-[#3d3830] group-hover:text-[#9d7422] transition-colors duration-200 leading-snug">
+          {q}
+        </span>
+        <ChevronDown
+          className={`w-5 h-5 text-[#b8892a] shrink-0 transition-transform duration-300 ${open ? "rotate-180" : ""}`}
+          strokeWidth={1.5}
+        />
+      </button>
+      <div className={`overflow-hidden transition-all duration-400 ${open ? "max-h-[600px] pb-5" : "max-h-0"}`}>
+        <p className="text-sm text-[#6b6158] leading-relaxed whitespace-pre-line">{a}</p>
+      </div>
+    </div>
+  );
+}
 
 type Program = "meditation" | "vedanta";
 
@@ -143,6 +230,28 @@ export default function Register() {
           </h2>
         </div>
         <EnrolmentForm program={program} key={program} />
+      </section>
+
+      {/* ── FAQ ── */}
+      <section className="py-20 px-6 bg-gradient-to-b from-[#e8dcc8] via-[#ede3cf] to-[#e2d4b8]">
+        <div className="max-w-2xl mx-auto">
+          <div className="text-center mb-12">
+            <div className="flex items-center justify-center gap-3 mb-4">
+              <div className="h-px w-10 bg-[#b8892a]/40" />
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+                <path d="M12 2C12 2 15 9 22 12C22 12 15 15 12 22C12 22 9 15 2 12C2 12 9 9 12 2Z" stroke="#b8892a" strokeWidth="1.2" fill="none"/>
+              </svg>
+              <div className="h-px w-10 bg-[#b8892a]/40" />
+            </div>
+            <span className="uppercase tracking-[0.25em] text-xs text-[#b8892a] font-medium">Common Questions</span>
+            <h2 className="font-['Cormorant_Garamond'] text-4xl font-light text-[#2e1405] mt-2">
+              {program === "vedanta" ? "About the Vedanta Course" : "About the Meditation Workshop"}
+            </h2>
+          </div>
+          <div>
+            {FAQS[program].map(f => <FAQItem key={f.q} q={f.q} a={f.a} />)}
+          </div>
+        </div>
       </section>
 
       {/* ── FOOTER ── */}
