@@ -56,7 +56,7 @@ const FAQS: Record<"meditation" | "vedanta", { q: string; a: string }[]> = {
     },
     {
       q: "What language are the lectures delivered in?",
-      a: "The course is primarily delivered in Nepali. English support and translated materials are available for international participants. Please indicate your language preferences in the registration form so we can best support you.",
+      a: "The course is currently delivered in Nepali. We are actively working to make the programme available in additional languages — stay tuned for updates. Please indicate your language in the registration form so we can keep you informed as new options become available.",
     },
     {
       q: "Is there a fee?",
