@@ -503,12 +503,10 @@ export default function Events() {
                 <div key={month}>
 
                   {/* ── Month heading ── */}
-                  <div className="flex items-center gap-5 mb-5">
-                    <div className="flex-1 h-px bg-gradient-to-r from-transparent to-[#d8cbb8]" />
-                    <div className="text-center">
-                      <p className="font-['Cormorant_Garamond'] text-xl font-light tracking-[0.12em] text-[#6a5a3a] uppercase">{month}</p>
-                    </div>
-                    <div className="flex-1 h-px bg-gradient-to-l from-transparent to-[#d8cbb8]" />
+                  <div className="flex items-center gap-4 mb-5">
+                    <div className="w-8 h-0.5 bg-[#b8892a] rounded-full shrink-0" />
+                    <p className="text-sm font-bold uppercase tracking-[0.28em] text-[#3d3020]">{month}</p>
+                    <div className="flex-1 h-px bg-[#e0d4c0]" />
                   </div>
 
                   {/* ── Cards ── */}
