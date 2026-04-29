@@ -488,7 +488,7 @@ export default function EnrolmentForm({ program }: { program: Program }) {
             </div>
             <div>
               <label className={lc}>Relation to Referrer</label>
-              <input className={ic} placeholder="e.g. Friend, Family…" value={form.refererRelation} onChange={e => set("refererRelation", e.target.value)} />
+              <input className={ic} placeholder="e.g. Friend, Sister…" value={form.refererRelation} onChange={e => set("refererRelation", e.target.value)} />
             </div>
             <div>
               <label className={lc}>Referrer's Mobile</label>
