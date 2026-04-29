@@ -293,6 +293,42 @@ export default function VedantaCourse() {
         </div>
       </section>
 
+      {/* ── CTA BANNER ── */}
+      <section className="relative py-24 px-6 overflow-hidden"
+        style={{ background: "linear-gradient(135deg, #1e0e03 0%, #3a1a05 50%, #2a1204 100%)" }}
+      >
+        <div className="absolute inset-0 pointer-events-none"
+          style={{ background: "radial-gradient(ellipse at 50% 60%, rgba(184,137,42,0.18) 0%, transparent 65%)" }}
+        />
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#b8892a]/50 to-transparent" />
+
+        <div className="relative z-10 max-w-2xl mx-auto text-center">
+          <div className="flex items-center justify-center gap-3 mb-6">
+            <div className="h-px w-14 bg-[#e8c56a]/30" />
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+              <path d="M12 2C12 2 15 9 22 12C22 12 15 15 12 22C12 22 9 15 2 12C2 12 9 9 12 2Z" stroke="#e8c56a" strokeWidth="1.2" fill="none"/>
+            </svg>
+            <div className="h-px w-14 bg-[#e8c56a]/30" />
+          </div>
+          <h2 className="font-['Cormorant_Garamond'] text-5xl md:text-6xl font-light text-white leading-tight mb-4">
+            Begin the Study<br />of Self & Reality
+          </h2>
+          <p className="text-[#c8b08a] text-base leading-relaxed mb-10 max-w-md mx-auto">
+            The course is open for enrolment. Join a daily programme of Vedanta and meditation guided by His Holiness Jagadguru Mahayogi Siddhababa.
+          </p>
+          <Link
+            href="/register?for=vedanta"
+            className="inline-flex items-center gap-3 bg-[#b8892a] hover:bg-[#d4a030] text-white text-sm px-10 py-4 rounded-full tracking-widest transition-all duration-300 shadow-lg shadow-[#b8892a]/20 hover:shadow-[#b8892a]/40"
+          >
+            Enrol in the Course
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </Link>
+          <p className="text-[#7a6248] text-xs mt-6 tracking-wide">Open to all seekers · Join any time · Offered freely</p>
+        </div>
+      </section>
+
       {/* ── FOOTER ── */}
       <footer className="py-10 px-6 border-t border-[#e8dece] bg-[#fdf6ec]">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
