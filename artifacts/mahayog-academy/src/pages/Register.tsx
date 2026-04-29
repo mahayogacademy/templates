@@ -40,15 +40,19 @@ const FAQS: Record<"meditation" | "vedanta", { q: string; a: string }[]> = {
   vedanta: [
     {
       q: "Who is this course for?",
-      a: "The Vedanta Philosophy Course is open to sincere seekers of all backgrounds and traditions — whether you are new to Vedanta or have some prior exposure. A genuine desire to understand the nature of the Self and Reality is all that is needed.",
+      a: "The Vedanta Philosophy Course is open to sincere seekers of all backgrounds and traditions. No prior knowledge of Vedanta is required — only a genuine wish to understand the nature of the Self and Reality.\n\nAlongside the philosophy lectures, participants also practice Himalayan Siddha Mahayog Meditation. The two are studied together, each deepening the other, for accelerated inner progress.",
     },
     {
       q: "How long does the course take to complete?",
-      a: "The course comprises 267 recorded lectures, structured across 11 progressive modules. Participants study at their own pace and may take as long as they need. There is no fixed deadline — the course is designed to unfold gradually, in alignment with your life.",
+      a: "The course is 300 hours in total and takes approximately 12 months to complete. Classes are held daily via Zoom — except on sacred holidays (Ashtami, Pratipada, Purnima, Sankranti, and Aunsi).\n\nThe programme is revolving, meaning you may join at any point in the year. From the day you enrol, you continue through all the lectures until the full programme is complete.",
     },
     {
-      q: "Is the course delivered online or in-person?",
-      a: "The course is available in both formats. Lectures may be accessed online through your student portal. In-person study circles and satsang gatherings are also held at select centers — check with your nearest center for availability.",
+      q: "How are the classes delivered?",
+      a: "Each session is a live group Zoom class, facilitated by members of the Mahayogi Siddhababa Spiritual Academy. The heart of each session is satsang — spiritual discourse delivered by His Holiness Jagadguru Mahayogi Siddhababa himself, an enlightened Saint.\n\nPeriodic Q&A sessions are held directly with Jagadguru Mahayogi Siddhababa, offering each student the rare opportunity to receive personal guidance from an awakened Master.",
+    },
+    {
+      q: "What if I miss a class?",
+      a: "Enrolment includes access to a library of on-demand videos, written resources, and supporting materials. If you miss a session, you can catch up in your own time and continue from where you left off. No seeker is left behind.",
     },
     {
       q: "What language are the lectures delivered in?",
@@ -56,15 +60,11 @@ const FAQS: Record<"meditation" | "vedanta", { q: string; a: string }[]> = {
     },
     {
       q: "Is there a fee?",
-      a: "The course is offered freely as a gift of knowledge. Guru dakshina — a voluntary offering of gratitude — may be made at your discretion at any center. No seeker is ever turned away on account of an inability to contribute.",
-    },
-    {
-      q: "Can I study at my own pace?",
-      a: "Yes. The course is self-paced. You may progress through the lectures according to your own schedule and revisit any module as needed. Regular live satsangs and Q&A sessions are offered to complement self-study.",
+      a: "The Vedanta course is offered freely. There is, however, a recommended donation to help cover the operational costs of running the programme — digital equipment, Zoom subscriptions, and supporting infrastructure.\n\nThe suggested donation amount can be discussed with your local center. Contributions may be made before or after enrolment, and no seeker is ever turned away for inability to contribute.",
     },
     {
       q: "What will I gain from this course?",
-      a: "A deep, systematic understanding of Vedantic philosophy — including the nature of Brahman, the Self (Ātman), the three bodies, the five sheaths, the mind, and the path of liberation (Moksha). Beyond intellectual understanding, the course aims to support genuine inner transformation through the integration of knowledge and practice.",
+      a: "This course will change the way you see the world — and the way you engage with it. You will come to understand the nature of Brahman (the Supreme Reality), the Self (Ātman), and Prakriti (the phenomenal world), and how they relate to one another.\n\nBeyond philosophy, the integration of Vedanta with daily meditation practice brings this understanding into lived experience — gradually transforming perception, relationships, and the quality of inner life.",
     },
   ],
 };
