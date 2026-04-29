@@ -406,19 +406,6 @@ export default function Events() {
         </div>
       </section>
 
-      {/* ── INTRO ── */}
-      <section className="max-w-3xl mx-auto px-6 py-16 text-center">
-        <p className="text-xs uppercase tracking-[0.25em] text-[#b8892a] font-medium mb-4">The Living Tradition</p>
-        <h2 className="font-['Cormorant_Garamond'] text-4xl md:text-5xl font-light text-[#2c1a08] leading-snug mb-6">
-          Every Gathering is an Occasion for Grace
-        </h2>
-        <p className="text-[#5a5248] leading-relaxed text-base md:text-lg mb-4">
-          In the Vedic tradition, communal spiritual practice, whether in person at the ashram or joined from afar, carries a power that solitary effort cannot replicate. When seekers come together in the presence of a realised Master, the field of grace intensifies for all.
-        </p>
-        <p className="text-[#5a5248] leading-relaxed text-base md:text-lg">
-          The Academy hosts events across the year: satsangs, immersive retreats, ancient fire ceremonies (havan), observances (anuṣṭhān), social services and the great festivals of the Vedic calendar. All are held in the living spirit of the lineage.
-        </p>
-      </section>
 
       {/* ── UPCOMING EVENTS ── */}
       <section className="max-w-5xl mx-auto px-6 pb-20">
