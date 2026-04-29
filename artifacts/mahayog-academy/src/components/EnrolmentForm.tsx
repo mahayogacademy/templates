@@ -70,7 +70,7 @@ const INTL_CENTERS_LIST = [
 ];
 
 const GOAL_OPTIONS = ["Stress reduction", "Mental clarity", "Spiritual growth", "Emotional healing"];
-const LANGUAGE_OPTIONS = ["English", "Nepali", "Hindi", "Spanish", "French", "German", "Portuguese", "Arabic", "Mandarin", "Japanese", "Korean"];
+const LANGUAGE_OPTIONS = ["English", "Nepali", "Hindi"];
 
 const NEPAL_CENTER_IDS = new Set(["chitwan", "pokhara", "surkhet", "kathmandu", "chatara"]);
 
