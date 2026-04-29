@@ -23,11 +23,11 @@ const UPCOMING = [
     time: "7:00 AM Nepal Time · 1:15 AM UTC",
     location: "Live via Zoom",
     locationIcon: Monitor,
+    img: "ashram-life-satsang.png",
+    imgPos: "object-center",
     desc: "Each week, His Holiness Jagadguru Mahayogi Siddhababa leads a live online satsang: guided meditation, Vedic discourse, and direct transmission of grace — accessible to seekers across the globe.",
     note: "Open to registered programme participants.",
     cta: { label: "Register to Attend", href: "/register" },
-    border: "border-[#e8dece]",
-    bg: "bg-[#fdf8f0]",
   },
   {
     id: 2,
@@ -41,11 +41,11 @@ const UPCOMING = [
     time: "Residential · Full board",
     location: "Guru Ashram, Barahachetra, Nepal",
     locationIcon: MapPin,
+    img: "ashram-koshi-river.jpg",
+    imgPos: "object-center",
     desc: "An intensive three-day immersion at the foot of the Himalayas. Participants engage in morning and evening meditation sessions, Vedanta discourse, and personal time in the presence of His Holiness.",
     note: "Limited places. Early registration strongly advised.",
     cta: { label: "Register Now", href: "/register" },
-    border: "border-[#ddd4c8]",
-    bg: "bg-[#faf9f6]",
   },
   {
     id: 3,
@@ -59,11 +59,11 @@ const UPCOMING = [
     time: "All day · Ashram gates open at sunrise",
     location: "Guru Ashram, Nepal · Also livestreamed",
     locationIcon: Globe,
+    img: "gurudev-darshan-congregation.jpg",
+    imgPos: "object-top",
     desc: "Guru Purnima is the highest celebration of the Guru–disciple bond. Thousands gather at the ashram for puja, havan, collective chanting, and the rare opportunity for personal darshan with His Holiness.",
     note: "In-person attendance open to all sincere seekers.",
     cta: { label: "Plan Your Visit", href: "/ashram" },
-    border: "border-[#e8d8b8]",
-    bg: "bg-[#fdf6ec]",
   },
   {
     id: 4,
@@ -72,16 +72,16 @@ const UPCOMING = [
     recurring: false,
     title: "Vedanta Philosophy Course — New Intake",
     subtitle: "300 Hours · Online · Begins September 2026",
-    date: "Enrolment open · Starts 1 Sep 2026",
+    date: "Starts 1 Sep 2026",
     dateObj: new Date(2026, 8, 1),
     time: "Daily sessions via Zoom · ~1 hr / day",
     location: "Online — global access",
     locationIcon: Monitor,
+    img: "cta-vedanta-study.png",
+    imgPos: "object-center",
     desc: "A new cohort of the Academy's comprehensive 300-hour Vedanta Philosophy Course begins in September. Study Advaita Vedanta alongside daily Himalayan Siddha Mahayog Meditation, guided by His Holiness and senior faculty.",
     note: "Open to all backgrounds. No prior experience required.",
     cta: { label: "Enrol Now", href: "/vedanta" },
-    border: "border-[#d0dac8]",
-    bg: "bg-[#f7faf5]",
   },
   {
     id: 5,
@@ -95,11 +95,11 @@ const UPCOMING = [
     time: "Morning & evening sessions",
     location: "Guru Ashram, Barahachetra, Nepal",
     locationIcon: MapPin,
+    img: "ashram-extra-river-diyas.jpg",
+    imgPos: "object-center",
     desc: "Nine sacred nights marked at the ashram by continuous havan, Devi puja, kirtan, and discourse. The Mahayagya — a grand fire ceremony — is conducted by Jagadguru Mahayogi Siddhababa on the final night.",
     note: "Residential accommodation available at the ashram.",
     cta: { label: "Contact the Ashram", href: "/contact" },
-    border: "border-[#e8dece]",
-    bg: "bg-[#fdf8f0]",
   },
 ];
 
@@ -148,36 +148,42 @@ const MILESTONES = [
     title: "Bhu-Samadhi of Pujya Nritya Gopal Das Ji Maharaj",
     desc: "The sacred passing (Bhu-Samadhi) of Jagadguru Mahayogi Siddhababa's own revered Guru — a pivotal moment in the lineage, observed with deep ceremony, Vedic rites, and collective grief and gratitude by thousands of disciples. His Holiness continues to carry forward this sacred mission.",
     badge: "Lineage",
+    img: "bhu-samadhi-1.jpg",
   },
   {
     year: "2019",
     title: "Shree Tarak Brahma Mahayagya",
     desc: "A grand Mahayagya — one of the largest fire ceremonies conducted by the Academy — invoking the liberating grace of Tarak Brahma. Thousands of seekers participated across multiple days of continuous havan, kirtan, and satsang.",
     badge: "Mahayagya",
+    img: "gurudev-darshan-congregation.jpg",
   },
   {
     year: "2021",
     title: "Himalayan Siddha Mahayog Anuṣṭhān (COVID-19)",
     desc: "In response to the global COVID-19 pandemic, Jagadguru Mahayogi Siddhababa led an extended collective anuṣṭhān — a sustained spiritual observance of prayer, mantra, havan, and meditation — invoking healing and protection for the world. Seekers across continents joined online.",
     badge: "Special Anuṣṭhān",
+    img: "ashram-extra-sanyasi-river.jpg",
   },
   {
     year: "2022",
     title: "Atirudri Mahayagya",
     desc: "The Atirudri — one of the most elaborate and potent of all Vedic fire ceremonies, involving the recitation of the Shri Rudram eleven hundred and forty-four times — was conducted under the direct guidance of His Holiness, with Vedic pandits and thousands of participants.",
     badge: "Mahayagya",
+    img: "ashram-extra-river-diyas.jpg",
   },
   {
     year: "2023",
     title: "108 Ramarchan Mahayagya",
     desc: "A monumental sacred ceremony involving 108 Ramarchan — the complete worship of Bhagwan Shri Ram — performed continuously across multiple days. This immense collective offering is considered especially auspicious for both personal liberation and the welfare of all beings.",
     badge: "Mahayagya",
+    img: "ram-mandir-1.jpg",
   },
   {
     year: "2024",
     title: "Sankat Mochan Shree Hanumad Mahayagya",
     desc: "Dedicated to Lord Hanuman — the remover of all obstacles — this Mahayagya was conducted to invoke protection, strength, and liberation for seekers and the wider world. It included Sundarkanda path, Hanuman Chalisa, and extended havan rituals led by His Holiness.",
     badge: "Mahayagya",
+    img: "ashram-hanuman-wide.jpg",
   },
 ];
 
@@ -417,58 +423,68 @@ export default function Events() {
 
         {/* List view */}
         {view === "list" && (
-          <div className="space-y-5">
+          <div className="space-y-6">
             {visible.map(ev => {
               const Icon = ev.locationIcon;
               return (
                 <div key={ev.id}
-                  className={`rounded-2xl border ${ev.border} ${ev.bg} p-7 md:p-8 flex flex-col md:flex-row md:items-start gap-6`}>
-                  <div className="shrink-0 flex flex-col items-center justify-center w-20 h-20 rounded-xl border border-[#d8cfc4] bg-white/70 text-center shadow-sm">
-                    <CalendarDays size={18} className="text-[#b8892a] mb-1" />
-                    <p className="font-['Cormorant_Garamond'] text-[10px] uppercase tracking-[0.12em] text-[#9a8f84] leading-none px-1">
-                      {ev.recurring ? "Annual" : ev.date.split(" ")[0]}
-                    </p>
-                    <p className="font-['Cormorant_Garamond'] text-base font-semibold text-[#3d3830] leading-tight px-1">
-                      {ev.dateObj ? ev.dateObj.getDate() : "—"}
-                    </p>
+                  className="rounded-2xl overflow-hidden border border-[#e8dece] bg-white shadow-sm hover:shadow-lg transition-shadow duration-300 flex flex-col md:flex-row">
+                  {/* Image panel */}
+                  <div className="relative md:w-64 lg:w-80 shrink-0 h-52 md:h-auto overflow-hidden">
+                    <img
+                      src={`${b}images/${ev.img}`}
+                      alt={ev.title}
+                      className={`w-full h-full object-cover ${ev.imgPos} transition-transform duration-500 hover:scale-105`}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent md:bg-gradient-to-r md:from-transparent md:to-black/10" />
+                    {/* Date badge overlaid on image */}
+                    <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm rounded-xl px-3 py-2 text-center shadow-md">
+                      <p className="font-['Cormorant_Garamond'] text-[10px] uppercase tracking-[0.15em] text-[#9a8f84] leading-none mb-0.5">
+                        {ev.recurring ? "Every" : ev.date.split(" ").slice(-2).join(" ")}
+                      </p>
+                      <p className="font-['Cormorant_Garamond'] text-lg font-semibold text-[#2c1a08] leading-none">
+                        {ev.recurring ? "Sunday" : ev.date.split(" ")[0]}
+                      </p>
+                    </div>
+                    {/* Recurring badge */}
+                    {ev.recurring && (
+                      <div className="absolute bottom-4 left-4 bg-[#4a6a3a]/80 text-white text-[9px] uppercase tracking-[0.15em] px-2.5 py-1 rounded-full font-medium">
+                        Annual
+                      </div>
+                    )}
                   </div>
 
-                  <div className="flex-1 min-w-0">
-                    <div className="flex flex-wrap items-center gap-2 mb-2">
-                      <span className="text-[10px] uppercase tracking-[0.2em] font-medium px-3 py-1 rounded-full bg-[#b8892a]/10 text-[#8a6420]">
+                  {/* Content */}
+                  <div className="flex-1 p-6 md:p-8 flex flex-col justify-between">
+                    <div>
+                      <span className="inline-block text-[10px] uppercase tracking-[0.2em] font-medium px-3 py-1 rounded-full bg-[#b8892a]/10 text-[#8a6420] mb-3">
                         {ev.kindLabel}
                       </span>
-                      {ev.recurring && (
-                        <span className="text-[10px] uppercase tracking-[0.15em] font-medium px-3 py-1 rounded-full bg-[#5a7a4a]/10 text-[#4a6a3a]">
-                          Recurring
+                      <h3 className="font-['Cormorant_Garamond'] text-2xl md:text-3xl font-light text-[#2c1a08] leading-tight mb-1">
+                        {ev.title}
+                      </h3>
+                      <p className="text-sm text-[#7a6e5a] italic mb-4">{ev.subtitle}</p>
+                      <div className="flex flex-wrap gap-x-5 gap-y-1.5 mb-4">
+                        <span className="flex items-center gap-1.5 text-xs text-[#7a6e5a]">
+                          <CalendarDays size={12} className="text-[#b8892a]" />{ev.date}
                         </span>
-                      )}
+                        <span className="flex items-center gap-1.5 text-xs text-[#7a6e5a]">
+                          <Clock size={12} className="text-[#b8892a]" />{ev.time}
+                        </span>
+                        <span className="flex items-center gap-1.5 text-xs text-[#7a6e5a]">
+                          <Icon size={12} className="text-[#b8892a]" />{ev.location}
+                        </span>
+                      </div>
+                      <p className="text-[#5a5248] text-sm leading-relaxed mb-2">{ev.desc}</p>
+                      <p className="text-xs text-[#9a8f84] italic">{ev.note}</p>
                     </div>
-                    <h3 className="font-['Cormorant_Garamond'] text-2xl md:text-3xl font-light text-[#2c1a08] leading-tight mb-1">
-                      {ev.title}
-                    </h3>
-                    <p className="text-sm text-[#7a6e5a] italic mb-4">{ev.subtitle}</p>
-                    <div className="flex flex-wrap gap-x-5 gap-y-1 mb-4">
-                      <span className="flex items-center gap-1.5 text-xs text-[#7a6e5a]">
-                        <CalendarDays size={12} className="text-[#b8892a]" />{ev.date}
-                      </span>
-                      <span className="flex items-center gap-1.5 text-xs text-[#7a6e5a]">
-                        <Clock size={12} className="text-[#b8892a]" />{ev.time}
-                      </span>
-                      <span className="flex items-center gap-1.5 text-xs text-[#7a6e5a]">
-                        <Icon size={12} className="text-[#b8892a]" />{ev.location}
-                      </span>
+                    <div className="mt-5 pt-5 border-t border-[#f0ebe3] flex items-center justify-between">
+                      <Link href={ev.cta.href}>
+                        <span className="inline-flex items-center gap-2 bg-[#b8892a] hover:bg-[#c9981f] text-white text-xs px-6 py-3 rounded-full tracking-widest uppercase transition-all duration-200 cursor-pointer shadow-sm">
+                          {ev.cta.label} <ArrowRight size={13} />
+                        </span>
+                      </Link>
                     </div>
-                    <p className="text-[#5a5248] text-sm leading-relaxed mb-2">{ev.desc}</p>
-                    <p className="text-xs text-[#9a8f84] italic">{ev.note}</p>
-                  </div>
-
-                  <div className="shrink-0 flex items-start">
-                    <Link href={ev.cta.href}>
-                      <span className="inline-flex items-center gap-2 bg-[#b8892a] hover:bg-[#c9981f] text-white text-xs px-6 py-3 rounded-full tracking-widest uppercase transition-all duration-200 cursor-pointer shadow-sm">
-                        {ev.cta.label}<ArrowRight size={13} />
-                      </span>
-                    </Link>
                   </div>
                 </div>
               );
@@ -550,12 +566,12 @@ export default function Events() {
       </section>
 
       {/* ── HISTORIC MILESTONES ── */}
-      <section className="bg-[#1a0c03] py-24 px-6 relative overflow-hidden">
+      <section className="bg-[#120800] py-24 px-6 relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none"
-          style={{ background: "radial-gradient(ellipse at 50% 0%, rgba(184,137,42,0.12) 0%, transparent 60%)" }} />
+          style={{ background: "radial-gradient(ellipse at 50% 0%, rgba(184,137,42,0.10) 0%, transparent 55%)" }} />
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#b8892a]/40 to-transparent" />
 
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <p className="text-xs uppercase tracking-[0.25em] text-[#b8892a] font-medium mb-4">A Legacy of Sacred Service</p>
             <h2 className="font-['Cormorant_Garamond'] text-4xl md:text-5xl font-light text-white leading-snug mb-4">
@@ -566,42 +582,46 @@ export default function Events() {
             </p>
           </div>
 
-          {/* Timeline */}
-          <div className="relative">
-            {/* Vertical line */}
-            <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-[#b8892a]/40 via-[#b8892a]/20 to-transparent" />
+          {/* Image card grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {MILESTONES.map(m => (
+              <div key={m.year}
+                className="group relative rounded-2xl overflow-hidden aspect-[4/3] cursor-default shadow-xl">
+                {/* Background image */}
+                <img
+                  src={`${b}images/${m.img}`}
+                  alt={m.title}
+                  className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
+                />
+                {/* Gradient overlay — darker at bottom */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/20 group-hover:from-black/95 transition-all duration-300" />
 
-            <div className="space-y-10">
-              {MILESTONES.map((m, i) => (
-                <div key={m.year}
-                  className={`relative flex flex-col md:flex-row gap-6 md:gap-10 ${i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"}`}>
-                  {/* Year bubble — centered on line */}
-                  <div className="absolute left-8 md:left-1/2 -translate-x-1/2 top-0 z-10">
-                    <div className="w-16 h-16 rounded-full border-2 border-[#b8892a]/60 bg-[#1a0c03] flex items-center justify-center shadow-lg"
-                      style={{ boxShadow: "0 0 20px rgba(184,137,42,0.2)" }}>
-                      <span className="font-['Cormorant_Garamond'] text-lg font-semibold text-[#e8c56a]">{m.year}</span>
-                    </div>
-                  </div>
-
-                  {/* Spacer for opposite side */}
-                  <div className="hidden md:block flex-1" />
-
-                  {/* Card */}
-                  <div className={`ml-24 md:ml-0 flex-1 rounded-2xl border border-[#b8892a]/20 bg-white/5 p-7 backdrop-blur-sm
-                    ${i % 2 === 0 ? "md:mr-10" : "md:ml-10"}`}>
-                    <div className="flex flex-wrap items-center gap-2 mb-3">
-                      <span className="text-[10px] uppercase tracking-[0.2em] px-3 py-1 rounded-full border border-[#b8892a]/30 text-[#e8c56a] font-medium">
-                        {m.badge}
-                      </span>
-                    </div>
-                    <h3 className="font-['Cormorant_Garamond'] text-2xl md:text-3xl font-light text-white leading-snug mb-3">
-                      {m.title}
-                    </h3>
-                    <p className="text-[#a09080] text-sm leading-relaxed">{m.desc}</p>
-                  </div>
+                {/* Year pill — top left */}
+                <div className="absolute top-4 left-4">
+                  <span className="font-['Cormorant_Garamond'] text-sm font-semibold text-white bg-[#b8892a]/80 backdrop-blur-sm px-3 py-1 rounded-full">
+                    {m.year}
+                  </span>
                 </div>
-              ))}
-            </div>
+
+                {/* Badge — top right */}
+                <div className="absolute top-4 right-4">
+                  <span className="text-[9px] uppercase tracking-[0.18em] text-[#e8c56a] border border-[#e8c56a]/40 px-2.5 py-1 rounded-full font-medium bg-black/30 backdrop-blur-sm">
+                    {m.badge}
+                  </span>
+                </div>
+
+                {/* Content — bottom */}
+                <div className="absolute bottom-0 left-0 right-0 p-5">
+                  <h3 className="font-['Cormorant_Garamond'] text-xl md:text-2xl font-light text-white leading-snug mb-2">
+                    {m.title}
+                  </h3>
+                  {/* Description slides up on hover */}
+                  <p className="text-[#c8b8a0] text-xs leading-relaxed max-h-0 overflow-hidden group-hover:max-h-32 transition-all duration-500 ease-in-out">
+                    {m.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
