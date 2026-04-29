@@ -21,7 +21,7 @@ const WAYS = [
     title: "Online Satsang",
     sub: "Live via Zoom · Global Access",
     desc: "His Holiness extends his grace through live online satsangs: teachings, meditation guidance, and the experience of his presence, accessible from anywhere in the world.",
-    detail: "Open to registered participants of the Mahayog Meditation and Vedanta programmes.",
+    detail: "Open to registered program participants.",
     cta: { label: "Register for a Programme", href: "/register" },
     bg: "bg-[#faf9f6]",
     border: "border-[#e8dece]",
