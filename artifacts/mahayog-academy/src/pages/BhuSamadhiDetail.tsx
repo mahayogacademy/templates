@@ -126,6 +126,36 @@ const SEQUENCE_2008 = [
     label: "Blessings Given",
     caption: "Gurudev addresses the assembly and gives blessings — still serene, absorbed, radiating grace.",
   },
+  {
+    src: "bs2008-21-vigil-prayers.jpg",
+    step: "·",
+    label: "The Vigil — Inside",
+    caption: "Throughout the nine days, devotees gathered inside the hall — praying, chanting, and keeping continuous presence around the sealed samadhi.",
+  },
+  {
+    src: "bs2008-22-crowd-outside.jpg",
+    step: "·",
+    label: "The Vigil — Outside",
+    caption: "Word spread quickly across the region. People came in continuous streams from nearby villages and towns to pay respect during the vigil.",
+  },
+  {
+    src: "bs2008-23-recognition-1.jpg",
+    step: "·",
+    label: "Community Recognition",
+    caption: "Following the emergence, disciples and community leaders offered formal written tributes and recognitions to Gurudev.",
+  },
+  {
+    src: "bs2008-24-recognition-2.jpg",
+    step: "·",
+    label: "Recognition by Elders",
+    caption: "An elder dignitary presents a formal document — acknowledgement from the wider community of what they had witnessed.",
+  },
+  {
+    src: "bs2008-25-recognition-3.jpg",
+    step: "·",
+    label: "Official Acknowledgement",
+    caption: "Local officials and public figures formally recognised the event — an extraordinary occurrence in the living tradition of Himalayan yoga.",
+  },
 ];
 
 export default function BhuSamadhiDetail() {
@@ -239,7 +269,7 @@ export default function BhuSamadhiDetail() {
             2008 Chataradham — The Full Record
           </h2>
           <p className="text-center font-['Inter'] text-sm text-[#7a6a55] mb-2">
-            Twenty photographs documenting the complete sequence: from preparation to emergence to blessings
+            Twenty-five photographs documenting the complete sequence: from preparation to emergence, vigil, and official recognition
           </p>
           <div className="h-px bg-[#c9a96e]/40 w-24 mx-auto mb-12" />
 
