@@ -84,7 +84,7 @@ export default function VedantaCourse() {
         <div className="max-w-4xl mx-auto flex flex-wrap items-center justify-center divide-x divide-[#e8c56a]/20">
           {[
             { label: "Format",    value: "Online" },
-            { label: "Duration",  value: "350 Hours" },
+            { label: "Duration",  value: "300 Hours" },
             { label: "Lectures",  value: "267 Total" },
             { label: "Platform",  value: "Zoom" },
             { label: "Language",  value: "Nepali" },
@@ -119,7 +119,7 @@ export default function VedantaCourse() {
                 { label: "Who it is for", value: "Seekers at every stage" },
                 { label: "Delivery",      value: "Online via Zoom" },
                 { label: "Language",      value: "Nepali" },
-                { label: "Duration",      value: "350 hours · 267 lectures" },
+                { label: "Duration",      value: "300 hours · 267 lectures" },
               ].map((m) => (
                 <div key={m.label} className="flex gap-4">
                   <span className="text-xs uppercase tracking-[0.2em] text-[#b8892a] font-medium w-28 shrink-0 pt-0.5">{m.label}</span>
