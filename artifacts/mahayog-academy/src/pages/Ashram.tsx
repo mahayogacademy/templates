@@ -630,7 +630,7 @@ export default function Ashram() {
       <section className="relative py-20 px-6 overflow-hidden">
         <div className="absolute inset-0">
           <img src={`${b}images/ashram-koshi-river.jpg`} alt="" aria-hidden className="w-full h-full object-cover object-center" />
-          <div className="absolute inset-0 bg-[#faf6ee]/91" />
+          <div className="absolute inset-0 bg-[#faf6ee]/96" />
         </div>
         <div className="relative z-10 max-w-5xl mx-auto">
 
@@ -652,8 +652,8 @@ export default function Ashram() {
                 <p className="font-['Cormorant_Garamond'] text-xl font-light text-[#3d3830] leading-snug">
                   Jagadguru Ramanadacharya Seva Peeth
                 </p>
-                <p className="text-sm text-[#9a8f84] italic mt-1">Shree Ram Tarak Brahma Peeth</p>
-                <p className="text-sm text-[#7a7068] mt-1">Baharachettra, Sunsari, Nepal</p>
+                <p className="text-sm text-[#6e6560] italic mt-1">Shree Ram Tarak Brahma Peeth</p>
+                <p className="text-sm text-[#5a5248] mt-1">Baharachettra, Sunsari, Nepal</p>
               </div>
 
               {/* Other Nepal centers */}
@@ -664,8 +664,8 @@ export default function Ashram() {
                     <div>
                       <p className="font-['Cormorant_Garamond'] text-lg font-light text-[#3d3830] leading-snug">{c.city}</p>
                       {c.note
-                        ? <p className="text-sm text-[#7a7068] mt-0.5">{c.note}</p>
-                        : <p className="text-sm text-[#b0a89e] italic mt-0.5">Details coming soon</p>
+                        ? <p className="text-sm text-[#5a5248] mt-0.5">{c.note}</p>
+                        : <p className="text-sm text-[#7a6e64] italic mt-0.5">Details coming soon</p>
                       }
                     </div>
                   </div>
@@ -683,8 +683,8 @@ export default function Ashram() {
                     <div>
                       <p className="font-['Cormorant_Garamond'] text-lg font-light text-[#3d3830] leading-snug">{c.country}</p>
                       {c.cities.length > 0
-                        ? <p className="text-sm text-[#7a7068] mt-0.5">{c.cities.join(" · ")}</p>
-                        : <p className="text-sm text-[#b0a89e] italic mt-0.5">Details coming soon</p>
+                        ? <p className="text-sm text-[#5a5248] mt-0.5">{c.cities.join(" · ")}</p>
+                        : <p className="text-sm text-[#7a6e64] italic mt-0.5">Details coming soon</p>
                       }
                     </div>
                   </div>
