@@ -157,7 +157,7 @@ const MILESTONES = [
     slug: "ramarchan-mahayagya",
     year: "2023",
     title: "108 Ramarchan Mahayagya",
-    img: "ram-mandir-1.jpg",
+    img: "ramarchan-mahayagya.jpg",
   },
   {
     slug: "hanumad-mahayagya",

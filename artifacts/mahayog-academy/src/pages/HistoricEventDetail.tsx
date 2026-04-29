@@ -57,7 +57,7 @@ const EVENTS = [
     slug: "ramarchan-mahayagya",
     year: "2023",
     titleHtml: "108 Ramarchan Mahayagya",
-    img: "ram-mandir-1.jpg",
+    img: "ramarchan-mahayagya.jpg",
     body: [
       "The 108 Ramarchan Mahayagya of 2023 was a monumental collective offering to Bhagwan Shri Ram, performed under the direct guidance of Jagadguru Mahayogi Siddhababa. Ramarchan refers to the complete worship of Lord Ram, encompassing the recitation of his names, the narration of his story, offerings of flowers, ghee, and sacred items, and continuous devotional singing.",
       "To perform 108 complete Ramarchans is considered a feat of extraordinary devotion, requiring continuous practice across multiple days and nights. The ceremony drew Vedic scholars, devoted seekers, and community members from across Nepal, India, and international centres.",
