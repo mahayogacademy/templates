@@ -280,7 +280,7 @@ export default function GuruDarshan() {
         style={{
           backgroundImage: `url(${b}images/gurudev-seek-guidance.jpg)`,
           backgroundSize: "cover",
-          backgroundPosition: "center 20%",
+          backgroundPosition: "center 60%",
         }}
       >
         <div className="absolute inset-0 pointer-events-none"
