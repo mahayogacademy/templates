@@ -593,8 +593,8 @@ export default function Events() {
                   <img
                     src={`${b}images/${m.overlayImg}`}
                     aria-hidden="true"
-                    className="absolute inset-0 w-full h-full object-contain object-right pointer-events-none opacity-80 scale-150"
-                    style={{ mixBlendMode: "screen" }}
+                    className="absolute inset-0 w-full h-full object-contain pointer-events-none opacity-80 scale-150"
+                    style={{ mixBlendMode: "screen", objectPosition: "75% center" }}
                   />
                 )}
 
