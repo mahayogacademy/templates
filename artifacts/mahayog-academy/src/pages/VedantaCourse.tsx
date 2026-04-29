@@ -20,6 +20,60 @@ const OUTLINE = [
   { title: "Prapti Birodhi",         lectures: 17, desc: "Identify and overcome obstacles that hinder spiritual attainment." },
 ];
 
+const FAQS = [
+  {
+    q: "Who is this course for?",
+    a: "The Vedanta Philosophy Course is open to sincere seekers of all backgrounds and traditions. No prior knowledge of Vedanta is required — only a genuine wish to understand the nature of the Self and Reality.\n\nAlongside the philosophy lectures, participants also practice Himalayan Siddha Mahayog Meditation. The two are studied together, each deepening the other, for accelerated inner progress.",
+  },
+  {
+    q: "How long does the course take to complete?",
+    a: "The course is 300 hours in total and takes approximately 12 months to complete. Classes are held daily via Zoom — except on sacred holidays (Ashtami, Pratipada, Purnima, Sankranti, and Aunsi).\n\nThe programme is revolving, meaning you may join at any point in the year. From the day you enrol, you continue through all the lectures until the full programme is complete.",
+  },
+  {
+    q: "How are the classes delivered?",
+    a: "Each session is a live group Zoom class, facilitated by members of the Mahayogi Siddhababa Spiritual Academy. The heart of each session is satsang — spiritual discourse delivered by His Holiness Jagadguru Mahayogi Siddhababa himself, an enlightened Saint.\n\nPeriodic Q&A sessions are held directly with Jagadguru Mahayogi Siddhababa, offering each student the rare opportunity to receive personal guidance from an awakened Master.",
+  },
+  {
+    q: "What if I miss a class?",
+    a: "Enrolment includes access to a library of on-demand videos, written resources, and supporting materials. If you miss a session, you can catch up in your own time and continue from where you left off. No seeker is left behind.",
+  },
+  {
+    q: "What language are the lectures delivered in?",
+    a: "The course is currently delivered in Nepali. We are actively working to make the programme available in additional languages — stay tuned for updates. Please indicate your language in the registration form so we can keep you informed as new options become available.",
+  },
+  {
+    q: "Is there a fee?",
+    a: "The Vedanta course is offered freely. There is, however, a recommended donation to help cover the operational costs of running the programme — digital equipment, Zoom subscriptions, and supporting infrastructure.\n\nThe suggested donation amount can be discussed with your local center. Contributions may be made before or after enrolment, and no seeker is ever turned away for inability to contribute.",
+  },
+  {
+    q: "What will I gain from this course?",
+    a: "This course will change the way you see the world — and the way you engage with it. You will come to understand the nature of Brahman (the Supreme Reality), the Self (Ātman), and Prakriti (the phenomenal world), and how they relate to one another.\n\nBeyond philosophy, the integration of Vedanta with daily meditation practice brings this understanding into lived experience — gradually transforming perception, relationships, and the quality of inner life.",
+  },
+];
+
+function FAQItem({ q, a }: { q: string; a: string }) {
+  const [open, setOpen] = useState(false);
+  return (
+    <div className="border-b border-[#e8dece] last:border-0">
+      <button
+        onClick={() => setOpen(!open)}
+        className="w-full flex items-center justify-between py-5 text-left gap-6 group"
+      >
+        <span className="font-['Cormorant_Garamond'] text-xl font-semibold text-[#3d3830] group-hover:text-[#9d7422] transition-colors duration-200 leading-snug">
+          {q}
+        </span>
+        <ChevronDown
+          className={`w-5 h-5 text-[#b8892a] shrink-0 transition-transform duration-300 ${open ? "rotate-180" : ""}`}
+          strokeWidth={1.5}
+        />
+      </button>
+      <div className={`overflow-hidden transition-all duration-400 ${open ? "max-h-[600px] pb-5" : "max-h-0"}`}>
+        <p className="text-sm text-[#6b6158] leading-relaxed whitespace-pre-line">{a}</p>
+      </div>
+    </div>
+  );
+}
+
 function OutlineItem({ item, index }: { item: typeof OUTLINE[0]; index: number }) {
   const [open, setOpen] = useState(false);
   return (
@@ -216,6 +270,28 @@ export default function VedantaCourse() {
       </section>
 
       <FloatingRegisterButton label="Enrol Now" href="/register?for=vedanta" />
+
+      {/* ── FAQ ── */}
+      <section className="py-20 px-6 bg-gradient-to-b from-[#e8dcc8] via-[#ede3cf] to-[#e2d4b8]">
+        <div className="max-w-2xl mx-auto">
+          <div className="text-center mb-12">
+            <div className="flex items-center justify-center gap-3 mb-4">
+              <div className="h-px w-10 bg-[#b8892a]/40" />
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+                <path d="M12 2C12 2 15 9 22 12C22 12 15 15 12 22C12 22 9 15 2 12C2 12 9 9 12 2Z" stroke="#b8892a" strokeWidth="1.2" fill="none"/>
+              </svg>
+              <div className="h-px w-10 bg-[#b8892a]/40" />
+            </div>
+            <span className="uppercase tracking-[0.25em] text-xs text-[#b8892a] font-medium">Common Questions</span>
+            <h2 className="font-['Cormorant_Garamond'] text-4xl font-light text-[#2e1405] mt-2">
+              About the Vedanta Course
+            </h2>
+          </div>
+          <div>
+            {FAQS.map(f => <FAQItem key={f.q} q={f.q} a={f.a} />)}
+          </div>
+        </div>
+      </section>
 
       {/* ── FOOTER ── */}
       <footer className="py-10 px-6 border-t border-[#e8dece] bg-[#fdf6ec]">
