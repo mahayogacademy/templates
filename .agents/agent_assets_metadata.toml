@@ -330,3 +330,9 @@ id = "jmq_D4kQncEX5xue_iVGl"
 uri = "file://artifacts/mahayog-academy/public/images/vedanta-hero.png"
 type = "image"
 title = "vedanta soul meditation hero"
+
+[[generated]]
+id = "6NrQarnfQptKwIsX2lPri"
+uri = "file://artifacts/mahayog-academy/public/images/register-hero.png"
+type = "image"
+title = "ashram sunrise registration hero"

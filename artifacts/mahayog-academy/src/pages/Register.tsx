@@ -3,6 +3,8 @@ import Nav from "@/components/Nav";
 import EnrolmentForm from "@/components/EnrolmentForm";
 import { useSearch } from "wouter";
 
+const b = import.meta.env.BASE_URL;
+
 type Program = "meditation" | "vedanta";
 
 const PROGRAMMES = [
@@ -47,27 +49,27 @@ export default function Register() {
     <div className="min-h-screen bg-[#faf9f6]">
       <Nav />
 
-      {/* ── HEADER ── */}
-      <section
-        className="pt-28 pb-14 px-6 text-center relative overflow-hidden"
-        style={{ background: "linear-gradient(160deg, #2e1405 0%, #5a2e04 60%, #7a4a08 100%)" }}
-      >
-        <div className="absolute inset-0 opacity-[0.06]" style={{
-          backgroundImage: "radial-gradient(circle at 20% 50%, #e8c56a 0%, transparent 50%), radial-gradient(circle at 80% 50%, #b8892a 0%, transparent 50%)"
-        }} />
-        <div className="relative z-10 max-w-2xl mx-auto">
-          <div className="flex items-center justify-center gap-3 mb-5">
-            <div className="h-px w-10 bg-[#e8c56a]/40" />
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+      {/* ── HERO ── */}
+      <section className="relative h-[58vh] min-h-[400px] flex items-center justify-center overflow-hidden">
+        <img
+          src={`${b}images/register-hero.png`}
+          alt="Sacred ashram courtyard at sunrise"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#1a0f05]/65 via-[#2c1a08]/45 to-[#faf9f6]" />
+        <div className="relative z-10 text-center px-6 max-w-3xl mx-auto">
+          <div className="flex items-center justify-center gap-3 mb-6">
+            <div className="h-px w-12 bg-[#e8c56a]" />
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
               <path d="M12 2C12 2 15 9 22 12C22 12 15 15 12 22C12 22 9 15 2 12C2 12 9 9 12 2Z" stroke="#e8c56a" strokeWidth="1.2" fill="none"/>
             </svg>
-            <div className="h-px w-10 bg-[#e8c56a]/40" />
+            <div className="h-px w-12 bg-[#e8c56a]" />
           </div>
-          <span className="uppercase tracking-[0.25em] text-xs text-[#e8c56a]/60 font-medium">Programme Registration</span>
-          <h1 className="font-['Cormorant_Garamond'] text-4xl md:text-5xl font-light text-white mt-2 leading-tight">
+          <span className="uppercase tracking-[0.25em] text-xs text-[#e8c56a]/80 font-medium">Programme Registration</span>
+          <h1 className="font-['Cormorant_Garamond'] text-5xl md:text-7xl font-light text-white leading-none mt-2 mb-4">
             Begin Your Journey
           </h1>
-          <p className="text-sm text-[#f0e4c8]/60 mt-3 max-w-sm mx-auto leading-relaxed">
+          <p className="text-base text-[#f0e4c8]/80 tracking-wide font-light">
             Choose the programme you wish to register for below.
           </p>
         </div>
