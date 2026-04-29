@@ -88,11 +88,9 @@ const UPCOMING: AnyEvent[] = [
   // ── Vedic Calendar 2026 ── compact entries (source: drikpanchang.com, NPT)
   // May
   { id: 100, compact: true, kind: "ekadashi", kindLabel: "Ekadashi",  title: "Apara Ekadashi",                    subtitle: "Sacred fast for the removal of sins and merit of ancestors",                                          date: "13 May 2026",  dateObj: new Date(2026, 4, 13) },
-  { id: 200, compact: true, kind: "special",  kindLabel: "Special",   title: "International Meditation Day",       subtitle: "A global day to turn inward — honouring the transformative power of meditation",                      date: "21 May 2026",  dateObj: new Date(2026, 4, 21) },
   { id: 101, compact: true, kind: "ekadashi", kindLabel: "Ekadashi",  title: "Padmini Ekadashi (Adhika)",          subtitle: "Rare Adhika Masa Ekadashi — especially auspicious for fasting and prayer",                           date: "27 May 2026",  dateObj: new Date(2026, 4, 27) },
   // June
   { id: 102, compact: true, kind: "ekadashi", kindLabel: "Ekadashi",  title: "Paramā Ekadashi (Adhika)",           subtitle: "Culminating Ekadashi of the Adhika (intercalary) month",                                            date: "11 Jun 2026",  dateObj: new Date(2026, 5, 11) },
-  { id: 201, compact: true, kind: "special",  kindLabel: "Special",   title: "International Yoga Day",             subtitle: "Celebrated globally on the summer solstice — marking yoga's gift to humanity",                        date: "21 Jun 2026",  dateObj: new Date(2026, 5, 21) },
   { id: 103, compact: true, kind: "ekadashi", kindLabel: "Ekadashi",  title: "Nirjala Ekadashi",                   subtitle: "The most potent Ekadashi — observed without water, conferring the merit of all Ekadashis",           date: "25 Jun 2026",  dateObj: new Date(2026, 5, 25) },
   // July
   { id: 104, compact: true, kind: "ekadashi", kindLabel: "Ekadashi",  title: "Yogini Ekadashi",                    subtitle: "Fasting this day is said to cure disease and purify accumulated karma",                              date: "11 Jul 2026",  dateObj: new Date(2026, 6, 11) },
