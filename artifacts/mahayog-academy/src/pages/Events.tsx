@@ -612,7 +612,7 @@ export default function Events() {
 
                 {/* Year pill, top left */}
                 <div className="absolute top-4 left-4">
-                  <span className="font-['Cormorant_Garamond'] text-2xl font-semibold text-white bg-[#b8892a]/80 backdrop-blur-sm px-4 py-1.5 rounded-full">
+                  <span className="font-['Cormorant_Garamond'] text-lg font-semibold text-white bg-[#b8892a]/80 backdrop-blur-sm px-3 py-1 rounded-full">
                     {m.year}
                   </span>
                 </div>
