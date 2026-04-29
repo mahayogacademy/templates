@@ -89,44 +89,44 @@ const UPCOMING: AnyEvent[] = [
   },
   // ── Vedic Calendar 2026 ── compact entries (source: drikpanchang.com, NPT)
   // May
-  { id: 100, compact: true, kind: "ekadashi", kindLabel: "Ekadashi",  title: "Apara Ekadashi",                    date: "13 May 2026",  dateObj: new Date(2026, 4, 13) },
-  { id: 101, compact: true, kind: "ekadashi", kindLabel: "Ekadashi",  title: "Padmini Ekadashi (Adhika)",          date: "27 May 2026",  dateObj: new Date(2026, 4, 27) },
+  { id: 100, compact: true, kind: "ekadashi", kindLabel: "Ekadashi",  title: "Apara Ekadashi",                    subtitle: "Sacred fast for the removal of sins and merit of ancestors",                                          date: "13 May 2026",  dateObj: new Date(2026, 4, 13) },
+  { id: 101, compact: true, kind: "ekadashi", kindLabel: "Ekadashi",  title: "Padmini Ekadashi (Adhika)",          subtitle: "Rare Adhika Masa Ekadashi — especially auspicious for fasting and prayer",                           date: "27 May 2026",  dateObj: new Date(2026, 4, 27) },
   // June
-  { id: 102, compact: true, kind: "ekadashi", kindLabel: "Ekadashi",  title: "Paramā Ekadashi (Adhika)",           date: "11 Jun 2026",  dateObj: new Date(2026, 5, 11) },
-  { id: 103, compact: true, kind: "ekadashi", kindLabel: "Ekadashi",  title: "Nirjala Ekadashi",                   date: "25 Jun 2026",  dateObj: new Date(2026, 5, 25) },
+  { id: 102, compact: true, kind: "ekadashi", kindLabel: "Ekadashi",  title: "Paramā Ekadashi (Adhika)",           subtitle: "Culminating Ekadashi of the Adhika (intercalary) month",                                            date: "11 Jun 2026",  dateObj: new Date(2026, 5, 11) },
+  { id: 103, compact: true, kind: "ekadashi", kindLabel: "Ekadashi",  title: "Nirjala Ekadashi",                   subtitle: "The most potent Ekadashi — observed without water, conferring the merit of all Ekadashis",           date: "25 Jun 2026",  dateObj: new Date(2026, 5, 25) },
   // July
-  { id: 104, compact: true, kind: "ekadashi", kindLabel: "Ekadashi",  title: "Yogini Ekadashi",                    date: "11 Jul 2026",  dateObj: new Date(2026, 6, 11) },
-  { id: 105, compact: true, kind: "ekadashi", kindLabel: "Ekadashi",  title: "Devshayani Ekadashi",                date: "25 Jul 2026",  dateObj: new Date(2026, 6, 25) },
+  { id: 104, compact: true, kind: "ekadashi", kindLabel: "Ekadashi",  title: "Yogini Ekadashi",                    subtitle: "Fasting this day is said to cure disease and purify accumulated karma",                              date: "11 Jul 2026",  dateObj: new Date(2026, 6, 11) },
+  { id: 105, compact: true, kind: "ekadashi", kindLabel: "Ekadashi",  title: "Devshayani Ekadashi",                subtitle: "Lord Vishnu enters Yoga Nidra — the sacred Chaturmas begins",                                       date: "25 Jul 2026",  dateObj: new Date(2026, 6, 25) },
   // August
-  { id: 106, compact: true, kind: "festival", kindLabel: "Festival",  title: "Hariyali Teej",                      date: "1 Aug 2026",   dateObj: new Date(2026, 7, 1)  },
-  { id: 107, compact: true, kind: "ekadashi", kindLabel: "Ekadashi",  title: "Kamika Ekadashi",                    date: "9 Aug 2026",   dateObj: new Date(2026, 7, 9)  },
-  { id: 108, compact: true, kind: "festival", kindLabel: "Festival",  title: "Nag Panchami",                       date: "17 Aug 2026",  dateObj: new Date(2026, 7, 17) },
-  { id: 109, compact: true, kind: "ekadashi", kindLabel: "Ekadashi",  title: "Shravana Putrada Ekadashi",          date: "23 Aug 2026",  dateObj: new Date(2026, 7, 23) },
-  { id: 110, compact: true, kind: "festival", kindLabel: "Festival",  title: "Raksha Bandhan",                     date: "28 Aug 2026",  dateObj: new Date(2026, 7, 28) },
+  { id: 106, compact: true, kind: "festival", kindLabel: "Festival",  title: "Hariyali Teej",                      subtitle: "Festival of Parvati — women fast, pray, and celebrate the arrival of the monsoon",                   date: "1 Aug 2026",   dateObj: new Date(2026, 7, 1)  },
+  { id: 107, compact: true, kind: "ekadashi", kindLabel: "Ekadashi",  title: "Kamika Ekadashi",                    subtitle: "Ekadashi during Chaturmas — prayer and fasting carry exceptional merit",                            date: "9 Aug 2026",   dateObj: new Date(2026, 7, 9)  },
+  { id: 108, compact: true, kind: "festival", kindLabel: "Festival",  title: "Nag Panchami",                       subtitle: "Ancient worship of the Naga deities — milk offerings and prayer for protection",                     date: "17 Aug 2026",  dateObj: new Date(2026, 7, 17) },
+  { id: 109, compact: true, kind: "ekadashi", kindLabel: "Ekadashi",  title: "Shravana Putrada Ekadashi",          subtitle: "Auspicious for seeking divine blessings for progeny and family wellbeing",                          date: "23 Aug 2026",  dateObj: new Date(2026, 7, 23) },
+  { id: 110, compact: true, kind: "festival", kindLabel: "Festival",  title: "Raksha Bandhan",                     subtitle: "The sacred bond of protection between siblings, blessed through mantra and prayer",                  date: "28 Aug 2026",  dateObj: new Date(2026, 7, 28) },
   // September
-  { id: 111, compact: true, kind: "festival", kindLabel: "Festival",  title: "Krishna Janmashtami",                date: "5 Sep 2026",   dateObj: new Date(2026, 8, 5)  },
-  { id: 112, compact: true, kind: "ekadashi", kindLabel: "Ekadashi",  title: "Aja Ekadashi",                       date: "7 Sep 2026",   dateObj: new Date(2026, 8, 7)  },
-  { id: 113, compact: true, kind: "festival", kindLabel: "Festival",  title: "Hartalika Teej",                     date: "13 Sep 2026",  dateObj: new Date(2026, 8, 13) },
-  { id: 114, compact: true, kind: "festival", kindLabel: "Festival",  title: "Ganesh Chaturthi",                   date: "14 Sep 2026",  dateObj: new Date(2026, 8, 14) },
-  { id: 115, compact: true, kind: "ekadashi", kindLabel: "Ekadashi",  title: "Parsva Ekadashi",                    date: "22 Sep 2026",  dateObj: new Date(2026, 8, 22) },
+  { id: 111, compact: true, kind: "festival", kindLabel: "Festival",  title: "Krishna Janmashtami",                subtitle: "The divine appearance of Bhagwan Shri Krishna — midnight vigil, bhajan, and fasting",               date: "5 Sep 2026",   dateObj: new Date(2026, 8, 5)  },
+  { id: 112, compact: true, kind: "ekadashi", kindLabel: "Ekadashi",  title: "Aja Ekadashi",                       subtitle: "Fasting on this day is said to free one from the cycle of rebirth",                                 date: "7 Sep 2026",   dateObj: new Date(2026, 8, 7)  },
+  { id: 113, compact: true, kind: "festival", kindLabel: "Festival",  title: "Hartalika Teej",                     subtitle: "The most sacred fast of Parvati — observed for spiritual merit and marital harmony",                date: "13 Sep 2026",  dateObj: new Date(2026, 8, 13) },
+  { id: 114, compact: true, kind: "festival", kindLabel: "Festival",  title: "Ganesh Chaturthi",                   subtitle: "The birth of Bhagwan Ganesha — puja, modak, and prayer for auspicious beginnings",                  date: "14 Sep 2026",  dateObj: new Date(2026, 8, 14) },
+  { id: 115, compact: true, kind: "ekadashi", kindLabel: "Ekadashi",  title: "Parsva Ekadashi",                    subtitle: "Lord Vishnu turns in cosmic sleep — a sacred milestone midway through Chaturmas",                   date: "22 Sep 2026",  dateObj: new Date(2026, 8, 22) },
   // October
-  { id: 116, compact: true, kind: "ekadashi", kindLabel: "Ekadashi",  title: "Indira Ekadashi",                    date: "6 Oct 2026",   dateObj: new Date(2026, 9, 6)  },
-  { id: 117, compact: true, kind: "festival", kindLabel: "Festival",  title: "Navaratri Begins",                   date: "12 Oct 2026",  dateObj: new Date(2026, 9, 12) },
-  { id: 118, compact: true, kind: "festival", kindLabel: "Festival",  title: "Saraswati Puja · Maha Navami",       date: "20 Oct 2026",  dateObj: new Date(2026, 9, 20) },
-  { id: 119, compact: true, kind: "festival", kindLabel: "Festival",  title: "Vijayadashami",                      date: "21 Oct 2026",  dateObj: new Date(2026, 9, 21) },
-  { id: 120, compact: true, kind: "ekadashi", kindLabel: "Ekadashi",  title: "Papankusha Ekadashi",                date: "22 Oct 2026",  dateObj: new Date(2026, 9, 22) },
-  { id: 121, compact: true, kind: "festival", kindLabel: "Festival",  title: "Sharad Purnima",                     date: "25 Oct 2026",  dateObj: new Date(2026, 9, 25) },
+  { id: 116, compact: true, kind: "ekadashi", kindLabel: "Ekadashi",  title: "Indira Ekadashi",                    subtitle: "Observed for the liberation of ancestors — offerings and prayer for departed souls",                 date: "6 Oct 2026",   dateObj: new Date(2026, 9, 6)  },
+  { id: 117, compact: true, kind: "festival", kindLabel: "Festival",  title: "Navaratri Begins",                   subtitle: "Nine nights of Shakti worship — the Goddess invoked in all her divine forms",                       date: "12 Oct 2026",  dateObj: new Date(2026, 9, 12) },
+  { id: 118, compact: true, kind: "festival", kindLabel: "Festival",  title: "Saraswati Puja · Maha Navami",       subtitle: "Worship of the Goddess of wisdom and arts — the culminating night of Navaratri",                    date: "20 Oct 2026",  dateObj: new Date(2026, 9, 20) },
+  { id: 119, compact: true, kind: "festival", kindLabel: "Festival",  title: "Vijayadashami",                      subtitle: "Victory of dharma over adharma — the tenth day; conclusion of Navaratri",                          date: "21 Oct 2026",  dateObj: new Date(2026, 9, 21) },
+  { id: 120, compact: true, kind: "ekadashi", kindLabel: "Ekadashi",  title: "Papankusha Ekadashi",                subtitle: "Said to destroy the gravest sins — puja and fasting are especially recommended",                    date: "22 Oct 2026",  dateObj: new Date(2026, 9, 22) },
+  { id: 121, compact: true, kind: "festival", kindLabel: "Festival",  title: "Sharad Purnima",                     subtitle: "Full moon of autumn — Lakshmi descends to earth; moonlit offerings and kirtan",                     date: "25 Oct 2026",  dateObj: new Date(2026, 9, 25) },
   // November
-  { id: 122, compact: true, kind: "ekadashi", kindLabel: "Ekadashi",  title: "Rama Ekadashi",                      date: "5 Nov 2026",   dateObj: new Date(2026, 10, 5) },
-  { id: 123, compact: true, kind: "festival", kindLabel: "Festival",  title: "Dhanteras",                          date: "7 Nov 2026",   dateObj: new Date(2026, 10, 7) },
-  { id: 124, compact: true, kind: "festival", kindLabel: "Festival",  title: "Lakshmi Puja · Diwali",              date: "9 Nov 2026",   dateObj: new Date(2026, 10, 9) },
-  { id: 125, compact: true, kind: "festival", kindLabel: "Festival",  title: "Govardhan Puja",                     date: "10 Nov 2026",  dateObj: new Date(2026, 10, 10)},
-  { id: 126, compact: true, kind: "festival", kindLabel: "Festival",  title: "Kansa Vadh",                         date: "19 Nov 2026",  dateObj: new Date(2026, 10, 19)},
-  { id: 127, compact: true, kind: "ekadashi", kindLabel: "Ekadashi",  title: "Devutthana Ekadashi · Tulasi Vivah", date: "21 Nov 2026",  dateObj: new Date(2026, 10, 21)},
+  { id: 122, compact: true, kind: "ekadashi", kindLabel: "Ekadashi",  title: "Rama Ekadashi",                      subtitle: "Ekadashi of the Diwali fortnight — deeply auspicious for worship and japa",                        date: "5 Nov 2026",   dateObj: new Date(2026, 10, 5) },
+  { id: 123, compact: true, kind: "festival", kindLabel: "Festival",  title: "Dhanteras",                          subtitle: "Worship of Dhanvantari and Lakshmi — the first day of the Diwali celebration",                     date: "7 Nov 2026",   dateObj: new Date(2026, 10, 7) },
+  { id: 124, compact: true, kind: "festival", kindLabel: "Festival",  title: "Lakshmi Puja · Diwali",              subtitle: "The festival of lights — Lakshmi puja, diyas lit across the land, and community joy",               date: "9 Nov 2026",   dateObj: new Date(2026, 10, 9) },
+  { id: 125, compact: true, kind: "festival", kindLabel: "Festival",  title: "Govardhan Puja",                     subtitle: "Krishna's victory over Indra — worship of Govardhan and gratitude for divine grace",               date: "10 Nov 2026",  dateObj: new Date(2026, 10, 10)},
+  { id: 126, compact: true, kind: "festival", kindLabel: "Festival",  title: "Kansa Vadh",                         subtitle: "Celebration of the Lord's liberation of the world from the tyrant Kansa",                          date: "19 Nov 2026",  dateObj: new Date(2026, 10, 19)},
+  { id: 127, compact: true, kind: "ekadashi", kindLabel: "Ekadashi",  title: "Devutthana Ekadashi · Tulasi Vivah", subtitle: "Lord Vishnu awakens from Yoga Nidra; the sacred marriage of Tulasi and Shaligram is celebrated",  date: "21 Nov 2026",  dateObj: new Date(2026, 10, 21)},
   // December
-  { id: 128, compact: true, kind: "ekadashi", kindLabel: "Ekadashi",  title: "Utpanna Ekadashi",                   date: "4 Dec 2026",   dateObj: new Date(2026, 11, 4) },
-  { id: 129, compact: true, kind: "festival", kindLabel: "Festival",  title: "Vivah Panchami",                     date: "14 Dec 2026",  dateObj: new Date(2026, 11, 14)},
-  { id: 130, compact: true, kind: "ekadashi", kindLabel: "Ekadashi",  title: "Mokshada Ekadashi · Gita Jayanti",   date: "20 Dec 2026",  dateObj: new Date(2026, 11, 20)},
+  { id: 128, compact: true, kind: "ekadashi", kindLabel: "Ekadashi",  title: "Utpanna Ekadashi",                   subtitle: "The origin-Ekadashi — marking the appearance of the Ekadashi Devi",                               date: "4 Dec 2026",   dateObj: new Date(2026, 11, 4) },
+  { id: 129, compact: true, kind: "festival", kindLabel: "Festival",  title: "Vivah Panchami",                     subtitle: "The sacred marriage of Bhagwan Rama and Sita — recitation of Manas and festive puja",             date: "14 Dec 2026",  dateObj: new Date(2026, 11, 14)},
+  { id: 130, compact: true, kind: "ekadashi", kindLabel: "Ekadashi",  title: "Mokshada Ekadashi · Gita Jayanti",   subtitle: "The Bhagavad Gita was revealed on this day — the Ekadashi of liberation",                         date: "20 Dec 2026",  dateObj: new Date(2026, 11, 20)},
 ];
 
 const PAST = [
@@ -542,12 +542,9 @@ export default function Events() {
                                 <Icon size={10} className="text-[#b8892a]" />{ev.location}
                               </span>
                             )}
-                            {!ev.time && !ev.location && (
-                              <span className="text-[11px] text-[#b8a898]">Nepal Standard Time</span>
-                            )}
                           </div>
-                          {isRich && ev.subtitle && (
-                            <p className="text-[11px] text-[#7a6e5a] italic mt-0.5">{ev.subtitle}</p>
+                          {ev.subtitle && (
+                            <p className="text-[11px] text-[#7a6e5a] italic mt-0.5 leading-snug">{ev.subtitle}</p>
                           )}
                         </div>
 
