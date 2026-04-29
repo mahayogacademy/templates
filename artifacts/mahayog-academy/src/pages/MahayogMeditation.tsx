@@ -964,11 +964,19 @@ export default function MahayogMeditation() {
 
       {/* ── CTA BANNER ── */}
       <section className="relative py-24 px-6 overflow-hidden"
-        style={{ background: "linear-gradient(135deg, #1e0e03 0%, #3a1a05 50%, #2a1204 100%)" }}
+        style={{
+          backgroundImage: `url(${import.meta.env.BASE_URL}images/ashram-satsang-night.jpg)`,
+          backgroundSize: "cover",
+          backgroundPosition: "center 40%",
+        }}
       >
-        {/* decorative radial glow */}
+        {/* dark overlay — keeps text readable */}
         <div className="absolute inset-0 pointer-events-none"
-          style={{ background: "radial-gradient(ellipse at 50% 60%, rgba(184,137,42,0.18) 0%, transparent 65%)" }}
+          style={{ background: "linear-gradient(135deg, rgba(18,7,1,0.88) 0%, rgba(42,18,4,0.82) 50%, rgba(20,10,2,0.90) 100%)" }}
+        />
+        {/* amber radial glow */}
+        <div className="absolute inset-0 pointer-events-none"
+          style={{ background: "radial-gradient(ellipse at 50% 60%, rgba(184,137,42,0.22) 0%, transparent 65%)" }}
         />
         {/* top border line */}
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#b8892a]/50 to-transparent" />
