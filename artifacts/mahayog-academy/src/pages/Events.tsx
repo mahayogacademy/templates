@@ -369,9 +369,14 @@ export default function Events() {
 
   const visible = filter === "all" ? UPCOMING : UPCOMING.filter(e => e.kind === filter);
 
-  // Default background images for compact calendar entries, rotated by id
-  const EKADASHI_IMGS = ["ashram-koshi-river.jpg", "ashram-life-satsang.png", "ashram-extra-sanyasi-river.jpg"];
-  const FESTIVAL_IMGS  = ["ashram-extra-river-diyas.jpg", "congregation.jpg", "ram-mandir-1.jpg"];
+  // Accent colour per kind (left border of each row)
+  const KIND_ACCENT: Record<EventKind, string> = {
+    all:      "bg-[#e8dece]",
+    retreat:  "bg-[#4a7a5a]",
+    festival: "bg-[#b8892a]",
+    ekadashi: "bg-[#c8a84a]/60",
+    course:   "bg-[#6a5a9a]",
+  };
 
   return (
     <div className="min-h-screen bg-[#faf9f6] font-['Inter']">
@@ -456,97 +461,114 @@ export default function Events() {
           </div>
         )}
 
-        {/* List view — unified card for every event */}
-        {view === "list" && (
-          <div className="space-y-3">
-            {visible.map(ev => {
-              const Icon = ev.locationIcon;
-              // Resolve image: rich events have their own; compact entries cycle through defaults
-              const imgSrc = ev.img
-                || (ev.kind === "ekadashi"
-                  ? EKADASHI_IMGS[(ev.id - 100) % EKADASHI_IMGS.length]
-                  : FESTIVAL_IMGS[(ev.id - 100) % FESTIVAL_IMGS.length]);
-              const imgPos = ev.imgPos || "object-center";
-              const dateParts = (ev.date || "").split(" ");
-              const dateDay    = dateParts[0] ?? "";
-              const dateMonYr  = dateParts.slice(-2).join(" ");
+        {/* List view — compact row layout, grouped by month */}
+        {view === "list" && (() => {
+          if (visible.length === 0) return (
+            <div className="text-center py-16 text-[#9a8f84]">
+              <p className="font-['Cormorant_Garamond'] text-2xl font-light">No events in this category right now.</p>
+              <p className="text-sm mt-2">
+                <button onClick={() => setFilter("all")} className="text-[#b8892a] underline cursor-pointer">View all events</button>
+              </p>
+            </div>
+          );
 
-              return (
-                <div key={ev.id}
-                  className="rounded-xl overflow-hidden border border-[#e8dece] bg-white shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col sm:flex-row">
-                  {/* Image panel — compact */}
-                  <div className="relative sm:w-40 md:w-52 shrink-0 h-36 sm:h-auto overflow-hidden">
-                    <img src={`${b}images/${imgSrc}`} alt={ev.title}
-                      className={`w-full h-full object-cover ${imgPos} transition-transform duration-500 hover:scale-105`} />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent sm:bg-gradient-to-r sm:from-transparent sm:to-black/10" />
-                    {/* Date badge */}
-                    <div className="absolute top-3 left-3 bg-white/90 backdrop-blur-sm rounded-lg px-2 py-1.5 text-center shadow-sm min-w-[3rem]">
-                      <p className="font-['Cormorant_Garamond'] text-[9px] uppercase tracking-[0.12em] text-[#9a8f84] leading-none mb-0.5">{dateMonYr}</p>
-                      <p className="font-['Cormorant_Garamond'] text-sm font-semibold text-[#2c1a08] leading-none">{dateDay}</p>
-                    </div>
-                    {ev.recurring && !ev.compact && (
-                      <div className="absolute bottom-3 left-3 bg-[#4a6a3a]/80 text-white text-[9px] uppercase tracking-[0.12em] px-2 py-0.5 rounded-full font-medium">Annual</div>
-                    )}
+          // Sort by date, then group by month
+          const sorted = [...visible].sort((a, b) =>
+            (a.dateObj?.getTime() ?? 0) - (b.dateObj?.getTime() ?? 0)
+          );
+          const monthMap = new Map<string, typeof visible>();
+          const monthOrder: string[] = [];
+          sorted.forEach(ev => {
+            const mon = ev.dateObj
+              ? ev.dateObj.toLocaleString("en-US", { month: "long", year: "numeric" })
+              : (ev.date || "").split(" ").slice(-2).join(" ");
+            if (!monthMap.has(mon)) { monthMap.set(mon, []); monthOrder.push(mon); }
+            monthMap.get(mon)!.push(ev);
+          });
+          const groups = monthOrder.map(mon => ({ month: mon, items: monthMap.get(mon)! }));
+
+          return (
+            <div className="rounded-2xl border border-[#e8dece] bg-white overflow-hidden divide-y divide-[#f2ede6]">
+              {groups.map(({ month, items }) => (
+                <div key={month}>
+                  {/* Month header */}
+                  <div className="px-5 py-2 bg-[#fdf8f0] flex items-center gap-3">
+                    <span className="text-[10px] font-semibold uppercase tracking-[0.22em] text-[#b8892a]">{month}</span>
+                    <div className="flex-1 h-px bg-[#ece5d8]" />
                   </div>
 
-                  {/* Content */}
-                  <div className="flex-1 px-5 py-4 flex flex-col justify-between min-h-[7rem]">
-                    <div>
-                      <span className="inline-block text-[9px] uppercase tracking-[0.2em] font-medium px-2.5 py-0.5 rounded-full bg-[#b8892a]/10 text-[#8a6420] mb-2">
-                        {ev.kindLabel}
-                      </span>
-                      <h3 className="font-['Cormorant_Garamond'] text-xl md:text-2xl font-light text-[#2c1a08] leading-snug mb-1">
-                        {ev.title}
-                      </h3>
-                      {ev.subtitle && (
-                        <p className="text-xs text-[#7a6e5a] italic mb-2">{ev.subtitle}</p>
-                      )}
-                      <div className="flex flex-wrap gap-x-4 gap-y-1 mb-2">
-                        <span className="flex items-center gap-1 text-[11px] text-[#7a6e5a]">
-                          <CalendarDays size={11} className="text-[#b8892a]" />{ev.date}
-                        </span>
-                        {ev.time && (
-                          <span className="flex items-center gap-1 text-[11px] text-[#7a6e5a]">
-                            <Clock size={11} className="text-[#b8892a]" />{ev.time}
-                          </span>
-                        )}
-                        {Icon && ev.location && (
-                          <span className="flex items-center gap-1 text-[11px] text-[#7a6e5a]">
-                            <Icon size={11} className="text-[#b8892a]" />{ev.location}
-                          </span>
+                  {/* Event rows */}
+                  {items.map((ev, i) => {
+                    const Icon = ev.locationIcon;
+                    const dateNum = ev.dateObj ? ev.dateObj.getDate().toString() : (ev.date || "").split(" ")[0];
+                    const dateMon = ev.dateObj
+                      ? ev.dateObj.toLocaleString("en-US", { month: "short" }).toUpperCase()
+                      : (ev.date || "").split(" ").slice(-2, -1)[0]?.slice(0, 3).toUpperCase() ?? "";
+                    const accent = KIND_ACCENT[ev.kind];
+                    const isRich = !ev.compact;
+
+                    return (
+                      <div key={ev.id}
+                        className={`flex items-stretch gap-0 ${i < items.length - 1 ? "border-b border-[#f5f0e8]" : ""} ${isRich ? "bg-[#fdfaf5]" : "bg-white"} hover:bg-[#fdf5e8] transition-colors duration-150 group`}>
+
+                        {/* Coloured accent strip */}
+                        <div className={`w-1 shrink-0 ${accent}`} />
+
+                        {/* Date column */}
+                        <div className="shrink-0 w-14 flex flex-col items-center justify-center py-3 pl-3 pr-2 border-r border-[#f0ebe3]">
+                          <span className="font-['Cormorant_Garamond'] text-lg font-semibold text-[#2c1a08] leading-none">{dateNum}</span>
+                          <span className="text-[9px] uppercase tracking-[0.14em] text-[#b8892a] font-medium leading-none mt-0.5">{dateMon}</span>
+                        </div>
+
+                        {/* Main content */}
+                        <div className="flex-1 min-w-0 px-4 py-3 flex flex-col justify-center">
+                          <div className="flex items-center gap-2 mb-0.5">
+                            <span className={`text-[9px] uppercase tracking-[0.2em] font-semibold px-2 py-0.5 rounded-full ${
+                              isRich ? "bg-[#b8892a]/15 text-[#7a5818]" : "bg-[#f0e8d8] text-[#9a8060]"
+                            }`}>{ev.kindLabel}</span>
+                            {ev.recurring && <span className="text-[9px] uppercase tracking-[0.14em] text-[#4a7a5a] font-medium">Annual</span>}
+                          </div>
+                          <p className={`font-['Cormorant_Garamond'] leading-snug text-[#2c1a08] ${isRich ? "text-lg font-medium" : "text-base font-light"}`}>
+                            {ev.title}
+                          </p>
+                          <div className="flex flex-wrap items-center gap-x-3 gap-y-0.5 mt-0.5">
+                            {ev.time && (
+                              <span className="flex items-center gap-1 text-[11px] text-[#7a6e5a]">
+                                <Clock size={10} className="text-[#b8892a]" />{ev.time}
+                              </span>
+                            )}
+                            {Icon && ev.location && (
+                              <span className="flex items-center gap-1 text-[11px] text-[#7a6e5a]">
+                                <Icon size={10} className="text-[#b8892a]" />{ev.location}
+                              </span>
+                            )}
+                            {!ev.time && !ev.location && (
+                              <span className="text-[11px] text-[#b8a898]">Nepal Standard Time</span>
+                            )}
+                          </div>
+                          {isRich && ev.subtitle && (
+                            <p className="text-[11px] text-[#7a6e5a] italic mt-0.5">{ev.subtitle}</p>
+                          )}
+                        </div>
+
+                        {/* CTA (rich events only) */}
+                        {ev.cta && (
+                          <div className="shrink-0 flex items-center pr-4 pl-2">
+                            <Link href={ev.cta.href}>
+                              <span className="flex items-center gap-1 text-[11px] font-medium text-[#b8892a] group-hover:text-[#7a5818] transition-colors cursor-pointer whitespace-nowrap">
+                                {ev.cta.label} <ArrowRight size={11} />
+                              </span>
+                            </Link>
+                          </div>
                         )}
                       </div>
-                      {ev.desc && (
-                        <p className="text-[#5a5248] text-xs leading-relaxed">{ev.desc}</p>
-                      )}
-                      {ev.note && (
-                        <p className="text-[11px] text-[#9a8f84] italic mt-1">{ev.note}</p>
-                      )}
-                    </div>
-                    {ev.cta && (
-                      <div className="mt-3 pt-3 border-t border-[#f0ebe3]">
-                        <Link href={ev.cta.href}>
-                          <span className="inline-flex items-center gap-1.5 bg-[#b8892a] hover:bg-[#c9981f] text-white text-[10px] px-5 py-2 rounded-full tracking-widest uppercase transition-all duration-200 cursor-pointer shadow-sm">
-                            {ev.cta.label} <ArrowRight size={11} />
-                          </span>
-                        </Link>
-                      </div>
-                    )}
-                  </div>
+                    );
+                  })}
                 </div>
-              );
-            })}
-
-            {visible.length === 0 && (
-              <div className="text-center py-16 text-[#9a8f84]">
-                <p className="font-['Cormorant_Garamond'] text-2xl font-light">No events in this category right now.</p>
-                <p className="text-sm mt-2">
-                  <button onClick={() => setFilter("all")} className="text-[#b8892a] underline cursor-pointer">View all events</button>
-                </p>
-              </div>
-            )}
-          </div>
-        )}
+              ))}
+            </div>
+          );
+        })()}
 
         {/* Calendar view */}
         {view === "calendar" && <CalendarView events={UPCOMING} />}
