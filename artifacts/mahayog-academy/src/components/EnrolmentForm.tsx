@@ -308,8 +308,8 @@ export default function EnrolmentForm({ program }: { program: Program }) {
               <p className={`${hint} mt-1`}>Please be as specific as possible.</p>
             </div>
             <div>
-              <label className={lc}>Profession</label>
-              <input className={ic} value={form.profession} onChange={e => set("profession", e.target.value)} />
+              <label className={lc}>Occupation</label>
+              <input className={ic} placeholder="e.g. Teacher, Engineer, Student…" value={form.profession} onChange={e => set("profession", e.target.value)} />
             </div>
           </>}
 
