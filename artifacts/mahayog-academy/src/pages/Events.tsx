@@ -528,13 +528,13 @@ export default function Events() {
                             {(ev.time || ev.location) && (
                               <div className="flex flex-wrap gap-x-3 gap-y-0.5 mt-1.5">
                                 {ev.time && (
-                                  <span className="flex items-center gap-1 text-[11px] text-[#9a8f84]">
-                                    <Clock size={10} className="text-[#b8892a]" />{ev.time}
+                                  <span className="flex items-center gap-1 text-sm text-[#9a8f84]">
+                                    <Clock size={12} className="text-[#b8892a]" />{ev.time}
                                   </span>
                                 )}
                                 {Icon && ev.location && (
-                                  <span className="flex items-center gap-1 text-[11px] text-[#9a8f84]">
-                                    <Icon size={10} className="text-[#b8892a]" />{ev.location}
+                                  <span className="flex items-center gap-1 text-sm text-[#9a8f84]">
+                                    <Icon size={12} className="text-[#b8892a]" />{ev.location}
                                   </span>
                                 )}
                               </div>
