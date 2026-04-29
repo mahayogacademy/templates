@@ -150,7 +150,7 @@ export default function GuruDarshan() {
             </div>
             <div className="mt-8 pl-6 border-l-2 border-[#b8892a]/40">
               <p className="font-['Cormorant_Garamond'] text-xl italic font-light text-[#4a4038] leading-relaxed mb-3">
-                "The Guru does not give you something from outside. He reveals what is already present within you — the infinite light that has always been your true nature."
+                "The Guru does not give you something from outside. He reveals what is already present within you, the infinite light that has always been your true nature."
               </p>
               <p className="text-xs uppercase tracking-[0.2em] text-[#b8892a] font-medium">
                 — Jagadguru Mahayogi Siddhababa
