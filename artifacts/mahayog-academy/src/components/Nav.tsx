@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
 import { Link } from "wouter";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, UserCircle2 } from "lucide-react";
 
 const EXPLORE = [
   { label: "About the Academy",  href: "/about" },
@@ -121,9 +121,17 @@ export default function Nav() {
             </span>
           </Link>
 
+          {/* Login */}
+          <Link href="/login">
+            <span className="ml-2 flex items-center gap-1.5 px-4 py-2 text-sm text-[#5a5248] hover:text-[#b8892a] transition-colors tracking-wide rounded-lg hover:bg-[#fdf6ec] cursor-pointer">
+              <UserCircle2 className="w-4 h-4" strokeWidth={1.5} />
+              Log in
+            </span>
+          </Link>
+
           {/* Register CTA */}
           <Link href="/register">
-            <span className="ml-2 px-5 py-2 text-sm border border-[#b8892a] text-[#b8892a] rounded-full hover:bg-[#b8892a] hover:text-white transition-colors duration-200 tracking-wide font-medium cursor-pointer">
+            <span className="ml-1 px-5 py-2 text-sm border border-[#b8892a] text-[#b8892a] rounded-full hover:bg-[#b8892a] hover:text-white transition-colors duration-200 tracking-wide font-medium cursor-pointer">
               Register
             </span>
           </Link>
