@@ -193,13 +193,20 @@ export default function BhuSamadhiDetail() {
       </section>
 
       {/* ── CLOSING REFLECTION ── */}
-      <section className="bg-[#2e1f0e] py-16 px-6">
-        <div className="max-w-3xl mx-auto text-center">
-          <div className="w-12 h-px bg-[#b8892a]/60 mx-auto mb-8" />
+      <section className="relative py-24 px-6 overflow-hidden">
+        <img
+          src={`${b}images/bhu-samadhi-3.jpg`}
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 w-full h-full object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-black/72" />
+        <div className="relative z-10 max-w-3xl mx-auto text-center">
+          <div className="w-12 h-px bg-[#b8892a]/70 mx-auto mb-8" />
           <p className="font-['Cormorant_Garamond'] text-2xl md:text-3xl text-[#f0e8d8] font-light italic leading-relaxed mb-8">
             "What the Guru demonstrates in the pit of the earth, he demonstrates in every teaching — that you are not this body, not this breath, not this mind. You are That which remains when all these cease."
           </p>
-          <div className="w-12 h-px bg-[#b8892a]/60 mx-auto" />
+          <div className="w-12 h-px bg-[#b8892a]/70 mx-auto" />
         </div>
       </section>
 
