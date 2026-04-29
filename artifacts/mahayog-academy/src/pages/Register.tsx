@@ -65,11 +65,11 @@ export default function Register() {
             </svg>
             <div className="h-px w-12 bg-[#e8c56a]" />
           </div>
-          <span className="uppercase tracking-[0.25em] text-xs text-[#e8c56a]/80 font-medium">Programme Registration</span>
-          <h1 className="font-['Cormorant_Garamond'] text-5xl md:text-7xl font-light text-white leading-none mt-2 mb-4">
+          <span className="uppercase tracking-[0.25em] text-xs text-white font-medium [text-shadow:0_1px_6px_rgba(0,0,0,0.55)]">Programme Registration</span>
+          <h1 className="font-['Cormorant_Garamond'] text-5xl md:text-7xl font-light text-white leading-none mt-2 mb-4 [text-shadow:0_2px_12px_rgba(0,0,0,0.35)]">
             Begin Your Journey
           </h1>
-          <p className="text-base text-[#f0e4c8]/80 tracking-wide font-light">
+          <p className="text-base text-white/90 tracking-wide font-light [text-shadow:0_1px_6px_rgba(0,0,0,0.55)]">
             Choose the programme you wish to register for below.
           </p>
         </div>
