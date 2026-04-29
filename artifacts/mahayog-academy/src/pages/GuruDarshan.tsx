@@ -98,9 +98,9 @@ export default function GuruDarshan() {
       {/* ── HERO ── */}
       <section className="relative h-[65vh] min-h-[460px] flex items-center justify-center overflow-hidden">
         <img
-          src={`${b}images/guru-hero-new.jpg`}
-          alt="His Holiness Jagadguru Mahayogi Siddhababa"
-          className="absolute inset-0 w-full h-full object-cover object-top"
+          src={`${b}images/gurudev-darshan-hero.jpg`}
+          alt="His Holiness Jagadguru Mahayogi Siddhababa giving darshan in nature"
+          className="absolute inset-0 w-full h-full object-cover object-center"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#0a0500]/75 via-[#1a0c03]/50 to-[#faf9f6]" />
         <div className="relative z-10 text-center px-6 max-w-3xl mx-auto">
