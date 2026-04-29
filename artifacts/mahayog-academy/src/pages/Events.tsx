@@ -170,6 +170,7 @@ const MILESTONES = [
     desc: "Dedicated to Lord Hanuman, the remover of all obstacles, this Mahayagya was conducted to invoke protection, strength, and liberation for seekers and the wider world. It included Sundarkanda path, Hanuman Chalisa, and extended havan rituals led by His Holiness.",
     badge: "Mahayagya",
     img: "hanumad-mahayagya.jpg",
+    overlayImg: "hanuman-ghost-bg.png",
   },
 ];
 
@@ -586,6 +587,16 @@ export default function Events() {
                 />
                 {/* Gradient overlay, darker at bottom */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/20 group-hover:from-black/98 group-hover:via-black/80 group-hover:to-black/60 transition-all duration-300" />
+
+                {/* Optional overlay image (screen blend = black becomes invisible) */}
+                {m.overlayImg && (
+                  <img
+                    src={`${b}images/${m.overlayImg}`}
+                    aria-hidden="true"
+                    className="absolute inset-0 w-full h-full object-contain object-center pointer-events-none opacity-70"
+                    style={{ mixBlendMode: "screen" }}
+                  />
+                )}
 
                 {/* Year pill, top left */}
                 <div className="absolute top-4 left-4 transition-opacity duration-300 group-hover:opacity-0">
