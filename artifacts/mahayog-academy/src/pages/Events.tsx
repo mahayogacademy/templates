@@ -488,79 +488,124 @@ export default function Events() {
           const groups = monthOrder.map(mon => ({ month: mon, items: monthMap.get(mon)! }));
 
           return (
-            <div className="rounded-2xl border border-[#e8dece] bg-white overflow-hidden divide-y divide-[#f2ede6]">
+            <div className="space-y-10">
               {groups.map(({ month, items }) => (
                 <div key={month}>
-                  {/* Month header */}
-                  <div className="px-5 py-2 bg-[#fdf8f0] flex items-center gap-3">
-                    <span className="text-[10px] font-semibold uppercase tracking-[0.22em] text-[#b8892a]">{month}</span>
-                    <div className="flex-1 h-px bg-[#ece5d8]" />
+
+                  {/* ── Month heading ── */}
+                  <div className="flex items-center gap-5 mb-5">
+                    <div className="flex-1 h-px bg-gradient-to-r from-transparent to-[#d8cbb8]" />
+                    <div className="text-center">
+                      <p className="font-['Cormorant_Garamond'] text-xl font-light tracking-[0.12em] text-[#6a5a3a] uppercase">{month}</p>
+                    </div>
+                    <div className="flex-1 h-px bg-gradient-to-l from-transparent to-[#d8cbb8]" />
                   </div>
 
-                  {/* Event rows */}
-                  {items.map((ev, i) => {
-                    const Icon = ev.locationIcon;
-                    const dateNum = ev.dateObj ? ev.dateObj.getDate().toString() : (ev.date || "").split(" ")[0];
-                    const dateMon = ev.dateObj
-                      ? ev.dateObj.toLocaleString("en-US", { month: "short" }).toUpperCase()
-                      : (ev.date || "").split(" ").slice(-2, -1)[0]?.slice(0, 3).toUpperCase() ?? "";
-                    const accent = KIND_ACCENT[ev.kind];
-                    const isRich = !ev.compact;
+                  {/* ── Cards ── */}
+                  <div className="space-y-3">
+                    {items.map(ev => {
+                      const Icon = ev.locationIcon;
+                      const dateNum = ev.dateObj ? ev.dateObj.getDate().toString() : (ev.date || "").split(" ")[0];
+                      const dateMon = ev.dateObj
+                        ? ev.dateObj.toLocaleString("en-US", { month: "short" }).toUpperCase()
+                        : (ev.date || "").split(" ").slice(-2, -1)[0]?.slice(0, 3).toUpperCase() ?? "";
+                      const isRich = !ev.compact;
 
-                    return (
-                      <div key={ev.id}
-                        className={`flex items-stretch gap-0 ${i < items.length - 1 ? "border-b border-[#f5f0e8]" : ""} ${isRich ? "bg-[#fdfaf5]" : "bg-white"} hover:bg-[#fdf5e8] transition-colors duration-150 group`}>
-
-                        {/* Coloured accent strip */}
-                        <div className={`w-1 shrink-0 ${accent}`} />
-
-                        {/* Date column */}
-                        <div className="shrink-0 w-14 flex flex-col items-center justify-center py-3 pl-3 pr-2 border-r border-[#f0ebe3]">
-                          <span className="font-['Cormorant_Garamond'] text-lg font-semibold text-[#2c1a08] leading-none">{dateNum}</span>
-                          <span className="text-[9px] uppercase tracking-[0.14em] text-[#b8892a] font-medium leading-none mt-0.5">{dateMon}</span>
-                        </div>
-
-                        {/* Main content */}
-                        <div className="flex-1 min-w-0 px-4 py-3 flex flex-col justify-center">
-                          <div className="flex items-center gap-2 mb-0.5">
-                            <span className={`text-[9px] uppercase tracking-[0.2em] font-semibold px-2 py-0.5 rounded-full ${
-                              isRich ? "bg-[#b8892a]/15 text-[#7a5818]" : "bg-[#f0e8d8] text-[#9a8060]"
-                            }`}>{ev.kindLabel}</span>
-                            {ev.recurring && <span className="text-[9px] uppercase tracking-[0.14em] text-[#4a7a5a] font-medium">Annual</span>}
-                          </div>
-                          <p className={`font-['Cormorant_Garamond'] leading-snug text-[#2c1a08] ${isRich ? "text-lg font-medium" : "text-base font-light"}`}>
-                            {ev.title}
-                          </p>
-                          <div className="flex flex-wrap items-center gap-x-3 gap-y-0.5 mt-0.5">
-                            {ev.time && (
-                              <span className="flex items-center gap-1 text-[11px] text-[#7a6e5a]">
-                                <Clock size={10} className="text-[#b8892a]" />{ev.time}
-                              </span>
-                            )}
-                            {Icon && ev.location && (
-                              <span className="flex items-center gap-1 text-[11px] text-[#7a6e5a]">
-                                <Icon size={10} className="text-[#b8892a]" />{ev.location}
-                              </span>
-                            )}
-                          </div>
-                          {ev.subtitle && (
-                            <p className="text-[11px] text-[#7a6e5a] italic mt-0.5 leading-snug">{ev.subtitle}</p>
+                      /* ── Featured card (rich Academy events) ── */
+                      if (isRich) return (
+                        <div key={ev.id}
+                          className="rounded-2xl overflow-hidden border border-[#ddd0b8] shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col sm:flex-row bg-white group">
+                          {/* Image */}
+                          {ev.img && (
+                            <div className="relative sm:w-52 md:w-64 shrink-0 h-44 sm:h-auto overflow-hidden">
+                              <img src={`${b}images/${ev.img}`} alt={ev.title}
+                                className={`w-full h-full object-cover ${ev.imgPos ?? "object-center"} transition-transform duration-500 group-hover:scale-105`} />
+                              <div className="absolute inset-0 bg-gradient-to-r from-transparent to-black/10" />
+                            </div>
                           )}
-                        </div>
-
-                        {/* CTA (rich events only) */}
-                        {ev.cta && (
-                          <div className="shrink-0 flex items-center pr-4 pl-2">
-                            <Link href={ev.cta.href}>
-                              <span className="flex items-center gap-1 text-[11px] font-medium text-[#b8892a] group-hover:text-[#7a5818] transition-colors cursor-pointer whitespace-nowrap">
-                                {ev.cta.label} <ArrowRight size={11} />
-                              </span>
-                            </Link>
+                          {/* Content */}
+                          <div className="flex-1 px-7 py-6 flex flex-col justify-between">
+                            <div>
+                              <div className="flex items-center gap-2 mb-3">
+                                <span className="text-[10px] uppercase tracking-[0.25em] font-semibold px-3 py-1 rounded-full bg-[#b8892a]/15 text-[#7a5818]">
+                                  {ev.kindLabel}
+                                </span>
+                                {ev.recurring && (
+                                  <span className="text-[10px] uppercase tracking-[0.18em] text-[#4a7a5a] font-semibold">Annual</span>
+                                )}
+                              </div>
+                              <h3 className="font-['Cormorant_Garamond'] text-2xl md:text-3xl font-light text-[#2c1a08] leading-snug mb-1">
+                                {ev.title}
+                              </h3>
+                              {ev.subtitle && (
+                                <p className="text-sm text-[#7a6e5a] italic mb-4">{ev.subtitle}</p>
+                              )}
+                              <div className="flex flex-wrap gap-x-5 gap-y-1.5">
+                                <span className="flex items-center gap-1.5 text-xs text-[#7a6e5a]">
+                                  <CalendarDays size={12} className="text-[#b8892a]" />{ev.date}
+                                </span>
+                                {ev.time && (
+                                  <span className="flex items-center gap-1.5 text-xs text-[#7a6e5a]">
+                                    <Clock size={12} className="text-[#b8892a]" />{ev.time}
+                                  </span>
+                                )}
+                                {Icon && ev.location && (
+                                  <span className="flex items-center gap-1.5 text-xs text-[#7a6e5a]">
+                                    <Icon size={12} className="text-[#b8892a]" />{ev.location}
+                                  </span>
+                                )}
+                              </div>
+                            </div>
+                            {ev.cta && (
+                              <div className="mt-5 pt-4 border-t border-[#f0ebe3]">
+                                <Link href={ev.cta.href}>
+                                  <span className="inline-flex items-center gap-2 bg-[#b8892a] hover:bg-[#c9981f] text-white text-[11px] px-6 py-2.5 rounded-full tracking-widest uppercase transition-all duration-200 cursor-pointer shadow-sm">
+                                    {ev.cta.label} <ArrowRight size={12} />
+                                  </span>
+                                </Link>
+                              </div>
+                            )}
                           </div>
-                        )}
-                      </div>
-                    );
-                  })}
+                        </div>
+                      );
+
+                      /* ── Calendar tile (compact ekadashi / festival) ── */
+                      const isFestival = ev.kind === "festival";
+                      return (
+                        <div key={ev.id}
+                          className={`rounded-xl border flex items-start gap-0 overflow-hidden transition-all duration-200 hover:shadow-sm ${
+                            isFestival
+                              ? "border-[#ddd0b0] bg-[#fdf8ee] hover:border-[#c8a840]"
+                              : "border-[#e4ddd2] bg-[#faf9f6] hover:border-[#c8b890]"
+                          }`}>
+
+                          {/* Accent bar */}
+                          <div className={`w-1 self-stretch shrink-0 ${KIND_ACCENT[ev.kind]}`} />
+
+                          {/* Date box */}
+                          <div className={`shrink-0 w-16 flex flex-col items-center justify-center py-5 px-2 border-r ${
+                            isFestival ? "border-[#e8d8a8]" : "border-[#e0d8cc]"
+                          }`}>
+                            <span className="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#2c1a08] leading-none">{dateNum}</span>
+                            <span className="text-[10px] uppercase tracking-[0.15em] text-[#b8892a] font-semibold leading-none mt-1">{dateMon}</span>
+                          </div>
+
+                          {/* Text */}
+                          <div className="flex-1 px-5 py-4">
+                            <span className={`text-[9px] uppercase tracking-[0.22em] font-bold px-2 py-0.5 rounded-full inline-block mb-1.5 ${
+                              isFestival ? "bg-[#b8892a]/20 text-[#7a5810]" : "bg-[#d8c8a0]/50 text-[#8a7840]"
+                            }`}>{ev.kindLabel}</span>
+                            <p className="font-['Cormorant_Garamond'] text-lg font-normal text-[#2c1a08] leading-tight">
+                              {ev.title}
+                            </p>
+                            {ev.subtitle && (
+                              <p className="text-xs text-[#7a6e5a] mt-1 leading-relaxed">{ev.subtitle}</p>
+                            )}
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
                 </div>
               ))}
             </div>
