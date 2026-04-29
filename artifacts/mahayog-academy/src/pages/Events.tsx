@@ -129,21 +129,22 @@ const UPCOMING: AnyEvent[] = [
 
 const MILESTONES = [
   {
-    year: "2016",
-    title: "\u201cBhu-Samadhi\u201d of Jagadguru Mahayogi Siddhababa",
+    year: "2008",
+    title: "Bhu-Samadhi of Jagadguru Mahayogi Siddhababa",
+    titleHtml: "<em>Bhu-Samadhi</em> of Jagadguru Mahayogi Siddhababa",
     desc: "The sacred passing (Bhu-Samadhi) of Jagadguru Mahayogi Siddhababa's own revered Guru, a pivotal moment in the lineage, observed with deep ceremony, Vedic rites, and collective grief and gratitude by thousands of disciples. His Holiness continues to carry forward this sacred mission.",
     badge: "Lineage",
     img: "bhu-samadhi-1.jpg",
   },
   {
-    year: "2019",
+    year: "2015",
     title: "Shree Tarak Brahma Mahayagya",
     desc: "A grand Mahayagya, one of the largest fire ceremonies conducted by the Academy, invoking the liberating grace of Tarak Brahma. Thousands of seekers participated across multiple days of continuous havan, kirtan, and satsang.",
     badge: "Mahayagya",
     img: "gurudev-darshan-congregation.jpg",
   },
   {
-    year: "2021",
+    year: "2017",
     title: "Himalayan Siddha Mahayog Anuṣṭhān (COVID-19)",
     desc: "In response to the global COVID-19 pandemic, Jagadguru Mahayogi Siddhababa led an extended collective anuṣṭhān, a sustained spiritual observance of prayer, mantra, havan, and meditation, invoking healing and protection for the world. Seekers across continents joined online.",
     badge: "Special Anuṣṭhān",
@@ -595,9 +596,8 @@ export default function Events() {
 
                 {/* Content, bottom */}
                 <div className="absolute bottom-0 left-0 right-0 p-5">
-                  <h3 className="font-['Cormorant_Garamond'] text-xl md:text-2xl font-light text-white leading-snug mb-2">
-                    {m.title}
-                  </h3>
+                  <h3 className="font-['Cormorant_Garamond'] text-xl md:text-2xl font-light text-white leading-snug mb-2"
+                    dangerouslySetInnerHTML={{ __html: m.titleHtml ?? m.title }} />
                   {/* Description slides up on hover */}
                   <p className="text-[#c8b8a0] text-xs leading-relaxed max-h-0 overflow-hidden group-hover:max-h-32 transition-all duration-500 ease-in-out">
                     {m.desc}
