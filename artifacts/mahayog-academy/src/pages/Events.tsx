@@ -1,37 +1,41 @@
-import { useState } from "react";
+import { useState, type ComponentType } from "react";
 import Nav from "@/components/Nav";
 import { Link } from "wouter";
 import { MapPin, Monitor, CalendarDays, Clock, ChevronRight, ArrowRight, Globe, List, LayoutGrid, ChevronLeft } from "lucide-react";
 
 const b = import.meta.env.BASE_URL;
 
-type EventKind = "all" | "festival" | "retreat" | "satsang" | "course";
+type EventKind = "all" | "festival" | "retreat" | "ekadashi" | "course";
 type ViewMode = "list" | "calendar";
 
 // ── DATA ──────────────────────────────────────────────────────────────────────
 
-const UPCOMING = [
-  {
-    id: 1,
-    kind: "satsang" as EventKind,
-    kindLabel: "Weekly Satsang",
-    recurring: true,
-    title: "Sunday Online Satsang",
-    subtitle: "Live Discourse & Meditation with His Holiness",
-    date: "Every Sunday",
-    dateObj: null as Date | null,
-    time: "7:00 AM Nepal Time · 1:15 AM UTC",
-    location: "Live via Zoom",
-    locationIcon: Monitor,
-    img: "ashram-life-satsang.png",
-    imgPos: "object-center",
-    desc: "Each week, His Holiness Jagadguru Mahayogi Siddhababa leads a live online satsang: guided meditation, Vedic discourse, and direct transmission of grace — accessible to seekers across the globe.",
-    note: "Open to registered programme participants.",
-    cta: { label: "Register to Attend", href: "/register" },
-  },
+// Rich Academy events have full card details; compact calendar entries have compact:true.
+type AnyEvent = {
+  id: number;
+  kind: EventKind;
+  kindLabel: string;
+  title: string;
+  date: string;
+  dateObj: Date | null;
+  compact?: true;
+  // Rich-only (absent on compact entries)
+  subtitle?: string;
+  recurring?: boolean;
+  time?: string;
+  location?: string;
+  locationIcon?: ComponentType<{ size?: number; className?: string }>;
+  img?: string;
+  imgPos?: string;
+  desc?: string;
+  note?: string;
+  cta?: { label: string; href: string };
+};
+
+const UPCOMING: AnyEvent[] = [
   {
     id: 2,
-    kind: "retreat" as EventKind,
+    kind: "retreat",
     kindLabel: "Retreat",
     recurring: false,
     title: "Himalayan Siddha Mahayog Retreat",
@@ -83,24 +87,46 @@ const UPCOMING = [
     note: "Open to all backgrounds. No prior experience required.",
     cta: { label: "Enrol Now", href: "/vedanta" },
   },
-  {
-    id: 5,
-    kind: "festival" as EventKind,
-    kindLabel: "Annual Festival",
-    recurring: true,
-    title: "Navaratri Mahayagya & Havan",
-    subtitle: "Nine Nights of Sacred Fire Ceremonies",
-    date: "22 – 30 Sep 2026",
-    dateObj: new Date(2026, 8, 22),
-    time: "Morning & evening sessions",
-    location: "Guru Ashram, Barahachetra, Nepal",
-    locationIcon: MapPin,
-    img: "ashram-extra-river-diyas.jpg",
-    imgPos: "object-center",
-    desc: "Nine sacred nights marked at the ashram by continuous havan, Devi puja, kirtan, and discourse. The Mahayagya — a grand fire ceremony — is conducted by Jagadguru Mahayogi Siddhababa on the final night.",
-    note: "Residential accommodation available at the ashram.",
-    cta: { label: "Contact the Ashram", href: "/contact" },
-  },
+  // ── Vedic Calendar 2026 ── compact entries (source: drikpanchang.com, NPT)
+  // May
+  { id: 100, compact: true, kind: "ekadashi", kindLabel: "Ekadashi",  title: "Apara Ekadashi",                    date: "13 May 2026",  dateObj: new Date(2026, 4, 13) },
+  { id: 101, compact: true, kind: "ekadashi", kindLabel: "Ekadashi",  title: "Padmini Ekadashi (Adhika)",          date: "27 May 2026",  dateObj: new Date(2026, 4, 27) },
+  // June
+  { id: 102, compact: true, kind: "ekadashi", kindLabel: "Ekadashi",  title: "Paramā Ekadashi (Adhika)",           date: "11 Jun 2026",  dateObj: new Date(2026, 5, 11) },
+  { id: 103, compact: true, kind: "ekadashi", kindLabel: "Ekadashi",  title: "Nirjala Ekadashi",                   date: "25 Jun 2026",  dateObj: new Date(2026, 5, 25) },
+  // July
+  { id: 104, compact: true, kind: "ekadashi", kindLabel: "Ekadashi",  title: "Yogini Ekadashi",                    date: "11 Jul 2026",  dateObj: new Date(2026, 6, 11) },
+  { id: 105, compact: true, kind: "ekadashi", kindLabel: "Ekadashi",  title: "Devshayani Ekadashi",                date: "25 Jul 2026",  dateObj: new Date(2026, 6, 25) },
+  // August
+  { id: 106, compact: true, kind: "festival", kindLabel: "Festival",  title: "Hariyali Teej",                      date: "1 Aug 2026",   dateObj: new Date(2026, 7, 1)  },
+  { id: 107, compact: true, kind: "ekadashi", kindLabel: "Ekadashi",  title: "Kamika Ekadashi",                    date: "9 Aug 2026",   dateObj: new Date(2026, 7, 9)  },
+  { id: 108, compact: true, kind: "festival", kindLabel: "Festival",  title: "Nag Panchami",                       date: "17 Aug 2026",  dateObj: new Date(2026, 7, 17) },
+  { id: 109, compact: true, kind: "ekadashi", kindLabel: "Ekadashi",  title: "Shravana Putrada Ekadashi",          date: "23 Aug 2026",  dateObj: new Date(2026, 7, 23) },
+  { id: 110, compact: true, kind: "festival", kindLabel: "Festival",  title: "Raksha Bandhan",                     date: "28 Aug 2026",  dateObj: new Date(2026, 7, 28) },
+  // September
+  { id: 111, compact: true, kind: "festival", kindLabel: "Festival",  title: "Krishna Janmashtami",                date: "5 Sep 2026",   dateObj: new Date(2026, 8, 5)  },
+  { id: 112, compact: true, kind: "ekadashi", kindLabel: "Ekadashi",  title: "Aja Ekadashi",                       date: "7 Sep 2026",   dateObj: new Date(2026, 8, 7)  },
+  { id: 113, compact: true, kind: "festival", kindLabel: "Festival",  title: "Hartalika Teej",                     date: "13 Sep 2026",  dateObj: new Date(2026, 8, 13) },
+  { id: 114, compact: true, kind: "festival", kindLabel: "Festival",  title: "Ganesh Chaturthi",                   date: "14 Sep 2026",  dateObj: new Date(2026, 8, 14) },
+  { id: 115, compact: true, kind: "ekadashi", kindLabel: "Ekadashi",  title: "Parsva Ekadashi",                    date: "22 Sep 2026",  dateObj: new Date(2026, 8, 22) },
+  // October
+  { id: 116, compact: true, kind: "ekadashi", kindLabel: "Ekadashi",  title: "Indira Ekadashi",                    date: "6 Oct 2026",   dateObj: new Date(2026, 9, 6)  },
+  { id: 117, compact: true, kind: "festival", kindLabel: "Festival",  title: "Navaratri Begins",                   date: "12 Oct 2026",  dateObj: new Date(2026, 9, 12) },
+  { id: 118, compact: true, kind: "festival", kindLabel: "Festival",  title: "Saraswati Puja · Maha Navami",       date: "20 Oct 2026",  dateObj: new Date(2026, 9, 20) },
+  { id: 119, compact: true, kind: "festival", kindLabel: "Festival",  title: "Vijayadashami",                      date: "21 Oct 2026",  dateObj: new Date(2026, 9, 21) },
+  { id: 120, compact: true, kind: "ekadashi", kindLabel: "Ekadashi",  title: "Papankusha Ekadashi",                date: "22 Oct 2026",  dateObj: new Date(2026, 9, 22) },
+  { id: 121, compact: true, kind: "festival", kindLabel: "Festival",  title: "Sharad Purnima",                     date: "25 Oct 2026",  dateObj: new Date(2026, 9, 25) },
+  // November
+  { id: 122, compact: true, kind: "ekadashi", kindLabel: "Ekadashi",  title: "Rama Ekadashi",                      date: "5 Nov 2026",   dateObj: new Date(2026, 10, 5) },
+  { id: 123, compact: true, kind: "festival", kindLabel: "Festival",  title: "Dhanteras",                          date: "7 Nov 2026",   dateObj: new Date(2026, 10, 7) },
+  { id: 124, compact: true, kind: "festival", kindLabel: "Festival",  title: "Lakshmi Puja · Diwali",              date: "9 Nov 2026",   dateObj: new Date(2026, 10, 9) },
+  { id: 125, compact: true, kind: "festival", kindLabel: "Festival",  title: "Govardhan Puja",                     date: "10 Nov 2026",  dateObj: new Date(2026, 10, 10)},
+  { id: 126, compact: true, kind: "festival", kindLabel: "Festival",  title: "Kansa Vadh",                         date: "19 Nov 2026",  dateObj: new Date(2026, 10, 19)},
+  { id: 127, compact: true, kind: "ekadashi", kindLabel: "Ekadashi",  title: "Devutthana Ekadashi · Tulasi Vivah", date: "21 Nov 2026",  dateObj: new Date(2026, 10, 21)},
+  // December
+  { id: 128, compact: true, kind: "ekadashi", kindLabel: "Ekadashi",  title: "Utpanna Ekadashi",                   date: "4 Dec 2026",   dateObj: new Date(2026, 11, 4) },
+  { id: 129, compact: true, kind: "festival", kindLabel: "Festival",  title: "Vivah Panchami",                     date: "14 Dec 2026",  dateObj: new Date(2026, 11, 14)},
+  { id: 130, compact: true, kind: "ekadashi", kindLabel: "Ekadashi",  title: "Mokshada Ekadashi · Gita Jayanti",   date: "20 Dec 2026",  dateObj: new Date(2026, 11, 20)},
 ];
 
 const PAST = [
@@ -187,119 +213,11 @@ const MILESTONES = [
   },
 ];
 
-// ── 2026 SACRED CALENDAR ─────────────────────────────────────────────────────
-// Dates verified against drikpanchang.com for Kathmandu, Nepal (NPT UTC+5:45)
-
-type CalEntry = { date: string; name: string; kind: "ekadashi" | "festival" };
-
-const CALENDAR_2026: { month: string; short: string; past?: boolean; entries: CalEntry[] }[] = [
-  {
-    month: "January", short: "Jan", past: true,
-    entries: [
-      { date: "Jan 14", name: "Shattila Ekadashi", kind: "ekadashi" },
-      { date: "Jan 29", name: "Jaya Ekadashi", kind: "ekadashi" },
-    ],
-  },
-  {
-    month: "February", short: "Feb", past: true,
-    entries: [
-      { date: "Feb 13", name: "Vijaya Ekadashi", kind: "ekadashi" },
-      { date: "Feb 27", name: "Amalaki Ekadashi", kind: "ekadashi" },
-    ],
-  },
-  {
-    month: "March", short: "Mar", past: true,
-    entries: [
-      { date: "Mar 15", name: "Papmochani Ekadashi", kind: "ekadashi" },
-      { date: "Mar 29", name: "Kamada Ekadashi", kind: "ekadashi" },
-    ],
-  },
-  {
-    month: "April", short: "Apr", past: true,
-    entries: [
-      { date: "Apr 13", name: "Varuthini Ekadashi", kind: "ekadashi" },
-      { date: "Apr 27", name: "Mohini Ekadashi", kind: "ekadashi" },
-    ],
-  },
-  {
-    month: "May", short: "May",
-    entries: [
-      { date: "May 13", name: "Apara Ekadashi", kind: "ekadashi" },
-      { date: "May 27", name: "Padmini Ekadashi (Adhika)", kind: "ekadashi" },
-    ],
-  },
-  {
-    month: "June", short: "Jun",
-    entries: [
-      { date: "Jun 11", name: "Paramā Ekadashi (Adhika)", kind: "ekadashi" },
-      { date: "Jun 25", name: "Nirjala Ekadashi", kind: "ekadashi" },
-    ],
-  },
-  {
-    month: "July", short: "Jul",
-    entries: [
-      { date: "Jul 11", name: "Yogini Ekadashi", kind: "ekadashi" },
-      { date: "Jul 25", name: "Devshayani Ekadashi", kind: "ekadashi" },
-      { date: "Jul 29", name: "Guru Purnima", kind: "festival" },
-    ],
-  },
-  {
-    month: "August", short: "Aug",
-    entries: [
-      { date: "Aug 1",  name: "Hariyali Teej", kind: "festival" },
-      { date: "Aug 9",  name: "Kamika Ekadashi", kind: "ekadashi" },
-      { date: "Aug 17", name: "Nag Panchami", kind: "festival" },
-      { date: "Aug 23", name: "Shravana Putrada Ekadashi", kind: "ekadashi" },
-      { date: "Aug 28", name: "Raksha Bandhan", kind: "festival" },
-    ],
-  },
-  {
-    month: "September", short: "Sep",
-    entries: [
-      { date: "Sep 5",  name: "Krishna Janmashtami", kind: "festival" },
-      { date: "Sep 7",  name: "Aja Ekadashi", kind: "ekadashi" },
-      { date: "Sep 13", name: "Hartalika Teej", kind: "festival" },
-      { date: "Sep 14", name: "Ganesh Chaturthi", kind: "festival" },
-      { date: "Sep 22", name: "Parsva Ekadashi", kind: "ekadashi" },
-    ],
-  },
-  {
-    month: "October", short: "Oct",
-    entries: [
-      { date: "Oct 6",  name: "Indira Ekadashi", kind: "ekadashi" },
-      { date: "Oct 12", name: "Navaratri Begins", kind: "festival" },
-      { date: "Oct 20", name: "Saraswati Puja (Maha Navami)", kind: "festival" },
-      { date: "Oct 21", name: "Vijayadashami", kind: "festival" },
-      { date: "Oct 22", name: "Papankusha Ekadashi", kind: "ekadashi" },
-      { date: "Oct 25", name: "Sharad Purnima", kind: "festival" },
-    ],
-  },
-  {
-    month: "November", short: "Nov",
-    entries: [
-      { date: "Nov 5",  name: "Rama Ekadashi", kind: "ekadashi" },
-      { date: "Nov 7",  name: "Dhanteras", kind: "festival" },
-      { date: "Nov 9",  name: "Lakshmi Puja / Diwali", kind: "festival" },
-      { date: "Nov 10", name: "Govardhan Puja", kind: "festival" },
-      { date: "Nov 19", name: "Kansa Vadh", kind: "festival" },
-      { date: "Nov 21", name: "Devutthana Ekadashi · Tulasi Vivah", kind: "ekadashi" },
-    ],
-  },
-  {
-    month: "December", short: "Dec",
-    entries: [
-      { date: "Dec 4",  name: "Utpanna Ekadashi", kind: "ekadashi" },
-      { date: "Dec 14", name: "Vivah Panchami", kind: "festival" },
-      { date: "Dec 20", name: "Mokshada Ekadashi · Gita Jayanti", kind: "ekadashi" },
-    ],
-  },
-];
-
 const KIND_LABELS: { value: EventKind; label: string }[] = [
-  { value: "all",      label: "All Events" },
-  { value: "satsang",  label: "Satsang" },
+  { value: "all",      label: "All" },
   { value: "retreat",  label: "Retreats" },
   { value: "festival", label: "Festivals" },
+  { value: "ekadashi", label: "Ekadashi" },
   { value: "course",   label: "Courses" },
 ];
 
@@ -317,7 +235,7 @@ function getFirstDayOfMonth(year: number, month: number) {
 
 // ── SUB-COMPONENTS ────────────────────────────────────────────────────────────
 
-function CalendarView({ events }: { events: typeof UPCOMING }) {
+function CalendarView({ events }: { events: AnyEvent[] }) {
   const today = new Date(2026, 3, 29); // April 29 2026
   const [viewMonth, setViewMonth] = useState(today.getMonth());
   const [viewYear, setViewYear] = useState(today.getFullYear());
@@ -408,25 +326,30 @@ function CalendarView({ events }: { events: typeof UPCOMING }) {
       {/* Event detail popout */}
       {selected && selectedEvents.length > 0 && (
         <div className="rounded-xl border border-[#e8d8b8] bg-[#fdf6ec] p-5 space-y-3">
-          {selectedEvents.map(ev => {
-            const Icon = ev.locationIcon;
-            return (
-              <div key={ev.id}>
-                <p className="text-[10px] uppercase tracking-[0.2em] text-[#b8892a] font-medium mb-1">{ev.kindLabel}</p>
-                <p className="font-['Cormorant_Garamond'] text-xl font-semibold text-[#2c1a08] mb-1">{ev.title}</p>
-                <div className="flex flex-wrap gap-3 mb-2">
-                  <span className="flex items-center gap-1 text-xs text-[#7a6e5a]"><Clock size={11} className="text-[#b8892a]" />{ev.time}</span>
-                  <span className="flex items-center gap-1 text-xs text-[#7a6e5a]"><Icon size={11} className="text-[#b8892a]" />{ev.location}</span>
-                </div>
-                <p className="text-sm text-[#5a5248] leading-relaxed mb-3">{ev.desc}</p>
-                <Link href={ev.cta.href}>
-                  <span className="inline-flex items-center gap-1.5 text-xs text-[#b8892a] hover:text-[#8a6420] font-medium cursor-pointer">
-                    {ev.cta.label} <ArrowRight size={12} />
-                  </span>
-                </Link>
-              </div>
-            );
-          })}
+          {selectedEvents.map(ev => (
+            <div key={ev.id}>
+              <p className="text-[10px] uppercase tracking-[0.2em] text-[#b8892a] font-medium mb-1">{ev.kindLabel}</p>
+              <p className="font-['Cormorant_Garamond'] text-xl font-semibold text-[#2c1a08] mb-1">{ev.title}</p>
+              {ev.compact ? (
+                <p className="text-xs text-[#7a6e5a]">{ev.date} · Nepal Standard Time</p>
+              ) : (
+                <>
+                  <div className="flex flex-wrap gap-3 mb-2">
+                    {ev.time && <span className="flex items-center gap-1 text-xs text-[#7a6e5a]"><Clock size={11} className="text-[#b8892a]" />{ev.time}</span>}
+                    {ev.locationIcon && ev.location && (() => { const Icon = ev.locationIcon!; return <span className="flex items-center gap-1 text-xs text-[#7a6e5a]"><Icon size={11} className="text-[#b8892a]" />{ev.location}</span>; })()}
+                  </div>
+                  {ev.desc && <p className="text-sm text-[#5a5248] leading-relaxed mb-3">{ev.desc}</p>}
+                  {ev.cta && (
+                    <Link href={ev.cta.href}>
+                      <span className="inline-flex items-center gap-1.5 text-xs text-[#b8892a] hover:text-[#8a6420] font-medium cursor-pointer">
+                        {ev.cta.label} <ArrowRight size={12} />
+                      </span>
+                    </Link>
+                  )}
+                </>
+              )}
+            </div>
+          ))}
         </div>
       )}
 
@@ -445,6 +368,18 @@ export default function Events() {
   const [view, setView] = useState<ViewMode>("list");
 
   const visible = filter === "all" ? UPCOMING : UPCOMING.filter(e => e.kind === filter);
+  const richVisible   = visible.filter(e => !e.compact);
+  const compactVisible = visible.filter(e => e.compact);
+
+  // Group compact entries by month index for rendering
+  const compactByMonth = MONTH_NAMES.reduce<{ month: string; idx: number; entries: AnyEvent[] }[]>(
+    (acc, month, idx) => {
+      const entries = compactVisible.filter(e => e.dateObj && e.dateObj.getMonth() === idx);
+      if (entries.length) acc.push({ month, idx, entries });
+      return acc;
+    },
+    []
+  );
 
   return (
     <div className="min-h-screen bg-[#faf9f6] font-['Inter']">
@@ -532,7 +467,8 @@ export default function Events() {
         {/* List view */}
         {view === "list" && (
           <div className="space-y-6">
-            {visible.map(ev => {
+            {/* Rich event cards */}
+            {richVisible.map(ev => {
               const Icon = ev.locationIcon;
               return (
                 <div key={ev.id}
@@ -545,23 +481,20 @@ export default function Events() {
                       className={`w-full h-full object-cover ${ev.imgPos} transition-transform duration-500 hover:scale-105`}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent md:bg-gradient-to-r md:from-transparent md:to-black/10" />
-                    {/* Date badge overlaid on image */}
                     <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm rounded-xl px-3 py-2 text-center shadow-md">
                       <p className="font-['Cormorant_Garamond'] text-[10px] uppercase tracking-[0.15em] text-[#9a8f84] leading-none mb-0.5">
-                        {ev.recurring ? "Every" : ev.date.split(" ").slice(-2).join(" ")}
+                        {ev.date!.split(" ").slice(-2).join(" ")}
                       </p>
                       <p className="font-['Cormorant_Garamond'] text-lg font-semibold text-[#2c1a08] leading-none">
-                        {ev.recurring ? "Sunday" : ev.date.split(" ")[0]}
+                        {ev.date!.split(" ")[0]}
                       </p>
                     </div>
-                    {/* Recurring badge */}
                     {ev.recurring && (
                       <div className="absolute bottom-4 left-4 bg-[#4a6a3a]/80 text-white text-[9px] uppercase tracking-[0.15em] px-2.5 py-1 rounded-full font-medium">
                         Annual
                       </div>
                     )}
                   </div>
-
                   {/* Content */}
                   <div className="flex-1 p-6 md:p-8 flex flex-col justify-between">
                     <div>
@@ -576,28 +509,64 @@ export default function Events() {
                         <span className="flex items-center gap-1.5 text-xs text-[#7a6e5a]">
                           <CalendarDays size={12} className="text-[#b8892a]" />{ev.date}
                         </span>
-                        <span className="flex items-center gap-1.5 text-xs text-[#7a6e5a]">
+                        {ev.time && <span className="flex items-center gap-1.5 text-xs text-[#7a6e5a]">
                           <Clock size={12} className="text-[#b8892a]" />{ev.time}
-                        </span>
-                        <span className="flex items-center gap-1.5 text-xs text-[#7a6e5a]">
+                        </span>}
+                        {Icon && ev.location && <span className="flex items-center gap-1.5 text-xs text-[#7a6e5a]">
                           <Icon size={12} className="text-[#b8892a]" />{ev.location}
-                        </span>
+                        </span>}
                       </div>
                       <p className="text-[#5a5248] text-sm leading-relaxed mb-2">{ev.desc}</p>
                       <p className="text-xs text-[#9a8f84] italic">{ev.note}</p>
                     </div>
-                    <div className="mt-5 pt-5 border-t border-[#f0ebe3] flex items-center justify-between">
-                      <Link href={ev.cta.href}>
-                        <span className="inline-flex items-center gap-2 bg-[#b8892a] hover:bg-[#c9981f] text-white text-xs px-6 py-3 rounded-full tracking-widest uppercase transition-all duration-200 cursor-pointer shadow-sm">
-                          {ev.cta.label} <ArrowRight size={13} />
-                        </span>
-                      </Link>
-                    </div>
+                    {ev.cta && (
+                      <div className="mt-5 pt-5 border-t border-[#f0ebe3]">
+                        <Link href={ev.cta.href}>
+                          <span className="inline-flex items-center gap-2 bg-[#b8892a] hover:bg-[#c9981f] text-white text-xs px-6 py-3 rounded-full tracking-widest uppercase transition-all duration-200 cursor-pointer shadow-sm">
+                            {ev.cta.label} <ArrowRight size={13} />
+                          </span>
+                        </Link>
+                      </div>
+                    )}
                   </div>
                 </div>
               );
             })}
-            {visible.length === 0 && (
+
+            {/* Compact Vedic calendar entries — grouped by month */}
+            {compactByMonth.length > 0 && (
+              <div className="rounded-2xl overflow-hidden border border-[#e8dece] bg-white shadow-sm">
+                <div className="px-6 py-4 border-b border-[#f0ebe3] flex items-center justify-between">
+                  <div>
+                    <p className="text-xs uppercase tracking-[0.22em] text-[#b8892a] font-medium">2026 Vedic Calendar</p>
+                    <p className="text-[#b8a898] text-[10px] mt-0.5">Dates per Nepal Standard Time · drikpanchang.com</p>
+                  </div>
+                  <div className="flex items-center gap-4 text-[10px] text-[#9a8f84]">
+                    <span className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-full bg-[#b8892a] inline-block" /> Ekadashi</span>
+                    <span className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-full bg-[#7a5a2a] inline-block" /> Festival</span>
+                  </div>
+                </div>
+                {compactByMonth.map(({ month, entries }) => (
+                  <div key={month}>
+                    <div className="px-6 py-2.5 bg-[#fdf8f0] border-b border-[#f0ebe3]">
+                      <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#7a6e5a]">{month}</span>
+                    </div>
+                    {entries.map((e, i) => (
+                      <div key={e.id}
+                        className={`px-6 py-3 flex items-center gap-3 ${i < entries.length - 1 ? "border-b border-[#f9f5f0]" : ""}`}>
+                        <div className={`shrink-0 w-2 h-2 rounded-full ${e.kind === "ekadashi" ? "bg-[#b8892a]" : "bg-[#7a5a2a]"}`} />
+                        <span className="w-20 shrink-0 text-[11px] font-mono font-medium text-[#b8892a]">{e.date.split(" ").slice(0, 2).join(" ")}</span>
+                        <span className={`flex-1 text-sm ${e.kind === "festival" ? "text-[#3d3830] font-medium" : "text-[#5a5248]"}`}>{e.title}</span>
+                        <span className="shrink-0 text-[9px] uppercase tracking-[0.15em] text-[#c8b898] hidden sm:block">{e.kindLabel}</span>
+                      </div>
+                    ))}
+                  </div>
+                ))}
+              </div>
+            )}
+
+            {/* Empty state */}
+            {richVisible.length === 0 && compactByMonth.length === 0 && (
               <div className="text-center py-16 text-[#9a8f84]">
                 <p className="font-['Cormorant_Garamond'] text-2xl font-light">No events in this category right now.</p>
                 <p className="text-sm mt-2">
@@ -619,9 +588,8 @@ export default function Events() {
             <p className="text-xs uppercase tracking-[0.25em] text-[#b8892a] font-medium mb-3">Throughout the Year</p>
             <h2 className="font-['Cormorant_Garamond'] text-4xl md:text-5xl font-light text-[#2c1a08]">What We Gather For</h2>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {[
-              { title: "Weekly Satsang",    icon: "🪔", desc: "Live teachings and meditation every Sunday with His Holiness — via Zoom, open to registered participants worldwide." },
               { title: "Sacred Festivals",  icon: "🌕", desc: "Guru Purnima, Navaratri, Mahashivaratri, Ram Navami, and other Vedic celebrations marked with ceremony, discourse, and darshan." },
               { title: "Retreats",          icon: "🏔", desc: "Multi-day immersive retreats at the Guru Ashram in the Himalayas — combining intensive meditation, Vedanta study, and ashram life." },
               { title: "Yagya & Havan",     icon: "🔥", desc: "Ancient Vedic fire ceremonies conducted by Jagadguru Mahayogi Siddhababa — powerful rites of purification and collective blessing." },
@@ -634,66 +602,6 @@ export default function Events() {
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* ── SACRED CALENDAR 2026 ── */}
-      <section className="max-w-6xl mx-auto px-6 py-20">
-        <div className="text-center mb-12">
-          <p className="text-xs uppercase tracking-[0.25em] text-[#b8892a] font-medium mb-3">Nepal Standard Time (NPT, UTC+5:45)</p>
-          <h2 className="font-['Cormorant_Garamond'] text-4xl md:text-5xl font-light text-[#2c1a08] mb-3">
-            2026 Sacred Calendar
-          </h2>
-          <p className="text-[#5a5248] text-sm max-w-lg mx-auto">
-            All Ekadashis and principal Vedic festivals for 2026, as observed at the Guru Ashram in Nepal. Consecutive Ekadashi dates resolved to the last day per tradition.
-          </p>
-          <div className="flex items-center justify-center gap-6 mt-5 text-xs text-[#7a6e5a]">
-            <span className="flex items-center gap-1.5">
-              <span className="w-2.5 h-2.5 rounded-full bg-[#b8892a] inline-block" /> Ekadashi
-            </span>
-            <span className="flex items-center gap-1.5">
-              <span className="w-2.5 h-2.5 rounded-full bg-[#7a5a2a] inline-block" /> Festival / Celebration
-            </span>
-          </div>
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-          {CALENDAR_2026.map(m => (
-            <div key={m.month}
-              className={`rounded-2xl border p-5 transition-opacity ${
-                m.past
-                  ? "border-[#e8dece] bg-[#faf9f6] opacity-50"
-                  : "border-[#e0d0b8] bg-[#fdf8f0] shadow-sm"
-              }`}>
-              <div className="flex items-center justify-between mb-4">
-                <h3 className={`font-['Cormorant_Garamond'] text-2xl font-semibold ${m.past ? "text-[#9a8f84]" : "text-[#2c1a08]"}`}>
-                  {m.month}
-                </h3>
-                {m.past && (
-                  <span className="text-[9px] uppercase tracking-[0.15em] text-[#b8a898] font-medium">Past</span>
-                )}
-              </div>
-              <ul className="space-y-2">
-                {m.entries.map((e, i) => (
-                  <li key={i} className="flex items-start gap-2.5">
-                    <div className={`mt-1 shrink-0 w-2 h-2 rounded-full ${
-                      e.kind === "ekadashi" ? "bg-[#b8892a]" : "bg-[#7a5a2a]"
-                    } ${m.past ? "opacity-60" : ""}`} />
-                    <div className="flex-1 min-w-0">
-                      <span className={`text-[10px] font-mono font-medium ${m.past ? "text-[#b8a898]" : "text-[#b8892a]"} mr-1.5`}>
-                        {e.date}
-                      </span>
-                      <span className={`text-xs leading-snug ${
-                        m.past ? "text-[#9a8f84]" : e.kind === "festival" ? "text-[#3d3830] font-medium" : "text-[#5a5248]"
-                      }`}>
-                        {e.name}
-                      </span>
-                    </div>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
         </div>
       </section>
 
