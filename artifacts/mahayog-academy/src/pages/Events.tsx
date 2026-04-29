@@ -368,18 +368,10 @@ export default function Events() {
   const [view, setView] = useState<ViewMode>("list");
 
   const visible = filter === "all" ? UPCOMING : UPCOMING.filter(e => e.kind === filter);
-  const richVisible   = visible.filter(e => !e.compact);
-  const compactVisible = visible.filter(e => e.compact);
 
-  // Group compact entries by month index for rendering
-  const compactByMonth = MONTH_NAMES.reduce<{ month: string; idx: number; entries: AnyEvent[] }[]>(
-    (acc, month, idx) => {
-      const entries = compactVisible.filter(e => e.dateObj && e.dateObj.getMonth() === idx);
-      if (entries.length) acc.push({ month, idx, entries });
-      return acc;
-    },
-    []
-  );
+  // Default background images for compact calendar entries, rotated by id
+  const EKADASHI_IMGS = ["ashram-koshi-river.jpg", "ashram-life-satsang.png", "ashram-extra-sanyasi-river.jpg"];
+  const FESTIVAL_IMGS  = ["ashram-extra-river-diyas.jpg", "congregation.jpg", "ram-mandir-1.jpg"];
 
   return (
     <div className="min-h-screen bg-[#faf9f6] font-['Inter']">
@@ -464,66 +456,78 @@ export default function Events() {
           </div>
         )}
 
-        {/* List view */}
+        {/* List view — unified card for every event */}
         {view === "list" && (
-          <div className="space-y-6">
-            {/* Rich event cards */}
-            {richVisible.map(ev => {
+          <div className="space-y-3">
+            {visible.map(ev => {
               const Icon = ev.locationIcon;
+              // Resolve image: rich events have their own; compact entries cycle through defaults
+              const imgSrc = ev.img
+                || (ev.kind === "ekadashi"
+                  ? EKADASHI_IMGS[(ev.id - 100) % EKADASHI_IMGS.length]
+                  : FESTIVAL_IMGS[(ev.id - 100) % FESTIVAL_IMGS.length]);
+              const imgPos = ev.imgPos || "object-center";
+              const dateParts = (ev.date || "").split(" ");
+              const dateDay    = dateParts[0] ?? "";
+              const dateMonYr  = dateParts.slice(-2).join(" ");
+
               return (
                 <div key={ev.id}
-                  className="rounded-2xl overflow-hidden border border-[#e8dece] bg-white shadow-sm hover:shadow-lg transition-shadow duration-300 flex flex-col md:flex-row">
-                  {/* Image panel */}
-                  <div className="relative md:w-64 lg:w-80 shrink-0 h-52 md:h-auto overflow-hidden">
-                    <img
-                      src={`${b}images/${ev.img}`}
-                      alt={ev.title}
-                      className={`w-full h-full object-cover ${ev.imgPos} transition-transform duration-500 hover:scale-105`}
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent md:bg-gradient-to-r md:from-transparent md:to-black/10" />
-                    <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm rounded-xl px-3 py-2 text-center shadow-md">
-                      <p className="font-['Cormorant_Garamond'] text-[10px] uppercase tracking-[0.15em] text-[#9a8f84] leading-none mb-0.5">
-                        {ev.date!.split(" ").slice(-2).join(" ")}
-                      </p>
-                      <p className="font-['Cormorant_Garamond'] text-lg font-semibold text-[#2c1a08] leading-none">
-                        {ev.date!.split(" ")[0]}
-                      </p>
+                  className="rounded-xl overflow-hidden border border-[#e8dece] bg-white shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col sm:flex-row">
+                  {/* Image panel — compact */}
+                  <div className="relative sm:w-40 md:w-52 shrink-0 h-36 sm:h-auto overflow-hidden">
+                    <img src={`${b}images/${imgSrc}`} alt={ev.title}
+                      className={`w-full h-full object-cover ${imgPos} transition-transform duration-500 hover:scale-105`} />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent sm:bg-gradient-to-r sm:from-transparent sm:to-black/10" />
+                    {/* Date badge */}
+                    <div className="absolute top-3 left-3 bg-white/90 backdrop-blur-sm rounded-lg px-2 py-1.5 text-center shadow-sm min-w-[3rem]">
+                      <p className="font-['Cormorant_Garamond'] text-[9px] uppercase tracking-[0.12em] text-[#9a8f84] leading-none mb-0.5">{dateMonYr}</p>
+                      <p className="font-['Cormorant_Garamond'] text-sm font-semibold text-[#2c1a08] leading-none">{dateDay}</p>
                     </div>
-                    {ev.recurring && (
-                      <div className="absolute bottom-4 left-4 bg-[#4a6a3a]/80 text-white text-[9px] uppercase tracking-[0.15em] px-2.5 py-1 rounded-full font-medium">
-                        Annual
-                      </div>
+                    {ev.recurring && !ev.compact && (
+                      <div className="absolute bottom-3 left-3 bg-[#4a6a3a]/80 text-white text-[9px] uppercase tracking-[0.12em] px-2 py-0.5 rounded-full font-medium">Annual</div>
                     )}
                   </div>
+
                   {/* Content */}
-                  <div className="flex-1 p-6 md:p-8 flex flex-col justify-between">
+                  <div className="flex-1 px-5 py-4 flex flex-col justify-between min-h-[7rem]">
                     <div>
-                      <span className="inline-block text-[10px] uppercase tracking-[0.2em] font-medium px-3 py-1 rounded-full bg-[#b8892a]/10 text-[#8a6420] mb-3">
+                      <span className="inline-block text-[9px] uppercase tracking-[0.2em] font-medium px-2.5 py-0.5 rounded-full bg-[#b8892a]/10 text-[#8a6420] mb-2">
                         {ev.kindLabel}
                       </span>
-                      <h3 className="font-['Cormorant_Garamond'] text-2xl md:text-3xl font-light text-[#2c1a08] leading-tight mb-1">
+                      <h3 className="font-['Cormorant_Garamond'] text-xl md:text-2xl font-light text-[#2c1a08] leading-snug mb-1">
                         {ev.title}
                       </h3>
-                      <p className="text-sm text-[#7a6e5a] italic mb-4">{ev.subtitle}</p>
-                      <div className="flex flex-wrap gap-x-5 gap-y-1.5 mb-4">
-                        <span className="flex items-center gap-1.5 text-xs text-[#7a6e5a]">
-                          <CalendarDays size={12} className="text-[#b8892a]" />{ev.date}
+                      {ev.subtitle && (
+                        <p className="text-xs text-[#7a6e5a] italic mb-2">{ev.subtitle}</p>
+                      )}
+                      <div className="flex flex-wrap gap-x-4 gap-y-1 mb-2">
+                        <span className="flex items-center gap-1 text-[11px] text-[#7a6e5a]">
+                          <CalendarDays size={11} className="text-[#b8892a]" />{ev.date}
                         </span>
-                        {ev.time && <span className="flex items-center gap-1.5 text-xs text-[#7a6e5a]">
-                          <Clock size={12} className="text-[#b8892a]" />{ev.time}
-                        </span>}
-                        {Icon && ev.location && <span className="flex items-center gap-1.5 text-xs text-[#7a6e5a]">
-                          <Icon size={12} className="text-[#b8892a]" />{ev.location}
-                        </span>}
+                        {ev.time && (
+                          <span className="flex items-center gap-1 text-[11px] text-[#7a6e5a]">
+                            <Clock size={11} className="text-[#b8892a]" />{ev.time}
+                          </span>
+                        )}
+                        {Icon && ev.location && (
+                          <span className="flex items-center gap-1 text-[11px] text-[#7a6e5a]">
+                            <Icon size={11} className="text-[#b8892a]" />{ev.location}
+                          </span>
+                        )}
                       </div>
-                      <p className="text-[#5a5248] text-sm leading-relaxed mb-2">{ev.desc}</p>
-                      <p className="text-xs text-[#9a8f84] italic">{ev.note}</p>
+                      {ev.desc && (
+                        <p className="text-[#5a5248] text-xs leading-relaxed">{ev.desc}</p>
+                      )}
+                      {ev.note && (
+                        <p className="text-[11px] text-[#9a8f84] italic mt-1">{ev.note}</p>
+                      )}
                     </div>
                     {ev.cta && (
-                      <div className="mt-5 pt-5 border-t border-[#f0ebe3]">
+                      <div className="mt-3 pt-3 border-t border-[#f0ebe3]">
                         <Link href={ev.cta.href}>
-                          <span className="inline-flex items-center gap-2 bg-[#b8892a] hover:bg-[#c9981f] text-white text-xs px-6 py-3 rounded-full tracking-widest uppercase transition-all duration-200 cursor-pointer shadow-sm">
-                            {ev.cta.label} <ArrowRight size={13} />
+                          <span className="inline-flex items-center gap-1.5 bg-[#b8892a] hover:bg-[#c9981f] text-white text-[10px] px-5 py-2 rounded-full tracking-widest uppercase transition-all duration-200 cursor-pointer shadow-sm">
+                            {ev.cta.label} <ArrowRight size={11} />
                           </span>
                         </Link>
                       </div>
@@ -533,40 +537,7 @@ export default function Events() {
               );
             })}
 
-            {/* Compact Vedic calendar entries — grouped by month */}
-            {compactByMonth.length > 0 && (
-              <div className="rounded-2xl overflow-hidden border border-[#e8dece] bg-white shadow-sm">
-                <div className="px-6 py-4 border-b border-[#f0ebe3] flex items-center justify-between">
-                  <div>
-                    <p className="text-xs uppercase tracking-[0.22em] text-[#b8892a] font-medium">2026 Vedic Calendar</p>
-                    <p className="text-[#b8a898] text-[10px] mt-0.5">Dates per Nepal Standard Time · drikpanchang.com</p>
-                  </div>
-                  <div className="flex items-center gap-4 text-[10px] text-[#9a8f84]">
-                    <span className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-full bg-[#b8892a] inline-block" /> Ekadashi</span>
-                    <span className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-full bg-[#7a5a2a] inline-block" /> Festival</span>
-                  </div>
-                </div>
-                {compactByMonth.map(({ month, entries }) => (
-                  <div key={month}>
-                    <div className="px-6 py-2.5 bg-[#fdf8f0] border-b border-[#f0ebe3]">
-                      <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#7a6e5a]">{month}</span>
-                    </div>
-                    {entries.map((e, i) => (
-                      <div key={e.id}
-                        className={`px-6 py-3 flex items-center gap-3 ${i < entries.length - 1 ? "border-b border-[#f9f5f0]" : ""}`}>
-                        <div className={`shrink-0 w-2 h-2 rounded-full ${e.kind === "ekadashi" ? "bg-[#b8892a]" : "bg-[#7a5a2a]"}`} />
-                        <span className="w-20 shrink-0 text-[11px] font-mono font-medium text-[#b8892a]">{e.date.split(" ").slice(0, 2).join(" ")}</span>
-                        <span className={`flex-1 text-sm ${e.kind === "festival" ? "text-[#3d3830] font-medium" : "text-[#5a5248]"}`}>{e.title}</span>
-                        <span className="shrink-0 text-[9px] uppercase tracking-[0.15em] text-[#c8b898] hidden sm:block">{e.kindLabel}</span>
-                      </div>
-                    ))}
-                  </div>
-                ))}
-              </div>
-            )}
-
-            {/* Empty state */}
-            {richVisible.length === 0 && compactByMonth.length === 0 && (
+            {visible.length === 0 && (
               <div className="text-center py-16 text-[#9a8f84]">
                 <p className="font-['Cormorant_Garamond'] text-2xl font-light">No events in this category right now.</p>
                 <p className="text-sm mt-2">
