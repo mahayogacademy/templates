@@ -367,7 +367,9 @@ export default function Events() {
   const [filter, setFilter] = useState<EventKind>("all");
   const [view, setView] = useState<ViewMode>("list");
 
-  const visible = filter === "all" ? UPCOMING : UPCOMING.filter(e => e.kind === filter);
+  const visible = filter === "all"
+    ? UPCOMING.filter(e => e.kind !== "ekadashi")
+    : UPCOMING.filter(e => e.kind === filter);
 
   // Accent colour per kind (left border of each row)
   const KIND_ACCENT: Record<EventKind, string> = {
