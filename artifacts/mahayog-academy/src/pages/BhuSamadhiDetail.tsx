@@ -301,6 +301,60 @@ export default function BhuSamadhiDetail() {
         </div>
       </section>
 
+      {/* ── 2015 PHOTO SECTION ── */}
+      <section className="bg-[#f4ede0] py-16 px-6">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="font-['Cormorant_Garamond'] text-3xl md:text-4xl text-[#2e1f0e] font-light mb-1 text-center">
+            2015 Chatara — Selected Photographs
+          </h2>
+          <p className="text-center font-['Inter'] text-xs uppercase tracking-widest text-[#8a7860] mb-3">
+            Chatara, Nepal
+          </p>
+          <p className="text-center font-['Inter'] text-sm text-[#7a6a55] max-w-2xl mx-auto mb-2">
+            The second public Bhu-Samadhi took place at Chatara in 2015 — the same year Nepal was struck by a devastating earthquake. The chamber was lined with fabric; officials and pandits conducted a formal inspection mid-way through the sealed period. As in 2008, barley was sowed and grew above him during the nine days.
+          </p>
+          <div className="h-px bg-[#c9a96e]/40 w-24 mx-auto mb-10" />
+
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+            {[
+              {
+                src: "bs2015-01-in-chamber.jpg",
+                label: "In the Chamber",
+                caption: "Gurudev lies in the fabric-lined wooden chamber, draped in saffron, eyes closed — the body at complete rest, consciousness withdrawn.",
+              },
+              {
+                src: "bs2015-02-inspection.jpg",
+                label: "Official Inspection",
+                caption: "An official observer examines the sealed chamber mid-samadhi — part of the transparent, verifiable nature of the public demonstration.",
+              },
+              {
+                src: "bs2015-03-barley-harvest.jpg",
+                label: "Harvesting the Barley",
+                caption: "Pandits remove the lush barley growth from the mound before the final opening — the grown grain a sign of the life-force held within.",
+              },
+            ].map((item) => (
+              <div key={item.src} className="group">
+                <div className="relative overflow-hidden rounded-xl aspect-[4/3]">
+                  <img
+                    src={`${b}images/${item.src}`}
+                    alt={item.label}
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                </div>
+                <div className="pt-3 px-1">
+                  <p className="font-['Cormorant_Garamond'] text-lg text-[#2e1f0e] font-semibold leading-snug mb-1">
+                    {item.label}
+                  </p>
+                  <p className="font-['Inter'] text-sm text-[#6a5c48] leading-relaxed">
+                    {item.caption}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── CLOSING REFLECTION ── */}
       <section className="relative py-24 px-6 overflow-hidden">
         <img
