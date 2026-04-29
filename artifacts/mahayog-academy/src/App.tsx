@@ -16,6 +16,7 @@ import Register from "@/pages/Register";
 import GuruDarshan from "@/pages/GuruDarshan";
 import Events from "@/pages/Events";
 import HistoricEventDetail from "@/pages/HistoricEventDetail";
+import BhuSamadhiDetail from "@/pages/BhuSamadhiDetail";
 import ScrollToTop from "@/components/ScrollToTop";
 
 const queryClient = new QueryClient();
@@ -35,6 +36,7 @@ function Router() {
       <Route path="/register" component={Register} />
       <Route path="/guru-darshan" component={GuruDarshan} />
       <Route path="/events" component={Events} />
+      <Route path="/events/historic/bhu-samadhi" component={BhuSamadhiDetail} />
       <Route path="/events/historic/:slug" component={HistoricEventDetail} />
       <Route component={NotFound} />
     </Switch>
