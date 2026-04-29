@@ -130,7 +130,7 @@ const UPCOMING: AnyEvent[] = [
 const MILESTONES = [
   {
     year: "2016",
-    title: "Bhu-Samadhi of Pujya Nritya Gopal Das Ji Maharaj",
+    title: "\u201cBhu-Samadhi\u201d of Jagadguru Mahayogi Siddhababa",
     desc: "The sacred passing (Bhu-Samadhi) of Jagadguru Mahayogi Siddhababa's own revered Guru, a pivotal moment in the lineage, observed with deep ceremony, Vedic rites, and collective grief and gratitude by thousands of disciples. His Holiness continues to carry forward this sacred mission.",
     badge: "Lineage",
     img: "bhu-samadhi-1.jpg",
