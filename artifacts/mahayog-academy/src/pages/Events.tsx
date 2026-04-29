@@ -555,12 +555,12 @@ export default function Events() {
                               </div>
                             )}
                           </div>
-                          {/* Inline CTA */}
+                          {/* CTA button */}
                           {ev.cta && (
                             <div className="shrink-0 flex items-center pr-5 pl-2">
                               <Link href={ev.cta.href}>
-                                <span className="flex items-center gap-1 text-xs font-semibold text-[#b8892a] group-hover:text-[#8a6418] transition-colors cursor-pointer whitespace-nowrap uppercase tracking-[0.1em]">
-                                  {ev.cta.label} <ArrowRight size={12} />
+                                <span className="inline-flex items-center gap-1.5 bg-[#b8892a] hover:bg-[#c9981f] text-white text-[11px] px-4 py-2 rounded-full tracking-widest uppercase transition-all duration-200 cursor-pointer shadow-sm whitespace-nowrap">
+                                  {ev.cta.label} <ArrowRight size={11} />
                                 </span>
                               </Link>
                             </div>
