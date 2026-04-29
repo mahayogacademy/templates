@@ -513,7 +513,7 @@ export default function Events() {
                       /* ── Featured card (rich Academy events) — same size as compact tiles ── */
                       if (isRich) return (
                         <div key={ev.id}
-                          className="rounded-xl overflow-hidden border border-[#e2d8c8] bg-white hover:border-[#c8a870] hover:shadow-md transition-all duration-200 flex items-stretch group">
+                          className="rounded-xl overflow-hidden border border-[#c8b898] bg-white hover:border-[#a8884a] hover:shadow-md transition-all duration-200 flex items-stretch group">
                           {/* Date box — same as compact tiles */}
                           <div className="shrink-0 w-16 flex flex-col items-center justify-center py-5 px-2 border-r border-[#ece5d8]">
                             <span className="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#2c1a08] leading-none">{dateNum}</span>
@@ -558,7 +558,7 @@ export default function Events() {
                       /* ── Calendar tile (compact ekadashi / festival) ── */
                       return (
                         <div key={ev.id}
-                          className="rounded-xl overflow-hidden border border-[#e2d8c8] bg-white hover:border-[#c8a870] hover:shadow-md transition-all duration-200 flex items-stretch group">
+                          className="rounded-xl overflow-hidden border border-[#c8b898] bg-white hover:border-[#a8884a] hover:shadow-md transition-all duration-200 flex items-stretch group">
 
                           {/* Date box */}
                           <div className="shrink-0 w-16 flex flex-col items-center justify-center py-5 px-2 border-r border-[#ece5d8]">
