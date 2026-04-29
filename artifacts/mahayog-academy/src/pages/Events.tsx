@@ -165,7 +165,6 @@ const MILESTONES = [
     year: "2024",
     title: "Sankat Mochan Shree Hanumad Mahayagya",
     img: "hanumad-mahayagya.jpg",
-    overlayImg: "hanuman-ghost-bg.png",
   },
 ];
 
@@ -584,15 +583,6 @@ export default function Events() {
                 {/* Gradient overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/20 group-hover:from-black/95 group-hover:via-black/60 group-hover:to-black/30 transition-all duration-300" />
 
-                {/* Optional overlay image (screen blend = black becomes invisible) */}
-                {m.overlayImg && (
-                  <img
-                    src={`${b}images/${m.overlayImg}`}
-                    aria-hidden="true"
-                    className="absolute inset-0 w-full h-full object-contain pointer-events-none opacity-80 scale-150"
-                    style={{ mixBlendMode: "screen", objectPosition: "75% center" }}
-                  />
-                )}
 
                 {/* Year pill, top left */}
                 <div className="absolute top-4 left-4 transition-opacity duration-300 group-hover:opacity-0">
