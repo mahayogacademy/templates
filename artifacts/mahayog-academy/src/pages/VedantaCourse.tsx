@@ -356,7 +356,7 @@ export default function VedantaCourse() {
               <path d="M5 12h14M12 5l7 7-7 7"/>
             </svg>
           </Link>
-          <p className="text-[#5a4228] text-xs mt-6 tracking-wide">Open to all seekers · Join any time · Offered freely</p>
+          <p className="text-[#a89070] text-xs mt-6 tracking-wide">Open to all seekers · Join any time · Offered freely</p>
         </div>
       </section>
 
