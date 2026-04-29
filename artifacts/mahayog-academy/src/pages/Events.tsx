@@ -146,12 +146,7 @@ const PAST = [
     location: "Guru Ashram, Nepal",
     summary: "The appearance of Bhagwan Shri Ram celebrated through nine-day Manas path, havan, Sundarkanda recitation, and prasad distribution.",
   },
-  {
-    title: "International Meditation Workshop",
-    date: "January 2026",
-    location: "Online · Zoom",
-    summary: "A two-day intensive for international participants covering the foundations of Himalayan Siddha Mahayog, guided directly by His Holiness.",
-  },
+
   {
     title: "Health Camp",
     date: "Recurring · Multiple dates",
