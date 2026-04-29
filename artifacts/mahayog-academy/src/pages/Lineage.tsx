@@ -141,7 +141,7 @@ export default function Lineage() {
               </div>
             ))}
 
-            {/* Penultimate guru — Vaishnav Bhagawandas — centered alone */}
+            {/* Penultimate guru, Vaishnav Bhagawandas, centered alone */}
             <GuruCard guru={penultimateGuru} />
 
             {/* Connector down to Siddhababa */}
@@ -154,7 +154,7 @@ export default function Lineage() {
               </svg>
             </div>
 
-            {/* Last guru — full width, prominent */}
+            {/* Last guru, full width, prominent */}
             <div className="flex flex-col items-center text-center">
               <div className="relative w-64 h-64 shrink-0">
                 <div className="absolute inset-0 rounded-full shadow-[0_0_0_2px_#b8892a,0_0_0_6px_#f2ead8,0_0_0_8px_#c9a55a40]" />

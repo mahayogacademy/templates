@@ -61,7 +61,7 @@ const UPCOMING: AnyEvent[] = [
     date: "Monthly · First Saturday",
     dateObj: new Date(2026, 4, 2),
     time: "5 days · Starting each first Saturday",
-    location: "Online — global access",
+    location: "Online, global access",
     locationIcon: Monitor,
     desc: "A five-day monthly intensive in the living practice of Himalayan Siddha Mahayog. Each cycle begins on the first Saturday of the month and guides participants through authentic meditation, pranayama, and self-inquiry under the guidance of senior teachers.",
     note: "Open to all. No prior experience needed.",
@@ -73,58 +73,58 @@ const UPCOMING: AnyEvent[] = [
     kindLabel: "Course",
     recurring: true,
     title: "Vedanta Philosophy Course",
-    subtitle: "300 Hours · Online · Ongoing — Enrol Anytime",
+    subtitle: "300 Hours · Online · Ongoing, Enrol Anytime",
     date: "Ongoing · Open enrolment",
     dateObj: new Date(2026, 4, 1),
     time: "Daily sessions via Zoom · ~1 hr / day",
-    location: "Online — global access",
+    location: "Online, global access",
     locationIcon: Monitor,
     img: "cta-vedanta-study.png",
     imgPos: "object-center",
-    desc: "A comprehensive 300-hour course in Advaita Vedanta studied alongside daily Himalayan Siddha Mahayog Meditation. Guided by His Holiness and senior faculty. Enrol at any time — the course is always open.",
+    desc: "A comprehensive 300-hour course in Advaita Vedanta studied alongside daily Himalayan Siddha Mahayog Meditation. Guided by His Holiness and senior faculty. Enrol at any time, the course is always open.",
     note: "Open to all backgrounds. No prior experience required.",
     cta: { label: "Enrol Now", href: "/vedanta" },
   },
   // ── Vedic Calendar 2026 ── compact entries (source: drikpanchang.com, NPT)
   // May
   { id: 100, compact: true, kind: "ekadashi", kindLabel: "Ekadashi",  title: "Apara Ekadashi",                    subtitle: "Sacred fast for the removal of sins and merit of ancestors",                                          date: "13 May 2026",  dateObj: new Date(2026, 4, 13) },
-  { id: 101, compact: true, kind: "ekadashi", kindLabel: "Ekadashi",  title: "Padmini Ekadashi (Adhika)",          subtitle: "Rare Adhika Masa Ekadashi — especially auspicious for fasting and prayer",                           date: "27 May 2026",  dateObj: new Date(2026, 4, 27) },
+  { id: 101, compact: true, kind: "ekadashi", kindLabel: "Ekadashi",  title: "Padmini Ekadashi (Adhika)",          subtitle: "Rare Adhika Masa Ekadashi, especially auspicious for fasting and prayer",                           date: "27 May 2026",  dateObj: new Date(2026, 4, 27) },
   // June
   { id: 102, compact: true, kind: "ekadashi", kindLabel: "Ekadashi",  title: "Paramā Ekadashi (Adhika)",           subtitle: "Culminating Ekadashi of the Adhika (intercalary) month",                                            date: "11 Jun 2026",  dateObj: new Date(2026, 5, 11) },
-  { id: 103, compact: true, kind: "ekadashi", kindLabel: "Ekadashi",  title: "Nirjala Ekadashi",                   subtitle: "The most potent Ekadashi — observed without water, conferring the merit of all Ekadashis",           date: "25 Jun 2026",  dateObj: new Date(2026, 5, 25) },
+  { id: 103, compact: true, kind: "ekadashi", kindLabel: "Ekadashi",  title: "Nirjala Ekadashi",                   subtitle: "The most potent Ekadashi, observed without water, conferring the merit of all Ekadashis",           date: "25 Jun 2026",  dateObj: new Date(2026, 5, 25) },
   // July
   { id: 104, compact: true, kind: "ekadashi", kindLabel: "Ekadashi",  title: "Yogini Ekadashi",                    subtitle: "Fasting this day is said to cure disease and purify accumulated karma",                              date: "11 Jul 2026",  dateObj: new Date(2026, 6, 11) },
-  { id: 105, compact: true, kind: "ekadashi", kindLabel: "Ekadashi",  title: "Devshayani Ekadashi",                subtitle: "Lord Vishnu enters Yoga Nidra — the sacred Chaturmas begins",                                       date: "25 Jul 2026",  dateObj: new Date(2026, 6, 25) },
+  { id: 105, compact: true, kind: "ekadashi", kindLabel: "Ekadashi",  title: "Devshayani Ekadashi",                subtitle: "Lord Vishnu enters Yoga Nidra, the sacred Chaturmas begins",                                       date: "25 Jul 2026",  dateObj: new Date(2026, 6, 25) },
   // August
-  { id: 106, compact: true, kind: "festival", kindLabel: "Festival",  title: "Hariyali Teej",                      subtitle: "Festival of Parvati — women fast, pray, and celebrate the arrival of the monsoon",                   date: "1 Aug 2026",   dateObj: new Date(2026, 7, 1)  },
-  { id: 107, compact: true, kind: "ekadashi", kindLabel: "Ekadashi",  title: "Kamika Ekadashi",                    subtitle: "Ekadashi during Chaturmas — prayer and fasting carry exceptional merit",                            date: "9 Aug 2026",   dateObj: new Date(2026, 7, 9)  },
-  { id: 108, compact: true, kind: "festival", kindLabel: "Festival",  title: "Nag Panchami",                       subtitle: "Ancient worship of the Naga deities — milk offerings and prayer for protection",                     date: "17 Aug 2026",  dateObj: new Date(2026, 7, 17) },
+  { id: 106, compact: true, kind: "festival", kindLabel: "Festival",  title: "Hariyali Teej",                      subtitle: "Festival of Parvati, women fast, pray, and celebrate the arrival of the monsoon",                   date: "1 Aug 2026",   dateObj: new Date(2026, 7, 1)  },
+  { id: 107, compact: true, kind: "ekadashi", kindLabel: "Ekadashi",  title: "Kamika Ekadashi",                    subtitle: "Ekadashi during Chaturmas, prayer and fasting carry exceptional merit",                            date: "9 Aug 2026",   dateObj: new Date(2026, 7, 9)  },
+  { id: 108, compact: true, kind: "festival", kindLabel: "Festival",  title: "Nag Panchami",                       subtitle: "Ancient worship of the Naga deities, milk offerings and prayer for protection",                     date: "17 Aug 2026",  dateObj: new Date(2026, 7, 17) },
   { id: 109, compact: true, kind: "ekadashi", kindLabel: "Ekadashi",  title: "Shravana Putrada Ekadashi",          subtitle: "Auspicious for seeking divine blessings for progeny and family wellbeing",                          date: "23 Aug 2026",  dateObj: new Date(2026, 7, 23) },
   { id: 110, compact: true, kind: "festival", kindLabel: "Festival",  title: "Raksha Bandhan",                     subtitle: "The sacred bond of protection between siblings, blessed through mantra and prayer",                  date: "28 Aug 2026",  dateObj: new Date(2026, 7, 28) },
   // September
-  { id: 111, compact: true, kind: "festival", kindLabel: "Festival",  title: "Krishna Janmashtami",                subtitle: "The divine appearance of Bhagwan Shri Krishna — midnight vigil, bhajan, and fasting",               date: "5 Sep 2026",   dateObj: new Date(2026, 8, 5)  },
+  { id: 111, compact: true, kind: "festival", kindLabel: "Festival",  title: "Krishna Janmashtami",                subtitle: "The divine appearance of Bhagwan Shri Krishna, midnight vigil, bhajan, and fasting",               date: "5 Sep 2026",   dateObj: new Date(2026, 8, 5)  },
   { id: 112, compact: true, kind: "ekadashi", kindLabel: "Ekadashi",  title: "Aja Ekadashi",                       subtitle: "Fasting on this day is said to free one from the cycle of rebirth",                                 date: "7 Sep 2026",   dateObj: new Date(2026, 8, 7)  },
-  { id: 113, compact: true, kind: "festival", kindLabel: "Festival",  title: "Hartalika Teej",                     subtitle: "The most sacred fast of Parvati — observed for spiritual merit and marital harmony",                date: "13 Sep 2026",  dateObj: new Date(2026, 8, 13) },
-  { id: 114, compact: true, kind: "festival", kindLabel: "Festival",  title: "Ganesh Chaturthi",                   subtitle: "The birth of Bhagwan Ganesha — puja, modak, and prayer for auspicious beginnings",                  date: "14 Sep 2026",  dateObj: new Date(2026, 8, 14) },
-  { id: 115, compact: true, kind: "ekadashi", kindLabel: "Ekadashi",  title: "Parsva Ekadashi",                    subtitle: "Lord Vishnu turns in cosmic sleep — a sacred milestone midway through Chaturmas",                   date: "22 Sep 2026",  dateObj: new Date(2026, 8, 22) },
+  { id: 113, compact: true, kind: "festival", kindLabel: "Festival",  title: "Hartalika Teej",                     subtitle: "The most sacred fast of Parvati, observed for spiritual merit and marital harmony",                date: "13 Sep 2026",  dateObj: new Date(2026, 8, 13) },
+  { id: 114, compact: true, kind: "festival", kindLabel: "Festival",  title: "Ganesh Chaturthi",                   subtitle: "The birth of Bhagwan Ganesha, puja, modak, and prayer for auspicious beginnings",                  date: "14 Sep 2026",  dateObj: new Date(2026, 8, 14) },
+  { id: 115, compact: true, kind: "ekadashi", kindLabel: "Ekadashi",  title: "Parsva Ekadashi",                    subtitle: "Lord Vishnu turns in cosmic sleep, a sacred milestone midway through Chaturmas",                   date: "22 Sep 2026",  dateObj: new Date(2026, 8, 22) },
   // October
-  { id: 116, compact: true, kind: "ekadashi", kindLabel: "Ekadashi",  title: "Indira Ekadashi",                    subtitle: "Observed for the liberation of ancestors — offerings and prayer for departed souls",                 date: "6 Oct 2026",   dateObj: new Date(2026, 9, 6)  },
-  { id: 117, compact: true, kind: "festival", kindLabel: "Festival",  title: "Navaratri Begins",                   subtitle: "Nine nights of Shakti worship — the Goddess invoked in all her divine forms",                       date: "12 Oct 2026",  dateObj: new Date(2026, 9, 12) },
-  { id: 118, compact: true, kind: "festival", kindLabel: "Festival",  title: "Saraswati Puja · Maha Navami",       subtitle: "Worship of the Goddess of wisdom and arts — the culminating night of Navaratri",                    date: "20 Oct 2026",  dateObj: new Date(2026, 9, 20) },
-  { id: 119, compact: true, kind: "festival", kindLabel: "Festival",  title: "Vijayadashami",                      subtitle: "Victory of dharma over adharma — the tenth day; conclusion of Navaratri",                          date: "21 Oct 2026",  dateObj: new Date(2026, 9, 21) },
-  { id: 120, compact: true, kind: "ekadashi", kindLabel: "Ekadashi",  title: "Papankusha Ekadashi",                subtitle: "Said to destroy the gravest sins — puja and fasting are especially recommended",                    date: "22 Oct 2026",  dateObj: new Date(2026, 9, 22) },
-  { id: 121, compact: true, kind: "festival", kindLabel: "Festival",  title: "Sharad Purnima",                     subtitle: "Full moon of autumn — Lakshmi descends to earth; moonlit offerings and kirtan",                     date: "25 Oct 2026",  dateObj: new Date(2026, 9, 25) },
+  { id: 116, compact: true, kind: "ekadashi", kindLabel: "Ekadashi",  title: "Indira Ekadashi",                    subtitle: "Observed for the liberation of ancestors, offerings and prayer for departed souls",                 date: "6 Oct 2026",   dateObj: new Date(2026, 9, 6)  },
+  { id: 117, compact: true, kind: "festival", kindLabel: "Festival",  title: "Navaratri Begins",                   subtitle: "Nine nights of Shakti worship, the Goddess invoked in all her divine forms",                       date: "12 Oct 2026",  dateObj: new Date(2026, 9, 12) },
+  { id: 118, compact: true, kind: "festival", kindLabel: "Festival",  title: "Saraswati Puja · Maha Navami",       subtitle: "Worship of the Goddess of wisdom and arts, the culminating night of Navaratri",                    date: "20 Oct 2026",  dateObj: new Date(2026, 9, 20) },
+  { id: 119, compact: true, kind: "festival", kindLabel: "Festival",  title: "Vijayadashami",                      subtitle: "Victory of dharma over adharma, the tenth day; conclusion of Navaratri",                          date: "21 Oct 2026",  dateObj: new Date(2026, 9, 21) },
+  { id: 120, compact: true, kind: "ekadashi", kindLabel: "Ekadashi",  title: "Papankusha Ekadashi",                subtitle: "Said to destroy the gravest sins, puja and fasting are especially recommended",                    date: "22 Oct 2026",  dateObj: new Date(2026, 9, 22) },
+  { id: 121, compact: true, kind: "festival", kindLabel: "Festival",  title: "Sharad Purnima",                     subtitle: "Full moon of autumn, Lakshmi descends to earth; moonlit offerings and kirtan",                     date: "25 Oct 2026",  dateObj: new Date(2026, 9, 25) },
   // November
-  { id: 122, compact: true, kind: "ekadashi", kindLabel: "Ekadashi",  title: "Rama Ekadashi",                      subtitle: "Ekadashi of the Diwali fortnight — deeply auspicious for worship and japa",                        date: "5 Nov 2026",   dateObj: new Date(2026, 10, 5) },
-  { id: 123, compact: true, kind: "festival", kindLabel: "Festival",  title: "Dhanteras",                          subtitle: "Worship of Dhanvantari and Lakshmi — the first day of the Diwali celebration",                     date: "7 Nov 2026",   dateObj: new Date(2026, 10, 7) },
-  { id: 124, compact: true, kind: "festival", kindLabel: "Festival",  title: "Lakshmi Puja · Diwali",              subtitle: "The festival of lights — Lakshmi puja, diyas lit across the land, and community joy",               date: "9 Nov 2026",   dateObj: new Date(2026, 10, 9) },
-  { id: 125, compact: true, kind: "festival", kindLabel: "Festival",  title: "Govardhan Puja",                     subtitle: "Krishna's victory over Indra — worship of Govardhan and gratitude for divine grace",               date: "10 Nov 2026",  dateObj: new Date(2026, 10, 10)},
+  { id: 122, compact: true, kind: "ekadashi", kindLabel: "Ekadashi",  title: "Rama Ekadashi",                      subtitle: "Ekadashi of the Diwali fortnight, deeply auspicious for worship and japa",                        date: "5 Nov 2026",   dateObj: new Date(2026, 10, 5) },
+  { id: 123, compact: true, kind: "festival", kindLabel: "Festival",  title: "Dhanteras",                          subtitle: "Worship of Dhanvantari and Lakshmi, the first day of the Diwali celebration",                     date: "7 Nov 2026",   dateObj: new Date(2026, 10, 7) },
+  { id: 124, compact: true, kind: "festival", kindLabel: "Festival",  title: "Lakshmi Puja · Diwali",              subtitle: "The festival of lights, Lakshmi puja, diyas lit across the land, and community joy",               date: "9 Nov 2026",   dateObj: new Date(2026, 10, 9) },
+  { id: 125, compact: true, kind: "festival", kindLabel: "Festival",  title: "Govardhan Puja",                     subtitle: "Krishna's victory over Indra, worship of Govardhan and gratitude for divine grace",               date: "10 Nov 2026",  dateObj: new Date(2026, 10, 10)},
   { id: 126, compact: true, kind: "festival", kindLabel: "Festival",  title: "Kansa Vadh",                         subtitle: "Celebration of the Lord's liberation of the world from the tyrant Kansa",                          date: "19 Nov 2026",  dateObj: new Date(2026, 10, 19)},
   { id: 127, compact: true, kind: "ekadashi", kindLabel: "Ekadashi",  title: "Devutthana Ekadashi · Tulasi Vivah", subtitle: "Lord Vishnu awakens from Yoga Nidra; the sacred marriage of Tulasi and Shaligram is celebrated",  date: "21 Nov 2026",  dateObj: new Date(2026, 10, 21)},
   // December
-  { id: 128, compact: true, kind: "ekadashi", kindLabel: "Ekadashi",  title: "Utpanna Ekadashi",                   subtitle: "The origin-Ekadashi — marking the appearance of the Ekadashi Devi",                               date: "4 Dec 2026",   dateObj: new Date(2026, 11, 4) },
-  { id: 129, compact: true, kind: "festival", kindLabel: "Festival",  title: "Vivah Panchami",                     subtitle: "The sacred marriage of Bhagwan Rama and Sita — recitation of Manas and festive puja",             date: "14 Dec 2026",  dateObj: new Date(2026, 11, 14)},
-  { id: 130, compact: true, kind: "ekadashi", kindLabel: "Ekadashi",  title: "Mokshada Ekadashi · Gita Jayanti",   subtitle: "The Bhagavad Gita was revealed on this day — the Ekadashi of liberation",                         date: "20 Dec 2026",  dateObj: new Date(2026, 11, 20)},
+  { id: 128, compact: true, kind: "ekadashi", kindLabel: "Ekadashi",  title: "Utpanna Ekadashi",                   subtitle: "The origin-Ekadashi, marking the appearance of the Ekadashi Devi",                               date: "4 Dec 2026",   dateObj: new Date(2026, 11, 4) },
+  { id: 129, compact: true, kind: "festival", kindLabel: "Festival",  title: "Vivah Panchami",                     subtitle: "The sacred marriage of Bhagwan Rama and Sita, recitation of Manas and festive puja",             date: "14 Dec 2026",  dateObj: new Date(2026, 11, 14)},
+  { id: 130, compact: true, kind: "ekadashi", kindLabel: "Ekadashi",  title: "Mokshada Ekadashi · Gita Jayanti",   subtitle: "The Bhagavad Gita was revealed on this day, the Ekadashi of liberation",                         date: "20 Dec 2026",  dateObj: new Date(2026, 11, 20)},
 ];
 
 const PAST = [
@@ -132,16 +132,16 @@ const PAST = [
     title: "Gurudev's Vardapan Mahotsav (Birthday Celebration)",
     date: "February 2026",
     location: "Ashram, Nepal & Online",
-    summary: "Seekers worldwide gathered to offer blessings and prayers on the occasion of His Holiness's birthday — marked with puja, satsang, and Bhandara.",
+    summary: "Seekers worldwide gathered to offer blessings and prayers on the occasion of His Holiness's birthday, marked with puja, satsang, and Bhandara.",
   },
   {
-    title: "Mahashivaratri — Rudra-Abhishek & Bhandara",
+    title: "Mahashivaratri, Rudra-Abhishek & Bhandara",
     date: "February 2026",
     location: "Local Centres & Ashram",
     summary: "An overnight vigil of Shiva puja, Rudra-Abhishek, chanting, and Bhandara at the ashram and affiliated centres globally.",
   },
   {
-    title: "Ram Navami — Ramcharitmanas Parayan & Havan",
+    title: "Ram Navami, Ramcharitmanas Parayan & Havan",
     date: "April 2026",
     location: "Guru Ashram, Nepal",
     summary: "The appearance of Bhagwan Shri Ram celebrated through nine-day Manas path, havan, Sundarkanda recitation, and prasad distribution.",
@@ -150,19 +150,19 @@ const PAST = [
     title: "Guru Purnima Darshan Mahotsav 2025",
     date: "July 2025",
     location: "Guru Ashram, Nepal",
-    summary: "Over two thousand seekers gathered for the annual Guru Purnima Mahotsav — the largest gathering of the year — with darshan, puja, and collective meditation.",
+    summary: "Over two thousand seekers gathered for the annual Guru Purnima Mahotsav, the largest gathering of the year, with darshan, puja, and collective meditation.",
   },
   {
     title: "International Meditation Workshop",
     date: "January 2026",
     location: "Online · Zoom",
-    summary: "A two-day intensive for international participants covering the foundations of Himalayan Siddha Mahayog — guided directly by His Holiness.",
+    summary: "A two-day intensive for international participants covering the foundations of Himalayan Siddha Mahayog, guided directly by His Holiness.",
   },
   {
     title: "Health Camp",
     date: "Recurring · Multiple dates",
     location: "Ashram & affiliated centres",
-    summary: "Free holistic health camps offered to local communities — integrating Ayurvedic consultation, yoga, and meditation guidance as a form of sacred service (seva).",
+    summary: "Free holistic health camps offered to local communities, integrating Ayurvedic consultation, yoga, and meditation guidance as a form of sacred service (seva).",
   },
 ];
 
@@ -170,42 +170,42 @@ const MILESTONES = [
   {
     year: "2016",
     title: "Bhu-Samadhi of Pujya Nritya Gopal Das Ji Maharaj",
-    desc: "The sacred passing (Bhu-Samadhi) of Jagadguru Mahayogi Siddhababa's own revered Guru — a pivotal moment in the lineage, observed with deep ceremony, Vedic rites, and collective grief and gratitude by thousands of disciples. His Holiness continues to carry forward this sacred mission.",
+    desc: "The sacred passing (Bhu-Samadhi) of Jagadguru Mahayogi Siddhababa's own revered Guru, a pivotal moment in the lineage, observed with deep ceremony, Vedic rites, and collective grief and gratitude by thousands of disciples. His Holiness continues to carry forward this sacred mission.",
     badge: "Lineage",
     img: "bhu-samadhi-1.jpg",
   },
   {
     year: "2019",
     title: "Shree Tarak Brahma Mahayagya",
-    desc: "A grand Mahayagya — one of the largest fire ceremonies conducted by the Academy — invoking the liberating grace of Tarak Brahma. Thousands of seekers participated across multiple days of continuous havan, kirtan, and satsang.",
+    desc: "A grand Mahayagya, one of the largest fire ceremonies conducted by the Academy, invoking the liberating grace of Tarak Brahma. Thousands of seekers participated across multiple days of continuous havan, kirtan, and satsang.",
     badge: "Mahayagya",
     img: "gurudev-darshan-congregation.jpg",
   },
   {
     year: "2021",
     title: "Himalayan Siddha Mahayog Anuṣṭhān (COVID-19)",
-    desc: "In response to the global COVID-19 pandemic, Jagadguru Mahayogi Siddhababa led an extended collective anuṣṭhān — a sustained spiritual observance of prayer, mantra, havan, and meditation — invoking healing and protection for the world. Seekers across continents joined online.",
+    desc: "In response to the global COVID-19 pandemic, Jagadguru Mahayogi Siddhababa led an extended collective anuṣṭhān, a sustained spiritual observance of prayer, mantra, havan, and meditation, invoking healing and protection for the world. Seekers across continents joined online.",
     badge: "Special Anuṣṭhān",
     img: "ashram-extra-sanyasi-river.jpg",
   },
   {
     year: "2022",
     title: "Atirudri Mahayagya",
-    desc: "The Atirudri — one of the most elaborate and potent of all Vedic fire ceremonies, involving the recitation of the Shri Rudram eleven hundred and forty-four times — was conducted under the direct guidance of His Holiness, with Vedic pandits and thousands of participants.",
+    desc: "The Atirudri, one of the most elaborate and potent of all Vedic fire ceremonies, involving the recitation of the Shri Rudram eleven hundred and forty-four times, was conducted under the direct guidance of His Holiness, with Vedic pandits and thousands of participants.",
     badge: "Mahayagya",
     img: "ashram-extra-river-diyas.jpg",
   },
   {
     year: "2023",
     title: "108 Ramarchan Mahayagya",
-    desc: "A monumental sacred ceremony involving 108 Ramarchan — the complete worship of Bhagwan Shri Ram — performed continuously across multiple days. This immense collective offering is considered especially auspicious for both personal liberation and the welfare of all beings.",
+    desc: "A monumental sacred ceremony involving 108 Ramarchan, the complete worship of Bhagwan Shri Ram, performed continuously across multiple days. This immense collective offering is considered especially auspicious for both personal liberation and the welfare of all beings.",
     badge: "Mahayagya",
     img: "ram-mandir-1.jpg",
   },
   {
     year: "2024",
     title: "Sankat Mochan Shree Hanumad Mahayagya",
-    desc: "Dedicated to Lord Hanuman — the remover of all obstacles — this Mahayagya was conducted to invoke protection, strength, and liberation for seekers and the wider world. It included Sundarkanda path, Hanuman Chalisa, and extended havan rituals led by His Holiness.",
+    desc: "Dedicated to Lord Hanuman, the remover of all obstacles, this Mahayagya was conducted to invoke protection, strength, and liberation for seekers and the wider world. It included Sundarkanda path, Hanuman Chalisa, and extended havan rituals led by His Holiness.",
     badge: "Mahayagya",
     img: "ashram-hanuman-wide.jpg",
   },
@@ -450,7 +450,7 @@ export default function Events() {
           </div>
         )}
 
-        {/* List view — compact row layout, grouped by month */}
+        {/* List view, compact row layout, grouped by month */}
         {view === "list" && (() => {
           if (visible.length === 0) return (
             <div className="text-center py-16 text-[#9a8f84]">
@@ -506,11 +506,11 @@ export default function Events() {
                       const badge = BADGE[ev.kind];
                       const accent = KIND_ACCENT[ev.kind];
 
-                      /* ── Featured card (rich Academy events) — same size as compact tiles ── */
+                      /* ── Featured card (rich Academy events), same size as compact tiles ── */
                       if (isRich) return (
                         <div key={ev.id}
                           className="rounded-xl overflow-hidden border border-[#c8b898] bg-white hover:border-[#a8884a] hover:shadow-md transition-all duration-200 flex items-stretch group">
-                          {/* Date box — same as compact tiles */}
+                          {/* Date box, same as compact tiles */}
                           <div className="shrink-0 w-16 flex flex-col items-center justify-center py-5 px-2 border-r border-[#ece5d8]">
                             <span className="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#2c1a08] leading-none">{dateNum}</span>
                             <span className="text-[10px] uppercase tracking-[0.15em] text-[#b8892a] font-semibold leading-none mt-1">{dateMon}</span>
@@ -595,8 +595,8 @@ export default function Events() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {[
               { title: "Sacred Festivals",  icon: "🌕", desc: "Guru Purnima, Navaratri, Mahashivaratri, Ram Navami, and other Vedic celebrations marked with ceremony, discourse, and darshan." },
-              { title: "Retreats",          icon: "🏔", desc: "Multi-day immersive retreats at the Guru Ashram in the Himalayas — combining intensive meditation, Vedanta study, and ashram life." },
-              { title: "Yagya & Havan",     icon: "🔥", desc: "Ancient Vedic fire ceremonies conducted by Jagadguru Mahayogi Siddhababa — powerful rites of purification and collective blessing." },
+              { title: "Retreats",          icon: "🏔", desc: "Multi-day immersive retreats at the Guru Ashram in the Himalayas, combining intensive meditation, Vedanta study, and ashram life." },
+              { title: "Yagya & Havan",     icon: "🔥", desc: "Ancient Vedic fire ceremonies conducted by Jagadguru Mahayogi Siddhababa, powerful rites of purification and collective blessing." },
             ].map(c => (
               <div key={c.title}
                 className="bg-white/60 border border-[#e8dece] rounded-2xl p-7 text-center hover:shadow-md hover:bg-white/90 transition-all duration-300">
@@ -658,7 +658,7 @@ export default function Events() {
               Historic Milestones
             </h2>
             <p className="text-[#a09080] text-base max-w-xl mx-auto leading-relaxed">
-              Over the years, Jagadguru Mahayogi Siddhababa has presided over some of the most significant spiritual events in the lineage — grand Mahayagyas, collective anuṣṭhāns, and historic moments of grace.
+              Over the years, Jagadguru Mahayogi Siddhababa has presided over some of the most significant spiritual events in the lineage, grand Mahayagyas, collective anuṣṭhāns, and historic moments of grace.
             </p>
           </div>
 
@@ -673,24 +673,24 @@ export default function Events() {
                   alt={m.title}
                   className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
                 />
-                {/* Gradient overlay — darker at bottom */}
+                {/* Gradient overlay, darker at bottom */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/20 group-hover:from-black/95 transition-all duration-300" />
 
-                {/* Year pill — top left */}
+                {/* Year pill, top left */}
                 <div className="absolute top-4 left-4">
                   <span className="font-['Cormorant_Garamond'] text-sm font-semibold text-white bg-[#b8892a]/80 backdrop-blur-sm px-3 py-1 rounded-full">
                     {m.year}
                   </span>
                 </div>
 
-                {/* Badge — top right */}
+                {/* Badge, top right */}
                 <div className="absolute top-4 right-4">
                   <span className="text-[9px] uppercase tracking-[0.18em] text-[#e8c56a] border border-[#e8c56a]/40 px-2.5 py-1 rounded-full font-medium bg-black/30 backdrop-blur-sm">
                     {m.badge}
                   </span>
                 </div>
 
-                {/* Content — bottom */}
+                {/* Content, bottom */}
                 <div className="absolute bottom-0 left-0 right-0 p-5">
                   <h3 className="font-['Cormorant_Garamond'] text-xl md:text-2xl font-light text-white leading-snug mb-2">
                     {m.title}

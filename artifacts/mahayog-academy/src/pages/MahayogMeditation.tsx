@@ -29,7 +29,7 @@ const YOGAS = [
     cx: 160, cy: 340, r: 140,
     fill: "#7a9e7e", stroke: "#5e8862",
     labelX: 105, labelY: 395,
-    desc: "Dissolution of individual consciousness into the universal through deep absorption — focusing on subtle energy centers (chakras) and the inner sound (nāda).",
+    desc: "Dissolution of individual consciousness into the universal through deep absorption, focusing on subtle energy centers (chakras) and the inner sound (nāda).",
   },
   {
     id: "raja",
@@ -37,11 +37,11 @@ const YOGAS = [
     cx: 340, cy: 340, r: 140,
     fill: "#b8892a", stroke: "#9d7422",
     labelX: 395, labelY: 395,
-    desc: "The royal path of meditation — mastery of the mind through concentration, contemplation, and ultimate absorption (samādhi), leading to direct Self-realization.",
+    desc: "The royal path of meditation, mastery of the mind through concentration, contemplation, and ultimate absorption (samādhi), leading to direct Self-realization.",
   },
 ];
 
-const MAHAYOG_DESC = "Mahāyog naturally integrates all four yoga paths. As Kundalini awakens through Shaktipat initiation, each yoga unfolds organically within the practitioner — without effort or deliberate technique.";
+const MAHAYOG_DESC = "Mahāyog naturally integrates all four yoga paths. As Kundalini awakens through Shaktipat initiation, each yoga unfolds organically within the practitioner, without effort or deliberate technique.";
 
 function VennDiagram() {
   const [hovered, setHovered] = useState<string | null>(null);
@@ -53,7 +53,7 @@ function VennDiagram() {
   return (
     <div className="flex flex-col items-center gap-4 w-full">
 
-      {/* Hover hint — fades out once user starts interacting */}
+      {/* Hover hint, fades out once user starts interacting */}
       <div className={`flex items-center gap-2 transition-opacity duration-500 ${hovered ? "opacity-0" : "opacity-100"}`}>
         <span className="w-1.5 h-1.5 rounded-full bg-[#b8892a] animate-ping inline-block" />
         <span className="text-xs uppercase tracking-[0.2em] text-[#b8892a] font-medium">Hover each circle to explore</span>
@@ -73,7 +73,7 @@ function VennDiagram() {
               onMouseEnter={() => setHovered(y.id)}
               onMouseLeave={() => setHovered(null)}
             />
-            {/* Two-line label: "Hatha" + "Yoga" — centered inside the circle's outer quadrant */}
+            {/* Two-line label: "Hatha" + "Yoga", centered inside the circle's outer quadrant */}
             <text
               x={y.labelX} y={y.labelY}
               textAnchor="middle"
@@ -98,7 +98,7 @@ function VennDiagram() {
           </g>
         ))}
 
-        {/* Centre — Mahayog */}
+        {/* Centre, Mahayog */}
         <circle
           cx="250" cy="250" r="82"
           fill="#3d3830"
@@ -117,7 +117,7 @@ function VennDiagram() {
         </text>
       </svg>
 
-      {/* Description panel — only shown on hover */}
+      {/* Description panel, only shown on hover */}
       {activeName && (
         <div className="w-full max-w-md rounded-2xl border border-[#e0d0b8] bg-white/80 px-6 py-4 text-center transition-all duration-300">
           <p className="font-['Cormorant_Garamond'] text-xl font-semibold text-[#b8892a] mb-1">{activeName}</p>
@@ -143,7 +143,7 @@ const BENEFIT_CATEGORIES = [
         icon: "transform",
         title: "Positive Transformation",
         subtitle: "Renewed Outlook",
-        desc: "Negative habits lose their grip; joy, optimism, and resilience arise — not as forced attitudes, but as the result of genuine inner fulfillment.",
+        desc: "Negative habits lose their grip; joy, optimism, and resilience arise, not as forced attitudes, but as the result of genuine inner fulfillment.",
       },
       {
         icon: "relief",
@@ -161,7 +161,7 @@ const BENEFIT_CATEGORIES = [
         icon: "ajapa",
         title: "Ajapa Japa",
         subtitle: "Effortless Divine Name",
-        desc: "The sacred primordial Name (Rām) begins reverberating inside continuously. 'Without japa, the japa happens' — whether working, resting, or sleeping.",
+        desc: "The sacred primordial Name (Rām) begins reverberating inside continuously. 'Without japa, the japa happens', whether working, resting, or sleeping.",
       },
       {
         icon: "nada",
@@ -262,19 +262,19 @@ const FAQ_GROUPS: { theme: string; items: { q: string; a: string }[] }[] = [
       },
       {
         q: "How to Awaken the Kundalini Safely?",
-        a: "Through Guru Grace (The Automatic Method): Jagadguru Mahayogi Siddhababa can awaken a seeker's Kundalini through touch, sight, mantra, or pure intention. This initiation — known as Shaktipat — sparks automatic deep purification, heightened awareness, and accelerated transformation.\n\nWith the guidance of an enlightened Master, Kundalini rises naturally, safely, and in alignment with the seeker's individual journey.\n\nPersonal Effort (The Manual Method): Many attempt to awaken Kundalini through books or online guides. This approach carries significant risks without proper guidance — the energy is potent and can cause physical, emotional, and psychological imbalances if not properly directed.",
+        a: "Through Guru Grace (The Automatic Method): Jagadguru Mahayogi Siddhababa can awaken a seeker's Kundalini through touch, sight, mantra, or pure intention. This initiation, known as Shaktipat, sparks automatic deep purification, heightened awareness, and accelerated transformation.\n\nWith the guidance of an enlightened Master, Kundalini rises naturally, safely, and in alignment with the seeker's individual journey.\n\nPersonal Effort (The Manual Method): Many attempt to awaken Kundalini through books or online guides. This approach carries significant risks without proper guidance, the energy is potent and can cause physical, emotional, and psychological imbalances if not properly directed.",
       },
       {
         q: "What happens once Kundalini is Awakened?",
-        a: "After awakening, the practitioner becomes the observer during meditation. Experiences depend on where the Kundalini focuses across the three body types:\n\n• Physical Body — Gross sensations such as automatic asanas, mudras, shaking, and mantra recitation.\n• Subtle Body — Inner visualizations, energy flow through the 72,000 nāḍīs (energy channels).\n• Causal Body — Deep internal transformation through the cleansing of Samskaras, felt as growing contentment and inner peace.\n\nEach individual's experience will be unique, as the Kundalini moves through the chakra system according to the practitioner's individual constitution.",
+        a: "After awakening, the practitioner becomes the observer during meditation. Experiences depend on where the Kundalini focuses across the three body types:\n\n• Physical Body, Gross sensations such as automatic asanas, mudras, shaking, and mantra recitation.\n• Subtle Body, Inner visualizations, energy flow through the 72,000 nāḍīs (energy channels).\n• Causal Body, Deep internal transformation through the cleansing of Samskaras, felt as growing contentment and inner peace.\n\nEach individual's experience will be unique, as the Kundalini moves through the chakra system according to the practitioner's individual constitution.",
       },
       {
         q: "What are the Stages of Kundalini Awakening?",
-        a: "Kundalini awakening is not a single moment, but a gradual inner unfolding through three broad phases:\n\n1. Awakening Begins — During Mahayog Meditation training, the Guru raises the Kundalini from its dormant position. Practitioners often report increased clarity, sensitivity, and awareness of inner movement.\n\n2. Purification — As inner energy becomes active, unresolved impressions surface. The Kundalini purifies body and mind. Emotional patterns begin to be released; dreams become more vivid; awareness refines.\n\n3. Integration — The flow of energy stabilizes. Awareness becomes naturally expressed through daily life — characterized by steadiness, discernment, and ease. Inner silence and clarity begin to inform relationships, work, and service.",
+        a: "Kundalini awakening is not a single moment, but a gradual inner unfolding through three broad phases:\n\n1. Awakening Begins, During Mahayog Meditation training, the Guru raises the Kundalini from its dormant position. Practitioners often report increased clarity, sensitivity, and awareness of inner movement.\n\n2. Purification, As inner energy becomes active, unresolved impressions surface. The Kundalini purifies body and mind. Emotional patterns begin to be released; dreams become more vivid; awareness refines.\n\n3. Integration, The flow of energy stabilizes. Awareness becomes naturally expressed through daily life, characterized by steadiness, discernment, and ease. Inner silence and clarity begin to inform relationships, work, and service.",
       },
       {
         q: "What is the Chakra System?",
-        a: "Chakras are subtle energy centers — focal points of consciousness, formed at the junctions where the three main subtle energy channels (sushumna, ida, and pingala) converge.\n\nIn Mahayog, chakras are not stimulated or controlled. Through the natural rising of Kundalini, they are engaged as needed for the practitioner. While over 32,000 chakras exist, seven are considered primary:\n\nMuladhara (base of spine) — Stability, grounding\nSvadhisthana (lower abdomen) — Flow, creativity\nManipur (solar plexus) — Will, inner strength\nAnahata (heart) — Compassion, balance\nVishuddha (throat) — Expression, truthfulness\nAjna (between eyebrows) — Insight, perception\nSahasrara (crown) — Stillness, unity, expanded awareness",
+        a: "Chakras are subtle energy centers, focal points of consciousness, formed at the junctions where the three main subtle energy channels (sushumna, ida, and pingala) converge.\n\nIn Mahayog, chakras are not stimulated or controlled. Through the natural rising of Kundalini, they are engaged as needed for the practitioner. While over 32,000 chakras exist, seven are considered primary:\n\nMuladhara (base of spine), Stability, grounding\nSvadhisthana (lower abdomen), Flow, creativity\nManipur (solar plexus), Will, inner strength\nAnahata (heart), Compassion, balance\nVishuddha (throat), Expression, truthfulness\nAjna (between eyebrows), Insight, perception\nSahasrara (crown), Stillness, unity, expanded awareness",
       },
     ],
   },
@@ -283,11 +283,11 @@ const FAQ_GROUPS: { theme: string; items: { q: string; a: string }[] }[] = [
     items: [
       {
         q: "Who can attend?",
-        a: "The Mahayog Meditation program is open to sincere seekers of all backgrounds, nationalities, and spiritual traditions. No prior experience with yoga or meditation is required — the only prerequisite is a genuine openness to inner exploration and a commitment to attend the full 5 days.",
+        a: "The Mahayog Meditation program is open to sincere seekers of all backgrounds, nationalities, and spiritual traditions. No prior experience with yoga or meditation is required, the only prerequisite is a genuine openness to inner exploration and a commitment to attend the full 5 days.",
       },
       {
         q: "Do I need prior meditation experience?",
-        a: "No. The program welcomes complete beginners as well as experienced practitioners. The initiation process is guided entirely by the Guru's transmission — it does not depend on prior technique or knowledge. Come as you are.",
+        a: "No. The program welcomes complete beginners as well as experienced practitioners. The initiation process is guided entirely by the Guru's transmission, it does not depend on prior technique or knowledge. Come as you are.",
       },
       {
         q: "Are there health or age requirements?",
@@ -299,7 +299,7 @@ const FAQ_GROUPS: { theme: string; items: { q: string; a: string }[] }[] = [
       },
       {
         q: "What languages are sessions conducted in?",
-        a: "Sessions at Nepal centers are conducted primarily in Nepali, with English support available where needed. International online sessions are conducted primarily in English, Nepali, or Hindi — whichever best serves the participants present. To help us accommodate you, please indicate the languages you speak in the registration form.",
+        a: "Sessions at Nepal centers are conducted primarily in Nepali, with English support available where needed. International online sessions are conducted primarily in English, Nepali, or Hindi, whichever best serves the participants present. To help us accommodate you, please indicate the languages you speak in the registration form.",
       },
     ],
   },
@@ -308,7 +308,7 @@ const FAQ_GROUPS: { theme: string; items: { q: string; a: string }[] }[] = [
     items: [
       {
         q: "What happens during the 5-day workshop?",
-        a: "The workshop is a structured, immersive introduction to Mahayog Meditation, culminating in the transmission of Shaktipat initiation by Jagadguru Mahayogi Siddhababa — in person or through his direct representatives.\n\nEach day includes guided meditation sessions, teachings on Kundalini, the subtle body, and the stages of inner awakening, and open time for questions. The program builds progressively, preparing each participant to receive initiation safely and with awareness.\n\nFull attendance across all five days is essential. The days build upon each other and initiation is complete for those who have participated in the full program.",
+        a: "The workshop is a structured, immersive introduction to Mahayog Meditation, culminating in the transmission of Shaktipat initiation by Jagadguru Mahayogi Siddhababa, in person or through his direct representatives.\n\nEach day includes guided meditation sessions, teachings on Kundalini, the subtle body, and the stages of inner awakening, and open time for questions. The program builds progressively, preparing each participant to receive initiation safely and with awareness.\n\nFull attendance across all five days is essential. The days build upon each other and initiation is complete for those who have participated in the full program.",
       },
       {
         q: "What are the daily timings?",
@@ -316,7 +316,7 @@ const FAQ_GROUPS: { theme: string; items: { q: string; a: string }[] }[] = [
       },
       {
         q: "Can I join if I miss a day?",
-        a: "No — full attendance across all five days is required for program completion and to receive initiation. If you are unable to commit to the full five days for a given month, we encourage you to register for a future intake instead. Regular workshops are held monthly, typically beginning on the first Saturday — additional programmes may also be scheduled throughout the year.",
+        a: "No, full attendance across all five days is required for program completion and to receive initiation. If you are unable to commit to the full five days for a given month, we encourage you to register for a future intake instead. Regular workshops are held monthly, typically beginning on the first Saturday, additional programmes may also be scheduled throughout the year.",
       },
     ],
   },
@@ -325,15 +325,15 @@ const FAQ_GROUPS: { theme: string; items: { q: string; a: string }[] }[] = [
     items: [
       {
         q: "How will I receive the Zoom link?",
-        a: "Once your registration is confirmed, the Zoom link for your selected workshop will be sent to the email address you provide — typically a few days before the workshop begins. Please check your spam or promotions folder if you do not see it in your inbox.",
+        a: "Once your registration is confirmed, the Zoom link for your selected workshop will be sent to the email address you provide, typically a few days before the workshop begins. Please check your spam or promotions folder if you do not see it in your inbox.",
       },
       {
         q: "What time zone are online sessions held in?",
-        a: "Session times are based on the time zone of the center conducting the workshop and may vary. The confirmed schedule for your selected intake — including the relevant time zone — will be sent to you with the Zoom link before the workshop begins.",
+        a: "Session times are based on the time zone of the center conducting the workshop and may vary. The confirmed schedule for your selected intake, including the relevant time zone, will be sent to you with the Zoom link before the workshop begins.",
       },
       {
         q: "What equipment do I need?",
-        a: "A stable internet connection and a device with a camera and microphone are required — a laptop or desktop is recommended for the best experience. A quiet, private space where you can sit undisturbed during sessions is important. Please ensure your camera is on throughout the sessions, as the instructor uses video to observe posture and ensure techniques are being practised correctly.",
+        a: "A stable internet connection and a device with a camera and microphone are required, a laptop or desktop is recommended for the best experience. A quiet, private space where you can sit undisturbed during sessions is important. Please ensure your camera is on throughout the sessions, as the instructor uses video to observe posture and ensure techniques are being practised correctly.",
       },
     ],
   },
@@ -342,15 +342,15 @@ const FAQ_GROUPS: { theme: string; items: { q: string; a: string }[] }[] = [
     items: [
       {
         q: "Is there a fee for the Mahayog Meditation program?",
-        a: "There is no fixed fee for participation or initiation. The teachings are offered freely as a spiritual gift.\n\nDonations — known in the yogic tradition as Guru dakshina — are welcomed as an expression of gratitude and reciprocity, and may be offered at the center at your discretion. No one is turned away for inability to contribute.\n\nFor those attending in person at a Nepal center, contributions may be made directly at the center. For international participants joining online, guidance on offering Guru dakshina will be shared alongside the workshop details.",
+        a: "There is no fixed fee for participation or initiation. The teachings are offered freely as a spiritual gift.\n\nDonations, known in the yogic tradition as Guru dakshina, are welcomed as an expression of gratitude and reciprocity, and may be offered at the center at your discretion. No one is turned away for inability to contribute.\n\nFor those attending in person at a Nepal center, contributions may be made directly at the center. For international participants joining online, guidance on offering Guru dakshina will be shared alongside the workshop details.",
       },
       {
         q: "When should I register?",
-        a: "We recommend registering as early as possible, as spaces are limited. Registration typically closes a few days before the workshop date. If you miss a particular month's intake, you are welcome to register for the following month — workshops run on the first Saturday of every month.",
+        a: "We recommend registering as early as possible, as spaces are limited. Registration typically closes a few days before the workshop date. If you miss a particular month's intake, you are welcome to register for the following month, workshops run on the first Saturday of every month.",
       },
       {
         q: "Can I cancel or reschedule?",
-        a: "If you are unable to attend your selected workshop, please notify your center as soon as possible. Your registration can be transferred to a future monthly intake. As there is no fee involved, there is no financial penalty — we simply ask for timely notice so your place can be offered to another seeker.",
+        a: "If you are unable to attend your selected workshop, please notify your center as soon as possible. Your registration can be transferred to a future monthly intake. As there is no fee involved, there is no financial penalty, we simply ask for timely notice so your place can be offered to another seeker.",
       },
     ],
   },
@@ -363,11 +363,11 @@ const FAQ_GROUPS: { theme: string; items: { q: string; a: string }[] }[] = [
       },
       {
         q: "How do I continue my practice?",
-        a: "Participants receive instruction in Mahayog self-practice, which can be maintained at home without additional equipment or guidance. Ongoing resources — including teachings, group sittings (satsang), and access to the broader Mahayog community — are available through your center and through this website.",
+        a: "Participants receive instruction in Mahayog self-practice, which can be maintained at home without additional equipment or guidance. Ongoing resources, including teachings, group sittings (satsang), and access to the broader Mahayog community, are available through your center and through this website.",
       },
       {
         q: "Is there ongoing support after initiation?",
-        a: "Yes. Mahayog is not a one-time event — it is a living practice. Your local center provides regular satsang (community gatherings) and access to the Guru's teachings. International participants are also supported through online satsang and the global Mahayog network.",
+        a: "Yes. Mahayog is not a one-time event, it is a living practice. Your local center provides regular satsang (community gatherings) and access to the Guru's teachings. International participants are also supported through online satsang and the global Mahayog network.",
       },
     ],
   },
@@ -601,7 +601,7 @@ export default function MahayogMeditation() {
               Meditation is a process of inner alignment, where the mind naturally settles and awareness turns toward its source.
             </p>
             <p className="text-base leading-relaxed text-[#5a5248] mb-4">
-              Its ultimate aim is to realize the true Self and Ultimate Reality—freeing oneself from ignorance and ego. Along the way, practitioners often experience:
+              Its ultimate aim is to realize the true Self and Ultimate Reality, freeing oneself from ignorance and ego. Along the way, practitioners often experience:
             </p>
             <div className="space-y-2">
               {[
@@ -658,7 +658,7 @@ export default function MahayogMeditation() {
 
       {/* ── HOW IT WORKS ── */}
       <section id="how-it-works" className="pt-0 pb-20 bg-white">
-        {/* Wave top edge — white wave cuts into the cream section above */}
+        {/* Wave top edge, white wave cuts into the cream section above */}
         <div className="w-full -mt-14 relative z-10">
           <svg viewBox="0 0 1440 90" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" className="w-full block">
             <path d="M0,90 C240,20 480,70 720,35 C960,0 1200,55 1440,25 L1440,90 L0,90 Z" fill="white"/>
@@ -678,7 +678,7 @@ export default function MahayogMeditation() {
                 The Practitioner as Observer
               </h3>
               <p className="text-base leading-relaxed text-[#5a5248] mb-5">
-                In Mahayog, the practitioner is not an active "doer" but an "observer" — meditative experiences and states manifest automatically. This practice cannot be learned from books alone; it is awakened experientially through <span className="text-[#b8892a] font-semibold italic">Shaktipat</span> initiation.
+                In Mahayog, the practitioner is not an active "doer" but an "observer", meditative experiences and states manifest automatically. This practice cannot be learned from books alone; it is awakened experientially through <span className="text-[#b8892a] font-semibold italic">Shaktipat</span> initiation.
               </p>
               <p className="text-base leading-relaxed text-[#5a5248] mb-5">
                 Upon receiving <span className="text-[#b8892a] font-semibold italic">Shaktipat</span> Dīkṣā, a spark is transmitted that awakens the dormant Kundalini energy coiled at the base of the spine. The Kundalini Shakti begins to rise through the subtle chakra system, purifying and opening the seeker's inner energy channels (nāḍīs).
@@ -709,7 +709,7 @@ export default function MahayogMeditation() {
 
           {/* Steps */}
           <div className="flex flex-col md:flex-row items-start gap-6 md:gap-0 relative mb-16">
-            {/* Connecting lines desktop — two segments that stop at each circle's edge */}
+            {/* Connecting lines desktop, two segments that stop at each circle's edge */}
             <div className="hidden md:block absolute top-[48px] left-[calc(16.66%+48px)] w-[calc(33.33%-96px)] h-px bg-gradient-to-r from-white/20 to-white/50" />
             <div className="hidden md:block absolute top-[48px] left-[calc(50%+48px)] w-[calc(33.33%-96px)] h-px bg-gradient-to-r from-white/50 to-white/20" />
 
@@ -758,7 +758,7 @@ export default function MahayogMeditation() {
               Register for the Workshop
               <ArrowRight className="w-4 h-4" strokeWidth={2} />
             </Link>
-            <p className="text-xs text-white/50 mt-4">Upcoming dates available — limited places per retreat.</p>
+            <p className="text-xs text-white/50 mt-4">Upcoming dates available, limited places per retreat.</p>
           </div>
 
         </div>
@@ -823,7 +823,7 @@ export default function MahayogMeditation() {
                       </div>
                     </div>
 
-                    {/* Read more hint — collapses on hover */}
+                    {/* Read more hint, collapses on hover */}
                     <div className="overflow-hidden max-h-6 group-hover:max-h-0 transition-all duration-300 ease-in-out">
                       <p className="mt-2 text-[11px] text-[#b8892a] tracking-wide flex items-center gap-1 opacity-100 group-hover:opacity-0 transition-opacity duration-200">
                         <span>Read more</span>
@@ -831,7 +831,7 @@ export default function MahayogMeditation() {
                       </p>
                     </div>
 
-                    {/* Description — slides in on hover */}
+                    {/* Description, slides in on hover */}
                     <div className="overflow-hidden max-h-0 group-hover:max-h-48 transition-all duration-500 ease-in-out">
                       <p className="text-sm text-[#5a5248] leading-relaxed pt-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-150">{b.desc}</p>
                     </div>
@@ -859,10 +859,10 @@ export default function MahayogMeditation() {
                 Ancient Origins & Revival
               </h2>
               <p className="text-base leading-relaxed text-[#5a5248] mb-5">
-                Himalayan Siddha Mahāyog is the revival of Surat-Śhabda Yoga — literally the "union of the soul (surat) with the divine Word or sound (shabd)." Communion with the divine Sound Current is known to be the only effective means for liberating the soul, according to spiritual luminaries such as Guru Nanak.
+                Himalayan Siddha Mahāyog is the revival of Surat-Śhabda Yoga, literally the "union of the soul (surat) with the divine Word or sound (shabd)." Communion with the divine Sound Current is known to be the only effective means for liberating the soul, according to spiritual luminaries such as Guru Nanak.
               </p>
               <p className="text-base leading-relaxed text-[#5a5248] mb-5">
-                Nearly 600–700 years ago, the great Saint Jagadguru Ramanandacharya propagated this divine knowledge for the upliftment of people. His lineage included luminaries such as Kabir, Ravidas, Tulsidas, and Mira Bai — all of whom emphasized that sincere chanting of the Divine Name and listening to the inner sound can lead to the highest realization.
+                Nearly 600–700 years ago, the great Saint Jagadguru Ramanandacharya propagated this divine knowledge for the upliftment of people. His lineage included luminaries such as Kabir, Ravidas, Tulsidas, and Mira Bai, all of whom emphasized that sincere chanting of the Divine Name and listening to the inner sound can lead to the highest realization.
               </p>
               <p className="text-base leading-relaxed text-[#5a5248] mb-8">
                 Over time, this inner yogic science became esoteric, surviving only among a few Himalayan sages for 200–400 years, rarely taught openly. Its contemporary resurgence is considered a divine blessing for humanity.
@@ -871,7 +871,7 @@ export default function MahayogMeditation() {
                 <div className="flex-1">
                   <span className="uppercase tracking-[0.2em] text-xs text-[#b8892a] font-semibold block mb-3">Revival by the Guru</span>
                   <p className="text-base leading-relaxed text-[#5a5248]">
-                    In the present era, Surat-Śhabda Yoga has been re-introduced as Himalayan Siddha Mahayog by <strong className="text-[#3d3830]">Anant Shri Vibhushit Jagadguru Ramanandacharya Swami Ramakrishnacharya Ji Maharaj</strong> — known to devotees as Jagadguru Mahayogi Siddhababa. His Holiness is recognized for his mastery of samādhi and his unique ability to transmit that state to others. Under his guidance, thousands have received Kundalini awakening and advanced spiritual progression.
+                    In the present era, Surat-Śhabda Yoga has been re-introduced as Himalayan Siddha Mahayog by <strong className="text-[#3d3830]">Anant Shri Vibhushit Jagadguru Ramanandacharya Swami Ramakrishnacharya Ji Maharaj</strong>, known to devotees as Jagadguru Mahayogi Siddhababa. His Holiness is recognized for his mastery of samādhi and his unique ability to transmit that state to others. Under his guidance, thousands have received Kundalini awakening and advanced spiritual progression.
                   </p>
                   <a
                     href="#"
@@ -883,7 +883,7 @@ export default function MahayogMeditation() {
                 </div>
                 <img
                   src={`${import.meta.env.BASE_URL}images/gurudev-sketch.png`}
-                  alt="Jagadguru Mahayogi Siddhababa — sketch portrait"
+                  alt="Jagadguru Mahayogi Siddhababa, sketch portrait"
                   className="w-32 shrink-0 rounded-xl object-cover shadow-sm"
                 />
               </div>
@@ -926,7 +926,7 @@ export default function MahayogMeditation() {
             </div>
           </div>
 
-          {/* Bottom CTA — links to future Lineage page */}
+          {/* Bottom CTA, links to future Lineage page */}
           <div className="mt-14 pt-10 border-t border-[#e0d0b8] flex flex-col sm:flex-row items-center justify-between gap-4">
             <div>
               <p className="font-['Cormorant_Garamond'] text-xl text-[#3d3830] font-light">Discover the Full Lineage of the Tradition</p>
@@ -970,7 +970,7 @@ export default function MahayogMeditation() {
           backgroundPosition: "center 40%",
         }}
       >
-        {/* dark overlay — keeps text readable */}
+        {/* dark overlay, keeps text readable */}
         <div className="absolute inset-0 pointer-events-none"
           style={{ background: "linear-gradient(135deg, rgba(18,7,1,0.88) 0%, rgba(42,18,4,0.82) 50%, rgba(20,10,2,0.90) 100%)" }}
         />
@@ -1019,7 +1019,7 @@ export default function MahayogMeditation() {
               <span className="text-sm text-[#7a7068] hover:text-[#b8892a] transition-colors cursor-pointer">About the Academy</span>
             </Link>
             <span className="text-sm text-[#7a7068]">·</span>
-            <p className="text-xs text-[#9a8f84]">A not-for-profit, volunteer-run organization — Nepal</p>
+            <p className="text-xs text-[#9a8f84]">A not-for-profit, volunteer-run organization, Nepal</p>
           </div>
         </div>
       </footer>

@@ -57,7 +57,7 @@ export default function Home() {
             <div className="h-px w-8 bg-[#d4a843]/60" />
           </div>
           <p className="font-['Cormorant_Garamond'] text-2xl md:text-3xl font-light text-[#4a3f34] leading-relaxed">
-            A not-for-profit, volunteer-run academy preserving and sharing authentic Vedic wisdom for holistic well-being — body, mind, and spirit.
+            A not-for-profit, volunteer-run academy preserving and sharing authentic Vedic wisdom for holistic well-being, body, mind, and spirit.
           </p>
         </div>
       </section>
@@ -68,7 +68,7 @@ export default function Home() {
           <span className="font-['Cormorant_Garamond'] text-lg font-medium text-[#b8892a]">
             Mahayogi Siddhababa Spiritual Academy
           </span>
-          <p className="text-xs text-[#9a8f84]">A not-for-profit, volunteer-run organization — Nepal</p>
+          <p className="text-xs text-[#9a8f84]">A not-for-profit, volunteer-run organization, Nepal</p>
         </div>
       </footer>
     </div>

@@ -17,17 +17,17 @@ const PILLARS = [
   {
     skt: "Seva",
     label: "Selfless Service",
-    desc: "Acting in the world without attachment to reward — service as a natural expression of expanded awareness and care for all.",
+    desc: "Acting in the world without attachment to reward, service as a natural expression of expanded awareness and care for all.",
   },
   {
     skt: "Sumiran",
     label: "Inner Remembrance",
-    desc: "Continuous inner recognition of the divine source — an unbroken thread of awareness woven through everyday life.",
+    desc: "Continuous inner recognition of the divine source, an unbroken thread of awareness woven through everyday life.",
   },
   {
     skt: "Samarpan",
     label: "Wholehearted Surrender",
-    desc: "The deepest act of trust — releasing the small self's grip and opening fully to the wisdom of the source of creation.",
+    desc: "The deepest act of trust, releasing the small self's grip and opening fully to the wisdom of the source of creation.",
   },
 ];
 
@@ -41,19 +41,19 @@ const CREDENTIALS = [
     title: "Jagadguru",
     sub: "Guru of the World",
     teaser: "A title reserved for a rare master whose influence extends beyond sectarian boundaries.",
-    body: `The term "Jagadguru" is derived from the Sanskrit jagat (world or cosmos) and guru (one who dispels darkness). In 2019, this title was formally bestowed upon His Holiness by an international assembly of realized sages representing all six major Sanātana Dharma lineages: Vaiṣṇavism, Śaivism, Śāktism, Smārtism, Sauryaism, and Gāṇapatyaism.\n\nDuring the ceremony, his mastery of samādhi, his capacity to guide others into higher states of awareness, and his completion of the Shree Ram Tārak Brahma Mahāyajña were especially noted. His monastic name was formally conferred as Jagadguru Shree Ramanandacharya Swami Shree Ramakrishnacharya Ji Maharaj, and he was bestowed the tridaṇḍam — the sacred staff symbolizing complete dedication of body, mind, and speech to divine service.`,
+    body: `The term "Jagadguru" is derived from the Sanskrit jagat (world or cosmos) and guru (one who dispels darkness). In 2019, this title was formally bestowed upon His Holiness by an international assembly of realized sages representing all six major Sanātana Dharma lineages: Vaiṣṇavism, Śaivism, Śāktism, Smārtism, Sauryaism, and Gāṇapatyaism.\n\nDuring the ceremony, his mastery of samādhi, his capacity to guide others into higher states of awareness, and his completion of the Shree Ram Tārak Brahma Mahāyajña were especially noted. His monastic name was formally conferred as Jagadguru Shree Ramanandacharya Swami Shree Ramakrishnacharya Ji Maharaj, and he was bestowed the tridaṇḍam, the sacred staff symbolizing complete dedication of body, mind, and speech to divine service.`,
   },
   {
     title: "Shaktipat Acharya",
     sub: "Transmission of Kundalini Awakening",
     teaser: "The sacred capacity to awaken dormant spiritual energy within a sincere seeker.",
-    body: `Śakti refers to the primordial spiritual energy, often described as Kundalini, while pāta signifies descent. Shaktipat is the sacred transmission through which a realized Guru awakens this dormant energy within a sincere seeker.\n\nJagadguru Mahayogi Siddhababa is recognized as a Shaktipat Acharya, imparting this awakening through various means — glance, mantra, touch, or pure intention — according to the readiness of the seeker. This transmission initiates the inner journey of transformation under the guidance of the Guru's grace.`,
+    body: `Śakti refers to the primordial spiritual energy, often described as Kundalini, while pāta signifies descent. Shaktipat is the sacred transmission through which a realized Guru awakens this dormant energy within a sincere seeker.\n\nJagadguru Mahayogi Siddhababa is recognized as a Shaktipat Acharya, imparting this awakening through various means, glance, mantra, touch, or pure intention, according to the readiness of the seeker. This transmission initiates the inner journey of transformation under the guidance of the Guru's grace.`,
   },
   {
     title: "Samādhi Siddha Puruṣa",
     sub: "Master of Samādhi",
     teaser: "His Holiness attained mastery of samādhi from a very young age.",
-    body: `His Holiness attained mastery of samādhi — the highest state of yogic absorption — from a very young age. In later years, at the request of his disciples, he publicly demonstrated bhū-samādhi (underground samādhi) on multiple occasions, drawing wide attention to the experiential depth of yogic realization described in the Vedic tradition.\n\nThese demonstrations have inspired renewed inquiry into Vedic science and direct spiritual experience, highlighting the practical power of disciplined inner practice.`,
+    body: `His Holiness attained mastery of samādhi, the highest state of yogic absorption, from a very young age. In later years, at the request of his disciples, he publicly demonstrated bhū-samādhi (underground samādhi) on multiple occasions, drawing wide attention to the experiential depth of yogic realization described in the Vedic tradition.\n\nThese demonstrations have inspired renewed inquiry into Vedic science and direct spiritual experience, highlighting the practical power of disciplined inner practice.`,
   },
   {
     title: "Ayurveda Acharya",
@@ -63,13 +63,13 @@ const CREDENTIALS = [
   },
   {
     title: "Master of Himalayan Siddha Mahayog",
-    sub: "Brahmavidyā — Knowledge of Ultimate Truth",
+    sub: "Brahmavidyā, Knowledge of Ultimate Truth",
     teaser: "A powerful meditative path revived from Himalayan sages, now accessible to seekers worldwide.",
-    body: `Himalayan Siddha Mahayog is a powerful and accessible meditative path, recognized as Brahmavidyā — the knowledge of ultimate truth. This practice unfolds through the grace of the Guru and uniquely begins with Kundalini awakening (Shaktipat). Mahayog activates a complete system for physical, mental, and spiritual wellbeing, ultimately guiding the practitioner toward self-realization.\n\nJagadguru Mahayogi Siddhababa revived this sacred practice, which had been concealed and preserved by Himalayan sages for over four centuries. Through his guidance, it is now accessible to seekers worldwide. This living Vedic tradition has been transmitted through an unbroken lineage of enlightened Gurus. His Holiness serves as the present Āchārya of this Brahmavidyā, having received the responsibility from his revered Guru, His Holiness Narayan Das Ji Maharaj.`,
+    body: `Himalayan Siddha Mahayog is a powerful and accessible meditative path, recognized as Brahmavidyā, the knowledge of ultimate truth. This practice unfolds through the grace of the Guru and uniquely begins with Kundalini awakening (Shaktipat). Mahayog activates a complete system for physical, mental, and spiritual wellbeing, ultimately guiding the practitioner toward self-realization.\n\nJagadguru Mahayogi Siddhababa revived this sacred practice, which had been concealed and preserved by Himalayan sages for over four centuries. Through his guidance, it is now accessible to seekers worldwide. This living Vedic tradition has been transmitted through an unbroken lineage of enlightened Gurus. His Holiness serves as the present Āchārya of this Brahmavidyā, having received the responsibility from his revered Guru, His Holiness Narayan Das Ji Maharaj.`,
   },
   {
     title: "Prabal Janasewa Shree",
-    sub: "State Honour for Exemplary Public Service — Awarded by the President of Nepal",
+    sub: "State Honour for Exemplary Public Service, Awarded by the President of Nepal",
     teaser: "A title of national distinction conferred by the President of Nepal for selfless service to society.",
     body: `Prabal Janasewa Shree is one of Nepal's most distinguished state honours, awarded for exemplary, selfless service to the public.\n\nThis title was personally conferred upon His Holiness Jagadguru Mahayogi Siddhababa by Dr. Ram Baran Yadav, former President of Nepal, in recognition of His Holiness's tireless contributions to the spiritual, cultural, educational, and humanitarian welfare of the nation and its people.`,
   },
@@ -77,27 +77,27 @@ const CREDENTIALS = [
 
 const JAGADGURU_SLIDES = [
   { src: "jagadguru-1.jpg", alt: "Siddhababa blessed by Nritya Gopal Das Ji Maharaj, head of Ayodhya's largest temple", caption: "Blessings by Nritya Gopal Das Ji Maharaj, head of Ayodhya's largest temple" },
-  { src: "jagadguru-2.jpg", alt: "Siddhababa receiving the Jagadguru recognition — the formal scroll being presented, 2019", caption: "Receiving the Jagadguru Recognition · 2019", objectPosition: "20% center" },
-  { src: "jagadguru-3.jpg", alt: "Siddhababa holding the tridanda staff alongside senior saints at the ceremony", caption: "With the Tridanda — Swamiji holding the ceremonial staff with senior saints" },
+  { src: "jagadguru-2.jpg", alt: "Siddhababa receiving the Jagadguru recognition, the formal scroll being presented, 2019", caption: "Receiving the Jagadguru Recognition · 2019", objectPosition: "20% center" },
+  { src: "jagadguru-3.jpg", alt: "Siddhababa holding the tridanda staff alongside senior saints at the ceremony", caption: "With the Tridanda, Swamiji holding the ceremonial staff with senior saints" },
   { src: "jagadguru-4.jpg", alt: "The public proclamation declaring Siddhababa as Jagadguru before a large gathering, 2019", caption: "The Public Proclamation · 2019", objectPosition: "center 70%" },
 ];
 
 const SAMADHI_SLIDES = [
-  { src: "guru-samadhi-pokhara.jpg",  alt: "Siddhababa in Bhu Samadhi — Pokhara",                               caption: "Bhu Samadhi · Pokhara" },
+  { src: "guru-samadhi-pokhara.jpg",  alt: "Siddhababa in Bhu Samadhi, Pokhara",                               caption: "Bhu Samadhi · Pokhara" },
   { src: "guru-bhu-samadhi.jpg",      alt: "Siddhababa in underground Bhu Samadhi",                             caption: "Bhu Samadhi · Underground" },
-  { src: "bhu-samadhi-1.jpg",         alt: "Swamiji lying in the samadhi pit before sealing — Chatara 2008",   caption: "Entering the Samadhi · Chatara, 2008" },
-  { src: "bhu-samadhi-2.jpg",         alt: "Devotees sealing the samadhi with a wooden board — Chatara 2008",  caption: "Sealing the Samadhi · Chatara, 2008" },
-  { src: "bhu-samadhi-4.jpg",         alt: "21 kg of barley sown over the samadhi mound — Chatara 2008",       caption: "Barley Sown Above the Samadhi · Chatara, 2008" },
-  { src: "bhu-samadhi-3.jpg",         alt: "Devotees cutting the barley grown over the samadhi — Chatara 2008",caption: "Cutting the Barley · Chatara, 2008" },
-  { src: "bhu-samadhi-5.jpg",         alt: "Swamiji emerging from samadhi, still in deep stillness — Chatara 2008", caption: "Emerging from Samadhi · Chatara, 2008" },
-  { src: "bhu-samadhi-6.jpg",         alt: "Swamiji performing Omkara path and blessings after samadhi — Chatara 2008", caption: "Blessings After Samadhi · Chatara, 2008" },
-  { src: "bhu-samadhi-7.jpg",         alt: "Swamiji receiving felicitation after completing the samadhi — Chatara 2008", caption: "Felicitation · Chatara, 2008" },
-  { src: "bhu-samadhi-8.jpg",         alt: "Thousands of people gathered to witness the Bhu Samadhi — Chatara 2008",    caption: "Thousands Gathered · Chatara, 2008" },
-  { src: "pokhara-samadhi-2.jpg",     alt: "Swamiji in prayer and pranams before entering the Samadhi — Pokhara 2017",  caption: "Pre-Samadhi Prayer · Pokhara, 2017" },
-  { src: "pokhara-samadhi-1.jpg",     alt: "Swamiji lying at rest inside the samadhi chamber — Pokhara 2017",           caption: "Entering the Samadhi · Pokhara, 2017" },
-  { src: "pokhara-samadhi-3.jpg",     alt: "Medical doctors monitoring vital signs during Bhu Samadhi — Pokhara 2017",  caption: "Medical Monitoring · Pokhara, 2017" },
-  { src: "pokhara-samadhi-4.jpg",     alt: "Swamiji emerging from the samadhi, observed by witnesses and media — Pokhara 2017", caption: "Emergence · Pokhara, 2017" },
-  { src: "pokhara-samadhi-5.jpg",     alt: "Swamiji after completing Bhu Samadhi — Pokhara 2017",                       caption: "After the Samadhi · Pokhara, 2017" },
+  { src: "bhu-samadhi-1.jpg",         alt: "Swamiji lying in the samadhi pit before sealing, Chatara 2008",   caption: "Entering the Samadhi · Chatara, 2008" },
+  { src: "bhu-samadhi-2.jpg",         alt: "Devotees sealing the samadhi with a wooden board, Chatara 2008",  caption: "Sealing the Samadhi · Chatara, 2008" },
+  { src: "bhu-samadhi-4.jpg",         alt: "21 kg of barley sown over the samadhi mound, Chatara 2008",       caption: "Barley Sown Above the Samadhi · Chatara, 2008" },
+  { src: "bhu-samadhi-3.jpg",         alt: "Devotees cutting the barley grown over the samadhi, Chatara 2008",caption: "Cutting the Barley · Chatara, 2008" },
+  { src: "bhu-samadhi-5.jpg",         alt: "Swamiji emerging from samadhi, still in deep stillness, Chatara 2008", caption: "Emerging from Samadhi · Chatara, 2008" },
+  { src: "bhu-samadhi-6.jpg",         alt: "Swamiji performing Omkara path and blessings after samadhi, Chatara 2008", caption: "Blessings After Samadhi · Chatara, 2008" },
+  { src: "bhu-samadhi-7.jpg",         alt: "Swamiji receiving felicitation after completing the samadhi, Chatara 2008", caption: "Felicitation · Chatara, 2008" },
+  { src: "bhu-samadhi-8.jpg",         alt: "Thousands of people gathered to witness the Bhu Samadhi, Chatara 2008",    caption: "Thousands Gathered · Chatara, 2008" },
+  { src: "pokhara-samadhi-2.jpg",     alt: "Swamiji in prayer and pranams before entering the Samadhi, Pokhara 2017",  caption: "Pre-Samadhi Prayer · Pokhara, 2017" },
+  { src: "pokhara-samadhi-1.jpg",     alt: "Swamiji lying at rest inside the samadhi chamber, Pokhara 2017",           caption: "Entering the Samadhi · Pokhara, 2017" },
+  { src: "pokhara-samadhi-3.jpg",     alt: "Medical doctors monitoring vital signs during Bhu Samadhi, Pokhara 2017",  caption: "Medical Monitoring · Pokhara, 2017" },
+  { src: "pokhara-samadhi-4.jpg",     alt: "Swamiji emerging from the samadhi, observed by witnesses and media, Pokhara 2017", caption: "Emergence · Pokhara, 2017" },
+  { src: "pokhara-samadhi-5.jpg",     alt: "Swamiji after completing Bhu Samadhi, Pokhara 2017",                       caption: "After the Samadhi · Pokhara, 2017" },
 ];
 
 export default function FounderGuru() {
@@ -161,10 +161,10 @@ export default function FounderGuru() {
               </h2>
               <div className="h-px bg-[#e8dece] mb-6" />
               <p className="text-base text-[#5a5248] leading-relaxed mb-5">
-                Jagadguru Mahayogi Siddhababa — known as <span className="italic text-[#3d3830]">Gurudev</span> by his students — is a Himalayan yogi, Tridaṇḍa-dhārī sādhu, and master of yoga. Deeply versed in the scriptures, Kundalini yoga, classical yogic disciplines, and world religions, he embodies a life of renunciation, realization, and service.
+                Jagadguru Mahayogi Siddhababa, known as <span className="italic text-[#3d3830]">Gurudev</span> by his students, is a Himalayan yogi, Tridaṇḍa-dhārī sādhu, and master of yoga. Deeply versed in the scriptures, Kundalini yoga, classical yogic disciplines, and world religions, he embodies a life of renunciation, realization, and service.
               </p>
               <p className="text-base text-[#5a5248] leading-relaxed mb-8">
-                Through his teaching, personal guidance, and the institutions he has established, he guides individuals and communities seeking well-being, purpose, and inner peace — drawing seekers from across Nepal, India, and the world.
+                Through his teaching, personal guidance, and the institutions he has established, he guides individuals and communities seeking well-being, purpose, and inner peace, drawing seekers from across Nepal, India, and the world.
               </p>
 
               {/* Central quote */}
@@ -257,7 +257,7 @@ export default function FounderGuru() {
             {/* Editorial photo rows */}
             <div className="space-y-16">
 
-              {/* Row 1 — Early Life */}
+              {/* Row 1, Early Life */}
               <div className="grid md:grid-cols-[340px_1fr] gap-10 items-center">
                 <div className="rounded-2xl overflow-hidden shadow-sm shadow-[#b8892a]/10">
                   <img
@@ -273,7 +273,7 @@ export default function FounderGuru() {
                     Spiritual Foundations from a Young Age
                   </h3>
                   <p className="text-base text-[#5a5248] leading-relaxed mb-4">
-                    From a young age, Swami Ramakrishnacharya demonstrated a remarkable depth of yogic absorption. While still a young man, he achieved deep Samādhi — the highest state of meditative union — a feat that took most seekers a lifetime of practice.
+                    From a young age, Swami Ramakrishnacharya demonstrated a remarkable depth of yogic absorption. While still a young man, he achieved deep Samādhi, the highest state of meditative union, a feat that took most seekers a lifetime of practice.
                   </p>
                   <p className="text-base text-[#5a5248] leading-relaxed">
                     Drawn inward from early life, his path was not one of gradual accumulation but of direct realization. His bearing even then conveyed the stillness of a realized soul, long before the world came to know his name.
@@ -281,7 +281,7 @@ export default function FounderGuru() {
                 </div>
               </div>
 
-              {/* Row 2 — Bhu Samadhi (carousel + text) */}
+              {/* Row 2, Bhu Samadhi (carousel + text) */}
               <div className="grid md:grid-cols-[1fr_340px] gap-10 items-center">
                 <div>
                   <p className="text-[10px] uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-3">Bhu Samadhi</p>
@@ -289,10 +289,10 @@ export default function FounderGuru() {
                     Underground Burial in Meditation
                   </h3>
                   <p className="text-base text-[#5a5248] leading-relaxed mb-4">
-                    At the request of students and devotees, His Holiness has publicly demonstrated <span className="italic">Bhu Samadhi</span> — the yogic practice of remaining in deep meditation underground, sealed within an enclosed space for multiple days. These demonstrations were performed across Nepal and witnessed by thousands.
+                    At the request of students and devotees, His Holiness has publicly demonstrated <span className="italic">Bhu Samadhi</span>, the yogic practice of remaining in deep meditation underground, sealed within an enclosed space for multiple days. These demonstrations were performed across Nepal and witnessed by thousands.
                   </p>
                   <p className="text-base text-[#5a5248] leading-relaxed">
-                    His Holiness entered sealed underground chambers — brick-lined pits covered and monitored — and remained in uninterrupted Samādhi for days. Witnesses recorded no signs of ordinary breath or movement. These events have kindled deep faith in the living reality of Vedic yoga, drawing sincere seekers from across the world to his guidance.
+                    His Holiness entered sealed underground chambers, brick-lined pits covered and monitored, and remained in uninterrupted Samādhi for days. Witnesses recorded no signs of ordinary breath or movement. These events have kindled deep faith in the living reality of Vedic yoga, drawing sincere seekers from across the world to his guidance.
                   </p>
                 </div>
 
@@ -344,7 +344,7 @@ export default function FounderGuru() {
                 </div>
               </div>
 
-              {/* Row 4 — Recognition and Blessing */}
+              {/* Row 4, Recognition and Blessing */}
               <div className="grid md:grid-cols-[380px_1fr] gap-10 items-center">
                 {/* Jagadguru carousel */}
                 <div className="rounded-2xl overflow-hidden shadow-sm shadow-[#b8892a]/10 border border-[#e8dece]">
@@ -396,10 +396,10 @@ export default function FounderGuru() {
                     Honored as Jagadguru
                   </h3>
                   <p className="text-base text-[#5a5248] leading-relaxed mb-4">
-                    In 2019, an assembly of spiritual leaders from all major Hindu monastic lineages — Vaishnava, Shaiva, Shakta, and Smarta — honored him with the title <span className="italic">Jagadguru</span> ("world-teacher"), formally recognizing him as a successor of Ramanandacharya and a Guru capable of guiding the entire world.
+                    In 2019, an assembly of spiritual leaders from all major Hindu monastic lineages, Vaishnava, Shaiva, Shakta, and Smarta, honored him with the title <span className="italic">Jagadguru</span> ("world-teacher"), formally recognizing him as a successor of Ramanandacharya and a Guru capable of guiding the entire world.
                   </p>
                   <p className="text-base text-[#5a5248] leading-relaxed">
-                    Under his own Guru (Param Pujya Sri Narayan Das Ji Maharaj of Nasik), he revived Surat-Shabd Yoga and formulated it as <span className="font-medium text-[#3d3830]">Himalayan Siddha Mahayog</span> — sacred knowledge once known only to Himalayan ascetics, now made accessible to sincere seekers worldwide.
+                    Under his own Guru (Param Pujya Sri Narayan Das Ji Maharaj of Nasik), he revived Surat-Shabd Yoga and formulated it as <span className="font-medium text-[#3d3830]">Himalayan Siddha Mahayog</span>, sacred knowledge once known only to Himalayan ascetics, now made accessible to sincere seekers worldwide.
                   </p>
                 </div>
               </div>
@@ -454,10 +454,10 @@ export default function FounderGuru() {
             <div className="grid md:grid-cols-2 gap-12 items-center mb-12">
               <div>
                 <p className="text-base text-[#5a5248] leading-relaxed mb-4">
-                  His Holiness emphasizes three foundational principles for joyful and meaningful living. At the heart of his guidance is the practice of <span className="italic text-[#3d3830]">Himalayan Siddha Mahayog Meditation</span> — an integrated system for fostering mental and physical well-being and inner spiritual development.
+                  His Holiness emphasizes three foundational principles for joyful and meaningful living. At the heart of his guidance is the practice of <span className="italic text-[#3d3830]">Himalayan Siddha Mahayog Meditation</span>, an integrated system for fostering mental and physical well-being and inner spiritual development.
                 </p>
                 <p className="text-base text-[#5a5248] leading-relaxed">
-                  His teachings are intended for people from all walks of life. Rather than encouraging withdrawal from the world, they emphasize living with awareness — where spiritual practice strengthens one's capacity to engage fully and responsibly with family, work, and society alongside the journey to self-realization.
+                  His teachings are intended for people from all walks of life. Rather than encouraging withdrawal from the world, they emphasize living with awareness, where spiritual practice strengthens one's capacity to engage fully and responsibly with family, work, and society alongside the journey to self-realization.
                 </p>
               </div>
               <div>
@@ -588,7 +588,7 @@ export default function FounderGuru() {
             <div className="h-px bg-[#e8dece] mb-8" />
 
             <p className="text-base text-[#5a5248] leading-relaxed max-w-2xl mb-10">
-              Under his guidance, numerous spiritual, educational, and cultural initiatives are being established — each grounded in the conviction that inner realization must serve the world.
+              Under his guidance, numerous spiritual, educational, and cultural initiatives are being established, each grounded in the conviction that inner realization must serve the world.
             </p>
 
             <div className="grid sm:grid-cols-2 gap-4">
@@ -692,7 +692,7 @@ export default function FounderGuru() {
                 {
                   year: "2019",
                   name: "Shree Ram Tārak Brahma Mahāyajña",
-                  desc: "Conducted in Nepal after a gap of 705 years — marking a profound moment of spiritual revival.",
+                  desc: "Conducted in Nepal after a gap of 705 years, marking a profound moment of spiritual revival.",
                 },
                 {
                   year: "2023",
@@ -730,7 +730,7 @@ export default function FounderGuru() {
 
             <div className="mt-10 border-l-2 border-[#b8892a]/40 pl-6 py-1 mb-10">
               <p className="text-base italic text-[#5a5248] leading-relaxed font-['Cormorant_Garamond'] text-lg">
-                Across all these initiatives, His Holiness emphasizes that spiritual realization finds its fullest expression in service — to humanity, to culture, and to the natural world.
+                Across all these initiatives, His Holiness emphasizes that spiritual realization finds its fullest expression in service, to humanity, to culture, and to the natural world.
               </p>
             </div>
 
@@ -762,7 +762,7 @@ export default function FounderGuru() {
             <div className="h-px bg-[#e8dece] mb-8" />
 
             <p className="text-base text-[#5a5248] leading-relaxed max-w-2xl mb-12">
-              Under his guidance, ashrams and meditation centers have been established across Nepal, India, and internationally. These centers serve as spaces for practice, learning, service, and community — supporting reflection, education, and collective well-being.
+              Under his guidance, ashrams and meditation centers have been established across Nepal, India, and internationally. These centers serve as spaces for practice, learning, service, and community, supporting reflection, education, and collective well-being.
             </p>
 
             {/* Centers inline list */}
@@ -814,7 +814,7 @@ export default function FounderGuru() {
                 Blessings Photo of His Holiness
               </h3>
               <p className="text-sm text-[#5a5248] leading-relaxed max-w-md mb-6">
-                A high-resolution photo of Jagadguru Mahayogi Siddhababa for personal devotional use — suitable for printing and altar placement.
+                A high-resolution photo of Jagadguru Mahayogi Siddhababa for personal devotional use, suitable for printing and altar placement.
               </p>
               <a
                 href={`${b}images/gurudev-download.jpg`}

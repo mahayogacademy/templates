@@ -30,7 +30,7 @@ const WAYS = [
     icon: CalendarDays,
     title: "Sacred Events & Festivals",
     sub: "Yagyas, Celebrations & Special Gatherings",
-    desc: "During festivals, Yagyas, and special gatherings, His Holiness holds extended darshan for all present — occasions considered especially auspicious for receiving blessings.",
+    desc: "During festivals, Yagyas, and special gatherings, His Holiness holds extended darshan for all present, occasions considered especially auspicious for receiving blessings.",
     detail: "Contact us to stay informed of upcoming occasions.",
     cta: { label: "Contact Us", href: "/contact" },
     bg: "bg-[#fdf8f0]",
@@ -42,14 +42,14 @@ const ETIQUETTE = [
   { title: "Arrive in stillness", desc: "Take a few quiet breaths before entering the darshan space. Come with an open and receptive heart." },
   { title: "Bring a question or intention", desc: "If you wish to receive personal guidance, reflecting on your question beforehand helps the exchange go deeper." },
   { title: "Receive without agenda", desc: "Darshan is not always verbal. Sometimes the greatest transmission comes in silence. Trust what arises." },
-  { title: "Dress respectfully", desc: "Modest, clean attire is appreciated — covering the shoulders and knees as a mark of reverence." },
+  { title: "Dress respectfully", desc: "Modest, clean attire is appreciated, covering the shoulders and knees as a mark of reverence." },
   { title: "Silence your devices", desc: "Switch your phone to silent. The darshan space is held as sacred ground." },
 ];
 
 const FAQS = [
   {
     q: "Do I need to be a registered student to attend darshan?",
-    a: "For online satsangs, registration in one of the Academy's programmes is generally required. In-person darshan at the ashram is more open — sincere seekers of any background are welcome to visit, though it is advisable to contact the ashram in advance to confirm His Holiness's availability and schedule.",
+    a: "For online satsangs, registration in one of the Academy's programmes is generally required. In-person darshan at the ashram is more open, sincere seekers of any background are welcome to visit, though it is advisable to contact the ashram in advance to confirm His Holiness's availability and schedule.",
   },
   {
     q: "Can I request a personal audience with His Holiness?",
@@ -129,7 +129,7 @@ export default function GuruDarshan() {
               Experience the presence and blessings of His Holiness
             </h2>
             <p className="text-[#5a5248] leading-relaxed mb-5">
-              In the Vedic and yogic traditions, <em>darshan</em> — from the Sanskrit <em>dṛś</em>, meaning "to see" — refers to the sacred experience of beholding a realized master. Yet darshan is not mere sight. It is a living transmission: an encounter in which the seeker, by virtue of proximity and receptivity, may receive the grace and inner influence of the Guru.
+              In the Vedic and yogic traditions, <em>darshan</em>, from the Sanskrit <em>dṛś</em>, meaning "to see", refers to the sacred experience of beholding a realized master. Yet darshan is not mere sight. It is a living transmission: an encounter in which the seeker, by virtue of proximity and receptivity, may receive the grace and inner influence of the Guru.
             </p>
             <p className="text-[#5a5248] leading-relaxed mb-5">
               Jagadguru Mahayogi Siddhababa is recognized as a Shaktipat Acharya, one who can awaken the dormant spiritual energy within a sincere seeker through glance, intention, or presence alone. His darshan is therefore considered a living opportunity for inner transformation, not simply a formal audience.
@@ -153,7 +153,7 @@ export default function GuruDarshan() {
                 "The Guru does not give you something from outside. He reveals what is already present within you, the infinite light that has always been your true nature."
               </p>
               <p className="text-xs uppercase tracking-[0.2em] text-[#b8892a] font-medium">
-                — Jagadguru Mahayogi Siddhababa
+               , Jagadguru Mahayogi Siddhababa
               </p>
             </div>
           </div>
@@ -252,7 +252,7 @@ export default function GuruDarshan() {
               <div className="rounded-xl bg-[#fdf6ec] border border-[#e8dece] p-6">
                 <p className="text-xs uppercase tracking-[0.2em] text-[#b8892a] font-medium mb-3">A Note on Grace</p>
                 <p className="text-sm text-[#5a5248] leading-relaxed">
-                  Darshan is ultimately an act of grace — it is not something that can be forced or engineered. Come as you are. The sincerity of your presence matters far more than outward formality. His Holiness receives all seekers with equal compassion, regardless of where they are on the path.
+                  Darshan is ultimately an act of grace, it is not something that can be forced or engineered. Come as you are. The sincerity of your presence matters far more than outward formality. His Holiness receives all seekers with equal compassion, regardless of where they are on the path.
                 </p>
               </div>
             </div>
@@ -339,7 +339,7 @@ export default function GuruDarshan() {
               <span className="text-sm text-[#7a7068] hover:text-[#b8892a] transition-colors cursor-pointer">About the Academy</span>
             </Link>
             <span className="text-sm text-[#7a7068]">·</span>
-            <p className="text-xs text-[#9a8f84]">A not-for-profit, volunteer-run organization — Nepal</p>
+            <p className="text-xs text-[#9a8f84]">A not-for-profit, volunteer-run organization, Nepal</p>
           </div>
         </div>
       </footer>

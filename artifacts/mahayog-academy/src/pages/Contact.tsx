@@ -83,7 +83,7 @@ export default function Contact() {
       <section className="py-16 px-6">
         <div className="max-w-6xl mx-auto grid md:grid-cols-5 gap-12 items-start">
 
-          {/* LEFT — Info */}
+          {/* LEFT, Info */}
           <div className="md:col-span-2 space-y-8">
             <div>
               <span className="uppercase tracking-[0.25em] text-xs text-[#b8892a] font-medium">Reach Out</span>
@@ -139,7 +139,7 @@ export default function Contact() {
 
           </div>
 
-          {/* RIGHT — Form */}
+          {/* RIGHT, Form */}
           <div className="md:col-span-3">
             {submitted ? (
               <div className="flex flex-col items-center justify-center text-center py-16 px-8 bg-white rounded-2xl border border-[#e8dece] shadow-sm">
@@ -225,7 +225,7 @@ export default function Contact() {
                     value={form.message}
                     onChange={(e) => handleChange("message", e.target.value)}
                     rows={6}
-                    placeholder="Share what brings you here — we would love to hear from you…"
+                    placeholder="Share what brings you here, we would love to hear from you…"
                     className={`w-full px-4 py-3 text-sm rounded-xl border bg-[#faf9f6] text-[#3d3830] placeholder-[#b8ad9e] outline-none transition-colors duration-200 focus:border-[#b8892a] focus:bg-white resize-none ${errors.message ? "border-red-300" : "border-[#e8dece]"}`}
                   />
                   {errors.message && <p className="mt-1.5 text-xs text-red-500">{errors.message}</p>}
@@ -255,7 +255,7 @@ export default function Contact() {
           <span className="font-['Cormorant_Garamond'] text-lg font-medium text-[#b8892a]">
             Mahayogi Siddhababa Spiritual Academy
           </span>
-          <p className="text-xs text-[#9a8f84]">A not-for-profit, volunteer-run organization — Nepal</p>
+          <p className="text-xs text-[#9a8f84]">A not-for-profit, volunteer-run organization, Nepal</p>
         </div>
       </footer>
     </div>

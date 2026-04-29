@@ -23,15 +23,15 @@ const OUTLINE = [
 const FAQS = [
   {
     q: "Who is this course for?",
-    a: "The Vedanta Philosophy Course is open to sincere seekers of all backgrounds and traditions. No prior knowledge of Vedanta is required — only a genuine wish to understand the nature of the Self and Reality.\n\nAlongside the philosophy lectures, participants also practice Himalayan Siddha Mahayog Meditation. The two are studied together, each deepening the other, for accelerated inner progress.",
+    a: "The Vedanta Philosophy Course is open to sincere seekers of all backgrounds and traditions. No prior knowledge of Vedanta is required, only a genuine wish to understand the nature of the Self and Reality.\n\nAlongside the philosophy lectures, participants also practice Himalayan Siddha Mahayog Meditation. The two are studied together, each deepening the other, for accelerated inner progress.",
   },
   {
     q: "How long does the course take to complete?",
-    a: "The course is 300 hours in total and takes approximately 12 months to complete. Classes are held daily via Zoom — except on sacred holidays (Ashtami, Pratipada, Purnima, Sankranti, and Aunsi).\n\nThe programme is revolving, meaning you may join at any point in the year. From the day you enrol, you continue through all the lectures until the full programme is complete.",
+    a: "The course is 300 hours in total and takes approximately 12 months to complete. Classes are held daily via Zoom, except on sacred holidays (Ashtami, Pratipada, Purnima, Sankranti, and Aunsi).\n\nThe programme is revolving, meaning you may join at any point in the year. From the day you enrol, you continue through all the lectures until the full programme is complete.",
   },
   {
     q: "How are the classes delivered?",
-    a: "Each session is a live group Zoom class, facilitated by members of the Mahayogi Siddhababa Spiritual Academy. The heart of each session is satsang — spiritual discourse delivered by His Holiness Jagadguru Mahayogi Siddhababa himself, an enlightened Saint.\n\nPeriodic Q&A sessions are held directly with Jagadguru Mahayogi Siddhababa, offering each student the rare opportunity to receive personal guidance from an awakened Master.",
+    a: "Each session is a live group Zoom class, facilitated by members of the Mahayogi Siddhababa Spiritual Academy. The heart of each session is satsang, spiritual discourse delivered by His Holiness Jagadguru Mahayogi Siddhababa himself, an enlightened Saint.\n\nPeriodic Q&A sessions are held directly with Jagadguru Mahayogi Siddhababa, offering each student the rare opportunity to receive personal guidance from an awakened Master.",
   },
   {
     q: "What if I miss a class?",
@@ -39,15 +39,15 @@ const FAQS = [
   },
   {
     q: "What language are the lectures delivered in?",
-    a: "The course is currently delivered in Nepali. We are actively working to make the programme available in additional languages — stay tuned for updates. Please indicate your language in the registration form so we can keep you informed as new options become available.",
+    a: "The course is currently delivered in Nepali. We are actively working to make the programme available in additional languages, stay tuned for updates. Please indicate your language in the registration form so we can keep you informed as new options become available.",
   },
   {
     q: "Is there a fee?",
-    a: "The Vedanta course is offered freely. There is, however, a recommended donation to help cover the operational costs of running the programme — digital equipment, Zoom subscriptions, and supporting infrastructure.\n\nThe suggested donation amount can be discussed with your local center. Contributions may be made before or after enrolment, and no seeker is ever turned away for inability to contribute.",
+    a: "The Vedanta course is offered freely. There is, however, a recommended donation to help cover the operational costs of running the programme, digital equipment, Zoom subscriptions, and supporting infrastructure.\n\nThe suggested donation amount can be discussed with your local center. Contributions may be made before or after enrolment, and no seeker is ever turned away for inability to contribute.",
   },
   {
     q: "What will I gain from this course?",
-    a: "This course will change the way you see the world — and the way you engage with it. You will come to understand the nature of Brahman (the Supreme Reality), the Self (Ātman), and Prakriti (the phenomenal world), and how they relate to one another.\n\nBeyond philosophy, the integration of Vedanta with daily meditation practice brings this understanding into lived experience — gradually transforming perception, relationships, and the quality of inner life.",
+    a: "This course will change the way you see the world, and the way you engage with it. You will come to understand the nature of Brahman (the Supreme Reality), the Self (Ātman), and Prakriti (the phenomenal world), and how they relate to one another.\n\nBeyond philosophy, the integration of Vedanta with daily meditation practice brings this understanding into lived experience, gradually transforming perception, relationships, and the quality of inner life.",
   },
 ];
 
@@ -106,7 +106,7 @@ export default function VedantaCourse() {
       <section className="relative h-[58vh] min-h-[400px] flex items-center justify-center overflow-hidden">
         <img
           src={`${b}images/vedanta-hero.png`}
-          alt="Ancient Vedanta philosophy — sacred manuscripts and Himalayan dawn"
+          alt="Ancient Vedanta philosophy, sacred manuscripts and Himalayan dawn"
           className="absolute inset-0 w-full h-full object-cover object-center"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#1a0f05]/70 via-[#2c1a08]/40 to-[#faf9f6]" />
@@ -190,7 +190,7 @@ export default function VedantaCourse() {
               Vishishtadvaita Vedanta
             </h3>
             <p className="text-sm text-[#5a5248] leading-relaxed mb-6">
-              Vishishtadvaita — "qualified non-dualism" — holds that individual souls and the universe are real but exist as attributes of Brahman, the Supreme Reality. It unites devotion, knowledge, and action into a single path of liberation.
+              Vishishtadvaita, "qualified non-dualism", holds that individual souls and the universe are real but exist as attributes of Brahman, the Supreme Reality. It unites devotion, knowledge, and action into a single path of liberation.
             </p>
             <div className="border-t border-[#e2d0b8] pt-5 space-y-2">
               {["Nature of Reality", "Individual Soul & Supreme Soul", "Path to Liberation (Moksha)", "Role of Devotion (Bhakti)"].map((t) => (
@@ -239,7 +239,7 @@ export default function VedantaCourse() {
               {
                 title: "Shaktipat Initiation",
                 sub: "Himalayan Siddha Mahayog Meditation",
-                desc: "Students receive initiation into the Himalayan Siddha Mahayog Meditation practice — a transformative awakening of inner spiritual energy guided by Mahayogi Siddhababa.",
+                desc: "Students receive initiation into the Himalayan Siddha Mahayog Meditation practice, a transformative awakening of inner spiritual energy guided by Mahayogi Siddhababa.",
                 icon: (
                   <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
                     <path d="M12 2C12 2 15 9 22 12C22 12 15 15 12 22C12 22 9 15 2 12C2 12 9 9 12 2Z" stroke="#b8892a" strokeWidth="1.2" fill="none"/>
@@ -249,7 +249,7 @@ export default function VedantaCourse() {
               {
                 title: "Saranagati Mantra Dīkṣhā",
                 sub: "Sacred Initiation Ceremony",
-                desc: "The Saranagati Mantra Diksha Ceremony — a profound act of surrender at the feet of the Guru — may be available to students during the course journey.",
+                desc: "The Saranagati Mantra Diksha Ceremony, a profound act of surrender at the feet of the Guru, may be available to students during the course journey.",
                 icon: (
                   <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#b8892a" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
                     <circle cx="12" cy="12" r="10"/>

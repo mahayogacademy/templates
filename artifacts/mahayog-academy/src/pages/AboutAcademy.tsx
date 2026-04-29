@@ -158,7 +158,7 @@ export default function AboutAcademy() {
             {[
               {
                 title: "Mahayog Meditation",
-                desc: "Explore Mahayog — a complete, time-tested system for inner transformation rooted in the Vedic tradition.",
+                desc: "Explore Mahayog, a complete, time-tested system for inner transformation rooted in the Vedic tradition.",
                 img: `${import.meta.env.BASE_URL}images/meditation-hero.png`,
                 tag: "Practice",
                 href: "/meditation",
@@ -172,14 +172,14 @@ export default function AboutAcademy() {
               },
               {
                 title: "The Ashram",
-                desc: "Step into a place of stillness and renewal — our Himalayan ashram offers a sanctuary for deep practice and retreat.",
+                desc: "Step into a place of stillness and renewal, our Himalayan ashram offers a sanctuary for deep practice and retreat.",
                 img: `${import.meta.env.BASE_URL}images/discover-ashram.png`,
                 tag: "Retreat",
                 href: "#",
               },
               {
                 title: "Enlightened Guru Siddhababa",
-                desc: "Learn about the life and divine mission of His Holiness Jagadguru Mahayogi Siddhababa — the heart of the Academy.",
+                desc: "Learn about the life and divine mission of His Holiness Jagadguru Mahayogi Siddhababa, the heart of the Academy.",
                 img: `${import.meta.env.BASE_URL}images/saint-siddhababa.png`,
                 tag: "Lineage",
                 href: "#",
@@ -220,7 +220,7 @@ export default function AboutAcademy() {
             Mahayogi Siddhababa Spiritual Academy
           </span>
           <p className="text-xs text-[#9a8f84] text-center">
-            A not-for-profit, volunteer-run organization — Nepal
+            A not-for-profit, volunteer-run organization, Nepal
           </p>
         </div>
       </footer>

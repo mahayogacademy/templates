@@ -41,7 +41,7 @@ const PILLARS = [
   {
     sanskrit: "Sumiran",
     title: "Meditation & Remembrance",
-    desc: "The practice of inner stillness — turning the mind toward the divine through daily meditation, mantra, and conscious remembrance of the eternal self.",
+    desc: "The practice of inner stillness, turning the mind toward the divine through daily meditation, mantra, and conscious remembrance of the eternal self.",
     icon: "✦",
   },
   {
@@ -53,7 +53,7 @@ const PILLARS = [
   {
     sanskrit: "Satsang",
     title: "Spiritual Discourse",
-    desc: "Gathering in the company of truth — receiving wisdom from the Guru and senior practitioners, asking questions, and deepening understanding through sacred dialogue.",
+    desc: "Gathering in the company of truth, receiving wisdom from the Guru and senior practitioners, asking questions, and deepening understanding through sacred dialogue.",
     icon: "✦",
   },
 ];
@@ -67,19 +67,19 @@ const ASHRAM_LIFE = [
   },
   {
     title: "Daily Satsang",
-    desc: "Regular spiritual discourses and Q&A sessions with Gurudev and senior practitioners — guidance for every stage of the path.",
+    desc: "Regular spiritual discourses and Q&A sessions with Gurudev and senior practitioners, guidance for every stage of the path.",
     img: "ashram-life-satsang.png",
     alt: "Satsang gathering with the Guru",
   },
   {
     title: "Seva Opportunities",
-    desc: "Contribute meaningfully to ashram life through selfless service — a powerful spiritual practice in its own right. All forms of seva are equally valued.",
+    desc: "Contribute meaningfully to ashram life through selfless service, a powerful spiritual practice in its own right. All forms of seva are equally valued.",
     img: "ashram-life-seva.png",
     alt: "Devotees performing seva",
   },
   {
     title: "Sattvic Meals",
-    desc: "Nourishing vegetarian meals prepared with love, following Ayurvedic principles — food as medicine, offered as prasad.",
+    desc: "Nourishing vegetarian meals prepared with love, following Ayurvedic principles, food as medicine, offered as prasad.",
     img: "ashram-life-meals.png",
     alt: "Sattvic prasad thali",
   },
@@ -111,7 +111,7 @@ const ARTICLES = [
   },
   {
     title: "Nepal's Rich Spiritual History",
-    excerpt: "From ancient Vedic seers to living masters — tracing the unbroken thread of spiritual wisdom through the Himalayan kingdom.",
+    excerpt: "From ancient Vedic seers to living masters, tracing the unbroken thread of spiritual wisdom through the Himalayan kingdom.",
     tag: "History",
   },
   {
@@ -328,7 +328,7 @@ export default function Ashram() {
             <h2 className="font-['Cormorant_Garamond'] text-4xl font-light text-[#3d3830] mt-2">A Glimpse Within</h2>
           </div>
 
-          {/* ── TOP CAROUSEL — full-width banner ── */}
+          {/* ── TOP CAROUSEL, full-width banner ── */}
           <div className="relative overflow-hidden rounded-2xl mb-3" style={{ height: "360px" }}>
             <img
               key={topIdx}
@@ -354,7 +354,7 @@ export default function Ashram() {
             </div>
           </div>
 
-          {/* ── BOTTOM CAROUSEL — three tiles ── */}
+          {/* ── BOTTOM CAROUSEL, three tiles ── */}
           <div className="relative">
             <div className="grid grid-cols-3 gap-3">
               {[0, 1, 2].map((offset) => {
@@ -465,10 +465,10 @@ export default function Ashram() {
             </h2>
             <div className="h-px w-10 bg-[#b8892a]/50 mb-6" />
             <p className="text-base text-[#4a4038] leading-relaxed mb-4">
-              The Hanuman Temple at the ashram holds an unbroken stream of devotional chanting — the Ram mantra has been recited continuously, 24 hours a day, without interruption since 2010.
+              The Hanuman Temple at the ashram holds an unbroken stream of devotional chanting, the Ram mantra has been recited continuously, 24 hours a day, without interruption since 2010.
             </p>
             <p className="text-base text-[#4a4038] leading-relaxed">
-              <span className="italic font-['Cormorant_Garamond'] text-[#2e2820]">Akhanda</span> means "unbroken" — this living practice embodies the ideal of constant remembrance, filling the ashram with an ever-present current of sacred sound that supports all who enter.
+              <span className="italic font-['Cormorant_Garamond'] text-[#2e2820]">Akhanda</span> means "unbroken", this living practice embodies the ideal of constant remembrance, filling the ashram with an ever-present current of sacred sound that supports all who enter.
             </p>
           </div>
           <div className="flex flex-col items-center text-center">
@@ -503,7 +503,7 @@ export default function Ashram() {
                 Seva plays a central role in spiritual growth, cultivating humility and reducing ego through selfless action. Seekers can offer seva according to their interests, skills, and professional experience.
               </p>
               <p className="text-sm leading-relaxed text-[#5a5248]">
-                All forms of seva are valued equally — no service is considered superior or inferior.
+                All forms of seva are valued equally, no service is considered superior or inferior.
               </p>
             </div>
           </div>
@@ -524,7 +524,7 @@ export default function Ashram() {
                 During Satsang, seekers gather to receive guidance and wisdom from Gurudev. This sacred space allows individuals to ask questions, reflect, and deepen understanding.
               </p>
               <p className="text-sm leading-relaxed text-[#5a5248]">
-                Sitting in the presence of enlightened Jagadguru Mahayogi Siddhababa offers itself clarity and inner insight — an essential support for every sincere seeker.
+                Sitting in the presence of enlightened Jagadguru Mahayogi Siddhababa offers itself clarity and inner insight, an essential support for every sincere seeker.
               </p>
             </div>
           </div>
@@ -543,7 +543,7 @@ export default function Ashram() {
               Participate in Ashram Seva
             </h2>
             <p className="text-sm text-[#5a5248] leading-relaxed mb-6">
-              The ashram is sustained entirely through the generosity and devotion of seekers. By contributing to Ashram Seva, you become part of this sacred mission — supporting the ongoing work of spiritual education, prasad distribution, gau seva, and the care of this living spiritual home.
+              The ashram is sustained entirely through the generosity and devotion of seekers. By contributing to Ashram Seva, you become part of this sacred mission, supporting the ongoing work of spiritual education, prasad distribution, gau seva, and the care of this living spiritual home.
             </p>
             <div className="flex flex-wrap gap-2">
               {[
@@ -702,7 +702,7 @@ export default function Ashram() {
           <span className="font-['Cormorant_Garamond'] text-lg font-medium text-[#b8892a]">
             Mahayogi Siddhababa Spiritual Academy
           </span>
-          <p className="text-xs text-[#9a8f84] text-center">A not-for-profit, volunteer-run organization — Nepal</p>
+          <p className="text-xs text-[#9a8f84] text-center">A not-for-profit, volunteer-run organization, Nepal</p>
         </div>
       </footer>
     </div>

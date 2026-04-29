@@ -10,27 +10,27 @@ const FAQS: Record<"meditation" | "vedanta", { q: string; a: string }[]> = {
   meditation: [
     {
       q: "Who can attend?",
-      a: "The Mahayog Meditation program is open to sincere seekers of all backgrounds, nationalities, and spiritual traditions. No prior experience with yoga or meditation is required — the only prerequisite is a genuine openness to inner exploration and a commitment to attend the full 5 days.",
+      a: "The Mahayog Meditation program is open to sincere seekers of all backgrounds, nationalities, and spiritual traditions. No prior experience with yoga or meditation is required, the only prerequisite is a genuine openness to inner exploration and a commitment to attend the full 5 days.",
     },
     {
       q: "Do I need prior meditation experience?",
-      a: "No. The program welcomes complete beginners as well as experienced practitioners. The initiation process is guided entirely by the Guru's transmission — it does not depend on prior technique or knowledge. Come as you are.",
+      a: "No. The program welcomes complete beginners as well as experienced practitioners. The initiation process is guided entirely by the Guru's transmission, it does not depend on prior technique or knowledge. Come as you are.",
     },
     {
       q: "What happens during the 5-day workshop?",
-      a: "The workshop is a structured, immersive introduction to Mahayog Meditation, culminating in the transmission of Shaktipat initiation by Jagadguru Mahayogi Siddhababa — in person or through his direct representatives.\n\nEach day includes guided meditation sessions, teachings on Kundalini, the subtle body, and the stages of inner awakening, and open time for questions. The program builds progressively, preparing each participant to receive initiation safely and with awareness.\n\nFull attendance across all five days is essential.",
+      a: "The workshop is a structured, immersive introduction to Mahayog Meditation, culminating in the transmission of Shaktipat initiation by Jagadguru Mahayogi Siddhababa, in person or through his direct representatives.\n\nEach day includes guided meditation sessions, teachings on Kundalini, the subtle body, and the stages of inner awakening, and open time for questions. The program builds progressively, preparing each participant to receive initiation safely and with awareness.\n\nFull attendance across all five days is essential.",
     },
     {
       q: "Is there a fee?",
-      a: "There is no fixed fee for participation or initiation. The teachings are offered freely as a spiritual gift.\n\nDonations — known in the yogic tradition as Guru dakshina — are welcomed as an expression of gratitude and may be offered at the center at your discretion. No one is turned away for inability to contribute.",
+      a: "There is no fixed fee for participation or initiation. The teachings are offered freely as a spiritual gift.\n\nDonations, known in the yogic tradition as Guru dakshina, are welcomed as an expression of gratitude and may be offered at the center at your discretion. No one is turned away for inability to contribute.",
     },
     {
       q: "When should I register?",
-      a: "We recommend registering as early as possible, as spaces are limited. Registration typically closes a few days before the workshop date. If you miss a particular month's intake, you are welcome to register for the following month — workshops run on the first Saturday of every month.",
+      a: "We recommend registering as early as possible, as spaces are limited. Registration typically closes a few days before the workshop date. If you miss a particular month's intake, you are welcome to register for the following month, workshops run on the first Saturday of every month.",
     },
     {
       q: "Can I cancel or reschedule?",
-      a: "If you are unable to attend your selected workshop, please notify your center as soon as possible. Your registration can be transferred to a future monthly intake. As there is no fee involved, there is no financial penalty — we simply ask for timely notice so your place can be offered to another seeker.",
+      a: "If you are unable to attend your selected workshop, please notify your center as soon as possible. Your registration can be transferred to a future monthly intake. As there is no fee involved, there is no financial penalty, we simply ask for timely notice so your place can be offered to another seeker.",
     },
     {
       q: "What happens after I receive initiation?",
@@ -40,15 +40,15 @@ const FAQS: Record<"meditation" | "vedanta", { q: string; a: string }[]> = {
   vedanta: [
     {
       q: "Who is this course for?",
-      a: "The Vedanta Philosophy Course is open to sincere seekers of all backgrounds and traditions. No prior knowledge of Vedanta is required — only a genuine wish to understand the nature of the Self and Reality.\n\nAlongside the philosophy lectures, participants also practice Himalayan Siddha Mahayog Meditation. The two are studied together, each deepening the other, for accelerated inner progress.",
+      a: "The Vedanta Philosophy Course is open to sincere seekers of all backgrounds and traditions. No prior knowledge of Vedanta is required, only a genuine wish to understand the nature of the Self and Reality.\n\nAlongside the philosophy lectures, participants also practice Himalayan Siddha Mahayog Meditation. The two are studied together, each deepening the other, for accelerated inner progress.",
     },
     {
       q: "How long does the course take to complete?",
-      a: "The course is 300 hours in total and takes approximately 12 months to complete. Classes are held daily via Zoom — except on sacred holidays (Ashtami, Pratipada, Purnima, Sankranti, and Aunsi).\n\nThe programme is revolving, meaning you may join at any point in the year. From the day you enrol, you continue through all the lectures until the full programme is complete.",
+      a: "The course is 300 hours in total and takes approximately 12 months to complete. Classes are held daily via Zoom, except on sacred holidays (Ashtami, Pratipada, Purnima, Sankranti, and Aunsi).\n\nThe programme is revolving, meaning you may join at any point in the year. From the day you enrol, you continue through all the lectures until the full programme is complete.",
     },
     {
       q: "How are the classes delivered?",
-      a: "Each session is a live group Zoom class, facilitated by members of the Mahayogi Siddhababa Spiritual Academy. The heart of each session is satsang — spiritual discourse delivered by His Holiness Jagadguru Mahayogi Siddhababa himself, an enlightened Saint.\n\nPeriodic Q&A sessions are held directly with Jagadguru Mahayogi Siddhababa, offering each student the rare opportunity to receive personal guidance from an awakened Master.",
+      a: "Each session is a live group Zoom class, facilitated by members of the Mahayogi Siddhababa Spiritual Academy. The heart of each session is satsang, spiritual discourse delivered by His Holiness Jagadguru Mahayogi Siddhababa himself, an enlightened Saint.\n\nPeriodic Q&A sessions are held directly with Jagadguru Mahayogi Siddhababa, offering each student the rare opportunity to receive personal guidance from an awakened Master.",
     },
     {
       q: "What if I miss a class?",
@@ -56,15 +56,15 @@ const FAQS: Record<"meditation" | "vedanta", { q: string; a: string }[]> = {
     },
     {
       q: "What language are the lectures delivered in?",
-      a: "The course is currently delivered in Nepali. We are actively working to make the programme available in additional languages — stay tuned for updates. Please indicate your language in the registration form so we can keep you informed as new options become available.",
+      a: "The course is currently delivered in Nepali. We are actively working to make the programme available in additional languages, stay tuned for updates. Please indicate your language in the registration form so we can keep you informed as new options become available.",
     },
     {
       q: "Is there a fee?",
-      a: "The Vedanta course is offered freely. There is, however, a recommended donation to help cover the operational costs of running the programme — digital equipment, Zoom subscriptions, and supporting infrastructure.\n\nThe suggested donation amount can be discussed with your local center. Contributions may be made before or after enrolment, and no seeker is ever turned away for inability to contribute.",
+      a: "The Vedanta course is offered freely. There is, however, a recommended donation to help cover the operational costs of running the programme, digital equipment, Zoom subscriptions, and supporting infrastructure.\n\nThe suggested donation amount can be discussed with your local center. Contributions may be made before or after enrolment, and no seeker is ever turned away for inability to contribute.",
     },
     {
       q: "What will I gain from this course?",
-      a: "This course will change the way you see the world — and the way you engage with it. You will come to understand the nature of Brahman (the Supreme Reality), the Self (Ātman), and Prakriti (the phenomenal world), and how they relate to one another.\n\nBeyond philosophy, the integration of Vedanta with daily meditation practice brings this understanding into lived experience — gradually transforming perception, relationships, and the quality of inner life.",
+      a: "This course will change the way you see the world, and the way you engage with it. You will come to understand the nature of Brahman (the Supreme Reality), the Self (Ātman), and Prakriti (the phenomenal world), and how they relate to one another.\n\nBeyond philosophy, the integration of Vedanta with daily meditation practice brings this understanding into lived experience, gradually transforming perception, relationships, and the quality of inner life.",
     },
   ],
 };

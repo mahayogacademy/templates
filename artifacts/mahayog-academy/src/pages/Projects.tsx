@@ -30,10 +30,10 @@ const HANUMAN_PROGRAMS = [
 ];
 
 const COSMIC_JOURNEY = [
-  { stage: "I", name: "Primordial Nothingness", desc: "The state before creation — pure unmanifest consciousness." },
-  { stage: "II", name: "Tri-Guna", desc: "The emergence of Sattva, Rajas, and Tamas — the three fundamental qualities of nature." },
+  { stage: "I", name: "Primordial Nothingness", desc: "The state before creation, pure unmanifest consciousness." },
+  { stage: "II", name: "Tri-Guna", desc: "The emergence of Sattva, Rajas, and Tamas, the three fundamental qualities of nature." },
   { stage: "III", name: "Prakriti", desc: "The manifestation of primordial nature, the source of the material universe." },
-  { stage: "IV", name: "Mahat", desc: "The arising of cosmic intelligence — the first great principle of creation." },
+  { stage: "IV", name: "Mahat", desc: "The arising of cosmic intelligence, the first great principle of creation." },
   { stage: "V", name: "Ahankar", desc: "The formation of individual identity and ego as creation becomes individuated." },
   { stage: "VI", name: "The Present Age", desc: "The full unfolding of creation and the journey through the four Yugas into Kali Yuga." },
 ];
@@ -47,7 +47,7 @@ const ARCH_HIGHLIGHTS = [
   },
   {
     title: "Sri Yantra Architecture",
-    desc: "The entire design is based on sacred geometry of the Sri Yantra — the union of cosmic energies and structure of creation.",
+    desc: "The entire design is based on sacred geometry of the Sri Yantra, the union of cosmic energies and structure of creation.",
   },
   {
     title: "33 Koti Devatas",
@@ -60,11 +60,11 @@ const ARCH_HIGHLIGHTS = [
 ];
 
 const RAM_GALLERY = [
-  { src: "ram-mandir-1.jpg", alt: "Ram Mandir — aerial perspective" },
-  { src: "ram-mandir-2.jpg", alt: "Ram Mandir — top-down yantra view" },
-  { src: "ram-mandir-3.jpg", alt: "Ram Mandir — front view with Hanuman statue" },
-  { src: "ram-mandir-4.jpg", alt: "Ram Mandir — wide campus view" },
-  { src: "ram-mandir-5.jpg", alt: "Ram Mandir — panoramic rendering" },
+  { src: "ram-mandir-1.jpg", alt: "Ram Mandir, aerial perspective" },
+  { src: "ram-mandir-2.jpg", alt: "Ram Mandir, top-down yantra view" },
+  { src: "ram-mandir-3.jpg", alt: "Ram Mandir, front view with Hanuman statue" },
+  { src: "ram-mandir-4.jpg", alt: "Ram Mandir, wide campus view" },
+  { src: "ram-mandir-5.jpg", alt: "Ram Mandir, panoramic rendering" },
 ];
 
 export default function Projects() {
@@ -165,10 +165,10 @@ export default function Projects() {
               </div>
               <div className="h-px bg-[#e8dece] mb-6" />
               <p className="text-base text-[#5a5248] leading-relaxed mb-8">
-                Jagadguru Mahayogi Siddhababa has undertaken a sacred vow to establish 108 Hanuman Temples across Nepal — a visionary initiative dedicated to spiritual renewal, cultural preservation, and social upliftment. These temples are envisioned not only as places of worship, but as vibrant community centers rooted in Sanatan Dharma, built with and managed by local communities.
+                Jagadguru Mahayogi Siddhababa has undertaken a sacred vow to establish 108 Hanuman Temples across Nepal, a visionary initiative dedicated to spiritual renewal, cultural preservation, and social upliftment. These temples are envisioned not only as places of worship, but as vibrant community centers rooted in Sanatan Dharma, built with and managed by local communities.
               </p>
 
-              {/* Feature items — stacked below description */}
+              {/* Feature items, stacked below description */}
               <div className="space-y-3">
                 {HANUMAN_FEATURES.map((f, i) => (
                   <div key={i} className="flex gap-5 items-start p-5 bg-white border border-[#e8dece] rounded-xl">
@@ -208,7 +208,7 @@ export default function Projects() {
             </div>
           </div>
 
-          {/* Ways to contribute — banner */}
+          {/* Ways to contribute, banner */}
           <div className="mb-10 -mx-6 px-8 md:px-14 py-12 bg-[#2e2820]">
 
             {/* Top row: label + heading + icon + CTA */}
@@ -218,7 +218,7 @@ export default function Projects() {
                   A Sacred Legacy in the Making
                 </h3>
                 <p className="text-sm text-[#9a8f84] leading-relaxed max-w-lg">
-                  Your gift becomes a lasting legacy—each temple a living center of prayer, learning, and community, rooted in dharma for generations to come.
+                  Your gift becomes a lasting legacy, each temple a living center of prayer, learning, and community, rooted in dharma for generations to come.
                 </p>
               </div>
               <div className="shrink-0">
@@ -304,15 +304,15 @@ export default function Projects() {
                   <h2 className="font-['Cormorant_Garamond'] text-4xl md:text-5xl font-light text-[#3d3830] leading-tight">
                     Ram Mandir
                   </h2>
-                  <p className="font-['Cormorant_Garamond'] text-xl italic text-[#9a8f84] mt-1">Dev Sabha — The Divine Assembly</p>
+                  <p className="font-['Cormorant_Garamond'] text-xl italic text-[#9a8f84] mt-1">Dev Sabha, The Divine Assembly</p>
                 </div>
               </div>
               <div className="h-px bg-[#e8dece] mb-6" />
               <p className="text-base text-[#5a5248] leading-relaxed mb-4">
-                A historic Ram Mandir will be built at Jagadguru Ramanadacharya Seva Peeth (Tarak Brahma Peeth), Chatara Dham — envisioned as a sacred replica of Dev Sabha, the divine assembly of the 33 koti devatas, with Lord Ram, Maa Sita and their divine family at the center.
+                A historic Ram Mandir will be built at Jagadguru Ramanadacharya Seva Peeth (Tarak Brahma Peeth), Chatara Dham, envisioned as a sacred replica of Dev Sabha, the divine assembly of the 33 koti devatas, with Lord Ram, Maa Sita and their divine family at the center.
               </p>
               <p className="text-base text-[#5a5248] leading-relaxed">
-                This temple will not only be a place of worship, but a living spiritual and cosmological experience — its architecture based on the structure of the universe as described in Vedic scripture and realized through the spiritual insight of Jagadguru Mahayogi Siddhababa.
+                This temple will not only be a place of worship, but a living spiritual and cosmological experience, its architecture based on the structure of the universe as described in Vedic scripture and realized through the spiritual insight of Jagadguru Mahayogi Siddhababa.
               </p>
             </div>
 
@@ -343,7 +343,7 @@ export default function Projects() {
 
             {/* Yugas */}
             <div className="mt-5">
-              <p className="text-xs text-[#9a8f84] mb-4 uppercase tracking-[0.2em] font-medium">The Four Yugas — Cycle of Time</p>
+              <p className="text-xs text-[#9a8f84] mb-4 uppercase tracking-[0.2em] font-medium">The Four Yugas, Cycle of Time</p>
               <div className="grid grid-cols-4 divide-x divide-[#e8dece] border border-[#e8dece] rounded-xl overflow-hidden">
                 {YUGAS.map((y, i) => (
                   <div key={i} className="flex flex-col items-center py-5 px-3 bg-[#fdf6ec]">
@@ -415,7 +415,7 @@ export default function Projects() {
             </div>
           </div>
 
-          {/* How to contribute — banner */}
+          {/* How to contribute, banner */}
           <div className="-mx-6 px-8 md:px-14 py-12 bg-[#2e2820]">
 
             {/* Top row: heading + CTA */}
@@ -482,7 +482,7 @@ export default function Projects() {
           <span className="font-['Cormorant_Garamond'] text-lg font-medium text-[#b8892a]">
             Mahayogi Siddhababa Spiritual Academy
           </span>
-          <p className="text-xs text-[#9a8f84] text-center">A not-for-profit, volunteer-run organization — Nepal</p>
+          <p className="text-xs text-[#9a8f84] text-center">A not-for-profit, volunteer-run organization, Nepal</p>
         </div>
       </footer>
     </div>
