@@ -135,7 +135,7 @@ export default function GuruDarshan() {
               Jagadguru Mahayogi Siddhababa is recognized as a Shaktipat Acharya, one who can awaken the dormant spiritual energy within a sincere seeker through glance, intention, or presence alone. His darshan is therefore considered a living opportunity for inner transformation, not simply a formal audience.
             </p>
             <p className="text-[#5a5248] leading-relaxed">
-              Seekers from Nepal, India, and across the world come to receive his presence: in person at the ashram, through online satsangs, and during sacred events. All are welcome, regardless of tradition, background, or level of experience.
+              Seekers from across the world come to receive his presence: in person at the ashram, through online satsangs, and during sacred events. All are welcome, regardless of tradition, background, or level of experience.
             </p>
           </div>
 
