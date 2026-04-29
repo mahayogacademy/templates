@@ -129,46 +129,40 @@ const UPCOMING: AnyEvent[] = [
 
 const MILESTONES = [
   {
+    slug: "bhu-samadhi",
     year: "2008 · 2015 · 2017",
     title: "Bhu-Samadhi of Jagadguru Mahayogi Siddhababa",
     titleHtml: "<em>Bhu-Samadhi</em> of Jagadguru Mahayogi Siddhababa",
-    desc: "The sacred passing of Jagadguru Mahayogi Siddhababa's revered Guru, marked with Vedic rites and collective devotion. His Holiness continues to carry forward this sacred mission.",
-    badge: "Lineage",
     img: "bhu-samadhi-1.jpg",
   },
   {
+    slug: "tarak-brahma-mahayagya",
     year: "2019",
     title: "Shree Tarak Brahma Mahayagya",
-    desc: "A grand Mahayagya, one of the largest fire ceremonies conducted by the Academy, invoking the liberating grace of Tarak Brahma. Thousands of seekers participated across multiple days of continuous havan, kirtan, and satsang.",
-    badge: "Mahayagya",
     img: "gurudev-darshan-congregation.jpg",
   },
   {
+    slug: "covid-anusthan",
     year: "2021",
     title: "Himalayan Siddha Mahayog Anuṣṭhān (COVID-19)",
-    desc: "Jagadguru Mahayogi Siddhababa led a collective anuṣṭhān of prayer, mantra, and havan, invoking healing and protection for the world during the pandemic. Seekers across continents joined online.",
-    badge: "Special Anuṣṭhān",
     img: "ashram-extra-sanyasi-river.jpg",
   },
   {
+    slug: "atirudri-mahayagya",
     year: "2022",
     title: "Atirudri Mahayagya",
-    desc: "The Atirudri, one of the most elaborate and potent of all Vedic fire ceremonies, involving the recitation of the Shri Rudram eleven hundred and forty-four times, was conducted under the direct guidance of His Holiness, with Vedic pandits and thousands of participants.",
-    badge: "Mahayagya",
     img: "ashram-extra-river-diyas.jpg",
   },
   {
+    slug: "ramarchan-mahayagya",
     year: "2023",
     title: "108 Ramarchan Mahayagya",
-    desc: "A monumental sacred ceremony involving 108 Ramarchan, the complete worship of Bhagwan Shri Ram, performed continuously across multiple days. This immense collective offering is considered especially auspicious for both personal liberation and the welfare of all beings.",
-    badge: "Mahayagya",
     img: "ram-mandir-1.jpg",
   },
   {
+    slug: "hanumad-mahayagya",
     year: "2024",
     title: "Sankat Mochan Shree Hanumad Mahayagya",
-    desc: "Dedicated to Lord Hanuman, the remover of all obstacles, this Mahayagya was conducted to invoke protection, strength, and liberation for seekers and the wider world. It included Sundarkanda path, Hanuman Chalisa, and extended havan rituals led by His Holiness.",
-    badge: "Mahayagya",
     img: "hanumad-mahayagya.jpg",
     overlayImg: "hanuman-ghost-bg.png",
   },
@@ -577,16 +571,16 @@ export default function Events() {
           {/* Image card grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {MILESTONES.map(m => (
-              <div key={m.year}
-                className="group relative rounded-2xl overflow-hidden aspect-[4/3] cursor-default shadow-xl">
+              <Link key={m.slug} href={`/events/historic/${m.slug}`}
+                className="group relative rounded-2xl overflow-hidden aspect-[4/3] cursor-pointer shadow-xl block">
                 {/* Background image */}
                 <img
                   src={`${b}images/${m.img}`}
                   alt={m.title}
                   className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
                 />
-                {/* Gradient overlay, darker at bottom */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/20 group-hover:from-black/98 group-hover:via-black/80 group-hover:to-black/60 transition-all duration-300" />
+                {/* Gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/20 group-hover:from-black/95 group-hover:via-black/60 group-hover:to-black/30 transition-all duration-300" />
 
                 {/* Optional overlay image (screen blend = black becomes invisible) */}
                 {m.overlayImg && (
@@ -606,15 +600,14 @@ export default function Events() {
                 </div>
 
                 {/* Content, bottom */}
-                <div className="absolute bottom-0 left-0 right-0 p-5">
-                  <h3 className="font-['Cormorant_Garamond'] text-xl md:text-2xl font-light text-white leading-snug mb-2"
+                <div className="absolute bottom-0 left-0 right-0 p-5 flex items-end justify-between">
+                  <h3 className="font-['Cormorant_Garamond'] text-xl md:text-2xl font-light text-white leading-snug"
                     dangerouslySetInnerHTML={{ __html: m.titleHtml ?? m.title }} />
-                  {/* Description slides up on hover */}
-                  <p className="text-[#c8b8a0] text-xs leading-relaxed max-h-0 overflow-hidden group-hover:max-h-32 transition-all duration-500 ease-in-out">
-                    {m.desc}
-                  </p>
+                  <span className="shrink-0 ml-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-[#e8c56a] text-xs uppercase tracking-widest font-medium">
+                    Read →
+                  </span>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
