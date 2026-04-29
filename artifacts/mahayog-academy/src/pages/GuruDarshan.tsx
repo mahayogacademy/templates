@@ -40,10 +40,10 @@ const WAYS = [
 
 const ETIQUETTE = [
   { title: "Arrive in stillness", desc: "Take a few quiet breaths before entering the darshan space. Come with an open and receptive heart." },
-  { title: "Dress respectfully", desc: "Modest, clean attire is appreciated — covering the shoulders and knees as a mark of reverence." },
-  { title: "Silence your devices", desc: "Switch your phone to silent. The darshan space is held as sacred ground." },
   { title: "Bring a question or intention", desc: "If you wish to receive personal guidance, reflecting on your question beforehand helps the exchange go deeper." },
   { title: "Receive without agenda", desc: "Darshan is not always verbal. Sometimes the greatest transmission comes in silence. Trust what arises." },
+  { title: "Dress respectfully", desc: "Modest, clean attire is appreciated — covering the shoulders and knees as a mark of reverence." },
+  { title: "Silence your devices", desc: "Switch your phone to silent. The darshan space is held as sacred ground." },
 ];
 
 const FAQS = [
