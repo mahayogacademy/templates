@@ -585,7 +585,7 @@ export default function Events() {
                   className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
                 />
                 {/* Gradient overlay, darker at bottom */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/20 group-hover:from-black/95 transition-all duration-300" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/20 group-hover:from-black/98 group-hover:via-black/80 group-hover:to-black/60 transition-all duration-300" />
 
                 {/* Year pill, top left */}
                 <div className="absolute top-4 left-4 transition-opacity duration-300 group-hover:opacity-0">
