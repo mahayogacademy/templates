@@ -444,22 +444,32 @@ export default function Events() {
         </div>
 
         {/* Filter tabs (list view only) */}
-        {view === "list" && (
-          <div className="flex gap-2 overflow-x-auto pb-2 mb-6 scrollbar-hide">
-            {KIND_LABELS.map(k => (
-              <button
-                key={k.value}
-                onClick={() => setFilter(k.value)}
-                className={`whitespace-nowrap px-5 py-2 rounded-full text-xs uppercase tracking-[0.18em] font-medium transition-all duration-200 cursor-pointer ${
-                  filter === k.value
-                    ? "bg-[#b8892a] text-white shadow-sm"
-                    : "text-[#7a6e5a] hover:text-[#3d3830] hover:bg-[#f0e8d8] bg-[#faf9f6] border border-[#e8dece]"
-                }`}>
-                {k.label}
-              </button>
-            ))}
-          </div>
-        )}
+        {view === "list" && (() => {
+          const FILTER_COLORS: Record<EventKind, { active: string; idle: string }> = {
+            all:      { active: "bg-[#b8892a] text-white border-[#b8892a]",      idle: "text-[#b8892a] border-[#c8a850] hover:bg-[#b8892a]/10" },
+            retreat:  { active: "bg-[#3a6a48] text-white border-[#3a6a48]",      idle: "text-[#3a6a48] border-[#5a8a68] hover:bg-[#3a6a48]/10" },
+            festival: { active: "bg-[#b85a18] text-white border-[#b85a18]",      idle: "text-[#b85a18] border-[#c87038] hover:bg-[#b85a18]/10" },
+            ekadashi: { active: "bg-[#8a6820] text-white border-[#8a6820]",      idle: "text-[#8a6820] border-[#a88838] hover:bg-[#8a6820]/10" },
+            course:   { active: "bg-[#5a4a88] text-white border-[#5a4a88]",      idle: "text-[#5a4a88] border-[#7a6aa8] hover:bg-[#5a4a88]/10" },
+          };
+          return (
+            <div className="flex gap-3 overflow-x-auto pb-2 mb-8 scrollbar-hide">
+              {KIND_LABELS.map(k => {
+                const c = FILTER_COLORS[k.value];
+                return (
+                  <button
+                    key={k.value}
+                    onClick={() => setFilter(k.value)}
+                    className={`whitespace-nowrap px-6 py-2.5 rounded-full text-sm font-semibold uppercase tracking-[0.14em] border-2 transition-all duration-200 cursor-pointer shadow-sm ${
+                      filter === k.value ? c.active : `bg-white ${c.idle}`
+                    }`}>
+                    {k.label}
+                  </button>
+                );
+              })}
+            </div>
+          );
+        })()}
 
         {/* List view — compact row layout, grouped by month */}
         {view === "list" && (() => {
