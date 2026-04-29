@@ -172,10 +172,10 @@ export default function Events() {
           Every Gathering is an Occasion for Grace
         </h2>
         <p className="text-[#5a5248] leading-relaxed text-base md:text-lg mb-4">
-          In the Vedic tradition, communal spiritual practice — whether in person at the ashram or joined from afar — carries a power that solitary effort cannot replicate. When seekers come together in the presence of a realised Master, the field of grace intensifies for all.
+          In the Vedic tradition, communal spiritual practice, whether in person at the ashram or joined from afar, carries a power that solitary effort cannot replicate. When seekers come together in the presence of a realised Master, the field of grace intensifies for all.
         </p>
         <p className="text-[#5a5248] leading-relaxed text-base md:text-lg">
-          The Academy hosts events across the year: weekly satsangs, immersive retreats, ancient fire ceremonies, and the great festivals of the Vedic calendar. All are held in the living spirit of the lineage.
+          The Academy hosts events across the year: satsangs, immersive retreats, ancient fire ceremonies (havan), observances (anuṣṭhān), social services and the great festivals of the Vedic calendar. All are held in the living spirit of the lineage.
         </p>
       </section>
 
