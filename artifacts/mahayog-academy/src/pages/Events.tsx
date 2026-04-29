@@ -152,7 +152,7 @@ const MILESTONES = [
     slug: "atirudri-mahayagya",
     year: "2022",
     title: "Atirudri Mahayagya",
-    img: "ashram-extra-river-diyas.jpg",
+    img: "atirudri-mahayagya.jpg",
   },
   {
     slug: "ramarchan-mahayagya",

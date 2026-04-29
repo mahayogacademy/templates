@@ -45,7 +45,7 @@ const EVENTS = [
     slug: "atirudri-mahayagya",
     year: "2022",
     titleHtml: "Atirudri Mahayagya",
-    img: "ashram-extra-river-diyas.jpg",
+    img: "atirudri-mahayagya.jpg",
     body: [
       "The Atirudri Mahayagya is considered one of the most exalted and demanding of all Vedic fire ceremonies. It involves the complete recitation of the Shri Rudram — a hymn of immense power dedicated to Lord Shiva — one thousand, one hundred and forty-four times in full. Combined with the corresponding Vedic havan offerings at each stage, it is a ceremony of extraordinary scope and spiritual potency.",
       "In 2022, Jagadguru Mahayogi Siddhababa presided over the Atirudri Mahayagya at the Guru Ashram, with a team of highly trained Vedic pandits conducting the recitation across multiple continuous days. The ceremony was accompanied by devotional kirtan, communal satsang, and the constant fragrance of sacred offerings.",
