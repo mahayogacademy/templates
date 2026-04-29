@@ -169,7 +169,7 @@ const MILESTONES = [
     title: "Sankat Mochan Shree Hanumad Mahayagya",
     desc: "Dedicated to Lord Hanuman, the remover of all obstacles, this Mahayagya was conducted to invoke protection, strength, and liberation for seekers and the wider world. It included Sundarkanda path, Hanuman Chalisa, and extended havan rituals led by His Holiness.",
     badge: "Mahayagya",
-    img: "ashram-hanuman-wide.jpg",
+    img: "hanumad-mahayagya.jpg",
   },
 ];
 
