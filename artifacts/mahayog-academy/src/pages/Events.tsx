@@ -140,6 +140,7 @@ const MILESTONES = [
     year: "2019",
     title: "Shree Tarak Brahma Mahayagya",
     img: "tarak-brahma-mahayagya.jpg",
+    imgPosition: "center 35%",
   },
   {
     slug: "covid-anusthan",
@@ -577,7 +578,8 @@ export default function Events() {
                 <img
                   src={`${b}images/${m.img}`}
                   alt={m.title}
-                  className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  style={{ objectPosition: m.imgPosition ?? "center" }}
                 />
                 {/* Gradient overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/20 group-hover:from-black/95 group-hover:via-black/60 group-hover:to-black/30 transition-all duration-300" />
