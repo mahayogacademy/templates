@@ -132,10 +132,10 @@ export default function GuruDarshan() {
               In the Vedic and yogic traditions, <em>darshan</em> — from the Sanskrit <em>dṛś</em>, meaning "to see" — refers to the sacred experience of beholding a realized master. Yet darshan is not mere sight. It is a living transmission: an encounter in which the seeker, by virtue of proximity and receptivity, may receive the grace and inner influence of the Guru.
             </p>
             <p className="text-[#5a5248] leading-relaxed mb-5">
-              Jagadguru Mahayogi Siddhababa is recognized as a Shaktipat Acharya — one who can awaken the dormant spiritual energy within a sincere seeker through glance, intention, or presence alone. His darshan is therefore considered a living opportunity for inner transformation, not simply a formal audience.
+              Jagadguru Mahayogi Siddhababa is recognized as a Shaktipat Acharya, one who can awaken the dormant spiritual energy within a sincere seeker through glance, intention, or presence alone. His darshan is therefore considered a living opportunity for inner transformation, not simply a formal audience.
             </p>
             <p className="text-[#5a5248] leading-relaxed">
-              Seekers from Nepal, India, and across the world come to receive his presence — in person at the ashram, through online satsangs, and during sacred events. All are welcome, regardless of tradition, background, or level of experience.
+              Seekers from Nepal, India, and across the world come to receive his presence: in person at the ashram, through online satsangs, and during sacred events. All are welcome, regardless of tradition, background, or level of experience.
             </p>
           </div>
 
