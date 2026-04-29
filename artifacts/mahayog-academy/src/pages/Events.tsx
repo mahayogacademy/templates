@@ -147,12 +147,6 @@ const PAST = [
     summary: "The appearance of Bhagwan Shri Ram celebrated through nine-day Manas path, havan, Sundarkanda recitation, and prasad distribution.",
   },
 
-  {
-    title: "Health Camp",
-    date: "Recurring · Multiple dates",
-    location: "Ashram & affiliated centres",
-    summary: "Free holistic health camps offered to local communities, integrating Ayurvedic consultation, yoga, and meditation guidance as a form of sacred service (seva).",
-  },
 ];
 
 const MILESTONES = [
