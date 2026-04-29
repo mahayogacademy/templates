@@ -965,7 +965,7 @@ export default function MahayogMeditation() {
       {/* ── CTA BANNER ── */}
       <section className="relative py-24 px-6 overflow-hidden"
         style={{
-          backgroundImage: `url(${import.meta.env.BASE_URL}images/ashram-satsang-night.jpg)`,
+          backgroundImage: `url(${import.meta.env.BASE_URL}images/cta-meditation-dawn.png)`,
           backgroundSize: "cover",
           backgroundPosition: "center 40%",
         }}
