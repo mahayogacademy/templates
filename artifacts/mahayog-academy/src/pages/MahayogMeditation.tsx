@@ -398,6 +398,32 @@ function FAQItem({ q, a }: { q: string; a: string }) {
   );
 }
 
+function FAQGroup({ theme, items }: { theme: string; items: { q: string; a: string }[] }) {
+  const [open, setOpen] = useState(false);
+  return (
+    <div className={`rounded-2xl border transition-colors duration-300 ${open ? "border-[#c8a868]/50 bg-[#fdf8f0]" : "border-[#ddd0b8] bg-[#f5ede0]/60"}`}>
+      <button
+        onClick={() => setOpen(!open)}
+        className="w-full flex items-center justify-between px-6 py-5 text-left group"
+      >
+        <div className="flex items-center gap-3">
+          <span className={`text-[10px] transition-colors duration-300 ${open ? "text-[#b8892a]" : "text-[#b8892a]/50"}`}>◆</span>
+          <span className={`uppercase tracking-[0.2em] text-sm font-medium transition-colors duration-300 ${open ? "text-[#7a4a10]" : "text-[#9a7040]"}`}>{theme}</span>
+        </div>
+        <ChevronDown
+          className={`w-4 h-4 text-[#b8892a] shrink-0 transition-transform duration-300 ${open ? "rotate-180" : ""}`}
+          strokeWidth={1.5}
+        />
+      </button>
+      <div className={`overflow-hidden transition-all duration-500 ${open ? "max-h-[2000px]" : "max-h-0"}`}>
+        <div className="px-6 pb-2">
+          {items.map(f => <FAQItem key={f.q} q={f.q} a={f.a} />)}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 const NAV_SECTIONS = [
   { id: "what-is",      label: "What is Meditation", short: "Foundations"         },
   { id: "mahayog",      label: "Himalayan Mahayog",  short: "Mahayog"        },
@@ -926,19 +952,9 @@ export default function MahayogMeditation() {
               Frequently Asked Questions
             </h2>
           </div>
-          <div className="space-y-10">
+          <div className="space-y-3">
             {FAQ_GROUPS.map((group) => (
-              <div key={group.theme}>
-                <div className="flex items-center gap-3 mb-1">
-                  <span className="text-[#b8892a] text-xs">◆</span>
-                  <span className="uppercase tracking-[0.2em] text-xs text-[#b8892a] font-medium">{group.theme}</span>
-                </div>
-                <div>
-                  {group.items.map((f) => (
-                    <FAQItem key={f.q} q={f.q} a={f.a} />
-                  ))}
-                </div>
-              </div>
+              <FAQGroup key={group.theme} theme={group.theme} items={group.items} />
             ))}
           </div>
         </div>
