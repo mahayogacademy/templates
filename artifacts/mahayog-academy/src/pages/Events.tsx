@@ -159,7 +159,7 @@ export default function Events() {
             style={{ textShadow: "0 2px 40px rgba(0,0,0,0.5)" }}>
             Sacred Gatherings<br /><em className="italic font-extralight">&amp; Events</em>
           </h1>
-          <p className="text-[#d4bfa0] text-base md:text-lg font-light leading-relaxed max-w-xl mx-auto">
+          <p className="text-white/90 text-base md:text-lg font-light leading-relaxed max-w-xl mx-auto">
             Join seekers from around the world at satsangs, festivals, retreats, and sacred ceremonies throughout the year.
           </p>
         </div>
