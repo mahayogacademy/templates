@@ -588,7 +588,7 @@ export default function Events() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/20 group-hover:from-black/95 transition-all duration-300" />
 
                 {/* Year pill, top left */}
-                <div className="absolute top-4 left-4">
+                <div className="absolute top-4 left-4 transition-opacity duration-300 group-hover:opacity-0">
                   <span className="font-['Cormorant_Garamond'] text-lg font-semibold text-white bg-[#b8892a]/80 backdrop-blur-sm px-3 py-1 rounded-full">
                     {m.year}
                   </span>
