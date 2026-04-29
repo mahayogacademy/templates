@@ -295,32 +295,19 @@ export default function VedantaCourse() {
 
       {/* ── CTA BANNER ── */}
       <section className="relative py-28 px-6 overflow-hidden"
-        style={{ background: "linear-gradient(160deg, #110800 0%, #2e1504 45%, #1a0c02 100%)" }}
+        style={{
+          backgroundImage: `url(${b}images/cta-vedanta-study.png)`,
+          backgroundSize: "cover",
+          backgroundPosition: "center 55%",
+        }}
       >
-        {/* light ray sunburst — SVG radiating lines */}
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-          <svg viewBox="0 0 800 500" className="absolute w-full h-full opacity-[0.13]" preserveAspectRatio="xMidYMid slice">
-            {Array.from({ length: 36 }).map((_, i) => {
-              const angle = (i * 10 * Math.PI) / 180;
-              const x2 = 400 + Math.cos(angle) * 520;
-              const y2 = 250 + Math.sin(angle) * 520;
-              return (
-                <line key={i} x1="400" y1="250" x2={x2} y2={y2}
-                  stroke="#e8c56a" strokeWidth={i % 3 === 0 ? "1.5" : "0.8"}
-                  strokeLinecap="round"
-                />
-              );
-            })}
-          </svg>
-        </div>
-
-        {/* inner glow core */}
+        {/* dark overlay */}
         <div className="absolute inset-0 pointer-events-none"
-          style={{ background: "radial-gradient(ellipse 55% 55% at 50% 50%, rgba(212,160,48,0.22) 0%, rgba(184,137,42,0.08) 40%, transparent 70%)" }}
+          style={{ background: "linear-gradient(135deg, rgba(12,5,1,0.90) 0%, rgba(38,16,4,0.84) 50%, rgba(15,7,1,0.92) 100%)" }}
         />
-        {/* soft outer haze */}
+        {/* amber centre glow */}
         <div className="absolute inset-0 pointer-events-none"
-          style={{ background: "radial-gradient(ellipse 90% 80% at 50% 50%, rgba(90,40,8,0.4) 0%, transparent 100%)" }}
+          style={{ background: "radial-gradient(ellipse 55% 55% at 50% 50%, rgba(184,137,42,0.18) 0%, transparent 70%)" }}
         />
 
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#b8892a]/40 to-transparent" />
