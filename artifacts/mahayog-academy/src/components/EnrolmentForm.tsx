@@ -481,7 +481,7 @@ export default function EnrolmentForm({ program }: { program: Program }) {
           {/* ── SHARED: Reference ── */}
           {slot === "reference" && <>
             <p className={hc}>Reference <span className="text-sm text-[#7a5a30] font-sans font-normal">(Optional)</span></p>
-            <p className={`${hint} mb-1`}>If someone referred you, please share their details.</p>
+            <p className={`${hint} mb-4`}>If someone referred you, please share their details.</p>
             <div>
               <label className={lc}>Referrer's Name</label>
               <input className={ic} value={form.refererName} onChange={e => set("refererName", e.target.value)} />
