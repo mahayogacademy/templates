@@ -244,9 +244,9 @@ export default function GuruDarshan() {
             <div className="space-y-6">
               <div className="rounded-2xl overflow-hidden shadow-lg shadow-[#b8892a]/8">
                 <img
-                  src={`${b}images/guru-teachings.jpg`}
-                  alt="His Holiness in discourse"
-                  className="w-full h-64 object-cover object-top"
+                  src={`${b}images/gurudev-darshan-congregation.jpg`}
+                  alt="Seekers gathered in darshan with His Holiness"
+                  className="w-full h-64 object-cover object-center"
                 />
               </div>
               <div className="rounded-xl bg-[#fdf6ec] border border-[#e8dece] p-6">
