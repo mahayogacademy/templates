@@ -1,14 +1,47 @@
+import { useState } from "react";
 import Nav from "@/components/Nav";
 import EnrolmentForm from "@/components/EnrolmentForm";
-import { Link, useSearch } from "wouter";
-import { ArrowLeft } from "lucide-react";
+import { useSearch } from "wouter";
+
+type Program = "meditation" | "vedanta";
+
+const PROGRAMMES = [
+  {
+    id: "meditation" as Program,
+    label: "Himalayan Siddha Mahayog Meditation",
+    tag: "5-Day Initiation Workshop",
+    desc: "Receive Shaktipat initiation and begin your journey into Himalayan Siddha Mahāyog Meditation.",
+    icon: (
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+        <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.2" />
+        <path d="M12 3C12 3 15 8 15 12C15 16 12 21 12 21" stroke="currentColor" strokeWidth="1" strokeLinecap="round"/>
+        <path d="M12 3C12 3 9 8 9 12C9 16 12 21 12 21" stroke="currentColor" strokeWidth="1" strokeLinecap="round"/>
+        <line x1="3" y1="12" x2="21" y2="12" stroke="currentColor" strokeWidth="1" strokeLinecap="round"/>
+      </svg>
+    ),
+  },
+  {
+    id: "vedanta" as Program,
+    label: "Vedanta Philosophy Course",
+    tag: "267-Lecture Programme",
+    desc: "Immerse yourself in the science of Self and Reality through the teachings of Vedanta.",
+    icon: (
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+        <path d="M4 19V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v13" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"/>
+        <path d="M4 19h16" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"/>
+        <path d="M8 7h8M8 10h8M8 13h5" stroke="currentColor" strokeWidth="1" strokeLinecap="round"/>
+      </svg>
+    ),
+  },
+];
 
 export default function Register() {
   const search = useSearch();
   const params = new URLSearchParams(search);
-  const forParam = params.get("for");
-  const program = forParam === "vedanta" ? "vedanta" : "meditation";
-  const isVedanta = program === "vedanta";
+  const initial: Program = params.get("for") === "vedanta" ? "vedanta" : "meditation";
+  const [program, setProgram] = useState<Program>(initial);
+
+  const active = PROGRAMMES.find(p => p.id === program)!;
 
   return (
     <div className="min-h-screen bg-[#faf9f6]">
@@ -16,49 +49,82 @@ export default function Register() {
 
       {/* ── HEADER ── */}
       <section
-        className="pt-28 pb-16 px-6 text-center relative overflow-hidden"
+        className="pt-28 pb-14 px-6 text-center relative overflow-hidden"
         style={{ background: "linear-gradient(160deg, #2e1405 0%, #5a2e04 60%, #7a4a08 100%)" }}
       >
         <div className="absolute inset-0 opacity-[0.06]" style={{
           backgroundImage: "radial-gradient(circle at 20% 50%, #e8c56a 0%, transparent 50%), radial-gradient(circle at 80% 50%, #b8892a 0%, transparent 50%)"
         }} />
         <div className="relative z-10 max-w-2xl mx-auto">
-          <Link
-            href={isVedanta ? "/vedanta" : "/meditation"}
-            className="inline-flex items-center gap-2 text-[#e8c56a]/70 hover:text-[#e8c56a] text-sm tracking-wide transition-colors duration-200 mb-8"
-          >
-            <ArrowLeft className="w-4 h-4" strokeWidth={1.5} />
-            {isVedanta ? "Back to Vedanta Course" : "Back to Meditation"}
-          </Link>
-
           <div className="flex items-center justify-center gap-3 mb-5">
-            <div className="h-px w-10 bg-[#e8c56a]/50" />
+            <div className="h-px w-10 bg-[#e8c56a]/40" />
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
               <path d="M12 2C12 2 15 9 22 12C22 12 15 15 12 22C12 22 9 15 2 12C2 12 9 9 12 2Z" stroke="#e8c56a" strokeWidth="1.2" fill="none"/>
             </svg>
-            <div className="h-px w-10 bg-[#e8c56a]/50" />
+            <div className="h-px w-10 bg-[#e8c56a]/40" />
           </div>
-
-          <span className="uppercase tracking-[0.25em] text-xs text-[#e8c56a]/60 font-medium">
-            {isVedanta ? "Enrolment" : "Registration"}
-          </span>
+          <span className="uppercase tracking-[0.25em] text-xs text-[#e8c56a]/60 font-medium">Programme Registration</span>
           <h1 className="font-['Cormorant_Garamond'] text-4xl md:text-5xl font-light text-white mt-2 leading-tight">
-            {isVedanta ? "Vedanta Course Enrolment" : "Meditation Registration"}
+            Begin Your Journey
           </h1>
-          <p className="text-sm text-[#f0e4c8]/70 mt-3 max-w-md mx-auto leading-relaxed">
-            {isVedanta
-              ? "Complete the form below to enrol in the Vedanta Philosophy Course."
-              : "Begin your journey into Himalayan Siddha Mahāyog Meditation."}
+          <p className="text-sm text-[#f0e4c8]/60 mt-3 max-w-sm mx-auto leading-relaxed">
+            Choose the programme you wish to register for below.
           </p>
+        </div>
+      </section>
+
+      {/* ── PROGRAMME PICKER ── */}
+      <section className="px-6 -mt-6 relative z-10 pb-2">
+        <div className="max-w-2xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {PROGRAMMES.map(p => {
+            const selected = program === p.id;
+            return (
+              <button
+                key={p.id}
+                type="button"
+                onClick={() => setProgram(p.id)}
+                className={`text-left p-5 rounded-2xl border-2 transition-all duration-200 shadow-sm ${
+                  selected
+                    ? "border-[#b8892a] bg-white shadow-[#b8892a]/15 shadow-md"
+                    : "border-[#e8dece] bg-white/80 hover:border-[#b8892a]/50 hover:shadow-md"
+                }`}
+              >
+                <div className={`mb-3 ${selected ? "text-[#b8892a]" : "text-[#c8a050]/70"}`}>
+                  {p.icon}
+                </div>
+                <span className={`text-[10px] uppercase tracking-[0.2em] font-medium ${selected ? "text-[#b8892a]" : "text-[#a88040]"}`}>
+                  {p.tag}
+                </span>
+                <p className={`font-['Cormorant_Garamond'] text-lg font-semibold mt-1 leading-snug ${selected ? "text-[#3d2008]" : "text-[#5a3a18]"}`}>
+                  {p.label}
+                </p>
+                <p className="text-xs text-[#7a5a30] mt-1.5 leading-relaxed">{p.desc}</p>
+                {selected && (
+                  <span className="inline-flex items-center gap-1 mt-3 text-[10px] uppercase tracking-widest text-[#b8892a] font-medium">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#b8892a] inline-block" />
+                    Selected
+                  </span>
+                )}
+              </button>
+            );
+          })}
         </div>
       </section>
 
       {/* ── FORM ── */}
       <section
-        className="py-16 px-6"
+        className="py-14 px-6"
         style={{ background: "radial-gradient(ellipse at 50% 0%, #f0a832 0%, #d4821a 45%, #a85c10 100%)" }}
       >
-        <EnrolmentForm program={program} />
+        <div className="max-w-2xl mx-auto text-center mb-8">
+          <span className="uppercase tracking-[0.25em] text-xs text-[#5a2e04]/70 font-medium">
+            {program === "vedanta" ? "Enrolment Form" : "Registration Form"}
+          </span>
+          <h2 className="font-['Cormorant_Garamond'] text-3xl font-light text-[#2e1405] mt-1">
+            {active.label}
+          </h2>
+        </div>
+        <EnrolmentForm program={program} key={program} />
       </section>
 
       {/* ── FOOTER ── */}

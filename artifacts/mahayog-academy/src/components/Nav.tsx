@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
 import { Link } from "wouter";
-import { ChevronDown, PenLine } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 
 const EXPLORE = [
   { label: "About the Academy",  href: "/about" },
@@ -21,7 +21,7 @@ const EXPERIENCE = [
   { label: "Custom Talks & Workshops",            href: "/custom-talks" },
 ];
 
-type MenuKey = "explore" | "experience" | "register" | null;
+type MenuKey = "explore" | "experience" | null;
 
 function DropdownMenu({ items }: { items: { label: string; href: string }[] }) {
   return (
@@ -121,35 +121,12 @@ export default function Nav() {
             </span>
           </Link>
 
-          {/* Register CTA dropdown */}
-          <div
-            className="relative ml-2"
-            onMouseEnter={() => enter("register")}
-            onMouseLeave={leave}
-          >
-            <button className="flex items-center gap-1.5 px-5 py-2 text-sm border border-[#b8892a] text-[#b8892a] rounded-full hover:bg-[#b8892a] hover:text-white transition-colors duration-200 tracking-wide font-medium">
-              <PenLine className="w-3.5 h-3.5" strokeWidth={1.5} />
+          {/* Register CTA */}
+          <Link href="/register">
+            <span className="ml-2 px-5 py-2 text-sm border border-[#b8892a] text-[#b8892a] rounded-full hover:bg-[#b8892a] hover:text-white transition-colors duration-200 tracking-wide font-medium cursor-pointer">
               Register
-              <ChevronDown className={`w-3 h-3 transition-transform duration-200 ${open === "register" ? "rotate-180" : ""}`} strokeWidth={1.5} />
-            </button>
-            {open === "register" && (
-              <div onMouseEnter={() => enter("register")} onMouseLeave={leave} className="absolute top-full right-0 pt-2 min-w-[240px] z-50">
-                <div className="bg-white/98 backdrop-blur-sm border border-[#e8dece] rounded-xl shadow-xl shadow-[#b8892a]/8 overflow-hidden py-2">
-                  <p className="px-5 pt-1 pb-2 text-[10px] uppercase tracking-[0.2em] text-[#b8892a]/70 font-medium border-b border-[#e8dece] mb-1">Programme</p>
-                  <Link href="/register?for=meditation">
-                    <span className="block px-5 py-2.5 text-sm text-[#5a5248] hover:bg-[#fdf6ec] hover:text-[#b8892a] transition-colors cursor-pointer tracking-wide">
-                      Mahayog Meditation
-                    </span>
-                  </Link>
-                  <Link href="/register?for=vedanta">
-                    <span className="block px-5 py-2.5 text-sm text-[#5a5248] hover:bg-[#fdf6ec] hover:text-[#b8892a] transition-colors cursor-pointer tracking-wide">
-                      Vedanta Philosophy Course
-                    </span>
-                  </Link>
-                </div>
-              </div>
-            )}
-          </div>
+            </span>
+          </Link>
 
           {/* Donate CTA */}
           <Link href="/donate">
