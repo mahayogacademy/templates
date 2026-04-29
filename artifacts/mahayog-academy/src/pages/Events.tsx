@@ -129,7 +129,7 @@ const UPCOMING: AnyEvent[] = [
 
 const MILESTONES = [
   {
-    year: "2008",
+    year: "2016",
     title: "Bhu-Samadhi of Jagadguru Mahayogi Siddhababa",
     titleHtml: "<em>Bhu-Samadhi</em> of Jagadguru Mahayogi Siddhababa",
     desc: "The sacred passing (Bhu-Samadhi) of Jagadguru Mahayogi Siddhababa's own revered Guru, a pivotal moment in the lineage, observed with deep ceremony, Vedic rites, and collective grief and gratitude by thousands of disciples. His Holiness continues to carry forward this sacred mission.",
@@ -137,14 +137,14 @@ const MILESTONES = [
     img: "bhu-samadhi-1.jpg",
   },
   {
-    year: "2015",
+    year: "2019",
     title: "Shree Tarak Brahma Mahayagya",
     desc: "A grand Mahayagya, one of the largest fire ceremonies conducted by the Academy, invoking the liberating grace of Tarak Brahma. Thousands of seekers participated across multiple days of continuous havan, kirtan, and satsang.",
     badge: "Mahayagya",
     img: "gurudev-darshan-congregation.jpg",
   },
   {
-    year: "2017",
+    year: "2021",
     title: "Himalayan Siddha Mahayog Anuṣṭhān (COVID-19)",
     desc: "In response to the global COVID-19 pandemic, Jagadguru Mahayogi Siddhababa led an extended collective anuṣṭhān, a sustained spiritual observance of prayer, mantra, havan, and meditation, invoking healing and protection for the world. Seekers across continents joined online.",
     badge: "Special Anuṣṭhān",
