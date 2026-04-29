@@ -348,6 +348,7 @@ function CalendarView({ events }: { events: AnyEvent[] }) {
 export default function Events() {
   const [filter, setFilter] = useState<EventKind>("all");
   const [view, setView] = useState<ViewMode>("list");
+  const [showAllPast, setShowAllPast] = useState(false);
 
   const visible = filter === "all"
     ? UPCOMING.filter(e => e.kind !== "ekadashi")
@@ -612,7 +613,7 @@ export default function Events() {
           <div className="flex-1 h-px bg-[#e8dece]" />
         </div>
         <div className="space-y-3">
-          {PAST.map(p => {
+          {(showAllPast ? PAST : PAST.slice(0, 1)).map(p => {
             const parts = p.date.split(" ");
             const isRecurring = p.date.toLowerCase().includes("recurring");
             const monthAbbr = isRecurring ? "●" : (parts[0] ?? "").slice(0, 3).toUpperCase();
@@ -639,6 +640,14 @@ export default function Events() {
             );
           })}
         </div>
+        {PAST.length > 1 && (
+          <button
+            onClick={() => setShowAllPast(v => !v)}
+            className="mt-5 text-sm text-[#8a7860] hover:text-[#b8892a] underline underline-offset-4 transition-colors"
+          >
+            {showAllPast ? "Show less" : `View all past events (${PAST.length})`}
+          </button>
+        )}
       </section>
 
       {/* ── HISTORIC MILESTONES ── */}
