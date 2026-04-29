@@ -145,7 +145,7 @@ export default function GuruDarshan() {
               <img
                 src={`${b}images/gurudev-darshan-smile.jpg`}
                 alt="His Holiness Jagadguru Mahayogi Siddhababa"
-                className="w-full h-72 object-cover object-top"
+                className="w-full h-72 object-cover object-center"
               />
             </div>
             <div className="mt-8 pl-6 border-l-2 border-[#b8892a]/40">
