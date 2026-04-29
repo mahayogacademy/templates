@@ -21,7 +21,7 @@ const EVENTS = [
     slug: "tarak-brahma-mahayagya",
     year: "2019",
     titleHtml: "Shree Tarak Brahma Mahayagya",
-    img: "gurudev-darshan-congregation.jpg",
+    img: "tarak-brahma-mahayagya.jpg",
     body: [
       "The Shree Tarak Brahma Mahayagya of 2019 was among the most powerful and large-scale fire ceremonies ever conducted under the direct guidance of Jagadguru Mahayogi Siddhababa. Tarak Brahma, the liberating aspect of the Divine, was invoked through an unbroken stream of Vedic havan, mantra recitation, and devotional offering.",
       "Thousands of seekers gathered over multiple days at the Guru Ashram in Nepal, participating in the collective yagya. Vedic pandits chanted continuously, while disciples from across Nepal, India, and international centres joined in person and online.",

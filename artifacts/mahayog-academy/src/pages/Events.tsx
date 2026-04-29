@@ -139,7 +139,7 @@ const MILESTONES = [
     slug: "tarak-brahma-mahayagya",
     year: "2019",
     title: "Shree Tarak Brahma Mahayagya",
-    img: "gurudev-darshan-congregation.jpg",
+    img: "tarak-brahma-mahayagya.jpg",
   },
   {
     slug: "covid-anusthan",
