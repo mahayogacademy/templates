@@ -129,10 +129,10 @@ export default function Nav() {
             </span>
           </Link>
 
-          {/* Register CTA */}
+          {/* Join CTA */}
           <Link href="/register">
             <span className="ml-1 px-5 py-2 text-sm border border-[#b8892a] text-[#b8892a] rounded-full hover:bg-[#b8892a] hover:text-white transition-colors duration-200 tracking-wide font-medium cursor-pointer">
-              Register
+              Join
             </span>
           </Link>
 
