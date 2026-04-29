@@ -546,30 +546,6 @@ export default function Events() {
         {view === "calendar" && <CalendarView events={UPCOMING} />}
       </section>
 
-      {/* ── TYPES OF EVENTS ── */}
-      <section className="bg-[#f5ede0] py-20 px-6">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-12">
-            <p className="text-xs uppercase tracking-[0.25em] text-[#b8892a] font-medium mb-3">Throughout the Year</p>
-            <h2 className="font-['Cormorant_Garamond'] text-4xl md:text-5xl font-light text-[#2c1a08]">What We Gather For</h2>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {[
-              { title: "Sacred Festivals",  icon: "🌕", desc: "Guru Purnima, Navaratri, Mahashivaratri, Ram Navami, and other Vedic celebrations marked with ceremony, discourse, and darshan." },
-              { title: "Retreats",          icon: "🏔", desc: "Multi-day immersive retreats at the Guru Ashram in the Himalayas, combining intensive meditation, Vedanta study, and ashram life." },
-              { title: "Yagya & Havan",     icon: "🔥", desc: "Ancient Vedic fire ceremonies conducted by Jagadguru Mahayogi Siddhababa, powerful rites of purification and collective blessing." },
-            ].map(c => (
-              <div key={c.title}
-                className="bg-white/60 border border-[#e8dece] rounded-2xl p-7 text-center hover:shadow-md hover:bg-white/90 transition-all duration-300">
-                <div className="text-3xl mb-4">{c.icon}</div>
-                <h3 className="font-['Cormorant_Garamond'] text-xl font-semibold text-[#2c1a08] mb-3">{c.title}</h3>
-                <p className="text-[#5a5248] text-sm leading-relaxed">{c.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ── IMAGE BREAK ── */}
       <section className="relative h-64 overflow-hidden">
         <img src={`${b}images/ashram-satsang.png`} alt="Seekers in collective satsang"
