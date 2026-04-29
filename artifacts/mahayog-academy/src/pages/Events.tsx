@@ -646,18 +646,14 @@ export default function Events() {
       </section>
 
       {/* ── HISTORIC MILESTONES ── */}
-      <section className="bg-[#120800] py-24 px-6 relative overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none"
-          style={{ background: "radial-gradient(ellipse at 50% 0%, rgba(184,137,42,0.10) 0%, transparent 55%)" }} />
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#b8892a]/40 to-transparent" />
-
+      <section className="bg-[#f0e8d8] py-24 px-6 relative overflow-hidden">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <p className="text-xs uppercase tracking-[0.25em] text-[#b8892a] font-medium mb-4">A Legacy of Sacred Service</p>
-            <h2 className="font-['Cormorant_Garamond'] text-4xl md:text-5xl font-light text-white leading-snug mb-4">
+            <h2 className="font-['Cormorant_Garamond'] text-4xl md:text-5xl font-light text-[#2c1a08] leading-snug mb-4">
               Historic Milestones
             </h2>
-            <p className="text-[#a09080] text-base max-w-xl mx-auto leading-relaxed">
+            <p className="text-[#6a5c48] text-base max-w-xl mx-auto leading-relaxed">
               Over the years, Jagadguru Mahayogi Siddhababa has presided over some of the most significant spiritual events in the lineage, grand Mahayagyas, collective anuṣṭhāns, and historic moments of grace.
             </p>
           </div>
