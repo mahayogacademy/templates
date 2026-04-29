@@ -146,7 +146,7 @@ const MILESTONES = [
     slug: "covid-anusthan",
     year: "2021",
     title: "Himalayan Siddha Mahayog Anuṣṭhān (COVID-19)",
-    img: "ashram-extra-sanyasi-river.jpg",
+    img: "covid-anusthan.png",
   },
   {
     slug: "atirudri-mahayagya",

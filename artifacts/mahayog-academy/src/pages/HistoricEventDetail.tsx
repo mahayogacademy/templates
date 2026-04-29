@@ -33,7 +33,7 @@ const EVENTS = [
     slug: "covid-anusthan",
     year: "2021",
     titleHtml: "Himalayan Siddha Mahayog Anuṣṭhān (COVID-19)",
-    img: "ashram-extra-sanyasi-river.jpg",
+    img: "covid-anusthan.png",
     body: [
       "When the COVID-19 pandemic swept across the world in 2020 and 2021, Jagadguru Mahayogi Siddhababa responded not with silence, but with sustained spiritual action. He led an extended collective anuṣṭhān — a rigorous, time-bound observance of prayer, mantra japa, havan, and meditation — invoking healing, protection, and peace for the world.",
       "Seekers from across continents participated online, joining their intention and practice to the collective field of the ceremony. The anuṣṭhān ran across multiple weeks, with His Holiness personally guiding each session and holding the group in his presence even across digital distance.",

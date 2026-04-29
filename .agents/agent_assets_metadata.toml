@@ -348,3 +348,9 @@ id = "2MrQKhz4_DcQMD3TXxxNe"
 uri = "file://artifacts/mahayog-academy/public/images/cta-vedanta-study.png"
 type = "image"
 title = "vedanta manuscripts candlelight sacred"
+
+[[generated]]
+id = "lY0X0yRJ0r7wAPc7gaK7g"
+uri = "file://artifacts/mahayog-academy/public/images/covid-anusthan.png"
+type = "image"
+title = "generated_image"
