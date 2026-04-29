@@ -490,11 +490,7 @@ export default function Events() {
                 <div key={month}>
 
                   {/* ── Month heading ── */}
-                  <div className="flex items-center gap-4 mb-5">
-                    <div className="w-8 h-0.5 bg-[#b8892a] rounded-full shrink-0" />
-                    <p className="text-sm font-bold uppercase tracking-[0.28em] text-[#3d3020]">{month}</p>
-                    <div className="flex-1 h-px bg-[#e0d4c0]" />
-                  </div>
+                  <p className="text-sm font-bold uppercase tracking-[0.28em] text-[#3d3020] mb-5">{month}</p>
 
                   {/* ── Cards ── */}
                   <div className="space-y-3">
