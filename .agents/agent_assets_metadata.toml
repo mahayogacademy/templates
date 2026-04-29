@@ -354,3 +354,9 @@ id = "lY0X0yRJ0r7wAPc7gaK7g"
 uri = "file://artifacts/mahayog-academy/public/images/covid-anusthan.png"
 type = "image"
 title = "generated_image"
+
+[[generated]]
+id = "OlSZSUtI6uXAiFq7H_YFC"
+uri = "file://artifacts/mahayog-academy/public/images/bhu-samadhi-closing-bg.png"
+type = "image"
+title = "generated_image"

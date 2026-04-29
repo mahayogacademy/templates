@@ -195,7 +195,7 @@ export default function BhuSamadhiDetail() {
       {/* ── CLOSING REFLECTION ── */}
       <section className="relative py-24 px-6 overflow-hidden">
         <img
-          src={`${b}images/bhu-samadhi-3.jpg`}
+          src={`${b}images/bhu-samadhi-closing-bg.png`}
           alt=""
           aria-hidden="true"
           className="absolute inset-0 w-full h-full object-cover object-center"
