@@ -54,8 +54,8 @@ const UPCOMING = [
     recurring: true,
     title: "Guru Purnima Darshan Mahotsav",
     subtitle: "The Most Sacred Day of the Guru–Disciple Relationship",
-    date: "10 July 2026",
-    dateObj: new Date(2026, 6, 10),
+    date: "29 July 2026",
+    dateObj: new Date(2026, 6, 29),
     time: "All day · Ashram gates open at sunrise",
     location: "Guru Ashram, Nepal · Also livestreamed",
     locationIcon: Globe,
@@ -184,6 +184,114 @@ const MILESTONES = [
     desc: "Dedicated to Lord Hanuman — the remover of all obstacles — this Mahayagya was conducted to invoke protection, strength, and liberation for seekers and the wider world. It included Sundarkanda path, Hanuman Chalisa, and extended havan rituals led by His Holiness.",
     badge: "Mahayagya",
     img: "ashram-hanuman-wide.jpg",
+  },
+];
+
+// ── 2026 SACRED CALENDAR ─────────────────────────────────────────────────────
+// Dates verified against drikpanchang.com for Kathmandu, Nepal (NPT UTC+5:45)
+
+type CalEntry = { date: string; name: string; kind: "ekadashi" | "festival" };
+
+const CALENDAR_2026: { month: string; short: string; past?: boolean; entries: CalEntry[] }[] = [
+  {
+    month: "January", short: "Jan", past: true,
+    entries: [
+      { date: "Jan 14", name: "Shattila Ekadashi", kind: "ekadashi" },
+      { date: "Jan 29", name: "Jaya Ekadashi", kind: "ekadashi" },
+    ],
+  },
+  {
+    month: "February", short: "Feb", past: true,
+    entries: [
+      { date: "Feb 13", name: "Vijaya Ekadashi", kind: "ekadashi" },
+      { date: "Feb 27", name: "Amalaki Ekadashi", kind: "ekadashi" },
+    ],
+  },
+  {
+    month: "March", short: "Mar", past: true,
+    entries: [
+      { date: "Mar 15", name: "Papmochani Ekadashi", kind: "ekadashi" },
+      { date: "Mar 29", name: "Kamada Ekadashi", kind: "ekadashi" },
+    ],
+  },
+  {
+    month: "April", short: "Apr", past: true,
+    entries: [
+      { date: "Apr 13", name: "Varuthini Ekadashi", kind: "ekadashi" },
+      { date: "Apr 27", name: "Mohini Ekadashi", kind: "ekadashi" },
+    ],
+  },
+  {
+    month: "May", short: "May",
+    entries: [
+      { date: "May 13", name: "Apara Ekadashi", kind: "ekadashi" },
+      { date: "May 27", name: "Padmini Ekadashi (Adhika)", kind: "ekadashi" },
+    ],
+  },
+  {
+    month: "June", short: "Jun",
+    entries: [
+      { date: "Jun 11", name: "Paramā Ekadashi (Adhika)", kind: "ekadashi" },
+      { date: "Jun 25", name: "Nirjala Ekadashi", kind: "ekadashi" },
+    ],
+  },
+  {
+    month: "July", short: "Jul",
+    entries: [
+      { date: "Jul 11", name: "Yogini Ekadashi", kind: "ekadashi" },
+      { date: "Jul 25", name: "Devshayani Ekadashi", kind: "ekadashi" },
+      { date: "Jul 29", name: "Guru Purnima", kind: "festival" },
+    ],
+  },
+  {
+    month: "August", short: "Aug",
+    entries: [
+      { date: "Aug 1",  name: "Hariyali Teej", kind: "festival" },
+      { date: "Aug 9",  name: "Kamika Ekadashi", kind: "ekadashi" },
+      { date: "Aug 17", name: "Nag Panchami", kind: "festival" },
+      { date: "Aug 23", name: "Shravana Putrada Ekadashi", kind: "ekadashi" },
+      { date: "Aug 28", name: "Raksha Bandhan", kind: "festival" },
+    ],
+  },
+  {
+    month: "September", short: "Sep",
+    entries: [
+      { date: "Sep 5",  name: "Krishna Janmashtami", kind: "festival" },
+      { date: "Sep 7",  name: "Aja Ekadashi", kind: "ekadashi" },
+      { date: "Sep 13", name: "Hartalika Teej", kind: "festival" },
+      { date: "Sep 14", name: "Ganesh Chaturthi", kind: "festival" },
+      { date: "Sep 22", name: "Parsva Ekadashi", kind: "ekadashi" },
+    ],
+  },
+  {
+    month: "October", short: "Oct",
+    entries: [
+      { date: "Oct 6",  name: "Indira Ekadashi", kind: "ekadashi" },
+      { date: "Oct 12", name: "Navaratri Begins", kind: "festival" },
+      { date: "Oct 20", name: "Saraswati Puja (Maha Navami)", kind: "festival" },
+      { date: "Oct 21", name: "Vijayadashami", kind: "festival" },
+      { date: "Oct 22", name: "Papankusha Ekadashi", kind: "ekadashi" },
+      { date: "Oct 25", name: "Sharad Purnima", kind: "festival" },
+    ],
+  },
+  {
+    month: "November", short: "Nov",
+    entries: [
+      { date: "Nov 5",  name: "Rama Ekadashi", kind: "ekadashi" },
+      { date: "Nov 7",  name: "Dhanteras", kind: "festival" },
+      { date: "Nov 9",  name: "Lakshmi Puja / Diwali", kind: "festival" },
+      { date: "Nov 10", name: "Govardhan Puja", kind: "festival" },
+      { date: "Nov 19", name: "Kansa Vadh", kind: "festival" },
+      { date: "Nov 21", name: "Devutthana Ekadashi · Tulasi Vivah", kind: "ekadashi" },
+    ],
+  },
+  {
+    month: "December", short: "Dec",
+    entries: [
+      { date: "Dec 4",  name: "Utpanna Ekadashi", kind: "ekadashi" },
+      { date: "Dec 14", name: "Vivah Panchami", kind: "festival" },
+      { date: "Dec 20", name: "Mokshada Ekadashi · Gita Jayanti", kind: "ekadashi" },
+    ],
   },
 ];
 
@@ -526,6 +634,66 @@ export default function Events() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ── SACRED CALENDAR 2026 ── */}
+      <section className="max-w-6xl mx-auto px-6 py-20">
+        <div className="text-center mb-12">
+          <p className="text-xs uppercase tracking-[0.25em] text-[#b8892a] font-medium mb-3">Nepal Standard Time (NPT, UTC+5:45)</p>
+          <h2 className="font-['Cormorant_Garamond'] text-4xl md:text-5xl font-light text-[#2c1a08] mb-3">
+            2026 Sacred Calendar
+          </h2>
+          <p className="text-[#5a5248] text-sm max-w-lg mx-auto">
+            All Ekadashis and principal Vedic festivals for 2026, as observed at the Guru Ashram in Nepal. Consecutive Ekadashi dates resolved to the last day per tradition.
+          </p>
+          <div className="flex items-center justify-center gap-6 mt-5 text-xs text-[#7a6e5a]">
+            <span className="flex items-center gap-1.5">
+              <span className="w-2.5 h-2.5 rounded-full bg-[#b8892a] inline-block" /> Ekadashi
+            </span>
+            <span className="flex items-center gap-1.5">
+              <span className="w-2.5 h-2.5 rounded-full bg-[#7a5a2a] inline-block" /> Festival / Celebration
+            </span>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+          {CALENDAR_2026.map(m => (
+            <div key={m.month}
+              className={`rounded-2xl border p-5 transition-opacity ${
+                m.past
+                  ? "border-[#e8dece] bg-[#faf9f6] opacity-50"
+                  : "border-[#e0d0b8] bg-[#fdf8f0] shadow-sm"
+              }`}>
+              <div className="flex items-center justify-between mb-4">
+                <h3 className={`font-['Cormorant_Garamond'] text-2xl font-semibold ${m.past ? "text-[#9a8f84]" : "text-[#2c1a08]"}`}>
+                  {m.month}
+                </h3>
+                {m.past && (
+                  <span className="text-[9px] uppercase tracking-[0.15em] text-[#b8a898] font-medium">Past</span>
+                )}
+              </div>
+              <ul className="space-y-2">
+                {m.entries.map((e, i) => (
+                  <li key={i} className="flex items-start gap-2.5">
+                    <div className={`mt-1 shrink-0 w-2 h-2 rounded-full ${
+                      e.kind === "ekadashi" ? "bg-[#b8892a]" : "bg-[#7a5a2a]"
+                    } ${m.past ? "opacity-60" : ""}`} />
+                    <div className="flex-1 min-w-0">
+                      <span className={`text-[10px] font-mono font-medium ${m.past ? "text-[#b8a898]" : "text-[#b8892a]"} mr-1.5`}>
+                        {e.date}
+                      </span>
+                      <span className={`text-xs leading-snug ${
+                        m.past ? "text-[#9a8f84]" : e.kind === "festival" ? "text-[#3d3830] font-medium" : "text-[#5a5248]"
+                      }`}>
+                        {e.name}
+                      </span>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
       </section>
 
