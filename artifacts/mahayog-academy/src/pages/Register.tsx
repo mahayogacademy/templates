@@ -14,7 +14,7 @@ const PROGRAMMES = [
     tag: "5-Day Initiation Workshop",
     desc: "Receive Shaktipat initiation and begin your journey into Himalayan Siddha Mahāyog Meditation.",
     icon: (
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+      <svg width="44" height="44" viewBox="0 0 24 24" fill="none">
         <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.2" />
         <path d="M12 3C12 3 15 8 15 12C15 16 12 21 12 21" stroke="currentColor" strokeWidth="1" strokeLinecap="round"/>
         <path d="M12 3C12 3 9 8 9 12C9 16 12 21 12 21" stroke="currentColor" strokeWidth="1" strokeLinecap="round"/>
@@ -28,7 +28,7 @@ const PROGRAMMES = [
     tag: "267-Lecture Programme",
     desc: "Immerse yourself in the science of Self and Reality through the teachings of Vedanta.",
     icon: (
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+      <svg width="44" height="44" viewBox="0 0 24 24" fill="none">
         <path d="M4 19V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v13" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"/>
         <path d="M4 19h16" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"/>
         <path d="M8 7h8M8 10h8M8 13h5" stroke="currentColor" strokeWidth="1" strokeLinecap="round"/>
@@ -76,40 +76,56 @@ export default function Register() {
       </section>
 
       {/* ── PROGRAMME PICKER ── */}
-      <section className="px-6 -mt-6 relative z-10 pb-2">
-        <div className="max-w-2xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-4">
-          {PROGRAMMES.map(p => {
-            const selected = program === p.id;
-            return (
-              <button
-                key={p.id}
-                type="button"
-                onClick={() => setProgram(p.id)}
-                className={`text-left p-5 rounded-2xl border-2 transition-all duration-200 shadow-sm ${
-                  selected
-                    ? "border-[#b8892a] bg-white shadow-[#b8892a]/15 shadow-md"
-                    : "border-[#e8dece] bg-white/80 hover:border-[#b8892a]/50 hover:shadow-md"
-                }`}
-              >
-                <div className={`mb-3 ${selected ? "text-[#b8892a]" : "text-[#c8a050]/70"}`}>
-                  {p.icon}
-                </div>
-                <span className={`text-[10px] uppercase tracking-[0.2em] font-medium ${selected ? "text-[#b8892a]" : "text-[#a88040]"}`}>
-                  {p.tag}
-                </span>
-                <p className={`font-['Cormorant_Garamond'] text-lg font-semibold mt-1 leading-snug ${selected ? "text-[#3d2008]" : "text-[#5a3a18]"}`}>
-                  {p.label}
-                </p>
-                <p className="text-xs text-[#7a5a30] mt-1.5 leading-relaxed">{p.desc}</p>
-                {selected && (
-                  <span className="inline-flex items-center gap-1 mt-3 text-[10px] uppercase tracking-widest text-[#b8892a] font-medium">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#b8892a] inline-block" />
-                    Selected
+      <section className="px-6 pt-16 pb-10 bg-[#faf9f6]">
+        <div className="max-w-3xl mx-auto">
+          <p className="text-center text-xs uppercase tracking-[0.25em] text-[#b8892a] mb-10 font-medium">
+            Select Your Path
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            {PROGRAMMES.map(p => {
+              const selected = program === p.id;
+              return (
+                <button
+                  key={p.id}
+                  type="button"
+                  onClick={() => setProgram(p.id)}
+                  className={`group relative text-center flex flex-col items-center p-10 rounded-3xl transition-all duration-300 ${
+                    selected
+                      ? "bg-[#f0e8d5] shadow-lg shadow-[#b8892a]/12"
+                      : "bg-white border border-[#e8dece] hover:border-[#b8892a]/40 hover:shadow-md hover:shadow-[#b8892a]/08"
+                  }`}
+                >
+                  {/* top accent bar */}
+                  <div className={`absolute top-0 left-1/2 -translate-x-1/2 h-[3px] rounded-full transition-all duration-300 ${
+                    selected ? "w-16 bg-[#b8892a]" : "w-0 bg-[#b8892a]"
+                  }`} />
+
+                  {/* icon */}
+                  <div className={`mb-5 transition-colors duration-300 ${selected ? "text-[#b8892a]" : "text-[#c8a868]/60 group-hover:text-[#b8892a]/70"}`}>
+                    <div className="w-14 h-14 flex items-center justify-center">
+                      {p.icon}
+                    </div>
+                  </div>
+
+                  {/* tag */}
+                  <span className={`text-[10px] uppercase tracking-[0.22em] font-medium mb-2 transition-colors duration-300 ${selected ? "text-[#b8892a]" : "text-[#b8892a]/60"}`}>
+                    {p.tag}
                   </span>
-                )}
-              </button>
-            );
-          })}
+
+                  {/* title */}
+                  <p className={`font-['Cormorant_Garamond'] text-2xl font-semibold leading-snug mb-3 transition-colors duration-300 ${selected ? "text-[#2e1405]" : "text-[#5a3a18]"}`}>
+                    {p.label}
+                  </p>
+
+                  {/* divider */}
+                  <div className={`h-px w-10 mb-3 transition-colors duration-300 ${selected ? "bg-[#b8892a]/50" : "bg-[#e8dece]"}`} />
+
+                  {/* description */}
+                  <p className="text-sm text-[#7a5a30] leading-relaxed">{p.desc}</p>
+                </button>
+              );
+            })}
+          </div>
         </div>
       </section>
 
