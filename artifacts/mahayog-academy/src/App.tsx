@@ -13,6 +13,7 @@ import FounderGuru from "@/pages/FounderGuru";
 import Lineage from "@/pages/Lineage";
 import VedantaCourse from "@/pages/VedantaCourse";
 import Register from "@/pages/Register";
+import GuruDarshan from "@/pages/GuruDarshan";
 import ScrollToTop from "@/components/ScrollToTop";
 
 const queryClient = new QueryClient();
@@ -30,6 +31,7 @@ function Router() {
       <Route path="/lineage" component={Lineage} />
       <Route path="/vedanta" component={VedantaCourse} />
       <Route path="/register" component={Register} />
+      <Route path="/guru-darshan" component={GuruDarshan} />
       <Route component={NotFound} />
     </Switch>
   );
