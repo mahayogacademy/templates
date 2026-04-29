@@ -526,22 +526,14 @@ export default function Events() {
                           </div>
                           {/* Content */}
                           <div className="flex-1 px-5 py-4 flex flex-col justify-center">
-                            <div className="flex items-center gap-2 mb-1.5">
-                              <span className={`text-[10px] uppercase tracking-[0.2em] font-semibold px-2.5 py-0.5 rounded-full ${badge}`}>
-                                {ev.kindLabel}
-                              </span>
-                              {ev.recurring && (
-                                <span className="text-[10px] uppercase tracking-[0.18em] text-[#4a7a5a] font-semibold">Annual</span>
-                              )}
-                            </div>
-                            <p className="font-['Cormorant_Garamond'] text-lg font-normal text-[#2c1a08] leading-tight">
+                            <p className="font-['Cormorant_Garamond'] text-xl font-normal text-[#2c1a08] leading-tight">
                               {ev.title}
                             </p>
                             {ev.subtitle && (
                               <p className="text-xs text-[#7a6e5a] mt-1 leading-relaxed">{ev.subtitle}</p>
                             )}
                             {(ev.time || ev.location) && (
-                              <div className="flex flex-wrap gap-x-3 gap-y-0.5 mt-1">
+                              <div className="flex flex-wrap gap-x-3 gap-y-0.5 mt-1.5">
                                 {ev.time && (
                                   <span className="flex items-center gap-1 text-[11px] text-[#9a8f84]">
                                     <Clock size={10} className="text-[#b8892a]" />{ev.time}
@@ -583,11 +575,8 @@ export default function Events() {
                           </div>
 
                           {/* Text */}
-                          <div className="flex-1 px-5 py-4">
-                            <span className={`text-[10px] uppercase tracking-[0.2em] font-semibold px-2.5 py-0.5 rounded-full inline-block mb-1.5 ${badge}`}>
-                              {ev.kindLabel}
-                            </span>
-                            <p className="font-['Cormorant_Garamond'] text-lg font-normal text-[#2c1a08] leading-tight">
+                          <div className="flex-1 px-5 py-4 flex flex-col justify-center">
+                            <p className="font-['Cormorant_Garamond'] text-xl font-normal text-[#2c1a08] leading-tight">
                               {ev.title}
                             </p>
                             {ev.subtitle && (
