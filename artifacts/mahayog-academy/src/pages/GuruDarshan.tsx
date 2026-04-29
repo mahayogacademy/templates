@@ -143,8 +143,8 @@ export default function GuruDarshan() {
           <div className="relative">
             <div className="rounded-2xl overflow-hidden shadow-xl shadow-[#b8892a]/10">
               <img
-                src={`${b}images/ashram-gurudev-seated.jpg`}
-                alt="His Holiness Jagadguru Mahayogi Siddhababa seated in darshan"
+                src={`${b}images/gurudev-darshan-smile.jpg`}
+                alt="His Holiness Jagadguru Mahayogi Siddhababa"
                 className="w-full h-72 object-cover object-top"
               />
             </div>
