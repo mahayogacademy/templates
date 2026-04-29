@@ -278,9 +278,9 @@ export default function GuruDarshan() {
       {/* ── CTA BANNER ── */}
       <section className="relative py-24 px-6 overflow-hidden"
         style={{
-          backgroundImage: `url(${b}images/jagadguru-1.jpg)`,
+          backgroundImage: `url(${b}images/gurudev-seek-guidance.jpg)`,
           backgroundSize: "cover",
-          backgroundPosition: "center 30%",
+          backgroundPosition: "center 40%",
         }}
       >
         <div className="absolute inset-0 pointer-events-none"
