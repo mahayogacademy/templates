@@ -34,24 +34,6 @@ type AnyEvent = {
 
 const UPCOMING: AnyEvent[] = [
   {
-    id: 2,
-    kind: "retreat",
-    kindLabel: "Retreat",
-    recurring: false,
-    title: "Himalayan Siddha Mahayog Retreat",
-    subtitle: "Three-Day Immersion at the Guru Ashram",
-    date: "7 – 9 June 2026",
-    dateObj: new Date(2026, 5, 7),
-    time: "Residential · Full board",
-    location: "Guru Ashram, Barahachetra, Nepal",
-    locationIcon: MapPin,
-    img: "ashram-koshi-river.jpg",
-    imgPos: "object-center",
-    desc: "An intensive three-day immersion at the foot of the Himalayas. Participants engage in morning and evening meditation sessions, Vedanta discourse, and personal time in the presence of His Holiness.",
-    note: "Limited places. Early registration strongly advised.",
-    cta: { label: "Register Now", href: "/register" },
-  },
-  {
     id: 3,
     kind: "special" as EventKind,
     kindLabel: "Special Event",
