@@ -539,7 +539,7 @@ export default function BhuSamadhiDetail() {
       {/* ── CLOSING REFLECTION ── */}
       <section className="relative py-24 px-6 overflow-hidden">
         <img
-          src={`${b}images/bhu-samadhi-closing-bg.png`}
+          src={`${b}images/bs2017-19-emergence-seated.jpg`}
           alt=""
           aria-hidden="true"
           className="absolute inset-0 w-full h-full object-cover object-center"
