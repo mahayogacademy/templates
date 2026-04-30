@@ -127,14 +127,43 @@ const UPCOMING: AnyEvent[] = [
   { id: 130, compact: true, kind: "ekadashi", kindLabel: "Ekadashi",  title: "Mokshada Ekadashi · Gita Jayanti",   subtitle: "The Bhagavad Gita was revealed on this day, the Ekadashi of liberation",                         date: "20 Dec 2026",  dateObj: new Date(2026, 11, 20)},
 ];
 
-const MILESTONES = [
+const BHU_SAMADHIS = [
   {
-    slug: "bhu-samadhi",
-    year: "2008 · 2015 · 2017",
-    title: "Bhu-Samadhi of Jagadguru Mahayogi Siddhababa",
-    titleHtml: "<em>Bhu-Samadhi</em> of Jagadguru Mahayogi Siddhababa",
-    img: "bhu-samadhi-1.jpg",
+    year: "2008",
+    ordinal: "First",
+    place: "Chataradham, Sunsari",
+    img: "bs2008-03-entering-pit.jpg",
+    imgPos: "center 30%",
+    duration: "9 days",
+    photos: 25,
+    desc: "The first public samadhi — nine days beneath four tonnes of sand and 21 kg of sown barley, witnessed by thousands and verified by officials and press.",
+    anchor: "#samadhi-2008",
   },
+  {
+    year: "2015",
+    ordinal: "Second",
+    place: "Chatara, Sunsari",
+    img: "bs2015-01-in-chamber.jpg",
+    imgPos: "center center",
+    duration: "21 days",
+    photos: 3,
+    desc: "The year of Nepal's earthquake — 21 days within the earth, received by devotees as an act of grace offered to the land and its people in a time of grief.",
+    anchor: "#samadhi-2015",
+  },
+  {
+    year: "2017",
+    ordinal: "Third",
+    place: "Pokhara, Gandaki",
+    img: "bs2017-08-lying-in-chamber.jpg",
+    imgPos: "center 20%",
+    duration: "9 days",
+    photos: 22,
+    desc: "The largest gathering of witnesses — ECG data presented after emergence. Tens of thousands received darshan from the stage at Pokhara upon his return.",
+    anchor: "#samadhi-2017",
+  },
+];
+
+const MILESTONES = [
   {
     slug: "tarak-brahma-mahayagya",
     year: "2019",

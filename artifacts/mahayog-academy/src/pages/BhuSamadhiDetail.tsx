@@ -296,6 +296,7 @@ const SEQUENCE_2017 = [
 ];
 
 interface GalleryProps {
+  id?: string;
   year: string;
   place: string;
   heading: string;
@@ -306,13 +307,13 @@ interface GalleryProps {
   children: React.ReactNode;
 }
 
-function GallerySection({ year, place, heading, photoCount, teaser, previewSrcs, bgColor, children }: GalleryProps) {
+function GallerySection({ id, year, place, heading, photoCount, teaser, previewSrcs, bgColor, children }: GalleryProps) {
   const [open, setOpen] = useState(false);
   const rotations = [-7, 1, 9];
   const offsets = [0, 44, 88];
   const tops = [10, 0, 10];
   return (
-    <section className={`${bgColor} py-10 px-6`}>
+    <section id={id} className={`${bgColor} py-10 px-6`}>
       <div className="max-w-5xl mx-auto">
         {/* ── Teaser trigger card ── */}
         <button
@@ -478,6 +479,7 @@ export default function BhuSamadhiDetail() {
       </section>
 
       <GallerySection
+        id="samadhi-2008"
         year="2008"
         place="Chataradham, Nepal"
         heading="The Full Record"
@@ -509,6 +511,7 @@ export default function BhuSamadhiDetail() {
       </GallerySection>
 
       <GallerySection
+        id="samadhi-2015"
         year="2015"
         place="Chatara, Nepal"
         heading="Selected Photographs"
@@ -537,6 +540,7 @@ export default function BhuSamadhiDetail() {
       </GallerySection>
 
       <GallerySection
+        id="samadhi-2017"
         year="2017"
         place="Pokhara, Nepal"
         heading="The Full Record"
