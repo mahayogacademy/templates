@@ -432,6 +432,29 @@ export default function BhuSamadhiDetail() {
         </div>
       </section>
 
+      {/* ── VIDEO ── */}
+      <section className="bg-[#1a0e05] py-16 px-6">
+        <div className="max-w-4xl mx-auto">
+          <div className="flex items-center justify-center gap-3 mb-6">
+            <div className="h-px w-10 bg-[#e8c56a]/30" />
+            <p className="text-[#e8c56a] text-xs uppercase tracking-[0.3em] font-medium">As Witnessed</p>
+            <div className="h-px w-10 bg-[#e8c56a]/30" />
+          </div>
+          <h2 className="font-['Cormorant_Garamond'] text-3xl md:text-4xl font-light text-white text-center mb-8 leading-snug">
+            The Living Record
+          </h2>
+          <div className="relative w-full rounded-2xl overflow-hidden shadow-2xl" style={{ paddingBottom: "56.25%" }}>
+            <iframe
+              className="absolute inset-0 w-full h-full"
+              src="https://www.youtube.com/embed/gNbOUpM3e3M"
+              title="Bhu-Samadhi of Jagadguru Mahayogi Siddhababa"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
+        </div>
+      </section>
+
       <GallerySection
         year="2008"
         place="Chataradham, Nepal"
