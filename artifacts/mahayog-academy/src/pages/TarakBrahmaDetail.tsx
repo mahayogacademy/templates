@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import Nav from "@/components/Nav";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, Download, BookOpen } from "lucide-react";
 
 const b = import.meta.env.BASE_URL;
 
@@ -121,6 +121,29 @@ export default function TarakBrahmaDetail() {
                 <p>
                   The Mahayagya involves continuous Vedic recitation by hundreds of trained pandits, unbroken sacred fire (havan), collective chanting, and an elaborate ceremonial structure governed by precise Vedic ordinance.
                 </p>
+              </div>
+
+              {/* PDF Download */}
+              <div className="mt-8 p-5 rounded-xl border border-[#d8cebb] bg-white/60 flex items-start gap-4">
+                <div className="shrink-0 w-10 h-10 rounded-full bg-[#f4ede0] border border-[#d8cebb] flex items-center justify-center">
+                  <BookOpen size={18} className="text-[#b8892a]" />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <p className="text-[#2c1a08] text-sm font-medium leading-snug mb-0.5">
+                    Shree Ram Tarak Brahma Mahayagya
+                  </p>
+                  <p className="text-[#8a7860] text-xs leading-relaxed mb-3">
+                    The original Nepali text documenting the ceremony, its history, and sacred significance — published by Mahayogi Siddhababa Spiritual Academy
+                  </p>
+                  <a
+                    href={`${b}downloads/shree-ram-tarak-brahma-mahayagya-book.pdf`}
+                    download="Shree-Ram-Tarak-Brahma-Mahayagya-Book.pdf"
+                    className="inline-flex items-center gap-2 text-xs font-medium text-[#b8892a] hover:text-[#9a6e1a] border border-[#b8892a] hover:border-[#9a6e1a] px-4 py-2 rounded-full transition-colors"
+                  >
+                    <Download size={13} />
+                    Download PDF
+                  </a>
+                </div>
               </div>
             </div>
             <div className="rounded-2xl overflow-hidden shadow-xl">
