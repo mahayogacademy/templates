@@ -372,7 +372,6 @@ export default function Events() {
           {[
             { label: "Upcoming Events", href: "#upcoming" },
             { label: "Historic Events", href: "#historic" },
-            { label: "Stay Connected",  href: "#connect"  },
           ].map(({ label, href }) => (
             <a
               key={href}
