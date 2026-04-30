@@ -275,7 +275,7 @@ export default function BhuSamadhiDetail() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {SEQUENCE_2008.map((item) => (
-              <div key={item.step} className="group">
+              <div key={item.src} className="group">
                 <div className="relative overflow-hidden rounded-xl aspect-[4/3]">
                   <img
                     src={`${b}images/${item.src}`}
