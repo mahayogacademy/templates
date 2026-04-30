@@ -125,23 +125,25 @@ export default function Projects() {
       </section>
 
       {/* ── SECTION ANCHOR NAV ── */}
-      <div className="bg-[#faf9f6] border-b border-[#e8dece]">
-        <div className="max-w-5xl mx-auto px-6 py-3">
-          <div className="flex border border-[#e8dece] rounded-full overflow-hidden">
-            {[
-              { label: "108 Hanuman Temples", anchor: "#project-01" },
-              { label: "Ram Mandir", anchor: "#project-02" },
-            ].map((item, i, arr) => (
-              <a
-                key={item.anchor}
-                href={item.anchor}
-                className={`flex-1 text-center py-2.5 text-sm text-[#5a5248] hover:bg-[#e8dece] hover:text-[#7a5c1e] transition-colors tracking-wide ${i < arr.length - 1 ? "border-r border-[#e8dece]" : ""}`}
-              >
-                {item.label}
-              </a>
-            ))}
-          </div>
-        </div>
+      <div className="sticky top-0 z-30 bg-[#faf9f6]/95 backdrop-blur-sm border-b border-[#e8dece] px-6 py-3">
+        <nav className="max-w-3xl mx-auto flex items-stretch rounded-full border border-[#d8cebb] bg-[#f4ede0] overflow-hidden divide-x divide-[#d8cebb] text-sm font-medium">
+          {[
+            { label: "108 Hanuman Temples", anchor: "#project-01" },
+            { label: "Ram Mandir",          anchor: "#project-02" },
+          ].map(({ label, anchor }) => (
+            <a
+              key={anchor}
+              href={anchor}
+              onClick={e => {
+                e.preventDefault();
+                document.querySelector(anchor)?.scrollIntoView({ behavior: "smooth" });
+              }}
+              className="flex-1 text-center py-2.5 text-[#5c4e38] hover:text-white hover:bg-[#3d3020] transition-colors duration-150 cursor-pointer"
+            >
+              {label}
+            </a>
+          ))}
+        </nav>
       </div>
 
       {/* ── PROJECT 01: 108 HANUMAN TEMPLES ── */}
