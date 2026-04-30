@@ -52,12 +52,12 @@ export default function TarakBrahmaDetail() {
       {/* ── HISTORIC SIGNIFICANCE BANNER ── */}
       <section className="relative py-8 px-6 overflow-hidden">
         <img
-          src={`${b}images/tbm-aerial-mandap-01.png`}
+          src={`${b}images/tbm-banner-bg.png`}
           alt=""
           aria-hidden="true"
-          className="absolute inset-0 w-full h-full object-cover object-top"
+          className="absolute inset-0 w-full h-full object-cover object-center"
         />
-        <div className="absolute inset-0 bg-black/72" />
+        <div className="absolute inset-0 bg-black/30" />
         <div className="relative z-10 max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-8 text-center">
           {[
             { num: "705", label: "Years Since Last Performed in Nepal" },
