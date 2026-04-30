@@ -308,8 +308,8 @@ interface GalleryProps {
 function GallerySection({ year, place, heading, body, previewSrcs, bgColor, children }: GalleryProps) {
   const [open, setOpen] = useState(false);
   const rotations = [-7, 1, 9];
-  const offsets = [0, 44, 88];
-  const tops = [10, 0, 10];
+  const offsets = [0, 56, 112];
+  const tops = [14, 0, 14];
   return (
     <section className={`${bgColor} py-10 px-6`}>
       <div className="max-w-5xl mx-auto">
@@ -338,14 +338,14 @@ function GallerySection({ year, place, heading, body, previewSrcs, bgColor, chil
               </span>
             </div>
             {/* Right: fanned photo preview + chevron */}
-            <div className="relative h-28 w-52 flex-shrink-0 hidden sm:block self-center">
+            <div className="relative h-36 w-72 flex-shrink-0 hidden sm:block self-center">
               {previewSrcs.slice(0, 3).map((src, i) => (
                 <img
                   key={src}
                   src={`${b}images/${src}`}
                   alt=""
                   aria-hidden="true"
-                  className="absolute w-24 h-20 object-cover rounded-lg shadow-md transition-all duration-500 group-hover:scale-105"
+                  className="absolute w-32 h-24 object-cover rounded-lg shadow-md transition-all duration-500 group-hover:scale-105"
                   style={{ transform: `rotate(${rotations[i]}deg)`, left: offsets[i], top: tops[i] }}
                 />
               ))}
