@@ -380,7 +380,7 @@ export default function Events() {
                 e.preventDefault();
                 document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
               }}
-              className="flex-1 text-center py-2.5 text-[#5c4e38] hover:text-[#b8892a] hover:bg-[#ede3d0] transition-colors duration-150 cursor-pointer"
+              className="flex-1 text-center py-2.5 text-[#5c4e38] hover:text-white hover:bg-[#3d3020] transition-colors duration-150 cursor-pointer"
             >
               {label}
             </a>
