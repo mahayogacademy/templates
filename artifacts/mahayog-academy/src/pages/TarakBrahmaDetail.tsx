@@ -192,56 +192,8 @@ export default function TarakBrahmaDetail() {
         </div>
       </section>
 
-      {/* ── THE ANUSTHAN ── */}
-      <section className="bg-[#faf9f6] py-20 px-6">
-        <div className="max-w-5xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-            <div>
-              <p className="text-xs uppercase tracking-[0.3em] text-[#b8892a] font-medium mb-4">The Inner Foundation</p>
-              <h2 className="font-['Cormorant_Garamond'] text-3xl md:text-4xl font-light text-[#2c1a08] leading-snug mb-6">
-                A Year of Collective Anusthan
-              </h2>
-              <div className="space-y-4 text-[#4a3f32] text-base leading-[1.9]">
-                <p>
-                  The Mahayagya did not begin on the day the fires were lit. Its true commencement was a full year earlier — at Mahashivaratri 2018 — when over one thousand men and women initiated a sustained spiritual anusthan under the guidance of Jagadguru Mahayogi Siddhababa.
-                </p>
-                <p>
-                  Each practitioner committed to chanting the <em>Shree Ram Sharanagati Mantra</em> a minimum of 4,000 times daily — forty rounds of a full mala — without interruption, for the entire duration leading up to Janaki Navami 2019. This was not a ceremonial gesture but a living practice: a daily immersion in the resonance of the Divine Name, sustained collectively across more than a thousand souls.
-                </p>
-                <p>
-                  In the Vedic understanding, the outer fire ceremony and the inner discipline are inseparable. The havan that culminated the Mahayagya was the outer crystallisation of a year of invisible fire — the fire of sustained mantra and surrender that the practitioners had been building within themselves and in the subtle environment of Nepal.
-                </p>
-              </div>
-            </div>
-            {/* Pull-quote + stats */}
-            <div className="flex flex-col gap-6">
-              <div className="rounded-2xl bg-[#f4ede0] border border-[#d8cebb] p-8">
-                <p className="font-['Cormorant_Garamond'] text-xl text-[#2c1a08] italic font-light leading-relaxed mb-6">
-                  "The external Yagya is powerful. But it is built upon the foundation of the internal Yagya — the unceasing remembrance of the Divine Name in the heart of every practitioner."
-                </p>
-                <p className="text-xs uppercase tracking-[0.2em] text-[#b8892a] font-medium">— Jagadguru Mahayogi Siddhababa</p>
-              </div>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="rounded-xl bg-white border border-[#e8dece] p-5 text-center shadow-sm">
-                  <p className="font-['Cormorant_Garamond'] text-4xl text-[#b8892a] font-light">1,000+</p>
-                  <p className="text-[#6a5c48] text-xs uppercase tracking-wider mt-1">practitioners in anusthan</p>
-                </div>
-                <div className="rounded-xl bg-white border border-[#e8dece] p-5 text-center shadow-sm">
-                  <p className="font-['Cormorant_Garamond'] text-4xl text-[#b8892a] font-light">40</p>
-                  <p className="text-[#6a5c48] text-xs uppercase tracking-wider mt-1">malas chanted daily</p>
-                </div>
-                <div className="rounded-xl bg-white border border-[#e8dece] p-5 text-center shadow-sm col-span-2">
-                  <p className="font-['Cormorant_Garamond'] text-4xl text-[#b8892a] font-light">Mahashivaratri → Janaki Navami</p>
-                  <p className="text-[#6a5c48] text-xs uppercase tracking-wider mt-1">2018 – 2019 · one full year of practice</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* ── THE MANDAP — AERIAL VIEWS ── */}
-      <section className="bg-[#f4ede0] py-20 px-6">
+      <section className="bg-[#faf9f6] py-20 px-6">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
             <p className="text-xs uppercase tracking-[0.3em] text-[#b8892a] font-medium mb-3">Barahkshetra, Nepal · 2019</p>
@@ -272,8 +224,56 @@ export default function TarakBrahmaDetail() {
         </div>
       </section>
 
-      {/* ── BHUMI PUJA ── */}
+      {/* ── THE ANUSTHAN ── */}
       <section className="bg-[#f4ede0] py-20 px-6">
+        <div className="max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            <div>
+              <p className="text-xs uppercase tracking-[0.3em] text-[#b8892a] font-medium mb-4">The Inner Foundation</p>
+              <h2 className="font-['Cormorant_Garamond'] text-3xl md:text-4xl font-light text-[#2c1a08] leading-snug mb-6">
+                A Year of Collective Anusthan
+              </h2>
+              <div className="space-y-4 text-[#4a3f32] text-base leading-[1.9]">
+                <p>
+                  The Mahayagya did not begin on the day the fires were lit. Its true commencement was a full year earlier — at Mahashivaratri 2018 — when over one thousand men and women initiated a sustained spiritual anusthan under the guidance of Jagadguru Mahayogi Siddhababa.
+                </p>
+                <p>
+                  Each practitioner committed to chanting the <em>Shree Ram Sharanagati Mantra</em> a minimum of 4,000 times daily — forty rounds of a full mala — without interruption, for the entire duration leading up to Janaki Navami 2019. This was not a ceremonial gesture but a living practice: a daily immersion in the resonance of the Divine Name, sustained collectively across more than a thousand souls.
+                </p>
+                <p>
+                  In the Vedic understanding, the outer fire ceremony and the inner discipline are inseparable. The havan that culminated the Mahayagya was the outer crystallisation of a year of invisible fire — the fire of sustained mantra and surrender that the practitioners had been building within themselves and in the subtle environment of Nepal.
+                </p>
+              </div>
+            </div>
+            {/* Pull-quote + stats */}
+            <div className="flex flex-col gap-6">
+              <div className="rounded-2xl bg-white/60 border border-[#d8cebb] p-8">
+                <p className="font-['Cormorant_Garamond'] text-xl text-[#2c1a08] italic font-light leading-relaxed mb-6">
+                  "The external Yagya is powerful. But it is built upon the foundation of the internal Yagya — the unceasing remembrance of the Divine Name in the heart of every practitioner."
+                </p>
+                <p className="text-xs uppercase tracking-[0.2em] text-[#b8892a] font-medium">— Jagadguru Mahayogi Siddhababa</p>
+              </div>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="rounded-xl bg-white border border-[#e8dece] p-5 text-center shadow-sm">
+                  <p className="font-['Cormorant_Garamond'] text-4xl text-[#b8892a] font-light">1,000+</p>
+                  <p className="text-[#6a5c48] text-xs uppercase tracking-wider mt-1">practitioners in anusthan</p>
+                </div>
+                <div className="rounded-xl bg-white border border-[#e8dece] p-5 text-center shadow-sm">
+                  <p className="font-['Cormorant_Garamond'] text-4xl text-[#b8892a] font-light">40</p>
+                  <p className="text-[#6a5c48] text-xs uppercase tracking-wider mt-1">malas chanted daily</p>
+                </div>
+                <div className="rounded-xl bg-white border border-[#e8dece] p-5 text-center shadow-sm col-span-2">
+                  <p className="font-['Cormorant_Garamond'] text-4xl text-[#b8892a] font-light">Mahashivaratri → Janaki Navami</p>
+                  <p className="text-[#6a5c48] text-xs uppercase tracking-wider mt-1">2018 – 2019 · one full year of practice</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── BHUMI PUJA ── */}
+      <section className="bg-[#faf9f6] py-20 px-6">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
             <p className="text-xs uppercase tracking-[0.3em] text-[#b8892a] font-medium mb-3">Before the Ceremony</p>
