@@ -1,6 +1,7 @@
+import { useState } from "react";
 import { Link } from "wouter";
 import Nav from "@/components/Nav";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, ChevronDown } from "lucide-react";
 
 const b = import.meta.env.BASE_URL;
 
@@ -294,6 +295,84 @@ const SEQUENCE_2017 = [
   },
 ];
 
+interface GalleryProps {
+  year: string;
+  place: string;
+  heading: string;
+  photoCount: number;
+  teaser: string;
+  previewSrcs: string[];
+  bgColor: string;
+  children: React.ReactNode;
+}
+
+function GallerySection({ year, place, heading, photoCount, teaser, previewSrcs, bgColor, children }: GalleryProps) {
+  const [open, setOpen] = useState(false);
+  const rotations = [-7, 1, 9];
+  const offsets = [0, 44, 88];
+  const tops = [10, 0, 10];
+  return (
+    <section className={`${bgColor} py-10 px-6`}>
+      <div className="max-w-5xl mx-auto">
+        {/* ── Teaser trigger card ── */}
+        <button
+          onClick={() => setOpen((o) => !o)}
+          className="w-full group text-left"
+          aria-expanded={open}
+        >
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 bg-white/70 rounded-2xl px-7 py-6 shadow-sm border border-[#e8dece] group-hover:border-[#c9a96e] group-hover:shadow-md transition-all duration-300">
+            {/* Left: text */}
+            <div className="flex-1 min-w-0">
+              <div className="flex flex-wrap items-baseline gap-3 mb-1">
+                <span className="font-['Cormorant_Garamond'] text-5xl text-[#b8892a] font-light leading-none">{year}</span>
+                <span className="text-[#8a7860] font-['Inter'] text-xs uppercase tracking-[0.22em]">{place}</span>
+              </div>
+              <h2 className="font-['Cormorant_Garamond'] text-2xl text-[#2e1f0e] font-semibold mb-2">{heading}</h2>
+              <p className="font-['Cormorant_Garamond'] text-lg text-[#7a6a55] italic leading-snug mb-4 max-w-lg">{teaser}</p>
+              <div className="flex items-center gap-3 flex-wrap">
+                <span className="text-xs font-['Inter'] font-medium text-white bg-[#b8892a] px-3 py-1 rounded-full">
+                  {photoCount} photographs
+                </span>
+                <span className="font-['Inter'] text-sm text-[#b8892a] underline-offset-2 group-hover:underline">
+                  {open ? "Close the record" : "Reveal the record"} →
+                </span>
+              </div>
+            </div>
+            {/* Right: fanned photo preview + chevron */}
+            <div className="relative h-28 w-52 flex-shrink-0 hidden sm:block">
+              {previewSrcs.slice(0, 3).map((src, i) => (
+                <img
+                  key={src}
+                  src={`${b}images/${src}`}
+                  alt=""
+                  aria-hidden="true"
+                  className="absolute w-24 h-20 object-cover rounded-lg shadow-md transition-all duration-500 group-hover:scale-105"
+                  style={{ transform: `rotate(${rotations[i]}deg)`, left: offsets[i], top: tops[i] }}
+                />
+              ))}
+              <div className="absolute bottom-0 right-0 bg-white/80 rounded-full p-1.5 shadow-sm">
+                <ChevronDown
+                  size={18}
+                  className={`text-[#b8892a] transition-transform duration-300 ${open ? "rotate-180" : ""}`}
+                />
+              </div>
+            </div>
+          </div>
+        </button>
+
+        {/* ── Expandable grid ── */}
+        <div
+          className={`overflow-hidden transition-all duration-700 ease-in-out ${
+            open ? "opacity-100 mt-8" : "max-h-0 opacity-0 pointer-events-none"
+          }`}
+        >
+          {children}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export default function BhuSamadhiDetail() {
   return (
     <>
@@ -398,139 +477,89 @@ export default function BhuSamadhiDetail() {
         </div>
       </section>
 
-      {/* ── 2008 PHOTO SEQUENCE ── */}
-      <section className="bg-[#faf9f6] py-16 px-6">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="font-['Cormorant_Garamond'] text-3xl md:text-4xl text-[#2e1f0e] font-light mb-2 text-center">
-            2008 Chataradham — The Full Record
-          </h2>
-          <p className="text-center font-['Inter'] text-sm text-[#7a6a55] mb-2">
-            Twenty-five photographs documenting the complete sequence: from preparation to emergence, vigil, and official recognition
-          </p>
-          <div className="h-px bg-[#c9a96e]/40 w-24 mx-auto mb-12" />
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {SEQUENCE_2008.map((item) => (
-              <div key={item.src} className="group">
-                <div className="relative overflow-hidden rounded-xl aspect-[4/3]">
-                  <img
-                    src={`${b}images/${item.src}`}
-                    alt={item.label}
-                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                  {/* Step badge */}
-                  <div className="absolute top-3 left-3 bg-[#b8892a]/90 text-white text-xs font-['Inter'] font-semibold px-2.5 py-1 rounded-full backdrop-blur-sm">
-                    {item.step}
-                  </div>
-                </div>
-                <div className="pt-3 px-1">
-                  <p className="font-['Cormorant_Garamond'] text-lg text-[#2e1f0e] font-semibold leading-snug mb-1">
-                    {item.label}
-                  </p>
-                  <p className="font-['Inter'] text-sm text-[#6a5c48] leading-relaxed">
-                    {item.caption}
-                  </p>
+      <GallerySection
+        year="2008"
+        place="Chataradham, Nepal"
+        heading="The Full Record"
+        photoCount={25}
+        teaser="From pit to emergence — twenty-five photographs documenting every moment of the first public samadhi, witnessed by thousands and verified by officials."
+        previewSrcs={["bs2008-03-entering-pit.jpg", "bs2008-10-barley-grown.jpg", "bs2008-17-emerging.jpg"]}
+        bgColor="bg-[#faf9f6]"
+      >
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {SEQUENCE_2008.map((item) => (
+            <div key={item.src} className="group">
+              <div className="relative overflow-hidden rounded-xl aspect-[4/3]">
+                <img
+                  src={`${b}images/${item.src}`}
+                  alt={item.label}
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute top-3 left-3 bg-[#b8892a]/90 text-white text-xs font-['Inter'] font-semibold px-2.5 py-1 rounded-full backdrop-blur-sm">
+                  {item.step}
                 </div>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── 2015 PHOTO SECTION ── */}
-      <section className="bg-[#f4ede0] py-16 px-6">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="font-['Cormorant_Garamond'] text-3xl md:text-4xl text-[#2e1f0e] font-light mb-1 text-center">
-            2015 Chatara — Selected Photographs
-          </h2>
-          <p className="text-center font-['Inter'] text-xs uppercase tracking-widest text-[#8a7860] mb-3">
-            Chatara, Nepal
-          </p>
-          <p className="text-center font-['Inter'] text-sm text-[#7a6a55] max-w-2xl mx-auto mb-2">
-            The second public Bhu-Samadhi took place at Chatara in 2015 — the same year Nepal was struck by a devastating earthquake. The chamber was lined with fabric; officials and pandits conducted a formal inspection mid-way through the sealed period. As in 2008, barley was sowed and grew above him during the nine days.
-          </p>
-          <div className="h-px bg-[#c9a96e]/40 w-24 mx-auto mb-10" />
-
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-            {[
-              {
-                src: "bs2015-01-in-chamber.jpg",
-                label: "In the Chamber",
-                caption: "Gurudev lies in the fabric-lined wooden chamber, draped in saffron, eyes closed — the body at complete rest, consciousness withdrawn.",
-              },
-              {
-                src: "bs2015-02-inspection.jpg",
-                label: "Official Inspection",
-                caption: "An official observer examines the sealed chamber mid-samadhi — part of the transparent, verifiable nature of the public demonstration.",
-              },
-              {
-                src: "bs2015-03-barley-harvest.jpg",
-                label: "Harvesting the Barley",
-                caption: "Pandits remove the lush barley growth from the mound before the final opening — the grown grain a sign of the life-force held within.",
-              },
-            ].map((item) => (
-              <div key={item.src} className="group">
-                <div className="relative overflow-hidden rounded-xl aspect-[4/3]">
-                  <img
-                    src={`${b}images/${item.src}`}
-                    alt={item.label}
-                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                </div>
-                <div className="pt-3 px-1">
-                  <p className="font-['Cormorant_Garamond'] text-lg text-[#2e1f0e] font-semibold leading-snug mb-1">
-                    {item.label}
-                  </p>
-                  <p className="font-['Inter'] text-sm text-[#6a5c48] leading-relaxed">
-                    {item.caption}
-                  </p>
-                </div>
+              <div className="pt-3 px-1">
+                <p className="font-['Cormorant_Garamond'] text-lg text-[#2e1f0e] font-semibold leading-snug mb-1">{item.label}</p>
+                <p className="font-['Inter'] text-sm text-[#6a5c48] leading-relaxed">{item.caption}</p>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
-      </section>
+      </GallerySection>
 
-      {/* ── 2017 PHOTO SECTION ── */}
-      <section className="bg-[#faf9f6] py-16 px-6">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="font-['Cormorant_Garamond'] text-3xl md:text-4xl text-[#2e1f0e] font-light mb-1 text-center">
-            2017 Pokhara — The Full Record
-          </h2>
-          <p className="text-center font-['Inter'] text-xs uppercase tracking-widest text-[#8a7860] mb-3">
-            Pokhara, Nepal
-          </p>
-          <p className="text-center font-['Inter'] text-sm text-[#7a6a55] max-w-2xl mx-auto mb-2">
-            Twenty-two photographs documenting the complete 2017 Pokhara Bhu-Samadhi: from the street procession and entry through nine days of vigil, the grown barley, emergence, medical verification, and darshan for tens of thousands.
-          </p>
-          <div className="h-px bg-[#c9a96e]/40 w-24 mx-auto mb-12" />
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {SEQUENCE_2017.map((item) => (
-              <div key={item.src} className="group">
-                <div className="relative overflow-hidden rounded-xl aspect-[4/3]">
-                  <img
-                    src={`${b}images/${item.src}`}
-                    alt={item.label}
-                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                  <div className="absolute top-3 left-3 bg-[#b8892a]/90 text-white text-xs font-['Inter'] font-semibold px-2.5 py-1 rounded-full backdrop-blur-sm">
-                    {item.step}
-                  </div>
-                </div>
-                <div className="pt-3 px-1">
-                  <p className="font-['Cormorant_Garamond'] text-lg text-[#2e1f0e] font-semibold leading-snug mb-1">
-                    {item.label}
-                  </p>
-                  <p className="font-['Inter'] text-sm text-[#6a5c48] leading-relaxed">
-                    {item.caption}
-                  </p>
-                </div>
+      <GallerySection
+        year="2015"
+        place="Chatara, Nepal"
+        heading="Selected Photographs"
+        photoCount={3}
+        teaser="The year of the earthquake — three photographs from the second public samadhi, conducted as an act of grace for the land."
+        previewSrcs={["bs2015-01-in-chamber.jpg", "bs2015-02-inspection.jpg", "bs2015-03-barley-harvest.jpg"]}
+        bgColor="bg-[#f4ede0]"
+      >
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+          {[
+            { src: "bs2015-01-in-chamber.jpg", label: "In the Chamber", caption: "Gurudev lies in the fabric-lined wooden chamber, draped in saffron, eyes closed — the body at complete rest, consciousness withdrawn." },
+            { src: "bs2015-02-inspection.jpg", label: "Official Inspection", caption: "An official observer examines the sealed chamber mid-samadhi — part of the transparent, verifiable nature of the public demonstration." },
+            { src: "bs2015-03-barley-harvest.jpg", label: "Harvesting the Barley", caption: "Pandits remove the lush barley growth from the mound before the final opening — the grown grain a sign of the life-force held within." },
+          ].map((item) => (
+            <div key={item.src} className="group">
+              <div className="relative overflow-hidden rounded-xl aspect-[4/3]">
+                <img src={`${b}images/${item.src}`} alt={item.label} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
               </div>
-            ))}
-          </div>
+              <div className="pt-3 px-1">
+                <p className="font-['Cormorant_Garamond'] text-lg text-[#2e1f0e] font-semibold leading-snug mb-1">{item.label}</p>
+                <p className="font-['Inter'] text-sm text-[#6a5c48] leading-relaxed">{item.caption}</p>
+              </div>
+            </div>
+          ))}
         </div>
-      </section>
+      </GallerySection>
+
+      <GallerySection
+        year="2017"
+        place="Pokhara, Nepal"
+        heading="The Full Record"
+        photoCount={22}
+        teaser="Procession, entry, nine days below the earth, the ECG that silenced doubt — and the tens of thousands who stood waiting."
+        previewSrcs={["bs2017-08-lying-in-chamber.jpg", "bs2017-17-barley-closeup.jpg", "bs2017-02-darshan-crowd.jpg"]}
+        bgColor="bg-[#faf9f6]"
+      >
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {SEQUENCE_2017.map((item) => (
+            <div key={item.src} className="group">
+              <div className="relative overflow-hidden rounded-xl aspect-[4/3]">
+                <img src={`${b}images/${item.src}`} alt={item.label} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                <div className="absolute top-3 left-3 bg-[#b8892a]/90 text-white text-xs font-['Inter'] font-semibold px-2.5 py-1 rounded-full backdrop-blur-sm">{item.step}</div>
+              </div>
+              <div className="pt-3 px-1">
+                <p className="font-['Cormorant_Garamond'] text-lg text-[#2e1f0e] font-semibold leading-snug mb-1">{item.label}</p>
+                <p className="font-['Inter'] text-sm text-[#6a5c48] leading-relaxed">{item.caption}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </GallerySection>
 
       {/* ── CLOSING REFLECTION ── */}
       <section className="relative py-24 px-6 overflow-hidden">
