@@ -432,29 +432,6 @@ export default function BhuSamadhiDetail() {
         </div>
       </section>
 
-      {/* ── VIDEO ── */}
-      <section className="bg-[#f4ede0] py-16 px-6">
-        <div className="max-w-4xl mx-auto">
-          <div className="flex items-center justify-center gap-3 mb-6">
-            <div className="h-px w-10 bg-[#b8892a]/40" />
-            <p className="text-[#b8892a] text-xs uppercase tracking-[0.3em] font-medium">As Witnessed</p>
-            <div className="h-px w-10 bg-[#b8892a]/40" />
-          </div>
-          <h2 className="font-['Cormorant_Garamond'] text-3xl md:text-4xl font-light text-[#2e1f0e] text-center mb-8 leading-snug">
-            The Living Record
-          </h2>
-          <div className="relative w-full rounded-2xl overflow-hidden shadow-2xl" style={{ paddingBottom: "56.25%" }}>
-            <iframe
-              className="absolute inset-0 w-full h-full"
-              src="https://www.youtube.com/embed/gNbOUpM3e3M"
-              title="Bhu-Samadhi of Jagadguru Mahayogi Siddhababa"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
-          </div>
-        </div>
-      </section>
-
       <GallerySection
         year="2008"
         place="Chataradham, Nepal"
@@ -535,6 +512,29 @@ export default function BhuSamadhiDetail() {
           ))}
         </div>
       </GallerySection>
+
+      {/* ── VIDEO ── */}
+      <section className="bg-[#f4ede0] py-16 px-6">
+        <div className="max-w-4xl mx-auto">
+          <div className="flex items-center justify-center gap-3 mb-6">
+            <div className="h-px w-10 bg-[#b8892a]/40" />
+            <p className="text-[#b8892a] text-xs uppercase tracking-[0.3em] font-medium">As Witnessed</p>
+            <div className="h-px w-10 bg-[#b8892a]/40" />
+          </div>
+          <h2 className="font-['Cormorant_Garamond'] text-3xl md:text-4xl font-light text-[#2e1f0e] text-center mb-8 leading-snug">
+            The Living Record
+          </h2>
+          <div className="relative w-full rounded-2xl overflow-hidden shadow-2xl" style={{ paddingBottom: "56.25%" }}>
+            <iframe
+              className="absolute inset-0 w-full h-full"
+              src="https://www.youtube.com/embed/gNbOUpM3e3M"
+              title="Bhu-Samadhi of Jagadguru Mahayogi Siddhababa"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
+        </div>
+      </section>
 
       {/* ── CLOSING REFLECTION ── */}
       <section className="relative py-24 px-6 overflow-hidden">
