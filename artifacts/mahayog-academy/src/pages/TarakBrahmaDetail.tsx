@@ -288,7 +288,7 @@ export default function TarakBrahmaDetail() {
       </section>
 
       {/* ── VIDEO ── */}
-      <section className="bg-[#faf9f6] py-20 px-6">
+      <section className="bg-[#f4ede0] py-20 px-6">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-10">
             <p className="text-xs uppercase tracking-[0.3em] text-[#b8892a] font-medium mb-3">Watch</p>
