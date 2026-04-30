@@ -229,6 +229,27 @@ export default function TarakBrahmaDetail() {
         </div>
       </section>
 
+      {/* ── VIDEO ── */}
+      <section className="bg-[#faf9f6] py-20 px-6">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-10">
+            <p className="text-xs uppercase tracking-[0.3em] text-[#b8892a] font-medium mb-3">Watch</p>
+            <h2 className="font-['Cormorant_Garamond'] text-3xl md:text-4xl font-light text-[#2c1a08] leading-snug">
+              The Mahayagya — in Film
+            </h2>
+          </div>
+          <div className="rounded-2xl overflow-hidden shadow-xl aspect-video">
+            <iframe
+              src="https://www.youtube.com/embed/tSXvL6qA-xQ"
+              title="Shree Ram Tarak Brahma Mahayagya"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="w-full h-full"
+            />
+          </div>
+        </div>
+      </section>
+
       {/* ── NIGHT CEREMONY ── */}
       <section className="bg-[#1a0c03] py-20 px-6">
         <div className="max-w-5xl mx-auto">
