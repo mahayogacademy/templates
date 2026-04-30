@@ -158,6 +158,142 @@ const SEQUENCE_2008 = [
   },
 ];
 
+// Complete 2017 Pokhara Bhu-Samadhi sequence
+const SEQUENCE_2017 = [
+  {
+    src: "bs2017-03-procession.jpg",
+    step: "1",
+    label: "The Procession",
+    caption: "A decorated jeep garlanded with marigolds leads the ceremonial procession through the streets of Pokhara, announcing the commencement of the public samadhi.",
+  },
+  {
+    src: "bs2017-04-banner-march.jpg",
+    step: "2",
+    label: "Flag-Raising March",
+    caption: "Disciples march through Pokhara carrying the banner of the Dhwajarohan Mahotsav — the flag-raising festival that marks the beginning of the samadhi occasion.",
+  },
+  {
+    src: "bs2017-05-press-briefing.jpg",
+    step: "3",
+    label: "Press Briefing",
+    caption: "An organiser addresses journalists and cameramen in the chamber before entry, explaining the transparent nature of the public demonstration.",
+  },
+  {
+    src: "bs2017-06-gurudev-greeting.jpg",
+    step: "4",
+    label: "Gurudev Arrives",
+    caption: "Gurudev greets assembled disciples and dignitaries before descending into the pit — serene, unhurried, fully present.",
+  },
+  {
+    src: "bs2017-07-conch-in-pit.jpg",
+    step: "5",
+    label: "Sounding the Conch",
+    caption: "Seated in the pit, Gurudev sounds the conch — a sacred invocation before withdrawing consciousness from the outer world.",
+  },
+  {
+    src: "bs2017-08-lying-in-chamber.jpg",
+    step: "6",
+    label: "Into the Earth",
+    caption: "Gurudev lies in the white-lined wooden chamber, fully composed. The body settles into stillness as consciousness begins its inward turn.",
+  },
+  {
+    src: "bs2017-09-media-witness.jpg",
+    step: "7",
+    label: "Witnessed by Media",
+    caption: "TV cameras, journalists, and a senior elder document the moment of sealing — every step of the 2017 samadhi was recorded in full transparency.",
+  },
+  {
+    src: "bs2017-10-sealing.jpg",
+    step: "8",
+    label: "The Pit Sealed",
+    caption: "The chamber is covered with a heavy plastic sheet and board. Disciples seal it carefully, watched closely by observers and media.",
+  },
+  {
+    src: "bs2017-11-earth-mound.jpg",
+    step: "9",
+    label: "The Mound Shaped",
+    caption: "Disciples pile and shape the earth over the sealed pit by hand — compacting the mound that will hold the barley and stand for nine days.",
+  },
+  {
+    src: "bs2017-12-night-vigil.jpg",
+    step: "·",
+    label: "The Vigil — Night",
+    caption: "Crowds gather through the night around the sealed samadhi chamber — families, elders, children all keeping faith together.",
+  },
+  {
+    src: "bs2017-13-kirtan-vigil.jpg",
+    step: "·",
+    label: "The Vigil — Kirtan",
+    caption: "Musicians play kirtan continuously throughout the vigil — harmonium, dholak, and voice filling the space with devotional sound.",
+  },
+  {
+    src: "bs2017-14-kirtan-puja.jpg",
+    step: "·",
+    label: "Kirtan & Puja",
+    caption: "Disciples lead kirtan and puja beneath Gurudev's portrait, maintaining the sacred atmosphere of prayer and chant through the nine days.",
+  },
+  {
+    src: "bs2017-15-recitation.jpg",
+    step: "·",
+    label: "Scripture Recitation",
+    caption: "Community leaders and disciples gather for continuous Ramayana recitation — a traditional vigil practice sustained across the full nine-day period.",
+  },
+  {
+    src: "bs2017-16-barley-media.jpg",
+    step: "10",
+    label: "The Barley Grown",
+    caption: "Journalists crowd to record the fully grown barley — a dense, luminous green carpet that has sprung from the sealed mound above Gurudev.",
+  },
+  {
+    src: "bs2017-17-barley-closeup.jpg",
+    step: "11",
+    label: "The Barley — Close Up",
+    caption: "A close view of the extraordinary growth: thick, vivid, radiantly alive — a living sign of the prana held within the earth.",
+  },
+  {
+    src: "bs2017-18-opening-pit.jpg",
+    step: "12",
+    label: "The Pit Opened",
+    caption: "Disciples carefully remove the barley, covering, and earth layer by layer — the nine-day seal is lifted with ceremony and attention.",
+  },
+  {
+    src: "bs2017-19-emergence-seated.jpg",
+    step: "13",
+    label: "Returning",
+    caption: "Disciples gently raise Gurudev to sitting — his hands folded, eyes still inward, consciousness easing back across the threshold.",
+  },
+  {
+    src: "bs2017-20-conch-emergence.jpg",
+    step: "14",
+    label: "Conch at Emergence",
+    caption: "Gurudev sounds the conch once more upon rising — the same ritual that opened now closes the circle. A disciple behind him raises his arms in joy.",
+  },
+  {
+    src: "bs2017-21-ecg-check.jpg",
+    step: "15",
+    label: "Medical Verification",
+    caption: "Doctors in white coats attach an ECG monitor directly after emergence — recording the heart data to be verified and presented to those assembled.",
+  },
+  {
+    src: "bs2017-22-ecg-result.jpg",
+    step: "16",
+    label: "ECG Presented",
+    caption: "A physician holds up the ECG printout for all to see — the heart trace from a man who spent nine days sealed underground, offered as objective evidence.",
+  },
+  {
+    src: "bs2017-01-emergence.jpg",
+    step: "·",
+    label: "Walking Out",
+    caption: "Gurudev steps forward after emergence — tilak freshly applied, hands in namaste — welcomed by a senior swami and a pressing crowd of witnesses.",
+  },
+  {
+    src: "bs2017-02-darshan-crowd.jpg",
+    step: "·",
+    label: "Darshan for Thousands",
+    caption: "From a decorated stage above the assembled multitude, Gurudev gives darshan to tens of thousands in Pokhara — the largest public samadhi gathering.",
+  },
+];
+
 export default function BhuSamadhiDetail() {
   return (
     <>
@@ -359,29 +495,18 @@ export default function BhuSamadhiDetail() {
       <section className="bg-[#faf9f6] py-16 px-6">
         <div className="max-w-5xl mx-auto">
           <h2 className="font-['Cormorant_Garamond'] text-3xl md:text-4xl text-[#2e1f0e] font-light mb-1 text-center">
-            2017 Pokhara — Emergence &amp; Darshan
+            2017 Pokhara — The Full Record
           </h2>
           <p className="text-center font-['Inter'] text-xs uppercase tracking-widest text-[#8a7860] mb-3">
             Pokhara, Nepal
           </p>
           <p className="text-center font-['Inter'] text-sm text-[#7a6a55] max-w-2xl mx-auto mb-2">
-            The third public Bhu-Samadhi drew the largest gathering yet. Held in Pokhara, it was witnessed by tens of thousands who had travelled from across Nepal. After his emergence, Gurudev offered darshan and blessings from a decorated stage to a sea of devotees stretching as far as the eye could see.
+            Twenty-two photographs documenting the complete 2017 Pokhara Bhu-Samadhi: from the street procession and entry through nine days of vigil, the grown barley, emergence, medical verification, and darshan for tens of thousands.
           </p>
-          <div className="h-px bg-[#c9a96e]/40 w-24 mx-auto mb-10" />
+          <div className="h-px bg-[#c9a96e]/40 w-24 mx-auto mb-12" />
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            {[
-              {
-                src: "bs2017-01-emergence.jpg",
-                label: "The Emergence",
-                caption: "Gurudev steps forward after emergence — tilak freshly applied, hands in namaste — welcomed by a senior swami and the pressing crowd of witnesses.",
-              },
-              {
-                src: "bs2017-02-darshan-crowd.jpg",
-                label: "Darshan for Thousands",
-                caption: "From a decorated stage above the assembled multitude, Gurudev gives darshan to tens of thousands gathered in Pokhara — the largest public samadhi gathering.",
-              },
-            ].map((item) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {SEQUENCE_2017.map((item) => (
               <div key={item.src} className="group">
                 <div className="relative overflow-hidden rounded-xl aspect-[4/3]">
                   <img
@@ -389,6 +514,9 @@ export default function BhuSamadhiDetail() {
                     alt={item.label}
                     className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
+                  <div className="absolute top-3 left-3 bg-[#b8892a]/90 text-white text-xs font-['Inter'] font-semibold px-2.5 py-1 rounded-full backdrop-blur-sm">
+                    {item.step}
+                  </div>
                 </div>
                 <div className="pt-3 px-1">
                   <p className="font-['Cormorant_Garamond'] text-lg text-[#2e1f0e] font-semibold leading-snug mb-1">
