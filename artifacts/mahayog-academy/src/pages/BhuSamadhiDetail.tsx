@@ -311,7 +311,7 @@ function GallerySection({ year, place, heading, body, previewSrcs, bgColor, chil
   const offsets = [0, 56, 112];
   const tops = [14, 0, 14];
   return (
-    <section className={`${bgColor} py-10 px-6`}>
+    <section className={`${bgColor} py-4 px-6`}>
       <div className="max-w-5xl mx-auto">
         {/* ── Trigger card ── */}
         <button
