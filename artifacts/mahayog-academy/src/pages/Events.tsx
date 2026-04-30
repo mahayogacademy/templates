@@ -130,7 +130,7 @@ const UPCOMING: AnyEvent[] = [
 const MILESTONES = [
   {
     slug: "bhu-samadhi",
-    year: "2008 · 2015 · 2017",
+    year: "2008 · 2015 · 2016",
     title: "Bhu-Samadhi of Jagadguru Mahayogi Siddhababa",
     titleHtml: "<em>Bhu-Samadhi</em> of Jagadguru Mahayogi Siddhababa",
     img: "bhu-samadhi-1.jpg",

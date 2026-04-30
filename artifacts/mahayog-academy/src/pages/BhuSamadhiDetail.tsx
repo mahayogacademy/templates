@@ -201,7 +201,7 @@ const SEQUENCE_2017 = [
     src: "bs2017-09-media-witness.jpg",
     step: "7",
     label: "Witnessed by Media",
-    caption: "TV cameras, journalists, and a senior elder document the moment of sealing — every step of the 2017 samadhi was recorded in full transparency.",
+    caption: "TV cameras, journalists, and a senior elder document the moment of sealing — every step of the 2016 samadhi was recorded in full transparency.",
   },
   {
     src: "bs2017-10-sealing.jpg",
@@ -389,7 +389,7 @@ export default function BhuSamadhiDetail() {
         <div className="absolute inset-0 bg-gradient-to-r from-black/40 to-transparent" />
         <div className="absolute bottom-0 left-0 right-0 px-6 pb-12 max-w-5xl mx-auto w-full">
           <span className="text-xs uppercase tracking-[0.3em] text-[#e8c56a] font-medium block mb-3">
-            Public Samadhis · 2008 · 2015 · 2017
+            Public Samadhis · 2008 · 2015 · 2016
           </span>
           <h1 className="font-['Cormorant_Garamond'] text-5xl md:text-6xl font-light text-white leading-tight">
             <em>Bhu-Samadhi</em>
@@ -423,7 +423,7 @@ export default function BhuSamadhiDetail() {
               For Jagadguru Mahayogi Siddhababa, Bhu-Samadhi is not a performance. It is part of his ordinary inner life — a state he has entered since the early years of his sadhana. The practice belongs to the living Himalayan Siddha tradition, in which the fully realised yogi moves freely between states of consciousness that most beings can only encounter in death.
             </p>
             <p>
-              At the sincere and repeated request of his students — who wished to bear witness to this dimension of their Guru's reality — Gurudev consented to perform Bhu-Samadhi publicly on three occasions: in 2008 at Chataradham, Nepal; in 2015; and again in 2017. Each was conducted with complete transparency: media were present, officials observed, and the entire sequence from preparation to emergence was documented and witnessed by thousands.
+              At the sincere and repeated request of his students — who wished to bear witness to this dimension of their Guru's reality — Gurudev consented to perform Bhu-Samadhi publicly on three occasions: in 2008 at Chataradham, Nepal; in 2015; and again in 2016. Each was conducted with complete transparency: media were present, officials observed, and the entire sequence from preparation to emergence was documented and witnessed by thousands.
             </p>
             <p>
               What those thousands witnessed was not a feat of endurance or a display of will. It was the quiet, undeniable demonstration of a consciousness that has transcended the body — a yogi who can lay down the breath as simply as one lays down a burden, and take it up again when the time comes.
@@ -433,14 +433,14 @@ export default function BhuSamadhiDetail() {
       </section>
 
       {/* ── VIDEO ── */}
-      <section className="bg-[#1a0e05] py-16 px-6">
+      <section className="bg-[#f4ede0] py-16 px-6">
         <div className="max-w-4xl mx-auto">
           <div className="flex items-center justify-center gap-3 mb-6">
-            <div className="h-px w-10 bg-[#e8c56a]/30" />
-            <p className="text-[#e8c56a] text-xs uppercase tracking-[0.3em] font-medium">As Witnessed</p>
-            <div className="h-px w-10 bg-[#e8c56a]/30" />
+            <div className="h-px w-10 bg-[#b8892a]/40" />
+            <p className="text-[#b8892a] text-xs uppercase tracking-[0.3em] font-medium">As Witnessed</p>
+            <div className="h-px w-10 bg-[#b8892a]/40" />
           </div>
-          <h2 className="font-['Cormorant_Garamond'] text-3xl md:text-4xl font-light text-white text-center mb-8 leading-snug">
+          <h2 className="font-['Cormorant_Garamond'] text-3xl md:text-4xl font-light text-[#2e1f0e] text-center mb-8 leading-snug">
             The Living Record
           </h2>
           <div className="relative w-full rounded-2xl overflow-hidden shadow-2xl" style={{ paddingBottom: "56.25%" }}>
@@ -513,7 +513,7 @@ export default function BhuSamadhiDetail() {
       </GallerySection>
 
       <GallerySection
-        year="2017"
+        year="2016"
         place="Pokhara, Nepal"
         heading="The Third Public Samadhi"
         body="The third and most recent public Bhu-Samadhi was the largest in scale. His Holiness Jagadguru Mahayogi Siddhababa demonstrated the living power of Vedic Philosophy."

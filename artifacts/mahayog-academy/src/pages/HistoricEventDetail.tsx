@@ -7,12 +7,12 @@ const b = import.meta.env.BASE_URL;
 const EVENTS = [
   {
     slug: "bhu-samadhi",
-    year: "2008 · 2015 · 2017",
+    year: "2008 · 2015 · 2016",
     titleHtml: "<em>Bhu-Samadhi</em> of Jagadguru Mahayogi Siddhababa's Revered Guru",
     img: "bhu-samadhi-1.jpg",
     body: [
       "The Bhu-Samadhi — the sacred passing of a realised saint into the eternal — of Pujya Nritya Gopal Das Ji Maharaj, the revered Guru of Jagadguru Mahayogi Siddhababa, stands as one of the most profound moments in the history of this spiritual lineage.",
-      "Observed across multiple sacred occasions spanning 2008, 2015, and 2017, the ceremonies were conducted with full Vedic rites, collective prayer, and deep reverence. Thousands of disciples and seekers gathered at the ashram to pay homage to a Mahatma of the highest order, whose presence had shaped the spiritual destiny of countless souls.",
+      "Observed across multiple sacred occasions spanning 2008, 2015, and 2016, the ceremonies were conducted with full Vedic rites, collective prayer, and deep reverence. Thousands of disciples and seekers gathered at the ashram to pay homage to a Mahatma of the highest order, whose presence had shaped the spiritual destiny of countless souls.",
       "For Jagadguru Mahayogi Siddhababa, this was not simply a moment of grief but a sacred transition — a divine teaching in itself. The Guru does not die; the Guru merges. His Holiness has since carried forward the mission of his own Guru with unwavering dedication, continuing to guide seekers on the path of liberation.",
       "The Bhu-Samadhi ceremonies included Vedic chanting, collective meditation, Bhandara (sacred food distribution), and extended periods of silence and prayer. They remain an enduring point of collective memory for the Academy's community worldwide.",
     ],
