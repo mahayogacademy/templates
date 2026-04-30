@@ -328,8 +328,12 @@ function GallerySection({ year, place, heading, body, previewSrcs, bgColor, chil
               </div>
               <h2 className="font-['Cormorant_Garamond'] text-2xl text-[#2e1f0e] font-semibold mb-3">{heading}</h2>
               <div className="h-px bg-[#e8dece] mb-4 max-w-xs" />
-              <p className="font-['Inter'] text-[#5a4f40] text-sm leading-[1.85] mb-5 max-w-xl">{body}</p>
-              <span className="font-['Inter'] text-sm text-[#b8892a] underline-offset-2 group-hover:underline">
+              <p className="font-['Inter'] text-[#5a4f40] text-sm leading-[1.85] mb-6 max-w-xl">{body}</p>
+              <span className={`inline-flex items-center gap-2 text-sm font-medium px-5 py-2.5 rounded-full border transition-all duration-200
+                ${open
+                  ? "bg-[#3d3020] text-white border-[#3d3020]"
+                  : "bg-[#b8892a] text-white border-[#b8892a] group-hover:bg-[#9a6e1a] group-hover:border-[#9a6e1a]"
+                }`}>
                 {open ? "Close the record" : "Reveal the record"} →
               </span>
             </div>
@@ -432,9 +436,9 @@ export default function BhuSamadhiDetail() {
         year="2008"
         place="Chataradham, Nepal"
         heading="The First Public Samadhi"
-        body="The first time Gurudev agreed to perform Bhu-Samadhi publicly, students and disciples gathered at Chataradham to witness what their Guru had told them of only in teachings. He remained within the sealed earth for nine days, beneath four tonnes of sand and 21 kg of sown barley — which grew and blossomed above him."
+        body="The first time Gurudev agreed to perform Bhu-Samadhi publicly in Nepal, students and disciples gathered at Chataradham to witness what their Guru had told them of only in teachings. He remained within the sealed earth for nine days."
         previewSrcs={["bs2008-03-entering-pit.jpg", "bs2008-10-barley-grown.jpg", "bs2008-17-emerging.jpg"]}
-        bgColor="bg-[#faf9f6]"
+        bgColor="bg-[#f4ede0]"
       >
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {SEQUENCE_2008.map((item) => (
@@ -489,9 +493,9 @@ export default function BhuSamadhiDetail() {
         year="2017"
         place="Pokhara, Nepal"
         heading="The Third Public Samadhi"
-        body="The third and most recent public Bhu-Samadhi was the largest in scale — the gathering of witnesses exceeded those of the previous occasions. Once again Gurudev accepted the request of his students, entering and returning in full clarity, offering blessings and teachings to the assembled thousands upon his emergence."
+        body="The third and most recent public Bhu-Samadhi was the largest in scale. His Holiness Jagadguru Mahayogi Siddhababa demonstrated the living power of Vedic Philosophy."
         previewSrcs={["bs2017-08-lying-in-chamber.jpg", "bs2017-17-barley-closeup.jpg", "bs2017-02-darshan-crowd.jpg"]}
-        bgColor="bg-[#faf9f6]"
+        bgColor="bg-[#f4ede0]"
       >
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {SEQUENCE_2017.map((item) => (
