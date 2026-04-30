@@ -60,6 +60,30 @@ export default function TarakBrahmaDetail() {
         </div>
       </div>
 
+      {/* ── HISTORIC SIGNIFICANCE BANNER ── */}
+      <section className="relative py-10 px-6 overflow-hidden">
+        <img
+          src={`${b}images/tbm-banner-bg.png`}
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 w-full h-full object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-black/50" />
+        <div className="relative z-10 max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-8 text-center">
+          {[
+            { num: "705", label: "Years Since Last Performed in Nepal" },
+            { num: "9", label: "Days of Continuous Fire Ceremony" },
+            { num: "100K+", label: "Devotees Participated" },
+            { num: "1", label: "Living Siddha Who Made It Possible" },
+          ].map(({ num, label }) => (
+            <div key={label} className="flex-1 min-w-[120px]">
+              <div className="font-['Cormorant_Garamond'] text-4xl font-light text-white mb-1">{num}</div>
+              <div className="text-white/70 text-xs uppercase tracking-[0.2em] leading-snug">{label}</div>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* ── INTRO ── */}
       <section className="bg-[#faf9f6] py-20 px-6">
         <div className="max-w-3xl mx-auto">
@@ -82,30 +106,6 @@ export default function TarakBrahmaDetail() {
               The event was held at Barahkshetra, Sunsari — one of Nepal's most sacred dharmic sites, on the banks of the Koshi river. A grand pyramid-shaped Yagya Mandap was erected for the occasion, visible from miles away, a structure that itself became a landmark of the historic gathering.
             </p>
           </div>
-        </div>
-      </section>
-
-      {/* ── HISTORIC SIGNIFICANCE BANNER ── */}
-      <section className="relative py-10 px-6 overflow-hidden">
-        <img
-          src={`${b}images/tbm-banner-bg.png`}
-          alt=""
-          aria-hidden="true"
-          className="absolute inset-0 w-full h-full object-cover object-center"
-        />
-        <div className="absolute inset-0 bg-black/50" />
-        <div className="relative z-10 max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-8 text-center">
-          {[
-            { num: "705", label: "Years Since Last Performed in Nepal" },
-            { num: "9", label: "Days of Continuous Fire Ceremony" },
-            { num: "100K+", label: "Devotees Participated" },
-            { num: "1", label: "Living Siddha Who Made It Possible" },
-          ].map(({ num, label }) => (
-            <div key={label} className="flex-1 min-w-[120px]">
-              <div className="font-['Cormorant_Garamond'] text-4xl font-light text-white mb-1">{num}</div>
-              <div className="text-white/70 text-xs uppercase tracking-[0.2em] leading-snug">{label}</div>
-            </div>
-          ))}
         </div>
       </section>
 
