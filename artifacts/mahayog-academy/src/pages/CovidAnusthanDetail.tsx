@@ -107,11 +107,11 @@ export default function CovidAnusthanDetail() {
           {[
             { value: "15", label: "Days of Practice" },
             { value: "5–7 AM", label: "Daily Program (NPT)" },
-            { value: "May 26 – Jun 11", label: "Anusthan Period" },
+            { value: "26 May – 11 Jun", label: "Anusthan Period" },
             { value: "Live", label: "YouTube Broadcast" },
           ].map(({ value, label }) => (
             <div key={label}>
-              <p className="font-['Cormorant_Garamond'] text-3xl md:text-4xl text-[#e8c56a] font-light">{value}</p>
+              <p className="font-['Cormorant_Garamond'] text-3xl md:text-4xl text-[#e8c56a] font-light whitespace-nowrap">{value}</p>
               <p className="text-white/60 text-xs uppercase tracking-wider mt-1">{label}</p>
             </div>
           ))}
