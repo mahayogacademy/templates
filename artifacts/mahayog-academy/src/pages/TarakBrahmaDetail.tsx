@@ -61,7 +61,7 @@ export default function TarakBrahmaDetail() {
       </div>
 
       {/* ── HISTORIC SIGNIFICANCE BANNER ── */}
-      <section className="bg-[#3d3020] py-8 px-6">
+      <section className="bg-[#1e1208] py-8 px-6">
         <div className="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-8 text-center">
           {[
             { num: "705", label: "Years Since Last Performed in Nepal" },
