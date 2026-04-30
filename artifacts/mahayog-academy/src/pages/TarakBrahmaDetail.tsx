@@ -309,18 +309,18 @@ export default function TarakBrahmaDetail() {
       </section>
 
       {/* ── NIGHT CEREMONY ── */}
-      <section className="bg-[#1a0c03] py-20 px-6">
+      <section className="bg-[#faf9f6] py-20 px-6">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
             <div className="flex items-center justify-center gap-3 mb-4">
-              <div className="h-px w-10 bg-[#e8c56a]/30" />
-              <p className="text-xs uppercase tracking-[0.3em] text-[#e8c56a] font-medium">The Night of Fires</p>
-              <div className="h-px w-10 bg-[#e8c56a]/30" />
+              <div className="h-px w-10 bg-[#b8892a]/40" />
+              <p className="text-xs uppercase tracking-[0.3em] text-[#b8892a] font-medium">The Night of Fires</p>
+              <div className="h-px w-10 bg-[#b8892a]/40" />
             </div>
-            <h2 className="font-['Cormorant_Garamond'] text-3xl md:text-4xl font-light text-white leading-snug">
+            <h2 className="font-['Cormorant_Garamond'] text-3xl md:text-4xl font-light text-[#2c1a08] leading-snug">
               A sight not seen in Nepal for seven centuries
             </h2>
-            <p className="text-white/70 text-base mt-4 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-[#6a5c48] text-base mt-4 max-w-2xl mx-auto leading-relaxed">
               At the culmination of the Mahayagya, hundreds of sacred fires were lit simultaneously across the grounds in an ancient Vedic pattern. Thousands stood witness through the night, the sky alive with flame and the air resonant with mantra.
             </p>
           </div>
