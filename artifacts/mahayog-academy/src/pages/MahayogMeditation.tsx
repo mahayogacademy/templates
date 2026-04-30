@@ -453,9 +453,9 @@ function HorizontalSectionNav() {
   }, []);
 
   return (
-    <div className="sticky top-[60px] z-30 flex justify-center px-4 py-3 bg-[#faf9f6]/80 backdrop-blur-sm border-b border-[#e8dcc8]/60">
-      <div className="flex w-full max-w-4xl rounded-full border border-[#ddd0ba] bg-white overflow-hidden">
-        {NAV_SECTIONS.map(({ id, short }, i) => {
+    <div className="sticky top-[60px] z-30 flex justify-center px-6 py-3 bg-[#faf9f6]/95 backdrop-blur-sm border-b border-[#e8dece]">
+      <nav className="flex w-full max-w-4xl items-stretch rounded-full border border-[#d8cebb] bg-[#f4ede0] overflow-hidden divide-x divide-[#d8cebb] text-sm font-medium">
+        {NAV_SECTIONS.map(({ id, short }) => {
           const isActive = active === id;
           return (
             <a
@@ -465,33 +465,17 @@ function HorizontalSectionNav() {
                 e.preventDefault();
                 document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
               }}
-              className={`relative flex-1 flex items-center justify-center py-3 px-2 text-[11px] tracking-widest uppercase font-medium transition-all duration-200 whitespace-nowrap ${
-                id === "register"
-                  ? "text-[#b8892a] hover:text-[#96711e]"
-                  : isActive ? "text-[#b8892a]" : "text-[#7a7060] hover:text-[#3d3830]"
+              className={`flex-1 text-center py-2.5 transition-colors duration-150 cursor-pointer ${
+                isActive
+                  ? "bg-[#3d3020] text-white"
+                  : "text-[#5c4e38] hover:text-white hover:bg-[#3d3020]"
               }`}
             >
-              {i > 0 && (
-                <span className="absolute left-0 top-1/2 -translate-y-1/2 h-4 w-px bg-[#ddd0ba]" />
-              )}
-              {id === "register" ? (
-                <span className="flex items-center gap-1.5">
-                  <svg width="7" height="7" viewBox="0 0 24 24" fill="#b8892a" className="shrink-0">
-                    <path d="M12 2C12 2 15 9 22 12C22 12 15 15 12 22C12 22 9 15 2 12C2 12 9 9 12 2Z"/>
-                  </svg>
-                  {short}
-                  <svg width="7" height="7" viewBox="0 0 24 24" fill="#b8892a" className="shrink-0">
-                    <path d="M12 2C12 2 15 9 22 12C22 12 15 15 12 22C12 22 9 15 2 12C2 12 9 9 12 2Z"/>
-                  </svg>
-                </span>
-              ) : short}
-              {(isActive || id === "register") && (
-                <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-6 h-px bg-[#b8892a]" />
-              )}
+              {short}
             </a>
           );
         })}
-      </div>
+      </nav>
     </div>
   );
 }

@@ -191,23 +191,24 @@ export default function FounderGuru() {
           </div>
 
           {/* ── SECTION ANCHOR NAV ── */}
-          <div className="flex flex-wrap gap-0 border border-[#e8dece] rounded-xl overflow-hidden mb-12">
+          <nav className="flex items-stretch rounded-full border border-[#d8cebb] bg-[#f4ede0] overflow-hidden divide-x divide-[#d8cebb] text-sm font-medium mb-12">
             {[
-              { label: "Life", anchor: "#life" },
-              { label: "Teachings", anchor: "#teachings" },
-              { label: "Key Initiatives", anchor: "#initiatives" },
-              { label: "Yajñas", anchor: "#yajnas" },
-              { label: "Ashrams", anchor: "#ashrams" },
-            ].map((item, i, arr) => (
+              { label: "Life",             anchor: "#life"         },
+              { label: "Teachings",        anchor: "#teachings"    },
+              { label: "Key Initiatives",  anchor: "#initiatives"  },
+              { label: "Yajñas",           anchor: "#yajnas"       },
+              { label: "Ashrams",          anchor: "#ashrams"      },
+            ].map(({ label, anchor }) => (
               <a
-                key={item.anchor}
-                href={item.anchor}
-                className={`flex-1 text-center py-3 text-sm text-[#5a5248] hover:bg-[#3d3020] hover:text-white transition-colors tracking-wide ${i < arr.length - 1 ? "border-r border-[#e8dece]" : ""}`}
+                key={anchor}
+                href={anchor}
+                onClick={e => { e.preventDefault(); document.querySelector(anchor)?.scrollIntoView({ behavior: "smooth" }); }}
+                className="flex-1 text-center py-2.5 text-[#5c4e38] hover:text-white hover:bg-[#3d3020] transition-colors duration-150 cursor-pointer"
               >
-                {item.label}
+                {label}
               </a>
             ))}
-          </div>
+          </nav>
 
           {/* ── SPIRITUAL CREDENTIALS ACCORDION ── */}
           <div className="mb-20">
