@@ -270,7 +270,7 @@ export default function TarakBrahmaDetail() {
           aria-hidden="true"
           className="absolute inset-0 w-full h-full object-cover object-center"
         />
-        <div className="absolute inset-0 bg-black/70" />
+        <div className="absolute inset-0 bg-black/55" />
         <div className="relative z-10 max-w-3xl mx-auto text-center">
           <div className="w-12 h-px bg-[#b8892a]/70 mx-auto mb-8" />
           <p className="font-['Cormorant_Garamond'] text-2xl md:text-3xl text-[#f0e8d8] font-light italic leading-relaxed mb-8">
