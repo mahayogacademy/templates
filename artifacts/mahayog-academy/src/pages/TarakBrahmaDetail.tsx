@@ -28,23 +28,29 @@ export default function TarakBrahmaDetail() {
       <Nav />
 
       {/* ── HERO ── */}
-      <section className="relative h-[70vh] min-h-[480px] overflow-hidden">
-        <img
-          src={`${b}images/tbm-aerial-mandap-01.png`}
-          alt="Shree Ram Tarak Brahma Mahayagya"
-          className="absolute inset-0 w-full h-full object-cover object-center"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/15" />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/30 to-transparent" />
-        <div className="absolute bottom-0 left-0 right-0 px-6 pb-12 max-w-5xl mx-auto w-full">
-          <span className="text-xs uppercase tracking-[0.3em] text-[#e8c56a] font-medium block mb-3">
-            Nepal · 2019 · Historic
-          </span>
-          <h1 className="font-['Cormorant_Garamond'] text-5xl md:text-6xl font-light text-white leading-tight mb-3">
-            Shree Ram Tarak Brahma<br /><em className="font-extralight italic">Mahayagya</em>
+      <section className="relative h-[60vh] min-h-[420px] flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src={`${b}images/tbm-aerial-mandap-01.png`}
+            alt="Shree Ram Tarak Brahma Mahayagya"
+            className="w-full h-full object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#1a0f05]/70 via-[#2c1a08]/40 to-[#faf9f6]" />
+        </div>
+        <div className="relative z-10 text-center px-6">
+          <div className="flex items-center justify-center gap-3 mb-5">
+            <div className="h-px w-10 bg-[#e8c56a]/60" />
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none">
+              <path d="M12 2C12 2 15 9 22 12C22 12 15 15 12 22C12 22 9 15 2 12C2 12 9 9 12 2Z" stroke="#e8c56a" strokeWidth="1.5" fill="none"/>
+            </svg>
+            <div className="h-px w-10 bg-[#e8c56a]/60" />
+          </div>
+          <p className="text-[#e8c56a] text-xs uppercase tracking-[0.3em] font-medium mb-3">Nepal · 2019 · Historic</p>
+          <h1 className="font-['Cormorant_Garamond'] text-5xl md:text-6xl font-light text-white leading-tight">
+            Shree Ram Tarak Brahma Mahayagya
           </h1>
-          <p className="text-white/80 text-base md:text-lg font-light max-w-xl leading-relaxed">
-            The second time in Nepal's recorded history — after 705 years — that this supreme Vedic fire ceremony was performed.
+          <p className="text-[#f0e4c8] text-base tracking-widest uppercase font-light mt-4">
+            Second Time in Nepal in 705 Years
           </p>
         </div>
       </section>
