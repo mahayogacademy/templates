@@ -467,7 +467,7 @@ export default function BhuSamadhiDetail() {
         place="Chatara, Nepal"
         heading="The Second Public Samadhi"
         body="The 2015 Bhu-Samadhi took place during a year of great turbulence for Nepal — the same year as the devastating earthquake. Many disciples received it as an act of grace offered to the land itself. Thousands gathered to keep vigil, pray, and hold the occasion as a collective ceremony of protection and healing."
-        previewSrcs={["bs2015-01-in-chamber.jpg", "bs2015-02-inspection.jpg", "bs2015-03-barley-harvest.jpg"]}
+        previewSrcs={["bs2015-03-barley-harvest.jpg", "bs2015-02-inspection.jpg", "bs2015-01-in-chamber.jpg"]}
         bgColor="bg-[#f4ede0]"
       >
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
