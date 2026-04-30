@@ -105,7 +105,7 @@ export default function TarakBrahmaDetail() {
       {/* ── WHAT IS TARAK BRAHMA ── */}
       <section className="bg-[#f4ede0] py-20 px-6">
         <div className="max-w-5xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
             <div>
               <p className="text-xs uppercase tracking-[0.3em] text-[#b8892a] font-medium mb-4">The Sacred Science</p>
               <h2 className="font-['Cormorant_Garamond'] text-3xl md:text-4xl font-light text-[#2c1a08] leading-snug mb-6">
@@ -123,35 +123,57 @@ export default function TarakBrahmaDetail() {
                 </p>
               </div>
 
-              {/* PDF Download */}
-              <div className="mt-8 p-5 rounded-xl border border-[#d8cebb] bg-white/60 flex items-start gap-4">
-                <div className="shrink-0 w-10 h-10 rounded-full bg-[#f4ede0] border border-[#d8cebb] flex items-center justify-center">
-                  <BookOpen size={18} className="text-[#b8892a]" />
-                </div>
-                <div className="flex-1 min-w-0">
-                  <p className="text-[#2c1a08] text-sm font-medium leading-snug mb-0.5">
-                    Shree Ram Tarak Brahma Mahayagya
-                  </p>
-                  <p className="text-[#8a7860] text-xs leading-relaxed mb-3">
-                    The original Nepali text documenting the ceremony, its history, and sacred significance — published by Mahayogi Siddhababa Spiritual Academy
-                  </p>
-                  <a
-                    href={`${b}downloads/shree-ram-tarak-brahma-mahayagya-book.pdf`}
-                    download="Shree-Ram-Tarak-Brahma-Mahayagya-Book.pdf"
-                    className="inline-flex items-center gap-2 text-xs font-medium text-[#b8892a] hover:text-[#9a6e1a] border border-[#b8892a] hover:border-[#9a6e1a] px-4 py-2 rounded-full transition-colors"
-                  >
-                    <Download size={13} />
-                    Download PDF
-                  </a>
+            </div>
+
+            {/* Right column: photo + PDF download */}
+            <div className="flex flex-col gap-5">
+              <div className="rounded-2xl overflow-hidden shadow-xl">
+                <img
+                  src={`${b}images/tbm-havan-kund.png`}
+                  alt="Jagadguru at the Havan Kund"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+
+              {/* PDF Download card */}
+              <div className="rounded-xl border border-[#d8cebb] bg-white/70 overflow-hidden shadow-sm">
+                {/* PDF cover preview */}
+                <a
+                  href={`${b}downloads/shree-ram-tarak-brahma-mahayagya-book.pdf`}
+                  download="Shree-Ram-Tarak-Brahma-Mahayagya-Book.pdf"
+                  className="block group"
+                >
+                  <div className="bg-[#f0ece4] border-b border-[#d8cebb] flex items-center justify-center py-3 px-4 overflow-hidden">
+                    <img
+                      src={`${b}images/tbm-pdf-cover.png`}
+                      alt="Book cover: Shree Ram Tarak Brahma Mahayagya"
+                      className="h-40 object-contain shadow-md rounded group-hover:scale-[1.03] transition-transform duration-300"
+                    />
+                  </div>
+                </a>
+                {/* Info + button */}
+                <div className="p-4 flex items-start gap-3">
+                  <div className="shrink-0 w-8 h-8 rounded-full bg-[#f4ede0] border border-[#d8cebb] flex items-center justify-center mt-0.5">
+                    <BookOpen size={14} className="text-[#b8892a]" />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <p className="text-[#2c1a08] text-sm font-medium leading-snug mb-1">
+                      Shree Ram Tarak Brahma Mahayagya
+                    </p>
+                    <p className="text-[#8a7860] text-xs leading-relaxed mb-3">
+                      The original text documenting the ceremony, its history and sacred significance — published by Mahayogi Siddhababa Spiritual Academy. <span className="text-[#b8892a] font-medium">Language: Nepali</span>
+                    </p>
+                    <a
+                      href={`${b}downloads/shree-ram-tarak-brahma-mahayagya-book.pdf`}
+                      download="Shree-Ram-Tarak-Brahma-Mahayagya-Book.pdf"
+                      className="inline-flex items-center gap-2 text-xs font-medium text-white bg-[#b8892a] hover:bg-[#9a6e1a] px-4 py-2 rounded-full transition-colors"
+                    >
+                      <Download size={13} />
+                      Download PDF
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="rounded-2xl overflow-hidden shadow-xl">
-              <img
-                src={`${b}images/tbm-havan-kund.png`}
-                alt="Jagadguru at the Havan Kund"
-                className="w-full h-full object-cover"
-              />
             </div>
           </div>
         </div>
