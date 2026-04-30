@@ -20,6 +20,7 @@ import HistoricEventDetail from "@/pages/HistoricEventDetail";
 import BhuSamadhiDetail from "@/pages/BhuSamadhiDetail";
 import TarakBrahmaDetail from "@/pages/TarakBrahmaDetail";
 import CovidAnusthanDetail from "@/pages/CovidAnusthanDetail";
+import AtirudriDetail from "@/pages/AtirudriDetail";
 import ScrollToTop from "@/components/ScrollToTop";
 
 const queryClient = new QueryClient();
@@ -48,6 +49,7 @@ function Router() {
       <Route path="/events/historic/bhu-samadhi" component={BhuSamadhiDetail} />
       <Route path="/events/historic/tarak-brahma-mahayagya" component={TarakBrahmaDetail} />
       <Route path="/events/historic/covid-anusthan" component={CovidAnusthanDetail} />
+      <Route path="/events/historic/atirudri-mahayagya" component={AtirudriDetail} />
       <Route path="/events/historic/:slug" component={HistoricEventDetail} />
       <Route component={NotFound} />
     </Switch>

@@ -390,3 +390,15 @@ id = "kN4LdMih8wsqrRARMtGxB"
 uri = "file://artifacts/mahayog-academy/public/images/covid-anusthan-herbs.png"
 type = "image"
 title = "Ayurvedic herbs flatlay for anusthan page"
+
+[[generated]]
+id = "ncRQqhCoDI3dxiV1rnMS3"
+uri = "file://artifacts/mahayog-academy/public/images/atirudri-hero.png"
+type = "image"
+title = "Pashupatinath temple hero image"
+
+[[generated]]
+id = "KZZsDLDHzjjDQh32-0CMy"
+uri = "file://artifacts/mahayog-academy/public/images/atirudri-abhishekam.png"
+type = "image"
+title = "Shiva lingam abhishekam sacred ceremony image"
