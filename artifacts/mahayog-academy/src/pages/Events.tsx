@@ -366,8 +366,31 @@ export default function Events() {
       </section>
 
 
+      {/* ── PAGE NAV ── */}
+      <div className="sticky top-0 z-30 bg-[#faf9f6]/95 backdrop-blur-sm border-b border-[#e8dece] px-6 py-3">
+        <nav className="max-w-3xl mx-auto flex items-stretch rounded-full border border-[#d8cebb] bg-[#f4ede0] overflow-hidden divide-x divide-[#d8cebb] text-sm font-medium">
+          {[
+            { label: "Upcoming Events", href: "#upcoming" },
+            { label: "Historic Events", href: "#historic" },
+            { label: "Stay Connected",  href: "#connect"  },
+          ].map(({ label, href }) => (
+            <a
+              key={href}
+              href={href}
+              onClick={e => {
+                e.preventDefault();
+                document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
+              }}
+              className="flex-1 text-center py-2.5 text-[#5c4e38] hover:text-[#b8892a] hover:bg-[#ede3d0] transition-colors duration-150 cursor-pointer"
+            >
+              {label}
+            </a>
+          ))}
+        </nav>
+      </div>
+
       {/* ── UPCOMING EVENTS ── */}
-      <section className="max-w-5xl mx-auto px-6 pb-20">
+      <section id="upcoming" className="max-w-5xl mx-auto px-6 pb-20 pt-8">
         {/* Section header + controls */}
         <div className="flex flex-wrap items-center gap-4 mb-6">
           <div className="flex items-center gap-4 flex-1">
@@ -556,7 +579,7 @@ export default function Events() {
       </section>
 
       {/* ── HISTORIC MILESTONES ── */}
-      <section className="bg-[#f0e8d8] py-24 px-6 relative overflow-hidden">
+      <section id="historic" className="bg-[#f0e8d8] py-24 px-6 relative overflow-hidden">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <p className="text-xs uppercase tracking-[0.25em] text-[#b8892a] font-medium mb-4">A Legacy of Sacred Service</p>
@@ -606,7 +629,7 @@ export default function Events() {
       </section>
 
       {/* ── CTA BANNER ── */}
-      <section className="relative py-24 px-6 overflow-hidden"
+      <section id="connect" className="relative py-24 px-6 overflow-hidden"
         style={{
           backgroundImage: `url(${b}images/quote-banner-bg.png)`,
           backgroundSize: "cover",
