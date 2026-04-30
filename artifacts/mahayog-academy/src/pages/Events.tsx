@@ -546,7 +546,7 @@ export default function Events() {
       <section className="relative h-64 overflow-hidden">
         <img src={`${b}images/events-quote-bg.png`} alt="Seekers in collective satsang"
           className="absolute inset-0 w-full h-full object-cover object-center" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#1a0c03]/70 via-[#1a0c03]/40 to-[#1a0c03]/70" />
+        <div className="absolute inset-0 bg-[#1a0c03]/75" />
         <div className="absolute inset-0 flex items-center justify-center px-6">
           <p className="font-['Cormorant_Garamond'] text-2xl md:text-3xl font-light text-white text-center max-w-2xl"
             style={{ textShadow: "0 2px 20px rgba(0,0,0,0.5)" }}>
