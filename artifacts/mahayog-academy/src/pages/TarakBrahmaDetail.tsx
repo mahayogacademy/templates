@@ -49,17 +49,6 @@ export default function TarakBrahmaDetail() {
         </div>
       </section>
 
-      {/* ── BACK LINK ── */}
-      <div className="bg-[#faf9f6] border-b border-[#e8dece] px-6 py-3">
-        <div className="max-w-5xl mx-auto">
-          <Link href="/events"
-            className="inline-flex items-center gap-2 text-sm text-[#8a7860] hover:text-[#b8892a] transition-colors">
-            <ArrowLeft size={14} />
-            Back to Events
-          </Link>
-        </div>
-      </div>
-
       {/* ── HISTORIC SIGNIFICANCE BANNER ── */}
       <section className="bg-[#1e1208] py-8 px-6">
         <div className="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-8 text-center">
@@ -76,6 +65,17 @@ export default function TarakBrahmaDetail() {
           ))}
         </div>
       </section>
+
+      {/* ── BACK LINK ── */}
+      <div className="bg-[#faf9f6] border-b border-[#e8dece] px-6 py-3">
+        <div className="max-w-5xl mx-auto">
+          <Link href="/events"
+            className="inline-flex items-center gap-2 text-sm text-[#8a7860] hover:text-[#b8892a] transition-colors">
+            <ArrowLeft size={14} />
+            Back to Events
+          </Link>
+        </div>
+      </div>
 
       {/* ── INTRO ── */}
       <section className="bg-[#faf9f6] py-20 px-6">
