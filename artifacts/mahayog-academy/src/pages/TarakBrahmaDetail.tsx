@@ -265,7 +265,7 @@ export default function TarakBrahmaDetail() {
       {/* ── CLOSING QUOTE ── */}
       <section className="relative py-24 px-6 overflow-hidden">
         <img
-          src={`${b}images/tbm-night-fire.jpg`}
+          src={`${b}images/tbm-quote-bg.png`}
           alt=""
           aria-hidden="true"
           className="absolute inset-0 w-full h-full object-cover object-center"
