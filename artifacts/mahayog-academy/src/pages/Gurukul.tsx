@@ -382,10 +382,19 @@ export default function Gurukul() {
           <div className="rounded-3xl overflow-hidden grid md:grid-cols-2 shadow-xl border border-[#b8892a]/15">
 
             {/* Left — warm gold panel */}
-            <div className="bg-[#b8892a] px-10 py-12 flex flex-col justify-between">
+            <div className="bg-[#b8892a] flex flex-col justify-between">
+              {/* Child photo */}
+              <div className="h-52 overflow-hidden flex-shrink-0">
+                <img
+                  src="https://images.unsplash.com/photo-1497486751825-1233686d5d80?w=700&q=80"
+                  alt="Gurukul child studying"
+                  className="w-full h-full object-cover object-top"
+                />
+              </div>
+              <div className="px-10 py-8 flex flex-col flex-1 justify-between">
               <div>
-                <div className="w-12 h-12 rounded-full bg-white/15 flex items-center justify-center mb-6">
-                  <GraduationCap size={22} className="text-white" />
+                <div className="w-10 h-10 rounded-full bg-white/15 flex items-center justify-center mb-5">
+                  <GraduationCap size={20} className="text-white" />
                 </div>
                 <p className="text-white/70 text-xs uppercase tracking-[0.3em] font-medium mb-3">Scholarship Programme</p>
                 <h2 className="font-['Cormorant_Garamond'] text-4xl md:text-5xl text-white font-light leading-tight mb-5">
@@ -395,11 +404,12 @@ export default function Gurukul() {
                   Many gifted children in Nepal dream of a Gurukul education but cannot afford the fees. Your sponsorship covers a child's full residential year — giving them not just schooling, but a life transformed by wisdom, discipline, and love.
                 </p>
               </div>
-              <div className="mt-10 border-t border-white/20 pt-6">
+              <div className="mt-8 border-t border-white/20 pt-6">
                 <p className="text-white/60 text-xs uppercase tracking-widest mb-1">One sponsor. One child. One future.</p>
                 <p className="font-['Cormorant_Garamond'] text-white text-2xl italic">
                   "The highest gift is the gift of education."
                 </p>
+              </div>
               </div>
             </div>
 
