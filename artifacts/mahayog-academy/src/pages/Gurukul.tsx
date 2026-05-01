@@ -76,7 +76,7 @@ export default function Gurukul() {
           <h1 className="font-['Cormorant_Garamond'] text-4xl md:text-6xl font-light text-white leading-tight">
             Jagatguru Shree Ramanandacharya<br />Gurukul
           </h1>
-          <p className="text-[#e8c56a] text-base tracking-widest uppercase font-light mt-4">
+          <p className="text-white text-base tracking-widest uppercase font-light mt-4">
             Where Modern Excellence Meets Ancient Wisdom
           </p>
         </div>
