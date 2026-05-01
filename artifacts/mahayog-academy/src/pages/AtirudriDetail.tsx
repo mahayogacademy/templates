@@ -44,7 +44,7 @@ export default function AtirudriDetail() {
             </svg>
             <div className="h-px w-10 bg-[#e8c56a]/60" />
           </div>
-          <p className="text-[#e8c56a] text-xs uppercase tracking-[0.3em] font-medium mb-3">Pashupatinath, Kathmandu · July 2022 · First in History</p>
+          <p className="text-[#e8c56a] text-xs uppercase tracking-[0.3em] font-medium mb-3">Pashupatinath, Kathmandu · July 2022</p>
           <h1 className="font-['Cormorant_Garamond'] text-5xl md:text-6xl font-light text-white leading-tight">
             Atirudra Mahayagya
           </h1>
