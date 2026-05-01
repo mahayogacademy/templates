@@ -27,26 +27,38 @@ const PILLARS = [
   {
     title: "Vedic Values",
     desc: "Not merely information, but the formation of character — moral, spiritual, and human संस्कार at the core of every lesson.",
+    img: "https://images.unsplash.com/photo-1532375810709-75b1da00537c?w=600&q=80",
+    imgAlt: "Ancient Sanskrit manuscripts and sacred texts",
   },
   {
     title: "Modern Curriculum",
     desc: "Grade 6–12 under the NEB curriculum in English medium. Science, mathematics, computer, and technical subjects taught to global standards.",
+    img: "https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&q=80",
+    imgAlt: "Students in a modern classroom",
   },
   {
     title: "Vedic Living",
     desc: "Sanskrit recitation, Vedic studies, Ayurveda, Jyotish, and yoga woven into daily life — not as electives, but as a way of being.",
+    img: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&q=80",
+    imgAlt: "Morning yoga and meditation in nature",
   },
   {
     title: "Residential Life",
     desc: "Students live as ancient Rishis — a disciplined, sattvic, and loving residential environment that becomes a true second home.",
+    img: "https://images.unsplash.com/photo-1519834033-943a1cde0e20?w=600&q=80",
+    imgAlt: "Peaceful dawn at a residential ashram",
   },
   {
     title: "Holistic Development",
     desc: "Sports, music, cultural arts, and community service cultivate the full person — strong in body, sharp in mind, and noble in spirit.",
+    img: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=600&q=80",
+    imgAlt: "Children playing music and engaging in arts",
   },
   {
     title: "Patriotism & Service",
     desc: "Students are nurtured with deep love for their homeland and a commitment to serve Nepal and the world with wisdom and integrity.",
+    img: "https://images.unsplash.com/photo-1544377193-33dcf4d68fb5?w=600&q=80",
+    imgAlt: "The Himalayan mountains of Nepal",
   },
 ];
 
@@ -324,11 +336,20 @@ export default function Gurukul() {
             <div className="w-12 h-px bg-[#b8892a]/40 mx-auto mt-4" />
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {PILLARS.map(({ title, desc }) => (
-              <div key={title} className="bg-white rounded-2xl p-7 border border-[#b8892a]/15 shadow-sm hover:shadow-md transition-shadow">
-                <div className="w-8 h-px bg-[#b8892a] mb-4" />
-                <h3 className="font-['Cormorant_Garamond'] text-xl text-[#2c1a08] font-medium mb-3">{title}</h3>
-                <p className="text-[#6a5c48] text-sm leading-relaxed">{desc}</p>
+            {PILLARS.map(({ title, desc, img, imgAlt }) => (
+              <div key={title} className="bg-white rounded-2xl overflow-hidden border border-[#b8892a]/15 shadow-sm hover:shadow-md transition-shadow">
+                <div className="h-44 overflow-hidden">
+                  <img
+                    src={img}
+                    alt={imgAlt}
+                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                  />
+                </div>
+                <div className="p-6">
+                  <div className="w-8 h-px bg-[#b8892a] mb-3" />
+                  <h3 className="font-['Cormorant_Garamond'] text-xl text-[#2c1a08] font-medium mb-2">{title}</h3>
+                  <p className="text-[#6a5c48] text-sm leading-relaxed">{desc}</p>
+                </div>
               </div>
             ))}
           </div>
