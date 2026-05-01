@@ -122,6 +122,27 @@ export default function Gurukul() {
               <p>
                 In today's world, true success lies not just in degrees but in <strong>character, sanskar, discipline, and spiritual awareness</strong>. This Gurukul is committed to shaping strong, visionary, and culturally grounded individuals in a safe, loving, and sattvic environment.
               </p>
+
+              {/* Key stats grid */}
+              <div className="grid grid-cols-2 gap-3 pt-2">
+                {[
+                  { value: "Grade 6–12", label: "NEB Curriculum" },
+                  { value: "English", label: "Medium of Instruction" },
+                  { value: "Residential", label: "Full Boarding System" },
+                  { value: "Sattvic", label: "Lifestyle & Environment" },
+                ].map(({ value, label }) => (
+                  <div key={label} className="bg-[#f4ede0] rounded-xl px-4 py-3 border border-[#b8892a]/15">
+                    <p className="font-['Cormorant_Garamond'] text-lg text-[#2c1a08] font-medium leading-tight">{value}</p>
+                    <p className="text-[#9a8070] text-xs mt-0.5">{label}</p>
+                  </div>
+                ))}
+              </div>
+
+              {/* Motto quote */}
+              <blockquote className="border-l-2 border-[#b8892a] pl-4 py-1 font-['Cormorant_Garamond'] text-lg text-[#4a3728] italic leading-snug">
+                "Not just certificates — the formation of authentic character. That is our highest purpose."
+              </blockquote>
+
               {/* Admission contact */}
               <div className="mt-4 border-t border-[#b8892a]/20 pt-5 space-y-3">
                 <p className="text-[#b8892a] text-xs uppercase tracking-[0.25em] font-medium">Admissions · Limited Seats</p>
