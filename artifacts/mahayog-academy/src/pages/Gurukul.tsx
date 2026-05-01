@@ -55,41 +55,30 @@ export default function Gurukul() {
       <Nav />
 
       {/* ── HERO ── */}
-      <section className="relative h-[70vh] min-h-[500px] flex items-end overflow-hidden">
+      <section className="relative h-[60vh] min-h-[420px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
             src={`${b}images/gurukul-hero.png`}
             alt="Jagatguru Shriramanandacharya Gurukul — sacred learning at Barahakshetra"
             className="w-full h-full object-cover object-center"
           />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#1a0803]/80 via-[#2c1205]/50 to-[#faf9f6]" />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-t from-[#1a0803] via-[#1a0803]/50 to-[#1a0803]/20" />
-        <div className="relative z-10 max-w-5xl mx-auto px-6 pb-16 w-full">
-          <div className="flex items-center gap-3 mb-5">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-              <path d="M12 2C12 2 15 9 22 12C22 12 15 15 12 22C12 22 9 15 2 12C2 12 9 9 12 2Z" stroke="#e8c56a" strokeWidth="1.2" fill="none"/>
+        <div className="relative z-10 text-center px-6 max-w-3xl mx-auto">
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <div className="h-px w-10 bg-[#e8c56a]/60" />
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" className="flex-shrink-0">
+              <path d="M12 2C12 2 15 9 22 12C22 12 15 15 12 22C12 22 9 15 2 12C2 12 9 9 12 2Z" stroke="#e8c56a" strokeWidth="1.5" fill="none"/>
             </svg>
-            <p className="text-[#e8c56a] text-[11px] uppercase tracking-[0.35em] font-medium">Admissions Now Open</p>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-              <path d="M12 2C12 2 15 9 22 12C22 12 15 15 12 22C12 22 9 15 2 12C2 12 9 9 12 2Z" stroke="#e8c56a" strokeWidth="1.2" fill="none"/>
-            </svg>
+            <div className="h-px w-10 bg-[#e8c56a]/60" />
           </div>
-          <h1 className="font-['Cormorant_Garamond'] text-4xl md:text-6xl text-white font-light leading-tight mb-4">
-            Jagatguru Shriramanandacharya<br />
-            <span className="text-[#e8c56a]">Gurukul</span>
+          <p className="text-[#e8c56a] text-xs uppercase tracking-[0.3em] font-medium mb-3">Barahakshetra, Nepal · Admissions Open</p>
+          <h1 className="font-['Cormorant_Garamond'] text-4xl md:text-6xl font-light text-white leading-tight">
+            Jagatguru Shriramanandacharya<br />Gurukul
           </h1>
-          <p className="font-['Cormorant_Garamond'] text-xl md:text-2xl text-white/75 font-light italic mb-6">
+          <p className="text-[#f0e4c8] text-base tracking-widest uppercase font-light mt-4">
             Where Modern Excellence Meets Ancient Wisdom
           </p>
-          <div className="flex flex-wrap items-center gap-4">
-            <span className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 text-white/80 text-xs px-4 py-2 rounded-full">
-              <MapPin size={12} className="text-[#e8c56a]" />
-              Barahakshetra · Chataradham · Nepal
-            </span>
-            <span className="inline-flex items-center gap-2 bg-[#b8892a]/20 border border-[#b8892a]/40 text-[#e8c56a] text-xs px-4 py-2 rounded-full">
-              Grade 6 – 12 · NEB · English Medium · Residential
-            </span>
-          </div>
         </div>
       </section>
 
