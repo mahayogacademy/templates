@@ -10,31 +10,43 @@ const ROLES = [
     icon: Sun,
     title: "Ashram Seva",
     desc: "Offer your hands and heart at the Ashram — helping with daily upkeep, flower arrangements, kitchen service, and the sacred rhythms of ashram life.",
+    img: "https://images.unsplash.com/photo-1545450716-81a1bc4bd4f9?w=600&q=80",
+    imgAlt: "Marigold flower offerings at a Hindu temple",
   },
   {
     icon: Flame,
     title: "Events & Sacred Festivals",
     desc: "Support the preparation and running of yagyas, festivals, and spiritual gatherings — from logistics and decoration to welcoming pilgrims and guests.",
+    img: "https://images.unsplash.com/photo-1467810563316-b5476525c0d9?w=600&q=80",
+    imgAlt: "Diya lamps lit during a sacred festival",
   },
   {
     icon: BookOpen,
     title: "Teaching & Education",
     desc: "Assist with the Vedanta courses, Gurukul programmes, and meditation classes — as a teaching assistant, translator, or study guide facilitator.",
+    img: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&q=80",
+    imgAlt: "Teacher guiding students in a learning setting",
   },
   {
     icon: Laptop,
     title: "Digital & Communications",
     desc: "Help build and maintain the Academy's digital presence — website, social media, photography, video editing, and content creation for a global audience.",
+    img: "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=600&q=80",
+    imgAlt: "Photographer with camera capturing spiritual moments",
   },
   {
     icon: Heart,
     title: "Outreach & Community",
     desc: "Represent the Academy in your local community, organise satsangs, translate teachings, and help introduce seekers to the path of Mahayog.",
+    img: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&q=80",
+    imgAlt: "People sitting together in a community gathering",
   },
   {
     icon: Users,
     title: "Administration & Coordination",
     desc: "Support the Academy's day-to-day operations — correspondence, scheduling, event coordination, and donor relations from anywhere in the world.",
+    img: "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=600&q=80",
+    imgAlt: "Team collaborating on coordination and planning",
   },
 ];
 
@@ -167,13 +179,24 @@ export default function Volunteer() {
             <div className="w-12 h-px bg-[#b8892a]/40 mx-auto mt-4" />
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {ROLES.map(({ icon: Icon, title, desc }) => (
-              <div key={title} className="bg-white rounded-2xl p-7 border border-[#b8892a]/15 shadow-sm hover:shadow-md transition-shadow">
-                <div className="w-10 h-10 rounded-full bg-[#b8892a]/10 flex items-center justify-center mb-4">
-                  <Icon size={18} className="text-[#b8892a]" />
+            {ROLES.map(({ icon: Icon, title, desc, img, imgAlt }) => (
+              <div key={title} className="bg-white rounded-2xl overflow-hidden border border-[#b8892a]/15 shadow-sm hover:shadow-md transition-shadow">
+                <div className="h-44 overflow-hidden">
+                  <img
+                    src={img}
+                    alt={imgAlt}
+                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                  />
                 </div>
-                <h3 className="font-['Cormorant_Garamond'] text-xl text-[#2c1a08] font-medium mb-3">{title}</h3>
-                <p className="text-[#6a5c48] text-sm leading-relaxed">{desc}</p>
+                <div className="p-6">
+                  <div className="flex items-center gap-2 mb-3">
+                    <div className="w-7 h-7 rounded-full bg-[#b8892a]/10 flex items-center justify-center flex-shrink-0">
+                      <Icon size={14} className="text-[#b8892a]" />
+                    </div>
+                    <h3 className="font-['Cormorant_Garamond'] text-xl text-[#2c1a08] font-medium">{title}</h3>
+                  </div>
+                  <p className="text-[#6a5c48] text-sm leading-relaxed">{desc}</p>
+                </div>
               </div>
             ))}
           </div>
