@@ -95,10 +95,10 @@ export default function Gurukul() {
       <section className="bg-[#b8892a] py-8 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <p className="font-['Cormorant_Garamond'] text-2xl md:text-3xl text-white font-light">
-            "Western Mind &amp; Eastern Philosophy"
+            "Vedic Values &amp; Modern Education"
           </p>
           <p className="text-white/70 text-sm mt-2 tracking-wide">
-            For the first time in Nepal — a Gurukul that unites the best of both worlds
+            A Gurukul that unites the best of both worlds
           </p>
         </div>
       </section>
