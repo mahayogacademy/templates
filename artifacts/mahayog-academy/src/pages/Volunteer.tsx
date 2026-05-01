@@ -106,18 +106,6 @@ export default function Volunteer() {
         </div>
       </section>
 
-      {/* ── VISION BANNER ── */}
-      <section className="bg-[#b8892a] py-8 px-6">
-        <div className="max-w-4xl mx-auto text-center">
-          <p className="font-['Cormorant_Garamond'] text-2xl md:text-3xl text-white font-light">
-            "Seva is not a task — it is a path to liberation."
-          </p>
-          <p className="text-white/70 text-sm mt-2 tracking-wide">
-            Join a community of dedicated hearts serving Nepal and the world
-          </p>
-        </div>
-      </section>
-
       {/* ── WHY VOLUNTEER ── */}
       <section className="py-20 px-6 bg-[#faf9f6]">
         <div className="max-w-5xl mx-auto">
