@@ -383,7 +383,7 @@ export default function Gurukul() {
             Academic Session 2082 B.S. (2025–26) · Grade 6 Intake
           </p>
           <p className="text-[#9a8070] text-sm mb-10">
-            Seats are strictly limited. Early enquiries are warmly encouraged.
+            Seats are limited. Contact Us.
           </p>
 
           {/* Call buttons */}
