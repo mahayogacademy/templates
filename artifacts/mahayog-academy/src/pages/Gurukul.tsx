@@ -183,7 +183,7 @@ export default function Gurukul() {
                   <p>Barahakshetra-1, Chataradham, Sunsari, Nepal</p>
                 </div>
                 <Link href="/donate">
-                  <button className="w-full flex items-center justify-center gap-2 bg-[#b8892a] hover:bg-[#a07820] text-white text-sm font-medium py-3 rounded-xl transition-colors shadow-sm mt-6">
+                  <button className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-[#c84b11] to-[#e8922a] hover:from-[#b53e0e] hover:to-[#d07d1e] text-white text-sm font-medium py-3 rounded-xl transition-all shadow-md mt-6">
                     <GraduationCap size={14} />
                     Sponsor a Child's Education
                   </button>
