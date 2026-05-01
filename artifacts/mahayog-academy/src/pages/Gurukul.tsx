@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Nav from "@/components/Nav";
 import { Link } from "wouter";
-import { Phone, MapPin, BookOpen, Sun, Heart, Users, Laptop, Flame, X, ZoomIn } from "lucide-react";
+import { Phone, MapPin, BookOpen, Sun, Heart, Users, Laptop, Flame, X, ZoomIn, ChevronLeft, ChevronRight } from "lucide-react";
 
 const b = import.meta.env.BASE_URL;
 
@@ -52,6 +52,12 @@ const PILLARS = [
 
 export default function Gurukul() {
   const [lightbox, setLightbox] = useState<string | null>(null);
+  const [posterIndex, setPosterIndex] = useState(0);
+
+  const POSTERS = [
+    { src: `${b}images/gurukul-poster-en.jpg`, label: "English", alt: "Gurukul English poster — Vedic Values, Modern Education" },
+    { src: `${b}images/gurukul-poster.jpg`,    label: "नेपाली", alt: "Gurukul Nepali poster — Vedic Sanskar, Modern Education" },
+  ];
 
   return (
     <div className="min-h-screen bg-[#faf9f6] font-['Inter']">
@@ -117,26 +123,66 @@ export default function Gurukul() {
                 In today's world, true success lies not just in degrees but in <strong>character, sanskar, discipline, and spiritual awareness</strong>. This Gurukul is committed to shaping strong, visionary, and culturally grounded individuals in a safe, loving, and sattvic environment.
               </p>
               <p className="text-xs text-[#9a8070] italic pt-2">
-                Click either poster to view full size.
+                Click the poster to view full size.
               </p>
             </div>
-            {/* Two posters side by side */}
-            <div className="grid grid-cols-2 gap-4">
-              {[
-                { src: `${b}images/gurukul-poster-en.jpg`, alt: "Gurukul English poster — Vedic Values, Modern Education" },
-                { src: `${b}images/gurukul-poster.jpg`,    alt: "Gurukul Nepali poster — Vedic Sanskar, Modern Education" },
-              ].map(({ src, alt }) => (
+            {/* Poster carousel */}
+            <div className="flex flex-col items-center gap-3">
+              {/* Language tabs */}
+              <div className="flex gap-2 self-start">
+                {POSTERS.map((p, i) => (
+                  <button
+                    key={p.label}
+                    onClick={() => setPosterIndex(i)}
+                    className={`text-xs px-3 py-1 rounded-full border transition-colors ${
+                      i === posterIndex
+                        ? "bg-[#b8892a] border-[#b8892a] text-white"
+                        : "border-[#b8892a]/40 text-[#b8892a] hover:bg-[#b8892a]/10"
+                    }`}
+                  >
+                    {p.label}
+                  </button>
+                ))}
+              </div>
+              {/* Image + arrows */}
+              <div className="relative w-full group">
                 <button
-                  key={src}
-                  onClick={() => setLightbox(src)}
-                  className="relative group rounded-xl overflow-hidden shadow-lg border border-[#b8892a]/20 cursor-zoom-in focus:outline-none"
+                  onClick={() => setLightbox(POSTERS[posterIndex].src)}
+                  className="relative w-full rounded-xl overflow-hidden shadow-xl border border-[#b8892a]/20 cursor-zoom-in focus:outline-none block"
                 >
-                  <img src={src} alt={alt} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center">
+                  <img
+                    src={POSTERS[posterIndex].src}
+                    alt={POSTERS[posterIndex].alt}
+                    className="w-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+                  />
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/15 transition-colors duration-300 flex items-center justify-center">
                     <ZoomIn size={28} className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 drop-shadow-lg" />
                   </div>
                 </button>
-              ))}
+                {/* Prev / Next */}
+                <button
+                  onClick={() => setPosterIndex(i => (i - 1 + POSTERS.length) % POSTERS.length)}
+                  className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white rounded-full p-1.5 transition-colors"
+                >
+                  <ChevronLeft size={18} />
+                </button>
+                <button
+                  onClick={() => setPosterIndex(i => (i + 1) % POSTERS.length)}
+                  className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white rounded-full p-1.5 transition-colors"
+                >
+                  <ChevronRight size={18} />
+                </button>
+              </div>
+              {/* Dots */}
+              <div className="flex gap-2">
+                {POSTERS.map((_, i) => (
+                  <button
+                    key={i}
+                    onClick={() => setPosterIndex(i)}
+                    className={`w-2 h-2 rounded-full transition-colors ${i === posterIndex ? "bg-[#b8892a]" : "bg-[#b8892a]/30"}`}
+                  />
+                ))}
+              </div>
             </div>
           </div>
         </div>
