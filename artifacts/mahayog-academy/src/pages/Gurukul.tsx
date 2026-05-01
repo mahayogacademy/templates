@@ -139,13 +139,9 @@ export default function Gurukul() {
               </div>
 
               {/* Motto quote */}
-              <div className="bg-[#1a0c03] rounded-2xl px-6 py-6 mt-1">
-                <span className="block font-['Cormorant_Garamond'] text-[#b8892a] text-5xl leading-none mb-2 select-none">"</span>
-                <p className="font-['Cormorant_Garamond'] text-xl text-[#faf9f6] italic leading-relaxed">
-                  Not just certificates — the formation of authentic character. That is our highest purpose.
-                </p>
-                <span className="block font-['Cormorant_Garamond'] text-[#b8892a] text-5xl leading-none text-right mt-1 select-none">"</span>
-              </div>
+              <p className="font-['Cormorant_Garamond'] text-lg text-[#7a6250] italic leading-relaxed pt-1">
+                "Not just certificates — the formation of authentic character. That is our highest purpose."
+              </p>
 
               {/* Admission contact */}
               <div className="mt-4 border-t border-[#b8892a]/20 pt-5 space-y-3">
