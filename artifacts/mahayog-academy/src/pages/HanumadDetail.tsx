@@ -16,6 +16,8 @@ const CEREMONY_GALLERY = [
   { src: "hanumad-aarati-night.jpg", alt: "Women devotees performing aarati with oil lamps at the night ceremony" },
   { src: "hanumad-satsang-stage.jpg", alt: "Siddhababa on stage with a large Ram-Hanuman painting, devotees filling the satsang hall" },
   { src: "hanumad-satsang-women.jpg", alt: "Women devotees assembled in the satsang hall" },
+  { src: "hanumad-girls-dance.jpg", alt: "Young girls in traditional costume performing a devotional dance during the Mahayagya" },
+  { src: "hanumad-cultural-performers.jpg", alt: "Cultural performers in traditional Nepali and classical costume assembled at the ceremony" },
   { src: "hanumad-siddhababa-havan.jpg", alt: "Jagadguru Mahayogi Siddhababa at the sacred havan fire" },
   { src: "hanumad-havan-night.jpg", alt: "Rows of sacred fire at the Kotihom — devotees gathered around the night havan" },
 ];
