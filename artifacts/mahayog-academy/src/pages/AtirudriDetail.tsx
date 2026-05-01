@@ -161,12 +161,30 @@ export default function AtirudriDetail() {
       <section className="bg-[#faf9f6] py-20 px-6">
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
-            <div className="rounded-2xl overflow-hidden shadow-xl aspect-video">
-              <img
-                src={`${b}images/atirudri-hero.png`}
-                alt="Pashupatinath Temple on the Bagmati River, Kathmandu"
-                className="w-full h-full object-cover"
-              />
+            <div className="flex flex-col gap-4">
+              <div className="rounded-2xl overflow-hidden shadow-xl aspect-video">
+                <img
+                  src={`${b}images/atirudri-hero.png`}
+                  alt="Pashupatinath Temple on the Bagmati River, Kathmandu"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="rounded-2xl overflow-hidden shadow-lg aspect-[4/3]">
+                  <img
+                    src={`${b}images/atirudri-pashupati-2.png`}
+                    alt="Devotees performing puja in the Pashupatinath courtyard"
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                  />
+                </div>
+                <div className="rounded-2xl overflow-hidden shadow-lg aspect-[4/3]">
+                  <img
+                    src={`${b}images/atirudri-pashupati-3.png`}
+                    alt="Evening aarti on the Bagmati River ghats"
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                  />
+                </div>
+              </div>
             </div>
             <div>
               <p className="text-xs uppercase tracking-[0.3em] text-[#b8892a] font-medium mb-4">The Sacred Site</p>
