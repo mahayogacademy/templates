@@ -439,9 +439,9 @@ export default function Gurukul() {
               </div>
 
               <div className="mt-8 rounded-2xl bg-[#b8892a]/8 border border-[#b8892a]/20 px-5 py-4">
-                <p className="text-[#b8892a] text-xs uppercase tracking-[0.2em] font-medium mb-1">Estimated Annual Cost</p>
-                <p className="font-['Cormorant_Garamond'] text-[#2c1a08] text-2xl font-light">One full year — one transformed life.</p>
-                <p className="text-[#7a6250] text-xs mt-1.5 leading-relaxed">Your contribution covers everything: tuition, residence, meals, books, and spiritual formation.</p>
+                <p className="text-[#b8892a] text-xs uppercase tracking-[0.2em] font-medium mb-2">Full sponsorship — one year</p>
+                <p className="font-['Cormorant_Garamond'] text-[#2c1a08] text-4xl font-light">$1,200</p>
+                <p className="text-[#7a6250] text-xs mt-1.5 leading-relaxed">Covers tuition, residence, meals, books, and full spiritual formation for one child.</p>
               </div>
 
               <div className="mt-5 space-y-3">
