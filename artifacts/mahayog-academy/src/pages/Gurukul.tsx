@@ -117,18 +117,6 @@ export default function Gurukul() {
         </div>
       </section>
 
-      {/* ── VISION BANNER ── */}
-      <section className="bg-[#b8892a] py-8 px-6">
-        <div className="max-w-4xl mx-auto text-center">
-          <p className="font-['Cormorant_Garamond'] text-2xl md:text-3xl text-white font-light">
-            "Vedic Values &amp; Modern Education"
-          </p>
-          <p className="text-white/70 text-sm mt-2 tracking-wide">
-            A Gurukul that unites the best of both worlds
-          </p>
-        </div>
-      </section>
-
       {/* ── ABOUT ── */}
       <section className="py-20 px-6 bg-[#faf9f6]">
         <div className="max-w-5xl mx-auto">
