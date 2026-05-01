@@ -214,10 +214,10 @@ export default function Volunteer() {
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div className="space-y-4">
               <p className="text-[#4a3728] text-base leading-relaxed">
-                You do not need to be Nepali, Hindu, or a long-time practitioner. The Academy welcomes volunteers from all backgrounds, nationalities, and faith traditions who resonate with the values of compassion, truth, and selfless service.
+                The Academy welcomes volunteers from all backgrounds and traditions who resonate with the values of compassion, truth, and selfless service.
               </p>
               <p className="text-[#4a3728] text-base leading-relaxed">
-                Whether you are based in Kathmandu or California, whether you have an hour a week or wish to reside at the Ashram for a season — there is a place for you here.
+                Whether you are based in Kathmandu or California, whether you have an hour a week or wish to reside at the Ashram for a season, there is a place for you here.
               </p>
             </div>
             <div className="space-y-3">
@@ -268,7 +268,7 @@ export default function Volunteer() {
                   value={form.name}
                   onChange={(e) => handleChange("name", e.target.value)}
                   placeholder="Your name"
-                  className="w-full bg-white/8 border border-white/15 rounded-xl px-4 py-3 text-white placeholder-white/30 text-sm focus:outline-none focus:border-[#b8892a]/60 transition-colors"
+                  className="w-full bg-white/15 border border-white/25 rounded-xl px-4 py-3 text-white placeholder-white/40 text-sm focus:outline-none focus:border-[#b8892a]/70 transition-colors"
                 />
                 {errors.name && <p className="text-red-400 text-xs mt-1">{errors.name}</p>}
               </div>
@@ -281,7 +281,7 @@ export default function Volunteer() {
                   value={form.email}
                   onChange={(e) => handleChange("email", e.target.value)}
                   placeholder="your@email.com"
-                  className="w-full bg-white/8 border border-white/15 rounded-xl px-4 py-3 text-white placeholder-white/30 text-sm focus:outline-none focus:border-[#b8892a]/60 transition-colors"
+                  className="w-full bg-white/15 border border-white/25 rounded-xl px-4 py-3 text-white placeholder-white/40 text-sm focus:outline-none focus:border-[#b8892a]/70 transition-colors"
                 />
                 {errors.email && <p className="text-red-400 text-xs mt-1">{errors.email}</p>}
               </div>
@@ -292,7 +292,7 @@ export default function Volunteer() {
                 <select
                   value={form.role}
                   onChange={(e) => handleChange("role", e.target.value)}
-                  className="w-full bg-[#2c1205] border border-white/15 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-[#b8892a]/60 transition-colors appearance-none"
+                  className="w-full bg-white/15 border border-white/25 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-[#b8892a]/70 transition-colors appearance-none"
                 >
                   <option value="" disabled>Select a role…</option>
                   {ROLES.map(({ title }) => (
@@ -311,7 +311,7 @@ export default function Volunteer() {
                   value={form.message}
                   onChange={(e) => handleChange("message", e.target.value)}
                   placeholder="Tell us a little about yourself, your background, and why you wish to volunteer…"
-                  className="w-full bg-white/8 border border-white/15 rounded-xl px-4 py-3 text-white placeholder-white/30 text-sm focus:outline-none focus:border-[#b8892a]/60 transition-colors resize-none"
+                  className="w-full bg-white/15 border border-white/25 rounded-xl px-4 py-3 text-white placeholder-white/40 text-sm focus:outline-none focus:border-[#b8892a]/70 transition-colors resize-none"
                 />
                 {errors.message && <p className="text-red-400 text-xs mt-1">{errors.message}</p>}
               </div>
