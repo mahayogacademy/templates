@@ -102,7 +102,7 @@ export default function Gurukul() {
           </p>
           <div className="flex items-center justify-center gap-4 mt-8 flex-wrap">
             <Link
-              href="/register?for=gurukul"
+              href="/contact"
               className="inline-flex items-center gap-2 bg-[#b8892a] hover:bg-[#9d7422] text-white text-sm px-7 py-3 rounded-full tracking-wider transition-colors duration-200"
             >
               Join <ArrowRight className="w-4 h-4" strokeWidth={1.5} />
