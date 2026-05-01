@@ -163,7 +163,7 @@ export default function Volunteer() {
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-14">
             <p className="text-[#b8892a] text-xs uppercase tracking-[0.3em] font-medium mb-3">Ways to Serve</p>
-            <h2 className="font-['Cormorant_Garamond'] text-4xl text-[#2c1a08] font-light">Six Ways to Volunteer</h2>
+            <h2 className="font-['Cormorant_Garamond'] text-4xl text-[#2c1a08] font-light">Volunteer Opportunities</h2>
             <div className="w-12 h-px bg-[#b8892a]/40 mx-auto mt-4" />
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
