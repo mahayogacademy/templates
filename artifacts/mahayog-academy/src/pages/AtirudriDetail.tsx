@@ -1,6 +1,6 @@
 import Nav from "@/components/Nav";
 import { Link } from "wouter";
-import { ArrowLeft, ArrowRight, ImageOff } from "lucide-react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 
 const b = import.meta.env.BASE_URL;
 
@@ -14,26 +14,12 @@ const PROGRAM_ELEMENTS = [
   { title: "Prasadam & Panchamrit", desc: "Daily distribution of sanctified food offerings and the five sacred substances — milk, curd, honey, ghee, and sugar — blessed through the ceremony." },
 ];
 
-const PLACEHOLDER_CAPTIONS = [
-  "Kalas Yatra procession opening the nine days",
-  "Rudrabhisheka at the sacred Shiva lingam",
-  "Jagadguru Mahayogi Siddhababa leading the ceremony",
-  "Vedic pandits in continuous recitation",
-  "Devotees gathered at Pashupatinath",
-  "The closing ceremony on July 26",
+const GALLERY = [
+  { src: "atirudri-ceremony-1.jpg", alt: "Hundreds of devotees gathered under the ceremony tent at Pashupatinath" },
+  { src: "atirudri-ceremony-4.jpg", alt: "Participants with copper vessels assembled for the Rudrabhisheka" },
+  { src: "atirudri-ceremony-2.jpg", alt: "Vedic pandits and students in continuous recitation of the Rudraprashanam" },
+  { src: "atirudri-ceremony-3.jpg", alt: "Women devotees in saffron sarees, vessels ready for ceremonial offerings" },
 ];
-
-function PhotoPlaceholder({ caption }: { caption: string }) {
-  return (
-    <div className="rounded-2xl overflow-hidden border border-[#e8dece] bg-[#f0ece4] aspect-[4/3] flex flex-col items-center justify-center gap-3 group">
-      <div className="w-12 h-12 rounded-full border-2 border-dashed border-[#c8b890] flex items-center justify-center">
-        <ImageOff size={20} className="text-[#c8b890]" />
-      </div>
-      <p className="text-xs text-[#9a8f84] text-center px-4 leading-relaxed italic">{caption}</p>
-      <p className="text-[10px] uppercase tracking-[0.2em] text-[#b8892a]/60 font-medium">Photo coming soon</p>
-    </div>
-  );
-}
 
 export default function AtirudriDetail() {
   return (
@@ -148,8 +134,8 @@ export default function AtirudriDetail() {
             </div>
             <div className="rounded-2xl overflow-hidden shadow-2xl">
               <img
-                src={`${b}images/atirudri-abhishekam.png`}
-                alt="Sacred Rudrabhishekam — priests offering abhishekam on the Shiva lingam"
+                src={`${b}images/atirudri-shivalingam.jpg`}
+                alt="The sacred Shiva lingam adorned with marigolds and naga cobra at the Atirudra Mahayagya"
                 className="w-full object-cover"
               />
             </div>
@@ -257,9 +243,15 @@ export default function AtirudriDetail() {
               Photographs from the Atirudra Mahayagya, July 18–26, 2022.
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
-            {PLACEHOLDER_CAPTIONS.map((caption) => (
-              <PhotoPlaceholder key={caption} caption={caption} />
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            {GALLERY.map(({ src, alt }) => (
+              <div key={src} className="rounded-2xl overflow-hidden shadow-lg group aspect-[4/3]">
+                <img
+                  src={`${b}images/${src}`}
+                  alt={alt}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+              </div>
             ))}
           </div>
         </div>
