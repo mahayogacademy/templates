@@ -25,7 +25,7 @@ const SAINTS_GALLERY = [
   { src: "hanumad-blessing.jpg", alt: "Siddhababa placing a garland of blessing on Bageshwar Dham Sarkar on stage" },
   { src: "hanumad-puja-lingam.jpg", alt: "Both saints performing puja together at the sacred Shiva lingam" },
   { src: "hanumad-saints-river.jpg", alt: "Siddhababa and Bageshwar Dham Sarkar in meditation by the rocky Kaushiki riverbank" },
-  { src: "hanumad-world-record.jpg", alt: "World Book of Records certificate of Excellence presented to Siddhababa and Bageshwar Dham Sarkar" },
+  { src: "hanumad-world-record.jpg", alt: "World Book of Records Certificate of Excellence awarded to Jagadguru Mahayogi Siddhababa" },
 ];
 
 export default function HanumadDetail() {
@@ -275,7 +275,7 @@ export default function HanumadDetail() {
           <div className="mt-10 bg-[#1a0c03] rounded-2xl p-8 text-center border border-[#b8892a]/30">
             <p className="text-[#e8c56a] text-[10px] uppercase tracking-[0.3em] font-medium mb-2">World Book of Records</p>
             <p className="font-['Cormorant_Garamond'] text-2xl text-white font-light leading-snug">
-              The Sankat Mochan Shree Hanumad Mahayagya was recognised with a World Book of Records — Certificate of Excellence, presented to Jagadguru Mahayogi Siddhababa and Shree Bageshwardham Sarkar during the ceremony.
+              The Sankat Mochan Shree Hanumad Mahayagya was recognised with a World Book of Records — Certificate of Excellence, awarded to Jagadguru Mahayogi Siddhababa during the ceremony.
             </p>
           </div>
         </div>
