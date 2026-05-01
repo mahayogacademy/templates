@@ -27,8 +27,8 @@ const PILLARS = [
   {
     title: "Vedic Values",
     desc: "Not merely information, but the formation of character — moral, spiritual, and human संस्कार at the core of every lesson.",
-    img: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600&q=80",
-    imgAlt: "Ancient sacred books and manuscripts",
+    img: `${b}images/pillar-vedic-values.png`,
+    imgAlt: "Ancient Sanskrit manuscripts and sacred texts by candlelight",
   },
   {
     title: "Modern Curriculum",
@@ -39,26 +39,26 @@ const PILLARS = [
   {
     title: "Vedic Living",
     desc: "Sanskrit recitation, Vedic studies, Ayurveda, Jyotish, and yoga woven into daily life — not as electives, but as a way of being.",
-    img: "https://images.unsplash.com/photo-1593811167562-9cef47bfc4d7?w=600&q=80",
-    imgAlt: "Peaceful meditation and mindfulness practice",
+    img: `${b}images/pillar-vedic-living.png`,
+    imgAlt: "Student doing pranayama at dawn in an ashram courtyard",
   },
   {
     title: "Residential Life",
     desc: "Students live as ancient Rishis — a disciplined, sattvic, and loving residential environment that becomes a true second home.",
-    img: "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=600&q=80",
-    imgAlt: "Tranquil sunrise over a misty landscape",
+    img: `${b}images/pillar-residential.png`,
+    imgAlt: "Students walking through an ashram corridor at dawn",
   },
   {
     title: "Holistic Development",
     desc: "Sports, music, cultural arts, and community service cultivate the full person — strong in body, sharp in mind, and noble in spirit.",
-    img: "https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=600&q=80",
-    imgAlt: "Musical instruments representing arts and culture",
+    img: `${b}images/pillar-holistic.png`,
+    imgAlt: "Children playing tabla and singing in a music room",
   },
   {
     title: "Patriotism & Service",
     desc: "Students are nurtured with deep love for their homeland and a commitment to serve Nepal and the world with wisdom and integrity.",
-    img: "https://images.unsplash.com/photo-1593113598332-cd288d649433?w=600&q=80",
-    imgAlt: "Community coming together in service",
+    img: `${b}images/pillar-service.png`,
+    imgAlt: "Students planting saplings together with Himalayan hills behind",
   },
 ];
 

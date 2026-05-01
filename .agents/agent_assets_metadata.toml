@@ -420,3 +420,33 @@ id = "b9piiJNfuXqWlq9vzbQq1"
 uri = "file://artifacts/mahayog-academy/public/images/gurukul-hero.png"
 type = "image"
 title = "gurukul students neat rows golden hour"
+
+[[generated]]
+id = "n1Xzi3h7fGclf-phSwqMQ"
+uri = "file://artifacts/mahayog-academy/public/images/pillar-vedic-values.png"
+type = "image"
+title = "vedic values ancient scriptures"
+
+[[generated]]
+id = "sSxcr8KmXszftcEL3vcND"
+uri = "file://artifacts/mahayog-academy/public/images/pillar-vedic-living.png"
+type = "image"
+title = "vedic living yoga pranayama"
+
+[[generated]]
+id = "LjBq520nMoTcdLTw_swjb"
+uri = "file://artifacts/mahayog-academy/public/images/pillar-residential.png"
+type = "image"
+title = "residential life ashram students"
+
+[[generated]]
+id = "oCIyNDDZVnKl1toR5l77o"
+uri = "file://artifacts/mahayog-academy/public/images/pillar-holistic.png"
+type = "image"
+title = "holistic development music arts"
+
+[[generated]]
+id = "rt0eoTQh5bfm4_YW-fr2r"
+uri = "file://artifacts/mahayog-academy/public/images/pillar-service.png"
+type = "image"
+title = "patriotism service community Nepal"
