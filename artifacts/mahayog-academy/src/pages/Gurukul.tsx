@@ -27,8 +27,8 @@ const PILLARS = [
   {
     title: "Vedic Values",
     desc: "Not merely information, but the formation of character — moral, spiritual, and human संस्कार at the core of every lesson.",
-    img: "https://images.unsplash.com/photo-1532375810709-75b1da00537c?w=600&q=80",
-    imgAlt: "Ancient Sanskrit manuscripts and sacred texts",
+    img: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600&q=80",
+    imgAlt: "Ancient sacred books and manuscripts",
   },
   {
     title: "Modern Curriculum",
@@ -39,26 +39,26 @@ const PILLARS = [
   {
     title: "Vedic Living",
     desc: "Sanskrit recitation, Vedic studies, Ayurveda, Jyotish, and yoga woven into daily life — not as electives, but as a way of being.",
-    img: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&q=80",
-    imgAlt: "Morning yoga and meditation in nature",
+    img: "https://images.unsplash.com/photo-1593811167562-9cef47bfc4d7?w=600&q=80",
+    imgAlt: "Peaceful meditation and mindfulness practice",
   },
   {
     title: "Residential Life",
     desc: "Students live as ancient Rishis — a disciplined, sattvic, and loving residential environment that becomes a true second home.",
-    img: "https://images.unsplash.com/photo-1519834033-943a1cde0e20?w=600&q=80",
-    imgAlt: "Peaceful dawn at a residential ashram",
+    img: "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=600&q=80",
+    imgAlt: "Tranquil sunrise over a misty landscape",
   },
   {
     title: "Holistic Development",
     desc: "Sports, music, cultural arts, and community service cultivate the full person — strong in body, sharp in mind, and noble in spirit.",
-    img: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=600&q=80",
-    imgAlt: "Children playing music and engaging in arts",
+    img: "https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=600&q=80",
+    imgAlt: "Musical instruments representing arts and culture",
   },
   {
     title: "Patriotism & Service",
     desc: "Students are nurtured with deep love for their homeland and a commitment to serve Nepal and the world with wisdom and integrity.",
-    img: "https://images.unsplash.com/photo-1544377193-33dcf4d68fb5?w=600&q=80",
-    imgAlt: "The Himalayan mountains of Nepal",
+    img: "https://images.unsplash.com/photo-1593113598332-cd288d649433?w=600&q=80",
+    imgAlt: "Community coming together in service",
   },
 ];
 
