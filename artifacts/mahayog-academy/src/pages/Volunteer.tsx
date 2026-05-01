@@ -154,16 +154,13 @@ export default function Volunteer() {
               </div>
             </div>
 
-            {/* Pull quote */}
-            <div className="bg-[#1a0c03] rounded-3xl p-8 flex flex-col justify-between h-full min-h-[320px]">
-              <span className="font-['Cormorant_Garamond'] text-[#b8892a] text-6xl leading-none select-none">"</span>
-              <p className="font-['Cormorant_Garamond'] text-2xl text-[#faf9f6] italic leading-snug my-4">
-                When you serve the Divine with your whole heart, the Divine serves you from within.
-              </p>
-              <div>
-                <span className="font-['Cormorant_Garamond'] text-[#b8892a] text-6xl leading-none select-none float-right">"</span>
-                <p className="text-[#e8c56a] text-xs uppercase tracking-widest pt-2">— Jagadguru Mahayogi Siddhababa</p>
-              </div>
+            {/* Photo */}
+            <div className="rounded-3xl overflow-hidden h-full min-h-[320px]">
+              <img
+                src={`${b}images/volunteer-why.png`}
+                alt="Volunteer offering compassionate seva at the Ashram"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>
