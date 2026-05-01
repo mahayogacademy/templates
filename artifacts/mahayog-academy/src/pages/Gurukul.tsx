@@ -1,6 +1,5 @@
 import { useState } from "react";
 import Nav from "@/components/Nav";
-import { Link } from "wouter";
 import { Phone, MapPin, BookOpen, Sun, Heart, Users, Laptop, Flame, X, ZoomIn, ChevronLeft, ChevronRight } from "lucide-react";
 
 const b = import.meta.env.BASE_URL;
@@ -365,66 +364,73 @@ export default function Gurukul() {
           <p className="font-['Cormorant_Garamond'] text-2xl md:text-3xl text-white font-light italic leading-snug mb-4">
             "Not just certificates — the formation of authentic character. That is our highest purpose."
           </p>
-          <p className="text-[#e8c56a] text-xs tracking-widest uppercase">— Jagadguru Shriramanandacharya Gurukul</p>
+          <p className="text-[#e8c56a] text-xs tracking-widest uppercase">— Jagadguru Mahayogi Siddhababa</p>
         </div>
       </section>
 
       {/* ── ADMISSIONS CTA ── */}
       <section className="py-20 px-6 bg-[#f4ede0]">
-        <div className="max-w-3xl mx-auto">
-          <div className="text-center mb-10">
-            <p className="text-[#b8892a] text-xs uppercase tracking-[0.3em] font-medium mb-3">Admissions</p>
-            <h2 className="font-['Cormorant_Garamond'] text-4xl text-[#2c1a08] font-light mb-3">Admission Open Now</h2>
-            <p className="text-[#6a5c48] text-base">Limited seats available — Academic Session 2082 (2025–26)</p>
-            <div className="w-12 h-px bg-[#b8892a]/40 mx-auto mt-4" />
+        <div className="max-w-2xl mx-auto text-center">
+          {/* Header */}
+          <span className="inline-block bg-[#b8892a]/15 text-[#b8892a] text-xs font-medium px-4 py-1.5 rounded-full tracking-widest uppercase mb-5">
+            Admissions Now Open
+          </span>
+          <h2 className="font-['Cormorant_Garamond'] text-4xl md:text-5xl text-[#2c1a08] font-light leading-tight mb-3">
+            Give Your Child a Future<br />
+            <span className="text-[#b8892a]">Rooted in Wisdom</span>
+          </h2>
+          <p className="text-[#6a5c48] text-base mb-2">
+            Academic Session 2082 B.S. (2025–26) · Grade 6 Intake
+          </p>
+          <p className="text-[#9a8070] text-sm mb-10">
+            Seats are strictly limited. Early enquiries are warmly encouraged.
+          </p>
+
+          {/* Call buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+            {[
+              { display: "+977 985-1126710", tel: "+9779851126710", wa: "9779851126710" },
+              { display: "+977 976-7393900", tel: "+9779767393900", wa: "9779767393900" },
+            ].map(({ display, tel, wa }) => (
+              <div key={tel} className="flex flex-col gap-2">
+                <a
+                  href={`tel:${tel}`}
+                  className="flex items-center justify-center gap-2 bg-[#b8892a] hover:bg-[#a07820] text-white font-medium px-7 py-4 rounded-2xl transition-colors shadow-md text-base"
+                >
+                  <Phone size={16} />
+                  {display}
+                </a>
+                <a
+                  href={`https://wa.me/${wa}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 bg-[#25d366] hover:bg-[#1fba59] text-white font-medium px-7 py-3 rounded-2xl transition-colors text-sm"
+                >
+                  <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+                    <path d="M12 0C5.373 0 0 5.373 0 12c0 2.115.549 4.099 1.516 5.82L0 24l6.335-1.496A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.808 9.808 0 01-5.006-1.367l-.36-.214-3.728.88.937-3.64-.235-.374A9.808 9.808 0 012.182 12C2.182 6.58 6.58 2.182 12 2.182S21.818 6.58 21.818 12 17.42 21.818 12 21.818z"/>
+                  </svg>
+                  WhatsApp us
+                </a>
+              </div>
+            ))}
           </div>
 
-          <div className="bg-white rounded-2xl p-8 border border-[#b8892a]/20 shadow-sm space-y-6">
-            {/* Urgent badge */}
-            <div className="text-center">
-              <span className="inline-block bg-[#b8892a] text-white text-xs font-medium px-5 py-2 rounded-full tracking-wide uppercase">
-                Limited Seats — Apply Early
-              </span>
-            </div>
-
-            <div className="grid sm:grid-cols-2 gap-5">
-              <div className="flex items-start gap-3">
-                <Phone size={16} className="text-[#b8892a] mt-0.5 flex-shrink-0" />
-                <div>
-                  <p className="text-[#2c1a08] text-sm font-medium mb-1">Contact</p>
-                  <p className="text-[#4a3728] text-sm">+977 985-1126710</p>
-                  <p className="text-[#4a3728] text-sm">+977 976-7393900</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <MapPin size={16} className="text-[#b8892a] mt-0.5 flex-shrink-0" />
-                <div>
-                  <p className="text-[#2c1a08] text-sm font-medium mb-1">Location</p>
-                  <p className="text-[#4a3728] text-sm">Barahakshetra-1, Chataradham</p>
-                  <p className="text-[#4a3728] text-sm">Sunsari, Koshi Province, Nepal</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="border-t border-[#b8892a]/15 pt-5 text-center">
-              <p className="text-[#6a5c48] text-xs mb-4">For more information, visit</p>
-              <a
-                href="https://www.siddhamahayog.org"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[#b8892a] text-sm font-medium hover:underline"
-              >
-                www.siddhamahayog.org
-              </a>
-            </div>
-          </div>
-
-          <div className="mt-8 text-center">
-            <Link href="/contact">
-              <button className="inline-flex items-center gap-2 bg-[#b8892a] text-white px-8 py-3.5 rounded-full text-sm font-medium hover:bg-[#a07820] transition-colors">
-                Contact the Academy
-              </button>
-            </Link>
+          {/* Location + website */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-sm text-[#6a5c48]">
+            <span className="flex items-center gap-1.5">
+              <MapPin size={13} className="text-[#b8892a]" />
+              Barahakshetra-1, Chataradham, Sunsari, Nepal
+            </span>
+            <span className="hidden sm:block text-[#b8892a]/30">·</span>
+            <a
+              href="https://www.siddhamahayog.org"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#b8892a] hover:underline font-medium"
+            >
+              www.siddhamahayog.org
+            </a>
           </div>
         </div>
       </section>
