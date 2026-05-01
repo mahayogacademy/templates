@@ -4,69 +4,6 @@ import { ArrowLeft } from "lucide-react";
 
 const b = import.meta.env.BASE_URL;
 
-const SCHEDULE = [
-  {
-    dates: "April 9",
-    event: "Kalas Yatra — Holy Procession",
-    time: "7:30 AM",
-    note: "Opening procession consecrating the sacred ground",
-  },
-  {
-    dates: "April 9–16",
-    event: "Shri Ram Katha by Shree Chandrakala Sakhi",
-    time: "3–6 PM daily",
-    note: "Eight days of the glorious story of Lord Shri Ram by the renowned orator, daughter of Nepal",
-  },
-  {
-    dates: "April 17",
-    event: "Arrival of Shree Bageshwardham Sarkar · Shri Ram Navami Celebration · Foundation Stone of Shri Ram Temple",
-    time: "12 PM · Maha-Aarati",
-    note: "Ram Navami: the appearance day of Bhagwan Shri Ram",
-  },
-  {
-    dates: "April 17–23",
-    event: "Sankat Mochan Shree Hanumad Mahayagya (Kotihom)",
-    time: "6 AM–12 PM",
-    note: "The seven-day core ceremony — one crore Hanuman mantra ahutis offered",
-    highlight: true,
-  },
-  {
-    dates: "April 17–20",
-    event: "Shri Hanuman Katha by Shree Bageshwardham Sarkar",
-    time: "2–6 PM",
-    note: "Four evenings of divine stories of Shri Hanuman Ji from Dharma-Dhwaj Bageshwardham Sarkar",
-  },
-  {
-    dates: "April 19",
-    event: "Divine Darshan and Congregation of Saints",
-    time: "1 PM",
-    note: "Rare assembly of saints and sages — the supreme blessing of Sant Samagam",
-  },
-  {
-    dates: "April 21",
-    event: "Conclusion of Shri Hanuman Katha",
-    time: "10 AM–1 PM",
-    note: "",
-  },
-  {
-    dates: "April 23",
-    event: "Purnahuti — Final Offerings · Hanuman Jayanti Celebration",
-    time: "12 PM · Maha-Aarati",
-    note: "Hanuman Jayanti: the appearance day of Shri Hanuman Ji — the Mahayagya concludes with Purnahuti",
-  },
-  {
-    dates: "April 24",
-    event: "Phulpati Bisarjan & Farewell",
-    time: "",
-    note: "Ceremonial immersion of sacred flowers, closing rites",
-  },
-  {
-    dates: "April 25–May 9",
-    event: "Guided Mahayog Meditation",
-    time: "Daily",
-    note: "Extended meditation practice under Gurudev's personal instructions",
-  },
-];
 
 const CEREMONY_GALLERY = [
   { src: "hanumad-havan-night.jpg", alt: "Rows of sacred fire at the Kotihom — devotees gathered around the night havan" },
@@ -227,24 +164,82 @@ export default function HanumadDetail() {
             <h2 className="font-['Cormorant_Garamond'] text-4xl text-[#2c1a08] font-light">April 9 – May 9, 2024</h2>
             <div className="w-12 h-px bg-[#b8892a]/40 mx-auto mt-4" />
           </div>
-          <div className="relative">
-            <div className="absolute left-[7px] top-0 bottom-0 w-px bg-[#e8dece] md:left-[calc(50%-1px)]" />
-            <div className="space-y-0">
-              {SCHEDULE.map(({ dates, event, time, note, highlight }, i) => (
-                <div key={i} className={`relative flex flex-col md:flex-row ${i % 2 === 0 ? "md:flex-row-reverse" : ""} gap-0`}>
-                  {/* dot */}
-                  <div className="absolute left-0 top-6 md:left-1/2 md:-translate-x-1/2 w-3.5 h-3.5 rounded-full border-2 border-[#b8892a] bg-[#faf9f6] z-10" style={{ marginTop: 2 }} />
-                  {/* content */}
-                  <div className={`pl-8 md:pl-0 md:w-1/2 py-5 ${i % 2 === 0 ? "md:pr-10 md:text-right" : "md:pl-10"}`}>
-                    <div className={`inline-block rounded-xl p-4 border ${highlight ? "bg-[#1a0c03] border-[#b8892a]/50" : "bg-[#f4ede0] border-[#e8dece]"}`}>
-                      <p className={`text-[10px] uppercase tracking-[0.2em] font-semibold mb-1 ${highlight ? "text-[#e8c56a]" : "text-[#b8892a]"}`}>{dates}{time ? ` · ${time}` : ""}</p>
-                      <p className={`font-['Cormorant_Garamond'] text-lg font-semibold leading-snug ${highlight ? "text-white" : "text-[#2c1a08]"}`}>{event}</p>
-                      {note && <p className={`text-sm mt-1 leading-relaxed ${highlight ? "text-[#c8a96a]/80" : "text-[#6a5c48]"}`}>{note}</p>}
-                    </div>
-                  </div>
-                  <div className="md:w-1/2" />
+          <div className="grid md:grid-cols-3 gap-6">
+            {/* Phase 1 */}
+            <div className="bg-[#f4ede0] rounded-2xl border border-[#e8dece] overflow-hidden">
+              <div className="bg-[#2c1a08] px-5 py-4">
+                <p className="text-[#e8c56a] text-[10px] uppercase tracking-[0.25em] font-medium">Opening · April 9–16</p>
+                <p className="font-['Cormorant_Garamond'] text-xl text-white font-light mt-0.5">The Invitation</p>
+              </div>
+              <div className="px-5 py-5 space-y-4">
+                <div>
+                  <p className="text-[#b8892a] text-[10px] uppercase tracking-[0.2em] font-semibold">April 9</p>
+                  <p className="text-[#2c1a08] text-sm font-medium mt-0.5">Kalas Yatra — Holy Procession</p>
+                  <p className="text-[#6a5c48] text-xs mt-0.5 leading-relaxed">Opening procession consecrating the sacred ground · 7:30 AM</p>
                 </div>
-              ))}
+                <div className="w-full h-px bg-[#e8dece]" />
+                <div>
+                  <p className="text-[#b8892a] text-[10px] uppercase tracking-[0.2em] font-semibold">April 9–16</p>
+                  <p className="text-[#2c1a08] text-sm font-medium mt-0.5">Shri Ram Katha</p>
+                  <p className="text-[#6a5c48] text-xs mt-0.5 leading-relaxed">Eight days of Ram's story by Shree Chandrakala Sakhi · 3–6 PM daily</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Phase 2 — highlight */}
+            <div className="bg-[#1a0c03] rounded-2xl border border-[#b8892a]/40 overflow-hidden">
+              <div className="bg-[#b8892a] px-5 py-4">
+                <p className="text-[#1a0c03] text-[10px] uppercase tracking-[0.25em] font-semibold">Core Ceremony · April 17–23</p>
+                <p className="font-['Cormorant_Garamond'] text-xl text-[#1a0c03] font-semibold mt-0.5">The Mahayagya</p>
+              </div>
+              <div className="px-5 py-5 space-y-4">
+                <div>
+                  <p className="text-[#e8c56a] text-[10px] uppercase tracking-[0.2em] font-semibold">April 17</p>
+                  <p className="text-white text-sm font-medium mt-0.5">Arrival of Bageshwardham Sarkar · Ram Navami · Temple Foundation Stone</p>
+                  <p className="text-[#c8a96a]/70 text-xs mt-0.5">Maha-Aarati at 12 PM</p>
+                </div>
+                <div className="w-full h-px bg-[#b8892a]/20" />
+                <div>
+                  <p className="text-[#e8c56a] text-[10px] uppercase tracking-[0.2em] font-semibold">April 17–23 · 6 AM–12 PM</p>
+                  <p className="text-white text-sm font-medium mt-0.5">Kotihom — 1 Crore Hanuman Mantra Ahutis</p>
+                </div>
+                <div className="w-full h-px bg-[#b8892a]/20" />
+                <div>
+                  <p className="text-[#e8c56a] text-[10px] uppercase tracking-[0.2em] font-semibold">April 17–21 · 2–6 PM</p>
+                  <p className="text-white text-sm font-medium mt-0.5">Hanuman Katha by Bageshwardham Sarkar</p>
+                </div>
+                <div className="w-full h-px bg-[#b8892a]/20" />
+                <div>
+                  <p className="text-[#e8c56a] text-[10px] uppercase tracking-[0.2em] font-semibold">April 19 · 1 PM</p>
+                  <p className="text-white text-sm font-medium mt-0.5">Divine Darshan — Congregation of Saints</p>
+                </div>
+                <div className="w-full h-px bg-[#b8892a]/20" />
+                <div>
+                  <p className="text-[#e8c56a] text-[10px] uppercase tracking-[0.2em] font-semibold">April 23 · 12 PM</p>
+                  <p className="text-white text-sm font-medium mt-0.5">Purnahuti — Final Offerings · Hanuman Jayanti · Maha-Aarati</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Phase 3 */}
+            <div className="bg-[#f4ede0] rounded-2xl border border-[#e8dece] overflow-hidden">
+              <div className="bg-[#2c1a08] px-5 py-4">
+                <p className="text-[#e8c56a] text-[10px] uppercase tracking-[0.25em] font-medium">Closing · April 24–May 9</p>
+                <p className="font-['Cormorant_Garamond'] text-xl text-white font-light mt-0.5">The Integration</p>
+              </div>
+              <div className="px-5 py-5 space-y-4">
+                <div>
+                  <p className="text-[#b8892a] text-[10px] uppercase tracking-[0.2em] font-semibold">April 24</p>
+                  <p className="text-[#2c1a08] text-sm font-medium mt-0.5">Phulpati Bisarjan & Farewell</p>
+                  <p className="text-[#6a5c48] text-xs mt-0.5 leading-relaxed">Ceremonial immersion of sacred flowers, closing rites</p>
+                </div>
+                <div className="w-full h-px bg-[#e8dece]" />
+                <div>
+                  <p className="text-[#b8892a] text-[10px] uppercase tracking-[0.2em] font-semibold">April 25–May 9</p>
+                  <p className="text-[#2c1a08] text-sm font-medium mt-0.5">Guided Mahayog Meditation</p>
+                  <p className="text-[#6a5c48] text-xs mt-0.5 leading-relaxed">Extended meditation retreat under Gurudev's personal instructions · Daily</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
