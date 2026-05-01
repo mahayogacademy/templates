@@ -1,6 +1,7 @@
 import { useState } from "react";
+import { Link } from "wouter";
 import Nav from "@/components/Nav";
-import { Phone, MapPin, BookOpen, Sun, Heart, Users, Laptop, Flame, X, ZoomIn, ChevronLeft, ChevronRight } from "lucide-react";
+import { Phone, MapPin, BookOpen, Sun, Heart, Users, Laptop, Flame, X, ZoomIn, ChevronLeft, ChevronRight, GraduationCap } from "lucide-react";
 
 const b = import.meta.env.BASE_URL;
 
@@ -365,6 +366,77 @@ export default function Gurukul() {
             "Not just certificates — the formation of authentic character. That is our highest purpose."
           </p>
           <p className="text-[#e8c56a] text-xs tracking-widest uppercase">— Jagadguru Mahayogi Siddhababa</p>
+        </div>
+      </section>
+
+      {/* ── SPONSOR A CHILD ── */}
+      <section className="py-20 px-6 bg-[#faf9f6]">
+        <div className="max-w-5xl mx-auto">
+          <div className="rounded-3xl overflow-hidden grid md:grid-cols-2 shadow-xl border border-[#b8892a]/15">
+
+            {/* Left — warm gold panel */}
+            <div className="bg-[#b8892a] px-10 py-12 flex flex-col justify-between">
+              <div>
+                <div className="w-12 h-12 rounded-full bg-white/15 flex items-center justify-center mb-6">
+                  <GraduationCap size={22} className="text-white" />
+                </div>
+                <p className="text-white/70 text-xs uppercase tracking-[0.3em] font-medium mb-3">Scholarship Programme</p>
+                <h2 className="font-['Cormorant_Garamond'] text-4xl md:text-5xl text-white font-light leading-tight mb-5">
+                  Sponsor a Child's<br />Education
+                </h2>
+                <p className="text-white/80 text-base leading-relaxed">
+                  Many gifted children in Nepal dream of a Gurukul education but cannot afford the fees. Your sponsorship covers a child's full residential year — giving them not just schooling, but a life transformed by wisdom, discipline, and love.
+                </p>
+              </div>
+              <div className="mt-10 border-t border-white/20 pt-6">
+                <p className="text-white/60 text-xs uppercase tracking-widest mb-1">One sponsor. One child. One future.</p>
+                <p className="font-['Cormorant_Garamond'] text-white text-2xl italic">
+                  "The highest gift is the gift of education."
+                </p>
+              </div>
+            </div>
+
+            {/* Right — cream panel */}
+            <div className="bg-[#fdf8f2] px-10 py-12 flex flex-col justify-between">
+              <div>
+                <p className="text-[#b8892a] text-xs uppercase tracking-[0.3em] font-medium mb-6">Your sponsorship covers</p>
+                <div className="space-y-4">
+                  {[
+                    { label: "Full board & residential accommodation", detail: "A safe, sattvic home throughout the year" },
+                    { label: "NEB academic tuition", detail: "English-medium Grade 6–12 curriculum" },
+                    { label: "Vedic & spiritual education", detail: "Sanskrit, yoga, meditation, values" },
+                    { label: "Meals, healthcare & wellbeing", detail: "Nutritious sattvic food and care" },
+                    { label: "Books, materials & uniform", detail: "Everything a student needs to thrive" },
+                  ].map(({ label, detail }) => (
+                    <div key={label} className="flex items-start gap-3">
+                      <div className="w-5 h-5 rounded-full bg-[#b8892a]/12 flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <div className="w-1.5 h-1.5 rounded-full bg-[#b8892a]" />
+                      </div>
+                      <div>
+                        <p className="text-[#2c1a08] text-sm font-medium leading-snug">{label}</p>
+                        <p className="text-[#9a8070] text-xs mt-0.5">{detail}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="mt-8 space-y-3">
+                <Link href="/donate">
+                  <button className="w-full flex items-center justify-center gap-2 bg-[#b8892a] hover:bg-[#a07820] text-white font-medium py-4 rounded-2xl transition-colors text-sm tracking-wide shadow-md">
+                    <Heart size={15} />
+                    Sponsor a Child Now
+                  </button>
+                </Link>
+                <Link href="/contact">
+                  <button className="w-full flex items-center justify-center gap-2 border border-[#b8892a]/30 text-[#b8892a] hover:bg-[#b8892a]/8 font-medium py-3.5 rounded-2xl transition-colors text-sm">
+                    Ask Us About Scholarships
+                  </button>
+                </Link>
+              </div>
+            </div>
+
+          </div>
         </div>
       </section>
 
