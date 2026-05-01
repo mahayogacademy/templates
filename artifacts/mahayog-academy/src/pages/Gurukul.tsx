@@ -150,11 +150,6 @@ export default function Gurukul() {
                 ))}
               </div>
 
-              {/* Motto quote */}
-              <p className="font-['Cormorant_Garamond'] text-lg text-[#7a6250] italic leading-relaxed pt-1">
-                "Not just certificates — the formation of authentic character. That is our highest purpose."
-              </p>
-
               {/* Admission contact */}
               <div className="mt-4 border-t border-[#b8892a]/20 pt-5 space-y-3">
                 <p className="text-[#b8892a] text-xs uppercase tracking-[0.25em] font-medium">Admissions · Limited Seats</p>
