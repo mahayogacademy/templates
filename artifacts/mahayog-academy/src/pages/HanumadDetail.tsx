@@ -254,10 +254,6 @@ export default function HanumadDetail() {
             <p className="text-[#6a5c48] text-base mt-4 max-w-2xl mx-auto leading-relaxed">
               A special highlight of the Mahayagya was the gracious presence of <strong>Shree Bageshwardham Sarkar</strong> — Shree Shree Dhirendra Krishna Shastriji — the beloved saint of Hanuman Ji, widely revered across India. His joining with Jagadguru Mahayogi Siddhababa in this sacred ceremony was described as an extraordinarily rare blessing — two great saints together for the welfare of all.
             </p>
-            <p className="text-[#9a8f84] text-sm mt-4 italic max-w-xl mx-auto">
-              "The gathering of saints and the divine discourse on the glory of Lord Rama are extremely rare in this world, accessible only through good fortune and the blessings of Lord Shri Ram."
-              <span className="block mt-1 not-italic">— Goswami Tulsidas</span>
-            </p>
             <div className="w-12 h-px bg-[#b8892a]/40 mx-auto mt-4" />
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
