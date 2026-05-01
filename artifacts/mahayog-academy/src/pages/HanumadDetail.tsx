@@ -6,14 +6,17 @@ const b = import.meta.env.BASE_URL;
 
 
 const CEREMONY_GALLERY = [
-  { src: "hanumad-siddhababa-havan.jpg", alt: "Jagadguru Mahayogi Siddhababa at the sacred havan fire" },
+  { src: "hanumad-siddhababa-throne.jpg", alt: "Jagadguru Mahayogi Siddhababa seated on the ceremonial throne during the Mahayagya" },
   { src: "hanumad-crowd-satsang.jpg", alt: "Thousands of devotees with hands raised in blessing during the Hanumad Mahayagya satsang" },
+  { src: "hanumad-puja-outdoor.jpg", alt: "Siddhababa performing puja at the outdoor ceremony ground with Ram Darbar backdrop" },
   { src: "hanumad-crowd-hanuman.jpg", alt: "Massive gathering at night with the 80-foot Hanuman statue lit above the crowd" },
   { src: "hanumad-venue-aerial.jpg", alt: "Aerial view of the ceremony ground at Barahakshetra — saffron banners and the golden Hanuman statue" },
   { src: "hanumad-mandap-night.jpg", alt: "The illuminated yagya mandap at night — golden lights outlining the sacred pavilion" },
+  { src: "hanumad-devotees-yellow.jpg", alt: "Group of women devotees in yellow and white assembled on the ceremony stage" },
   { src: "hanumad-aarati-night.jpg", alt: "Women devotees performing aarati with oil lamps at the night ceremony" },
   { src: "hanumad-satsang-stage.jpg", alt: "Siddhababa on stage with a large Ram-Hanuman painting, devotees filling the satsang hall" },
   { src: "hanumad-satsang-women.jpg", alt: "Women devotees assembled in the satsang hall" },
+  { src: "hanumad-siddhababa-havan.jpg", alt: "Jagadguru Mahayogi Siddhababa at the sacred havan fire" },
   { src: "hanumad-havan-night.jpg", alt: "Rows of sacred fire at the Kotihom — devotees gathered around the night havan" },
 ];
 
