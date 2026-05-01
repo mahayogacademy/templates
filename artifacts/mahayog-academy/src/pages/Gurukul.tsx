@@ -416,21 +416,10 @@ export default function Gurukul() {
             ))}
           </div>
 
-          {/* Location + website */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-sm text-[#6a5c48]">
-            <span className="flex items-center gap-1.5">
-              <MapPin size={13} className="text-[#b8892a]" />
-              Barahakshetra-1, Chataradham, Sunsari, Nepal
-            </span>
-            <span className="hidden sm:block text-[#b8892a]/30">·</span>
-            <a
-              href="https://www.siddhamahayog.org"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[#b8892a] hover:underline font-medium"
-            >
-              www.siddhamahayog.org
-            </a>
+          {/* Location */}
+          <div className="flex items-center justify-center gap-1.5 text-sm text-[#6a5c48]">
+            <MapPin size={13} className="text-[#b8892a]" />
+            Barahakshetra-1, Chataradham, Sunsari, Nepal
           </div>
         </div>
       </section>
