@@ -37,8 +37,8 @@ export default function HanumadDetail() {
       <section className="relative h-[60vh] min-h-[420px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src={`${b}images/hanumad-siddhababa-havan.jpg`}
-            alt="Jagadguru Mahayogi Siddhababa at the yagya kunda — the sacred fire altar of the Kotihom"
+            src={`${b}images/hanumad-satsang-tent.jpg`}
+            alt="Thousands of devotees filling the satsang tent at the Sankat Mochan Shree Hanumad Mahayagya, Barahakshetra"
             className="w-full h-full object-cover object-center"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-[#1a0803]/80 via-[#2c1205]/50 to-[#faf9f6]" />
