@@ -182,14 +182,12 @@ export default function Gurukul() {
                   <MapPin size={14} className="text-[#b8892a] mt-0.5 flex-shrink-0" />
                   <p>Barahakshetra-1, Chataradham, Sunsari, Nepal</p>
                 </div>
-                <a
-                  href="https://www.siddhamahayog.org"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block text-sm text-[#b8892a] hover:underline font-medium"
-                >
-                  www.siddhamahayog.org
-                </a>
+                <Link href="/donate">
+                  <button className="w-full flex items-center justify-center gap-2 border border-[#b8892a]/40 text-[#b8892a] hover:bg-[#b8892a]/8 text-sm font-medium py-2.5 rounded-xl transition-colors mt-1">
+                    <GraduationCap size={14} />
+                    Sponsor a Child's Education
+                  </button>
+                </Link>
               </div>
             </div>
             {/* Poster carousel */}
