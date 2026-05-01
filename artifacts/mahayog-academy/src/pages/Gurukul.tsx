@@ -56,14 +56,14 @@ export default function Gurukul() {
 
       {/* ── HERO ── */}
       <section className="relative h-[70vh] min-h-[500px] flex items-end overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#1a0803] via-[#3d1f00] to-[#5c3800]" />
-        {/* decorative mandala rings */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full border border-[#b8892a]" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[450px] h-[450px] rounded-full border border-[#b8892a]" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] rounded-full border border-[#b8892a]" />
+        <div className="absolute inset-0">
+          <img
+            src={`${b}images/gurukul-hero.png`}
+            alt="Jagatguru Shriramanandacharya Gurukul — sacred learning at Barahakshetra"
+            className="w-full h-full object-cover object-center"
+          />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-t from-[#1a0803] via-[#1a0803]/20 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#1a0803] via-[#1a0803]/50 to-[#1a0803]/20" />
         <div className="relative z-10 max-w-5xl mx-auto px-6 pb-16 w-full">
           <div className="flex items-center gap-3 mb-5">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
