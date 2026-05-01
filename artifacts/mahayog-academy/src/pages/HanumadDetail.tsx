@@ -357,15 +357,12 @@ export default function HanumadDetail() {
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" className="mx-auto mb-6 opacity-60">
             <path d="M12 2C12 2 15 9 22 12C22 12 15 15 12 22C12 22 9 15 2 12C2 12 9 9 12 2Z" stroke="#e8c56a" strokeWidth="1.2" fill="none"/>
           </svg>
-          <blockquote className="font-['Cormorant_Garamond'] text-3xl md:text-4xl text-white font-light leading-snug mb-4">
-            मनोजवं मारुततुल्यवेगं जितेन्द्रियं बुद्धिमतां वरिष्ठम् ।<br />
-            वातात्मजं वानरयूथमुख्यं श्रीरामदूतं शरणं प्रपद्ये ॥
-          </blockquote>
-          <p className="font-['Cormorant_Garamond'] text-lg text-white/70 italic leading-relaxed mb-6">
+          <blockquote className="font-['Cormorant_Garamond'] text-3xl md:text-4xl text-white font-light italic leading-snug mb-6">
             "I take refuge in Hanuman — swift as the mind, equal in speed to the wind,<br className="hidden md:block" />
-            master of the senses, foremost among the wise, messenger of Sri Rama."
-          </p>
-          <p className="text-[#e8c56a] text-sm tracking-widest uppercase">— Classical Sanskrit Shloka</p>
+            master of the senses, foremost among the wise,<br className="hidden md:block" />
+            son of the wind god, messenger of Sri Rama."
+          </blockquote>
+          <p className="text-[#e8c56a] text-sm tracking-widest uppercase">— Manojavam Shloka</p>
           <div className="mt-10">
             <Link href="/events">
               <button className="inline-flex items-center gap-2 border border-[#e8c56a]/50 text-[#e8c56a] px-6 py-3 rounded-full text-sm hover:bg-[#e8c56a]/10 transition-colors">
