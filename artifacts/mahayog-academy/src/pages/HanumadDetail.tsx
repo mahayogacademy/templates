@@ -187,7 +187,7 @@ export default function HanumadDetail() {
             </div>
 
             {/* Phase 2 — highlight */}
-            <div className="bg-[#f4ede0] rounded-2xl border border-[#e8dece] overflow-hidden">
+            <div className="bg-[#f4ede0] rounded-2xl border-2 border-[#b8892a] overflow-hidden">
               <div className="bg-[#2c1a08] px-5 py-4">
                 <p className="text-[#e8c56a] text-[10px] uppercase tracking-[0.25em] font-medium">Core Ceremony · April 17–23</p>
                 <p className="font-['Cormorant_Garamond'] text-xl text-white font-semibold mt-0.5">The Mahayagya</p>
