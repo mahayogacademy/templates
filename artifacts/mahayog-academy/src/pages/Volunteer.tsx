@@ -54,7 +54,6 @@ const QUALITIES = [
   "A sincere interest in Vedic spirituality and selfless service",
   "Willingness to work within a sattvic and disciplined environment",
   "Reliability, humility, and a spirit of genuine giving",
-  "No prior religious background required — all are welcome",
 ];
 
 export default function Volunteer() {
