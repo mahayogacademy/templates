@@ -68,7 +68,7 @@ export default function Gurukul() {
         <div className="absolute inset-0">
           <img
             src={`${b}images/gurukul-hero.png`}
-            alt="Jagatguru Shriramanandacharya Gurukul — sacred learning at Barahakshetra"
+            alt="Jagadguru Shriramanandacharya Gurukul — sacred learning at Barahakshetra"
             className="w-full h-full object-cover object-center"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-[#1a0803]/80 via-[#2c1205]/50 to-[#faf9f6]" />
@@ -83,7 +83,7 @@ export default function Gurukul() {
           </div>
           <p className="text-[#e8c56a] text-xs uppercase tracking-[0.3em] font-medium mb-3">Barahakshetra, Nepal · Admissions Open</p>
           <h1 className="font-['Cormorant_Garamond'] text-4xl md:text-6xl font-light text-white leading-tight">
-            Jagatguru Shree Ramanandacharya<br /><span className="text-[#e8c56a]">Gurukul</span>
+            Jagadguru Shree Ramanandacharya<br /><span className="text-[#e8c56a]">Gurukul</span>
           </h1>
           <p className="text-white text-base tracking-widest uppercase font-light mt-4">
             Where Modern Excellence Meets Ancient Wisdom
@@ -114,7 +114,7 @@ export default function Gurukul() {
           <div className="grid md:grid-cols-2 gap-10 items-start">
             <div className="space-y-5 text-[#4a3728] text-base leading-relaxed">
               <p>
-                Under the divine guidance of <span className="font-medium text-[#2c1a08]">His Holiness Jagatguru Mahayogi Siddhababa</span>, Jagatguru Shriramanandacharya Gurukul opens its doors at the sacred grounds of Chataradham, Barahakshetra.
+                Under the divine guidance of <span className="font-medium text-[#2c1a08]">His Holiness Jagadguru Mahayogi Siddhababa</span>, Jagadguru Shriramanandacharya Gurukul opens its doors at the sacred grounds of Chataradham, Barahakshetra.
               </p>
               <p>
                 This fully residential institution offers Grade 6 children, under the NEB curriculum in English medium, the opportunity to not merely study, but <em>live</em> the lifestyle of the ancient Rishis. Each day begins before dawn and unfolds through a rhythm of prayer, yoga, learning, and reflection.
@@ -326,7 +326,7 @@ export default function Gurukul() {
           <p className="font-['Cormorant_Garamond'] text-2xl md:text-3xl text-white font-light italic leading-snug mb-4">
             "Not just certificates — the formation of authentic character. That is our highest purpose."
           </p>
-          <p className="text-[#e8c56a] text-xs tracking-widest uppercase">— Jagatguru Shriramanandacharya Gurukul</p>
+          <p className="text-[#e8c56a] text-xs tracking-widest uppercase">— Jagadguru Shriramanandacharya Gurukul</p>
         </div>
       </section>
 
