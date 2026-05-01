@@ -74,7 +74,7 @@ export default function Gurukul() {
           </div>
           <p className="text-[#e8c56a] text-xs uppercase tracking-[0.3em] font-medium mb-3">Barahakshetra, Nepal · Admissions Open</p>
           <h1 className="font-['Cormorant_Garamond'] text-4xl md:text-6xl font-light text-white leading-tight">
-            Jagatguru Shree Ramanandacharya<br />Gurukul
+            Jagatguru Shree Ramanandacharya<br /><span className="text-[#e8c56a]">Gurukul</span>
           </h1>
           <p className="text-white text-base tracking-widest uppercase font-light mt-4">
             Where Modern Excellence Meets Ancient Wisdom
