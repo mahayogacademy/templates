@@ -414,7 +414,7 @@ export default function Gurukul() {
             </div>
 
             {/* Right — cream panel */}
-            <div className="bg-[#fdf8f2] px-10 py-12 flex flex-col justify-between">
+            <div className="bg-[#fdf8f2] px-10 py-12 flex flex-col justify-start">
               <div>
                 <p className="text-[#b8892a] text-xs uppercase tracking-[0.3em] font-medium mb-6">Your sponsorship covers</p>
                 <div className="space-y-4">
@@ -438,7 +438,13 @@ export default function Gurukul() {
                 </div>
               </div>
 
-              <div className="mt-8 space-y-3">
+              <div className="mt-8 rounded-2xl bg-[#b8892a]/8 border border-[#b8892a]/20 px-5 py-4">
+                <p className="text-[#b8892a] text-xs uppercase tracking-[0.2em] font-medium mb-1">Estimated Annual Cost</p>
+                <p className="font-['Cormorant_Garamond'] text-[#2c1a08] text-2xl font-light">One full year — one transformed life.</p>
+                <p className="text-[#7a6250] text-xs mt-1.5 leading-relaxed">Your contribution covers everything: tuition, residence, meals, books, and spiritual formation.</p>
+              </div>
+
+              <div className="mt-5 space-y-3">
                 <Link href="/donate">
                   <button className="w-full flex items-center justify-center gap-2 bg-[#b8892a] hover:bg-[#a07820] text-white font-medium py-4 rounded-2xl transition-colors text-sm tracking-wide shadow-md">
                     <Heart size={15} />
