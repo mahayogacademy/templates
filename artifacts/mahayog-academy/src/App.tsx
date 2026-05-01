@@ -24,6 +24,7 @@ import AtirudriDetail from "@/pages/AtirudriDetail";
 import RamarchanDetail from "@/pages/RamarchanDetail";
 import HanumadDetail from "@/pages/HanumadDetail";
 import Gurukul from "@/pages/Gurukul";
+import Volunteer from "@/pages/Volunteer";
 import ScrollToTop from "@/components/ScrollToTop";
 
 const queryClient = new QueryClient();
@@ -56,6 +57,7 @@ function Router() {
       <Route path="/events/historic/ramarchan-mahayagya" component={RamarchanDetail} />
       <Route path="/events/historic/hanumad-mahayagya" component={HanumadDetail} />
       <Route path="/gurukul" component={Gurukul} />
+      <Route path="/volunteer" component={Volunteer} />
       <Route path="/events/historic/:slug" component={HistoricEventDetail} />
       <Route component={NotFound} />
     </Switch>

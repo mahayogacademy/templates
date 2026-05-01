@@ -1,0 +1,328 @@
+import { useState } from "react";
+import { Link } from "wouter";
+import Nav from "@/components/Nav";
+import { Laptop, Flame, BookOpen, Users, Heart, Sun, ArrowRight, Mail, Globe } from "lucide-react";
+
+const b = import.meta.env.BASE_URL;
+
+const ROLES = [
+  {
+    icon: Sun,
+    title: "Ashram Seva",
+    desc: "Offer your hands and heart at the Ashram — helping with daily upkeep, flower arrangements, kitchen service, and the sacred rhythms of ashram life.",
+  },
+  {
+    icon: Flame,
+    title: "Events & Sacred Festivals",
+    desc: "Support the preparation and running of yagyas, festivals, and spiritual gatherings — from logistics and decoration to welcoming pilgrims and guests.",
+  },
+  {
+    icon: BookOpen,
+    title: "Teaching & Education",
+    desc: "Assist with the Vedanta courses, Gurukul programmes, and meditation classes — as a teaching assistant, translator, or study guide facilitator.",
+  },
+  {
+    icon: Laptop,
+    title: "Digital & Communications",
+    desc: "Help build and maintain the Academy's digital presence — website, social media, photography, video editing, and content creation for a global audience.",
+  },
+  {
+    icon: Heart,
+    title: "Outreach & Community",
+    desc: "Represent the Academy in your local community, organise satsangs, translate teachings, and help introduce seekers to the path of Mahayog.",
+  },
+  {
+    icon: Users,
+    title: "Administration & Coordination",
+    desc: "Support the Academy's day-to-day operations — correspondence, scheduling, event coordination, and donor relations from anywhere in the world.",
+  },
+];
+
+const QUALITIES = [
+  "A sincere interest in Vedic spirituality and selfless service",
+  "Willingness to work within a sattvic and disciplined environment",
+  "Reliability, humility, and a spirit of genuine giving",
+  "No prior religious background required — all are welcome",
+];
+
+export default function Volunteer() {
+  const [form, setForm] = useState({ name: "", email: "", role: "", message: "" });
+  const [submitted, setSubmitted] = useState(false);
+  const [errors, setErrors] = useState<Record<string, string>>({});
+
+  function validate() {
+    const e: Record<string, string> = {};
+    if (!form.name.trim()) e.name = "Please enter your name.";
+    if (!form.email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email))
+      e.email = "Please enter a valid email address.";
+    if (!form.role) e.role = "Please select an area of interest.";
+    if (!form.message.trim() || form.message.trim().length < 10)
+      e.message = "Please write a brief message (at least 10 characters).";
+    return e;
+  }
+
+  function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    const errs = validate();
+    if (Object.keys(errs).length) { setErrors(errs); return; }
+    setErrors({});
+    setSubmitted(true);
+  }
+
+  function handleChange(field: string, value: string) {
+    setForm((f) => ({ ...f, [field]: value }));
+    if (errors[field]) setErrors((e) => { const n = { ...e }; delete n[field]; return n; });
+  }
+
+  return (
+    <div className="min-h-screen bg-[#faf9f6] font-['Inter']">
+      <Nav />
+
+      {/* ── HERO ── */}
+      <section className="relative h-[60vh] min-h-[420px] overflow-hidden">
+        <img
+          src={`${b}images/volunteer-hero.png`}
+          alt="Volunteers serving at the Ashram"
+          className="absolute inset-0 w-full h-full object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#1a0803]/75 via-[#2c1205]/45 to-[#faf9f6]" />
+        <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-6 pb-12">
+          <div className="flex items-center gap-3 mb-5">
+            <div className="h-px w-10 bg-[#e8c56a]/60" />
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+              <path d="M6 0L7.5 4.5L12 6L7.5 7.5L6 12L4.5 7.5L0 6L4.5 4.5Z" fill="#e8c56a" fillOpacity="0.8"/>
+            </svg>
+            <div className="h-px w-10 bg-[#e8c56a]/60" />
+          </div>
+          <p className="text-[#e8c56a] text-xs uppercase tracking-[0.35em] font-medium mb-4">
+            Mahayogi Siddhababa Spiritual Academy
+          </p>
+          <h1 className="font-['Cormorant_Garamond'] text-5xl md:text-6xl text-white font-light leading-tight mb-4">
+            Serve with <span className="text-[#e8c56a]">Purpose</span>
+          </h1>
+          <p className="text-white/75 text-sm uppercase tracking-[0.2em]">
+            Volunteer & Contribute to a Living Tradition
+          </p>
+        </div>
+      </section>
+
+      {/* ── VISION BANNER ── */}
+      <section className="bg-[#b8892a] py-8 px-6">
+        <div className="max-w-4xl mx-auto text-center">
+          <p className="font-['Cormorant_Garamond'] text-2xl md:text-3xl text-white font-light">
+            "Seva is not a task — it is a path to liberation."
+          </p>
+          <p className="text-white/70 text-sm mt-2 tracking-wide">
+            Join a community of dedicated hearts serving Nepal and the world
+          </p>
+        </div>
+      </section>
+
+      {/* ── WHY VOLUNTEER ── */}
+      <section className="py-20 px-6 bg-[#faf9f6]">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-14">
+            <p className="text-[#b8892a] text-xs uppercase tracking-[0.3em] font-medium mb-3">Why Volunteer</p>
+            <h2 className="font-['Cormorant_Garamond'] text-4xl text-[#2c1a08] font-light">Selfless Service as Spiritual Practice</h2>
+            <div className="w-12 h-px bg-[#b8892a]/40 mx-auto mt-4" />
+          </div>
+          <div className="grid md:grid-cols-2 gap-12 items-start">
+            <div className="space-y-5 text-[#4a3728] text-base leading-relaxed">
+              <p>
+                Mahayogi Siddhababa Spiritual Academy is a <span className="font-medium text-[#2c1a08]">not-for-profit, volunteer-run organisation</span>. Everything we offer — courses, events, the Gurukul, outreach — is made possible by the sincere dedication of people like you.
+              </p>
+              <p>
+                In the Vedic tradition, <em>seva</em> — selfless service — is among the highest forms of spiritual practice. By offering your time, skills, and energy to the Academy, you are not merely helping an organisation: you are walking an ancient path of devotion, discipline, and inner growth.
+              </p>
+              <p>
+                Volunteers work from Nepal and from around the world, contributing whatever they are able — a few hours a week or a full immersive residency at the Ashram.
+              </p>
+
+              {/* What you receive */}
+              <div className="bg-[#f4ede0] rounded-2xl px-6 py-5 space-y-3 mt-2">
+                <p className="text-[#b8892a] text-xs uppercase tracking-[0.25em] font-medium">What Volunteers Receive</p>
+                {[
+                  "Deepened connection to authentic Vedic wisdom",
+                  "Personal guidance and mentorship from Academy teachers",
+                  "Access to teachings, courses, and retreat programmes",
+                  "A global community of sincere spiritual seekers",
+                ].map((item) => (
+                  <div key={item} className="flex items-start gap-2 text-sm text-[#4a3728]">
+                    <div className="w-1.5 h-1.5 rounded-full bg-[#b8892a] mt-1.5 flex-shrink-0" />
+                    <p>{item}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Pull quote */}
+            <div className="bg-[#1a0c03] rounded-3xl p-8 flex flex-col justify-between h-full min-h-[320px]">
+              <span className="font-['Cormorant_Garamond'] text-[#b8892a] text-6xl leading-none select-none">"</span>
+              <p className="font-['Cormorant_Garamond'] text-2xl text-[#faf9f6] italic leading-snug my-4">
+                When you serve the Divine with your whole heart, the Divine serves you from within.
+              </p>
+              <div>
+                <span className="font-['Cormorant_Garamond'] text-[#b8892a] text-6xl leading-none select-none float-right">"</span>
+                <p className="text-[#e8c56a] text-xs uppercase tracking-widest pt-2">— Jagadguru Mahayogi Siddhababa</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── SIX ROLES ── */}
+      <section className="py-20 px-6 bg-[#f4ede0]">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-14">
+            <p className="text-[#b8892a] text-xs uppercase tracking-[0.3em] font-medium mb-3">Ways to Serve</p>
+            <h2 className="font-['Cormorant_Garamond'] text-4xl text-[#2c1a08] font-light">Six Ways to Volunteer</h2>
+            <div className="w-12 h-px bg-[#b8892a]/40 mx-auto mt-4" />
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {ROLES.map(({ icon: Icon, title, desc }) => (
+              <div key={title} className="bg-white rounded-2xl p-7 border border-[#b8892a]/15 shadow-sm hover:shadow-md transition-shadow">
+                <div className="w-10 h-10 rounded-full bg-[#b8892a]/10 flex items-center justify-center mb-4">
+                  <Icon size={18} className="text-[#b8892a]" />
+                </div>
+                <h3 className="font-['Cormorant_Garamond'] text-xl text-[#2c1a08] font-medium mb-3">{title}</h3>
+                <p className="text-[#6a5c48] text-sm leading-relaxed">{desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── WHO CAN VOLUNTEER ── */}
+      <section className="py-20 px-6 bg-[#faf9f6]">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <p className="text-[#b8892a] text-xs uppercase tracking-[0.3em] font-medium mb-3">Who Can Volunteer</p>
+            <h2 className="font-['Cormorant_Garamond'] text-4xl text-[#2c1a08] font-light">Open to All Sincere Seekers</h2>
+            <div className="w-12 h-px bg-[#b8892a]/40 mx-auto mt-4" />
+          </div>
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div className="space-y-4">
+              <p className="text-[#4a3728] text-base leading-relaxed">
+                You do not need to be Nepali, Hindu, or a long-time practitioner. The Academy welcomes volunteers from all backgrounds, nationalities, and faith traditions who resonate with the values of compassion, truth, and selfless service.
+              </p>
+              <p className="text-[#4a3728] text-base leading-relaxed">
+                Whether you are based in Kathmandu or California, whether you have an hour a week or wish to reside at the Ashram for a season — there is a place for you here.
+              </p>
+            </div>
+            <div className="space-y-3">
+              {QUALITIES.map((q) => (
+                <div key={q} className="flex items-start gap-3 bg-[#f4ede0] rounded-xl px-5 py-3.5">
+                  <div className="w-2 h-2 rounded-full bg-[#b8892a] mt-1.5 flex-shrink-0" />
+                  <p className="text-[#4a3728] text-sm leading-relaxed">{q}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── APPLY FORM ── */}
+      <section className="py-20 px-6 bg-[#1a0c03]">
+        <div className="max-w-2xl mx-auto">
+          <div className="text-center mb-12">
+            <p className="text-[#e8c56a] text-xs uppercase tracking-[0.3em] font-medium mb-3">Get Involved</p>
+            <h2 className="font-['Cormorant_Garamond'] text-4xl text-white font-light">Express Your Interest</h2>
+            <p className="text-white/60 text-sm mt-3">
+              Fill in the form below and our volunteer coordinator will be in touch within a few days.
+            </p>
+          </div>
+
+          {submitted ? (
+            <div className="text-center py-12">
+              <div className="w-14 h-14 rounded-full bg-[#b8892a]/20 flex items-center justify-center mx-auto mb-5">
+                <Heart size={24} className="text-[#b8892a]" />
+              </div>
+              <h3 className="font-['Cormorant_Garamond'] text-3xl text-white font-light mb-3">Thank You</h3>
+              <p className="text-white/60 text-sm leading-relaxed max-w-md mx-auto">
+                Your expression of interest has been received. We are grateful for your heart and will be in touch soon. May your path be filled with light.
+              </p>
+              <Link href="/">
+                <button className="mt-8 inline-flex items-center gap-2 border border-[#b8892a]/40 text-[#e8c56a] px-6 py-2.5 rounded-full text-sm hover:bg-[#b8892a]/10 transition-colors">
+                  Return Home <ArrowRight size={14} />
+                </button>
+              </Link>
+            </div>
+          ) : (
+            <form onSubmit={handleSubmit} className="space-y-5">
+              {/* Name */}
+              <div>
+                <label className="block text-[#e8c56a] text-xs uppercase tracking-widest mb-2">Full Name</label>
+                <input
+                  type="text"
+                  value={form.name}
+                  onChange={(e) => handleChange("name", e.target.value)}
+                  placeholder="Your name"
+                  className="w-full bg-white/8 border border-white/15 rounded-xl px-4 py-3 text-white placeholder-white/30 text-sm focus:outline-none focus:border-[#b8892a]/60 transition-colors"
+                />
+                {errors.name && <p className="text-red-400 text-xs mt-1">{errors.name}</p>}
+              </div>
+
+              {/* Email */}
+              <div>
+                <label className="block text-[#e8c56a] text-xs uppercase tracking-widest mb-2">Email Address</label>
+                <input
+                  type="email"
+                  value={form.email}
+                  onChange={(e) => handleChange("email", e.target.value)}
+                  placeholder="your@email.com"
+                  className="w-full bg-white/8 border border-white/15 rounded-xl px-4 py-3 text-white placeholder-white/30 text-sm focus:outline-none focus:border-[#b8892a]/60 transition-colors"
+                />
+                {errors.email && <p className="text-red-400 text-xs mt-1">{errors.email}</p>}
+              </div>
+
+              {/* Role interest */}
+              <div>
+                <label className="block text-[#e8c56a] text-xs uppercase tracking-widest mb-2">Area of Interest</label>
+                <select
+                  value={form.role}
+                  onChange={(e) => handleChange("role", e.target.value)}
+                  className="w-full bg-[#2c1205] border border-white/15 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-[#b8892a]/60 transition-colors appearance-none"
+                >
+                  <option value="" disabled>Select a role…</option>
+                  {ROLES.map(({ title }) => (
+                    <option key={title} value={title}>{title}</option>
+                  ))}
+                  <option value="Open to Any">Open to Any — Let the Academy Decide</option>
+                </select>
+                {errors.role && <p className="text-red-400 text-xs mt-1">{errors.role}</p>}
+              </div>
+
+              {/* Message */}
+              <div>
+                <label className="block text-[#e8c56a] text-xs uppercase tracking-widest mb-2">A Few Words About Yourself</label>
+                <textarea
+                  rows={5}
+                  value={form.message}
+                  onChange={(e) => handleChange("message", e.target.value)}
+                  placeholder="Tell us a little about yourself, your background, and why you wish to volunteer…"
+                  className="w-full bg-white/8 border border-white/15 rounded-xl px-4 py-3 text-white placeholder-white/30 text-sm focus:outline-none focus:border-[#b8892a]/60 transition-colors resize-none"
+                />
+                {errors.message && <p className="text-red-400 text-xs mt-1">{errors.message}</p>}
+              </div>
+
+              <button
+                type="submit"
+                className="w-full flex items-center justify-center gap-2 bg-[#b8892a] hover:bg-[#a07820] text-white font-medium py-4 rounded-2xl transition-colors text-sm tracking-wide"
+              >
+                <Mail size={15} />
+                Send My Expression of Interest
+              </button>
+
+              <p className="text-white/30 text-xs text-center">
+                As a volunteer-run organisation, we aim to respond within 3–5 working days.
+              </p>
+            </form>
+          )}
+        </div>
+      </section>
+
+      {/* ── FOOTER SPACE ── */}
+      <div className="h-16 bg-[#faf9f6]" />
+    </div>
+  );
+}
