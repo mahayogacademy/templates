@@ -456,3 +456,39 @@ id = "IYSfmkFBbyOw23mcq4M79"
 uri = "file://artifacts/mahayog-academy/public/images/volunteer-hero.png"
 type = "image"
 title = "volunteer hero ashram seva"
+
+[[generated]]
+id = "tgxjMM42dW6dxtcui7nIE"
+uri = "file://artifacts/mahayog-academy/public/images/volunteer-ashram-seva.png"
+type = "image"
+title = "ashram seva volunteer"
+
+[[generated]]
+id = "ja3MHbT2yZnpA6l8wGoSL"
+uri = "file://artifacts/mahayog-academy/public/images/volunteer-festivals.png"
+type = "image"
+title = "sacred festival yagya"
+
+[[generated]]
+id = "PirntU-xecqNVnnpdq085"
+uri = "file://artifacts/mahayog-academy/public/images/volunteer-teaching.png"
+type = "image"
+title = "ashram teaching education"
+
+[[generated]]
+id = "nwyW44jjeKwZk3Xg--aCb"
+uri = "file://artifacts/mahayog-academy/public/images/volunteer-digital.png"
+type = "image"
+title = "digital communications volunteer"
+
+[[generated]]
+id = "JJoYLJOnXq574rRLP00nS"
+uri = "file://artifacts/mahayog-academy/public/images/volunteer-outreach.png"
+type = "image"
+title = "community satsang outreach"
+
+[[generated]]
+id = "kcto9Z3KgCtR5wnbLVPDM"
+uri = "file://artifacts/mahayog-academy/public/images/volunteer-admin.png"
+type = "image"
+title = "ashram admin coordination"
