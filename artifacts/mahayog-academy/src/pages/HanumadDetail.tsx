@@ -6,17 +6,15 @@ const b = import.meta.env.BASE_URL;
 
 
 const CEREMONY_GALLERY = [
-  { src: "hanumad-havan-night.jpg", alt: "Rows of sacred fire at the Kotihom — devotees gathered around the night havan" },
   { src: "hanumad-siddhababa-havan.jpg", alt: "Jagadguru Mahayogi Siddhababa at the sacred havan fire" },
   { src: "hanumad-crowd-satsang.jpg", alt: "Thousands of devotees with hands raised in blessing during the Hanumad Mahayagya satsang" },
   { src: "hanumad-crowd-hanuman.jpg", alt: "Massive gathering at night with the 80-foot Hanuman statue lit above the crowd" },
   { src: "hanumad-venue-aerial.jpg", alt: "Aerial view of the ceremony ground at Barahakshetra — saffron banners and the golden Hanuman statue" },
   { src: "hanumad-mandap-night.jpg", alt: "The illuminated yagya mandap at night — golden lights outlining the sacred pavilion" },
-  { src: "hanumad-mandap-crowd.jpg", alt: "Devotees assembled outside the glowing yagya mandap at night" },
   { src: "hanumad-aarati-night.jpg", alt: "Women devotees performing aarati with oil lamps at the night ceremony" },
   { src: "hanumad-satsang-stage.jpg", alt: "Siddhababa on stage with a large Ram-Hanuman painting, devotees filling the satsang hall" },
-  { src: "hanumad-satsang-hall.jpg", alt: "Full satsang hall with hundreds of devotees seated facing the stage" },
   { src: "hanumad-satsang-women.jpg", alt: "Women devotees assembled in the satsang hall" },
+  { src: "hanumad-havan-night.jpg", alt: "Rows of sacred fire at the Kotihom — devotees gathered around the night havan" },
 ];
 
 const SAINTS_GALLERY = [
@@ -290,23 +288,18 @@ export default function HanumadDetail() {
           </div>
           {/* Featured row */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
-            <div className="rounded-2xl overflow-hidden shadow-lg group aspect-[4/3]">
-              <img
-                src={`${b}images/hanumad-havan-night.jpg`}
-                alt="Night havan — rows of sacred fire during the Kotihom ceremony"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-              />
-            </div>
-            <div className="rounded-2xl overflow-hidden shadow-lg group aspect-[4/3]">
-              <img
-                src={`${b}images/hanumad-crowd-satsang.jpg`}
-                alt="Thousands of devotees with hands raised in collective blessing"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-              />
-            </div>
+            {CEREMONY_GALLERY.slice(0, 2).map(({ src, alt }) => (
+              <div key={src} className="rounded-2xl overflow-hidden shadow-lg group aspect-[4/3]">
+                <img
+                  src={`${b}images/${src}`}
+                  alt={alt}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+              </div>
+            ))}
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {CEREMONY_GALLERY.slice(1).filter(p => p.src !== "hanumad-crowd-satsang.jpg" && p.src !== "hanumad-havan-night.jpg").map(({ src, alt }) => (
+            {CEREMONY_GALLERY.slice(2).map(({ src, alt }) => (
               <div key={src} className="rounded-2xl overflow-hidden shadow-lg group aspect-[4/3]">
                 <img
                   src={`${b}images/${src}`}
