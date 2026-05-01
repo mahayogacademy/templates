@@ -1,6 +1,7 @@
+import { useState } from "react";
 import Nav from "@/components/Nav";
 import { Link } from "wouter";
-import { Phone, MapPin, BookOpen, Sun, Heart, Users, Laptop, Flame } from "lucide-react";
+import { Phone, MapPin, BookOpen, Sun, Heart, Users, Laptop, Flame, X, ZoomIn } from "lucide-react";
 
 const b = import.meta.env.BASE_URL;
 
@@ -50,6 +51,8 @@ const PILLARS = [
 ];
 
 export default function Gurukul() {
+  const [lightbox, setLightbox] = useState<string | null>(null);
+
   return (
     <div className="min-h-screen bg-[#faf9f6] font-['Inter']">
       <Nav />
@@ -96,34 +99,69 @@ export default function Gurukul() {
 
       {/* ── ABOUT ── */}
       <section className="py-20 px-6 bg-[#faf9f6]">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
             <p className="text-[#b8892a] text-xs uppercase tracking-[0.3em] font-medium mb-3">About the Gurukul</p>
             <h2 className="font-['Cormorant_Garamond'] text-4xl text-[#2c1a08] font-light mb-6">A Living Tradition, Reimagined</h2>
             <div className="w-12 h-px bg-[#b8892a]/40 mx-auto" />
           </div>
-          <div className="grid md:grid-cols-2 gap-10 items-center">
+          <div className="grid md:grid-cols-2 gap-10 items-start">
             <div className="space-y-5 text-[#4a3728] text-base leading-relaxed">
               <p>
-                Under the divine guidance of <span className="font-medium text-[#2c1a08]">Samadhi Siddha Mahayogi, His Holiness Jagatguru Mahayogi Siddhababa</span>, Jagatguru Shriramanandacharya Gurukul opens its doors at the sacred grounds of Chataradham, Barahakshetra.
+                Under the divine guidance of <span className="font-medium text-[#2c1a08]">His Holiness Jagatguru Mahayogi Siddhababa</span>, Jagatguru Shriramanandacharya Gurukul opens its doors at the sacred grounds of Chataradham, Barahakshetra.
               </p>
               <p>
-                This fully residential institution offers Grade 6 to 12 under the NEB curriculum in English medium — where students do not merely study, but <em>live</em> the lifestyle of the ancient Rishis. Each day begins before dawn and unfolds through a rhythm of prayer, yoga, learning, and reflection.
+                This fully residential institution offers Grade 6 children, under the NEB curriculum in English medium, the opportunity to not merely study, but <em>live</em> the lifestyle of the ancient Rishis. Each day begins before dawn and unfolds through a rhythm of prayer, yoga, learning, and reflection.
               </p>
               <p>
-                In today's world, true success lies not just in degrees but in <strong>character, संस्कार, discipline, and spiritual awareness</strong>. This Gurukul is committed to shaping strong, visionary, and culturally grounded individuals in a safe, loving, and sattvic environment.
+                In today's world, true success lies not just in degrees but in <strong>character, sanskar, discipline, and spiritual awareness</strong>. This Gurukul is committed to shaping strong, visionary, and culturally grounded individuals in a safe, loving, and sattvic environment.
+              </p>
+              <p className="text-xs text-[#9a8070] italic pt-2">
+                Click either poster to view full size.
               </p>
             </div>
-            <div className="rounded-2xl overflow-hidden shadow-xl border border-[#b8892a]/20">
-              <img
-                src={`${b}images/gurukul-poster.jpg`}
-                alt="Jagatguru Shriramanandacharya Gurukul — Vedic Sanskar, Modern Education"
-                className="w-full h-full object-cover"
-              />
+            {/* Two posters side by side */}
+            <div className="grid grid-cols-2 gap-4">
+              {[
+                { src: `${b}images/gurukul-poster-en.jpg`, alt: "Gurukul English poster — Vedic Values, Modern Education" },
+                { src: `${b}images/gurukul-poster.jpg`,    alt: "Gurukul Nepali poster — Vedic Sanskar, Modern Education" },
+              ].map(({ src, alt }) => (
+                <button
+                  key={src}
+                  onClick={() => setLightbox(src)}
+                  className="relative group rounded-xl overflow-hidden shadow-lg border border-[#b8892a]/20 cursor-zoom-in focus:outline-none"
+                >
+                  <img src={src} alt={alt} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center">
+                    <ZoomIn size={28} className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 drop-shadow-lg" />
+                  </div>
+                </button>
+              ))}
             </div>
           </div>
         </div>
       </section>
+
+      {/* ── LIGHTBOX ── */}
+      {lightbox && (
+        <div
+          className="fixed inset-0 z-50 bg-black/85 flex items-center justify-center p-4"
+          onClick={() => setLightbox(null)}
+        >
+          <button
+            onClick={() => setLightbox(null)}
+            className="absolute top-5 right-5 text-white/80 hover:text-white transition-colors"
+          >
+            <X size={32} />
+          </button>
+          <img
+            src={lightbox}
+            alt="Gurukul poster full size"
+            className="max-h-[90vh] max-w-[90vw] rounded-xl shadow-2xl object-contain"
+            onClick={e => e.stopPropagation()}
+          />
+        </div>
+      )}
 
       {/* ── TWO WORLDS ── */}
       <section className="py-20 px-6 bg-[#f4ede0]">
