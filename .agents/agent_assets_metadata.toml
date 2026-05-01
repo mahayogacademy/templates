@@ -498,3 +498,21 @@ id = "UlpBkSoCmKi_W590sQ_Bz"
 uri = "file://artifacts/mahayog-academy/public/images/volunteer-why.png"
 type = "image"
 title = "volunteer seva compassion ashram"
+
+[[generated]]
+id = "mn20a0WUf711w6gwwAk9g"
+uri = "file://artifacts/mahayog-academy/public/images/custom-talks-hero.png"
+type = "image"
+title = "spiritual talk workshop audience"
+
+[[generated]]
+id = "vii0vSGutnM_kGnjjKiIT"
+uri = "file://artifacts/mahayog-academy/public/images/custom-talks-workshop.png"
+type = "image"
+title = "meditation workshop intimate group"
+
+[[generated]]
+id = "9bmt48H8P4gLeMQpo0v79"
+uri = "file://artifacts/mahayog-academy/public/images/custom-talks-corporate.png"
+type = "image"
+title = "corporate mindfulness session"
