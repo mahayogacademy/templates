@@ -122,9 +122,29 @@ export default function Gurukul() {
               <p>
                 In today's world, true success lies not just in degrees but in <strong>character, sanskar, discipline, and spiritual awareness</strong>. This Gurukul is committed to shaping strong, visionary, and culturally grounded individuals in a safe, loving, and sattvic environment.
               </p>
-              <p className="text-xs text-[#9a8070] italic pt-2">
-                Click the poster to view full size.
-              </p>
+              {/* Admission contact */}
+              <div className="mt-4 border-t border-[#b8892a]/20 pt-5 space-y-3">
+                <p className="text-[#b8892a] text-xs uppercase tracking-[0.25em] font-medium">Admissions · Limited Seats</p>
+                <div className="flex items-start gap-2 text-sm text-[#4a3728]">
+                  <Phone size={14} className="text-[#b8892a] mt-0.5 flex-shrink-0" />
+                  <div>
+                    <p>+977 985-1126710</p>
+                    <p>+977 976-7393900</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-2 text-sm text-[#4a3728]">
+                  <MapPin size={14} className="text-[#b8892a] mt-0.5 flex-shrink-0" />
+                  <p>Barahakshetra-1, Chataradham, Sunsari, Nepal</p>
+                </div>
+                <a
+                  href="https://www.siddhamahayog.org"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block text-sm text-[#b8892a] hover:underline font-medium"
+                >
+                  www.siddhamahayog.org
+                </a>
+              </div>
             </div>
             {/* Poster carousel */}
             <div className="flex flex-col items-center gap-3">
