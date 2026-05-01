@@ -187,35 +187,35 @@ export default function HanumadDetail() {
             </div>
 
             {/* Phase 2 — highlight */}
-            <div className="bg-[#fdf6e8] rounded-2xl border-2 border-[#c45b1a] overflow-hidden">
-              <div className="bg-[#c45b1a] px-5 py-4">
-                <p className="text-[#fff3ec] text-[10px] uppercase tracking-[0.25em] font-semibold">Core Ceremony · April 17–23</p>
+            <div className="bg-[#f4ede0] rounded-2xl border border-[#e8dece] overflow-hidden">
+              <div className="bg-[#2c1a08] px-5 py-4">
+                <p className="text-[#e8c56a] text-[10px] uppercase tracking-[0.25em] font-medium">Core Ceremony · April 17–23</p>
                 <p className="font-['Cormorant_Garamond'] text-xl text-white font-semibold mt-0.5">The Mahayagya</p>
               </div>
               <div className="px-5 py-5 space-y-4">
                 <div>
-                  <p className="text-[#9a6f1e] text-[10px] uppercase tracking-[0.2em] font-semibold">April 17</p>
+                  <p className="text-[#b8892a] text-[10px] uppercase tracking-[0.2em] font-semibold">April 17</p>
                   <p className="text-[#2c1a08] text-sm font-medium mt-0.5">Arrival of Bageshwardham Sarkar · Ram Navami · Temple Foundation Stone</p>
                   <p className="text-[#6a5c48] text-xs mt-0.5">Maha-Aarati at 12 PM</p>
                 </div>
-                <div className="w-full h-px bg-[#e8c56a]/50" />
+                <div className="w-full h-px bg-[#e8dece]" />
                 <div>
-                  <p className="text-[#9a6f1e] text-[10px] uppercase tracking-[0.2em] font-semibold">April 17–23 · 6 AM–12 PM</p>
+                  <p className="text-[#b8892a] text-[10px] uppercase tracking-[0.2em] font-semibold">April 17–23 · 6 AM–12 PM</p>
                   <p className="text-[#2c1a08] text-sm font-medium mt-0.5">Kotihom — 1 Crore Hanuman Mantra Ahutis</p>
                 </div>
-                <div className="w-full h-px bg-[#e8c56a]/50" />
+                <div className="w-full h-px bg-[#e8dece]" />
                 <div>
-                  <p className="text-[#9a6f1e] text-[10px] uppercase tracking-[0.2em] font-semibold">April 17–21 · 2–6 PM</p>
+                  <p className="text-[#b8892a] text-[10px] uppercase tracking-[0.2em] font-semibold">April 17–21 · 2–6 PM</p>
                   <p className="text-[#2c1a08] text-sm font-medium mt-0.5">Hanuman Katha by Bageshwardham Sarkar</p>
                 </div>
-                <div className="w-full h-px bg-[#e8c56a]/50" />
+                <div className="w-full h-px bg-[#e8dece]" />
                 <div>
-                  <p className="text-[#9a6f1e] text-[10px] uppercase tracking-[0.2em] font-semibold">April 19 · 1 PM</p>
+                  <p className="text-[#b8892a] text-[10px] uppercase tracking-[0.2em] font-semibold">April 19 · 1 PM</p>
                   <p className="text-[#2c1a08] text-sm font-medium mt-0.5">Divine Darshan — Congregation of Saints</p>
                 </div>
-                <div className="w-full h-px bg-[#e8c56a]/50" />
+                <div className="w-full h-px bg-[#e8dece]" />
                 <div>
-                  <p className="text-[#9a6f1e] text-[10px] uppercase tracking-[0.2em] font-semibold">April 23 · 12 PM</p>
+                  <p className="text-[#b8892a] text-[10px] uppercase tracking-[0.2em] font-semibold">April 23 · 12 PM</p>
                   <p className="text-[#2c1a08] text-sm font-medium mt-0.5">Purnahuti — Final Offerings · Hanuman Jayanti · Maha-Aarati</p>
                 </div>
               </div>
