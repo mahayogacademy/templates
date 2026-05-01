@@ -1,0 +1,283 @@
+import Nav from "@/components/Nav";
+import { Link } from "wouter";
+import { Phone, MapPin, BookOpen, Sun, Heart, Users, Laptop, Flame } from "lucide-react";
+
+const b = import.meta.env.BASE_URL;
+
+const MODERN_FEATURES = [
+  { icon: Laptop, label: "Smart Classrooms" },
+  { icon: BookOpen, label: "Science & Computer Labs" },
+  { icon: BookOpen, label: "Library & Reading Rooms" },
+  { icon: Users, label: "Sports & Physical Education" },
+  { icon: Heart, label: "Music & Cultural Activities" },
+  { icon: BookOpen, label: "NEB English Medium Curriculum" },
+];
+
+const VEDIC_FEATURES = [
+  { icon: Sun, label: "Brahmamuhurta Daily Routine" },
+  { icon: Flame, label: "Sandhya Vandana" },
+  { icon: Heart, label: "Yoga & Pranayama" },
+  { icon: Heart, label: "Meditation & Dharana" },
+  { icon: BookOpen, label: "Ayurveda & Jyotish" },
+  { icon: BookOpen, label: "Vedic Studies & Sanskrit Grammar" },
+];
+
+const PILLARS = [
+  {
+    title: "Vedic Values",
+    desc: "Not merely information, but the formation of character — moral, spiritual, and human संस्कार at the core of every lesson.",
+  },
+  {
+    title: "Modern Curriculum",
+    desc: "Grade 6–12 under the NEB curriculum in English medium. Science, mathematics, computer, and technical subjects taught to global standards.",
+  },
+  {
+    title: "Vedic Living",
+    desc: "Sanskrit recitation, Vedic studies, Ayurveda, Jyotish, and yoga woven into daily life — not as electives, but as a way of being.",
+  },
+  {
+    title: "Residential Life",
+    desc: "Students live as ancient Rishis — a disciplined, sattvic, and loving residential environment that becomes a true second home.",
+  },
+  {
+    title: "Holistic Development",
+    desc: "Sports, music, cultural arts, and community service cultivate the full person — strong in body, sharp in mind, and noble in spirit.",
+  },
+  {
+    title: "Patriotism & Service",
+    desc: "Students are nurtured with deep love for their homeland and a commitment to serve Nepal and the world with wisdom and integrity.",
+  },
+];
+
+export default function Gurukul() {
+  return (
+    <div className="min-h-screen bg-[#faf9f6] font-['Inter']">
+      <Nav />
+
+      {/* ── HERO ── */}
+      <section className="relative h-[70vh] min-h-[500px] flex items-end overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-[#1a0803] via-[#3d1f00] to-[#5c3800]" />
+        {/* decorative mandala rings */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full border border-[#b8892a]" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[450px] h-[450px] rounded-full border border-[#b8892a]" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] rounded-full border border-[#b8892a]" />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-t from-[#1a0803] via-[#1a0803]/20 to-transparent" />
+        <div className="relative z-10 max-w-5xl mx-auto px-6 pb-16 w-full">
+          <div className="flex items-center gap-3 mb-5">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+              <path d="M12 2C12 2 15 9 22 12C22 12 15 15 12 22C12 22 9 15 2 12C2 12 9 9 12 2Z" stroke="#e8c56a" strokeWidth="1.2" fill="none"/>
+            </svg>
+            <p className="text-[#e8c56a] text-[11px] uppercase tracking-[0.35em] font-medium">Admissions Now Open</p>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+              <path d="M12 2C12 2 15 9 22 12C22 12 15 15 12 22C12 22 9 15 2 12C2 12 9 9 12 2Z" stroke="#e8c56a" strokeWidth="1.2" fill="none"/>
+            </svg>
+          </div>
+          <h1 className="font-['Cormorant_Garamond'] text-4xl md:text-6xl text-white font-light leading-tight mb-4">
+            Jagatguru Shriramanandacharya<br />
+            <span className="text-[#e8c56a]">Gurukul</span>
+          </h1>
+          <p className="font-['Cormorant_Garamond'] text-xl md:text-2xl text-white/75 font-light italic mb-6">
+            Where Modern Excellence Meets Ancient Wisdom
+          </p>
+          <div className="flex flex-wrap items-center gap-4">
+            <span className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 text-white/80 text-xs px-4 py-2 rounded-full">
+              <MapPin size={12} className="text-[#e8c56a]" />
+              Barahakshetra · Chataradham · Nepal
+            </span>
+            <span className="inline-flex items-center gap-2 bg-[#b8892a]/20 border border-[#b8892a]/40 text-[#e8c56a] text-xs px-4 py-2 rounded-full">
+              Grade 6 – 12 · NEB · English Medium · Residential
+            </span>
+          </div>
+        </div>
+      </section>
+
+      {/* ── VISION BANNER ── */}
+      <section className="bg-[#b8892a] py-8 px-6">
+        <div className="max-w-4xl mx-auto text-center">
+          <p className="font-['Cormorant_Garamond'] text-2xl md:text-3xl text-white font-light">
+            "Western Mind &amp; Eastern Philosophy"
+          </p>
+          <p className="text-white/70 text-sm mt-2 tracking-wide">
+            For the first time in Nepal — a Gurukul that unites the best of both worlds
+          </p>
+        </div>
+      </section>
+
+      {/* ── ABOUT ── */}
+      <section className="py-20 px-6 bg-[#faf9f6]">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <p className="text-[#b8892a] text-xs uppercase tracking-[0.3em] font-medium mb-3">About the Gurukul</p>
+            <h2 className="font-['Cormorant_Garamond'] text-4xl text-[#2c1a08] font-light mb-6">A Living Tradition, Reimagined</h2>
+            <div className="w-12 h-px bg-[#b8892a]/40 mx-auto" />
+          </div>
+          <div className="grid md:grid-cols-2 gap-10 items-center">
+            <div className="space-y-5 text-[#4a3728] text-base leading-relaxed">
+              <p>
+                Under the divine guidance of <span className="font-medium text-[#2c1a08]">Samadhi Siddha Mahayogi, His Holiness Jagatguru Mahayogi Siddhababa</span>, Jagatguru Shriramanandacharya Gurukul opens its doors at the sacred grounds of Chataradham, Barahakshetra.
+              </p>
+              <p>
+                This fully residential institution offers Grade 6 to 12 under the NEB curriculum in English medium — where students do not merely study, but <em>live</em> the lifestyle of the ancient Rishis. Each day begins before dawn and unfolds through a rhythm of prayer, yoga, learning, and reflection.
+              </p>
+              <p>
+                In today's world, true success lies not just in degrees but in <strong>character, संस्कार, discipline, and spiritual awareness</strong>. This Gurukul is committed to shaping strong, visionary, and culturally grounded individuals in a safe, loving, and sattvic environment.
+              </p>
+            </div>
+            <div className="rounded-2xl overflow-hidden shadow-xl border border-[#b8892a]/20">
+              <img
+                src={`${b}images/gurukul-poster.jpg`}
+                alt="Jagatguru Shriramanandacharya Gurukul — Vedic Sanskar, Modern Education"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── TWO WORLDS ── */}
+      <section className="py-20 px-6 bg-[#f4ede0]">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-14">
+            <p className="text-[#b8892a] text-xs uppercase tracking-[0.3em] font-medium mb-3">The Dual Path</p>
+            <h2 className="font-['Cormorant_Garamond'] text-4xl text-[#2c1a08] font-light">Ancient Wisdom. Modern Capability.</h2>
+            <div className="w-12 h-px bg-[#b8892a]/40 mx-auto mt-4" />
+          </div>
+          <div className="grid md:grid-cols-2 gap-6">
+            {/* Modern */}
+            <div className="bg-white rounded-2xl p-8 shadow-sm border border-[#b8892a]/15">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-10 h-10 rounded-full bg-[#f4ede0] flex items-center justify-center">
+                  <Laptop size={18} className="text-[#b8892a]" />
+                </div>
+                <h3 className="font-['Cormorant_Garamond'] text-2xl text-[#2c1a08] font-light">Modern Excellence</h3>
+              </div>
+              <ul className="space-y-3">
+                {MODERN_FEATURES.map(({ label }) => (
+                  <li key={label} className="flex items-center gap-3 text-[#4a3728] text-sm">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#b8892a] flex-shrink-0" />
+                    {label}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            {/* Vedic */}
+            <div className="bg-[#2c1a08] rounded-2xl p-8 shadow-sm border border-[#b8892a]/30">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-10 h-10 rounded-full bg-[#b8892a]/20 flex items-center justify-center">
+                  <Flame size={18} className="text-[#e8c56a]" />
+                </div>
+                <h3 className="font-['Cormorant_Garamond'] text-2xl text-white font-light">Vedic Living</h3>
+              </div>
+              <ul className="space-y-3">
+                {VEDIC_FEATURES.map(({ label }) => (
+                  <li key={label} className="flex items-center gap-3 text-white/75 text-sm">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#e8c56a] flex-shrink-0" />
+                    {label}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── SIX PILLARS ── */}
+      <section className="py-20 px-6 bg-[#faf9f6]">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-14">
+            <p className="text-[#b8892a] text-xs uppercase tracking-[0.3em] font-medium mb-3">Why This Gurukul</p>
+            <h2 className="font-['Cormorant_Garamond'] text-4xl text-[#2c1a08] font-light">Six Pillars of Formation</h2>
+            <div className="w-12 h-px bg-[#b8892a]/40 mx-auto mt-4" />
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {PILLARS.map(({ title, desc }) => (
+              <div key={title} className="bg-white rounded-2xl p-7 border border-[#b8892a]/15 shadow-sm hover:shadow-md transition-shadow">
+                <div className="w-8 h-px bg-[#b8892a] mb-4" />
+                <h3 className="font-['Cormorant_Garamond'] text-xl text-[#2c1a08] font-medium mb-3">{title}</h3>
+                <p className="text-[#6a5c48] text-sm leading-relaxed">{desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── QUOTE BANNER ── */}
+      <section className="py-16 px-6 bg-[#1a0c03]">
+        <div className="max-w-3xl mx-auto text-center">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="mx-auto mb-5 opacity-50">
+            <path d="M12 2C12 2 15 9 22 12C22 12 15 15 12 22C12 22 9 15 2 12C2 12 9 9 12 2Z" stroke="#e8c56a" strokeWidth="1.2" fill="none"/>
+          </svg>
+          <p className="font-['Cormorant_Garamond'] text-2xl md:text-3xl text-white font-light italic leading-snug mb-4">
+            "Not just certificates — the formation of authentic character. That is our highest purpose."
+          </p>
+          <p className="text-[#e8c56a] text-xs tracking-widest uppercase">— Jagatguru Shriramanandacharya Gurukul</p>
+        </div>
+      </section>
+
+      {/* ── ADMISSIONS CTA ── */}
+      <section className="py-20 px-6 bg-[#f4ede0]">
+        <div className="max-w-3xl mx-auto">
+          <div className="text-center mb-10">
+            <p className="text-[#b8892a] text-xs uppercase tracking-[0.3em] font-medium mb-3">Admissions</p>
+            <h2 className="font-['Cormorant_Garamond'] text-4xl text-[#2c1a08] font-light mb-3">Admission Open Now</h2>
+            <p className="text-[#6a5c48] text-base">Limited seats available — Academic Session 2082 (2025–26)</p>
+            <div className="w-12 h-px bg-[#b8892a]/40 mx-auto mt-4" />
+          </div>
+
+          <div className="bg-white rounded-2xl p-8 border border-[#b8892a]/20 shadow-sm space-y-6">
+            {/* Urgent badge */}
+            <div className="text-center">
+              <span className="inline-block bg-[#b8892a] text-white text-xs font-medium px-5 py-2 rounded-full tracking-wide uppercase">
+                Limited Seats — Apply Early
+              </span>
+            </div>
+
+            <div className="grid sm:grid-cols-2 gap-5">
+              <div className="flex items-start gap-3">
+                <Phone size={16} className="text-[#b8892a] mt-0.5 flex-shrink-0" />
+                <div>
+                  <p className="text-[#2c1a08] text-sm font-medium mb-1">Contact</p>
+                  <p className="text-[#4a3728] text-sm">+977 985-1126710</p>
+                  <p className="text-[#4a3728] text-sm">+977 976-7393900</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <MapPin size={16} className="text-[#b8892a] mt-0.5 flex-shrink-0" />
+                <div>
+                  <p className="text-[#2c1a08] text-sm font-medium mb-1">Location</p>
+                  <p className="text-[#4a3728] text-sm">Barahakshetra-1, Chataradham</p>
+                  <p className="text-[#4a3728] text-sm">Sunsari, Koshi Province, Nepal</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="border-t border-[#b8892a]/15 pt-5 text-center">
+              <p className="text-[#6a5c48] text-xs mb-4">For more information, visit</p>
+              <a
+                href="https://www.siddhamahayog.org"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#b8892a] text-sm font-medium hover:underline"
+              >
+                www.siddhamahayog.org
+              </a>
+            </div>
+          </div>
+
+          <div className="mt-8 text-center">
+            <Link href="/contact">
+              <button className="inline-flex items-center gap-2 bg-[#b8892a] text-white px-8 py-3.5 rounded-full text-sm font-medium hover:bg-[#a07820] transition-colors">
+                Contact the Academy
+              </button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ── FOOTER SPACE ── */}
+      <div className="h-16 bg-[#faf9f6]" />
+    </div>
+  );
+}
