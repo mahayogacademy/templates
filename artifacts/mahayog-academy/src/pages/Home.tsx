@@ -53,25 +53,31 @@ export default function Home() {
 
       {/* ── HERO ── */}
       <section className="relative flex items-center justify-center overflow-hidden" style={{ minHeight: "calc(100vh - 64px)" }}>
-        {/* Collage mosaic — 4 cols × 2 rows, all matching warm golden-hour style */}
-        <div className="absolute inset-0 grid grid-cols-4 grid-rows-2 gap-0.5">
+        {/* Seamless horizontal strip — images blend into each other at edges */}
+        <div className="absolute inset-0 flex items-stretch">
           {[
-            { src: `${b}images/ashram-extra-river-diyas.jpg`,   pos: "object-center" },
-            { src: `${b}images/ashram-cows-sunset.jpg`,         pos: "object-center" },
-            { src: `${b}images/hanumad-satsang-stage.jpg`,      pos: "object-top"    },
-            { src: `${b}images/ashram-hanuman-sunset.jpg`,      pos: "object-center" },
-            { src: `${b}images/hanumad-aarati-night.jpg`,       pos: "object-top"    },
-            { src: `${b}images/ashram-satsang-night.jpg`,       pos: "object-center" },
-            { src: `${b}images/hanumad-saints-river.jpg`,       pos: "object-top"    },
-            { src: `${b}images/ashram-prasad-2.jpg`,            pos: "object-center" },
-          ].map((img, i) => (
-            <div key={i} className="overflow-hidden">
-              <img src={img.src} alt="" aria-hidden className={`w-full h-full object-cover ${img.pos}`} />
+            { src: `${b}images/ashram-koshi-river.jpg`,       pos: "object-center" },
+            { src: `${b}images/cta-meditation-dawn.png`,      pos: "object-center" },
+            { src: `${b}images/ashram-garden.jpg`,            pos: "object-center" },
+            { src: `${b}images/ashram-hanuman-sunset.jpg`,    pos: "object-center" },
+            { src: `${b}images/ashram-cows-sunset.jpg`,       pos: "object-center" },
+          ].map((img, i, arr) => (
+            <div key={i} className="relative flex-1 overflow-hidden">
+              <img src={img.src} alt="" aria-hidden
+                className={`w-full h-full object-cover ${img.pos}`} />
+              {/* Fade left edge into previous image */}
+              {i > 0 && (
+                <div className="absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-[#1a0f05]/70 to-transparent pointer-events-none" />
+              )}
+              {/* Fade right edge into next image */}
+              {i < arr.length - 1 && (
+                <div className="absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-[#1a0f05]/70 to-transparent pointer-events-none" />
+              )}
             </div>
           ))}
         </div>
-        {/* Unified overlay — dark base + bottom cream fade */}
-        <div className="absolute inset-0 bg-[#1a0f05]/65" />
+        {/* Unified dark veil + bottom cream fade */}
+        <div className="absolute inset-0 bg-[#1a0f05]/55" />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#faf9f6]" />
 
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
