@@ -293,7 +293,7 @@ export default function Home() {
       {/* ── PHOTO GALLERY CAROUSEL ── */}
       <section className="py-20 overflow-hidden">
         <div className="max-w-6xl mx-auto px-6 mb-10 text-center">
-          <span className="uppercase tracking-[0.3em] text-xs text-[#b8892a] font-medium">The Academy in the World</span>
+          <span className="uppercase tracking-[0.3em] text-xs text-[#b8892a] font-medium">Moments & Gatherings</span>
           <h2 className="font-['Cormorant_Garamond'] text-4xl font-light text-[#2e2820] mt-3">A Glimpse Within</h2>
         </div>
 
@@ -334,7 +334,7 @@ export default function Home() {
 
         <div className="text-center mt-8">
           <Link href="/events">
-            <span className="inline-flex items-center gap-2 text-[#b8892a] hover:text-[#9d7422] text-sm font-medium tracking-wider uppercase transition-colors cursor-pointer group">
+            <span className="inline-flex items-center gap-2 border border-[#b8892a] hover:bg-[#b8892a] hover:text-white text-[#b8892a] text-sm font-medium tracking-wider uppercase transition-all duration-200 cursor-pointer group px-6 py-2.5 rounded-full">
               View Events & Gatherings
               <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" strokeWidth={1.5} />
             </span>
