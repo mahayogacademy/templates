@@ -60,6 +60,9 @@ const GALLERY = [
   { src: `${b}images/gallery-temple-inauguration.jpg`, caption: "Temple inauguration ceremony" },
   { src: `${b}images/ashram-prasad-1.jpg`, caption: "Prasad distribution to devotees" },
   { src: `${b}images/ashram-koshi-river.jpg`, caption: "Koshi River at Barahachhetra" },
+  { src: `${b}images/gallery-rajendra-das.jpg`, caption: "With Param Pujya Rajendra Das Ji Maharaj" },
+  { src: `${b}images/gallery-ramdev.jpg`, caption: "With Yog Guru Swami Ramdev at Kumbh Mela" },
+  { src: `${b}images/gallery-shaktipat-deeksha.jpg`, caption: "Siddhababa giving Shaktipat Deeksha" },
 ];
 
 export default function Home() {
@@ -290,7 +293,7 @@ export default function Home() {
       {/* ── PHOTO GALLERY CAROUSEL ── */}
       <section className="py-20 overflow-hidden">
         <div className="max-w-6xl mx-auto px-6 mb-10 text-center">
-          <span className="uppercase tracking-[0.3em] text-xs text-[#b8892a] font-medium">Life at the Ashram</span>
+          <span className="uppercase tracking-[0.3em] text-xs text-[#b8892a] font-medium">The Academy in the World</span>
           <h2 className="font-['Cormorant_Garamond'] text-4xl font-light text-[#2e2820] mt-3">A Glimpse Within</h2>
         </div>
 
