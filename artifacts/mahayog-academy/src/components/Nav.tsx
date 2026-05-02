@@ -126,7 +126,7 @@ export default function Nav() {
               </span>
               <span
                 className="block"
-                style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "0.8rem", fontWeight: 400, color: "#b8892a", letterSpacing: "0.22em", textTransform: "uppercase", marginTop: "1px" }}
+                style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.65rem", fontWeight: 600, color: "#b8892a", letterSpacing: "0.16em", textTransform: "uppercase", marginTop: "3px" }}
               >
                 Spiritual Academy
               </span>
