@@ -518,7 +518,7 @@ export default function Home() {
       </section>
 
       {/* ── FOOTER ── */}
-      <footer className="text-[#c4b49a] py-14 px-6">
+      <footer className="text-[#c4b49a] pt-4 pb-14 px-6">
         <div className="max-w-6xl mx-auto mb-10 flex items-center gap-4">
           <div className="flex-1 h-px bg-[#3a2a1a]" />
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
