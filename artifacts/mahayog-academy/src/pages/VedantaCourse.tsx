@@ -20,6 +20,25 @@ const OUTLINE = [
   { title: "Prapti Birodhi",         lectures: 17, desc: "Identify and overcome obstacles that hinder spiritual attainment." },
 ];
 
+const PLAYLIST_URL = "https://youtube.com/playlist?list=PLVoaXKRxO25q8AHabrE1oG5599m4n1Ty1";
+
+const STUDENT_STORIES = [
+  { id: "LFp2qXW8_tI", name: "Sushila Wasti",          role: "Assistant Director – Early Childhood Education" },
+  { id: "oFvSOOg-Rzs", name: "Dr. Harischandra Ghimire", role: "Food Scientist, Government of Canada" },
+  { id: "RSaqj7huxMs", name: "Gaurav Parajuli",         role: "Data Scientist" },
+  { id: "IU4lNNWXp_I", name: "Dr. Shiva Ghimire",       role: "Director, Government of Canada" },
+  { id: "F_rI0qh8K-U", name: "Mahendra Gurung",         role: "Businessman" },
+  { id: "2y8oYEyPqZc", name: "Ramesh Paudel",           role: "Assistant Professor, Tribhuvan University" },
+  { id: "2s6b6Su8kGE", name: "Sajan Shrestha",          role: "Botany Lecturer" },
+  { id: "uIvZ-pBpmbw", name: "Naina Dhakal",            role: "Senior Agriculture Economist" },
+  { id: "sDjkSnfX2fI", name: "Dinesh Saytal",           role: "Advocate" },
+  { id: "uB5iiXrEUAE", name: "Bibek Lamsal",            role: "MBBS" },
+  { id: "dJaVxSPAV-A", name: "Basudev Marasini",        role: "Retired SSP" },
+  { id: "ivbcuxNGiUE", name: "Agam Shrestha",           role: "MPhil / PhD Scholar & Sculptor" },
+  { id: "yTRzqZSV-Fs", name: "Madhav Upadhaya",         role: "Deputy CEO, Garima Bikas Bank" },
+  { id: "SyHv2C3E828", name: "Padma Gauli",             role: "Secondary Level Teacher" },
+];
+
 const FAQS = [
   {
     q: "Who is this course for?",
@@ -265,6 +284,69 @@ export default function VedantaCourse() {
                 <p className="text-sm text-[#5a5248] leading-relaxed">{h.desc}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── STUDENT STORIES ── */}
+      <section className="py-20 px-6 bg-[#fdf6ec]">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-12">
+            <span className="uppercase tracking-[0.25em] text-xs text-[#b8892a] font-medium">Voices from Students</span>
+            <h2 className="font-['Cormorant_Garamond'] text-4xl font-light text-[#3d3830] mt-2 mb-3">
+              Personal Stories of Transformation
+            </h2>
+            <p className="text-sm text-[#7a7068] max-w-xl mx-auto leading-relaxed">
+              Students from all walks of life share how the Vedanta course and Mahayog practice have transformed their inner world.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+            {STUDENT_STORIES.map((s) => (
+              <a
+                key={s.id}
+                href={`https://www.youtube.com/watch?v=${s.id}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group rounded-xl overflow-hidden bg-white border border-[#e8dece] shadow-sm hover:shadow-md hover:border-[#c8a050] transition-all duration-200 flex flex-col"
+              >
+                <div className="relative aspect-video overflow-hidden bg-[#1a0f05]">
+                  <img
+                    src={`https://i.ytimg.com/vi/${s.id}/mqdefault.jpg`}
+                    alt={s.name}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  {/* play overlay */}
+                  <div className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/10 transition-colors duration-200">
+                    <div className="w-9 h-9 rounded-full bg-white/90 flex items-center justify-center shadow">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="#b8892a">
+                        <polygon points="5,3 19,12 5,21"/>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div className="p-3.5 flex-1 flex flex-col gap-1">
+                  <p className="font-['Cormorant_Garamond'] text-base font-semibold text-[#3d3830] leading-snug group-hover:text-[#9d7422] transition-colors duration-150">
+                    {s.name}
+                  </p>
+                  <p className="text-[11px] text-[#9a8f84] leading-snug">{s.role}</p>
+                </div>
+              </a>
+            ))}
+          </div>
+
+          <div className="mt-10 text-center">
+            <a
+              href={PLAYLIST_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-[#b8892a] hover:text-[#9d7422] text-sm tracking-wide transition-colors duration-150 border border-[#c8a050]/50 hover:border-[#b8892a] rounded-full px-6 py-2.5"
+            >
+              View Full Playlist on YouTube
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+              </svg>
+            </a>
           </div>
         </div>
       </section>
