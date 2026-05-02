@@ -272,8 +272,8 @@ export default function Ashram() {
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-14 items-center">
           <div>
             <img
-              src={`${b}images/ashram-aerial-festival.png`}
-              alt="Aerial view of the ashram during a festival gathering"
+              src={`${b}images/ashram-meditation-hanuman.jpg`}
+              alt="Seekers meditating in the ashram grounds before the Hanuman statue"
               className="w-full rounded-2xl object-cover shadow-md"
               style={{ height: "400px" }}
             />
