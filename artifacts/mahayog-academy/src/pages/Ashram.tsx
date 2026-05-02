@@ -680,43 +680,43 @@ export default function Ashram() {
       {/* ── CENTERS ── */}
       <section className="relative py-20 px-6 overflow-hidden">
         <div className="absolute inset-0">
-          <img src={`${b}images/ashram-koshi-river.jpg`} alt="" aria-hidden className="w-full h-full object-cover object-center" />
-          <div className="absolute inset-0 bg-[#faf6ee]/96" />
+          <img src={`${b}images/centers-bg.png`} alt="" aria-hidden className="w-full h-full object-cover object-center" />
+          <div className="absolute inset-0 bg-[#1a0f05]/72" />
         </div>
         <div className="relative z-10 max-w-5xl mx-auto">
 
           {/* Header */}
           <div className="text-center mb-14">
-            <span className="uppercase tracking-[0.25em] text-xs text-[#b8892a] font-medium">A Growing Community</span>
-            <h2 className="font-['Cormorant_Garamond'] text-4xl font-light text-[#3d3830] mt-2">Centers & Ashrams</h2>
+            <span className="uppercase tracking-[0.25em] text-xs text-[#e8c56a] font-medium">A Growing Community</span>
+            <h2 className="font-['Cormorant_Garamond'] text-4xl font-light text-white mt-2">Centers & Ashrams</h2>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-0 divide-y md:divide-y-0 md:divide-x divide-[#e8dece]">
+          <div className="grid md:grid-cols-2 gap-0 divide-y md:divide-y-0 md:divide-x divide-white/20">
 
             {/* ── Nepal ── */}
             <div className="md:pr-12 pb-10 md:pb-0">
-              <p className="text-xs uppercase tracking-[0.25em] text-[#b8892a] font-medium mb-7">Nepal</p>
+              <p className="text-xs uppercase tracking-[0.25em] text-[#e8c56a] font-medium mb-7">Nepal</p>
 
               {/* Head Ashram */}
-              <div className="mb-7 pb-7 border-b border-[#e8dece]">
+              <div className="mb-7 pb-7 border-b border-white/20">
                 <span className="text-[10px] uppercase tracking-[0.2em] text-white bg-[#b8892a] px-2.5 py-1 rounded font-medium inline-block mb-3">Head Ashram</span>
-                <p className="font-['Cormorant_Garamond'] text-xl font-light text-[#3d3830] leading-snug">
+                <p className="font-['Cormorant_Garamond'] text-xl font-light text-white leading-snug">
                   Jagadguru Ramanadacharya Seva Peeth
                 </p>
-                <p className="text-sm text-[#6e6560] italic mt-1">Shree Ram Tarak Brahma Peeth</p>
-                <p className="text-sm text-[#5a5248] mt-1">Baharachettra, Sunsari, Nepal</p>
+                <p className="text-sm text-[#d4c4a8] italic mt-1">Shree Ram Tarak Brahma Peeth</p>
+                <p className="text-sm text-[#c8b89a] mt-1">Baharachettra, Sunsari, Nepal</p>
               </div>
 
               {/* Other Nepal centers */}
               <div className="space-y-5">
                 {NEPAL_CENTERS.filter(c => !c.featured).map((c, i) => (
                   <div key={i} className="flex items-start gap-4">
-                    <div className="w-1 h-1 rounded-full bg-[#b8892a] mt-2.5 shrink-0" />
+                    <div className="w-1 h-1 rounded-full bg-[#e8c56a] mt-2.5 shrink-0" />
                     <div>
-                      <p className="font-['Cormorant_Garamond'] text-lg font-light text-[#3d3830] leading-snug">{c.city}</p>
+                      <p className="font-['Cormorant_Garamond'] text-lg font-light text-white leading-snug">{c.city}</p>
                       {c.note
-                        ? <p className="text-sm text-[#5a5248] mt-0.5">{c.note}</p>
-                        : <p className="text-sm text-[#7a6e64] italic mt-0.5">Details coming soon</p>
+                        ? <p className="text-sm text-[#c8b89a] mt-0.5">{c.note}</p>
+                        : <p className="text-sm text-[#a89880] italic mt-0.5">Details coming soon</p>
                       }
                     </div>
                   </div>
@@ -726,16 +726,16 @@ export default function Ashram() {
 
             {/* ── International ── */}
             <div className="md:pl-12 pt-10 md:pt-0">
-              <p className="text-xs uppercase tracking-[0.25em] text-[#b8892a] font-medium mb-7">International</p>
+              <p className="text-xs uppercase tracking-[0.25em] text-[#e8c56a] font-medium mb-7">International</p>
               <div className="space-y-5">
                 {INTERNATIONAL_CENTERS.map((c, i) => (
                   <div key={i} className="flex items-start gap-4">
-                    <div className="w-1 h-1 rounded-full bg-[#b8892a] mt-2.5 shrink-0" />
+                    <div className="w-1 h-1 rounded-full bg-[#e8c56a] mt-2.5 shrink-0" />
                     <div>
-                      <p className="font-['Cormorant_Garamond'] text-lg font-light text-[#3d3830] leading-snug">{c.country}</p>
+                      <p className="font-['Cormorant_Garamond'] text-lg font-light text-white leading-snug">{c.country}</p>
                       {c.cities.length > 0
-                        ? <p className="text-sm text-[#5a5248] mt-0.5">{c.cities.join(" · ")}</p>
-                        : <p className="text-sm text-[#7a6e64] italic mt-0.5">Details coming soon</p>
+                        ? <p className="text-sm text-[#c8b89a] mt-0.5">{c.cities.join(" · ")}</p>
+                        : <p className="text-sm text-[#a89880] italic mt-0.5">Details coming soon</p>
                       }
                     </div>
                   </div>
