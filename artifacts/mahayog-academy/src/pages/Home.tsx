@@ -53,22 +53,10 @@ export default function Home() {
 
       {/* ── HERO ── */}
       <section className="relative flex items-center justify-center overflow-hidden" style={{ minHeight: "calc(100vh - 64px)" }}>
-        {/* Two-panel hero — each image has full room, blends in the centre */}
-        <div className="absolute inset-0 flex items-stretch">
-          {/* Left panel */}
-          <div className="relative w-1/2 overflow-hidden">
-            <img src={`${b}images/ashram-koshi-river.jpg`} alt="" aria-hidden
-              className="w-full h-full object-cover object-center" />
-            {/* Fade right edge into centre */}
-            <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-[#1a0f05]/80 to-transparent pointer-events-none" />
-          </div>
-          {/* Right panel */}
-          <div className="relative w-1/2 overflow-hidden">
-            <img src={`${b}images/ashram-hanuman-sunset.jpg`} alt="" aria-hidden
-              className="w-full h-full object-cover object-center" />
-            {/* Fade left edge into centre */}
-            <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-[#1a0f05]/80 to-transparent pointer-events-none" />
-          </div>
+        {/* Full-width hero image */}
+        <div className="absolute inset-0">
+          <img src={`${b}images/ashram-koshi-river.jpg`} alt="" aria-hidden
+            className="w-full h-full object-cover object-center" />
         </div>
         {/* Unified dark veil + bottom cream fade */}
         <div className="absolute inset-0 bg-[#1a0f05]/50" />
