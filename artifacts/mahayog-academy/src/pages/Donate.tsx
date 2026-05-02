@@ -301,6 +301,9 @@ export default function Donate() {
           <p className="text-lg text-[#5a5248] leading-relaxed">
             Its services — gau seva, prasad distribution, spiritual education, and the welcoming of seekers from every corner of the world — is sustained entirely by the generosity of devotees and well-wishers.
           </p>
+          <p className="font-['Cormorant_Garamond'] text-2xl font-light italic text-[#b8892a] mt-10">
+            "Your kindness keeps the lamp of dharma burning."
+          </p>
         </div>
       </section>
 
