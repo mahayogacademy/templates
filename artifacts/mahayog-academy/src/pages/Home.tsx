@@ -117,6 +117,66 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── THREE PILLARS CARDS ── */}
+      <section className="py-6 pb-24 px-6">
+        <div className="max-w-4xl mx-auto">
+          <div className="grid grid-cols-3 gap-4 items-end">
+
+            {/* Mahayog */}
+            <Link href="/meditation">
+              <div className="group cursor-pointer flex flex-col rounded-2xl overflow-hidden border border-[#e2d0b8] hover:border-[#b8892a]/50 hover:shadow-xl hover:shadow-[#b8892a]/10 transition-all duration-300">
+                <div className="relative h-64 md:h-80 overflow-hidden">
+                  <img
+                    src={`${b}images/meditation-nature.png`}
+                    alt="Mahayog Meditation"
+                    className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="bg-white px-5 py-4 flex items-center justify-between">
+                  <span className="font-['Cormorant_Garamond'] text-lg font-semibold text-[#2e2820] group-hover:text-[#b8892a] transition-colors">Mahayog</span>
+                  <ArrowRight className="w-4 h-4 text-[#b8892a] group-hover:translate-x-0.5 transition-transform" strokeWidth={1.5} />
+                </div>
+              </div>
+            </Link>
+
+            {/* Mahayogi — centre, taller */}
+            <Link href="/founder-guru">
+              <div className="group cursor-pointer flex flex-col rounded-2xl overflow-hidden border border-[#e2d0b8] hover:border-[#b8892a]/50 hover:shadow-2xl hover:shadow-[#b8892a]/15 transition-all duration-300 -mt-8">
+                <div className="relative h-80 md:h-96 overflow-hidden">
+                  <img
+                    src={`${b}images/gurudev-darshan-smile.jpg`}
+                    alt="Jagadguru Mahayogi Siddhababa"
+                    className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="bg-white px-5 py-4 flex items-center justify-between">
+                  <span className="font-['Cormorant_Garamond'] text-lg font-semibold text-[#2e2820] group-hover:text-[#b8892a] transition-colors">Mahayogi</span>
+                  <ArrowRight className="w-4 h-4 text-[#b8892a] group-hover:translate-x-0.5 transition-transform" strokeWidth={1.5} />
+                </div>
+              </div>
+            </Link>
+
+            {/* For Mankind */}
+            <Link href="/about">
+              <div className="group cursor-pointer flex flex-col rounded-2xl overflow-hidden border border-[#e2d0b8] hover:border-[#b8892a]/50 hover:shadow-xl hover:shadow-[#b8892a]/10 transition-all duration-300">
+                <div className="relative h-64 md:h-80 overflow-hidden">
+                  <img
+                    src={`${b}images/hanumad-satsang-tent.jpg`}
+                    alt="For Mankind — satsang gathering"
+                    className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="bg-white px-5 py-4 flex items-center justify-between">
+                  <span className="font-['Cormorant_Garamond'] text-lg font-semibold text-[#2e2820] group-hover:text-[#b8892a] transition-colors">For Mankind</span>
+                  <ArrowRight className="w-4 h-4 text-[#b8892a] group-hover:translate-x-0.5 transition-transform" strokeWidth={1.5} />
+                </div>
+              </div>
+            </Link>
+
+          </div>
+        </div>
+      </section>
+
       {/* ── GURU INTRODUCTION ── */}
       <section className="py-0 overflow-hidden">
         <div className="max-w-7xl mx-auto">
