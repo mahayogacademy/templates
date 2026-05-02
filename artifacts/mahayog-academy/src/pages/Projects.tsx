@@ -159,7 +159,7 @@ export default function Projects() {
               <div className="flex items-start gap-6 mb-8">
                 <span className="font-['Cormorant_Garamond'] text-8xl font-light text-[#e8dece] leading-none select-none shrink-0">01</span>
                 <div className="pt-4">
-                  <p className="text-[10px] uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-2">National Mission · Nepal</p>
+                  <p className="text-xs uppercase tracking-[0.25em] text-[#b8892a] font-semibold mb-2">National Mission · Nepal</p>
                   <h2 className="font-['Cormorant_Garamond'] text-4xl md:text-5xl font-light text-[#3d3830] leading-tight">
                     108 Hanuman Temples
                   </h2>
@@ -303,7 +303,7 @@ export default function Projects() {
               <div className="flex items-start gap-6 mb-8">
                 <span className="font-['Cormorant_Garamond'] text-8xl font-light text-[#e8dece] leading-none select-none shrink-0">02</span>
                 <div className="pt-4">
-                  <p className="text-[10px] uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-2">Chatara Dham · Sunsari, Nepal</p>
+                  <p className="text-xs uppercase tracking-[0.25em] text-[#b8892a] font-semibold mb-2">Chatara Dham · Sunsari, Nepal</p>
                   <h2 className="font-['Cormorant_Garamond'] text-4xl md:text-5xl font-light text-[#3d3830] leading-tight">
                     Ram Mandir
                   </h2>
@@ -376,7 +376,7 @@ export default function Projects() {
 
           {/* Photo gallery */}
           <div className="mb-16">
-            <p className="text-[10px] uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-6">Architectural Renderings</p>
+            <p className="text-xs uppercase tracking-[0.25em] text-[#b8892a] font-semibold mb-6">Architectural Renderings</p>
             <div className="grid grid-cols-6 gap-3">
               {RAM_GALLERY.map((img, i) => (
                 <div
