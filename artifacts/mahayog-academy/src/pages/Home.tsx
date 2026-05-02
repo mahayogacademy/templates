@@ -474,8 +474,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── CLOSING QUOTE ── */}
-      <section className="relative py-28 px-6 overflow-hidden" style={{ background: "radial-gradient(ellipse at 60% 40%, #2c1708 0%, #1a0d04 50%, #0f0702 100%)" }}>
+      {/* ── CLOSING QUOTE + FOOTER ── */}
+      <div style={{ background: "radial-gradient(ellipse at 60% 30%, #2c1708 0%, #1a0d04 55%, #0f0702 100%)" }}>
+      <section className="relative py-28 px-6 overflow-hidden">
         {/* Subtle SVG mandala watermark */}
         <svg
           className="absolute inset-0 w-full h-full opacity-[0.04]"
@@ -517,7 +518,7 @@ export default function Home() {
       </section>
 
       {/* ── FOOTER ── */}
-      <footer className="bg-[#1e140a] text-[#c4b49a] py-14 px-6">
+      <footer className="text-[#c4b49a] py-14 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-4 gap-10 mb-10">
             {/* Brand */}
@@ -581,6 +582,7 @@ export default function Home() {
           </div>
         </div>
       </footer>
+      </div>
     </div>
   );
 }
