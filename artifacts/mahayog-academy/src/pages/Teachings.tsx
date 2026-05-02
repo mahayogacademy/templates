@@ -83,23 +83,13 @@ const VIDEO_ITEMS: Item[] = [
 /* ── News ── */
 const NEWS_ITEMS: Item[] = [
   {
-    id: "n-tapovan-encroachment",
+    id: "n-tapovan",
     type: "news",
-    title: "No Encroachment on Sacred Tapovan — Kumbhmela Planning Must Be Spiritual",
-    excerpt: "Speaking at Nashik's Lakshminarayan Bada Mandir, Jagadguru Mahayogi Siddhababa issued a firm warning against commercial encroachment on the sacred Tapovan grounds ahead of Kumbhmela. He called on the Maharashtra government to ensure the event's spiritual character is fully preserved.",
+    title: "Siddhababa Defends Tapovan — No Cement Jungle, No Encroachment",
+    excerpt: "Jagadguru Mahayogi Siddhababa has issued two clear warnings ahead of Kumbhmela: Tapovan — the timeless sanctuary of saints and rishis in Nashik — will not become a concrete commercial zone, and any encroachment on its sacred grounds will face strong resistance. He called on the Maharashtra government to ensure the spiritual character of the event is fully preserved.",
     date: "6 December 2025",
     tags: ["Kumbhmela", "Press"],
     thumbnail: `${b}images/news-tapovan-encroachment.png`,
-    href: "#",
-  },
-  {
-    id: "n-tapovan-cement",
-    type: "news",
-    title: "We Will Not Allow a Cement Jungle in Tapovan — Siddhababa's Warning",
-    excerpt: "Jagadguru Mahayogi Siddhababa has stated firmly that Tapovan — the timeless sanctuary of saints and rishis in Nashik — will not be allowed to become a concrete commercial zone. Any commercial construction in these sacred grounds will face strong resistance from saints, sages, and devotees.",
-    date: "6 December 2025",
-    tags: ["Kumbhmela", "Press"],
-    thumbnail: `${b}images/news-tapovan-cement.png`,
     href: "#",
   },
   {
