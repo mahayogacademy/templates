@@ -74,7 +74,7 @@ export default function Home() {
       <Nav />
 
       {/* ── HERO ── */}
-      <section className="relative flex items-center justify-center overflow-hidden" style={{ minHeight: "calc(100vh - 64px)" }}>
+      <section className="relative flex items-center justify-center overflow-visible" style={{ minHeight: "calc(100vh - 64px)" }}>
         {/* Full-width hero image */}
         <div className="absolute inset-0">
           <img src={`${b}images/hero-nepal-landscape.png`} alt="" aria-hidden
@@ -118,36 +118,27 @@ export default function Home() {
           </div>
         </div>
 
+        {/* Sacred symbols — anchored to bottom of hero, hangs into next section */}
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 z-20 w-full max-w-3xl px-4 flex justify-center">
+          <img
+            src={`${b}images/sacred-symbols.gif`}
+            alt="Sacred symbols of the Ramanandi Vaishnava tradition"
+            className="w-full h-auto max-h-52 object-contain"
+            style={{
+              filter: "sepia(0.4) saturate(1.8) hue-rotate(-8deg) brightness(0.88) contrast(1.08)",
+              mixBlendMode: "multiply",
+            }}
+          />
+        </div>
+
         {/* Scroll nudge */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 opacity-60">
           <div className="w-px h-10 bg-gradient-to-b from-transparent to-[#e8c56a] animate-pulse" />
         </div>
       </section>
 
-      {/* ── SACRED SYMBOLS STRIP ── */}
-      <section className="bg-[#faf9f6] py-10 px-6 overflow-hidden">
-        <div className="max-w-4xl mx-auto flex flex-col items-center gap-5">
-          <div className="flex items-center gap-4">
-            <div className="h-px w-16 bg-[#b8892a]/30" />
-            <span className="uppercase tracking-[0.3em] text-[10px] text-[#b8892a]/70 font-medium">Sacred Symbols of the Tradition</span>
-            <div className="h-px w-16 bg-[#b8892a]/30" />
-          </div>
-          <div className="relative">
-            <img
-              src={`${b}images/sacred-symbols.gif`}
-              alt="Sacred symbols of the Ramanandi Vaishnava tradition — Ram Darbar, Vaishnava emblems, Sri Ram, and Jagadguru Ramanandacharya"
-              className="max-w-full h-auto max-h-28 object-contain"
-              style={{
-                filter: "sepia(0.45) saturate(1.6) hue-rotate(-5deg) brightness(0.9) contrast(1.05)",
-                mixBlendMode: "multiply",
-              }}
-            />
-          </div>
-        </div>
-      </section>
-
       {/* ── MISSION STATEMENT ── */}
-      <section className="py-24 px-6">
+      <section className="pt-40 pb-24 px-6">
         <div className="max-w-3xl mx-auto text-center">
           <div className="flex items-center justify-center gap-4 mb-8">
             <div className="h-px w-10 bg-[#b8892a]/40" />
