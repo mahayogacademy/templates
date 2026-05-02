@@ -465,7 +465,6 @@ export default function Donate() {
           <p className="font-['Cormorant_Garamond'] text-3xl md:text-4xl font-light text-white italic leading-relaxed mb-8">
             "When the hand opens in giving, the heart opens to grace."
           </p>
-          <p className="text-[#d4c4a8] text-sm uppercase tracking-[0.2em]">Jagadguru Mahayogi Siddhababa</p>
           <div className="mt-10">
             <Link href="/contact">
               <span className="inline-flex items-center gap-2 bg-[#b8892a] hover:bg-[#9d7422] text-white text-sm px-8 py-3.5 rounded-full tracking-wider transition-colors duration-200 cursor-pointer">
