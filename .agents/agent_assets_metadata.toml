@@ -696,3 +696,51 @@ id = "b1WbRa2NNZ-9UR98pML3z"
 uri = "file://artifacts/mahayog-academy/public/images/project-global-teaching.png"
 type = "image"
 title = "global yoga meditation teaching"
+
+[[generated]]
+id = "H3JTX_ZNFBTniCmr5v3nq"
+uri = "file://artifacts/mahayog-academy/public/images/collage-aarti-river.png"
+type = "image"
+title = "aarti at river golden hour"
+
+[[generated]]
+id = "Q0IP9JnpGsoqkCH9SaV29"
+uri = "file://artifacts/mahayog-academy/public/images/collage-diya-hands.png"
+type = "image"
+title = "hands holding diya lamp"
+
+[[generated]]
+id = "8MS8uf0voQIjQ80DlxBSz"
+uri = "file://artifacts/mahayog-academy/public/images/collage-ashram-dawn.png"
+type = "image"
+title = "himalayan ashram at dawn"
+
+[[generated]]
+id = "dkXk7e8E_ZU_MoJzxGsPl"
+uri = "file://artifacts/mahayog-academy/public/images/collage-meditation-river.png"
+type = "image"
+title = "meditators at river sunrise"
+
+[[generated]]
+id = "vkvS2j0sBzaQcl1hthMhs"
+uri = "file://artifacts/mahayog-academy/public/images/collage-marigold-diyas.png"
+type = "image"
+title = "marigold flowers and diyas"
+
+[[generated]]
+id = "Wd74b0I9xXaJ9eIq4rrpK"
+uri = "file://artifacts/mahayog-academy/public/images/collage-havan-fire.png"
+type = "image"
+title = "havan sacred fire ceremony"
+
+[[generated]]
+id = "PYmdgz2YyjjLahHNDl9Ex"
+uri = "file://artifacts/mahayog-academy/public/images/collage-yogi-silhouette.png"
+type = "image"
+title = "yogi silhouette at sunset"
+
+[[generated]]
+id = "eGo7qywdWHwf4xyK04989"
+uri = "file://artifacts/mahayog-academy/public/images/collage-temple-bells.png"
+type = "image"
+title = "temple bells with marigolds"

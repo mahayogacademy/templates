@@ -53,31 +53,25 @@ export default function Home() {
 
       {/* ── HERO ── */}
       <section className="relative flex items-center justify-center overflow-hidden" style={{ minHeight: "calc(100vh - 64px)" }}>
-        {/* Collage mosaic */}
-        <div className="absolute inset-0 grid grid-cols-3 grid-rows-2">
-          {/* Left — tall, spans both rows */}
-          <div className="row-span-2 overflow-hidden">
-            <img src={`${b}images/ashram-hanuman-sunset.jpg`} alt="" aria-hidden className="w-full h-full object-cover object-center scale-105" />
-          </div>
-          {/* Centre top */}
-          <div className="overflow-hidden">
-            <img src={`${b}images/hanumad-satsang-tent.jpg`} alt="" aria-hidden className="w-full h-full object-cover object-center scale-105" />
-          </div>
-          {/* Right top */}
-          <div className="overflow-hidden">
-            <img src={`${b}images/jagadguru-1.jpg`} alt="" aria-hidden className="w-full h-full object-cover object-top scale-105" />
-          </div>
-          {/* Centre bottom */}
-          <div className="overflow-hidden">
-            <img src={`${b}images/ashram-cows-sunset.jpg`} alt="" aria-hidden className="w-full h-full object-cover object-center scale-105" />
-          </div>
-          {/* Right bottom */}
-          <div className="overflow-hidden">
-            <img src={`${b}images/ashram-koshi-river.jpg`} alt="" aria-hidden className="w-full h-full object-cover object-center scale-105" />
-          </div>
+        {/* Collage mosaic — 4 cols × 2 rows, all matching warm golden-hour style */}
+        <div className="absolute inset-0 grid grid-cols-4 grid-rows-2 gap-0.5">
+          {[
+            { src: `${b}images/collage-yogi-silhouette.png`,   pos: "object-center" },
+            { src: `${b}images/collage-diya-hands.png`,        pos: "object-center" },
+            { src: `${b}images/collage-havan-fire.png`,        pos: "object-top"    },
+            { src: `${b}images/collage-aarti-river.png`,       pos: "object-center" },
+            { src: `${b}images/collage-ashram-dawn.png`,       pos: "object-top"    },
+            { src: `${b}images/collage-marigold-diyas.png`,    pos: "object-top"    },
+            { src: `${b}images/collage-meditation-river.png`,  pos: "object-center" },
+            { src: `${b}images/collage-temple-bells.png`,      pos: "object-center" },
+          ].map((img, i) => (
+            <div key={i} className="overflow-hidden">
+              <img src={img.src} alt="" aria-hidden className={`w-full h-full object-cover ${img.pos}`} />
+            </div>
+          ))}
         </div>
-        {/* Unified dark overlay for text legibility */}
-        <div className="absolute inset-0 bg-[#1a0f05]/62" />
+        {/* Unified overlay — dark base + bottom cream fade */}
+        <div className="absolute inset-0 bg-[#1a0f05]/65" />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#faf9f6]" />
 
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
