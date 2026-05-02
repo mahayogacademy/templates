@@ -236,9 +236,9 @@ export default function Ashram() {
       {/* ── WHAT IS AN ASHRAM — slim strip ── */}
       <div className="relative border-y border-[#e8d5b0] py-8 px-6 text-center overflow-hidden">
         {/* Background image */}
-        <img src={`${b}images/banner-lotus-bg.png`} alt="" aria-hidden className="absolute inset-0 w-full h-full object-cover object-center pointer-events-none" />
-        {/* Soft misty overlay */}
-        <div className="absolute inset-0 bg-[#f4f7f5]/85 pointer-events-none" />
+        <img src={`${b}images/banner-subtle-bg.png`} alt="" aria-hidden className="absolute inset-0 w-full h-full object-cover object-center pointer-events-none" />
+        {/* Soft overlay */}
+        <div className="absolute inset-0 bg-[#f8f6f3]/75 pointer-events-none" />
         {/* Decorative mandala watermark */}
         <svg className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 opacity-[0.08] pointer-events-none" width="220" height="220" viewBox="0 0 220 220" aria-hidden>
           <g transform="translate(110,110)">

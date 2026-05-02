@@ -756,3 +756,9 @@ id = "QWGZ_NPbhFkk8tCTRIeXm"
 uri = "file://artifacts/mahayog-academy/public/images/banner-lotus-bg.png"
 type = "image"
 title = "generated_image"
+
+[[generated]]
+id = "Np0ZauNtxOGl-foWM5EeX"
+uri = "file://artifacts/mahayog-academy/public/images/banner-subtle-bg.png"
+type = "image"
+title = "generated_image"
