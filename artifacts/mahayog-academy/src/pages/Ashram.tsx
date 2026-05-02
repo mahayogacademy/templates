@@ -238,7 +238,7 @@ export default function Ashram() {
         {/* Background image */}
         <img src={`${b}images/banner-subtle-bg.png`} alt="" aria-hidden className="absolute inset-0 w-full h-full object-cover object-center pointer-events-none" />
         {/* Soft overlay */}
-        <div className="absolute inset-0 bg-[#f8f6f3]/60 pointer-events-none" />
+        <div className="absolute inset-0 bg-[#f8f6f3]/82 pointer-events-none" />
         {/* Decorative mandala watermark */}
         <svg className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 opacity-[0.08] pointer-events-none" width="220" height="220" viewBox="0 0 220 220" aria-hidden>
           <g transform="translate(110,110)">
