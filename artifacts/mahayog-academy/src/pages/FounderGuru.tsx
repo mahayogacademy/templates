@@ -166,7 +166,7 @@ export default function FounderGuru() {
                 Jagadguru Mahayogi Siddhababa, known as <span className="italic text-[#3d3830]">Gurudev</span> by his students, is a Himalayan yogi, Tridaṇḍa-dhārī sādhu, and master of yoga. Deeply versed in the scriptures, Kundalini yoga, classical yogic disciplines, and world religions, he embodies a life of renunciation, realization, and service.
               </p>
               <p className="text-base text-[#5a5248] leading-relaxed mb-8">
-                He is presently the sole Āchārya of the Siddha Mahayog technique, entrusted with carrying forward this living lineage. His life and work are dedicated to guiding seekers and preserving the authenticity and continuity of the yogic path.
+                He is presently the sole Āchārya of the Himalayan Siddha Mahayog technique, entrusted with carrying forward this living lineage. His life and work are dedicated to guiding seekers and preserving the authenticity and continuity of the yogic path.
               </p>
 
               {/* Central quote */}
