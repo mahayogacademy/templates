@@ -81,17 +81,8 @@ function RecolouredSymbol({ src, className }: { src: string; className?: string 
       const { data } = ctx.getImageData(0, 0, canvas.width, canvas.height);
       for (let i = 0; i < data.length; i += 4) {
         if (data[i + 3] < 30) continue;
-        const r = data[i], g = data[i + 1], b = data[i + 2];
-        if (r < 90 && g < 90 && b < 90) {
-          // Black → off-white
-          data[i] = 242; data[i + 1] = 237; data[i + 2] = 224;
-        } else if (r > 140 && g > 50 && g < 160 && b < 80) {
-          // Orange → gold (#e8c56a)
-          data[i] = 232; data[i + 1] = 197; data[i + 2] = 106;
-        } else if (r > 140 && g < 60 && b < 60) {
-          // Red bindu → muted gold-red
-          data[i] = 200; data[i + 1] = 130; data[i + 2] = 60;
-        }
+        // All visible pixels → off-white
+        data[i] = 242; data[i + 1] = 237; data[i + 2] = 224;
       }
       ctx.putImageData(new ImageData(data, canvas.width, canvas.height), 0, 0);
     };
