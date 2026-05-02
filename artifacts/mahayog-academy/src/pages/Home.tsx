@@ -146,7 +146,7 @@ export default function Home() {
 
             {/* Mahayogi — centre, rises above side cards */}
             <Link href="/founder-guru">
-              <div className="group relative rounded-3xl overflow-hidden h-[560px] md:h-[640px] -mt-20 cursor-pointer shadow-2xl hover:shadow-[#b8892a]/30 transition-all duration-500 ring-1 ring-[#b8892a]/40">
+              <div className="group relative rounded-3xl overflow-hidden h-[510px] md:h-[580px] -mt-12 cursor-pointer shadow-2xl hover:shadow-[#b8892a]/30 transition-all duration-500 ring-1 ring-[#b8892a]/40">
                 <img
                   src={`${b}images/gurudev-darshan-smile.jpg`}
                   alt="Jagadguru Mahayogi Siddhababa"
