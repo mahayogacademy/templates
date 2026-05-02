@@ -14,7 +14,7 @@ const PATHS = [
     desc: "Receive Shaktipat initiation and experience the automatic awakening of Kundalini — effortlessly integrating all four yoga paths as taught by Siddhababa.",
   },
   {
-    label: "Ashram & Sacred Life",
+    label: "Ashram and Yogic Life",
     sub: "Daily Seva · Puja · Community",
     href: "/ashram",
     img: `${b}images/ashram-guru-kutti.jpg`,
