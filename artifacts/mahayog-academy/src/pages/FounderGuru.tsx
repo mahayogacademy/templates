@@ -123,11 +123,11 @@ export default function FounderGuru() {
       <section className="relative h-[58vh] min-h-[400px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src={`${b}images/guru-hero-new.jpg`}
+            src={`${b}images/founder-guru-satsang.jpg`}
             alt=""
             aria-hidden
             className="w-full h-full object-cover"
-            style={{ objectPosition: "center 30%" }}
+            style={{ objectPosition: "center 25%" }}
           />
           <div className="absolute inset-0 bg-gradient-to-b from-[#1a0f05]/70 via-[#2c1a08]/40 to-[#faf9f6]" />
         </div>
