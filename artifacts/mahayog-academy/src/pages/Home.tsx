@@ -16,7 +16,7 @@ const PATHS = [
     label: "Ashram & Sacred Life",
     sub: "Daily Seva · Puja · Community",
     href: "/ashram",
-    img: `${b}images/ashram-satsang.png`,
+    img: `${b}images/ashram-guru-kutti.jpg`,
     desc: "Immerse yourself in the daily rhythm of Barahachhetra — morning puja, gau seva, satsang, prasad, and the stillness of a consecrated Himalayan sanctuary.",
   },
   {
