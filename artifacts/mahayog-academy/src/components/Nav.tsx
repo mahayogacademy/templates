@@ -33,7 +33,7 @@ function DropdownMenu({ items }: { items: { label: string; href: string }[] }) {
       <div className="bg-white/98 backdrop-blur-sm border border-[#e8dece] rounded-xl shadow-xl shadow-[#b8892a]/8 overflow-hidden py-2">
         {items.map((item) => (
           <Link key={item.href} href={item.href}>
-            <span className="block px-5 py-2.5 text-sm text-[#5a5248] hover:bg-[#fdf6ec] hover:text-[#b8892a] transition-colors duration-150 cursor-pointer tracking-wide">
+            <span className="block px-5 py-2.5 text-sm text-[#5a5248] hover:bg-[#eddfc8] hover:text-[#7a5518] transition-colors duration-150 cursor-pointer tracking-wide font-medium">
               {item.label}
             </span>
           </Link>
@@ -62,7 +62,7 @@ function UserMenu() {
 
   return (
     <div className="relative ml-2" onMouseEnter={enter} onMouseLeave={leave}>
-      <button className="flex items-center gap-1.5 px-3 py-1.5 text-sm text-[#b8892a] border border-[#b8892a]/40 hover:border-[#b8892a] transition-colors tracking-wide rounded-full hover:bg-[#fdf6ec] cursor-pointer">
+      <button className="flex items-center gap-1.5 px-3 py-1.5 text-sm text-[#b8892a] border border-[#b8892a]/40 hover:border-[#7a5518] hover:text-[#7a5518] hover:bg-[#eddfc8] transition-colors tracking-wide rounded-full cursor-pointer">
         {user?.imageUrl ? (
           <img src={user.imageUrl} alt="" className="w-5 h-5 rounded-full object-cover" />
         ) : (
@@ -80,7 +80,7 @@ function UserMenu() {
             </div>
             <button
               onClick={() => signOut({ redirectUrl: `${window.location.origin}${basePath}/` })}
-              className="w-full flex items-center gap-2 px-5 py-2.5 text-sm text-[#5a5248] hover:bg-[#fdf6ec] hover:text-[#b8892a] transition-colors duration-150 cursor-pointer tracking-wide"
+              className="w-full flex items-center gap-2 px-5 py-2.5 text-sm text-[#5a5248] hover:bg-[#eddfc8] hover:text-[#7a5518] transition-colors duration-150 cursor-pointer tracking-wide font-medium"
             >
               <LogOut className="w-3.5 h-3.5" strokeWidth={1.5} />
               Sign out
@@ -117,7 +117,7 @@ export default function Nav() {
               alt="Mahayogi Siddhababa Spiritual Academy logo"
               className="h-10 w-10 rounded-full object-cover shrink-0"
             />
-            <span className="text-[#b8892a] group-hover:text-[#9d7422] transition-colors" style={{ fontFamily: "'Inter', sans-serif", lineHeight: 1.15 }}>
+            <span className="text-[#b8892a] group-hover:text-[#7a5518] transition-colors" style={{ fontFamily: "'Inter', sans-serif", lineHeight: 1.15 }}>
               <span className="block text-[15px] font-semibold tracking-tight" style={{ color: "#2c1a08" }}>Mahayogi Siddhababa</span>
               <span className="block text-[11px] font-medium tracking-[0.18em] uppercase" style={{ color: "#b8892a", marginTop: "1px" }}>Spiritual Academy</span>
             </span>
@@ -129,7 +129,7 @@ export default function Nav() {
 
           {/* Explore */}
           <div className="relative" onMouseEnter={() => enter("explore")} onMouseLeave={leave}>
-            <button className="flex items-center gap-1 px-4 py-2 text-sm text-[#5a5248] hover:text-[#b8892a] transition-colors tracking-wide rounded-lg hover:bg-[#fdf6ec]">
+            <button className="flex items-center gap-1 px-4 py-2 text-sm text-[#5a5248] hover:text-[#7a5518] hover:bg-[#eddfc8] transition-colors tracking-wide rounded-lg">
               Explore
               <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${open === "explore" ? "rotate-180" : ""}`} strokeWidth={1.5} />
             </button>
@@ -142,7 +142,7 @@ export default function Nav() {
 
           {/* Courses */}
           <div className="relative" onMouseEnter={() => enter("courses")} onMouseLeave={leave}>
-            <button className="flex items-center gap-1 px-4 py-2 text-sm text-[#5a5248] hover:text-[#b8892a] transition-colors tracking-wide rounded-lg hover:bg-[#fdf6ec]">
+            <button className="flex items-center gap-1 px-4 py-2 text-sm text-[#5a5248] hover:text-[#7a5518] hover:bg-[#eddfc8] transition-colors tracking-wide rounded-lg">
               Courses
               <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${open === "courses" ? "rotate-180" : ""}`} strokeWidth={1.5} />
             </button>
@@ -155,7 +155,7 @@ export default function Nav() {
 
           {/* Experience */}
           <div className="relative" onMouseEnter={() => enter("experience")} onMouseLeave={leave}>
-            <button className="flex items-center gap-1 px-4 py-2 text-sm text-[#5a5248] hover:text-[#b8892a] transition-colors tracking-wide rounded-lg hover:bg-[#fdf6ec]">
+            <button className="flex items-center gap-1 px-4 py-2 text-sm text-[#5a5248] hover:text-[#7a5518] hover:bg-[#eddfc8] transition-colors tracking-wide rounded-lg">
               Experience
               <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${open === "experience" ? "rotate-180" : ""}`} strokeWidth={1.5} />
             </button>
@@ -168,13 +168,13 @@ export default function Nav() {
 
           {/* Single-link items */}
           <Link href="/teachings">
-            <span className="px-4 py-2 text-sm text-[#5a5248] hover:text-[#b8892a] transition-colors tracking-wide rounded-lg hover:bg-[#fdf6ec] cursor-pointer">
+            <span className="px-4 py-2 text-sm text-[#5a5248] hover:text-[#7a5518] hover:bg-[#eddfc8] transition-colors tracking-wide rounded-lg cursor-pointer">
               Teachings
             </span>
           </Link>
 
           <Link href="/contact">
-            <span className="px-4 py-2 text-sm text-[#5a5248] hover:text-[#b8892a] transition-colors tracking-wide rounded-lg hover:bg-[#fdf6ec] cursor-pointer">
+            <span className="px-4 py-2 text-sm text-[#5a5248] hover:text-[#7a5518] hover:bg-[#eddfc8] transition-colors tracking-wide rounded-lg cursor-pointer">
               Contact
             </span>
           </Link>
@@ -182,7 +182,7 @@ export default function Nav() {
           {/* Auth — Sign in / User menu */}
           <Show when="signed-out">
             <Link href="/sign-in">
-              <span className="ml-2 flex items-center gap-1.5 px-4 py-2 text-sm text-[#5a5248] hover:text-[#b8892a] transition-colors tracking-wide rounded-lg hover:bg-[#fdf6ec] cursor-pointer">
+              <span className="ml-2 flex items-center gap-1.5 px-4 py-2 text-sm text-[#5a5248] hover:text-[#7a5518] hover:bg-[#eddfc8] transition-colors tracking-wide rounded-lg cursor-pointer">
                 <UserCircle2 className="w-4 h-4" strokeWidth={1.5} />
                 Log in
               </span>
@@ -195,14 +195,14 @@ export default function Nav() {
 
           {/* Join CTA */}
           <Link href="/register">
-            <span className="ml-1 px-5 py-2 text-sm border border-[#b8892a] text-[#b8892a] rounded-full hover:bg-[#b8892a] hover:text-white transition-colors duration-200 tracking-wide font-medium cursor-pointer">
+            <span className="ml-1 px-5 py-2 text-sm border border-[#b8892a] text-[#b8892a] rounded-full hover:bg-[#9d7422] hover:border-[#9d7422] hover:text-white transition-colors duration-200 tracking-wide font-medium cursor-pointer">
               Join
             </span>
           </Link>
 
           {/* Donate CTA */}
           <Link href="/donate">
-            <span className="ml-2 px-5 py-2 text-sm bg-[#b8892a] text-white rounded-full hover:bg-[#9d7422] transition-colors tracking-wide cursor-pointer">
+            <span className="ml-2 px-5 py-2 text-sm bg-[#b8892a] text-white rounded-full hover:bg-[#7a5518] transition-colors tracking-wide cursor-pointer">
               Donate
             </span>
           </Link>
