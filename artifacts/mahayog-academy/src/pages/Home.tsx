@@ -74,7 +74,7 @@ export default function Home() {
       <Nav />
 
       {/* ── HERO ── */}
-      <section className="relative flex items-center justify-center overflow-visible" style={{ minHeight: "calc(100vh - 64px)" }}>
+      <section className="relative flex items-center justify-center overflow-hidden" style={{ minHeight: "calc(100vh - 64px)" }}>
         {/* Full-width hero image */}
         <div className="absolute inset-0">
           <img src={`${b}images/hero-nepal-landscape.png`} alt="" aria-hidden
@@ -118,26 +118,24 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Sacred symbols — anchored to bottom of hero, hangs into next section */}
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 z-20 w-full max-w-3xl px-4 flex justify-center">
-          <img
-            src={`${b}images/dhanush-band.png`}
-            alt="Sacred Vaishnava symbols — Dhanush, Urdhva Pundra and bow"
-            className="w-full h-auto max-h-52 object-contain"
-            style={{
-              filter: "brightness(0.95) contrast(1.05)",
-            }}
-          />
-        </div>
-
         {/* Scroll nudge */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 opacity-60">
           <div className="w-px h-10 bg-gradient-to-b from-transparent to-[#e8c56a] animate-pulse" />
         </div>
       </section>
 
+      {/* ── SACRED SYMBOLS ── */}
+      <section className="bg-[#faf9f6] py-10 flex justify-center px-6">
+        <img
+          src={`${b}images/dhanush-band.png`}
+          alt="Sacred Vaishnava symbols — arrows, Urdhva Pundra and bow"
+          className="h-36 w-auto object-contain"
+          style={{ filter: "brightness(0.95) contrast(1.05)" }}
+        />
+      </section>
+
       {/* ── MISSION STATEMENT ── */}
-      <section className="pt-40 pb-24 px-6">
+      <section className="pt-8 pb-24 px-6">
         <div className="max-w-3xl mx-auto text-center">
           <div className="flex items-center justify-center gap-4 mb-8">
             <div className="h-px w-10 bg-[#b8892a]/40" />
