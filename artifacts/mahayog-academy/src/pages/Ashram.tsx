@@ -542,43 +542,52 @@ export default function Ashram() {
       </section>
 
       {/* ── ASHRAM SEVA CTA ── */}
-      <section className="py-16 px-6 bg-[#f5ece0] border-t border-b border-[#e2d0b8]">
-        <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
-          <div className="md:max-w-xl">
-            <div className="flex items-center gap-3 mb-3">
-              <div className="h-px w-8 bg-[#b8892a]/60" />
-              <span className="text-[10px] uppercase tracking-[0.3em] text-[#b8892a] font-semibold">Offer Your Support</span>
+      <section className="py-20 px-6 bg-[#f5ece0] border-t border-b border-[#e2d0b8]">
+        <div className="max-w-5xl mx-auto">
+
+          {/* Header */}
+          <div className="text-center mb-12">
+            <div className="flex items-center justify-center gap-3 mb-4">
+              <div className="h-px w-10 bg-[#b8892a]/60" />
+              <span className="text-xs uppercase tracking-[0.3em] text-[#b8892a] font-semibold">Offer Your Support</span>
+              <div className="h-px w-10 bg-[#b8892a]/60" />
             </div>
-            <h2 className="font-['Cormorant_Garamond'] text-3xl md:text-4xl font-light text-[#2e2820] leading-snug mb-3">
+            <h2 className="font-['Cormorant_Garamond'] text-4xl md:text-5xl font-light text-[#2e2820] leading-snug mb-5">
               Participate in Ashram Seva
             </h2>
-            <p className="text-sm text-[#5a5248] leading-relaxed mb-6">
-              The ashram is sustained entirely through the generosity and devotion of seekers. By contributing to Ashram Seva, you become part of this sacred mission, supporting the ongoing work of spiritual education, prasad distribution, gau seva, and the care of this living spiritual home.
+            <p className="text-base md:text-lg text-[#5a5248] leading-relaxed max-w-2xl mx-auto">
+              The ashram is sustained entirely through the generosity and devotion of seekers. By contributing, you become part of this sacred mission — supporting spiritual education, daily prasad, gau seva, and the care of this living spiritual home.
             </p>
-            <div className="flex flex-wrap gap-2">
-              {[
-                { name: "Gau Seva",         sub: "Care of Sacred Cows" },
-                { name: "Hanuman Pūjā",     sub: "Temple Worship" },
-                { name: "Akhanda Kīrtan",   sub: "Continuous Chanting" },
-                { name: "Brahmand Bhojan",  sub: "Prasad Distribution" },
-              ].map((s) => (
-                <div key={s.name} className="flex flex-col px-4 py-2.5 rounded-xl bg-white border border-[#e2d0b8]">
-                  <span className="text-xs font-semibold text-[#2e2820] tracking-wide">{s.name}</span>
-                  <span className="text-[10px] text-[#9a8f84] tracking-wide mt-0.5">{s.sub}</span>
-                </div>
-              ))}
-            </div>
           </div>
-          <div className="shrink-0">
+
+          {/* Seva options grid */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+            {[
+              { name: "Gau Seva",        sub: "Care of Sacred Cows",    symbol: "🐄" },
+              { name: "Hanuman Pūjā",    sub: "Temple Worship",         symbol: "🪔" },
+              { name: "Akhanda Kīrtan",  sub: "Continuous Chanting",    symbol: "🎵" },
+              { name: "Brahmand Bhojan", sub: "Prasad Distribution",    symbol: "🌿" },
+            ].map((s) => (
+              <div key={s.name} className="flex flex-col items-center text-center p-6 rounded-2xl bg-white border border-[#e2d0b8] shadow-sm hover:shadow-md hover:border-[#d4a843]/50 transition-all duration-300">
+                <span className="text-3xl mb-3">{s.symbol}</span>
+                <span className="font-['Cormorant_Garamond'] text-xl font-semibold text-[#2e2820] leading-snug mb-1">{s.name}</span>
+                <span className="text-sm text-[#9a8f84]">{s.sub}</span>
+              </div>
+            ))}
+          </div>
+
+          {/* CTA */}
+          <div className="text-center">
             <Link href="/donate">
-              <button className="inline-flex items-center gap-2.5 bg-[#b8892a] hover:bg-[#9d7422] text-white text-sm px-8 py-4 rounded-full tracking-wider transition-colors duration-200 shadow-md shadow-[#b8892a]/20">
+              <button className="inline-flex items-center gap-3 bg-[#b8892a] hover:bg-[#9d7422] text-white text-base px-10 py-4 rounded-full tracking-wider transition-colors duration-200 shadow-lg shadow-[#b8892a]/25">
                 Offer Seva
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
                   <path d="M5 12h14M12 5l7 7-7 7"/>
                 </svg>
               </button>
             </Link>
           </div>
+
         </div>
       </section>
 
