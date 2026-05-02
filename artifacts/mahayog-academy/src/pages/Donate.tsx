@@ -302,7 +302,7 @@ export default function Donate() {
             Its services — gau seva, prasad distribution, spiritual education, and the welcoming of seekers from every corner of the world — is sustained entirely by the generosity of devotees and well-wishers.
           </p>
           <p className="font-['Cormorant_Garamond'] text-2xl font-light italic text-[#b8892a] mt-10">
-            "Your kindness keeps the lamp of dharma burning."
+            "Your kindness keeps the lamp of service burning."
           </p>
         </div>
       </section>
