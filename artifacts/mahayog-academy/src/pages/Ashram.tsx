@@ -446,13 +446,13 @@ export default function Ashram() {
                 {col.map((s, i) => (
                   <div
                     key={i}
-                    className="flex items-center gap-5 py-4 border-b border-[#e8dece]/60 last:border-b-0"
+                    className="flex items-center gap-6 py-5 border-b border-[#e8dece]/60 last:border-b-0"
                   >
-                    <span className="font-['Cormorant_Garamond'] text-sm text-[#b8892a] font-semibold min-w-[70px] tracking-wide">
+                    <span className="font-['Cormorant_Garamond'] text-xl text-[#b8892a] font-semibold min-w-[90px] tracking-wide shrink-0">
                       {s.time}
                     </span>
-                    <div className="w-px h-5 bg-[#d4a843]/50 shrink-0" />
-                    <span className="text-sm text-[#5a5248]">{s.item}</span>
+                    <div className="w-px h-6 bg-[#d4a843]/50 shrink-0" />
+                    <span className="text-base text-[#5a5248]">{s.item}</span>
                   </div>
                 ))}
               </div>
