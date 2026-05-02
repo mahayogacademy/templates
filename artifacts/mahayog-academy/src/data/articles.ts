@@ -26,7 +26,7 @@ export const ARTICLES: Article[] = [
     id: "barahachhetra",
     title: "The Spiritual Significance of Barahachhetra",
     subtitle: "A Sacred Confluence of Liberation, Lineage, and Living Dharma",
-    tag: "Sacred Geography",
+    tag: "Sacred Places",
     date: "20 April 2025",
     thumbnail: `${b}images/teachings-prana.png`,
     excerpt:
@@ -65,7 +65,7 @@ export const ARTICLES: Article[] = [
     id: "guru-imperishable-soul",
     title: "The Guru and the Imperishable Soul",
     subtitle: "Understanding the Conscious Principle and the Path to Realization",
-    tag: "Guru",
+    tag: "The Guru",
     date: "14 April 2025",
     thumbnail: `${b}images/teachings-guru-soul.png`,
     excerpt:
@@ -106,7 +106,7 @@ export const ARTICLES: Article[] = [
   {
     id: "kundalini-chakras",
     title: "Kundalini, the Chakras, and the Inner Science of Awakening",
-    tag: "Kundalini",
+    tag: "Meditation & Yoga",
     date: "7 April 2025",
     thumbnail: `${b}images/teachings-kundalini.png`,
     excerpt:
@@ -153,7 +153,7 @@ export const ARTICLES: Article[] = [
     id: "nepal-sacred-geography",
     title: "Nepal: Spirituality's Beating Heart",
     subtitle: "The Living Sacred Geography of the Himalayas",
-    tag: "Sacred Geography",
+    tag: "Sacred Places",
     date: "1 April 2025",
     thumbnail: `${b}images/teachings-nepal.png`,
     excerpt:
@@ -188,7 +188,7 @@ export const ARTICLES: Article[] = [
     id: "what-is-prana",
     title: "What Is Prāṇa?",
     subtitle: "A Yogic Science of Life, Consciousness, and Vital Force",
-    tag: "Prāṇa",
+    tag: "Meditation & Yoga",
     date: "25 March 2025",
     thumbnail: `${b}images/teachings-what-is-prana.png`,
     excerpt:
@@ -233,7 +233,7 @@ export const ARTICLES: Article[] = [
     id: "refine-prana",
     title: "How to Refine Prāṇa",
     subtitle: "Practical guidance for daily life and sādhana",
-    tag: "Prāṇa",
+    tag: "Meditation & Yoga",
     date: "18 March 2025",
     thumbnail: `${b}images/teachings-refine-prana.png`,
     excerpt:
@@ -266,7 +266,7 @@ export const ARTICLES: Article[] = [
     id: "two-realities",
     title: "Two Realities: Conscious and Non-conscious",
     subtitle: "Understanding what we truly are",
-    tag: "Vedanta",
+    tag: "Dharma & Wisdom",
     date: "10 March 2025",
     thumbnail: `${b}images/teachings-two-realities.png`,
     excerpt:
@@ -294,7 +294,7 @@ export const ARTICLES: Article[] = [
     id: "world-cannot-satisfy",
     title: "Why the World Can't Satisfy the Heart",
     subtitle: "The lesson of the dog and the dry bone",
-    tag: "Vedanta",
+    tag: "Dharma & Wisdom",
     date: "1 March 2025",
     thumbnail: `${b}images/teachings-world-heart.png`,
     excerpt:
