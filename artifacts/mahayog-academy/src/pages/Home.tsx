@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import Nav from "@/components/Nav";
 import { Link } from "wouter";
 import { ArrowRight, MapPin, Heart } from "lucide-react";
@@ -66,6 +67,8 @@ const GALLERY = [
 ];
 
 export default function Home() {
+  const [galleryReady, setGalleryReady] = useState(false);
+  useEffect(() => { setGalleryReady(true); }, []);
   return (
     <div className="bg-[#faf9f6] text-[#3d3830] min-h-screen">
       <Nav />
@@ -311,8 +314,14 @@ export default function Home() {
         `}</style>
 
         {/* Auto-scrolling strip */}
-        <div className="overflow-hidden">
-          <div className="marquee-track flex gap-4" style={{ width: "max-content" }}>
+        <div
+          className="overflow-hidden transition-opacity duration-700"
+          style={{ opacity: galleryReady ? 1 : 0 }}
+        >
+          <div
+            className="marquee-track flex gap-4"
+            style={{ width: "max-content", willChange: "transform", transform: "translateZ(0)" }}
+          >
             {[...GALLERY, ...GALLERY].map((g, i) => (
               <div
                 key={i}
@@ -321,6 +330,8 @@ export default function Home() {
                 <img
                   src={g.src}
                   alt={g.caption}
+                  loading={i < GALLERY.length ? "eager" : "lazy"}
+                  decoding="async"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1a0f05]/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
