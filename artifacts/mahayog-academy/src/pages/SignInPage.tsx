@@ -35,10 +35,20 @@ function blurStyle(e: React.FocusEvent<HTMLInputElement | HTMLSelectElement>) {
   e.currentTarget.style.boxShadow = "none";
 }
 
+function detectNepal(): boolean {
+  try {
+    const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    return tz === "Asia/Kathmandu";
+  } catch {
+    return false;
+  }
+}
+
 export default function SignInPage() {
-  const [tab, setTab] = useState<"email" | "phone">("email");
+  const isNepal = detectNepal();
+  const [tab, setTab] = useState<"email" | "phone">(isNepal ? "phone" : "email");
   const [showPassword, setShowPassword] = useState(false);
-  const [countryCode, setCountryCode] = useState("+977");
+  const [countryCode, setCountryCode] = useState(isNepal ? "+977" : "+1");
 
   return (
     <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
