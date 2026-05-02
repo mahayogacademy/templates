@@ -130,7 +130,7 @@ export default function Home() {
                 <img
                   src={`${b}images/mahayog-diksha-jap.jpg`}
                   alt="Mahayog"
-                  className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                  className="w-full h-full object-cover object-left group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1a0f05]/95 via-[#1a0f05]/40 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-7">
