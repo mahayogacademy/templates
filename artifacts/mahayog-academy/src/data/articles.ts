@@ -5,7 +5,8 @@ export type ArticleBlock =
   | { type: "h2"; text: string }
   | { type: "h3"; text: string }
   | { type: "quote"; text: string }
-  | { type: "list"; items: string[] };
+  | { type: "list"; items: string[] }
+  | { type: "image"; src: string; alt: string; caption?: string };
 
 export interface Article {
   id: string;
@@ -118,6 +119,7 @@ export const ARTICLES: Article[] = [
       { type: "p", text: "Kuṇḍalinī always exists in a state of awareness. She never sleeps. What is described as 'sleep' in yogic language refers only to her downward-facing orientation, which propels the cycle of repeated birth and death." },
       { type: "quote", text: "Punarapi jananam, punarapi maraṇam — Again and again birth, again and again death." },
       { type: "p", text: "When her orientation turns upward through grace, purity, devotion, and inner discipline, the same force becomes the cause of awakening, knowledge, and liberation." },
+      { type: "image", src: `${b}images/kundalini-serpent.png`, alt: "Kuṇḍalinī coiled around the Svayambhū Liṅga", caption: "Kuṇḍalinī Śakti coiled three and a half times around the Svayambhū Liṅga at the Mūlādhāra — the seat from which the journey of awakening begins." },
       { type: "h2", text: "Mūlādhāra Chakra: The Root of Life and Death" },
       { type: "p", text: "Among the seven principal chakras, the Mūlādhāra Chakra is the foundation. Located at the center between the organs of excretion, it is the root support of life itself. The word mūla means root — the source from which all growth arises." },
       { type: "list", items: ["Square in form", "Yellow in color", "Associated with the earth element", "Empowered by the Laṁ bīja mantra"] },
@@ -126,6 +128,7 @@ export const ARTICLES: Article[] = [
       { type: "p", text: "When Kuṇḍalinī turns upward through Guru's grace, pure conduct, pure thought, love, and sincere spiritual practice, this reversal is called Kuṇḍalinī Jāgaraṇa — awakening. At that moment, the human being naturally inclines toward truth and higher knowledge." },
       { type: "quote", text: "Lead me from untruth to truth, from darkness to light, from death to immortality." },
       { type: "p", text: "Thoughts become purified. Compassion, joy, wisdom, love, and clarity begin to arise. The ascent then continues through the higher chakras." },
+      { type: "image", src: `${b}images/kundalini-chakra-diagram.png`, alt: "The seven primary chakras", caption: "The seven primary chakras — from Mūlādhāra at the base to Sahasrāra at the crown — each corresponding to a progressively subtler realm of awareness and experience." },
       { type: "h2", text: "The Seven Chakras: A Summary" },
       { type: "h3", text: "Svādhiṣṭhāna — The Realm of Sensitivity" },
       { type: "p", text: "Located below the navel, the Svādhiṣṭhāna Chakra governs the water element and is extremely sensitive. Here, emotions, desires, and creative impulses are refined. When purified, this chakra becomes a gateway from instinctual craving to conscious experience." },

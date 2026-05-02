@@ -36,6 +36,21 @@ function Block({ block }: { block: ArticleBlock }) {
           ))}
         </ul>
       );
+    case "image":
+      return (
+        <figure className="my-10">
+          <img
+            src={block.src}
+            alt={block.alt}
+            className="w-full rounded-2xl object-cover shadow-md border border-[#e8dece]"
+          />
+          {block.caption && (
+            <figcaption className="mt-3 text-center text-xs text-[#9a8070] italic leading-relaxed">
+              {block.caption}
+            </figcaption>
+          )}
+        </figure>
+      );
     default:
       return (
         <p className="text-[#4a3728] text-base leading-[1.85] mb-0">
@@ -91,7 +106,6 @@ export default function ArticleDetail() {
               {article.subtitle && (
                 <p className="text-white/70 text-sm tracking-wide">{article.subtitle}</p>
               )}
-              <p className="text-white/50 text-xs mt-3">{article.date}</p>
             </div>
           </div>
         ) : (
@@ -107,7 +121,6 @@ export default function ArticleDetail() {
               {article.subtitle && (
                 <p className="text-white/60 text-sm tracking-wide">{article.subtitle}</p>
               )}
-              <p className="text-white/40 text-xs mt-3">{article.date}</p>
             </div>
           </div>
         )}
