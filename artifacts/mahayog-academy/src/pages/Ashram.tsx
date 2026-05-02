@@ -233,6 +233,13 @@ export default function Ashram() {
         </div>
       </section>
 
+      {/* ── WHAT IS AN ASHRAM — slim strip ── */}
+      <div className="bg-[#f5ede0] border-y border-[#e8d5b0] py-6 px-6 text-center">
+        <p className="text-sm text-[#6a5f52] leading-relaxed max-w-2xl mx-auto">
+          <span className="font-medium text-[#3d3830]">Āśrama</span> — a Sanskrit word for a place of refuge, effort, and inner work. An ashram is a living community centred around spiritual practice, selfless service, and the guidance of a teacher, open to all sincere seekers.
+        </p>
+      </div>
+
       {/* ── INTRO + IMAGE ── */}
       <section className="py-20 px-6">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-14 items-center">
