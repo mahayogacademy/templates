@@ -37,7 +37,7 @@ const RELATED = [
 
 const GALLERY_TOP = [
   { src: "ashram-hanuman-sunset.jpg", alt: "Hanuman statue silhouette at golden sunset",       caption: "Ramanandacharya Sewa Pith · Nepal" },
-  { src: "ashram-cows-sunset.jpg",    alt: "Sacred cows grazing at sunset on ashram grounds",  caption: "Goshala at Sunset" },
+  { src: "ashram-cows-sunset.jpg",    alt: "Sacred cows grazing at sunset on ashram grounds",  caption: "Ashram at Sunset" },
   { src: "ashram-hanuman-wide.jpg",    alt: "Ashram grounds with Hanuman statue and green lawn",   caption: "Ashram Grounds" },
   { src: "ashram-satsang-night.jpg",  alt: "Gurudev seated with disciples for evening satsang",   caption: "Evening Satsang" },
 ];
