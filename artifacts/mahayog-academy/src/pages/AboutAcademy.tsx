@@ -175,7 +175,7 @@ export default function AboutAcademy() {
               },
               {
                 title: "The Ashram",
-                desc: "Step into a place of stillness and renewal, our Himalayan ashram offers a sanctuary for deep practice and retreat.",
+                desc: "Step into a place of stillness and renewal, our Ashram offers a sanctuary for deep practice and retreat.",
                 img: `${import.meta.env.BASE_URL}images/discover-ashram.png`,
                 tag: "Retreat",
                 href: "/ashram",
