@@ -142,9 +142,6 @@ export default function FounderGuru() {
           <h1 className="font-['Cormorant_Garamond'] text-5xl md:text-6xl font-light text-white leading-tight">
             Jagadguru Mahayogi Siddhababa
           </h1>
-          <p className="text-[#f0e4c8]/80 text-sm font-light mt-3 max-w-xl mx-auto leading-relaxed">
-            Jagadguru Shree Ramanandacharya Swami Shree Ramakrishnacharya Ji Maharaj
-          </p>
           <p className="text-[#f0e4c8] text-base tracking-widest uppercase font-light mt-4">
             Founder &amp; Acharya
           </p>
@@ -191,6 +188,9 @@ export default function FounderGuru() {
                   style={{ minHeight: "440px" }}
                 />
               </div>
+              <p className="mt-4 text-center text-xs text-[#7a6e62] leading-relaxed px-1">
+                Jagadguru Shree Ramanandacharya<br />Swami Shree Ramakrishnacharya Ji Maharaj
+              </p>
               <a
                 href={`${b}images/gurudev-photo.png`}
                 download="Jagadguru-Mahayogi-Siddhababa.png"
