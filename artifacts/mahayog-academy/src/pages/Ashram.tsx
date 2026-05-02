@@ -43,7 +43,7 @@ const GALLERY_TOP = [
 ];
 
 const GALLERY_BOT = [
-  { src: "ashram-garden.jpg",                                alt: "Devotees tending the ashram herb garden",                  caption: "Sacred Garden" },
+  { src: "ashram-garden.jpg",                                alt: "Devotees tending the ashram herb garden",                  caption: "Tulsi Garden" },
   { src: "ashram-cows-1.jpg",                                alt: "Devotee caring for sacred cows at the ashram gate",        caption: "Caring for the Sacred" },
   { src: "ashram-extra-prasad-serve.jpg",                    alt: "Devotees serving prasad to a long row of seated guests",   caption: "Prasad Seva" },
   { src: "ashram-hanuman-close.jpg",                         alt: "The golden Hanuman statue at the ashram temple",           caption: "The Hanuman Temple" },
