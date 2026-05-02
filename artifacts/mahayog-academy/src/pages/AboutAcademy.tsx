@@ -164,11 +164,11 @@ export default function AboutAcademy() {
                 href: "/meditation",
               },
               {
-                title: "Programs & Courses",
-                desc: "Discover courses in yoga, meditation, and Vedic philosophy designed for seekers at every stage of the journey.",
+                title: "Vedanta Darshan Philosophy",
+                desc: "Explore the timeless teachings of Vedanta — the philosophy of non-duality, self-inquiry, and the nature of ultimate reality.",
                 img: `${import.meta.env.BASE_URL}images/discover-programs.png`,
-                tag: "Learn",
-                href: "/gurukul",
+                tag: "Philosophy",
+                href: "/vedanta",
               },
               {
                 title: "The Ashram",
