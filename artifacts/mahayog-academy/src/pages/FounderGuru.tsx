@@ -310,7 +310,7 @@ export default function FounderGuru() {
                     At the request of students and devotees, His Holiness has publicly demonstrated <span className="italic">Bhu Samadhi</span>, the yogic practice of remaining in deep meditation underground, sealed, without oxygen. These demonstrations were performed across Nepal and witnessed by thousands.
                   </p>
                   <p className="text-base text-[#5a5248] leading-relaxed mb-6">
-                    Buried for nine days, in uninterrupted samādhi, medical doctors were shocked when examining him. They found no change in his bodily condition before and after Samadhi. These events have kindled deep faith in the living power of Siddha Mahayoga, drawing sincere seekers from across the world to his guidance.
+                    Buried for nine days, in uninterrupted samādhi, medical doctors were shocked when examining him. They found no change in his bodily condition before and after Samadhi. These events have kindled deep faith in the living power of Vedic philosophy, drawing sincere seekers from across the world to his guidance.
                   </p>
                   <button
                     onClick={() => navigate("/events/historic/bhu-samadhi")}
