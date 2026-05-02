@@ -236,7 +236,7 @@ export default function Home() {
             {/* Image */}
             <div className="relative h-[520px] md:h-[640px]">
               <img
-                src={`${b}images/jagadguru-2.jpg`}
+                src={`${b}images/siddhababa-throne.jpg`}
                 alt="Jagadguru Mahayogi Siddhababa"
                 className="absolute inset-0 w-full h-full object-cover object-top"
               />
