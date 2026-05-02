@@ -74,9 +74,9 @@ export default function CustomTalks() {
       <section className="relative h-[60vh] min-h-[420px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src={`${b}images/custom-talks-hero.jpg`}
+            src={`${b}images/custom-talks-hero.png`}
             alt="Spiritual talk at Mahayogi Siddhababa Spiritual Academy with audience"
-            className="w-full h-full object-cover object-[center_20%]"
+            className="w-full h-full object-cover object-bottom"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-[#1a0803]/90 via-[#2c1205]/65 to-[#faf9f6]" />
         </div>
