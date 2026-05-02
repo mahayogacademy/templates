@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Nav from "@/components/Nav";
-import { ArrowRight, MapPin, Mail, Clock, CheckCircle } from "lucide-react";
+import { ArrowRight, MapPin, Mail, Phone, Clock, CheckCircle } from "lucide-react";
 
 const b = import.meta.env.BASE_URL;
 
@@ -121,6 +121,19 @@ export default function Contact() {
                   <a href="mailto:info@siddhamahayog.org" className="text-sm text-[#5a5248] hover:text-[#b8892a] transition-colors">
                     info@siddhamahayog.org
                   </a>
+                </div>
+              </div>
+
+              <div className="flex gap-4 items-start">
+                <div className="shrink-0 w-9 h-9 rounded-full bg-[#fdf6ec] border border-[#e8c56a]/50 flex items-center justify-center mt-0.5">
+                  <Phone className="w-4 h-4 text-[#b8892a]" strokeWidth={1.5} />
+                </div>
+                <div>
+                  <p className="text-xs uppercase tracking-widest text-[#b8892a] font-medium mb-1">Phone</p>
+                  <div className="space-y-1">
+                    <a href="tel:+9779851126710" className="block text-sm text-[#5a5248] hover:text-[#b8892a] transition-colors">+977 985-1126710</a>
+                    <a href="tel:+9779767393900" className="block text-sm text-[#5a5248] hover:text-[#b8892a] transition-colors">+977 976-7393900</a>
+                  </div>
                 </div>
               </div>
 
