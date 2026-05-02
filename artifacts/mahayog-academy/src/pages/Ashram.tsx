@@ -346,9 +346,9 @@ export default function Ashram() {
                   <span className="text-[#b8892a] text-sm">{p.icon}</span>
                 </div>
                 <h3 className="font-['Cormorant_Garamond'] text-3xl font-semibold text-[#b8892a] mb-1">{p.sanskrit}</h3>
-                <p className="text-[10px] uppercase tracking-[0.2em] text-[#9a8f84] font-medium mb-4">{p.title}</p>
+                <p className="text-xs uppercase tracking-[0.2em] text-[#9a8f84] font-medium mb-4">{p.title}</p>
                 <div className="h-px w-8 bg-[#d4a843]/50 mb-4" />
-                <p className="text-sm leading-relaxed text-[#5a5248]">{p.desc}</p>
+                <p className="text-base leading-relaxed text-[#5a5248]">{p.desc}</p>
               </div>
             ))}
           </div>
