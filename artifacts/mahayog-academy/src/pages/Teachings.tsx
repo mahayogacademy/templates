@@ -525,13 +525,23 @@ export default function Teachings() {
       </section>
 
       {/* ── YOUTUBE CTA ── */}
-      <section id="yt-cta" className="py-20 px-6 bg-[#1c1008]">
-        <div className="max-w-3xl mx-auto text-center">
-          <p className="text-[#b8892a] text-xs uppercase tracking-[0.3em] font-medium mb-3">Watch & Subscribe</p>
-          <h2 className="font-['Cormorant_Garamond'] text-3xl text-white font-light mb-4">
+      <section id="yt-cta" className="relative py-28 px-6 overflow-hidden">
+        {/* Photo background */}
+        <img
+          src={`${b}images/hanumad-venue-aerial.jpg`}
+          alt=""
+          className="absolute inset-0 w-full h-full object-cover object-center"
+          aria-hidden="true"
+        />
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-[#0d0603]/80" aria-hidden="true" />
+
+        <div className="relative max-w-3xl mx-auto text-center">
+          <p className="text-[#b8892a] text-xs uppercase tracking-[0.3em] font-medium mb-4">Watch & Subscribe</p>
+          <h2 className="font-['Cormorant_Garamond'] text-4xl md:text-5xl text-white font-light mb-5 leading-tight">
             Explore More Videos
           </h2>
-          <p className="text-white/60 text-sm leading-relaxed max-w-lg mx-auto mb-10">
+          <p className="text-white/75 text-base md:text-lg leading-relaxed max-w-xl mx-auto mb-10">
             Hundreds of satsangs (wisdom talks), ceremony recordings, and discourses by Jagadguru Mahayogi Siddhababa are available on the Academy's YouTube channel.
           </p>
 
