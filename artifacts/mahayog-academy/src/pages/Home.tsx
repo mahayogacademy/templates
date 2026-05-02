@@ -82,7 +82,7 @@ function RecolouredSymbol({ src, className }: { src: string; className?: string 
       for (let i = 0; i < data.length; i += 4) {
         if (data[i + 3] < 30) continue;
         // All visible pixels → off-white
-        data[i] = 242; data[i + 1] = 237; data[i + 2] = 224;
+        data[i] = 184; data[i + 1] = 137; data[i + 2] = 42;
       }
       ctx.putImageData(new ImageData(data, canvas.width, canvas.height), 0, 0);
     };
