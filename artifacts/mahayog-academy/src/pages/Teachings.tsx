@@ -51,8 +51,8 @@ const VIDEO_ITEMS: Item[] = [
   {
     id: "v0b",
     type: "video",
-    title: "Where Is Happiness? — Satsang with Jagadguru Mahayogi Siddhababa",
-    excerpt: "सुख कहाँ छ त? — In this satsang, Jagadguru Mahayogi Siddhababa addresses one of the most universal human questions: where does true happiness lie, and why do we keep searching in the wrong places?",
+    title: "Where Is Happiness?",
+    excerpt: "In this satsang, Jagadguru Mahayogi Siddhababa addresses one of the most universal human questions: where does true happiness lie, and why do we keep searching in the wrong places?",
     date: "Himalayan Siddha Mahayog",
     tag: "Satsang",
     thumbnail: `${b}images/video-mahayog-2.jpg`,
