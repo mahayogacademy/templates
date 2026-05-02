@@ -1,16 +1,16 @@
 import { useState, useMemo } from "react";
 import { Link } from "wouter";
 import Nav from "@/components/Nav";
-import { Search, Play, ArrowRight, BookOpen, Video, ChevronRight } from "lucide-react";
+import { Search, Play, ArrowRight, BookOpen, Newspaper, Video, ChevronRight } from "lucide-react";
 import { ARTICLES } from "@/data/articles";
 
 const b = import.meta.env.BASE_URL;
 
-type ContentType = "all" | "article" | "video";
+type ContentType = "all" | "article" | "video" | "news";
 
 interface Item {
   id: string;
-  type: "article" | "video";
+  type: "article" | "video" | "news";
   title: string;
   excerpt: string;
   date: string;
@@ -78,37 +78,63 @@ const VIDEO_ITEMS: Item[] = [
     thumbnail: `${b}images/video-dharma-2.png`,
     href: "https://youtu.be/-z1Gex5-x5A?si=xYXVKdLabV2FhvY4",
   },
+];
+
+/* ── News ── */
+const NEWS_ITEMS: Item[] = [
   {
-    id: "v1",
-    type: "video",
-    title: "Guided Mahayog Meditation — Morning Practice with Siddhababa",
-    excerpt: "A complete guided Mahayog meditation session with Jagadguru Mahayogi Siddhababa — suitable for practitioners at all levels. Begin your day in stillness and awareness.",
-    date: "1 May 2025",
-    tags: ["Meditation"],
-    thumbnailGradient: "from-[#1a0c03] to-[#3d2008]",
-    duration: "1 hr 22 min",
-    href: "https://www.youtube.com/@siddhamahayog",
+    id: "n-tapovan-encroachment",
+    type: "news",
+    title: "No Encroachment on Sacred Tapovan — Kumbhmela Planning Must Be Spiritual",
+    excerpt: "Speaking at Nashik's Lakshminarayan Bada Mandir, Jagadguru Mahayogi Siddhababa issued a firm warning against commercial encroachment on the sacred Tapovan grounds ahead of Kumbhmela. He called on the Maharashtra government to ensure the event's spiritual character is fully preserved.",
+    date: "6 December 2025",
+    tags: ["Kumbhmela", "Press"],
+    thumbnail: `${b}images/news-tapovan-encroachment.jpg`,
+    href: "#",
+  },
+  {
+    id: "n-tapovan-cement",
+    type: "news",
+    title: "We Will Not Allow a Cement Jungle in Tapovan — Siddhababa's Warning",
+    excerpt: "Jagadguru Mahayogi Siddhababa has stated firmly that Tapovan — the timeless sanctuary of saints and rishis in Nashik — will not be allowed to become a concrete commercial zone. Any commercial construction in these sacred grounds will face strong resistance from saints, sages, and devotees.",
+    date: "6 December 2025",
+    tags: ["Kumbhmela", "Press"],
+    thumbnail: `${b}images/news-tapovan-cement.jpg`,
+    href: "#",
+  },
+  {
+    id: "n-goda-parikrama",
+    type: "news",
+    title: "Goda Parikrama Begins — 500+ Saints from Across India and the World",
+    excerpt: "The sacred circumambulation of the Godavari River has commenced at Trimbakeshwar, with over 500 saints, mahantas, and mahavishvas from India and abroad taking part. Concluding on 21 December with a grand celebration, the pilgrimage is seen as a landmark moment for national spiritual unity.",
+    date: "6 December 2025",
+    tags: ["Events", "Press"],
+    thumbnail: `${b}images/news-goda-parikrama.jpg`,
+    href: "#",
   },
 ];
 
-const ITEMS: Item[] = [...ARTICLE_ITEMS, ...VIDEO_ITEMS];
+const ITEMS: Item[] = [...ARTICLE_ITEMS, ...VIDEO_ITEMS, ...NEWS_ITEMS];
 
 /* ── UI helpers ── */
 
 const TYPE_LABELS: Record<string, { label: string; color: string; bg: string }> = {
   article: { label: "Article", color: "text-[#b8892a]", bg: "bg-[#b8892a]/10" },
   video:   { label: "Video",   color: "text-[#8b5a2a]", bg: "bg-[#8b5a2a]/10" },
+  news:    { label: "News",    color: "text-[#4a7a5a]", bg: "bg-[#4a7a5a]/10" },
 };
 
 const TYPE_ICONS = {
   article: BookOpen,
   video:   Video,
+  news:    Newspaper,
 };
 
 const FILTERS: { key: ContentType; label: string }[] = [
   { key: "all",     label: "All"      },
   { key: "article", label: "Articles" },
   { key: "video",   label: "Videos"   },
+  { key: "news",    label: "News"     },
 ];
 
 function TypeBadge({ type }: { type: Item["type"] }) {
