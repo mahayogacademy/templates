@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Nav from "@/components/Nav";
+import Footer from "@/components/Footer";
 import { Link, useLocation } from "wouter";
 import { ArrowRight, ChevronLeft, ChevronRight, ChevronDown, Flame, Heart, Shield, Sparkles, Users } from "lucide-react";
 
@@ -879,6 +880,7 @@ export default function FounderGuru() {
         </div>
       </section>
 
+      <Footer />
     </div>
   );
 }

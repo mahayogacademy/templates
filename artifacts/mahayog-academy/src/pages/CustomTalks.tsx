@@ -1,5 +1,6 @@
 import { Link } from "wouter";
 import Nav from "@/components/Nav";
+import Footer from "@/components/Footer";
 import { ArrowRight, Mic, Users, Building2, Leaf, Globe, Clock } from "lucide-react";
 
 const b = import.meta.env.BASE_URL;
@@ -262,7 +263,7 @@ export default function CustomTalks() {
           </div>
         </div>
       </section>
-
+      <Footer />
     </div>
   );
 }

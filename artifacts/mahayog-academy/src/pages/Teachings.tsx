@@ -1,6 +1,7 @@
 import { useState, useMemo } from "react";
 import { Link } from "wouter";
 import Nav from "@/components/Nav";
+import Footer from "@/components/Footer";
 import { Search, Play, ArrowRight, BookOpen, Newspaper, Video, ChevronRight, Mic2 } from "lucide-react";
 import { ARTICLES } from "@/data/articles";
 
@@ -578,6 +579,7 @@ export default function Teachings() {
           </div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 }

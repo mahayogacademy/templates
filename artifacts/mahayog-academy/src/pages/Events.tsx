@@ -1,5 +1,6 @@
 import { useState, type ComponentType } from "react";
 import Nav from "@/components/Nav";
+import Footer from "@/components/Footer";
 import { Link } from "wouter";
 import { MapPin, Monitor, CalendarDays, Clock, ChevronRight, ArrowRight, Globe, List, LayoutGrid, ChevronLeft } from "lucide-react";
 
@@ -672,6 +673,7 @@ export default function Events() {
           <p className="text-[#7a6248] text-xs mt-6 tracking-wide">Open to all seekers · All traditions welcome</p>
         </div>
       </section>
+      <Footer />
     </div>
   );
 }

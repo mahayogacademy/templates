@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Nav from "@/components/Nav";
+import Footer from "@/components/Footer";
 import { Link } from "wouter";
 import { ArrowRight, X } from "lucide-react";
 
@@ -478,15 +479,7 @@ export default function Projects() {
         </div>
       </section>
 
-      {/* ── FOOTER ── */}
-      <footer className="py-10 px-6 border-t border-[#e8dece] bg-[#f5ede0]">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-          <span className="font-['Cormorant_Garamond'] text-lg font-medium text-[#b8892a]">
-            Mahayogi Siddhababa Spiritual Academy
-          </span>
-          <p className="text-xs text-[#9a8f84] text-center">A not-for-profit, volunteer-run organization, Nepal</p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

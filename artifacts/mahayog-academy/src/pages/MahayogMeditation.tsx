@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { ArrowRight, ChevronDown } from "lucide-react";
 import { Link } from "wouter";
 import Nav from "@/components/Nav";
+import Footer from "@/components/Footer";
 import FloatingRegisterButton from "@/components/FloatingRegisterButton";
 
 // viewBox 500×500; circles at corners offset 90px from centre (250,250), r=140
@@ -992,21 +993,7 @@ export default function MahayogMeditation() {
         </div>
       </section>
 
-      {/* ── FOOTER ── */}
-      <footer className="py-10 px-6 border-t border-[#e8dece] bg-[#f5ede0]">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-          <span className="font-['Cormorant_Garamond'] text-lg font-medium text-[#b8892a]">
-            Mahayogi Siddhababa Spiritual Academy
-          </span>
-          <div className="flex items-center gap-6">
-            <Link href="/">
-              <span className="text-sm text-[#7a7068] hover:text-[#b8892a] transition-colors cursor-pointer">About the Academy</span>
-            </Link>
-            <span className="text-sm text-[#7a7068]">·</span>
-            <p className="text-xs text-[#9a8f84]">A not-for-profit, volunteer-run organization, Nepal</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
 
     </div>
   );

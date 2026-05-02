@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "wouter";
 import Nav from "@/components/Nav";
+import Footer from "@/components/Footer";
 import { Phone, MapPin, BookOpen, Sun, Heart, Users, Laptop, Flame, X, ZoomIn, ChevronLeft, ChevronRight, GraduationCap, ArrowRight } from "lucide-react";
 
 const b = import.meta.env.BASE_URL;
@@ -510,8 +511,7 @@ export default function Gurukul() {
         </div>
       </section>
 
-      {/* ── FOOTER SPACE ── */}
-      <div className="h-16 bg-[#faf9f6]" />
+      <Footer />
     </div>
   );
 }

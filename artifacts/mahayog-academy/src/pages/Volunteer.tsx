@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "wouter";
 import Nav from "@/components/Nav";
+import Footer from "@/components/Footer";
 import { Laptop, Flame, BookOpen, Users, Heart, Sun, ArrowRight, Mail, Globe } from "lucide-react";
 
 const b = import.meta.env.BASE_URL;
@@ -328,8 +329,7 @@ export default function Volunteer() {
         </div>
       </section>
 
-      {/* ── FOOTER SPACE ── */}
-      <div className="h-16 bg-[#faf9f6]" />
+      <Footer />
     </div>
   );
 }

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Nav from "@/components/Nav";
+import Footer from "@/components/Footer";
 import { Link } from "wouter";
 import { ChevronDown, ArrowRight } from "lucide-react";
 import FloatingRegisterButton from "@/components/FloatingRegisterButton";
@@ -429,25 +430,7 @@ export default function VedantaCourse() {
         </div>
       </section>
 
-      {/* ── FOOTER ── */}
-      <footer className="py-10 px-6 border-t border-[#e8dece] bg-[#fdf6ec]">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-          <span className="font-['Cormorant_Garamond'] text-lg font-medium text-[#b8892a]">
-            Mahayogi Siddhababa Spiritual Academy
-          </span>
-          <div className="flex items-center gap-6">
-            <Link href="/meditation">
-              <span className="text-xs text-[#9a8f84] hover:text-[#b8892a] transition-colors cursor-pointer tracking-wide">Meditation</span>
-            </Link>
-            <Link href="/contact">
-              <span className="text-xs text-[#9a8f84] hover:text-[#b8892a] transition-colors cursor-pointer tracking-wide">Contact</span>
-            </Link>
-            <Link href="/donate">
-              <span className="text-xs text-[#9a8f84] hover:text-[#b8892a] transition-colors cursor-pointer tracking-wide">Donate</span>
-            </Link>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

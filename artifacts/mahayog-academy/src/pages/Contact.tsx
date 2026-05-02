@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Nav from "@/components/Nav";
+import Footer from "@/components/Footer";
 import { ArrowRight, MapPin, Mail, Phone, Clock, CheckCircle } from "lucide-react";
 
 const b = import.meta.env.BASE_URL;
@@ -262,15 +263,7 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* ── FOOTER ── */}
-      <footer className="py-10 px-6 border-t border-[#e8dece] bg-[#f5ede0] mt-8">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-          <span className="font-['Cormorant_Garamond'] text-lg font-medium text-[#b8892a]">
-            Mahayogi Siddhababa Spiritual Academy
-          </span>
-          <p className="text-xs text-[#9a8f84]">A not-for-profit, volunteer-run organization, Nepal</p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

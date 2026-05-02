@@ -1,4 +1,5 @@
 import Nav from "@/components/Nav";
+import Footer from "@/components/Footer";
 
 const b = import.meta.env.BASE_URL;
 
@@ -217,6 +218,7 @@ export default function Lineage() {
           </div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 }
