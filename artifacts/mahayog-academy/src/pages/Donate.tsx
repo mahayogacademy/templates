@@ -128,25 +128,25 @@ function ReferenceBuilder() {
   const [name, setName] = useState("");
   const [purpose, setPurpose] = useState(PURPOSES[0]);
   const [otherText, setOtherText] = useState("");
+  const [comments, setComments] = useState("");
   const [copied, setCopied] = useState(false);
 
   const isOther = purpose === "Other";
   const purposeLabel = isOther ? (otherText.trim() || "") : purpose;
   const isReady = name.trim().length > 0 && (!isOther || otherText.trim().length > 0);
 
-  const reference = isReady
-    ? `${name.trim()} | ${purposeLabel}`
-    : isOther
-      ? `[Your Name] | ${otherText.trim() || "Please specify"}`
-      : `[Your Name] | ${purpose}`;
+  function buildRef(fallbackName = "[Your Name]", fallbackPurpose?: string) {
+    const n = name.trim() || fallbackName;
+    const p = purposeLabel || fallbackPurpose || "Please specify";
+    const c = comments.trim();
+    return c ? `${n} | ${p} | ${c}` : `${n} | ${p}`;
+  }
 
-  const displayReference = name.trim()
-    ? `${name.trim()} | ${purposeLabel || "Please specify"}`
-    : reference;
+  const displayReference = buildRef(name.trim() ? undefined : "[Your Name]");
 
   function copy() {
     if (!isReady) return;
-    navigator.clipboard.writeText(`${name.trim()} | ${purposeLabel}`).then(() => {
+    navigator.clipboard.writeText(buildRef()).then(() => {
       setCopied(true);
       setTimeout(() => setCopied(false), 2500);
     });
@@ -196,13 +196,27 @@ function ReferenceBuilder() {
           <label className="block text-xs uppercase tracking-[0.2em] text-[#9a8f84] font-medium mb-2">Please Specify</label>
           <input
             type="text"
-            placeholder="e.g. In memory of my grandfather"
+            placeholder="e.g. Ashram renovation fund"
             value={otherText}
             onChange={(e) => { setOtherText(e.target.value); setCopied(false); }}
             className="w-full px-4 py-3 rounded-xl border border-[#e2d0b8] bg-[#faf9f6] text-[#2e2820] text-base placeholder:text-[#b8a898] focus:outline-none focus:border-[#b8892a] focus:ring-2 focus:ring-[#b8892a]/15 transition"
           />
         </div>
       )}
+
+      {/* Comments — optional, always visible */}
+      <div className="mb-6">
+        <label className="block text-xs uppercase tracking-[0.2em] text-[#9a8f84] font-medium mb-2">
+          Comments <span className="normal-case tracking-normal text-[#b8a898]">(optional)</span>
+        </label>
+        <input
+          type="text"
+          placeholder="e.g. In memory of my grandfather"
+          value={comments}
+          onChange={(e) => { setComments(e.target.value); setCopied(false); }}
+          className="w-full px-4 py-3 rounded-xl border border-[#e2d0b8] bg-[#faf9f6] text-[#2e2820] text-base placeholder:text-[#b8a898] focus:outline-none focus:border-[#b8892a] focus:ring-2 focus:ring-[#b8892a]/15 transition"
+        />
+      </div>
 
       {/* Generated reference */}
       <div className="rounded-xl border border-[#e2d0b8] bg-[#fdf6ec] p-4 flex items-center justify-between gap-4">
