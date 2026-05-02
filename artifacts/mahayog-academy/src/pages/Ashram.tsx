@@ -234,9 +234,23 @@ export default function Ashram() {
       </section>
 
       {/* ── WHAT IS AN ASHRAM — slim strip ── */}
-      <div className="bg-[#f5ede0] border-y border-[#e8d5b0] py-6 px-6 text-center">
-        <p className="text-sm text-[#6a5f52] leading-relaxed max-w-2xl mx-auto">
-          <span className="font-medium text-[#3d3830]">Āśrama</span> — a Sanskrit word for a place of refuge, effort, and inner work. An ashram is a living community centred around spiritual practice, selfless service, and the guidance of a teacher, open to all sincere seekers.
+      <div className="relative bg-[#f5ede0] border-y border-[#e8d5b0] py-8 px-6 text-center overflow-hidden">
+        {/* Decorative mandala watermark */}
+        <svg className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 opacity-[0.08] pointer-events-none" width="220" height="220" viewBox="0 0 220 220" aria-hidden>
+          <g transform="translate(110,110)">
+            {[0,20,40,60,80,100,120,140,160,180,200,220,240,260,280,300,320,340].map((deg, i) => (
+              <g key={i} transform={`rotate(${deg})`}>
+                <ellipse cx="0" cy="-52" rx="9" ry="24" fill="none" stroke="#b8892a" strokeWidth="0.8"/>
+                <ellipse cx="0" cy="-82" rx="5" ry="11" fill="none" stroke="#b8892a" strokeWidth="0.5"/>
+              </g>
+            ))}
+            <circle cx="0" cy="0" r="22" fill="none" stroke="#b8892a" strokeWidth="0.8"/>
+            <circle cx="0" cy="0" r="52" fill="none" stroke="#b8892a" strokeWidth="0.5"/>
+            <circle cx="0" cy="0" r="82" fill="none" stroke="#b8892a" strokeWidth="0.3"/>
+          </g>
+        </svg>
+        <p className="relative text-base text-[#6a5f52] leading-relaxed max-w-2xl mx-auto">
+          <span className="font-medium text-[#3d3830]">Āśrama</span> — a Sanskrit word for a place of refuge, effort, and inner work. An Ashram is a living community centred around spiritual practice, selfless service, and the guidance of a Guru, open to all sincere seekers.
         </p>
       </div>
 
