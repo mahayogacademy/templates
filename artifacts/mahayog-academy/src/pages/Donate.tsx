@@ -260,25 +260,26 @@ export default function Donate() {
       <Nav />
 
       {/* ── HERO ── */}
-      <section className="relative h-[60vh] min-h-[420px] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[70vh] min-h-[500px] flex items-end justify-center overflow-hidden pb-0">
         <img
           src={`${b}images/donate-hero.png`}
-          alt=""
-          aria-hidden
+          alt="Offering a diya — a lamp of devotion"
           className="absolute inset-0 w-full h-full object-cover object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#1a0f05]/60 via-[#1a0f05]/55 to-[#1a0f05]/70" />
-        <div className="relative z-10 text-center px-6 max-w-3xl mx-auto">
-          <div className="flex items-center justify-center gap-3 mb-5">
-            <div className="h-px w-10 bg-[#e8c56a]/70" />
-            <Heart className="w-4 h-4 text-[#e8c56a]" strokeWidth={1.5} />
-            <div className="h-px w-10 bg-[#e8c56a]/70" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#1a0f05]/65 via-[#2c1a08]/40 to-[#faf9f6]" />
+        <div className="relative z-10 text-center px-6 max-w-3xl mx-auto pb-20">
+          <div className="flex items-center justify-center gap-3 mb-6">
+            <div className="h-px w-12 bg-[#e8c56a]" />
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+              <path d="M12 2C12 2 15 9 22 12C22 12 15 15 12 22C12 22 9 15 2 12C2 12 9 9 12 2Z" stroke="#e8c56a" strokeWidth="1.2" fill="none"/>
+            </svg>
+            <div className="h-px w-12 bg-[#e8c56a]" />
           </div>
-          <h1 className="font-['Cormorant_Garamond'] text-5xl md:text-6xl font-light text-white leading-tight mb-5">
+          <h1 className="font-['Cormorant_Garamond'] text-5xl md:text-7xl font-light text-white leading-tight mb-4">
             Offer Your Support
           </h1>
-          <p className="text-[#f0e4c8] text-lg leading-relaxed max-w-xl mx-auto">
-            Every gift, however small, sustains a living place of wisdom, service, and divine grace.
+          <p className="text-lg text-[#f0e4c8] tracking-widest uppercase font-light">
+            Every gift sustains a living place of wisdom &amp; grace
           </p>
         </div>
       </section>
