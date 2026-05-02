@@ -107,19 +107,29 @@ export default function Nav() {
 
   return (
     <nav className="sticky top-0 z-50 bg-[#faf9f6]/97 backdrop-blur-sm border-b border-[#e8dece]">
-      <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-16">
+      <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-20">
 
         {/* ── Logo ── */}
         <Link href="/">
-          <span className="flex items-center gap-3 cursor-pointer group">
+          <span className="flex items-center gap-4 cursor-pointer group">
             <img
               src={`${import.meta.env.BASE_URL}images/logo.png`}
               alt="Mahayogi Siddhababa Spiritual Academy logo"
-              className="h-10 w-10 rounded-full object-cover shrink-0"
+              className="h-14 w-14 rounded-full object-cover shrink-0 shadow-sm"
             />
-            <span className="text-[#b8892a] group-hover:text-[#7a5518] transition-colors" style={{ fontFamily: "'Inter', sans-serif", lineHeight: 1.15 }}>
-              <span className="block text-[15px] font-semibold tracking-tight" style={{ color: "#2c1a08" }}>Mahayogi Siddhababa</span>
-              <span className="block text-[11px] font-medium tracking-[0.18em] uppercase" style={{ color: "#b8892a", marginTop: "1px" }}>Spiritual Academy</span>
+            <span style={{ lineHeight: 1.15 }}>
+              <span
+                className="block group-hover:text-[#7a5518] transition-colors"
+                style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "1.25rem", fontWeight: 500, color: "#2c1a08", letterSpacing: "0.03em" }}
+              >
+                Mahayogi Siddhababa
+              </span>
+              <span
+                className="block"
+                style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "0.8rem", fontWeight: 400, color: "#b8892a", letterSpacing: "0.22em", textTransform: "uppercase", marginTop: "1px" }}
+              >
+                Spiritual Academy
+              </span>
             </span>
           </span>
         </Link>
