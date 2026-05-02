@@ -40,14 +40,26 @@ const PATHS = [
 ];
 
 const GALLERY = [
-  { src: `${b}images/ashram-cows-sunset.jpg`, alt: "Gau Seva at sunset" },
-  { src: `${b}images/ashram-satsang-night.jpg`, alt: "Night satsang at the ashram" },
-  { src: `${b}images/hanumad-satsang-stage.jpg`, alt: "Satsang gathering" },
-  { src: `${b}images/ashram-prasad-1.jpg`, alt: "Prasad distribution" },
-  { src: `${b}images/hanumad-crowd-satsang.jpg`, alt: "Devotees at mahayagya" },
-  { src: `${b}images/ashram-koshi-river.jpg`, alt: "Koshi River at Barahachetra" },
-  { src: `${b}images/hanumad-saints-river.jpg`, alt: "Saints at the river" },
-  { src: `${b}images/ashram-hanuman-sunset.jpg`, alt: "Hanuman temple at dusk" },
+  { src: `${b}images/gallery-ganesh-puja.jpg`, caption: "Ganesh Chaturthi puja at the ashram" },
+  { src: `${b}images/gallery-gurudev-youth.jpg`, caption: "Siddhababa with youth seekers after satsang" },
+  { src: `${b}images/gallery-mass-meditation.jpg`, caption: "Mass Mahayog meditation session" },
+  { src: `${b}images/gallery-kalash-yatra.jpg`, caption: "Kalash Yatra procession at a sacred gathering" },
+  { src: `${b}images/ashram-cows-sunset.jpg`, caption: "Gau Seva at sunset — caring for sacred cows" },
+  { src: `${b}images/gallery-bhu-samadhi.jpg`, caption: "Bhu Samadhi — a medically witnessed yogic feat" },
+  { src: `${b}images/gallery-students-meditation.jpg`, caption: "Students learning Mahayog meditation" },
+  { src: `${b}images/gallery-dada-gurudev.jpg`, caption: "With Dada Gurudev at the Jagadguru announcement" },
+  { src: `${b}images/ashram-satsang-night.jpg`, caption: "Night satsang at the ashram" },
+  { src: `${b}images/gallery-saints-gathering.jpg`, caption: "Gathering of saints and mahants" },
+  { src: `${b}images/gallery-ashram-calf.jpg`, caption: "A newborn calf at the Goshala" },
+  { src: `${b}images/gallery-gurukul-girls.jpg`, caption: "Gurukul students offering prayers" },
+  { src: `${b}images/gallery-bageshwar-dham.jpg`, caption: "With Bageshwar Dham Sarkar" },
+  { src: `${b}images/hanumad-crowd-satsang.jpg`, caption: "Devotees at the Mahayagya" },
+  { src: `${b}images/gallery-with-prachanda.jpg`, caption: "Meeting with former Prime Minister Prachanda" },
+  { src: `${b}images/gallery-army-meditation.jpg`, caption: "Teaching Mahayog to Nepal Army personnel" },
+  { src: `${b}images/gallery-with-gyanendra.jpg`, caption: "Meeting with former King Gyanendra Shah" },
+  { src: `${b}images/gallery-temple-inauguration.jpg`, caption: "Temple inauguration ceremony" },
+  { src: `${b}images/ashram-prasad-1.jpg`, caption: "Prasad distribution to devotees" },
+  { src: `${b}images/ashram-koshi-river.jpg`, caption: "Koshi River at Barahachhetra" },
 ];
 
 export default function Home() {
@@ -275,28 +287,46 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── PHOTO GALLERY STRIP ── */}
+      {/* ── PHOTO GALLERY CAROUSEL ── */}
       <section className="py-20 overflow-hidden">
         <div className="max-w-6xl mx-auto px-6 mb-10 text-center">
           <span className="uppercase tracking-[0.3em] text-xs text-[#b8892a] font-medium">Life at the Ashram</span>
           <h2 className="font-['Cormorant_Garamond'] text-4xl font-light text-[#2e2820] mt-3">A Glimpse Within</h2>
         </div>
 
-        {/* Scrollable strip */}
-        <div className="flex gap-4 overflow-x-auto px-6 pb-4 snap-x snap-mandatory scrollbar-none"
-          style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}>
-          {GALLERY.map((g, i) => (
-            <div
-              key={i}
-              className="shrink-0 w-72 h-52 rounded-2xl overflow-hidden snap-start group"
-            >
-              <img
-                src={g.src}
-                alt={g.alt}
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-              />
-            </div>
-          ))}
+        <style>{`
+          @keyframes marquee-scroll {
+            0%   { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+          }
+          .marquee-track {
+            animation: marquee-scroll 60s linear infinite;
+          }
+          .marquee-track:hover {
+            animation-play-state: paused;
+          }
+        `}</style>
+
+        {/* Auto-scrolling strip */}
+        <div className="overflow-hidden">
+          <div className="marquee-track flex gap-4" style={{ width: "max-content" }}>
+            {[...GALLERY, ...GALLERY].map((g, i) => (
+              <div
+                key={i}
+                className="shrink-0 w-72 h-52 rounded-2xl overflow-hidden group relative"
+              >
+                <img
+                  src={g.src}
+                  alt={g.caption}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#1a0f05]/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <p className="absolute bottom-0 left-0 right-0 px-3 py-2.5 text-white text-xs leading-snug translate-y-full group-hover:translate-y-0 transition-transform duration-300 font-['Inter']">
+                  {g.caption}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
 
         <div className="text-center mt-8">
