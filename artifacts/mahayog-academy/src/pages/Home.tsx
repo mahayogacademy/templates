@@ -74,7 +74,7 @@ export default function Home() {
       <Nav />
 
       {/* ── HERO ── */}
-      <section className="relative flex items-center justify-center overflow-hidden" style={{ minHeight: "75vh" }}>
+      <section className="relative flex items-center justify-center overflow-hidden" style={{ minHeight: "calc(100vh - 64px)" }}>
         {/* Full-width hero image */}
         <div className="absolute inset-0">
           <img src={`${b}images/hero-nepal-landscape.png`} alt="" aria-hidden
@@ -85,6 +85,15 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#faf9f6]" />
 
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
+          {/* Sacred symbols */}
+          <div className="flex justify-center mb-6">
+            <img
+              src={`${b}images/dhanush-band.png`}
+              alt="Sacred Vaishnava symbols"
+              className="h-20 w-auto object-contain"
+              style={{ filter: "brightness(1) contrast(1.05) drop-shadow(0 2px 8px rgba(0,0,0,0.4))" }}
+            />
+          </div>
           {/* Ornament */}
           <div className="flex items-center justify-center gap-4 mb-8">
             <div className="h-px w-14 bg-[#e8c56a]/80" />
@@ -124,18 +133,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── SACRED SYMBOLS ── */}
-      <section className="bg-[#faf9f6] py-10 flex justify-center px-6">
-        <img
-          src={`${b}images/dhanush-band.png`}
-          alt="Sacred Vaishnava symbols — arrows, Urdhva Pundra and bow"
-          className="h-36 w-auto object-contain"
-          style={{ filter: "brightness(0.95) contrast(1.05)" }}
-        />
-      </section>
-
       {/* ── MISSION STATEMENT ── */}
-      <section className="pt-8 pb-24 px-6">
+      <section className="py-24 px-6">
         <div className="max-w-3xl mx-auto text-center">
           <div className="flex items-center justify-center gap-4 mb-8">
             <div className="h-px w-10 bg-[#b8892a]/40" />
