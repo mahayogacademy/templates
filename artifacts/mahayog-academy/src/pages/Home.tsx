@@ -55,7 +55,7 @@ export default function Home() {
       <section className="relative flex items-center justify-center overflow-hidden" style={{ minHeight: "calc(100vh - 64px)" }}>
         {/* Full-width hero image */}
         <div className="absolute inset-0">
-          <img src={`${b}images/ashram-extra-river-stones.jpg`} alt="" aria-hidden
+          <img src={`${b}images/hero-nepal-landscape.png`} alt="" aria-hidden
             className="w-full h-full object-cover object-center" />
         </div>
         {/* Unified dark veil + bottom cream fade */}

@@ -744,3 +744,9 @@ id = "eGo7qywdWHwf4xyK04989"
 uri = "file://artifacts/mahayog-academy/public/images/collage-temple-bells.png"
 type = "image"
 title = "temple bells with marigolds"
+
+[[generated]]
+id = "qqYL7rgW57keIoewByTCJ"
+uri = "file://artifacts/mahayog-academy/public/images/hero-nepal-landscape.png"
+type = "image"
+title = "generated_image"
