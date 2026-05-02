@@ -36,7 +36,7 @@ const PATHS = [
     href: "/projects",
     img: `${b}images/selfless-service.jpg`,
     overlay: "bg-gradient-to-t from-[#1a0f05]/50 to-transparent",
-    desc: "Building Vedic learning centers and caring for sacred cows to serving daily free meals and nurturing youth — selfless service as the highest spiritual practice.",
+    desc: "From building Vedic learning centers and caring for sacred cows to serving daily free meals and nurturing youth — selfless service as the highest spiritual practice.",
   },
 ];
 
