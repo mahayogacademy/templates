@@ -1,0 +1,268 @@
+import { useState } from "react";
+import Nav from "@/components/Nav";
+import { Link } from "wouter";
+import { ArrowRight, Copy, CheckCheck, Heart } from "lucide-react";
+
+const b = import.meta.env.BASE_URL;
+
+const SEVA_OPTIONS = [
+  {
+    name: "Gau Seva",
+    sub: "Care of Sacred Cows",
+    img: "seva-gau-seva.png",
+    description:
+      "The ashram's goshala shelters and tends to sacred cows, which are revered as an embodiment of divine grace. Your contribution provides fodder, care, and shelter for these gentle beings.",
+  },
+  {
+    name: "Hanuman Pūjā",
+    sub: "Temple Worship",
+    img: "seva-hanuman-puja.png",
+    description:
+      "Daily pūjā, oil lamps, flowers, and offerings sustain the Hanuman Temple. Your donation keeps the sacred flame burning and the atmosphere of devotion alive.",
+  },
+  {
+    name: "Akhanda Kīrtan",
+    sub: "Continuous Chanting",
+    img: "seva-akhanda-kirtan.png",
+    description:
+      "Since 2010, the Ram mantra has been chanted without interruption, 24 hours a day. Supporting this seva ensures this unbroken stream of sacred sound continues.",
+  },
+  {
+    name: "Brahmand Bhojan",
+    sub: "Prasad Distribution",
+    img: "seva-brahmand-bhojan.png",
+    description:
+      "Every day, pilgrims, seekers, and the local community receive prasad at the ashram. Your offering feeds hundreds and embodies the spirit of selfless giving.",
+  },
+];
+
+const NEPAL_ACCOUNT = {
+  bankName: "Nepal SBI Bank Ltd.",
+  accountName: "Jagadguru Ramanadacharya Seva Peeth",
+  accountNumber: "XXXXXXXXXXXXXXXX",
+  branch: "Itahari Branch, Sunsari",
+  swiftCode: "NSBINPKA",
+};
+
+const INTL_ACCOUNT = {
+  bankName: "Nepal SBI Bank Ltd.",
+  accountName: "Jagadguru Ramanadacharya Seva Peeth",
+  accountNumber: "XXXXXXXXXXXXXXXX",
+  swiftCode: "NSBINPKA",
+  iban: "—",
+  address: "Baharachettra, Sunsari, Nepal",
+};
+
+function CopyField({ label, value }: { label: string; value: string }) {
+  const [copied, setCopied] = useState(false);
+  function copy() {
+    navigator.clipboard.writeText(value).then(() => {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    });
+  }
+  return (
+    <div className="flex items-center justify-between py-3 border-b border-[#e8dece] last:border-b-0 gap-4">
+      <div>
+        <p className="text-[10px] uppercase tracking-[0.2em] text-[#9a8f84] font-medium mb-0.5">{label}</p>
+        <p className="text-base text-[#2e2820] font-medium">{value}</p>
+      </div>
+      <button
+        onClick={copy}
+        className="shrink-0 flex items-center gap-1.5 text-xs text-[#b8892a] hover:text-[#9d7422] transition-colors px-3 py-1.5 rounded-full border border-[#e2d0b8] hover:border-[#d4a843] bg-white"
+      >
+        {copied ? <CheckCheck className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
+        {copied ? "Copied" : "Copy"}
+      </button>
+    </div>
+  );
+}
+
+export default function Donate() {
+  return (
+    <div className="bg-[#faf9f6] text-[#3d3830] min-h-screen">
+      <Nav />
+
+      {/* ── HERO ── */}
+      <section className="relative h-[60vh] min-h-[420px] flex items-center justify-center overflow-hidden">
+        <img
+          src={`${b}images/donate-hero.png`}
+          alt=""
+          aria-hidden
+          className="absolute inset-0 w-full h-full object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#1a0f05]/60 via-[#1a0f05]/55 to-[#1a0f05]/70" />
+        <div className="relative z-10 text-center px-6 max-w-3xl mx-auto">
+          <div className="flex items-center justify-center gap-3 mb-5">
+            <div className="h-px w-10 bg-[#e8c56a]/70" />
+            <Heart className="w-4 h-4 text-[#e8c56a]" strokeWidth={1.5} />
+            <div className="h-px w-10 bg-[#e8c56a]/70" />
+          </div>
+          <h1 className="font-['Cormorant_Garamond'] text-5xl md:text-6xl font-light text-white leading-tight mb-5">
+            Offer Your Support
+          </h1>
+          <p className="text-[#f0e4c8] text-lg leading-relaxed max-w-xl mx-auto">
+            Every gift, however small, sustains a living place of wisdom, service, and divine grace.
+          </p>
+        </div>
+      </section>
+
+      {/* ── WHY DONATE ── */}
+      <section className="py-20 px-6">
+        <div className="max-w-4xl mx-auto text-center">
+          <span className="uppercase tracking-[0.25em] text-xs text-[#b8892a] font-medium">The Sacred Mission</span>
+          <h2 className="font-['Cormorant_Garamond'] text-4xl md:text-5xl font-light text-[#2e2820] mt-3 mb-8 leading-snug">
+            Why Your Gift Matters
+          </h2>
+          <div className="h-px w-12 bg-[#b8892a]/50 mx-auto mb-8" />
+          <p className="text-lg text-[#5a5248] leading-relaxed mb-6">
+            Jagadguru Ramanadacharya Seva Peeth — the head ashram at Baharachettra, Nepal — is a not-for-profit, volunteer-run centre of Sanātan Dharma. It receives no government funding and holds no commercial interests.
+          </p>
+          <p className="text-lg text-[#5a5248] leading-relaxed mb-6">
+            Its work — daily pūjā, the Akhanda Kīrtan, gau seva, prasad distribution, spiritual education, and the welcoming of seekers from every corner of the world — is sustained entirely by the generosity of devotees and well-wishers.
+          </p>
+          <p className="font-['Cormorant_Garamond'] text-2xl italic text-[#9d7422] leading-relaxed">
+            "To support this ashram is to become part of its sacred current — to contribute to something that gives, teaches, and serves without ceasing."
+          </p>
+        </div>
+      </section>
+
+      {/* ── SEVA OPTIONS ── */}
+      <section className="py-16 px-6 bg-[#f5ece0] border-t border-b border-[#e2d0b8]">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <span className="uppercase tracking-[0.25em] text-xs text-[#b8892a] font-medium">Choose Your Offering</span>
+            <h2 className="font-['Cormorant_Garamond'] text-4xl font-light text-[#2e2820] mt-2">Where Your Gift Goes</h2>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {SEVA_OPTIONS.map((s) => (
+              <div
+                key={s.name}
+                className="flex flex-col rounded-2xl bg-white border border-[#e2d0b8] shadow-sm hover:shadow-md hover:border-[#d4a843]/50 transition-all duration-300 overflow-hidden"
+              >
+                <div className="overflow-hidden" style={{ height: "160px" }}>
+                  <img
+                    src={`${b}images/${s.img}`}
+                    alt={s.name}
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-5 flex flex-col flex-1">
+                  <p className="font-['Cormorant_Garamond'] text-xl font-semibold text-[#2e2820] mb-0.5">{s.name}</p>
+                  <p className="text-xs uppercase tracking-[0.15em] text-[#b8892a] font-medium mb-3">{s.sub}</p>
+                  <p className="text-sm text-[#6a6058] leading-relaxed flex-1">{s.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── HOW TO DONATE ── */}
+      <section className="py-20 px-6">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-14">
+            <span className="uppercase tracking-[0.25em] text-xs text-[#b8892a] font-medium">Bank Transfer</span>
+            <h2 className="font-['Cormorant_Garamond'] text-4xl font-light text-[#2e2820] mt-2">How to Donate</h2>
+            <p className="text-base text-[#6a6058] mt-4 max-w-xl mx-auto leading-relaxed">
+              All donations are made directly via bank transfer to the ashram's registered account. Please use the details below and include your name and purpose in the payment reference.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+
+            {/* Nepal / Domestic */}
+            <div className="bg-white rounded-2xl border border-[#e8dece] p-8 shadow-sm">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-8 h-8 rounded-full bg-[#b8892a]/10 flex items-center justify-center shrink-0">
+                  <span className="text-sm">🇳🇵</span>
+                </div>
+                <div>
+                  <p className="text-xs uppercase tracking-[0.2em] text-[#9a8f84] font-medium">Domestic Transfer</p>
+                  <p className="font-['Cormorant_Garamond'] text-xl font-semibold text-[#2e2820]">Nepal</p>
+                </div>
+              </div>
+              <CopyField label="Bank Name" value={NEPAL_ACCOUNT.bankName} />
+              <CopyField label="Account Name" value={NEPAL_ACCOUNT.accountName} />
+              <CopyField label="Account Number" value={NEPAL_ACCOUNT.accountNumber} />
+              <CopyField label="Branch" value={NEPAL_ACCOUNT.branch} />
+              <CopyField label="SWIFT / BIC" value={NEPAL_ACCOUNT.swiftCode} />
+            </div>
+
+            {/* International */}
+            <div className="bg-white rounded-2xl border border-[#e8dece] p-8 shadow-sm">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-8 h-8 rounded-full bg-[#b8892a]/10 flex items-center justify-center shrink-0">
+                  <span className="text-sm">🌍</span>
+                </div>
+                <div>
+                  <p className="text-xs uppercase tracking-[0.2em] text-[#9a8f84] font-medium">International Wire</p>
+                  <p className="font-['Cormorant_Garamond'] text-xl font-semibold text-[#2e2820]">Worldwide</p>
+                </div>
+              </div>
+              <CopyField label="Bank Name" value={INTL_ACCOUNT.bankName} />
+              <CopyField label="Account Name" value={INTL_ACCOUNT.accountName} />
+              <CopyField label="Account Number" value={INTL_ACCOUNT.accountNumber} />
+              <CopyField label="SWIFT / BIC" value={INTL_ACCOUNT.swiftCode} />
+              <CopyField label="Bank Address" value={INTL_ACCOUNT.address} />
+            </div>
+
+          </div>
+
+          {/* Note */}
+          <div className="mt-8 p-6 bg-[#fdf6ec] border border-[#e8d8b8] rounded-2xl text-center">
+            <p className="text-sm text-[#5a5248] leading-relaxed">
+              Please include your <strong className="text-[#2e2820]">full name</strong> and the <strong className="text-[#2e2820]">purpose of donation</strong> (e.g. "Gau Seva" or "General Ashram Support") in your payment reference. For large donations or to receive a receipt, please{" "}
+              <Link href="/contact">
+                <span className="text-[#b8892a] hover:text-[#9d7422] underline underline-offset-2 cursor-pointer transition-colors">contact us</span>
+              </Link>
+              .
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ── QUOTE / CLOSING ── */}
+      <section className="relative py-24 px-6 overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src={`${b}images/donate-hero.png`}
+            alt=""
+            aria-hidden
+            className="w-full h-full object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-[#1a0f05]/78" />
+        </div>
+        <div className="relative z-10 max-w-2xl mx-auto text-center">
+          <div className="flex items-center justify-center gap-3 mb-6">
+            <div className="h-px w-10 bg-[#e8c56a]/60" />
+            <Heart className="w-4 h-4 text-[#e8c56a]" strokeWidth={1.5} />
+            <div className="h-px w-10 bg-[#e8c56a]/60" />
+          </div>
+          <p className="font-['Cormorant_Garamond'] text-3xl md:text-4xl font-light text-white italic leading-relaxed mb-8">
+            "No act of giving is ever lost. Every offering made with a pure heart becomes a seed of grace."
+          </p>
+          <p className="text-[#d4c4a8] text-sm uppercase tracking-[0.2em]">Jagadguru Mahayogi Siddhababa</p>
+          <div className="mt-10">
+            <Link href="/contact">
+              <span className="inline-flex items-center gap-2 bg-[#b8892a] hover:bg-[#9d7422] text-white text-sm px-8 py-3.5 rounded-full tracking-wider transition-colors duration-200 cursor-pointer">
+                Get in Touch
+                <ArrowRight className="w-4 h-4" strokeWidth={1.5} />
+              </span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ── FOOTER ── */}
+      <footer className="py-10 px-6 border-t border-[#e8dece] bg-[#f5ede0]">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+          <span className="font-['Cormorant_Garamond'] text-lg font-medium text-[#b8892a]">
+            Mahayogi Siddhababa Spiritual Academy
+          </span>
+          <p className="text-xs text-[#9a8f84] text-center">A not-for-profit, volunteer-run organization, Nepal</p>
+        </div>
+      </footer>
+    </div>
+  );
+}
