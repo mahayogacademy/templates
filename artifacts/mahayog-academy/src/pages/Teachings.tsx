@@ -464,7 +464,7 @@ export default function Teachings() {
       <section className="py-14 px-6">
         <div className="max-w-6xl mx-auto">
 
-          {activeFilter === "all" && !search && featured && (
+          {activeFilter === "all" && !search && featured && (!activeTag || featured.tags.includes(activeTag)) && (
             <FeaturedCard item={featured} />
           )}
 
