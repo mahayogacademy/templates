@@ -636,3 +636,27 @@ id = "d91bss_TrMU-jrEwBdx2Y"
 uri = "file://artifacts/mahayog-academy/public/images/yt-cta-bg.png"
 type = "image"
 title = "spiritual gathering golden hour background"
+
+[[generated]]
+id = "y-svRv_XXHPUpwHslQ1Qe"
+uri = "file://artifacts/mahayog-academy/public/images/seva-gau-seva.png"
+type = "image"
+title = "gau seva sacred cows"
+
+[[generated]]
+id = "VodbRj5I5ZZ_QlEVKabci"
+uri = "file://artifacts/mahayog-academy/public/images/seva-hanuman-puja.png"
+type = "image"
+title = "hanuman puja temple worship"
+
+[[generated]]
+id = "5TSmJRj7y_CRPqfaiz70n"
+uri = "file://artifacts/mahayog-academy/public/images/seva-akhanda-kirtan.png"
+type = "image"
+title = "akhanda kirtan chanting"
+
+[[generated]]
+id = "q1BRRzc5WLa-xY-q6UKpg"
+uri = "file://artifacts/mahayog-academy/public/images/seva-brahmand-bhojan.png"
+type = "image"
+title = "brahmand bhojan prasad"

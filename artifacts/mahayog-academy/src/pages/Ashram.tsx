@@ -563,15 +563,23 @@ export default function Ashram() {
           {/* Seva options grid */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
             {[
-              { name: "Gau Seva",        sub: "Care of Sacred Cows",    symbol: "🐄" },
-              { name: "Hanuman Pūjā",    sub: "Temple Worship",         symbol: "🪔" },
-              { name: "Akhanda Kīrtan",  sub: "Continuous Chanting",    symbol: "🎵" },
-              { name: "Brahmand Bhojan", sub: "Prasad Distribution",    symbol: "🌿" },
+              { name: "Gau Seva",        sub: "Care of Sacred Cows",  img: "seva-gau-seva.png" },
+              { name: "Hanuman Pūjā",    sub: "Temple Worship",       img: "seva-hanuman-puja.png" },
+              { name: "Akhanda Kīrtan",  sub: "Continuous Chanting",  img: "seva-akhanda-kirtan.png" },
+              { name: "Brahmand Bhojan", sub: "Prasad Distribution",  img: "seva-brahmand-bhojan.png" },
             ].map((s) => (
-              <div key={s.name} className="flex flex-col items-center text-center p-6 rounded-2xl bg-white border border-[#e2d0b8] shadow-sm hover:shadow-md hover:border-[#d4a843]/50 transition-all duration-300">
-                <span className="text-3xl mb-3">{s.symbol}</span>
-                <span className="font-['Cormorant_Garamond'] text-xl font-semibold text-[#2e2820] leading-snug mb-1">{s.name}</span>
-                <span className="text-sm text-[#9a8f84]">{s.sub}</span>
+              <div key={s.name} className="flex flex-col rounded-2xl bg-white border border-[#e2d0b8] shadow-sm hover:shadow-md hover:border-[#d4a843]/50 transition-all duration-300 overflow-hidden">
+                <div className="w-full overflow-hidden" style={{ height: "160px" }}>
+                  <img
+                    src={`${b2}images/${s.img}`}
+                    alt={s.name}
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-4 text-center">
+                  <span className="font-['Cormorant_Garamond'] text-xl font-semibold text-[#2e2820] leading-snug block mb-0.5">{s.name}</span>
+                  <span className="text-sm text-[#9a8f84]">{s.sub}</span>
+                </div>
               </div>
             ))}
           </div>
