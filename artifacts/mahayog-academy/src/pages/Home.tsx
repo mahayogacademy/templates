@@ -128,7 +128,7 @@ export default function Home() {
             <Link href="/meditation">
               <div className="group relative rounded-3xl overflow-hidden h-[440px] md:h-[500px] cursor-pointer shadow-lg hover:shadow-2xl hover:shadow-[#b8892a]/20 transition-all duration-500">
                 <img
-                  src={`${b}images/ashram-extra-sanyasi-river.jpg`}
+                  src={`${b}images/mahayog-diksha-jap.jpg`}
                   alt="Mahayog"
                   className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
                 />
