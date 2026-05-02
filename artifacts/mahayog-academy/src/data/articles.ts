@@ -188,7 +188,7 @@ export const ARTICLES: Article[] = [
     id: "what-is-prana",
     title: "What Is Prāṇa?",
     subtitle: "A Yogic Science of Life, Consciousness, and Vital Force",
-    tag: "Yoga",
+    tag: "Prāṇa",
     date: "25 March 2025",
     thumbnail: `${b}images/teachings-what-is-prana.png`,
     excerpt:
@@ -233,7 +233,7 @@ export const ARTICLES: Article[] = [
     id: "refine-prana",
     title: "How to Refine Prāṇa",
     subtitle: "Practical guidance for daily life and sādhana",
-    tag: "Practice",
+    tag: "Prāṇa",
     date: "18 March 2025",
     thumbnail: `${b}images/teachings-refine-prana.png`,
     excerpt:
