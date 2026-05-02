@@ -233,6 +233,29 @@ export default function Ashram() {
         </div>
       </section>
 
+      {/* ── WHAT IS AN ASHRAM ── */}
+      <section className="py-20 px-6 bg-[#fdf6ec]">
+        <div className="max-w-3xl mx-auto text-center">
+          <div className="flex items-center justify-center gap-4 mb-6">
+            <div className="h-px w-10 bg-[#b8892a]/40" />
+            <span className="uppercase tracking-[0.3em] text-xs text-[#b8892a] font-medium">Understanding the Tradition</span>
+            <div className="h-px w-10 bg-[#b8892a]/40" />
+          </div>
+          <h2 className="font-['Cormorant_Garamond'] text-4xl md:text-5xl font-light text-[#3d3830] mb-8 leading-snug">
+            What is an Ashram?
+          </h2>
+          <p className="text-base text-[#5a5248] leading-relaxed mb-5">
+            The word <span className="text-[#3d3830] font-medium">ashram</span> comes from the Sanskrit <span className="text-[#3d3830] font-medium">āśrama</span> — meaning a place of refuge, effort, and inner work. Traditionally, an ashram is a residential community centred around a spiritual teacher, where people gather to learn, practise, serve, and live with greater intention and clarity.
+          </p>
+          <p className="text-base text-[#5a5248] leading-relaxed mb-5">
+            Unlike a retreat centre or temple, an ashram is a living environment — a place where the rhythms of daily life themselves become the practice. Mornings begin with meditation and prayer. Days are shaped by study, selfless service, and communal activity. Evenings close with satsang — gathering in the presence of truth.
+          </p>
+          <p className="text-base text-[#5a5248] leading-relaxed">
+            An ashram welcomes people of all backgrounds and beliefs. There is no requirement to adopt a particular religion or worldview — only a sincere wish to grow inwardly, to serve, and to live with greater awareness.
+          </p>
+        </div>
+      </section>
+
       {/* ── INTRO + IMAGE ── */}
       <section className="py-20 px-6">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-14 items-center">
