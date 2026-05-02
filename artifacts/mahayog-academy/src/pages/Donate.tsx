@@ -266,7 +266,10 @@ export default function Donate() {
           alt="Offering a diya — a lamp of devotion"
           className="absolute inset-0 w-full h-full object-cover object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#1a0f05]/65 via-[#2c1a08]/40 to-[#faf9f6]" />
+        {/* top-to-bottom cream fade for seamless transition */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#1a0f05]/55 via-[#1a0f05]/20 to-[#faf9f6]" />
+        {/* bottom-to-mid dark layer so text stays legible */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#1a0f05]/80 via-[#1a0f05]/50 to-transparent" />
         <div className="relative z-10 text-center px-6 max-w-3xl mx-auto pb-20">
           <div className="flex items-center justify-center gap-3 mb-6">
             <div className="h-px w-12 bg-[#e8c56a]" />
