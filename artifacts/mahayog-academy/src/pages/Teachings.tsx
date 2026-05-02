@@ -1,16 +1,16 @@
 import { useState, useMemo } from "react";
 import { Link } from "wouter";
 import Nav from "@/components/Nav";
-import { Search, Play, ArrowRight, BookOpen, Newspaper, Video, ChevronRight } from "lucide-react";
+import { Search, Play, ArrowRight, BookOpen, Newspaper, Video, ChevronRight, Mic2 } from "lucide-react";
 import { ARTICLES } from "@/data/articles";
 
 const b = import.meta.env.BASE_URL;
 
-type ContentType = "all" | "article" | "video" | "news";
+type ContentType = "all" | "article" | "video" | "news" | "interview";
 
 interface Item {
   id: string;
-  type: "article" | "video" | "news";
+  type: "article" | "video" | "news" | "interview";
   title: string;
   excerpt: string;
   date: string;
@@ -104,27 +104,47 @@ const NEWS_ITEMS: Item[] = [
   },
 ];
 
-const ITEMS: Item[] = [...ARTICLE_ITEMS, ...VIDEO_ITEMS, ...NEWS_ITEMS];
+/* ── Interviews ── */
+const INTERVIEW_PLAYLIST = "https://youtube.com/playlist?list=PLVoaXKRxO25oYufjJ_Cbr7b1axcIV3TJR";
+
+const INTERVIEW_ITEMS: Item[] = [
+  {
+    id: "i-kumbh-press",
+    type: "interview",
+    title: "Address to the Kumbh Mela Press Media — Prayagraj 2025",
+    excerpt: "Jagadguru Mahayogi Siddhababa speaks directly to the assembled press media at Prayagraj Kumbhmela 2025, sharing his vision for Sanātana Dharma, the role of saints in society, and the spiritual significance of the world's largest human gathering.",
+    date: "Prayagraj Kumbhmela 2025",
+    tags: ["Kumbhmela", "Press"],
+    thumbnail: "https://i.ytimg.com/vi/xeJyAmLJxRk/hqdefault.jpg",
+    duration: "51 min",
+    href: "https://www.youtube.com/watch?v=xeJyAmLJxRk",
+  },
+];
+
+const ITEMS: Item[] = [...ARTICLE_ITEMS, ...VIDEO_ITEMS, ...NEWS_ITEMS, ...INTERVIEW_ITEMS];
 
 /* ── UI helpers ── */
 
 const TYPE_LABELS: Record<string, { label: string; color: string; bg: string }> = {
-  article: { label: "Article", color: "text-[#b8892a]", bg: "bg-[#b8892a]/10" },
-  video:   { label: "Video",   color: "text-[#8b5a2a]", bg: "bg-[#8b5a2a]/10" },
-  news:    { label: "News",    color: "text-[#4a7a5a]", bg: "bg-[#4a7a5a]/10" },
+  article:   { label: "Article",   color: "text-[#b8892a]", bg: "bg-[#b8892a]/10" },
+  video:     { label: "Video",     color: "text-[#8b5a2a]", bg: "bg-[#8b5a2a]/10" },
+  news:      { label: "News",      color: "text-[#4a7a5a]", bg: "bg-[#4a7a5a]/10" },
+  interview: { label: "Interview", color: "text-[#5a4a8a]", bg: "bg-[#5a4a8a]/10" },
 };
 
 const TYPE_ICONS = {
-  article: BookOpen,
-  video:   Video,
-  news:    Newspaper,
+  article:   BookOpen,
+  video:     Video,
+  news:      Newspaper,
+  interview: Mic2,
 };
 
 const FILTERS: { key: ContentType; label: string }[] = [
-  { key: "all",     label: "All"      },
-  { key: "article", label: "Articles" },
-  { key: "video",   label: "Videos"   },
-  { key: "news",    label: "News"     },
+  { key: "all",       label: "All"        },
+  { key: "article",   label: "Articles"   },
+  { key: "video",     label: "Videos"     },
+  { key: "interview", label: "Interviews" },
+  { key: "news",      label: "News"       },
 ];
 
 function TypeBadge({ type }: { type: Item["type"] }) {
@@ -180,7 +200,7 @@ function ContentCard({ item }: { item: Item }) {
         <div className="flex items-center justify-between pt-3 mt-3 border-t border-[#e8dece] flex-shrink-0">
           <span className="text-[#9a8070] text-xs">{item.date}</span>
           <span className={`text-xs font-medium flex items-center gap-1 ${TYPE_LABELS[item.type].color}`}>
-            {item.type === "video" ? "Watch" : "Read"}
+            {item.type === "video" || item.type === "interview" ? "Watch" : "Read"}
             <ChevronRight size={13} />
           </span>
         </div>
@@ -381,11 +401,33 @@ export default function Teachings() {
           </div>
 
           {filtered.length > 0 ? (
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {filtered.map(item => (
-                <ContentCard key={item.id} item={item} />
-              ))}
-            </div>
+            <>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                {filtered.map(item => (
+                  <ContentCard key={item.id} item={item} />
+                ))}
+              </div>
+
+              {(activeFilter === "interview" || (activeFilter === "all" && !search && !activeTag)) && (
+                <div className="mt-10 flex flex-col sm:flex-row items-center justify-between gap-4 bg-[#5a4a8a]/6 border border-[#5a4a8a]/20 rounded-2xl px-6 py-5">
+                  <div className="flex items-start gap-3">
+                    <Mic2 size={18} className="text-[#5a4a8a] shrink-0 mt-0.5" />
+                    <div>
+                      <p className="text-[#2c1a08] text-sm font-medium leading-snug">More interviews available on the playlist</p>
+                      <p className="text-[#8a7a6a] text-xs mt-0.5">Additional interviews will appear here as they become publicly available on YouTube.</p>
+                    </div>
+                  </div>
+                  <a
+                    href={INTERVIEW_PLAYLIST}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="shrink-0 inline-flex items-center gap-2 border border-[#5a4a8a]/40 text-[#5a4a8a] hover:bg-[#5a4a8a]/8 text-xs px-5 py-2.5 rounded-full transition-colors whitespace-nowrap"
+                  >
+                    <Play size={12} fill="currentColor" /> View Full Playlist
+                  </a>
+                </div>
+              )}
+            </>
           ) : (
             <div className="text-center py-20">
               <p className="font-['Cormorant_Garamond'] text-2xl text-[#9a8070] font-light mb-2">Nothing found</p>
