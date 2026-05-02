@@ -65,7 +65,7 @@ export const ARTICLES: Article[] = [
     id: "guru-imperishable-soul",
     title: "The Guru and the Imperishable Soul",
     subtitle: "Understanding the Conscious Principle and the Path to Realization",
-    tag: "Gurudev",
+    tag: "Guru",
     date: "14 April 2025",
     thumbnail: `${b}images/teachings-guru-soul.png`,
     excerpt:
