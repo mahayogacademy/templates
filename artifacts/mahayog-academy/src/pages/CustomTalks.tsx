@@ -76,7 +76,7 @@ export default function CustomTalks() {
           <img
             src={`${b}images/custom-talks-hero.jpg`}
             alt="Spiritual talk at Mahayogi Siddhababa Spiritual Academy with audience"
-            className="w-full h-full object-cover object-[center_40%]"
+            className="w-full h-full object-cover object-[center_20%]"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-[#1a0803]/80 via-[#2c1205]/50 to-[#faf9f6]" />
         </div>
