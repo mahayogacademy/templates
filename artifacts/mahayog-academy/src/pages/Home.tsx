@@ -159,7 +159,7 @@ export default function Home() {
       {/* ── MISSION + THREE PILLARS (shared decorative background) ── */}
       <div className="relative overflow-hidden" style={{ background: "radial-gradient(ellipse at 50% 20%, #f5ede0 0%, #faf9f6 65%)" }}>
         {/* Faint SVG mandala watermark */}
-        <svg className="absolute inset-0 w-full h-full opacity-[0.035] pointer-events-none" viewBox="0 0 900 700" preserveAspectRatio="xMidYMid slice" aria-hidden>
+        <svg className="absolute inset-0 w-full h-full opacity-[0.12] pointer-events-none" viewBox="0 0 900 700" preserveAspectRatio="xMidYMid slice" aria-hidden>
           <g transform="translate(450,350)">
             {[0,20,40,60,80,100,120,140,160,180,200,220,240,260,280,300,320,340].map((deg, i) => (
               <g key={i} transform={`rotate(${deg})`}>
