@@ -105,9 +105,8 @@ export default function Home() {
           <img src={`${b}images/hero-nepal-landscape.png`} alt="" aria-hidden
             className="w-full h-full object-cover object-center" />
         </div>
-        {/* Subtle veil + bottom fade only */}
-        <div className="absolute inset-0 bg-[#1a0f05]/30" />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent from-[55%] via-[#1a0f05]/50 via-[78%] to-[#1a0f05]" />
+        {/* Dark overlay fading to cream at the bottom */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#1a0f05]/55 via-[#1a0f05]/60 via-[65%] to-[#faf9f6]" />
 
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
           {/* Sacred symbols */}
