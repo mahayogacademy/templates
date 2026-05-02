@@ -121,7 +121,7 @@ export default function Home() {
         {/* Sacred symbols — anchored to bottom of hero, hangs into next section */}
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 z-20 w-full max-w-3xl px-4 flex justify-center">
           <img
-            src={`${b}images/sacred-symbols.gif`}
+            src={`${b}images/sacred-symbols.png`}
             alt="Sacred symbols of the Ramanandi Vaishnava tradition"
             className="w-full h-auto max-h-52 object-contain"
             style={{
