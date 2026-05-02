@@ -90,7 +90,7 @@ const NEWS_ITEMS: Item[] = [
     date: "6 December 2025",
     tags: ["Kumbhmela", "Press"],
     thumbnail: `${b}images/news-tapovan-encroachment.png`,
-    href: "#",
+    href: "/news/n-tapovan",
   },
   {
     id: "n-goda-parikrama",
@@ -100,7 +100,7 @@ const NEWS_ITEMS: Item[] = [
     date: "6 December 2025",
     tags: ["Events", "Press"],
     thumbnail: `${b}images/news-goda-parikrama.png`,
-    href: "#",
+    href: "/news/n-goda-parikrama",
   },
 ];
 

@@ -28,6 +28,7 @@ import Volunteer from "@/pages/Volunteer";
 import CustomTalks from "@/pages/CustomTalks";
 import Teachings from "@/pages/Teachings";
 import ArticleDetail from "@/pages/ArticleDetail";
+import NewsDetail from "@/pages/NewsDetail";
 import ScrollToTop from "@/components/ScrollToTop";
 
 const queryClient = new QueryClient();
@@ -64,6 +65,7 @@ function Router() {
       <Route path="/custom-talks" component={CustomTalks} />
       <Route path="/teachings" component={Teachings} />
       <Route path="/teachings/:id" component={ArticleDetail} />
+      <Route path="/news/:id" component={NewsDetail} />
       <Route path="/events/historic/:slug" component={HistoricEventDetail} />
       <Route component={NotFound} />
     </Switch>
