@@ -477,7 +477,7 @@ export default function Home() {
       {/* ── CLOSING QUOTE ── */}
       <section className="relative py-28 px-6 overflow-hidden">
         <img
-          src={`${b}images/quote-banner-bg.png`}
+          src={`${b}images/gallery-shaktipat-deeksha.jpg`}
           alt=""
           aria-hidden
           className="absolute inset-0 w-full h-full object-cover object-center"
@@ -492,7 +492,7 @@ export default function Home() {
             <div className="h-px w-10 bg-[#e8c56a]/60" />
           </div>
           <p className="font-['Cormorant_Garamond'] text-3xl md:text-4xl font-light text-white italic leading-relaxed mb-10">
-            "Come with an open heart. Leave with a quiet mind. Return with a changed life."
+            "True change begins not in the world outside — it begins in the silence and sincerity of the seeker within."
           </p>
           <Link href="/contact">
             <span className="inline-flex items-center gap-2 border border-[#e8c56a]/60 hover:border-[#e8c56a] text-[#e8c56a] hover:text-white text-sm px-8 py-3.5 rounded-full tracking-wider transition-all duration-200 cursor-pointer">
