@@ -95,7 +95,7 @@ const NEWS_ITEMS: Item[] = [
   {
     id: "n-goda-parikrama",
     type: "news",
-    title: "Goda Parikrama Begins — 500+ Saints from Across India and the World",
+    title: "Godavari Parikrama Begins — 500+ Saints from Across India and the World",
     excerpt: "The sacred circumambulation of the Godavari River has commenced at Trimbakeshwar, with over 500 saints, mahantas, and mahavishvas from India and abroad taking part. Concluding on 21 December with a grand celebration, the pilgrimage is seen as a landmark moment for national spiritual unity.",
     date: "6 December 2025",
     tags: ["Events", "Press"],
