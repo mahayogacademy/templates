@@ -188,6 +188,43 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── EXPLORE PATHS ── */}
+      <section className="py-24 px-6 bg-[#f5ece0]">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-14">
+            <span className="uppercase tracking-[0.3em] text-xs text-[#b8892a] font-medium">Your Path Awaits</span>
+            <h2 className="font-['Cormorant_Garamond'] text-4xl md:text-5xl font-light text-[#2e2820] mt-3">
+              Explore the Academy
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {PATHS.map((path) => (
+              <Link key={path.href} href={path.href}>
+                <div className="group cursor-pointer bg-white rounded-2xl overflow-hidden border border-[#e8dece] hover:shadow-2xl hover:shadow-[#b8892a]/12 hover:-translate-y-1 transition-all duration-300 h-full flex flex-col">
+                  <div className="relative h-52 overflow-hidden">
+                    <img
+                      src={path.img}
+                      alt={path.label}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#1a0f05]/50 to-transparent" />
+                  </div>
+                  <div className="p-6 flex flex-col flex-1">
+                    <h3 className="font-['Cormorant_Garamond'] text-xl font-semibold text-[#2e2820] mb-3 leading-snug">{path.label}</h3>
+                    <p className="text-sm text-[#6a6058] leading-relaxed flex-1">{path.desc}</p>
+                    <div className="flex items-center gap-1.5 mt-5 text-[#b8892a] text-xs font-medium uppercase tracking-wider group-hover:gap-2.5 transition-all">
+                      <span>Explore</span>
+                      <ArrowRight className="w-3.5 h-3.5" strokeWidth={2} />
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── GURU INTRODUCTION ── */}
       <section className="py-0 overflow-hidden">
         <div className="max-w-7xl mx-auto">
@@ -222,44 +259,6 @@ export default function Home() {
                 </span>
               </Link>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── EXPLORE PATHS ── */}
-      <section className="py-24 px-6 bg-[#f5ece0]">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-14">
-            <span className="uppercase tracking-[0.3em] text-xs text-[#b8892a] font-medium">Your Path Awaits</span>
-            <h2 className="font-['Cormorant_Garamond'] text-4xl md:text-5xl font-light text-[#2e2820] mt-3">
-              Four Ways to Walk with Us
-            </h2>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {PATHS.map((path) => (
-              <Link key={path.href} href={path.href}>
-                <div className="group cursor-pointer bg-white rounded-2xl overflow-hidden border border-[#e8dece] hover:shadow-2xl hover:shadow-[#b8892a]/12 hover:-translate-y-1 transition-all duration-300 h-full flex flex-col">
-                  <div className="relative h-52 overflow-hidden">
-                    <img
-                      src={path.img}
-                      alt={path.label}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#1a0f05]/50 to-transparent" />
-                  </div>
-                  <div className="p-6 flex flex-col flex-1">
-                    <p className="text-[10px] uppercase tracking-[0.25em] text-[#b8892a] font-medium mb-1">{path.sub}</p>
-                    <h3 className="font-['Cormorant_Garamond'] text-xl font-semibold text-[#2e2820] mb-3 leading-snug">{path.label}</h3>
-                    <p className="text-sm text-[#6a6058] leading-relaxed flex-1">{path.desc}</p>
-                    <div className="flex items-center gap-1.5 mt-5 text-[#b8892a] text-xs font-medium uppercase tracking-wider group-hover:gap-2.5 transition-all">
-                      <span>Explore</span>
-                      <ArrowRight className="w-3.5 h-3.5" strokeWidth={2} />
-                    </div>
-                  </div>
-                </div>
-              </Link>
-            ))}
           </div>
         </div>
       </section>
