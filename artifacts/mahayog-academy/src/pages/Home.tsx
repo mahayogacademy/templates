@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Nav from "@/components/Nav";
 import { Link } from "wouter";
 import { ArrowRight, MapPin, Heart } from "lucide-react";
@@ -66,6 +66,40 @@ const GALLERY = [
   { src: `${b}images/gallery-shaktipat-deeksha.jpg`, caption: "Siddhababa giving Shaktipat Deeksha" },
 ];
 
+function RecolouredSymbol({ src, className }: { src: string; className?: string }) {
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  useEffect(() => {
+    const img = new Image();
+    img.onload = () => {
+      const canvas = canvasRef.current;
+      if (!canvas) return;
+      canvas.width = img.width;
+      canvas.height = img.height;
+      const ctx = canvas.getContext("2d");
+      if (!ctx) return;
+      ctx.drawImage(img, 0, 0);
+      const { data } = ctx.getImageData(0, 0, canvas.width, canvas.height);
+      for (let i = 0; i < data.length; i += 4) {
+        if (data[i + 3] < 30) continue;
+        const r = data[i], g = data[i + 1], b = data[i + 2];
+        if (r < 90 && g < 90 && b < 90) {
+          // Black → off-white
+          data[i] = 242; data[i + 1] = 237; data[i + 2] = 224;
+        } else if (r > 140 && g > 50 && g < 160 && b < 80) {
+          // Orange → gold (#e8c56a)
+          data[i] = 232; data[i + 1] = 197; data[i + 2] = 106;
+        } else if (r > 140 && g < 60 && b < 60) {
+          // Red bindu → muted gold-red
+          data[i] = 200; data[i + 1] = 130; data[i + 2] = 60;
+        }
+      }
+      ctx.putImageData(new ImageData(data, canvas.width, canvas.height), 0, 0);
+    };
+    img.src = src;
+  }, [src]);
+  return <canvas ref={canvasRef} className={className} />;
+}
+
 export default function Home() {
   const [galleryReady, setGalleryReady] = useState(false);
   useEffect(() => { setGalleryReady(true); }, []);
@@ -87,11 +121,9 @@ export default function Home() {
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
           {/* Sacred symbols */}
           <div className="flex justify-center mb-6">
-            <img
+            <RecolouredSymbol
               src={`${b}images/dhanush-band.png`}
-              alt="Sacred Vaishnava symbols"
               className="h-20 w-auto object-contain"
-              style={{ filter: "brightness(1) contrast(1.05) drop-shadow(0 2px 8px rgba(0,0,0,0.4))" }}
             />
           </div>
           {/* Ornament */}
