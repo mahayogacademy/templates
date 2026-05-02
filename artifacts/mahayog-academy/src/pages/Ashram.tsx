@@ -1,7 +1,39 @@
 import { useState } from "react";
 import Nav from "@/components/Nav";
 import { Link } from "wouter";
-import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowRight, ChevronLeft, ChevronRight, Mic2 } from "lucide-react";
+
+const b2 = import.meta.env.BASE_URL;
+
+const RELATED = [
+  {
+    type: "article" as const,
+    tag: "Sacred Places",
+    title: "The Spiritual Significance of Barahachhetra",
+    excerpt: "In the sacred geography of Sanātan Dharma, certain lands do not merely witness divinity. They hold it. Barahachhetra is one such land — revered across ages by gods, rishis, avatars, ancestors, and saints.",
+    date: "20 April 2025",
+    thumbnail: `${b2}images/teachings-prana.png`,
+    href: "/teachings/barahachhetra",
+  },
+  {
+    type: "article" as const,
+    tag: "Sacred Places",
+    title: "Nepal: Spirituality's Beating Heart",
+    excerpt: "Nepal is described in sacred traditions as a land where the divine is not distant but actively present. Siddhababa reveals Nepal as Bhū-Vaikuṇṭha — an earthly expression of the divine realm.",
+    date: "1 April 2025",
+    thumbnail: `${b2}images/teachings-nepal.png`,
+    href: "/teachings/nepal-sacred-geography",
+  },
+  {
+    type: "interview" as const,
+    tag: "Interview",
+    title: "Reviving Nepal's Ancient Wisdom: Yoga, Āyurveda & Nāḍī Science",
+    excerpt: "A rich Malaku TV conversation on Nepal's ancient knowledge systems — the science of yoga, the healing arts of Āyurveda, and the profound diagnostic tradition of Nāḍī Science.",
+    date: "Malaku TV · 49 min",
+    thumbnail: "https://i.ytimg.com/vi/-L3KEFytQ9I/hqdefault.jpg",
+    href: "https://www.youtube.com/watch?v=-L3KEFytQ9I",
+  },
+];
 
 const GALLERY_TOP = [
   { src: "ashram-hanuman-sunset.jpg", alt: "Hanuman statue silhouette at golden sunset",       caption: "Sewa Pith Ashram · Nepal" },
@@ -103,28 +135,6 @@ const SCHEDULE = [
   { time: "9:30 PM",  item: "Rest" },
 ];
 
-const ARTICLES = [
-  {
-    title: "The Spiritual Significance of Shree Ram Tarak Brahma Peeth",
-    excerpt: "Understanding the sacred lineage and divine mission behind the Guru Ashram at Barahachetra.",
-    tag: "Lineage",
-  },
-  {
-    title: "Nepal's Rich Spiritual History",
-    excerpt: "From ancient Vedic seers to living masters, tracing the unbroken thread of spiritual wisdom through the Himalayan kingdom.",
-    tag: "History",
-  },
-  {
-    title: "The Sacred Kaushiki (Koshi) River",
-    excerpt: "Why this ancient river has been a pilgrimage destination for seekers for thousands of years.",
-    tag: "Sacred Geography",
-  },
-  {
-    title: "Barahachetra: A Place of Divine Power",
-    excerpt: "Exploring the significance of Chataradham and why it draws pilgrims from across Nepal and India.",
-    tag: "Pilgrimage",
-  },
-];
 
 const NEPAL_CENTERS = [
   {
@@ -599,29 +609,60 @@ export default function Ashram() {
         </div>
       </section>
 
-      {/* ── RELATED ARTICLES ── */}
+      {/* ── RELATED READINGS ── */}
       <section className="py-20 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <span className="uppercase tracking-[0.25em] text-xs text-[#b8892a] font-medium">Explore Further</span>
-            <h2 className="font-['Cormorant_Garamond'] text-3xl font-light text-[#3d3830] mt-2">From the Blog</h2>
+            <h2 className="font-['Cormorant_Garamond'] text-3xl font-light text-[#3d3830] mt-2">Related Teachings</h2>
           </div>
-          <div className="grid md:grid-cols-2 gap-5">
-            {ARTICLES.map((a, i) => (
-              <div
-                key={i}
-                className="group p-6 bg-white border border-[#e8dece] rounded-2xl hover:shadow-md hover:border-[#d4a843]/40 transition-all duration-300 cursor-pointer"
-              >
-                <span className="text-[10px] uppercase tracking-[0.2em] text-[#b8892a] font-semibold mb-3 block">{a.tag}</span>
-                <h3 className="font-['Cormorant_Garamond'] text-xl font-semibold text-[#3d3830] mb-2 leading-snug group-hover:text-[#9d7422] transition-colors duration-200">
-                  {a.title}
-                </h3>
-                <p className="text-sm text-[#7a7068] leading-relaxed">{a.excerpt}</p>
-                <div className="flex items-center gap-1 mt-4 text-[#b8892a] text-xs font-medium">
-                  Read more <ArrowRight className="w-3 h-3" strokeWidth={2} />
+          <div className="grid md:grid-cols-3 gap-5">
+            {RELATED.map((a) => {
+              const isExternal = a.href.startsWith("http");
+              const cardContent = (
+                <div className="group bg-white border border-[#e8dece] rounded-2xl overflow-hidden hover:shadow-lg hover:border-[#d4a843]/40 transition-all duration-300 cursor-pointer h-full flex flex-col">
+                  {/* Thumbnail */}
+                  <div className="relative overflow-hidden" style={{ height: "180px" }}>
+                    <img
+                      src={a.thumbnail}
+                      alt={a.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
+                    {a.type === "interview" && (
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <div className="w-11 h-11 rounded-full bg-black/50 flex items-center justify-center backdrop-blur-sm border border-white/30">
+                          <Mic2 className="w-5 h-5 text-white" strokeWidth={1.5} />
+                        </div>
+                      </div>
+                    )}
+                    <span className={`absolute top-3 left-3 text-[10px] uppercase tracking-[0.15em] font-semibold px-2.5 py-1 rounded-full ${a.type === "interview" ? "bg-[#5a4a8a]/90 text-white" : "bg-[#b8892a]/90 text-white"}`}>
+                      {a.tag}
+                    </span>
+                  </div>
+                  {/* Body */}
+                  <div className="p-5 flex flex-col flex-1">
+                    <p className="text-[10px] uppercase tracking-[0.15em] text-[#9a8f84] mb-2">{a.date}</p>
+                    <h3 className="font-['Cormorant_Garamond'] text-lg font-semibold text-[#3d3830] mb-2 leading-snug group-hover:text-[#9d7422] transition-colors duration-200 flex-1">
+                      {a.title}
+                    </h3>
+                    <p className="text-sm text-[#7a7068] leading-relaxed line-clamp-2 mb-4">{a.excerpt}</p>
+                    <div className="flex items-center gap-1 text-[#b8892a] text-xs font-medium mt-auto">
+                      {a.type === "interview" ? "Watch" : "Read"} <ArrowRight className="w-3 h-3" strokeWidth={2} />
+                    </div>
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+              return isExternal ? (
+                <a key={a.href} href={a.href} target="_blank" rel="noopener noreferrer" className="flex flex-col">
+                  {cardContent}
+                </a>
+              ) : (
+                <Link key={a.href} href={a.href}>
+                  <div className="flex flex-col h-full">{cardContent}</div>
+                </Link>
+              );
+            })}
           </div>
         </div>
       </section>
