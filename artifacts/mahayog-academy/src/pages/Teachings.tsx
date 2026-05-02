@@ -14,7 +14,7 @@ interface Item {
   title: string;
   excerpt: string;
   date: string;
-  tag: string;
+  tags: string[];
   thumbnail?: string;
   thumbnailGradient?: string;
   duration?: string;
@@ -29,7 +29,7 @@ const ARTICLE_ITEMS: Item[] = ARTICLES.map((a, i) => ({
   title: a.title,
   excerpt: a.excerpt,
   date: a.date,
-  tag: a.tag,
+  tags: [a.tag],
   thumbnail: a.thumbnail,
   thumbnailGradient: a.thumbnailGradient,
   href: `/teachings/${a.id}`,
@@ -44,7 +44,7 @@ const VIDEO_ITEMS: Item[] = [
     title: "What Is Himalayan Siddha Mahayog?",
     excerpt: "Jagadguru Mahayogi Siddhababa gives a direct and clear description of the Himalayan Siddha Mahayog meditation practice — what it is, how it works, and why it is unique among yogic paths.",
     date: "Himalayan Siddha Mahayog",
-    tag: "Mahayog",
+    tags: ["Mahayog"],
     thumbnail: `${b}images/video-mahayog-sadhana.jpg`,
     href: "https://www.youtube.com/watch?v=U2kbxV0zy-E&t=49s",
   },
@@ -54,7 +54,7 @@ const VIDEO_ITEMS: Item[] = [
     title: "Where Is Happiness?",
     excerpt: "In this satsang, Jagadguru Mahayogi Siddhababa addresses one of the most universal human questions: where does true happiness lie, and why do we keep searching in the wrong places?",
     date: "Himalayan Siddha Mahayog",
-    tag: "Satsang",
+    tags: ["Meditation", "Mahayog"],
     thumbnail: `${b}images/video-mahayog-2.jpg`,
     href: "https://youtu.be/VUwmSwis2aE?si=j1_LgHC2tUg1veKu",
   },
@@ -64,7 +64,7 @@ const VIDEO_ITEMS: Item[] = [
     title: "Can Women Worship Śālagrāma? Dispelling a Common Misconception",
     excerpt: "In this discourse, Jagadguru Mahayogi Siddhababa directly addresses the widespread misconception that women cannot worship the sacred Śālagrāma stone — and sets the record straight from authentic Vedic teaching.",
     date: "Himalayan Siddha Mahayog",
-    tag: "Dharma",
+    tags: ["Dharma"],
     thumbnail: `${b}images/video-dharma-1.png`,
     href: "https://youtu.be/sMu69n7cZ4A?si=L6gW8V4hjufnusV4",
   },
@@ -74,7 +74,7 @@ const VIDEO_ITEMS: Item[] = [
     title: "There Is No Untouchability in Sanātana Dharma",
     excerpt: "Jagadguru Mahayogi Siddhababa explains clearly and directly that untouchability has no basis whatsoever in Sanātana Dharma — and that such practices are a social distortion, not a teaching of the Vedas.",
     date: "Himalayan Siddha Mahayog",
-    tag: "Dharma",
+    tags: ["Dharma"],
     thumbnail: `${b}images/video-dharma-2.png`,
     href: "https://youtu.be/-z1Gex5-x5A?si=xYXVKdLabV2FhvY4",
   },
@@ -84,7 +84,7 @@ const VIDEO_ITEMS: Item[] = [
     title: "Guided Mahayog Meditation — Morning Practice with Siddhababa",
     excerpt: "A complete guided Mahayog meditation session with Jagadguru Mahayogi Siddhababa — suitable for practitioners at all levels. Begin your day in stillness and awareness.",
     date: "1 May 2025",
-    tag: "Meditation",
+    tags: ["Meditation"],
     thumbnailGradient: "from-[#1a0c03] to-[#3d2008]",
     duration: "1 hr 22 min",
     href: "https://www.youtube.com/@siddhamahayog",
@@ -153,7 +153,7 @@ function ContentCard({ item }: { item: Item }) {
       <div className="flex flex-col flex-1 min-h-0">
         <div className="flex items-center gap-2 mb-2.5 flex-shrink-0">
           <TypeBadge type={item.type} />
-          <span className="text-[#9a8070] text-xs">{item.tag}</span>
+          <span className="text-[#9a8070] text-xs">{item.tags.join(" · ")}</span>
         </div>
         <h3 className="font-['Cormorant_Garamond'] text-xl text-[#2c1a08] font-medium leading-snug mb-2 line-clamp-2 flex-shrink-0">
           {item.title}
@@ -203,7 +203,7 @@ function FeaturedCard({ item }: { item: Item }) {
         <div className="p-8 md:p-10 flex flex-col justify-center">
           <div className="flex items-center gap-2 mb-4">
             <TypeBadge type={item.type} />
-            <span className="text-[#9a8070] text-xs">{item.tag}</span>
+            <span className="text-[#9a8070] text-xs">{item.tags.join(" · ")}</span>
           </div>
           <h2 className="font-['Cormorant_Garamond'] text-3xl md:text-4xl text-[#2c1a08] font-light leading-snug mb-4">
             {item.title}
@@ -227,7 +227,7 @@ function FeaturedCard({ item }: { item: Item }) {
 
 /* ── Page ── */
 /* ── Derive sorted unique tags across all items ── */
-const ALL_TAGS = Array.from(new Set(ITEMS.map(i => i.tag))).sort();
+const ALL_TAGS = Array.from(new Set(ITEMS.flatMap(i => i.tags))).sort();
 
 export default function Teachings() {
   const [activeFilter, setActiveFilter] = useState<ContentType>("all");
@@ -240,12 +240,12 @@ export default function Teachings() {
   const filtered = useMemo(() => {
     return nonFeatured.filter(item => {
       const matchesType = activeFilter === "all" || item.type === activeFilter;
-      const matchesTag  = !activeTag || item.tag === activeTag;
+      const matchesTag  = !activeTag || item.tags.includes(activeTag);
       const q = search.toLowerCase();
       const matchesSearch = !q ||
         item.title.toLowerCase().includes(q) ||
         item.excerpt.toLowerCase().includes(q) ||
-        item.tag.toLowerCase().includes(q);
+        item.tags.join(" ").toLowerCase().includes(q);
       return matchesType && matchesTag && matchesSearch;
     });
   }, [activeFilter, activeTag, search]);
