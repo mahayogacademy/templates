@@ -156,8 +156,26 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── MISSION + THREE PILLARS (shared decorative background) ── */}
+      <div className="relative overflow-hidden" style={{ background: "radial-gradient(ellipse at 50% 20%, #f5ede0 0%, #faf9f6 65%)" }}>
+        {/* Faint SVG mandala watermark */}
+        <svg className="absolute inset-0 w-full h-full opacity-[0.035] pointer-events-none" viewBox="0 0 900 700" preserveAspectRatio="xMidYMid slice" aria-hidden>
+          <g transform="translate(450,350)">
+            {[0,20,40,60,80,100,120,140,160,180,200,220,240,260,280,300,320,340].map((deg, i) => (
+              <g key={i} transform={`rotate(${deg})`}>
+                <ellipse cx="0" cy="-110" rx="22" ry="55" fill="none" stroke="#b8892a" strokeWidth="0.7"/>
+                <ellipse cx="0" cy="-190" rx="13" ry="28" fill="none" stroke="#b8892a" strokeWidth="0.4"/>
+              </g>
+            ))}
+            <circle cx="0" cy="0" r="50" fill="none" stroke="#b8892a" strokeWidth="0.7"/>
+            <circle cx="0" cy="0" r="110" fill="none" stroke="#b8892a" strokeWidth="0.5"/>
+            <circle cx="0" cy="0" r="170" fill="none" stroke="#b8892a" strokeWidth="0.3"/>
+            <circle cx="0" cy="0" r="230" fill="none" stroke="#b8892a" strokeWidth="0.2"/>
+          </g>
+        </svg>
+
       {/* ── MISSION STATEMENT ── */}
-      <section className="py-24 px-6">
+      <section className="relative py-24 px-6">
         <div className="max-w-3xl mx-auto text-center">
           <div className="flex items-center justify-center gap-4 mb-8">
             <div className="h-px w-10 bg-[#b8892a]/40" />
@@ -174,7 +192,7 @@ export default function Home() {
       </section>
 
       {/* ── THREE PILLARS CARDS ── */}
-      <section className="py-6 pb-28 px-6">
+      <section className="relative py-6 pb-28 px-6">
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-3 gap-5 items-end">
 
@@ -241,6 +259,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      </div>{/* end decorative background wrapper */}
 
       {/* ── EXPLORE PATHS ── */}
       <section className="py-24 px-6 bg-[#f5ece0]">
