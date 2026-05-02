@@ -475,14 +475,27 @@ export default function Home() {
       </section>
 
       {/* ── CLOSING QUOTE ── */}
-      <section className="relative py-28 px-6 overflow-hidden">
-        <img
-          src={`${b}images/gallery-shaktipat-deeksha.jpg`}
-          alt=""
+      <section className="relative py-28 px-6 overflow-hidden" style={{ background: "radial-gradient(ellipse at 60% 40%, #2c1708 0%, #1a0d04 50%, #0f0702 100%)" }}>
+        {/* Subtle SVG mandala watermark */}
+        <svg
+          className="absolute inset-0 w-full h-full opacity-[0.04]"
+          viewBox="0 0 800 400"
+          preserveAspectRatio="xMidYMid slice"
           aria-hidden
-          className="absolute inset-0 w-full h-full object-cover object-center"
-        />
-        <div className="absolute inset-0 bg-[#1a0f05]/75" />
+        >
+          <g transform="translate(400,200)">
+            {[0,30,60,90,120,150,180,210,240,270,300,330].map((deg, i) => (
+              <g key={i} transform={`rotate(${deg})`}>
+                <ellipse cx="0" cy="-80" rx="18" ry="40" fill="none" stroke="#e8c56a" strokeWidth="0.6"/>
+                <ellipse cx="0" cy="-140" rx="10" ry="22" fill="none" stroke="#e8c56a" strokeWidth="0.4"/>
+              </g>
+            ))}
+            <circle cx="0" cy="0" r="40" fill="none" stroke="#e8c56a" strokeWidth="0.6"/>
+            <circle cx="0" cy="0" r="80" fill="none" stroke="#e8c56a" strokeWidth="0.4"/>
+            <circle cx="0" cy="0" r="120" fill="none" stroke="#e8c56a" strokeWidth="0.3"/>
+            <circle cx="0" cy="0" r="160" fill="none" stroke="#e8c56a" strokeWidth="0.2"/>
+          </g>
+        </svg>
         <div className="relative z-10 max-w-2xl mx-auto text-center">
           <div className="flex items-center justify-center gap-3 mb-8">
             <div className="h-px w-10 bg-[#e8c56a]/60" />
