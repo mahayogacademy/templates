@@ -65,7 +65,7 @@ const VIDEO_ITEMS: Item[] = [
     excerpt: "In this discourse, Jagadguru Mahayogi Siddhababa directly addresses the widespread misconception that women cannot worship the sacred Śālagrāma stone — and sets the record straight from authentic Vedic teaching.",
     date: "Himalayan Siddha Mahayog",
     tag: "Dharma",
-    thumbnail: `${b}images/video-dharma-1.jpg`,
+    thumbnail: `${b}images/video-dharma-1.png`,
     href: "https://youtu.be/sMu69n7cZ4A?si=L6gW8V4hjufnusV4",
   },
   {
@@ -75,7 +75,7 @@ const VIDEO_ITEMS: Item[] = [
     excerpt: "Jagadguru Mahayogi Siddhababa explains clearly and directly that untouchability has no basis whatsoever in Sanātana Dharma — and that such practices are a social distortion, not a teaching of the Vedas.",
     date: "Himalayan Siddha Mahayog",
     tag: "Dharma",
-    thumbnail: `${b}images/video-dharma-2.jpg`,
+    thumbnail: `${b}images/video-dharma-2.png`,
     href: "https://youtu.be/-z1Gex5-x5A?si=xYXVKdLabV2FhvY4",
   },
   {

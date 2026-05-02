@@ -600,3 +600,15 @@ id = "TMeqAqD5nTASTrEoxjGft"
 uri = "file://artifacts/mahayog-academy/public/images/kundalini-serpent.png"
 type = "image"
 title = "kundalini serpent shivalinga illustration"
+
+[[generated]]
+id = "ijXahQ_enxVRGA38iaSgq"
+uri = "file://artifacts/mahayog-academy/public/images/video-dharma-1.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "G3djb_XWPA0WKzuTNljYD"
+uri = "file://artifacts/mahayog-academy/public/images/video-dharma-2.png"
+type = "image"
+title = "generated_image"
