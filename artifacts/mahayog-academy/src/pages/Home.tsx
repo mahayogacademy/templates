@@ -74,7 +74,7 @@ export default function Home() {
       <Nav />
 
       {/* ── HERO ── */}
-      <section className="relative flex items-center justify-center overflow-hidden" style={{ minHeight: "calc(100vh - 64px)" }}>
+      <section className="relative flex items-center justify-center overflow-hidden" style={{ minHeight: "75vh" }}>
         {/* Full-width hero image */}
         <div className="absolute inset-0">
           <img src={`${b}images/hero-nepal-landscape.png`} alt="" aria-hidden
