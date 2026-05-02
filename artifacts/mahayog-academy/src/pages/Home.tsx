@@ -9,7 +9,7 @@ const PATHS = [
     label: "Himalayan Siddha Mahayog",
     sub: "Meditation & Inner Awakening",
     href: "/meditation",
-    img: `${b}images/ashram-meditation-hilltop.jpg`,
+    img: `${b}images/mahayog-group-meditation.jpg`,
     desc: "Receive Shaktipat initiation and experience the automatic awakening of Kundalini — effortlessly integrating all four yoga paths as taught by Siddhababa.",
   },
   {
