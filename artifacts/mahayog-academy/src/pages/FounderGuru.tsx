@@ -127,7 +127,7 @@ export default function FounderGuru() {
             alt=""
             aria-hidden
             className="w-full h-full object-cover"
-            style={{ objectPosition: "center 15%" }}
+            style={{ objectPosition: "center 5%" }}
           />
           <div className="absolute inset-0 bg-[#1a0f05]/55" />
           <div className="absolute inset-0 bg-gradient-to-b from-[#1a0f05]/60 via-[#1a0f05]/30 to-[#faf9f6]" />
