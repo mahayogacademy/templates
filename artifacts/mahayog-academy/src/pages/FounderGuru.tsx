@@ -323,51 +323,13 @@ export default function FounderGuru() {
                   </button>
                 </div>
 
-                {/* Carousel */}
-                <div className="relative rounded-2xl overflow-hidden shadow-sm shadow-[#b8892a]/10">
-                  <div className="relative" style={{ height: "400px" }}>
-                    {SAMADHI_SLIDES.map((slide, i) => (
-                      <img
-                        key={i}
-                        src={`${b}images/${slide.src}`}
-                        alt={slide.alt}
-                        className="absolute inset-0 w-full h-full object-cover transition-opacity duration-500"
-                        style={{ opacity: samadhiSlide === i ? 1 : 0 }}
-                      />
-                    ))}
-                    {/* Caption */}
-                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent px-4 py-3">
-                      <p className="text-[10px] uppercase tracking-[0.25em] text-[#e8c56a] font-semibold">
-                        {SAMADHI_SLIDES[samadhiSlide].caption}
-                      </p>
-                    </div>
-                    {/* Prev / Next */}
-                    <button
-                      onClick={() => setSamadhiSlide(i => (i - 1 + SAMADHI_SLIDES.length) % SAMADHI_SLIDES.length)}
-                      className="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/30 hover:bg-black/50 flex items-center justify-center transition-colors"
-                      aria-label="Previous"
-                    >
-                      <ChevronLeft className="w-4 h-4 text-white" strokeWidth={1.5} />
-                    </button>
-                    <button
-                      onClick={() => setSamadhiSlide(i => (i + 1) % SAMADHI_SLIDES.length)}
-                      className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/30 hover:bg-black/50 flex items-center justify-center transition-colors"
-                      aria-label="Next"
-                    >
-                      <ChevronRight className="w-4 h-4 text-white" strokeWidth={1.5} />
-                    </button>
-                  </div>
-                  {/* Dots */}
-                  <div className="flex justify-center gap-2 py-3 bg-white border-t border-[#e8dece]">
-                    {SAMADHI_SLIDES.map((_, i) => (
-                      <button
-                        key={i}
-                        onClick={() => setSamadhiSlide(i)}
-                        className={`w-1.5 h-1.5 rounded-full transition-colors ${samadhiSlide === i ? "bg-[#b8892a]" : "bg-[#d9cfc4]"}`}
-                        aria-label={`Slide ${i + 1}`}
-                      />
-                    ))}
-                  </div>
+                {/* Static image */}
+                <div className="rounded-2xl overflow-hidden shadow-sm shadow-[#b8892a]/10" style={{ height: "400px" }}>
+                  <img
+                    src={`${b}images/${SAMADHI_SLIDES[0].src}`}
+                    alt={SAMADHI_SLIDES[0].alt}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </div>
 
