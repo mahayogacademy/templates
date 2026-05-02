@@ -455,7 +455,7 @@ export default function Home() {
             Every offering sustains<br className="hidden md:block" /> a sacred flame
           </h2>
           <p className="text-[#e8d8bc] text-base leading-relaxed mb-10 max-w-lg mx-auto">
-            The Academy runs entirely through the generosity of devotees and well-wishers worldwide. Your gift — however modest — keeps the gau seva, prasad, and spiritual education alive for all.
+            The Academy runs entirely through the generosity of devotees and well-wishers worldwide. Your gift — however modest — allows us to continue serving.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
