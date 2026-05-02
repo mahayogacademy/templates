@@ -184,7 +184,7 @@ export default function Home() {
           <p className="font-['Cormorant_Garamond'] text-3xl md:text-4xl font-light text-[#3d3830] leading-relaxed mb-8">
             A living sanctuary where seekers from every corner of the world come to experience the depths of Vedic wisdom, Himalayan yoga, and sacred service.
           </p>
-          <p className="text-sm text-[#6a6058] leading-relaxed max-w-xl mx-auto border-t border-b border-[#b8892a]/30 py-5 tracking-wide">
+          <p className="text-base text-[#6a6058] leading-relaxed max-w-xl mx-auto border-t border-b border-[#b8892a]/30 py-5 tracking-wide">
             A Not-for-profit and volunteer-run organization, rooted in the ancient Ramanandi lineage and guided by the direct grace of Enlightened Guru, His Holiness Jagadguru Mahayogi Siddhababa.
           </p>
         </div>
@@ -284,7 +284,7 @@ export default function Home() {
                   </div>
                   <div className="p-6 flex flex-col flex-1">
                     <h3 className="font-['Cormorant_Garamond'] text-xl font-semibold text-[#2e2820] mb-3 leading-snug">{path.label}</h3>
-                    <p className="text-sm text-[#6a6058] leading-relaxed flex-1">{path.desc}</p>
+                    <p className="text-base text-[#6a6058] leading-relaxed flex-1">{path.desc}</p>
                     <div className="flex items-center gap-1.5 mt-5 text-[#b8892a] text-xs font-medium uppercase tracking-wider group-hover:gap-2.5 transition-all">
                       <span>Explore</span>
                       <ArrowRight className="w-3.5 h-3.5" strokeWidth={2} />
@@ -427,7 +427,7 @@ export default function Home() {
                 <div className="p-7 flex flex-col flex-1">
                   <h3 className="font-['Cormorant_Garamond'] text-2xl font-light text-[#2e2820] mb-3 leading-snug">Jagadguru Shree Ramanandacharya Gurukul</h3>
                   <div className="h-px w-8 bg-[#b8892a]/40 mb-4" />
-                  <p className="text-sm text-[#6a6058] leading-relaxed flex-1">A residential Gurukul at Chataradham, Barahakshetra — blending Vedic values, Sanskrit, and meditation with a full modern curriculum for Grades 6–12, in a sattvic and disciplined environment.</p>
+                  <p className="text-base text-[#6a6058] leading-relaxed flex-1">A residential Gurukul at Chataradham, Barahakshetra — blending Vedic values, Sanskrit, and meditation with a full modern curriculum for Grades 6–12, in a sattvic and disciplined environment.</p>
                   <div className="flex items-center gap-1.5 mt-6 text-[#b8892a] text-xs font-medium uppercase tracking-wider group-hover:gap-2.5 transition-all">
                     <span>Learn More</span>
                     <ArrowRight className="w-3.5 h-3.5" strokeWidth={2} />
@@ -447,7 +447,7 @@ export default function Home() {
                 <div className="p-7 flex flex-col flex-1">
                   <h3 className="font-['Cormorant_Garamond'] text-2xl font-light text-[#2e2820] mb-3 leading-snug">Ram Mandir — Dev Sabha</h3>
                   <div className="h-px w-8 bg-[#b8892a]/40 mb-4" />
-                  <p className="text-sm text-[#6a6058] leading-relaxed flex-1">A nine-storey Sri Yantra temple rising at Chatara Dham, Sunsari — envisioned as a sacred replica of Dev Sabha, the divine assembly of the 33 koti devatas, with Lord Ram and Maa Sita at the centre.</p>
+                  <p className="text-base text-[#6a6058] leading-relaxed flex-1">A nine-storey Sri Yantra temple rising at Chatara Dham, Sunsari — envisioned as a sacred replica of Dev Sabha, the divine assembly of the 33 koti devatas, with Lord Ram and Maa Sita at the centre.</p>
                   <div className="flex items-center gap-1.5 mt-6 text-[#b8892a] text-xs font-medium uppercase tracking-wider group-hover:gap-2.5 transition-all">
                     <span>Learn More</span>
                     <ArrowRight className="w-3.5 h-3.5" strokeWidth={2} />
@@ -467,7 +467,7 @@ export default function Home() {
                 <div className="p-7 flex flex-col flex-1">
                   <h3 className="font-['Cormorant_Garamond'] text-2xl font-light text-[#2e2820] mb-3 leading-snug">108 Hanuman Temples Across Nepal</h3>
                   <div className="h-px w-8 bg-[#b8892a]/40 mb-4" />
-                  <p className="text-sm text-[#6a6058] leading-relaxed flex-1">A sacred vow to establish 108 Hanuman temples nationwide — each a vibrant community centre rooted in Sanatan Dharma, offering meditation, education, and cultural revival built alongside local communities.</p>
+                  <p className="text-base text-[#6a6058] leading-relaxed flex-1">A sacred vow to establish 108 Hanuman temples nationwide — each a vibrant community centre rooted in Sanatan Dharma, offering meditation, education, and cultural revival built alongside local communities.</p>
                   <div className="flex items-center gap-1.5 mt-6 text-[#b8892a] text-xs font-medium uppercase tracking-wider group-hover:gap-2.5 transition-all">
                     <span>Learn More</span>
                     <ArrowRight className="w-3.5 h-3.5" strokeWidth={2} />
@@ -486,7 +486,7 @@ export default function Home() {
               <div className="p-7 flex flex-col flex-1">
                 <h3 className="font-['Cormorant_Garamond'] text-2xl font-light text-[#2e2820] mb-3 leading-snug">Cultural & Ecological Advocacy</h3>
                 <div className="h-px w-8 bg-[#b8892a]/40 mb-4" />
-                <p className="text-sm text-[#6a6058] leading-relaxed flex-1">A Green Revolution for Nepal's agricultural self-reliance and the establishment of Nepal's first Ayurveda University — honouring the land, restoring ancient sciences, and empowering communities.</p>
+                <p className="text-base text-[#6a6058] leading-relaxed flex-1">A Green Revolution for Nepal's agricultural self-reliance and the establishment of Nepal's first Ayurveda University — honouring the land, restoring ancient sciences, and empowering communities.</p>
               </div>
             </div>
 

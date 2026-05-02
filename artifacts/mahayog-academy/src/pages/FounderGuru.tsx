@@ -439,7 +439,7 @@ export default function FounderGuru() {
                 <h3 className="font-['Cormorant_Garamond'] text-3xl font-light text-[#3d3830] mb-2 leading-snug">
                   Meet Siddhababa
                 </h3>
-                <p className="text-sm text-[#5a5248] leading-relaxed max-w-lg mb-5">
+                <p className="text-base text-[#5a5248] leading-relaxed max-w-lg mb-5">
                   His Holiness holds audience, teachings, and darshan at the ashram, select global locations and online. View his schedule or contact us to find out how you can receive his guidance.
                 </p>
                 <Link href="/meet" onClick={() => window.scrollTo(0, 0)}>
@@ -493,7 +493,7 @@ export default function FounderGuru() {
                   <p className="font-['Cormorant_Garamond'] text-3xl font-semibold text-[#b8892a] mb-1">{p.skt}</p>
                   <p className="text-xs uppercase tracking-[0.25em] text-[#9a8f84] font-medium mb-4">{p.label}</p>
                   <div className="h-px bg-[#e8dece] mb-4" />
-                  <p className="text-sm text-[#7a7068] leading-relaxed flex-1">{p.desc}</p>
+                  <p className="text-base text-[#7a7068] leading-relaxed flex-1">{p.desc}</p>
                 </div>
               ))}
             </div>
@@ -523,7 +523,7 @@ export default function FounderGuru() {
                     <h3 className="font-['Cormorant_Garamond'] text-3xl font-semibold text-[#3d3830] mb-2">
                       Vedanta Philosophy
                     </h3>
-                    <p className="text-sm text-[#7a7068] leading-relaxed">A comprehensive 300-hour study of Vedāntic thought, guided directly by Jagadguru Mahayogi Siddhababa.</p>
+                    <p className="text-base text-[#7a7068] leading-relaxed">A comprehensive 300-hour study of Vedāntic thought, guided directly by Jagadguru Mahayogi Siddhababa.</p>
                     <p className="text-xs text-[#a89880] italic mt-2">Developed &amp; instructed by His Holiness</p>
                   </div>
                   <div className="flex items-center gap-4 shrink-0">
@@ -547,7 +547,7 @@ export default function FounderGuru() {
                     <h3 className="font-['Cormorant_Garamond'] text-3xl font-semibold text-[#3d3830] mb-2">
                       Himalayan Siddha Mahayog Meditation
                     </h3>
-                    <p className="text-sm text-[#7a7068] leading-relaxed">An integrated system of meditation practice for inner well-being and spiritual development, transmitted by His Holiness.</p>
+                    <p className="text-base text-[#7a7068] leading-relaxed">An integrated system of meditation practice for inner well-being and spiritual development, transmitted by His Holiness.</p>
                     <p className="text-xs text-[#a89880] italic mt-2">Developed &amp; instructed by His Holiness</p>
                   </div>
                   <div className="flex items-center gap-4 shrink-0">

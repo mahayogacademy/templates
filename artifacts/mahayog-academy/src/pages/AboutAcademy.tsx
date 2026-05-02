@@ -86,7 +86,7 @@ export default function AboutAcademy() {
             <h2 className="font-['Cormorant_Garamond'] text-4xl md:text-5xl font-light text-[#3d3830] mt-2 mb-4">
               Six Pillars of Service
             </h2>
-            <p className="text-sm text-[#7a7068] max-w-xl mx-auto leading-relaxed">
+            <p className="text-base text-[#7a7068] max-w-xl mx-auto leading-relaxed">
               The Academy's work is rooted in six interconnected pillars of service, which guide its programs, projects, and practices.
             </p>
           </div>
@@ -204,7 +204,7 @@ export default function AboutAcademy() {
                     <h3 className="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#3d3830] leading-snug mb-1 group-hover:text-[#9d7422] transition-colors duration-300">
                       {item.title}
                     </h3>
-                    <p className="text-sm text-[#7a7068] leading-relaxed line-clamp-2">{item.desc}</p>
+                    <p className="text-base text-[#7a7068] leading-relaxed line-clamp-2">{item.desc}</p>
                   </div>
                   <div className="shrink-0 w-9 h-9 rounded-full border border-[#d4a843]/50 flex items-center justify-center group-hover:bg-[#b8892a] group-hover:border-[#b8892a] transition-all duration-300">
                     <ArrowRight className="w-4 h-4 text-[#b8892a] group-hover:text-white transition-colors duration-300" strokeWidth={1.5} />

@@ -335,7 +335,7 @@ export default function Ashram() {
             <h2 className="font-['Cormorant_Garamond'] text-4xl md:text-5xl font-light text-[#3d3830] mt-2 mb-4">
               Three Pillars of Practice
             </h2>
-            <p className="text-sm text-[#6b5f54] max-w-xl mx-auto leading-relaxed">
+            <p className="text-base text-[#6b5f54] max-w-xl mx-auto leading-relaxed">
               The Guru Ashram is a rare place where seekers can engage in all three together in a supportive and loving setting.
             </p>
           </div>
@@ -450,7 +450,7 @@ export default function Ashram() {
                 <div className="flex-1 p-6">
                   <h3 className="font-['Cormorant_Garamond'] text-xl font-semibold text-[#3d3830] mb-2 leading-snug">{item.title}</h3>
                   <div className="h-px w-6 bg-[#d4a843]/50 mb-3" />
-                  <p className="text-sm leading-relaxed text-[#5a5248]">{item.desc}</p>
+                  <p className="text-base leading-relaxed text-[#5a5248]">{item.desc}</p>
                 </div>
               </div>
             ))}
@@ -534,10 +534,10 @@ export default function Ashram() {
               <h3 className="font-['Cormorant_Garamond'] text-3xl font-semibold text-[#b8892a] mb-1">Seva</h3>
               <p className="text-[10px] uppercase tracking-[0.2em] text-[#9a8f84] font-medium mb-4">Selfless Service</p>
               <div className="h-px w-8 bg-[#d4a843]/50 mb-4" />
-              <p className="text-sm leading-relaxed text-[#5a5248] mb-4">
+              <p className="text-base leading-relaxed text-[#5a5248] mb-4">
                 Seva plays a central role in spiritual growth, cultivating humility and reducing ego through selfless action. Seekers can offer seva according to their interests, skills, and professional experience.
               </p>
-              <p className="text-sm leading-relaxed text-[#5a5248]">
+              <p className="text-base leading-relaxed text-[#5a5248]">
                 All forms of seva are valued equally, no service is considered superior or inferior.
               </p>
             </div>
@@ -555,10 +555,10 @@ export default function Ashram() {
               <h3 className="font-['Cormorant_Garamond'] text-3xl font-semibold text-[#b8892a] mb-1">Satsang</h3>
               <p className="text-[10px] uppercase tracking-[0.2em] text-[#9a8f84] font-medium mb-4">Spiritual Discourse & Guidance</p>
               <div className="h-px w-8 bg-[#d4a843]/50 mb-4" />
-              <p className="text-sm leading-relaxed text-[#5a5248] mb-4">
+              <p className="text-base leading-relaxed text-[#5a5248] mb-4">
                 During Satsang, seekers gather to receive guidance and wisdom from Gurudev. This sacred space allows individuals to ask questions, reflect, and deepen understanding.
               </p>
-              <p className="text-sm leading-relaxed text-[#5a5248]">
+              <p className="text-base leading-relaxed text-[#5a5248]">
                 Sitting in the presence of enlightened Jagadguru Mahayogi Siddhababa offers itself clarity and inner insight, an essential support for every sincere seeker.
               </p>
             </div>
