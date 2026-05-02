@@ -546,7 +546,7 @@ export default function Ashram() {
           {/* Satsang */}
           <div className="bg-white rounded-2xl border border-[#e8dece] overflow-hidden hover:shadow-lg hover:shadow-[#b8892a]/8 transition-all duration-300">
             <img
-              src={`${b}images/satsang-gathering.png`}
+              src={`${b}images/satsang-intimate.png`}
               alt="Satsang gathering at the ashram"
               className="w-full object-cover"
               style={{ height: "240px" }}

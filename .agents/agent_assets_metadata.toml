@@ -768,3 +768,9 @@ id = "PA1jEQjBulhylz3ObiCD0"
 uri = "file://artifacts/mahayog-academy/public/images/satsang-gathering.png"
 type = "image"
 title = "generated_image"
+
+[[generated]]
+id = "6pdDpAmVS2J_z708PPUE-"
+uri = "file://artifacts/mahayog-academy/public/images/satsang-intimate.png"
+type = "image"
+title = "generated_image"
