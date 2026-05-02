@@ -528,7 +528,7 @@ export default function Teachings() {
       <section id="yt-cta" className="relative py-28 px-6 overflow-hidden">
         {/* Photo background */}
         <img
-          src={`${b}images/hanumad-venue-aerial.jpg`}
+          src={`${b}images/yt-cta-bg.png`}
           alt=""
           className="absolute inset-0 w-full h-full object-cover object-center"
           aria-hidden="true"
