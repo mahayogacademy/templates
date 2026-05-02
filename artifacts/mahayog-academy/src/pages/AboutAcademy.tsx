@@ -50,11 +50,14 @@ export default function AboutAcademy() {
               </h2>
             </div>
             <p className="text-base leading-relaxed text-[#5a5248] mb-6">
-              Mahayogi Siddhababa Spiritual Academy is a not-for-profit, volunteer-run organization based in Nepal, dedicated to advancing holistic well-being through the preservation and sharing of authentic education on yoga and meditation. Guided by the life and teachings of His Holiness Jagadguru Mahayogi Siddhababa, the Academy offers time-tested wisdom for modern seekers, grounded in Vedic Science.
+              Mahayogi Siddhababa Spiritual Academy is a not-for-profit, volunteer-run organization based in Nepal, dedicated to preserving and sharing an authentic tradition of yoga and meditation.
             </p>
             <div className="h-px w-16 bg-[#d4a843] mb-6 opacity-60" />
+            <p className="text-base leading-relaxed text-[#5a5248] mb-6">
+              The Academy focuses on direct practice — meditation, inner discipline, and self-inquiry — alongside core principles of selfless service, ethical living, and personal responsibility. Its approach is practical and lived, integrating inner development with everyday life.
+            </p>
             <p className="text-base leading-relaxed text-[#5a5248]">
-              The Academy approaches well-being as a comprehensive and integrated way of living, encompassing physical, mental, emotional, social, spiritual, and environmental dimensions. Through this holistic approach, the Academy supports individuals and communities in cultivating balance, resilience, and meaningful, fulfilling lives.
+              Through its programs, teachings, and community initiatives, the Academy supports individuals in developing clarity of mind, stability of being, and a deeper understanding of themselves — while contributing meaningfully to the world around them.
             </p>
             <div className="flex flex-wrap gap-2 mt-8">
               {["Physical", "Mental", "Emotional", "Social", "Spiritual", "Environmental"].map(d => (

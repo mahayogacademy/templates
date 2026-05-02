@@ -181,14 +181,11 @@ export default function Home() {
             <span className="uppercase tracking-[0.3em] text-xs text-[#b8892a] font-medium">Our Purpose</span>
             <div className="h-px w-10 bg-[#b8892a]/40" />
           </div>
-          <p className="text-base text-[#5a5248] leading-relaxed mb-5 max-w-2xl mx-auto">
-            Mahayogi Siddhababa Spiritual Academy is a not-for-profit, volunteer-run organization based in Nepal, dedicated to preserving and sharing an authentic tradition of yoga and meditation.
+          <p className="font-['Cormorant_Garamond'] text-3xl md:text-4xl font-light text-[#3d3830] leading-relaxed mb-8">
+            A living sanctuary where seekers from every corner of the world come to experience the depths of Vedic wisdom, Himalayan yoga, and sacred service.
           </p>
-          <p className="text-base text-[#5a5248] leading-relaxed mb-5 max-w-2xl mx-auto">
-            The Academy focuses on direct practice — meditation, inner discipline, and self-inquiry — alongside core principles of selfless service, ethical living, and personal responsibility. Its approach is practical and lived, integrating inner development with everyday life.
-          </p>
-          <p className="text-base text-[#5a5248] leading-relaxed max-w-2xl mx-auto">
-            Through its programs, teachings, and community initiatives, the Academy supports individuals in developing clarity of mind, stability of being, and a deeper understanding of themselves — while contributing meaningfully to the world around them.
+          <p className="text-sm text-[#6a6058] leading-relaxed max-w-xl mx-auto border-t border-b border-[#b8892a]/30 py-5 tracking-wide">
+            A Not-for-profit and volunteer-run organization, rooted in the ancient Ramanandi lineage and guided by the direct grace of Enlightened Guru, His Holiness Jagadguru Mahayogi Siddhababa.
           </p>
         </div>
       </section>
