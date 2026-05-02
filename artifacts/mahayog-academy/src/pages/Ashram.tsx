@@ -496,10 +496,10 @@ export default function Ashram() {
             </h2>
             <div className="h-px w-10 bg-[#b8892a]/50 mb-6" />
             <p className="text-base text-[#4a4038] leading-relaxed mb-4">
-              The Hanuman Temple at the ashram holds an unbroken stream of devotional chanting, the Ram mantra has been recited continuously, 24 hours a day, without interruption since 2010.
+              The Hanuman Temple at the Ashram holds an unbroken stream of devotional chanting. The Ram mantra has been recited continuously, 24 hours a day, without interruption since 2010.
             </p>
             <p className="text-base text-[#4a4038] leading-relaxed">
-              <span className="italic font-['Cormorant_Garamond'] text-[#2e2820]">Akhanda</span> means "unbroken", this living practice embodies the ideal of constant remembrance, filling the ashram with an ever-present current of sacred sound that supports all who enter.
+              <span className="italic">Akhanda</span> means "unbroken" — this living practice embodies the ideal of constant remembrance, filling the ashram with an ever-present current of sacred sound that supports all who enter.
             </p>
           </div>
           <div className="flex flex-col items-center text-center">
