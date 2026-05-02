@@ -69,6 +69,7 @@ const PROJECTS = [
 
 const PURPOSES = [
   "Guru Seva",
+  "Full Day Ashram Seva",
   "Gau Seva",
   "Hanuman Pūjā",
   "Akhanda Kīrtan",
@@ -78,6 +79,7 @@ const PURPOSES = [
   "Gurukul",
   "Global Spiritual Teaching",
   "General Ashram Support",
+  "Other",
 ];
 
 const NEPAL_ACCOUNT = {
@@ -125,17 +127,26 @@ function CopyField({ label, value }: { label: string; value: string }) {
 function ReferenceBuilder() {
   const [name, setName] = useState("");
   const [purpose, setPurpose] = useState(PURPOSES[0]);
+  const [otherText, setOtherText] = useState("");
   const [copied, setCopied] = useState(false);
 
-  const reference = name.trim()
-    ? `${name.trim()} | ${purpose}`
-    : `[Your Name] | ${purpose}`;
+  const isOther = purpose === "Other";
+  const purposeLabel = isOther ? (otherText.trim() || "") : purpose;
+  const isReady = name.trim().length > 0 && (!isOther || otherText.trim().length > 0);
 
-  const isReady = name.trim().length > 0;
+  const reference = isReady
+    ? `${name.trim()} | ${purposeLabel}`
+    : isOther
+      ? `[Your Name] | ${otherText.trim() || "Please specify"}`
+      : `[Your Name] | ${purpose}`;
+
+  const displayReference = name.trim()
+    ? `${name.trim()} | ${purposeLabel || "Please specify"}`
+    : reference;
 
   function copy() {
     if (!isReady) return;
-    navigator.clipboard.writeText(reference).then(() => {
+    navigator.clipboard.writeText(`${name.trim()} | ${purposeLabel}`).then(() => {
       setCopied(true);
       setTimeout(() => setCopied(false), 2500);
     });
@@ -151,7 +162,7 @@ function ReferenceBuilder() {
         </div>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-4 mb-6">
+      <div className="grid md:grid-cols-2 gap-4 mb-4">
         {/* Name */}
         <div>
           <label className="block text-xs uppercase tracking-[0.2em] text-[#9a8f84] font-medium mb-2">Your Full Name</label>
@@ -179,12 +190,26 @@ function ReferenceBuilder() {
         </div>
       </div>
 
+      {/* Other — custom text input */}
+      {isOther && (
+        <div className="mb-4">
+          <label className="block text-xs uppercase tracking-[0.2em] text-[#9a8f84] font-medium mb-2">Please Specify</label>
+          <input
+            type="text"
+            placeholder="e.g. In memory of my grandfather"
+            value={otherText}
+            onChange={(e) => { setOtherText(e.target.value); setCopied(false); }}
+            className="w-full px-4 py-3 rounded-xl border border-[#e2d0b8] bg-[#faf9f6] text-[#2e2820] text-base placeholder:text-[#b8a898] focus:outline-none focus:border-[#b8892a] focus:ring-2 focus:ring-[#b8892a]/15 transition"
+          />
+        </div>
+      )}
+
       {/* Generated reference */}
       <div className="rounded-xl border border-[#e2d0b8] bg-[#fdf6ec] p-4 flex items-center justify-between gap-4">
         <div className="flex-1 min-w-0">
           <p className="text-[10px] uppercase tracking-[0.2em] text-[#9a8f84] font-medium mb-1">Your Payment Reference</p>
           <p className={`text-lg font-semibold font-['Cormorant_Garamond'] truncate ${isReady ? "text-[#2e2820]" : "text-[#b8a898] italic"}`}>
-            {reference}
+            {displayReference}
           </p>
         </div>
         <button
@@ -203,7 +228,13 @@ function ReferenceBuilder() {
         </button>
       </div>
       {!isReady && (
-        <p className="text-xs text-[#b8a898] mt-2 text-center">Enter your name above to generate and copy your reference</p>
+        <p className="text-xs text-[#b8a898] mt-2 text-center">
+          {!name.trim() && isOther && !otherText.trim()
+            ? "Enter your name and specify your purpose above"
+            : !name.trim()
+              ? "Enter your name above to generate and copy your reference"
+              : "Please specify your purpose above"}
+        </p>
       )}
     </div>
   );
