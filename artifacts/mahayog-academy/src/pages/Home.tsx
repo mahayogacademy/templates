@@ -120,57 +120,66 @@ export default function Home() {
       </section>
 
       {/* ── THREE PILLARS CARDS ── */}
-      <section className="py-6 pb-24 px-6">
-        <div className="max-w-4xl mx-auto">
-          <div className="grid grid-cols-3 gap-4 items-end">
+      <section className="py-6 pb-28 px-6">
+        <div className="max-w-5xl mx-auto">
+          <div className="grid grid-cols-3 gap-5 items-end">
 
             {/* Mahayog */}
             <Link href="/meditation">
-              <div className="group cursor-pointer flex flex-col rounded-2xl overflow-hidden border border-[#e2d0b8] hover:border-[#b8892a]/50 hover:shadow-xl hover:shadow-[#b8892a]/10 transition-all duration-300">
-                <div className="relative h-64 md:h-80 overflow-hidden">
-                  <img
-                    src={`${b}images/meditation-nature.png`}
-                    alt="Mahayog Meditation"
-                    className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
-                <div className="bg-white px-5 py-4 flex items-center justify-between">
-                  <span className="font-['Cormorant_Garamond'] text-lg font-semibold text-[#2e2820] group-hover:text-[#b8892a] transition-colors">Mahayog</span>
-                  <ArrowRight className="w-4 h-4 text-[#b8892a] group-hover:translate-x-0.5 transition-transform" strokeWidth={1.5} />
+              <div className="group relative rounded-3xl overflow-hidden h-[440px] md:h-[500px] cursor-pointer shadow-lg hover:shadow-2xl hover:shadow-[#b8892a]/20 transition-all duration-500">
+                <img
+                  src={`${b}images/ashram-extra-sanyasi-river.jpg`}
+                  alt="Mahayog"
+                  className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#1a0f05]/95 via-[#1a0f05]/40 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-7">
+                  <div className="h-px w-8 bg-[#b8892a] mb-4" />
+                  <h3 className="font-['Cormorant_Garamond'] text-4xl font-light text-white mb-2 leading-tight">Mahayog</h3>
+                  <p className="text-sm text-white/65 leading-relaxed mb-5">The ancient science of awakening through prana, breath and inner stillness</p>
+                  <span className="inline-flex items-center gap-2 text-[#c9a24e] text-xs tracking-[0.15em] uppercase font-medium group-hover:gap-3 transition-all duration-300">
+                    Explore <ArrowRight className="w-3.5 h-3.5" strokeWidth={1.5} />
+                  </span>
                 </div>
               </div>
             </Link>
 
-            {/* Mahayogi — centre, taller */}
+            {/* Mahayogi — centre, rises above side cards */}
             <Link href="/founder-guru">
-              <div className="group cursor-pointer flex flex-col rounded-2xl overflow-hidden border border-[#e2d0b8] hover:border-[#b8892a]/50 hover:shadow-2xl hover:shadow-[#b8892a]/15 transition-all duration-300 -mt-8">
-                <div className="relative h-80 md:h-96 overflow-hidden">
-                  <img
-                    src={`${b}images/gurudev-darshan-smile.jpg`}
-                    alt="Jagadguru Mahayogi Siddhababa"
-                    className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
-                <div className="bg-white px-5 py-4 flex items-center justify-between">
-                  <span className="font-['Cormorant_Garamond'] text-lg font-semibold text-[#2e2820] group-hover:text-[#b8892a] transition-colors">Mahayogi</span>
-                  <ArrowRight className="w-4 h-4 text-[#b8892a] group-hover:translate-x-0.5 transition-transform" strokeWidth={1.5} />
+              <div className="group relative rounded-3xl overflow-hidden h-[560px] md:h-[640px] -mt-20 cursor-pointer shadow-2xl hover:shadow-[#b8892a]/30 transition-all duration-500 ring-1 ring-[#b8892a]/40">
+                <img
+                  src={`${b}images/gurudev-darshan-smile.jpg`}
+                  alt="Jagadguru Mahayogi Siddhababa"
+                  className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#1a0f05]/95 via-[#1a0f05]/30 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-7">
+                  <div className="h-px w-8 bg-[#b8892a] mb-4" />
+                  <h3 className="font-['Cormorant_Garamond'] text-4xl font-light text-white mb-2 leading-tight">Mahayogi</h3>
+                  <p className="text-sm text-white/65 leading-relaxed mb-5">His Holiness Jagadguru Mahayogi Siddhababa — living master and guide</p>
+                  <span className="inline-flex items-center gap-2 text-[#c9a24e] text-xs tracking-[0.15em] uppercase font-medium group-hover:gap-3 transition-all duration-300">
+                    Meet the Guru <ArrowRight className="w-3.5 h-3.5" strokeWidth={1.5} />
+                  </span>
                 </div>
               </div>
             </Link>
 
             {/* For Mankind */}
             <Link href="/about">
-              <div className="group cursor-pointer flex flex-col rounded-2xl overflow-hidden border border-[#e2d0b8] hover:border-[#b8892a]/50 hover:shadow-xl hover:shadow-[#b8892a]/10 transition-all duration-300">
-                <div className="relative h-64 md:h-80 overflow-hidden">
-                  <img
-                    src={`${b}images/hanumad-satsang-tent.jpg`}
-                    alt="For Mankind — satsang gathering"
-                    className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
-                <div className="bg-white px-5 py-4 flex items-center justify-between">
-                  <span className="font-['Cormorant_Garamond'] text-lg font-semibold text-[#2e2820] group-hover:text-[#b8892a] transition-colors">For Mankind</span>
-                  <ArrowRight className="w-4 h-4 text-[#b8892a] group-hover:translate-x-0.5 transition-transform" strokeWidth={1.5} />
+              <div className="group relative rounded-3xl overflow-hidden h-[440px] md:h-[500px] cursor-pointer shadow-lg hover:shadow-2xl hover:shadow-[#b8892a]/20 transition-all duration-500">
+                <img
+                  src={`${b}images/ashram-prasad-1.jpg`}
+                  alt="For Mankind"
+                  className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#1a0f05]/95 via-[#1a0f05]/40 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-7">
+                  <div className="h-px w-8 bg-[#b8892a] mb-4" />
+                  <h3 className="font-['Cormorant_Garamond'] text-4xl font-light text-white mb-2 leading-tight">For Mankind</h3>
+                  <p className="text-sm text-white/65 leading-relaxed mb-5">Sacred service, selfless giving and the upliftment of all beings</p>
+                  <span className="inline-flex items-center gap-2 text-[#c9a24e] text-xs tracking-[0.15em] uppercase font-medium group-hover:gap-3 transition-all duration-300">
+                    Discover <ArrowRight className="w-3.5 h-3.5" strokeWidth={1.5} />
+                  </span>
                 </div>
               </div>
             </Link>
