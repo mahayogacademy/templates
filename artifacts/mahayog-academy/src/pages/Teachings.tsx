@@ -306,8 +306,12 @@ function FeaturedCard({ item }: { item: Item }) {
 }
 
 /* ── Page ── */
+/* ── Derive sorted unique tags across all items ── */
+const ALL_TAGS = Array.from(new Set(ITEMS.map(i => i.tag))).sort();
+
 export default function Teachings() {
   const [activeFilter, setActiveFilter] = useState<ContentType>("all");
+  const [activeTag, setActiveTag] = useState<string>("");
   const [search, setSearch] = useState("");
 
   const featured = ITEMS.find(i => i.featured);
@@ -316,14 +320,15 @@ export default function Teachings() {
   const filtered = useMemo(() => {
     return nonFeatured.filter(item => {
       const matchesType = activeFilter === "all" || item.type === activeFilter;
+      const matchesTag  = !activeTag || item.tag === activeTag;
       const q = search.toLowerCase();
       const matchesSearch = !q ||
         item.title.toLowerCase().includes(q) ||
         item.excerpt.toLowerCase().includes(q) ||
         item.tag.toLowerCase().includes(q);
-      return matchesType && matchesSearch;
+      return matchesType && matchesTag && matchesSearch;
     });
-  }, [activeFilter, search]);
+  }, [activeFilter, activeTag, search]);
 
   return (
     <div className="min-h-screen bg-[#faf9f6] font-['Inter']">
@@ -355,14 +360,15 @@ export default function Teachings() {
 
       {/* ── FILTER BAR ── */}
       <section className="sticky top-16 z-40 bg-[#faf9f6]/97 backdrop-blur-sm border-b border-[#e8dece]">
-        <div className="max-w-6xl mx-auto px-6 py-3 flex flex-col sm:flex-row items-center gap-3">
+        {/* Row 1: type + search */}
+        <div className="max-w-6xl mx-auto px-6 pt-3 pb-2 flex flex-col sm:flex-row items-center gap-3">
           <div className="flex items-center gap-1 flex-wrap">
             {FILTERS.map(({ key, label }) => {
               const Icon = key === "all" ? null : TYPE_ICONS[key];
               return (
                 <button
                   key={key}
-                  onClick={() => setActiveFilter(key)}
+                  onClick={() => { setActiveFilter(key); setActiveTag(""); }}
                   className={`flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium transition-all duration-150 ${
                     activeFilter === key
                       ? "bg-[#b8892a] text-white shadow-sm"
@@ -386,6 +392,35 @@ export default function Teachings() {
             />
           </div>
         </div>
+        {/* Row 2: tag filters */}
+        <div className="max-w-6xl mx-auto px-6 pb-2.5 overflow-x-auto">
+          <div className="flex items-center gap-1.5 min-w-max">
+            <span className="text-[10px] uppercase tracking-[0.2em] text-[#9a8070] mr-1 shrink-0">Topic</span>
+            <button
+              onClick={() => setActiveTag("")}
+              className={`px-3 py-1 rounded-full text-xs transition-all duration-150 ${
+                !activeTag
+                  ? "bg-[#e8dece] text-[#5a4a38] font-semibold"
+                  : "text-[#8a7a6a] hover:bg-[#f0e8d8] hover:text-[#6a5040]"
+              }`}
+            >
+              All Topics
+            </button>
+            {ALL_TAGS.map(tag => (
+              <button
+                key={tag}
+                onClick={() => setActiveTag(activeTag === tag ? "" : tag)}
+                className={`px-3 py-1 rounded-full text-xs transition-all duration-150 ${
+                  activeTag === tag
+                    ? "bg-[#b8892a]/15 text-[#7a5a18] font-semibold border border-[#b8892a]/40"
+                    : "text-[#8a7a6a] hover:bg-[#f0e8d8] hover:text-[#6a5040]"
+                }`}
+              >
+                {tag}
+              </button>
+            ))}
+          </div>
+        </div>
       </section>
 
       {/* ── CONTENT ── */}
@@ -399,11 +434,12 @@ export default function Teachings() {
           <div className="flex items-center justify-between mb-6">
             <p className="text-[#9a8070] text-sm">
               {filtered.length} {filtered.length === 1 ? "result" : "results"}
+              {activeTag && <span> in <span className="text-[#b8892a]">{activeTag}</span></span>}
               {search && <span> for "<span className="text-[#b8892a]">{search}</span>"</span>}
             </p>
-            {search && (
-              <button onClick={() => setSearch("")} className="text-xs text-[#b8892a] hover:underline">
-                Clear search
+            {(search || activeTag) && (
+              <button onClick={() => { setSearch(""); setActiveTag(""); }} className="text-xs text-[#b8892a] hover:underline">
+                Clear filters
               </button>
             )}
           </div>
