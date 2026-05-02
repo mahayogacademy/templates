@@ -612,3 +612,21 @@ id = "G3djb_XWPA0WKzuTNljYD"
 uri = "file://artifacts/mahayog-academy/public/images/video-dharma-2.png"
 type = "image"
 title = "generated_image"
+
+[[generated]]
+id = "hcBNDU0a1kqwKMQfZDMzQ"
+uri = "file://artifacts/mahayog-academy/public/images/news-tapovan-encroachment.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "6sy2Xrv68bC1eNRb_l3xF"
+uri = "file://artifacts/mahayog-academy/public/images/news-tapovan-cement.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "P7cwgtxGYO1BI3u85tpGE"
+uri = "file://artifacts/mahayog-academy/public/images/news-goda-parikrama.png"
+type = "image"
+title = "generated_image"

@@ -89,7 +89,7 @@ const NEWS_ITEMS: Item[] = [
     excerpt: "Speaking at Nashik's Lakshminarayan Bada Mandir, Jagadguru Mahayogi Siddhababa issued a firm warning against commercial encroachment on the sacred Tapovan grounds ahead of Kumbhmela. He called on the Maharashtra government to ensure the event's spiritual character is fully preserved.",
     date: "6 December 2025",
     tags: ["Kumbhmela", "Press"],
-    thumbnail: `${b}images/news-tapovan-encroachment.jpg`,
+    thumbnail: `${b}images/news-tapovan-encroachment.png`,
     href: "#",
   },
   {
@@ -99,7 +99,7 @@ const NEWS_ITEMS: Item[] = [
     excerpt: "Jagadguru Mahayogi Siddhababa has stated firmly that Tapovan — the timeless sanctuary of saints and rishis in Nashik — will not be allowed to become a concrete commercial zone. Any commercial construction in these sacred grounds will face strong resistance from saints, sages, and devotees.",
     date: "6 December 2025",
     tags: ["Kumbhmela", "Press"],
-    thumbnail: `${b}images/news-tapovan-cement.jpg`,
+    thumbnail: `${b}images/news-tapovan-cement.png`,
     href: "#",
   },
   {
@@ -109,7 +109,7 @@ const NEWS_ITEMS: Item[] = [
     excerpt: "The sacred circumambulation of the Godavari River has commenced at Trimbakeshwar, with over 500 saints, mahantas, and mahavishvas from India and abroad taking part. Concluding on 21 December with a grand celebration, the pilgrimage is seen as a landmark moment for national spiritual unity.",
     date: "6 December 2025",
     tags: ["Events", "Press"],
-    thumbnail: `${b}images/news-goda-parikrama.jpg`,
+    thumbnail: `${b}images/news-goda-parikrama.png`,
     href: "#",
   },
 ];
