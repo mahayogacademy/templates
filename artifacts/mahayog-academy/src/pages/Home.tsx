@@ -399,7 +399,7 @@ export default function Home() {
             <Link href="/projects">
               <div className="group bg-white rounded-2xl border border-[#e8dece] hover:shadow-xl hover:shadow-[#b8892a]/10 hover:-translate-y-0.5 transition-all duration-300 overflow-hidden flex flex-col h-full cursor-pointer">
                 <div className="relative h-52 overflow-hidden">
-                  <img src={`${b}images/hanuman-temple-portrait.png`} alt="108 Hanuman Temples" className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" />
+                  <img src={`${b}images/hanuman-temple-portrait.png`} alt="108 Hanuman Temples" className="w-full h-full object-cover object-bottom group-hover:scale-105 transition-transform duration-500" />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#1a0f05]/60 to-transparent" />
                   <span className="absolute top-4 left-4 text-[10px] uppercase tracking-[0.25em] text-[#e8c56a] font-semibold bg-[#1a0f05]/50 px-3 py-1 rounded-full">National Mission</span>
                 </div>
@@ -417,17 +417,10 @@ export default function Home() {
 
             {/* Cultural & Ecological Advocacy */}
             <div className="bg-white rounded-2xl border border-[#e8dece] overflow-hidden flex flex-col h-full">
-              <div className="relative h-52 overflow-hidden bg-[#f4ede0] flex items-center justify-center">
-                <div className="text-center px-6">
-                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" className="mx-auto mb-3 opacity-30">
-                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z" fill="#b8892a"/>
-                    <circle cx="12" cy="12" r="10" stroke="#b8892a" strokeWidth="1.2" fill="none"/>
-                    <path d="M8 14c1-3 5-5 8-3" stroke="#b8892a" strokeWidth="1.2" strokeLinecap="round" fill="none"/>
-                    <path d="M7 10c2-2 6-2 8 0" stroke="#b8892a" strokeWidth="1.2" strokeLinecap="round" fill="none"/>
-                  </svg>
-                  <p className="text-[#b8892a]/50 text-xs uppercase tracking-widest">Vision for Nepal</p>
-                </div>
-                <span className="absolute top-4 left-4 text-[10px] uppercase tracking-[0.25em] text-[#b8892a] font-semibold bg-[#e8d8b8]/60 px-3 py-1 rounded-full">Forthcoming</span>
+              <div className="relative h-52 overflow-hidden">
+                <img src={`${b}images/initiative-green-revolution.png`} alt="Green Revolution and Ayurveda" className="w-full h-full object-cover object-center" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#1a0f05]/60 to-transparent" />
+                <span className="absolute top-4 left-4 text-[10px] uppercase tracking-[0.25em] text-[#e8c56a] font-semibold bg-[#1a0f05]/50 px-3 py-1 rounded-full">Vision for Nepal</span>
               </div>
               <div className="p-7 flex flex-col flex-1">
                 <h3 className="font-['Cormorant_Garamond'] text-2xl font-light text-[#2e2820] mb-3 leading-snug">Cultural & Ecological Advocacy</h3>
