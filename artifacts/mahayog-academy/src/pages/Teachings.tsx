@@ -2,6 +2,7 @@ import { useState, useMemo } from "react";
 import { Link } from "wouter";
 import Nav from "@/components/Nav";
 import { Search, Play, ArrowRight, BookOpen, Newspaper, Video, ChevronRight } from "lucide-react";
+import { ARTICLES } from "@/data/articles";
 
 const b = import.meta.env.BASE_URL;
 
@@ -21,73 +22,22 @@ interface Item {
   featured?: boolean;
 }
 
-const ITEMS: Item[] = [
-  /* ── FEATURED ── */
-  {
-    id: "f1",
-    type: "article",
-    title: "The Science of Shaktipat: Gateway to the Mahayog Path",
-    excerpt: "Shaktipat — the transmission of spiritual energy from Guru to disciple — is the foundational act that awakens the dormant Kundalini and sets the Mahayog journey in motion. Jagadguru Mahayogi Siddhababa explains what it is, why it is necessary, and how it works.",
-    date: "12 April 2025",
-    tag: "Mahayog",
-    thumbnail: `${b}images/teachings-article-1.png`,
-    href: "#",
-    featured: true,
-  },
+/* ── Build article items from real data ── */
+const ARTICLE_ITEMS: Item[] = ARTICLES.map((a, i) => ({
+  id: a.id,
+  type: "article",
+  title: a.title,
+  excerpt: a.excerpt,
+  date: a.date,
+  tag: a.tag,
+  thumbnail: a.thumbnail,
+  thumbnailGradient: a.thumbnailGradient,
+  href: `/teachings/${a.id}`,
+  featured: i === 0,
+}));
 
-  /* ── ARTICLES ── */
-  {
-    id: "a1",
-    type: "article",
-    title: "Dharma in the Modern Age: Living with Awareness",
-    excerpt: "Rather than encouraging withdrawal from the world, Mahayog teaches us to engage with life more fully — with clarity, compassion, and purpose. This is the essence of Dharma in daily living.",
-    date: "3 March 2025",
-    tag: "Dharma",
-    thumbnail: `${b}images/teachings-article-2.png`,
-    href: "#",
-  },
-  {
-    id: "a2",
-    type: "article",
-    title: "What is Brahmavidya? The Vedic Knowledge of Ultimate Reality",
-    excerpt: "Brahmavidya — the knowledge of Brahman — is the highest teaching of the Vedic tradition. Jagadguru explains how Mahayog is fundamentally a Brahmavidya, a complete path to Self-realisation.",
-    date: "14 February 2025",
-    tag: "Vedanta",
-    thumbnail: `${b}images/teachings-article-3.png`,
-    href: "#",
-  },
-  {
-    id: "a3",
-    type: "article",
-    title: "Kundalini: Myths, Realities, and the Mahayog Approach",
-    excerpt: "Kundalini has been widely misunderstood in popular culture. This article clarifies its true nature from the Vedic perspective and explains how Mahayog offers a safe, grace-based awakening.",
-    date: "28 January 2025",
-    tag: "Kundalini",
-    thumbnailGradient: "from-[#7c4a1a] to-[#2c1a08]",
-    href: "#",
-  },
-  {
-    id: "a4",
-    type: "article",
-    title: "Ayurveda and Mahayog: An Integrated Approach to Wellbeing",
-    excerpt: "The ancient sciences of Ayurveda and Yoga are two branches of the same Vedic tree. Together they address body, energy, mind, and spirit — offering a complete path to health and liberation.",
-    date: "9 January 2025",
-    tag: "Ayurveda",
-    thumbnailGradient: "from-[#4a6b3a] to-[#1a3010]",
-    href: "#",
-  },
-  {
-    id: "a5",
-    type: "article",
-    title: "The Guru-Disciple Relationship in the Vedic Tradition",
-    excerpt: "Few concepts are more central — or more misunderstood — in Hindu spirituality than that of the Guru. Jagadguru Mahayogi Siddhababa offers a clear and compassionate explanation of this sacred relationship.",
-    date: "20 December 2024",
-    tag: "Gurudev",
-    thumbnailGradient: "from-[#5a3a1a] to-[#1a0c03]",
-    href: "#",
-  },
-
-  /* ── VIDEOS ── */
+/* ── Videos ── */
+const VIDEO_ITEMS: Item[] = [
   {
     id: "v1",
     type: "video",
@@ -132,8 +82,10 @@ const ITEMS: Item[] = [
     duration: "1 hr 5 min",
     href: "https://www.youtube.com/@siddhamahayog",
   },
+];
 
-  /* ── NEWS ── */
+/* ── News ── */
+const NEWS_ITEMS: Item[] = [
   {
     id: "n1",
     type: "news",
@@ -176,10 +128,14 @@ const ITEMS: Item[] = [
   },
 ];
 
+const ITEMS: Item[] = [...ARTICLE_ITEMS, ...VIDEO_ITEMS, ...NEWS_ITEMS];
+
+/* ── UI helpers ── */
+
 const TYPE_LABELS: Record<string, { label: string; color: string; bg: string }> = {
-  article: { label: "Article",  color: "text-[#b8892a]",  bg: "bg-[#b8892a]/10"  },
-  video:   { label: "Video",    color: "text-[#8b5a2a]",  bg: "bg-[#8b5a2a]/10"  },
-  news:    { label: "News",     color: "text-[#4a7a5a]",  bg: "bg-[#4a7a5a]/10"  },
+  article: { label: "Article", color: "text-[#b8892a]", bg: "bg-[#b8892a]/10" },
+  video:   { label: "Video",   color: "text-[#8b5a2a]", bg: "bg-[#8b5a2a]/10" },
+  news:    { label: "News",    color: "text-[#4a7a5a]", bg: "bg-[#4a7a5a]/10" },
 };
 
 const TYPE_ICONS = {
@@ -204,10 +160,8 @@ function TypeBadge({ type }: { type: Item["type"] }) {
   );
 }
 
-function ContentCard({ item }: { item: Item }) {
-  const isExternal = item.href.startsWith("http");
-
-  const thumbnail = (
+function CardThumbnail({ item }: { item: Item }) {
+  return (
     <div className="relative aspect-[16/9] overflow-hidden rounded-xl mb-4">
       {item.thumbnail ? (
         <img src={item.thumbnail} alt={item.title} className="w-full h-full object-cover" />
@@ -228,33 +182,33 @@ function ContentCard({ item }: { item: Item }) {
       )}
     </div>
   );
+}
 
-  const body = (
-    <div className="flex flex-col flex-1">
-      <div className="flex items-center gap-2 mb-2.5">
-        <TypeBadge type={item.type} />
-        <span className="text-[#9a8070] text-xs">{item.tag}</span>
-      </div>
-      <h3 className="font-['Cormorant_Garamond'] text-xl text-[#2c1a08] font-medium leading-snug mb-2 flex-1">
-        {item.title}
-      </h3>
-      <p className="text-[#6a5c48] text-sm leading-relaxed mb-4 line-clamp-3">
-        {item.excerpt}
-      </p>
-      <div className="flex items-center justify-between mt-auto pt-3 border-t border-[#e8dece]">
-        <span className="text-[#9a8070] text-xs">{item.date}</span>
-        <span className={`text-xs font-medium flex items-center gap-1 ${TYPE_LABELS[item.type].color}`}>
-          {item.type === "video" ? "Watch" : item.type === "news" ? "Read" : "Read"}
-          <ChevronRight size={13} />
-        </span>
-      </div>
-    </div>
-  );
+function ContentCard({ item }: { item: Item }) {
+  const isExternal = item.href.startsWith("http");
 
   const inner = (
     <div className="bg-white rounded-2xl border border-[#e8dece] p-5 shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-0.5 h-full flex flex-col cursor-pointer">
-      {thumbnail}
-      {body}
+      <CardThumbnail item={item} />
+      <div className="flex flex-col flex-1">
+        <div className="flex items-center gap-2 mb-2.5">
+          <TypeBadge type={item.type} />
+          <span className="text-[#9a8070] text-xs">{item.tag}</span>
+        </div>
+        <h3 className="font-['Cormorant_Garamond'] text-xl text-[#2c1a08] font-medium leading-snug mb-2 flex-1">
+          {item.title}
+        </h3>
+        <p className="text-[#6a5c48] text-sm leading-relaxed mb-4 line-clamp-3">
+          {item.excerpt}
+        </p>
+        <div className="flex items-center justify-between mt-auto pt-3 border-t border-[#e8dece]">
+          <span className="text-[#9a8070] text-xs">{item.date}</span>
+          <span className={`text-xs font-medium flex items-center gap-1 ${TYPE_LABELS[item.type].color}`}>
+            {item.type === "video" ? "Watch" : "Read"}
+            <ChevronRight size={13} />
+          </span>
+        </div>
+      </div>
     </div>
   );
 
@@ -265,6 +219,12 @@ function ContentCard({ item }: { item: Item }) {
 }
 
 function FeaturedCard({ item }: { item: Item }) {
+  const isExternal = item.href.startsWith("http");
+  const Wrapper = ({ children }: { children: React.ReactNode }) =>
+    isExternal
+      ? <a href={item.href} target="_blank" rel="noopener noreferrer">{children}</a>
+      : <Link href={item.href}><span className="cursor-pointer">{children}</span></Link>;
+
   return (
     <div className="bg-white rounded-3xl border border-[#e8dece] shadow-md overflow-hidden mb-12">
       <div className="grid md:grid-cols-2">
@@ -293,11 +253,11 @@ function FeaturedCard({ item }: { item: Item }) {
           </p>
           <div className="flex items-center justify-between">
             <span className="text-[#9a8070] text-xs">{item.date}</span>
-            <a href={item.href}>
+            <Wrapper>
               <span className="inline-flex items-center gap-2 bg-[#b8892a] hover:bg-[#9d7422] text-white text-xs px-5 py-2.5 rounded-full transition-colors cursor-pointer">
                 Read Article <ArrowRight size={13} />
               </span>
-            </a>
+            </Wrapper>
           </div>
         </div>
       </div>
@@ -305,6 +265,7 @@ function FeaturedCard({ item }: { item: Item }) {
   );
 }
 
+/* ── Page ── */
 export default function Teachings() {
   const [activeFilter, setActiveFilter] = useState<ContentType>("all");
   const [search, setSearch] = useState("");
@@ -330,7 +291,8 @@ export default function Teachings() {
 
       {/* ── HERO ── */}
       <section className="relative py-20 px-6 text-center bg-[#1a0c03] overflow-hidden">
-        <div className="absolute inset-0 opacity-10"
+        <div
+          className="absolute inset-0 opacity-10"
           style={{ backgroundImage: "radial-gradient(circle at 30% 50%, #b8892a 0%, transparent 60%), radial-gradient(circle at 70% 50%, #e8c56a 0%, transparent 60%)" }}
         />
         <div className="relative z-10 max-w-3xl mx-auto">
@@ -354,7 +316,6 @@ export default function Teachings() {
       {/* ── FILTER BAR ── */}
       <section className="sticky top-16 z-40 bg-[#faf9f6]/97 backdrop-blur-sm border-b border-[#e8dece]">
         <div className="max-w-6xl mx-auto px-6 py-3 flex flex-col sm:flex-row items-center gap-3">
-          {/* Type filters */}
           <div className="flex items-center gap-1 flex-wrap">
             {FILTERS.map(({ key, label }) => {
               const Icon = key === "all" ? null : TYPE_ICONS[key];
@@ -374,8 +335,6 @@ export default function Teachings() {
               );
             })}
           </div>
-
-          {/* Search */}
           <div className="relative sm:ml-auto w-full sm:w-64">
             <Search size={14} className="absolute left-3 top-1/2 -translate-y-1/2 text-[#9a8070]" />
             <input
@@ -393,12 +352,10 @@ export default function Teachings() {
       <section className="py-14 px-6">
         <div className="max-w-6xl mx-auto">
 
-          {/* Featured — only show when not filtering */}
           {activeFilter === "all" && !search && featured && (
             <FeaturedCard item={featured} />
           )}
 
-          {/* Results count */}
           <div className="flex items-center justify-between mb-6">
             <p className="text-[#9a8070] text-sm">
               {filtered.length} {filtered.length === 1 ? "result" : "results"}
@@ -411,7 +368,6 @@ export default function Teachings() {
             )}
           </div>
 
-          {/* Grid */}
           {filtered.length > 0 ? (
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {filtered.map(item => (
@@ -430,7 +386,6 @@ export default function Teachings() {
               </button>
             </div>
           )}
-
         </div>
       </section>
 
@@ -451,7 +406,6 @@ export default function Teachings() {
           </a>
         </div>
       </section>
-
     </div>
   );
 }

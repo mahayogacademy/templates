@@ -540,3 +540,21 @@ id = "AqhOxXATtxMblNphUScl1"
 uri = "file://artifacts/mahayog-academy/public/images/teachings-article-3.png"
 type = "image"
 title = "Sanskrit manuscript spiritual thumbnail"
+
+[[generated]]
+id = "sJdnZgkXtjQctldS-Dn0h"
+uri = "file://artifacts/mahayog-academy/public/images/teachings-kundalini.png"
+type = "image"
+title = "kundalini chakra article thumbnail"
+
+[[generated]]
+id = "59ynoMcw9Vu_xSzhFpHcB"
+uri = "file://artifacts/mahayog-academy/public/images/teachings-prana.png"
+type = "image"
+title = "sacred river confluence article thumbnail"
+
+[[generated]]
+id = "KNgHtjUTaPzt5QbCzJWuH"
+uri = "file://artifacts/mahayog-academy/public/images/teachings-nepal.png"
+type = "image"
+title = "Nepal sacred geography thumbnail"
