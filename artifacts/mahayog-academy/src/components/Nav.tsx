@@ -153,7 +153,7 @@ export default function Nav() {
           {/* Courses */}
           <div className="relative" onMouseEnter={() => enter("courses")} onMouseLeave={leave}>
             <button className="flex items-center gap-1 px-4 py-2 text-sm text-[#5a5248] hover:text-[#7a5518] hover:bg-[#eddfc8] transition-colors tracking-wide rounded-lg">
-              Courses
+              Programs
               <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${open === "courses" ? "rotate-180" : ""}`} strokeWidth={1.5} />
             </button>
             {open === "courses" && (
