@@ -179,13 +179,25 @@ export default function FounderGuru() {
             </div>
 
             {/* Right: portrait */}
-            <div className="rounded-2xl overflow-hidden shadow-md shadow-[#b8892a]/10 hidden md:block sticky top-20">
-              <img
-                src={`${b}images/saint-siddhababa.png`}
-                alt="Jagadguru Mahayogi Siddhababa"
-                className="w-full object-cover object-top"
-                style={{ minHeight: "440px" }}
-              />
+            <div className="hidden md:block sticky top-20">
+              <div className="rounded-2xl overflow-hidden shadow-md shadow-[#b8892a]/10">
+                <img
+                  src={`${b}images/gurudev-photo.png`}
+                  alt="Jagadguru Mahayogi Siddhababa"
+                  className="w-full object-cover object-center"
+                  style={{ minHeight: "440px" }}
+                />
+              </div>
+              <a
+                href={`${b}images/gurudev-photo.png`}
+                download="Jagadguru-Mahayogi-Siddhababa.png"
+                className="mt-3 flex items-center justify-center gap-2 text-xs text-[#b8892a] hover:text-[#9d7422] tracking-[0.15em] uppercase font-medium transition-colors duration-200"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+                </svg>
+                Download Photo
+              </a>
             </div>
 
           </div>
