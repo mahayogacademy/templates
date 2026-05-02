@@ -10,6 +10,7 @@ const PATHS = [
     sub: "Meditation & Inner Awakening",
     href: "/meditation",
     img: `${b}images/mahayog-group-meditation.jpg`,
+    overlay: "bg-gradient-to-t from-[#1a0f05]/50 to-transparent",
     desc: "Receive Shaktipat initiation and experience the automatic awakening of Kundalini — effortlessly integrating all four yoga paths as taught by Siddhababa.",
   },
   {
@@ -17,6 +18,7 @@ const PATHS = [
     sub: "Daily Seva · Puja · Community",
     href: "/ashram",
     img: `${b}images/ashram-guru-kutti.jpg`,
+    overlay: "bg-gradient-to-t from-[#1a0f05]/20 to-transparent",
     desc: "Immerse yourself in the daily rhythm of Barahachhetra — morning puja, gau seva, satsang, prasad, and the stillness of a consecrated Himalayan sanctuary.",
   },
   {
@@ -24,6 +26,7 @@ const PATHS = [
     sub: "Ancient Wisdom for Modern Minds",
     href: "/vedanta",
     img: `${b}images/vedanta-hero.png`,
+    overlay: "bg-gradient-to-t from-[#1a0f05]/50 to-transparent",
     desc: "A 300-hour live course taught personally by Siddhababa — exploring Brahman, the Self, and the nature of Reality, practised alongside daily Mahayog meditation.",
   },
   {
@@ -31,6 +34,7 @@ const PATHS = [
     sub: "Gau Seva · Bhojan · Outreach",
     href: "/projects",
     img: `${b}images/ashram-seva.png`,
+    overlay: "bg-gradient-to-t from-[#1a0f05]/50 to-transparent",
     desc: "From building Hanuman temples and caring for sacred cows to serving prasad and nurturing youth — selfless service as the highest spiritual practice.",
   },
 ];
@@ -208,7 +212,7 @@ export default function Home() {
                       alt={path.label}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#1a0f05]/50 to-transparent" />
+                    <div className={`absolute inset-0 ${path.overlay}`} />
                   </div>
                   <div className="p-6 flex flex-col flex-1">
                     <h3 className="font-['Cormorant_Garamond'] text-xl font-semibold text-[#2e2820] mb-3 leading-snug">{path.label}</h3>
