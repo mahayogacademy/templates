@@ -136,7 +136,7 @@ export default function Home() {
                 <div className="absolute bottom-0 left-0 right-0 p-7">
                   <div className="h-px w-8 bg-[#b8892a] mb-4" />
                   <h3 className="font-['Cormorant_Garamond'] text-4xl font-light text-white mb-2 leading-tight">Mahayog</h3>
-                  <p className="text-sm text-white/65 leading-relaxed mb-5">The ancient science of awakening through prana, breath and inner stillness</p>
+                  <p className="text-sm text-white/65 leading-relaxed mb-5">The ancient science of automatic kundalini awakening through Guru's grace</p>
                   <span className="inline-flex items-center gap-2 text-[#c9a24e] text-xs tracking-[0.15em] uppercase font-medium group-hover:gap-3 transition-all duration-300">
                     Explore <ArrowRight className="w-3.5 h-3.5" strokeWidth={1.5} />
                   </span>
