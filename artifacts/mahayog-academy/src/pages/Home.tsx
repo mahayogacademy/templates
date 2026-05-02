@@ -34,7 +34,7 @@ const PATHS = [
     label: "Selfless Service",
     sub: "Gau Seva · Bhojan · Outreach",
     href: "/projects",
-    img: `${b}images/ashram-seva.png`,
+    img: `${b}images/selfless-service.jpg`,
     overlay: "bg-gradient-to-t from-[#1a0f05]/50 to-transparent",
     desc: "From building Hanuman temples and caring for sacred cows to serving prasad and nurturing youth — selfless service as the highest spiritual practice.",
   },
