@@ -672,3 +672,27 @@ id = "VgX4IlWUd91l_Oz5ohgMT"
 uri = "file://artifacts/mahayog-academy/public/images/donate-hero.png"
 type = "image"
 title = "hands holding diya donate hero"
+
+[[generated]]
+id = "eMns2vMtZB_kbDb-lmUGV"
+uri = "file://artifacts/mahayog-academy/public/images/project-hanuman-temple.png"
+type = "image"
+title = "108 hanuman temple construction"
+
+[[generated]]
+id = "z_VmAwcWAcu5KS-H_hrG0"
+uri = "file://artifacts/mahayog-academy/public/images/project-ram-mandir.png"
+type = "image"
+title = "ram mandir temple"
+
+[[generated]]
+id = "4vz0FnSQxP2UDI-3MAi9W"
+uri = "file://artifacts/mahayog-academy/public/images/project-gurukul.png"
+type = "image"
+title = "gurukul vedic school children"
+
+[[generated]]
+id = "b1WbRa2NNZ-9UR98pML3z"
+uri = "file://artifacts/mahayog-academy/public/images/project-global-teaching.png"
+type = "image"
+title = "global yoga meditation teaching"

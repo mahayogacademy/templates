@@ -36,6 +36,37 @@ const SEVA_OPTIONS = [
   },
 ];
 
+const PROJECTS = [
+  {
+    name: "108 Hanuman Temple",
+    sub: "Sacred Construction",
+    img: "project-hanuman-temple.png",
+    description:
+      "A landmark temple dedicated to Lord Hanuman is being built at the ashram. Your support helps fund the construction, carving, and consecration of this enduring centre of devotion.",
+  },
+  {
+    name: "Ram Mandir",
+    sub: "Temple of Lord Rāma",
+    img: "project-ram-mandir.png",
+    description:
+      "A dedicated Ram Mandir will serve as a permanent place of worship and pilgrimage. Donations contribute to the building, ornamentation, and daily maintenance of this sacred space.",
+  },
+  {
+    name: "Gurukul",
+    sub: "Vedic Education",
+    img: "project-gurukul.png",
+    description:
+      "The Gurukul provides children with a traditional Vedic education rooted in Sanskrit, dharma, and inner discipline. Your gift helps fund teachers, materials, food, and the future of this living tradition.",
+  },
+  {
+    name: "Global Spiritual Teaching",
+    sub: "Vedanta · Mahayog · Yoga",
+    img: "project-global-teaching.png",
+    description:
+      "Reaching seekers worldwide through teachings in Vedanta, Himalayan Siddha Mahayog, yoga, and meditation. Your support enables retreats, online programmes, and outreach across continents.",
+  },
+];
+
 const NEPAL_ACCOUNT = {
   bankName: "Nepal SBI Bank Ltd.",
   accountName: "Jagadguru Ramanadacharya Seva Peeth",
@@ -131,8 +162,42 @@ export default function Donate() {
             <span className="uppercase tracking-[0.25em] text-xs text-[#b8892a] font-medium">Choose Your Offering</span>
             <h2 className="font-['Cormorant_Garamond'] text-4xl font-light text-[#2e2820] mt-2">Where Your Gift Goes</h2>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+
+          {/* Daily Seva */}
+          <p className="text-xs uppercase tracking-[0.25em] text-[#9a8f84] font-medium mb-5">Daily Ashram Seva</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-14">
             {SEVA_OPTIONS.map((s) => (
+              <div
+                key={s.name}
+                className="flex flex-col rounded-2xl bg-white border border-[#e2d0b8] shadow-sm hover:shadow-md hover:border-[#d4a843]/50 transition-all duration-300 overflow-hidden"
+              >
+                <div className="overflow-hidden" style={{ height: "160px" }}>
+                  <img
+                    src={`${b}images/${s.img}`}
+                    alt={s.name}
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-5 flex flex-col flex-1">
+                  <p className="font-['Cormorant_Garamond'] text-xl font-semibold text-[#2e2820] mb-0.5">{s.name}</p>
+                  <p className="text-xs uppercase tracking-[0.15em] text-[#b8892a] font-medium mb-3">{s.sub}</p>
+                  <p className="text-sm text-[#6a6058] leading-relaxed flex-1">{s.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Divider */}
+          <div className="flex items-center gap-4 mb-10">
+            <div className="flex-1 h-px bg-[#e2d0b8]" />
+            <div className="w-1.5 h-1.5 rounded-full bg-[#b8892a]/50" />
+            <div className="flex-1 h-px bg-[#e2d0b8]" />
+          </div>
+
+          {/* Ongoing Projects */}
+          <p className="text-xs uppercase tracking-[0.25em] text-[#9a8f84] font-medium mb-5">Ongoing Projects</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {PROJECTS.map((s) => (
               <div
                 key={s.name}
                 className="flex flex-col rounded-2xl bg-white border border-[#e2d0b8] shadow-sm hover:shadow-md hover:border-[#d4a843]/50 transition-all duration-300 overflow-hidden"
