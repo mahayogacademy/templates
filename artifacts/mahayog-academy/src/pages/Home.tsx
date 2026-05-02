@@ -364,7 +364,7 @@ export default function Home() {
                   <span className="absolute top-4 left-4 text-[10px] uppercase tracking-[0.25em] text-[#e8c56a] font-semibold bg-[#1a0f05]/50 px-3 py-1 rounded-full">Education</span>
                 </div>
                 <div className="p-7 flex flex-col flex-1">
-                  <h3 className="font-['Cormorant_Garamond'] text-2xl font-light text-[#2e2820] mb-3 leading-snug">Jagadguru Shriramanandacharya Gurukul</h3>
+                  <h3 className="font-['Cormorant_Garamond'] text-2xl font-light text-[#2e2820] mb-3 leading-snug">Jagadguru Shree Ramanandacharya Gurukul</h3>
                   <div className="h-px w-8 bg-[#b8892a]/40 mb-4" />
                   <p className="text-sm text-[#6a6058] leading-relaxed flex-1">A residential Gurukul at Chataradham, Barahakshetra — blending Vedic values, Sanskrit, and meditation with a full modern curriculum for Grades 6–12, in a sattvic and disciplined environment.</p>
                   <div className="flex items-center gap-1.5 mt-6 text-[#b8892a] text-xs font-medium uppercase tracking-wider group-hover:gap-2.5 transition-all">
