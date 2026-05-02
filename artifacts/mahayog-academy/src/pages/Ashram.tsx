@@ -43,7 +43,6 @@ const GALLERY_TOP = [
 ];
 
 const GALLERY_BOT = [
-  { src: "ashram-yogic-life.jpg",                            alt: "Sanyasi offering prasad to a sacred cow at the ashram",   caption: "Gau Seva & Yogic Life" },
   { src: "ashram-garden.jpg",                                alt: "Devotees tending the ashram herb garden",                  caption: "Sacred Garden" },
   { src: "ashram-cows-1.jpg",                                alt: "Devotee caring for sacred cows at the ashram gate",        caption: "Caring for the Sacred" },
   { src: "ashram-extra-prasad-serve.jpg",                    alt: "Devotees serving prasad to a long row of seated guests",   caption: "Prasad Seva" },
