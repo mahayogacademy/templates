@@ -124,6 +124,28 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── SACRED SYMBOLS STRIP ── */}
+      <section className="bg-[#faf9f6] py-10 px-6 overflow-hidden">
+        <div className="max-w-4xl mx-auto flex flex-col items-center gap-5">
+          <div className="flex items-center gap-4">
+            <div className="h-px w-16 bg-[#b8892a]/30" />
+            <span className="uppercase tracking-[0.3em] text-[10px] text-[#b8892a]/70 font-medium">Sacred Symbols of the Tradition</span>
+            <div className="h-px w-16 bg-[#b8892a]/30" />
+          </div>
+          <div className="relative">
+            <img
+              src={`${b}images/sacred-symbols.gif`}
+              alt="Sacred symbols of the Ramanandi Vaishnava tradition — Ram Darbar, Vaishnava emblems, Sri Ram, and Jagadguru Ramanandacharya"
+              className="max-w-full h-auto max-h-28 object-contain"
+              style={{
+                filter: "sepia(0.45) saturate(1.6) hue-rotate(-5deg) brightness(0.9) contrast(1.05)",
+                mixBlendMode: "multiply",
+              }}
+            />
+          </div>
+        </div>
+      </section>
+
       {/* ── MISSION STATEMENT ── */}
       <section className="py-24 px-6">
         <div className="max-w-3xl mx-auto text-center">
