@@ -1,16 +1,16 @@
 import { useState, useMemo } from "react";
 import { Link } from "wouter";
 import Nav from "@/components/Nav";
-import { Search, Play, ArrowRight, BookOpen, Newspaper, Video, ChevronRight } from "lucide-react";
+import { Search, Play, ArrowRight, BookOpen, Video, ChevronRight } from "lucide-react";
 import { ARTICLES } from "@/data/articles";
 
 const b = import.meta.env.BASE_URL;
 
-type ContentType = "all" | "article" | "video" | "news";
+type ContentType = "all" | "article" | "video";
 
 interface Item {
   id: string;
-  type: "article" | "video" | "news";
+  type: "article" | "video";
   title: string;
   excerpt: string;
   date: string;
@@ -89,106 +89,26 @@ const VIDEO_ITEMS: Item[] = [
     duration: "1 hr 22 min",
     href: "https://www.youtube.com/@siddhamahayog",
   },
-  {
-    id: "v2",
-    type: "video",
-    title: "Satsang: The Meaning of Surrender in Spiritual Life",
-    excerpt: "In this satsang recording, Jagadguru addresses the question of surrender — what it truly means, why it is essential on the path, and how to cultivate it in everyday life.",
-    date: "15 April 2025",
-    tag: "Satsang",
-    thumbnailGradient: "from-[#2c1a08] to-[#0e0703]",
-    duration: "58 min",
-    href: "https://www.youtube.com/@siddhamahayog",
-  },
-  {
-    id: "v3",
-    type: "video",
-    title: "108 Ramarchan Mahayagya — Full Ceremony Recording",
-    excerpt: "Watch the complete recording of the 108 Ramarchan Mahayagya — a profound collective ritual honouring Bhagwan Shri Ram, held at Chataradham Ashram, Nepal.",
-    date: "22 March 2025",
-    tag: "Ceremony",
-    thumbnailGradient: "from-[#6b3a0a] to-[#2c1205]",
-    duration: "4 hr 10 min",
-    href: "https://www.youtube.com/@siddhamahayog",
-  },
-  {
-    id: "v4",
-    type: "video",
-    title: "Vedanta Discourse: Who Am I? The Vedic Answer",
-    excerpt: "One of the most fundamental questions of human life: Who am I? Jagadguru Mahayogi Siddhababa offers the Vedantic answer with rare clarity, depth, and accessibility.",
-    date: "5 March 2025",
-    tag: "Vedanta",
-    thumbnailGradient: "from-[#1a1008] to-[#0a0804]",
-    duration: "1 hr 5 min",
-    href: "https://www.youtube.com/@siddhamahayog",
-  },
 ];
 
-/* ── News ── */
-const NEWS_ITEMS: Item[] = [
-  {
-    id: "n1",
-    type: "news",
-    title: "Online Mahayog Initiation Workshop — Registrations Now Open",
-    excerpt: "The next online 5-day Mahayog Shaktipat Initiation Workshop is now open for registration. Participants from all countries are welcome. Places are limited — apply early.",
-    date: "28 April 2025",
-    tag: "Workshop",
-    thumbnailGradient: "from-[#b8892a] to-[#7a5a18]",
-    href: "/register",
-  },
-  {
-    id: "n2",
-    type: "news",
-    title: "Gurukul Scholarship Programme 2025 — Applications Open",
-    excerpt: "The Mahayogi Siddhababa Gurukul is now accepting scholarship applications for the 2025–26 academic year. Full sponsorships are available for children from underprivileged backgrounds.",
-    date: "10 April 2025",
-    tag: "Gurukul",
-    thumbnailGradient: "from-[#2a5a3a] to-[#142a1c]",
-    href: "/gurukul",
-  },
-  {
-    id: "n3",
-    type: "news",
-    title: "International Satsang & Darshan Programme 2025 Announced",
-    excerpt: "Jagadguru Mahayogi Siddhababa will be visiting select international locations for satsang and darshan in 2025. Details on dates and venues are now available.",
-    date: "1 April 2025",
-    tag: "Events",
-    thumbnailGradient: "from-[#3a2a5a] to-[#1a1030]",
-    href: "/events",
-  },
-  {
-    id: "n4",
-    type: "news",
-    title: "New Vedanta Darshan Course Cohort — Enrolment Open",
-    excerpt: "A new cohort of the 300-hour Vedanta Darshan Course with Jagadguru Mahayogi Siddhababa begins this autumn. This revolving daily programme is offered online via Zoom.",
-    date: "20 March 2025",
-    tag: "Vedanta",
-    thumbnailGradient: "from-[#5a2a0a] to-[#2c1205]",
-    href: "/vedanta",
-  },
-];
-
-const ITEMS: Item[] = [...ARTICLE_ITEMS, ...VIDEO_ITEMS, ...NEWS_ITEMS];
+const ITEMS: Item[] = [...ARTICLE_ITEMS, ...VIDEO_ITEMS];
 
 /* ── UI helpers ── */
 
 const TYPE_LABELS: Record<string, { label: string; color: string; bg: string }> = {
   article: { label: "Article", color: "text-[#b8892a]", bg: "bg-[#b8892a]/10" },
   video:   { label: "Video",   color: "text-[#8b5a2a]", bg: "bg-[#8b5a2a]/10" },
-  news:    { label: "News",    color: "text-[#4a7a5a]", bg: "bg-[#4a7a5a]/10" },
 };
 
 const TYPE_ICONS = {
   article: BookOpen,
   video:   Video,
-  news:    Newspaper,
 };
 
 const FILTERS: { key: ContentType; label: string }[] = [
   { key: "all",     label: "All"      },
   { key: "article", label: "Articles" },
   { key: "video",   label: "Videos"   },
-  { key: "news",    label: "News"     },
 ];
 
 function TypeBadge({ type }: { type: Item["type"] }) {
