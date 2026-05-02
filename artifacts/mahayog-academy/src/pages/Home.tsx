@@ -53,12 +53,32 @@ export default function Home() {
 
       {/* ── HERO ── */}
       <section className="relative flex items-center justify-center overflow-hidden" style={{ minHeight: "calc(100vh - 64px)" }}>
-        <img
-          src={`${b}images/guru-hero-new.jpg`}
-          alt="Mahayogi Siddhababa Spiritual Academy"
-          className="absolute inset-0 w-full h-full object-cover object-center"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#1a0f05]/70 via-[#1a0f05]/50 to-[#faf9f6]" />
+        {/* Collage mosaic */}
+        <div className="absolute inset-0 grid grid-cols-3 grid-rows-2">
+          {/* Left — tall, spans both rows */}
+          <div className="row-span-2 overflow-hidden">
+            <img src={`${b}images/ashram-hanuman-sunset.jpg`} alt="" aria-hidden className="w-full h-full object-cover object-center scale-105" />
+          </div>
+          {/* Centre top */}
+          <div className="overflow-hidden">
+            <img src={`${b}images/hanumad-satsang-tent.jpg`} alt="" aria-hidden className="w-full h-full object-cover object-center scale-105" />
+          </div>
+          {/* Right top */}
+          <div className="overflow-hidden">
+            <img src={`${b}images/jagadguru-1.jpg`} alt="" aria-hidden className="w-full h-full object-cover object-top scale-105" />
+          </div>
+          {/* Centre bottom */}
+          <div className="overflow-hidden">
+            <img src={`${b}images/ashram-cows-sunset.jpg`} alt="" aria-hidden className="w-full h-full object-cover object-center scale-105" />
+          </div>
+          {/* Right bottom */}
+          <div className="overflow-hidden">
+            <img src={`${b}images/ashram-koshi-river.jpg`} alt="" aria-hidden className="w-full h-full object-cover object-center scale-105" />
+          </div>
+        </div>
+        {/* Unified dark overlay for text legibility */}
+        <div className="absolute inset-0 bg-[#1a0f05]/62" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#faf9f6]" />
 
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
           {/* Ornament */}
