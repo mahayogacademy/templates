@@ -66,7 +66,7 @@ export const ARTICLES: Article[] = [
     subtitle: "Understanding the Conscious Principle and the Path to Realization",
     tag: "Gurudev",
     date: "14 April 2025",
-    thumbnail: `${b}images/teachings-article-1.png`,
+    thumbnail: `${b}images/teachings-guru-soul.png`,
     excerpt:
       "All worldly elements are material and perishable. Yet beyond this changing world exists another principle — the conscious essence. This is the teaching of the Guru on the nature of the soul and the path to realization.",
     content: [
@@ -187,7 +187,7 @@ export const ARTICLES: Article[] = [
     subtitle: "A Yogic Science of Life, Consciousness, and Vital Force",
     tag: "Yoga",
     date: "25 March 2025",
-    thumbnail: `${b}images/teachings-article-2.png`,
+    thumbnail: `${b}images/teachings-what-is-prana.png`,
     excerpt:
       "Prāṇa is the fundamental force that animates life — not merely breath or oxygen, but the intelligent vitality that sustains the body, activates the mind, and serves as the bridge between matter and consciousness.",
     content: [
@@ -232,7 +232,7 @@ export const ARTICLES: Article[] = [
     subtitle: "Practical guidance for daily life and sādhana",
     tag: "Practice",
     date: "18 March 2025",
-    thumbnailGradient: "from-[#3a5a2a] to-[#1a2e10]",
+    thumbnail: `${b}images/teachings-refine-prana.png`,
     excerpt:
       "Prāṇa is refined not only through formal yogic techniques, but through how one lives, sits, breathes, speaks, and relates. Jagadguru Mahayogi Siddhababa offers seven foundational practices accessible to all sincere seekers.",
     content: [
@@ -265,7 +265,7 @@ export const ARTICLES: Article[] = [
     subtitle: "Understanding what we truly are",
     tag: "Vedanta",
     date: "10 March 2025",
-    thumbnail: `${b}images/teachings-article-3.png`,
+    thumbnail: `${b}images/teachings-two-realities.png`,
     excerpt:
       "To understand why suffering persists and where true happiness lies, we must first understand the most fundamental distinction in existence: the conscious and the non-conscious. Everything else arises from this distinction.",
     content: [
@@ -293,7 +293,7 @@ export const ARTICLES: Article[] = [
     subtitle: "The lesson of the dog and the dry bone",
     tag: "Vedanta",
     date: "1 March 2025",
-    thumbnailGradient: "from-[#5a2a0a] to-[#1a0c03]",
+    thumbnail: `${b}images/teachings-world-heart.png`,
     excerpt:
       "Every living being wants happiness — yet despite this shared longing, suffering continues everywhere. Jagadguru Mahayogi Siddhababa illuminates why the world cannot provide what only awareness can offer.",
     content: [
