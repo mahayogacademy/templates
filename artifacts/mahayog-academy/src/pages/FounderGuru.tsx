@@ -388,7 +388,7 @@ export default function FounderGuru() {
                     In 2019, an assembly of spiritual leaders from all major Hindu monastic lineages, Vaishnava, Shaiva, Shakta, and Smarta, honored him with the highest monastical title — <span className="italic">Jagadguru</span> ("Guru of the world"). They unanimously recognized him as a successor of Ramanandacharya and a Guru capable of guiding the entire world.
                   </p>
                   <p className="text-base text-[#5a5248] leading-relaxed">
-                    Under his own Guru (Param Pujya Sri Narayan Das Ji Maharaj of Nasik), he revived Surat-Shabd Yoga and formulated it as <span className="font-medium text-[#3d3830]">Himalayan Siddha Mahayog</span>, sacred knowledge once known only to Himalayan ascetics, now made accessible to sincere seekers worldwide.
+                    Under the guidance of his Guru, Param Pujya Sri Narayan Das Ji Maharaj of Nasik, His Holiness revived the practice of Surat-Shabd Yoga as <span className="font-medium text-[#3d3830]">Himalayan Siddha Mahayog</span>. Since Maha Shivaratri 2007, he has made this sacred knowledge, once limited to Himalayan ascetics, accessible to sincere seekers worldwide.
                   </p>
                 </div>
               </div>
