@@ -107,7 +107,7 @@ export default function Home() {
         </div>
         {/* Unified dark veil + bottom cream fade */}
         <div className="absolute inset-0 bg-[#1a0f05]/50" />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#faf9f6]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#1a0f05]" />
 
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
           {/* Sacred symbols */}
