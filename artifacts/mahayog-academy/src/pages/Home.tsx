@@ -476,6 +476,86 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── TEACHINGS GLIMPSE ── */}
+      <section className="py-24 px-6 bg-[#faf9f6]">
+        <div className="max-w-3xl mx-auto">
+          <div className="text-center mb-12">
+            <div className="flex items-center justify-center gap-4 mb-4">
+              <div className="h-px w-10 bg-[#b8892a]/40" />
+              <span className="uppercase tracking-[0.3em] text-xs text-[#b8892a] font-medium">Teachings</span>
+              <div className="h-px w-10 bg-[#b8892a]/40" />
+            </div>
+            <h2 className="font-['Cormorant_Garamond'] text-4xl md:text-5xl font-light text-[#2e2820]">Words from the Tradition</h2>
+          </div>
+
+          {/* Preview rows with fade-out */}
+          <div className="relative">
+            <div className="space-y-0 divide-y divide-[#e8dece]">
+              {[
+                {
+                  type: "Article",
+                  title: "The Spiritual Significance of Barahachhetra",
+                  excerpt: "Where the Koshi meets the sacred confluence — a living tirtha that has drawn seekers, kings, and siddhas for millennia.",
+                  thumb: `${b}images/teachings-prana.png`,
+                  href: "/teachings/barahachhetra",
+                },
+                {
+                  type: "Article",
+                  title: "The Guru and the Imperishable Soul",
+                  excerpt: "Understanding the conscious principle within — and why the relationship with a living Guru is central to the path of realisation.",
+                  thumb: `${b}images/teachings-guru-soul.png`,
+                  href: "/teachings/guru-imperishable-soul",
+                },
+                {
+                  type: "Video",
+                  title: "What Is Himalayan Siddha Mahayog?",
+                  excerpt: "Siddhababa gives a direct and clear description of this unique meditation practice — what it is, how it works, and why it differs from other paths.",
+                  thumb: `${b}images/video-mahayog-sadhana.jpg`,
+                  href: "https://www.youtube.com/watch?v=U2kbxV0zy-E&t=49s",
+                  duration: "34 min",
+                },
+                {
+                  type: "Article",
+                  title: "Kundalini, the Chakras, and the Inner Science of Awakening",
+                  excerpt: "An exploration of the subtle body, the dormant energy within, and the authentic Vedic understanding of spiritual unfoldment.",
+                  thumb: `${b}images/teachings-kundalini.png`,
+                  href: "/teachings/kundalini-chakras",
+                },
+              ].map((item, i) => (
+                <Link key={i} href={item.href}>
+                  <div className="flex items-start gap-5 py-5 group cursor-pointer">
+                    <div className="shrink-0 w-16 h-16 rounded-xl overflow-hidden">
+                      <img src={item.thumb} alt="" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-center gap-2 mb-1.5">
+                        <span className="text-[10px] uppercase tracking-[0.2em] text-[#b8892a] font-semibold">{item.type}</span>
+                        {item.duration && <span className="text-[10px] text-[#9a8878]">· {item.duration}</span>}
+                      </div>
+                      <h3 className="font-['Cormorant_Garamond'] text-lg font-light text-[#2e2820] group-hover:text-[#b8892a] transition-colors leading-snug mb-1">{item.title}</h3>
+                      <p className="text-xs text-[#9a8878] leading-relaxed line-clamp-1">{item.excerpt}</p>
+                    </div>
+                    <ArrowRight className="w-4 h-4 text-[#b8892a]/40 group-hover:text-[#b8892a] shrink-0 mt-1.5 transition-colors" strokeWidth={1.5} />
+                  </div>
+                </Link>
+              ))}
+            </div>
+
+            {/* Fade-out gradient */}
+            <div className="absolute bottom-0 left-0 right-0 h-28 bg-gradient-to-t from-[#faf9f6] to-transparent pointer-events-none" />
+          </div>
+
+          <div className="text-center mt-4">
+            <Link href="/teachings">
+              <span className="inline-flex items-center gap-2 text-sm text-[#b8892a] hover:text-[#9d7422] font-medium tracking-wide transition-colors cursor-pointer border-b border-[#b8892a]/40 hover:border-[#b8892a] pb-0.5">
+                Explore All Teachings
+                <ArrowRight className="w-4 h-4" strokeWidth={1.5} />
+              </span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* ── DONATE CTA ── */}
       <section className="relative py-28 px-6 overflow-hidden">
         <img
