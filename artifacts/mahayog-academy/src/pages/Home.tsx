@@ -309,7 +309,7 @@ export default function Home() {
                 alt="Jagadguru Mahayogi Siddhababa"
                 className="absolute inset-0 w-full h-full object-cover object-center"
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#faf9f6]/30 md:to-[#faf9f6]" />
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent from-50% via-transparent via-65% to-[#faf9f6] hidden md:block" />
             </div>
 
             {/* Text */}
