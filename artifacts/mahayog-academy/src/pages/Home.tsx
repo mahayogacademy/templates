@@ -56,14 +56,14 @@ export default function Home() {
         {/* Collage mosaic — 4 cols × 2 rows, all matching warm golden-hour style */}
         <div className="absolute inset-0 grid grid-cols-4 grid-rows-2 gap-0.5">
           {[
-            { src: `${b}images/collage-yogi-silhouette.png`,   pos: "object-center" },
-            { src: `${b}images/collage-diya-hands.png`,        pos: "object-center" },
-            { src: `${b}images/collage-havan-fire.png`,        pos: "object-top"    },
-            { src: `${b}images/collage-aarti-river.png`,       pos: "object-center" },
-            { src: `${b}images/collage-ashram-dawn.png`,       pos: "object-top"    },
-            { src: `${b}images/collage-marigold-diyas.png`,    pos: "object-top"    },
-            { src: `${b}images/collage-meditation-river.png`,  pos: "object-center" },
-            { src: `${b}images/collage-temple-bells.png`,      pos: "object-center" },
+            { src: `${b}images/ashram-extra-river-diyas.jpg`,   pos: "object-center" },
+            { src: `${b}images/ashram-cows-sunset.jpg`,         pos: "object-center" },
+            { src: `${b}images/hanumad-satsang-stage.jpg`,      pos: "object-top"    },
+            { src: `${b}images/ashram-hanuman-sunset.jpg`,      pos: "object-center" },
+            { src: `${b}images/hanumad-aarati-night.jpg`,       pos: "object-top"    },
+            { src: `${b}images/ashram-satsang-night.jpg`,       pos: "object-center" },
+            { src: `${b}images/hanumad-saints-river.jpg`,       pos: "object-top"    },
+            { src: `${b}images/ashram-prasad-2.jpg`,            pos: "object-center" },
           ].map((img, i) => (
             <div key={i} className="overflow-hidden">
               <img src={img.src} alt="" aria-hidden className={`w-full h-full object-cover ${img.pos}`} />
