@@ -314,9 +314,9 @@ export default function FounderGuru() {
                   </p>
                   <button
                     onClick={() => navigate("/events/historic/bhu-samadhi")}
-                    className="inline-flex items-center gap-2 text-sm text-[#b8892a] hover:text-[#9d7422] tracking-[0.15em] uppercase font-medium transition-colors duration-200 group"
+                    className="inline-flex items-center gap-2 text-sm text-[#b8892a] hover:text-[#9d7422] tracking-[0.15em] uppercase font-medium transition-colors duration-200 group border border-[#b8892a]/30 rounded-full px-5 py-2.5"
                   >
-                    <span>Explore the Bhu Samadhi</span>
+                    <span>Explore the Bhu Samadhis</span>
                     <svg className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
                     </svg>
