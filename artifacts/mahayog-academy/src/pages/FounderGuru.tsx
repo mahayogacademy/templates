@@ -309,9 +309,18 @@ export default function FounderGuru() {
                   <p className="text-base text-[#5a5248] leading-relaxed mb-4">
                     At the request of students and devotees, His Holiness has publicly demonstrated <span className="italic">Bhu Samadhi</span>, the yogic practice of remaining in deep meditation underground, sealed, without oxygen. These demonstrations were performed across Nepal and witnessed by thousands.
                   </p>
-                  <p className="text-base text-[#5a5248] leading-relaxed">
-                    His Holiness entered sealed underground chambers, brick-lined pits covered and monitored, and remained in uninterrupted Samādhi for days. Witnesses recorded no signs of ordinary breath or movement. These events have kindled deep faith in the living reality of Vedic yoga, drawing sincere seekers from across the world to his guidance.
+                  <p className="text-base text-[#5a5248] leading-relaxed mb-6">
+                    In a remarkable demonstration of yogic power, His Holiness remained in uninterrupted samādhi for nine days within a sealed chamber covered by soil and barley seeds. Medical doctors noted no change in his bodily condition before and after Samadhi. His many Samadhis have kindled deep faith in the living reality of Vedic yoga, drawing sincere seekers from across the world to his guidance.
                   </p>
+                  <button
+                    onClick={() => navigate("/events/historic/bhu-samadhi")}
+                    className="inline-flex items-center gap-2 text-sm text-[#b8892a] hover:text-[#9d7422] tracking-[0.15em] uppercase font-medium transition-colors duration-200 group"
+                  >
+                    <span>Explore the Bhu Samadhi</span>
+                    <svg className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                    </svg>
+                  </button>
                 </div>
 
                 {/* Carousel */}
