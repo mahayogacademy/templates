@@ -113,8 +113,8 @@ export default function Home() {
           <p className="font-['Cormorant_Garamond'] text-3xl md:text-4xl font-light text-[#3d3830] leading-relaxed mb-8">
             A living sanctuary where seekers from every corner of the world come to experience the depths of Vedic wisdom, Himalayan yoga, and sacred service.
           </p>
-          <p className="text-base text-[#6a6058] leading-relaxed max-w-xl mx-auto">
-            Rooted in the ancient lineage of the Ramananda Sampraday and held in the living grace of Jagadguru Mahayogi Siddhababa — offered freely, as a gift to all who seek.
+          <p className="text-base text-[#6a6058] leading-relaxed max-w-xl mx-auto border border-[#b8892a]/25 rounded-xl px-8 py-5 italic">
+            A Not-for-profit and volunteer-run organization, rooted in the ancient Ramanandi lineage and guided by the direct grace of Enlightened Guru, His Holiness Jagadguru Mahayogi Siddhababa.
           </p>
         </div>
       </section>
