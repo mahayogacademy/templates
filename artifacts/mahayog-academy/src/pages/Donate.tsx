@@ -67,6 +67,19 @@ const PROJECTS = [
   },
 ];
 
+const PURPOSES = [
+  "Guru Seva",
+  "Gau Seva",
+  "Hanuman Pūjā",
+  "Akhanda Kīrtan",
+  "Brahmand Bhojan",
+  "108 Hanuman Temple",
+  "Ram Mandir",
+  "Gurukul",
+  "Global Spiritual Teaching",
+  "General Ashram Support",
+];
+
 const NEPAL_ACCOUNT = {
   bankName: "Nepal SBI Bank Ltd.",
   accountName: "Jagadguru Ramanadacharya Seva Peeth",
@@ -105,6 +118,93 @@ function CopyField({ label, value }: { label: string; value: string }) {
         {copied ? <CheckCheck className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
         {copied ? "Copied" : "Copy"}
       </button>
+    </div>
+  );
+}
+
+function ReferenceBuilder() {
+  const [name, setName] = useState("");
+  const [purpose, setPurpose] = useState(PURPOSES[0]);
+  const [copied, setCopied] = useState(false);
+
+  const reference = name.trim()
+    ? `${name.trim()} | ${purpose}`
+    : `[Your Name] | ${purpose}`;
+
+  const isReady = name.trim().length > 0;
+
+  function copy() {
+    if (!isReady) return;
+    navigator.clipboard.writeText(reference).then(() => {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2500);
+    });
+  }
+
+  return (
+    <div className="bg-white rounded-2xl border border-[#e8dece] shadow-sm p-8 mb-10">
+      <div className="flex items-center gap-3 mb-6">
+        <div className="w-8 h-8 rounded-full bg-[#b8892a] flex items-center justify-center text-white text-sm font-semibold shrink-0">1</div>
+        <div>
+          <p className="font-['Cormorant_Garamond'] text-xl font-semibold text-[#2e2820]">Build Your Payment Reference</p>
+          <p className="text-sm text-[#9a8f84]">Generate the reference text to paste into your bank transfer</p>
+        </div>
+      </div>
+
+      <div className="grid md:grid-cols-2 gap-4 mb-6">
+        {/* Name */}
+        <div>
+          <label className="block text-xs uppercase tracking-[0.2em] text-[#9a8f84] font-medium mb-2">Your Full Name</label>
+          <input
+            type="text"
+            placeholder="e.g. Jane Smith"
+            value={name}
+            onChange={(e) => { setName(e.target.value); setCopied(false); }}
+            className="w-full px-4 py-3 rounded-xl border border-[#e2d0b8] bg-[#faf9f6] text-[#2e2820] text-base placeholder:text-[#b8a898] focus:outline-none focus:border-[#b8892a] focus:ring-2 focus:ring-[#b8892a]/15 transition"
+          />
+        </div>
+
+        {/* Purpose */}
+        <div>
+          <label className="block text-xs uppercase tracking-[0.2em] text-[#9a8f84] font-medium mb-2">Purpose of Donation</label>
+          <select
+            value={purpose}
+            onChange={(e) => { setPurpose(e.target.value); setCopied(false); }}
+            className="w-full px-4 py-3 rounded-xl border border-[#e2d0b8] bg-[#faf9f6] text-[#2e2820] text-base focus:outline-none focus:border-[#b8892a] focus:ring-2 focus:ring-[#b8892a]/15 transition appearance-none cursor-pointer"
+          >
+            {PURPOSES.map((p) => (
+              <option key={p} value={p}>{p}</option>
+            ))}
+          </select>
+        </div>
+      </div>
+
+      {/* Generated reference */}
+      <div className="rounded-xl border border-[#e2d0b8] bg-[#fdf6ec] p-4 flex items-center justify-between gap-4">
+        <div className="flex-1 min-w-0">
+          <p className="text-[10px] uppercase tracking-[0.2em] text-[#9a8f84] font-medium mb-1">Your Payment Reference</p>
+          <p className={`text-lg font-semibold font-['Cormorant_Garamond'] truncate ${isReady ? "text-[#2e2820]" : "text-[#b8a898] italic"}`}>
+            {reference}
+          </p>
+        </div>
+        <button
+          onClick={copy}
+          disabled={!isReady}
+          className={`shrink-0 flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-200 ${
+            isReady
+              ? copied
+                ? "bg-green-600 text-white"
+                : "bg-[#b8892a] hover:bg-[#9d7422] text-white shadow-md shadow-[#b8892a]/20"
+              : "bg-[#e8dece] text-[#b8a898] cursor-not-allowed"
+          }`}
+        >
+          {copied ? <CheckCheck className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
+          {copied ? "Copied!" : "Copy Reference"}
+        </button>
+      </div>
+      {!isReady && (
+        <p className="text-xs text-[#b8a898] mt-2 text-center">Enter your name above to generate and copy your reference</p>
+      )}
     </div>
   );
 }
@@ -227,8 +327,20 @@ export default function Donate() {
             <span className="uppercase tracking-[0.25em] text-xs text-[#b8892a] font-medium">Bank Transfer</span>
             <h2 className="font-['Cormorant_Garamond'] text-4xl font-light text-[#2e2820] mt-2">How to Donate</h2>
             <p className="text-base text-[#6a6058] mt-4 max-w-xl mx-auto leading-relaxed">
-              All donations are made directly via bank transfer to the ashram's registered account. Please use the details below and include your name and purpose in the payment reference.
+              Follow the two steps below — build your reference first, then use the bank details to complete your transfer.
             </p>
+          </div>
+
+          {/* Step 1 — Reference Builder */}
+          <ReferenceBuilder />
+
+          {/* Step 2 — Bank Details */}
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-8 h-8 rounded-full bg-[#b8892a] flex items-center justify-center text-white text-sm font-semibold shrink-0">2</div>
+            <div>
+              <p className="font-['Cormorant_Garamond'] text-xl font-semibold text-[#2e2820]">Transfer to the Ashram Account</p>
+              <p className="text-sm text-[#9a8f84]">Use the bank details below and paste your reference into the payment notes</p>
+            </div>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
@@ -272,9 +384,9 @@ export default function Donate() {
           </div>
 
           {/* Note */}
-          <div className="mt-8 p-6 bg-[#fdf6ec] border border-[#e8d8b8] rounded-2xl text-center">
+          <div className="mt-8 p-5 bg-[#fdf6ec] border border-[#e8d8b8] rounded-2xl text-center">
             <p className="text-sm text-[#5a5248] leading-relaxed">
-              Please include your <strong className="text-[#2e2820]">full name</strong> and the <strong className="text-[#2e2820]">purpose of donation</strong> (e.g. "Gau Seva" or "General Ashram Support") in your payment reference. For large donations or to receive a receipt, please{" "}
+              For large donations or to receive a receipt, please{" "}
               <Link href="/contact">
                 <span className="text-[#b8892a] hover:text-[#9d7422] underline underline-offset-2 cursor-pointer transition-colors">contact us</span>
               </Link>
