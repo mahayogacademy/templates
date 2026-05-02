@@ -116,13 +116,10 @@ export default function Donate() {
           </h2>
           <div className="h-px w-12 bg-[#b8892a]/50 mx-auto mb-8" />
           <p className="text-lg text-[#5a5248] leading-relaxed mb-6">
-            Jagadguru Ramanadacharya Seva Peeth — the head ashram at Baharachettra, Nepal — is a not-for-profit, volunteer-run centre of Sanātan Dharma. It receives no government funding and holds no commercial interests.
+            Mahayogi Siddhababa Spiritual Academy is a not-for-profit, volunteer-run centre and holds no commercial interests.
           </p>
-          <p className="text-lg text-[#5a5248] leading-relaxed mb-6">
-            Its work — daily pūjā, the Akhanda Kīrtan, gau seva, prasad distribution, spiritual education, and the welcoming of seekers from every corner of the world — is sustained entirely by the generosity of devotees and well-wishers.
-          </p>
-          <p className="font-['Cormorant_Garamond'] text-2xl italic text-[#9d7422] leading-relaxed">
-            "To support this ashram is to become part of its sacred current — to contribute to something that gives, teaches, and serves without ceasing."
+          <p className="text-lg text-[#5a5248] leading-relaxed">
+            Its services — gau seva, prasad distribution, spiritual education, and the welcoming of seekers from every corner of the world — is sustained entirely by the generosity of devotees and well-wishers.
           </p>
         </div>
       </section>
