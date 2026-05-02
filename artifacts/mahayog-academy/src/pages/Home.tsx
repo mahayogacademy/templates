@@ -256,12 +256,20 @@ export default function Home() {
               <p className="text-base text-[#5a5248] leading-relaxed mb-8">
                 His life is marked by extraordinary yogic feats — including three medically witnessed Bhu Samadhi immersions — and an unwavering commitment to selfless service, teaching, and the upliftment of all beings.
               </p>
-              <Link href="/founder-guru">
-                <span className="inline-flex items-center gap-2 text-[#b8892a] hover:text-[#9d7422] text-sm font-medium tracking-wider uppercase transition-colors cursor-pointer group">
-                  Learn His Story
-                  <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" strokeWidth={1.5} />
-                </span>
-              </Link>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link href="/founder-guru">
+                  <span className="inline-flex items-center gap-2 text-[#b8892a] hover:text-[#9d7422] text-sm font-medium tracking-wider uppercase transition-colors cursor-pointer group">
+                    Learn His Story
+                    <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" strokeWidth={1.5} />
+                  </span>
+                </Link>
+                <Link href="/guru-darshan">
+                  <span className="inline-flex items-center gap-2 text-[#b8892a] hover:text-[#9d7422] text-sm font-medium tracking-wider uppercase transition-colors cursor-pointer group">
+                    Meet
+                    <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" strokeWidth={1.5} />
+                  </span>
+                </Link>
+              </div>
             </div>
           </div>
         </div>
