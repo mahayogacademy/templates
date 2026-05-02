@@ -463,7 +463,7 @@ export default function Donate() {
             <div className="h-px w-10 bg-[#e8c56a]/60" />
           </div>
           <p className="font-['Cormorant_Garamond'] text-3xl md:text-4xl font-light text-white italic leading-relaxed mb-8">
-            "Dana is the first step on the path of dharma. When the hand opens in giving, the heart opens to grace."
+            "When the hand opens in giving, the heart opens to grace."
           </p>
           <p className="text-[#d4c4a8] text-sm uppercase tracking-[0.2em]">Jagadguru Mahayogi Siddhababa</p>
           <div className="mt-10">
