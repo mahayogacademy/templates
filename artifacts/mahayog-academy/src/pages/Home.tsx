@@ -121,11 +121,11 @@ export default function Home() {
         {/* Sacred symbols — anchored to bottom of hero, hangs into next section */}
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 z-20 w-full max-w-3xl px-4 flex justify-center">
           <img
-            src={`${b}images/sacred-symbols.png`}
-            alt="Sacred symbols of the Ramanandi Vaishnava tradition"
+            src={`${b}images/dhanush-band.png`}
+            alt="Sacred Vaishnava symbols — Dhanush, Urdhva Pundra and bow"
             className="w-full h-auto max-h-52 object-contain"
             style={{
-              filter: "sepia(0.3) saturate(1.6) hue-rotate(-8deg) brightness(0.95) contrast(1.05)",
+              filter: "brightness(0.95) contrast(1.05)",
             }}
           />
         </div>
