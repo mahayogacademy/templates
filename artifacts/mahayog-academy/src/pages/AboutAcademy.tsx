@@ -57,7 +57,7 @@ export default function AboutAcademy() {
               The Academy focuses on direct practice — meditation, inner discipline, and self-inquiry — alongside core principles of selfless service, ethical living, and personal responsibility. Its approach is practical and lived, integrating inner development with everyday life.
             </p>
             <p className="text-base leading-relaxed text-[#5a5248]">
-              Through its programs, teachings, and community initiatives, the Academy supports individuals in developing clarity of mind, stability of being, and a deeper understanding of themselves — while contributing meaningfully to the world around them.
+              Through its programs, teachings, and community initiatives, the Academy supports individuals in developing clarity of mind, stability of being, and a deeper understanding of themselves, while contributing meaningfully to the world around them.
             </p>
             <div className="flex flex-wrap gap-2 mt-8">
               {["Physical", "Mental", "Emotional", "Social", "Spiritual", "Environmental"].map(d => (
