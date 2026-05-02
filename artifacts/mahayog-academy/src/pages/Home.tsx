@@ -519,6 +519,13 @@ export default function Home() {
 
       {/* ── FOOTER ── */}
       <footer className="text-[#c4b49a] py-14 px-6">
+        <div className="max-w-6xl mx-auto mb-10 flex items-center gap-4">
+          <div className="flex-1 h-px bg-[#3a2a1a]" />
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+            <path d="M12 2C12 2 15 9 22 12C22 12 15 15 12 22C12 22 9 15 2 12C2 12 9 9 12 2Z" stroke="#b8892a" strokeWidth="1.5" fill="none"/>
+          </svg>
+          <div className="flex-1 h-px bg-[#3a2a1a]" />
+        </div>
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-4 gap-10 mb-10">
             {/* Brand */}
