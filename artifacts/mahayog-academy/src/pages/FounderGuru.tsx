@@ -294,7 +294,7 @@ export default function FounderGuru() {
                     His Holiness was born in Nepal's Mountain region. From an early age, he undertook rigorous yogic discipline under the guidance of realized masters. Through sustained practice, deep meditation, and the grace of the Guru, he attained the capacity for samādhi in his youth—a state described in the yogic scriptures as the culmination of spiritual practice and the final limb of Patañjali's eightfold path of yoga.
                   </p>
                   <p className="text-base text-[#5a5248] leading-relaxed">
-                    Drawn inward from early life, his path was not one of gradual accumulation but of direct realization. His bearing even then conveyed the stillness of a realized soul, long before the world came to know his name.
+                    An expert in botany and plant sciences, and a renowned Ayurveda Acharya, His Holiness brings together scientific understanding and spiritual science, offering a grounded approach to the study of the body, mind, and consciousness.
                   </p>
                 </div>
               </div>
