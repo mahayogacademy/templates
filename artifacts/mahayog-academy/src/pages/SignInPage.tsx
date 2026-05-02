@@ -1,203 +1,180 @@
+import { useState } from "react";
 import { Link } from "wouter";
+import { Eye, EyeOff } from "lucide-react";
 
 const b = import.meta.env.BASE_URL;
 
 export default function SignInPage() {
+  const [showPassword, setShowPassword] = useState(false);
+
   return (
-    <div className="min-h-screen flex" style={{ fontFamily: "'Inter', sans-serif" }}>
+    <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
 
-      {/* ── Left: Form Panel ── */}
+      {/* ── Background: Himalayan landscape ── */}
+      <img
+        src={`${b}images/academy-hero.png`}
+        alt=""
+        aria-hidden="true"
+        className="absolute inset-0 w-full h-full object-cover object-center"
+      />
+      {/* Gradient overlay — darker at bottom, lighter at top */}
       <div
-        className="flex flex-col items-center justify-center flex-1 px-10 py-14 relative"
-        style={{ background: "#faf9f6" }}
+        className="absolute inset-0"
+        style={{
+          background: "linear-gradient(160deg, rgba(20,10,4,0.55) 0%, rgba(44,26,8,0.72) 100%)",
+        }}
+      />
+
+      {/* ── Card ── */}
+      <div
+        className="relative z-10 w-full max-w-[420px] mx-4 rounded-2xl overflow-hidden"
+        style={{
+          background: "rgba(250, 249, 246, 0.97)",
+          boxShadow: "0 24px 80px rgba(0,0,0,0.45), 0 0 0 1px rgba(184,137,42,0.15)",
+        }}
       >
-        {/* Subtle dot pattern */}
-        <svg
-          className="absolute inset-0 w-full h-full pointer-events-none opacity-[0.07]"
-          style={{ zIndex: 0 }}
-        >
-          <defs>
-            <pattern id="dots" x="0" y="0" width="28" height="28" patternUnits="userSpaceOnUse">
-              <circle cx="3" cy="3" r="1.5" fill="#b8892a" />
-            </pattern>
-          </defs>
-          <rect width="100%" height="100%" fill="url(#dots)" />
-        </svg>
+        {/* Gold top bar */}
+        <div className="h-1" style={{ background: "linear-gradient(90deg, #b8892a, #e2b55a, #b8892a)" }} />
 
-        <div className="relative z-10 w-full max-w-[400px] flex flex-col items-center">
+        <div className="px-8 py-9">
 
-          {/* Logo */}
+          {/* Logo + Brand */}
           <Link href="/">
-            <span className="flex flex-col items-center gap-2 cursor-pointer mb-6">
+            <span className="flex items-center gap-3 cursor-pointer mb-8 group">
               <img
                 src={`${b}images/logo.png`}
                 alt="Mahayogi Siddhababa Spiritual Academy"
-                className="w-20 h-20 rounded-full object-cover ring-2 ring-[#b8892a]/30"
+                className="w-10 h-10 rounded-full object-cover"
               />
+              <span style={{ fontFamily: "'Cormorant Garamond', serif", lineHeight: 1.1 }}>
+                <span className="block text-sm font-semibold group-hover:text-[#b8892a] transition-colors" style={{ color: "#2c1a08", letterSpacing: "0.04em" }}>
+                  Mahayogi Siddhababa
+                </span>
+                <span className="block text-xs tracking-[0.12em]" style={{ color: "#b8892a" }}>
+                  SPIRITUAL ACADEMY
+                </span>
+              </span>
             </span>
           </Link>
 
           {/* Heading */}
-          <h1
-            className="text-4xl font-semibold mb-8 text-center"
-            style={{ fontFamily: "'Cormorant Garamond', serif", color: "#b8892a" }}
-          >
-            Welcome Back
-          </h1>
-
-          {/* Form */}
-          <div className="w-full flex flex-col gap-4">
-            <input
-              type="email"
-              placeholder="Email address"
-              className="w-full px-4 py-3 rounded-lg text-sm border outline-none transition-colors"
-              style={{
-                background: "#ffffff",
-                border: "1px solid #d4c4b0",
-                color: "#2c1a08",
-                fontFamily: "'Inter', sans-serif",
-              }}
-              onFocus={(e) => (e.currentTarget.style.borderColor = "#b8892a")}
-              onBlur={(e) => (e.currentTarget.style.borderColor = "#d4c4b0")}
-            />
-
-            <input
-              type="password"
-              placeholder="Password"
-              className="w-full px-4 py-3 rounded-lg text-sm border outline-none transition-colors"
-              style={{
-                background: "#ffffff",
-                border: "1px solid #d4c4b0",
-                color: "#2c1a08",
-                fontFamily: "'Inter', sans-serif",
-              }}
-              onFocus={(e) => (e.currentTarget.style.borderColor = "#b8892a")}
-              onBlur={(e) => (e.currentTarget.style.borderColor = "#d4c4b0")}
-            />
-
-            <div className="flex justify-end">
-              <button
-                type="button"
-                className="text-sm transition-colors"
-                style={{ color: "#b8892a", fontFamily: "'Inter', sans-serif" }}
-              >
-                Forgot password?
-              </button>
-            </div>
-
-            <button
-              type="button"
-              className="w-full py-3 rounded-lg text-white text-sm font-medium tracking-wide transition-colors"
-              style={{ background: "#b8892a", fontFamily: "'Inter', sans-serif" }}
-              onMouseOver={(e) => (e.currentTarget.style.background = "#9d7422")}
-              onMouseOut={(e) => (e.currentTarget.style.background = "#b8892a")}
+          <div className="mb-7">
+            <h1
+              className="text-3xl font-semibold"
+              style={{ fontFamily: "'Cormorant Garamond', serif", color: "#2c1a08" }}
             >
-              Sign In
-            </button>
-
-            {/* Divider */}
-            <div className="flex items-center gap-3 my-1">
-              <div className="flex-1 h-px" style={{ background: "#d4c4b0" }} />
-              <span className="text-xs tracking-widest" style={{ color: "#9a8070" }}>or</span>
-              <div className="flex-1 h-px" style={{ background: "#d4c4b0" }} />
-            </div>
-
-            {/* Google button */}
-            <button
-              type="button"
-              className="w-full py-3 rounded-lg text-sm font-medium flex items-center justify-center gap-2.5 transition-colors border"
-              style={{
-                border: "1px solid #d4c4b0",
-                color: "#2c1a08",
-                background: "#ffffff",
-                fontFamily: "'Inter', sans-serif",
-              }}
-              onMouseOver={(e) => (e.currentTarget.style.background = "#fdf6ec")}
-              onMouseOut={(e) => (e.currentTarget.style.background = "#ffffff")}
-            >
-              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M17.64 9.2045C17.64 8.5663 17.5827 7.9527 17.4764 7.3636H9V10.845H13.8436C13.635 11.97 13.0009 12.9231 12.0477 13.5613V15.8195H14.9564C16.6582 14.2527 17.64 11.9454 17.64 9.2045Z" fill="#4285F4"/>
-                <path d="M9 18C11.43 18 13.4673 17.1941 14.9564 15.8195L12.0477 13.5613C11.2418 14.1013 10.2109 14.4204 9 14.4204C6.65591 14.4204 4.67182 12.8372 3.96409 10.71H0.957275V13.0418C2.43818 15.9831 5.48182 18 9 18Z" fill="#34A853"/>
-                <path d="M3.96409 10.71C3.78409 10.17 3.68182 9.5932 3.68182 9C3.68182 8.4068 3.78409 7.83 3.96409 7.29V4.9582H0.957275C0.347727 6.1732 0 7.5477 0 9C0 10.4523 0.347727 11.8268 0.957275 13.0418L3.96409 10.71Z" fill="#FBBC05"/>
-                <path d="M9 3.5795C10.3214 3.5795 11.5077 4.0336 12.4405 4.9255L15.0218 2.3441C13.4632 0.8918 11.4259 0 9 0C5.48182 0 2.43818 2.0168 0.957275 4.9582L3.96409 7.29C4.67182 5.1627 6.65591 3.5795 9 3.5795Z" fill="#EA4335"/>
-              </svg>
-              Continue with Google
-            </button>
+              Welcome back
+            </h1>
+            <p className="mt-1 text-sm" style={{ color: "#7a6252", fontFamily: "'Inter', sans-serif" }}>
+              Sign in to continue your journey
+            </p>
           </div>
 
-          {/* Sign up link */}
-          <p className="mt-8 text-sm" style={{ color: "#7a6252" }}>
-            Don't have an account?{" "}
+          {/* Google button — top friction-reducer */}
+          <button
+            type="button"
+            className="w-full flex items-center justify-center gap-3 py-2.5 rounded-lg text-sm font-medium border transition-all mb-5"
+            style={{
+              border: "1px solid #d4c4b0",
+              color: "#2c1a08",
+              background: "#ffffff",
+              fontFamily: "'Inter', sans-serif",
+            }}
+            onMouseOver={(e) => { e.currentTarget.style.background = "#fdf6ec"; e.currentTarget.style.borderColor = "#b8892a"; }}
+            onMouseOut={(e) => { e.currentTarget.style.background = "#ffffff"; e.currentTarget.style.borderColor = "#d4c4b0"; }}
+          >
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+              <path d="M17.64 9.2045C17.64 8.5663 17.5827 7.9527 17.4764 7.3636H9V10.845H13.8436C13.635 11.97 13.0009 12.9231 12.0477 13.5613V15.8195H14.9564C16.6582 14.2527 17.64 11.9454 17.64 9.2045Z" fill="#4285F4"/>
+              <path d="M9 18C11.43 18 13.4673 17.1941 14.9564 15.8195L12.0477 13.5613C11.2418 14.1013 10.2109 14.4204 9 14.4204C6.65591 14.4204 4.67182 12.8372 3.96409 10.71H0.957275V13.0418C2.43818 15.9831 5.48182 18 9 18Z" fill="#34A853"/>
+              <path d="M3.96409 10.71C3.78409 10.17 3.68182 9.5932 3.68182 9C3.68182 8.4068 3.78409 7.83 3.96409 7.29V4.9582H0.957275C0.347727 6.1732 0 7.5477 0 9C0 10.4523 0.347727 11.8268 0.957275 13.0418L3.96409 10.71Z" fill="#FBBC05"/>
+              <path d="M9 3.5795C10.3214 3.5795 11.5077 4.0336 12.4405 4.9255L15.0218 2.3441C13.4632 0.8918 11.4259 0 9 0C5.48182 0 2.43818 2.0168 0.957275 4.9582L3.96409 7.29C4.67182 5.1627 6.65591 3.5795 9 3.5795Z" fill="#EA4335"/>
+            </svg>
+            Continue with Google
+          </button>
+
+          {/* Divider */}
+          <div className="flex items-center gap-3 mb-5">
+            <div className="flex-1 h-px" style={{ background: "#e8dece" }} />
+            <span className="text-xs tracking-widest" style={{ color: "#b0a090", fontFamily: "'Inter', sans-serif" }}>or</span>
+            <div className="flex-1 h-px" style={{ background: "#e8dece" }} />
+          </div>
+
+          {/* Form fields */}
+          <div className="flex flex-col gap-3.5">
+            <div>
+              <label className="block text-xs font-medium mb-1.5 tracking-wide" style={{ color: "#5a5248", fontFamily: "'Inter', sans-serif" }}>
+                Email address
+              </label>
+              <input
+                type="email"
+                placeholder="you@example.com"
+                autoComplete="email"
+                className="w-full px-3.5 py-2.5 rounded-lg text-sm border outline-none transition-all"
+                style={{ background: "#faf9f6", border: "1px solid #d4c4b0", color: "#2c1a08", fontFamily: "'Inter', sans-serif" }}
+                onFocus={(e) => { e.currentTarget.style.borderColor = "#b8892a"; e.currentTarget.style.boxShadow = "0 0 0 3px rgba(184,137,42,0.1)"; }}
+                onBlur={(e) => { e.currentTarget.style.borderColor = "#d4c4b0"; e.currentTarget.style.boxShadow = "none"; }}
+              />
+            </div>
+
+            <div>
+              <div className="flex items-center justify-between mb-1.5">
+                <label className="text-xs font-medium tracking-wide" style={{ color: "#5a5248", fontFamily: "'Inter', sans-serif" }}>
+                  Password
+                </label>
+                <button type="button" className="text-xs transition-colors" style={{ color: "#b8892a", fontFamily: "'Inter', sans-serif" }}>
+                  Forgot password?
+                </button>
+              </div>
+              <div className="relative">
+                <input
+                  type={showPassword ? "text" : "password"}
+                  placeholder="••••••••"
+                  autoComplete="current-password"
+                  className="w-full px-3.5 py-2.5 pr-10 rounded-lg text-sm border outline-none transition-all"
+                  style={{ background: "#faf9f6", border: "1px solid #d4c4b0", color: "#2c1a08", fontFamily: "'Inter', sans-serif" }}
+                  onFocus={(e) => { e.currentTarget.style.borderColor = "#b8892a"; e.currentTarget.style.boxShadow = "0 0 0 3px rgba(184,137,42,0.1)"; }}
+                  onBlur={(e) => { e.currentTarget.style.borderColor = "#d4c4b0"; e.currentTarget.style.boxShadow = "none"; }}
+                />
+                <button
+                  type="button"
+                  onClick={() => setShowPassword(!showPassword)}
+                  className="absolute right-3 top-1/2 -translate-y-1/2 transition-colors"
+                  style={{ color: "#9a8070" }}
+                >
+                  {showPassword ? <EyeOff size={15} strokeWidth={1.5} /> : <Eye size={15} strokeWidth={1.5} />}
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* Sign In button */}
+          <button
+            type="button"
+            className="w-full py-2.5 mt-5 rounded-lg text-white text-sm font-medium tracking-wide transition-all"
+            style={{ background: "#b8892a", fontFamily: "'Inter', sans-serif", boxShadow: "0 4px 14px rgba(184,137,42,0.35)" }}
+            onMouseOver={(e) => { e.currentTarget.style.background = "#9d7422"; e.currentTarget.style.boxShadow = "0 6px 20px rgba(184,137,42,0.45)"; }}
+            onMouseOut={(e) => { e.currentTarget.style.background = "#b8892a"; e.currentTarget.style.boxShadow = "0 4px 14px rgba(184,137,42,0.35)"; }}
+          >
+            Sign In
+          </button>
+
+          {/* Footer */}
+          <p className="mt-6 text-center text-sm" style={{ color: "#7a6252", fontFamily: "'Inter', sans-serif" }}>
+            New to the Academy?{" "}
             <Link href="/sign-up">
-              <span className="font-medium cursor-pointer transition-colors" style={{ color: "#b8892a" }}>
-                Create one
+              <span className="font-medium cursor-pointer" style={{ color: "#b8892a" }}>
+                Create an account
               </span>
             </Link>
           </p>
         </div>
       </div>
 
-      {/* ── Right: Guru Panel ── */}
-      <div
-        className="hidden lg:flex flex-col flex-1 relative overflow-hidden"
-        style={{ background: "linear-gradient(175deg, #c4722a 0%, #7a4010 100%)" }}
-      >
-        {/* Subtle dot texture */}
-        <div
-          className="absolute inset-0 opacity-[0.08]"
-          style={{
-            backgroundImage: "radial-gradient(circle, #fff 1px, transparent 1px)",
-            backgroundSize: "32px 32px",
-          }}
-        />
-
-        {/* Guru image — full cover */}
-        <img
-          src={`${b}images/siddhababa-portrait.jpg`}
-          alt="Mahayogi Siddhababa"
-          className="absolute inset-0 w-full h-full object-cover object-top"
-          style={{ mixBlendMode: "luminosity", opacity: 0.55 }}
-        />
-
-        {/* Warm saffron overlay so the image blends with the panel */}
-        <div
-          className="absolute inset-0"
-          style={{ background: "linear-gradient(to bottom, rgba(180,90,20,0.35) 0%, rgba(100,48,10,0.7) 100%)" }}
-        />
-
-        {/* Centered Guru image (cutout-style, prominent) */}
-        <div className="absolute inset-0 flex items-center justify-center" style={{ paddingBottom: "220px" }}>
-          <img
-            src={`${b}images/siddhababa-portrait.jpg`}
-            alt="Mahayogi Siddhababa"
-            className="h-full w-full object-cover object-top"
-            style={{ maxHeight: "70%", objectFit: "contain", filter: "drop-shadow(0 8px 32px rgba(0,0,0,0.4))" }}
-          />
-        </div>
-
-        {/* Quote card — pinned to bottom */}
-        <div className="absolute bottom-0 left-0 right-0 p-6 z-10">
-          <div
-            className="rounded-2xl p-6"
-            style={{
-              background: "rgba(80, 35, 5, 0.72)",
-              backdropFilter: "blur(12px)",
-              border: "1px solid rgba(255,255,255,0.15)",
-            }}
-          >
-            <span className="text-3xl leading-none" style={{ color: "rgba(255,205,100,0.8)", fontFamily: "serif" }}>"</span>
-            <p
-              className="leading-relaxed mt-1 italic"
-              style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "1.1rem", color: "rgba(255,240,210,0.95)" }}
-            >
-              The guru is the light that dispels the darkness of ignorance,
-              guiding the soul toward eternal liberation.
-            </p>
-            <p className="mt-3 text-xs tracking-widest uppercase" style={{ color: "rgba(255,200,120,0.75)" }}>
-              — Mahayogi Siddhababa
-            </p>
-          </div>
-        </div>
+      {/* Bottom attribution — outside card */}
+      <div className="absolute bottom-6 left-0 right-0 text-center z-10">
+        <p className="text-xs tracking-widest uppercase" style={{ color: "rgba(255,240,210,0.5)", fontFamily: "'Inter', sans-serif" }}>
+          Mahayogi Siddhababa Spiritual Academy · Nepal
+        </p>
       </div>
 
     </div>
