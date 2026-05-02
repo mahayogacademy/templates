@@ -477,7 +477,7 @@ export default function Home() {
       </section>
 
       {/* ── TEACHINGS GLIMPSE ── */}
-      <section className="py-24 px-6 bg-[#faf9f6]">
+      <section className="py-24 px-6 bg-[#1e140a]">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-12">
             <div className="flex items-center justify-center gap-4 mb-4">
@@ -485,12 +485,12 @@ export default function Home() {
               <span className="uppercase tracking-[0.3em] text-xs text-[#b8892a] font-medium">Teachings</span>
               <div className="h-px w-10 bg-[#b8892a]/40" />
             </div>
-            <h2 className="font-['Cormorant_Garamond'] text-4xl md:text-5xl font-light text-[#2e2820]">Siddhababa Wisdom</h2>
+            <h2 className="font-['Cormorant_Garamond'] text-4xl md:text-5xl font-light text-[#f0e4c8]">Siddhababa Wisdom</h2>
           </div>
 
           {/* Preview rows with fade-out */}
           <div className="relative">
-            <div className="space-y-0 divide-y divide-[#e8dece]">
+            <div className="space-y-0 divide-y divide-[#3a2a1a]">
               {[
                 {
                   type: "Article",
@@ -532,7 +532,7 @@ export default function Home() {
                         <span className="text-xs uppercase tracking-[0.2em] text-[#b8892a] font-semibold">{item.type}</span>
                         {item.duration && <span className="text-xs text-[#9a8878]">· {item.duration}</span>}
                       </div>
-                      <h3 className="font-['Cormorant_Garamond'] text-2xl font-light text-[#2e2820] group-hover:text-[#b8892a] transition-colors leading-snug mb-1.5">{item.title}</h3>
+                      <h3 className="font-['Cormorant_Garamond'] text-2xl font-light text-[#f0e4c8] group-hover:text-[#e8c56a] transition-colors leading-snug mb-1.5">{item.title}</h3>
                       <p className="text-sm text-[#9a8878] leading-relaxed line-clamp-1">{item.excerpt}</p>
                     </div>
                     <ArrowRight className="w-5 h-5 text-[#b8892a]/40 group-hover:text-[#b8892a] shrink-0 mt-2 transition-colors" strokeWidth={1.5} />
@@ -542,12 +542,12 @@ export default function Home() {
             </div>
 
             {/* Fade-out gradient */}
-            <div className="absolute bottom-0 left-0 right-0 h-28 bg-gradient-to-t from-[#faf9f6] to-transparent pointer-events-none" />
+            <div className="absolute bottom-0 left-0 right-0 h-28 bg-gradient-to-t from-[#1e140a] to-transparent pointer-events-none" />
           </div>
 
           <div className="text-center mt-4">
             <Link href="/teachings">
-              <span className="inline-flex items-center gap-2 text-sm text-[#b8892a] hover:text-[#9d7422] font-medium tracking-wide transition-colors cursor-pointer border-b border-[#b8892a]/40 hover:border-[#b8892a] pb-0.5">
+              <span className="inline-flex items-center gap-2 text-sm text-[#e8c56a] hover:text-white font-medium tracking-wide transition-colors cursor-pointer border-b border-[#e8c56a]/40 hover:border-white pb-0.5">
                 Explore All Teachings
                 <ArrowRight className="w-4 h-4" strokeWidth={1.5} />
               </span>
