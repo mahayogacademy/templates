@@ -177,8 +177,8 @@ export default function Projects() {
                   <div key={i} className="flex gap-5 items-start p-5 bg-white border border-[#e8dece] rounded-xl">
                     <span className="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#d4a843]/50 leading-none shrink-0 w-7">{i + 1}</span>
                     <div>
-                      <p className="font-['Cormorant_Garamond'] text-lg font-semibold text-[#3d3830] leading-none mb-1">{f.title}</p>
-                      <p className="text-sm text-[#7a7068] leading-relaxed">{f.desc}</p>
+                      <p className="font-['Cormorant_Garamond'] text-xl font-semibold text-[#3d3830] leading-none mb-1.5">{f.title}</p>
+                      <p className="text-base text-[#7a7068] leading-relaxed">{f.desc}</p>
                     </div>
                   </div>
                 ))}
@@ -198,14 +198,14 @@ export default function Projects() {
 
           {/* Programs offered */}
           <div className="mb-14">
-            <p className="text-[10px] uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-6">Programs Offered at Each Hanuman Temple</p>
+            <p className="text-xs uppercase tracking-[0.25em] text-[#b8892a] font-semibold mb-6">Programs Offered at Each Hanuman Temple</p>
             <div className="grid grid-cols-1 md:grid-cols-2">
               {HANUMAN_PROGRAMS.map((p, i) => (
-                <div key={i} className="flex items-center gap-3 py-3.5 border-b border-[#e8dece]">
-                  <svg width="8" height="8" viewBox="0 0 24 24" fill="#b8892a" className="shrink-0">
+                <div key={i} className="flex items-center gap-3 py-4 border-b border-[#e8dece]">
+                  <svg width="9" height="9" viewBox="0 0 24 24" fill="#b8892a" className="shrink-0">
                     <path d="M12 2C12 2 15 9 22 12C22 12 15 15 12 22C12 22 9 15 2 12C2 12 9 9 12 2Z"/>
                   </svg>
-                  <p className="text-sm text-[#5a5248]">{p}</p>
+                  <p className="text-base text-[#5a5248]">{p}</p>
                 </div>
               ))}
             </div>
@@ -220,7 +220,7 @@ export default function Projects() {
                 <h3 className="font-['Cormorant_Garamond'] text-3xl md:text-4xl font-light text-[#faf9f6] leading-snug mb-3">
                   A Sacred Legacy in the Making
                 </h3>
-                <p className="text-sm text-[#9a8f84] leading-relaxed max-w-lg">
+                <p className="text-base text-[#9a8f84] leading-relaxed max-w-lg">
                   Your gift becomes a lasting legacy, each temple a living center of prayer, learning, and community, rooted in dharma for generations to come.
                 </p>
               </div>
@@ -243,18 +243,18 @@ export default function Projects() {
                 <div className="rounded-xl overflow-hidden mb-4 h-44">
                   <img src={`${b}images/land-contribution.png`} alt="Land contribution" className="w-full h-full object-cover" />
                 </div>
-                <p className="text-[10px] uppercase tracking-[0.25em] text-[#d4a843] font-semibold mb-1">Land</p>
+                <p className="text-xs uppercase tracking-[0.2em] text-[#d4a843] font-semibold mb-1">Land</p>
                 <p className="font-['Cormorant_Garamond'] text-lg font-semibold text-[#e8dece] mb-2">Land Contribution</p>
-                <p className="text-sm text-[#9a8f84] leading-relaxed">Donate private land, facilitate government allocation, or help identify and restore historic temple sites across Nepal.</p>
+                <p className="text-base text-[#9a8f84] leading-relaxed">Donate private land, facilitate government allocation, or help identify and restore historic temple sites across Nepal.</p>
               </div>
               <div className="w-px bg-white/10 hidden md:block" />
               <div className="flex-1">
                 <div className="rounded-xl overflow-hidden mb-4 h-44">
                   <img src={`${b}images/financial-support.png`} alt="Financial support" className="w-full h-full object-cover" />
                 </div>
-                <p className="text-[10px] uppercase tracking-[0.25em] text-[#d4a843] font-semibold mb-1">Finance</p>
+                <p className="text-xs uppercase tracking-[0.2em] text-[#d4a843] font-semibold mb-1">Finance</p>
                 <p className="font-['Cormorant_Garamond'] text-lg font-semibold text-[#e8dece] mb-2">Financial Support</p>
-                <p className="text-sm text-[#9a8f84] leading-relaxed">Monetary or in-kind donations toward construction, educational programming, sadhana activities, and ongoing temple maintenance.</p>
+                <p className="text-base text-[#9a8f84] leading-relaxed">Monetary or in-kind donations toward construction, educational programming, sadhana activities, and ongoing temple maintenance.</p>
               </div>
             </div>
 
@@ -331,14 +331,14 @@ export default function Projects() {
 
           {/* Cosmological journey */}
           <div className="mb-16">
-            <p className="text-[10px] uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-8">A Journey Through Creation</p>
+            <p className="text-xs uppercase tracking-[0.25em] text-[#b8892a] font-semibold mb-8">A Journey Through Creation</p>
             <div className="grid md:grid-cols-2 gap-4">
               {COSMIC_JOURNEY.map((step, i) => (
                 <div key={i} className="flex gap-5 items-start p-5 bg-white border border-[#e8dece] rounded-xl">
                   <span className="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#d4a843]/50 leading-none shrink-0 w-7">{step.stage}</span>
                   <div>
-                    <p className="font-['Cormorant_Garamond'] text-lg font-semibold text-[#3d3830] leading-none mb-1">{step.name}</p>
-                    <p className="text-sm text-[#7a7068] leading-relaxed">{step.desc}</p>
+                    <p className="font-['Cormorant_Garamond'] text-xl font-semibold text-[#3d3830] leading-none mb-1.5">{step.name}</p>
+                    <p className="text-base text-[#7a7068] leading-relaxed">{step.desc}</p>
                   </div>
                 </div>
               ))}
@@ -346,14 +346,14 @@ export default function Projects() {
 
             {/* Yugas */}
             <div className="mt-5">
-              <p className="text-xs text-[#9a8f84] mb-4 uppercase tracking-[0.2em] font-medium">The Four Yugas, Cycle of Time</p>
+              <p className="text-sm text-[#9a8f84] mb-4 uppercase tracking-[0.15em] font-medium">The Four Yugas, Cycle of Time</p>
               <div className="grid grid-cols-4 divide-x divide-[#e8dece] border border-[#e8dece] rounded-xl overflow-hidden">
                 {YUGAS.map((y, i) => (
                   <div key={i} className="flex flex-col items-center py-5 px-3 bg-[#fdf6ec]">
                     <span className="font-['Cormorant_Garamond'] text-3xl font-light text-[#b8892a]/40 leading-none mb-2">
                       {["I","II","III","IV"][i]}
                     </span>
-                    <p className="font-['Cormorant_Garamond'] text-sm font-semibold text-[#5a5248] text-center leading-snug">{y}</p>
+                    <p className="font-['Cormorant_Garamond'] text-base font-semibold text-[#5a5248] text-center leading-snug">{y}</p>
                   </div>
                 ))}
               </div>
@@ -362,13 +362,13 @@ export default function Projects() {
 
           {/* Architectural highlights */}
           <div className="mb-16">
-            <p className="text-[10px] uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-2">Architectural Highlights</p>
+            <p className="text-xs uppercase tracking-[0.25em] text-[#b8892a] font-semibold mb-2">Architectural Highlights</p>
             <div className="h-px bg-[#e8dece] mb-0" />
             <div>
               {ARCH_HIGHLIGHTS.map((a, i) => (
                 <div key={i} className="grid md:grid-cols-[1fr_2fr] gap-6 py-6 border-b border-[#e8dece] items-start">
                   <h4 className="font-['Cormorant_Garamond'] text-xl font-semibold text-[#3d3830] leading-snug">{a.title}</h4>
-                  <p className="text-sm text-[#7a7068] leading-relaxed">{a.desc}</p>
+                  <p className="text-base text-[#7a7068] leading-relaxed">{a.desc}</p>
                 </div>
               ))}
             </div>
@@ -392,12 +392,12 @@ export default function Projects() {
                 </div>
               ))}
             </div>
-            <p className="text-xs text-[#9a8f84] mt-3 text-center tracking-wide">Click any image to enlarge</p>
+            <p className="text-sm text-[#9a8f84] mt-3 text-center tracking-wide">Click any image to enlarge</p>
           </div>
 
           {/* What it will be */}
           <div className="mb-10">
-            <p className="text-[10px] uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-3">A Spiritual and Educational Landmark</p>
+            <p className="text-xs uppercase tracking-[0.25em] text-[#b8892a] font-semibold mb-3">A Spiritual and Educational Landmark</p>
             <div className="h-px bg-[#e8dece] mb-0" />
             <div className="grid sm:grid-cols-2 md:grid-cols-3">
               {[
@@ -427,7 +427,7 @@ export default function Projects() {
                 <h3 className="font-['Cormorant_Garamond'] text-3xl md:text-4xl font-light text-[#faf9f6] leading-snug mb-3">
                   Help Bring This Vision to Life
                 </h3>
-                <p className="text-sm text-[#9a8f84] leading-relaxed max-w-lg">
+                <p className="text-base text-[#9a8f84] leading-relaxed max-w-lg">
                   This temple is a gift to Nepal and to the world. Whether through expertise, cultural knowledge, or financial support, your contribution shapes something that will endure for centuries.
                 </p>
               </div>
@@ -450,27 +450,27 @@ export default function Projects() {
                 <div className="rounded-xl overflow-hidden mb-4 h-40">
                   <img src={`${b}images/ram-expertise.png`} alt="Professional skills" className="w-full h-full object-cover" />
                 </div>
-                <p className="text-[10px] uppercase tracking-[0.25em] text-[#d4a843] font-semibold mb-1">Expertise</p>
+                <p className="text-xs uppercase tracking-[0.2em] text-[#d4a843] font-semibold mb-1">Expertise</p>
                 <p className="font-['Cormorant_Garamond'] text-lg font-semibold text-[#e8dece] mb-2">Professional Skills</p>
-                <p className="text-sm text-[#9a8f84] leading-relaxed">Architecture, engineering, construction, Vastu, design, and related professional fields.</p>
+                <p className="text-base text-[#9a8f84] leading-relaxed">Architecture, engineering, construction, Vastu, design, and related professional fields.</p>
               </div>
               <div className="w-px bg-white/10 hidden md:block" />
               <div className="flex-1">
                 <div className="rounded-xl overflow-hidden mb-4 h-40">
                   <img src={`${b}images/ram-culture.png`} alt="Cultural knowledge" className="w-full h-full object-cover" />
                 </div>
-                <p className="text-[10px] uppercase tracking-[0.25em] text-[#d4a843] font-semibold mb-1">Culture</p>
+                <p className="text-xs uppercase tracking-[0.2em] text-[#d4a843] font-semibold mb-1">Culture</p>
                 <p className="font-['Cormorant_Garamond'] text-lg font-semibold text-[#e8dece] mb-2">Cultural Knowledge</p>
-                <p className="text-sm text-[#9a8f84] leading-relaxed">Documentation and contribution of Nepal's diverse cultural traditions and heritage.</p>
+                <p className="text-base text-[#9a8f84] leading-relaxed">Documentation and contribution of Nepal's diverse cultural traditions and heritage.</p>
               </div>
               <div className="w-px bg-white/10 hidden md:block" />
               <div className="flex-1">
                 <div className="rounded-xl overflow-hidden mb-4 h-40">
                   <img src={`${b}images/ram-finance.png`} alt="Financial support" className="w-full h-full object-cover" />
                 </div>
-                <p className="text-[10px] uppercase tracking-[0.25em] text-[#d4a843] font-semibold mb-1">Finance</p>
+                <p className="text-xs uppercase tracking-[0.2em] text-[#d4a843] font-semibold mb-1">Finance</p>
                 <p className="font-['Cormorant_Garamond'] text-lg font-semibold text-[#e8dece] mb-2">Financial Support</p>
-                <p className="text-sm text-[#9a8f84] leading-relaxed">Monetary donations or in-kind support toward construction and development.</p>
+                <p className="text-base text-[#9a8f84] leading-relaxed">Monetary donations or in-kind support toward construction and development.</p>
               </div>
             </div>
 
