@@ -305,9 +305,9 @@ export default function Home() {
             {/* Image */}
             <div className="relative h-[520px] md:h-[640px]">
               <img
-                src={`${b}images/siddhababa-throne.jpg`}
+                src={`${b}images/gurudev-photo.png`}
                 alt="Jagadguru Mahayogi Siddhababa"
-                className="absolute inset-0 w-full h-full object-cover object-top"
+                className="absolute inset-0 w-full h-full object-cover object-center"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#faf9f6]/30 md:to-[#faf9f6]" />
             </div>
