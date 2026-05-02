@@ -53,31 +53,25 @@ export default function Home() {
 
       {/* ── HERO ── */}
       <section className="relative flex items-center justify-center overflow-hidden" style={{ minHeight: "calc(100vh - 64px)" }}>
-        {/* Seamless horizontal strip — images blend into each other at edges */}
+        {/* Two-panel hero — each image has full room, blends in the centre */}
         <div className="absolute inset-0 flex items-stretch">
-          {[
-            { src: `${b}images/ashram-koshi-river.jpg`,       pos: "object-center" },
-            { src: `${b}images/cta-meditation-dawn.png`,      pos: "object-center" },
-            { src: `${b}images/ashram-garden.jpg`,            pos: "object-center" },
-            { src: `${b}images/ashram-hanuman-sunset.jpg`,    pos: "object-center" },
-            { src: `${b}images/ashram-cows-sunset.jpg`,       pos: "object-center" },
-          ].map((img, i, arr) => (
-            <div key={i} className="relative flex-1 overflow-hidden">
-              <img src={img.src} alt="" aria-hidden
-                className={`w-full h-full object-cover ${img.pos}`} />
-              {/* Fade left edge into previous image */}
-              {i > 0 && (
-                <div className="absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-[#1a0f05]/70 to-transparent pointer-events-none" />
-              )}
-              {/* Fade right edge into next image */}
-              {i < arr.length - 1 && (
-                <div className="absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-[#1a0f05]/70 to-transparent pointer-events-none" />
-              )}
-            </div>
-          ))}
+          {/* Left panel */}
+          <div className="relative w-1/2 overflow-hidden">
+            <img src={`${b}images/ashram-koshi-river.jpg`} alt="" aria-hidden
+              className="w-full h-full object-cover object-center" />
+            {/* Fade right edge into centre */}
+            <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-[#1a0f05]/80 to-transparent pointer-events-none" />
+          </div>
+          {/* Right panel */}
+          <div className="relative w-1/2 overflow-hidden">
+            <img src={`${b}images/ashram-hanuman-sunset.jpg`} alt="" aria-hidden
+              className="w-full h-full object-cover object-center" />
+            {/* Fade left edge into centre */}
+            <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-[#1a0f05]/80 to-transparent pointer-events-none" />
+          </div>
         </div>
         {/* Unified dark veil + bottom cream fade */}
-        <div className="absolute inset-0 bg-[#1a0f05]/55" />
+        <div className="absolute inset-0 bg-[#1a0f05]/50" />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#faf9f6]" />
 
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
