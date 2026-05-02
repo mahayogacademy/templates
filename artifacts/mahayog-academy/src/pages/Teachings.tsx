@@ -188,20 +188,20 @@ function ContentCard({ item }: { item: Item }) {
   const isExternal = item.href.startsWith("http");
 
   const inner = (
-    <div className="bg-white rounded-2xl border border-[#e8dece] p-5 shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-0.5 h-full flex flex-col cursor-pointer">
+    <div className="bg-white rounded-2xl border border-[#e8dece] p-5 shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-0.5 flex flex-col h-[420px] overflow-hidden cursor-pointer">
       <CardThumbnail item={item} />
-      <div className="flex flex-col flex-1">
-        <div className="flex items-center gap-2 mb-2.5">
+      <div className="flex flex-col flex-1 min-h-0">
+        <div className="flex items-center gap-2 mb-2.5 flex-shrink-0">
           <TypeBadge type={item.type} />
           <span className="text-[#9a8070] text-xs">{item.tag}</span>
         </div>
-        <h3 className="font-['Cormorant_Garamond'] text-xl text-[#2c1a08] font-medium leading-snug mb-2 flex-1">
+        <h3 className="font-['Cormorant_Garamond'] text-xl text-[#2c1a08] font-medium leading-snug mb-2 line-clamp-2 flex-shrink-0">
           {item.title}
         </h3>
-        <p className="text-[#6a5c48] text-sm leading-relaxed mb-4 line-clamp-3">
+        <p className="text-[#6a5c48] text-sm leading-relaxed line-clamp-3 flex-1">
           {item.excerpt}
         </p>
-        <div className="flex items-center justify-between mt-auto pt-3 border-t border-[#e8dece]">
+        <div className="flex items-center justify-between pt-3 mt-3 border-t border-[#e8dece] flex-shrink-0">
           <span className="text-[#9a8070] text-xs">{item.date}</span>
           <span className={`text-xs font-medium flex items-center gap-1 ${TYPE_LABELS[item.type].color}`}>
             {item.type === "video" ? "Watch" : "Read"}
