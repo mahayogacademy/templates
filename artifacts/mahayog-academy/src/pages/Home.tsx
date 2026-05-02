@@ -485,7 +485,7 @@ export default function Home() {
               <span className="uppercase tracking-[0.3em] text-xs text-[#b8892a] font-medium">Teachings</span>
               <div className="h-px w-10 bg-[#b8892a]/40" />
             </div>
-            <h2 className="font-['Cormorant_Garamond'] text-4xl md:text-5xl font-light text-[#2e2820]">Words from the Tradition</h2>
+            <h2 className="font-['Cormorant_Garamond'] text-4xl md:text-5xl font-light text-[#2e2820]">Siddhababa Wisdom</h2>
           </div>
 
           {/* Preview rows with fade-out */}
@@ -501,10 +501,10 @@ export default function Home() {
                 },
                 {
                   type: "Article",
-                  title: "The Guru and the Imperishable Soul",
-                  excerpt: "Understanding the conscious principle within — and why the relationship with a living Guru is central to the path of realisation.",
-                  thumb: `${b}images/teachings-guru-soul.png`,
-                  href: "/teachings/guru-imperishable-soul",
+                  title: "Kundalini, the Chakras, and the Inner Science of Awakening",
+                  excerpt: "An exploration of the subtle body, the dormant energy within, and the authentic Vedic understanding of spiritual unfoldment.",
+                  thumb: `${b}images/teachings-kundalini.png`,
+                  href: "/teachings/kundalini-chakras",
                 },
                 {
                   type: "Video",
@@ -516,10 +516,10 @@ export default function Home() {
                 },
                 {
                   type: "Article",
-                  title: "Kundalini, the Chakras, and the Inner Science of Awakening",
-                  excerpt: "An exploration of the subtle body, the dormant energy within, and the authentic Vedic understanding of spiritual unfoldment.",
-                  thumb: `${b}images/teachings-kundalini.png`,
-                  href: "/teachings/kundalini-chakras",
+                  title: "The Guru and the Imperishable Soul",
+                  excerpt: "Understanding the conscious principle within — and why the relationship with a living Guru is central to the path of realisation.",
+                  thumb: `${b}images/teachings-guru-soul.png`,
+                  href: "/teachings/guru-imperishable-soul",
                 },
               ].map((item, i) => (
                 <Link key={i} href={item.href}>
