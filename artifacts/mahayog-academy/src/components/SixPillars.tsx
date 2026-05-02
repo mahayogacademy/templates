@@ -97,7 +97,7 @@ export default function SixPillars() {
               <h4 className="font-sans text-sm uppercase tracking-wider text-primary mb-4 font-medium" data-testid={`text-pillar-english-${index}`}>
                 {pillar.english}
               </h4>
-              <p className="text-muted-foreground" data-testid={`text-pillar-desc-${index}`}>
+              <p className="text-base leading-relaxed" style={{ color: "#5a5248" }} data-testid={`text-pillar-desc-${index}`}>
                 {pillar.description}
               </p>
             </motion.div>
