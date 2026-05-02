@@ -168,21 +168,21 @@ export default function AboutAcademy() {
                 desc: "Discover courses in yoga, meditation, and Vedic philosophy designed for seekers at every stage of the journey.",
                 img: `${import.meta.env.BASE_URL}images/discover-programs.png`,
                 tag: "Learn",
-                href: "#",
+                href: "/gurukul",
               },
               {
                 title: "The Ashram",
                 desc: "Step into a place of stillness and renewal, our Himalayan ashram offers a sanctuary for deep practice and retreat.",
                 img: `${import.meta.env.BASE_URL}images/discover-ashram.png`,
                 tag: "Retreat",
-                href: "#",
+                href: "/ashram",
               },
               {
                 title: "Enlightened Guru Siddhababa",
                 desc: "Learn about the life and divine mission of His Holiness Jagadguru Mahayogi Siddhababa, the heart of the Academy.",
                 img: `${import.meta.env.BASE_URL}images/saint-siddhababa.png`,
                 tag: "Lineage",
-                href: "#",
+                href: "/founder-guru",
               },
             ].map((item) => (
               <Link key={item.title} href={item.href}>
