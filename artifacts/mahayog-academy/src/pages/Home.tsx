@@ -327,7 +327,7 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="/founder-guru">
                   <span className="inline-flex items-center gap-2 text-[#b8892a] hover:text-[#9d7422] text-sm font-medium tracking-wider uppercase transition-colors cursor-pointer group">
-                    Learn His Story
+                    Learn More
                     <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" strokeWidth={1.5} />
                   </span>
                 </Link>
