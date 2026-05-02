@@ -46,6 +46,7 @@ const VIDEO_ITEMS: Item[] = [
     date: "Himalayan Siddha Mahayog",
     tags: ["Mahayog"],
     thumbnail: `${b}images/video-mahayog-sadhana.jpg`,
+    duration: "34 min",
     href: "https://www.youtube.com/watch?v=U2kbxV0zy-E&t=49s",
   },
   {
@@ -56,6 +57,7 @@ const VIDEO_ITEMS: Item[] = [
     date: "Himalayan Siddha Mahayog",
     tags: ["Meditation", "Mahayog"],
     thumbnail: `${b}images/video-mahayog-2.jpg`,
+    duration: "1h 19min",
     href: "https://youtu.be/VUwmSwis2aE?si=j1_LgHC2tUg1veKu",
   },
   {
@@ -66,6 +68,7 @@ const VIDEO_ITEMS: Item[] = [
     date: "Himalayan Siddha Mahayog",
     tags: ["Dharma"],
     thumbnail: `${b}images/video-dharma-1.png`,
+    duration: "7 min",
     href: "https://youtu.be/sMu69n7cZ4A?si=L6gW8V4hjufnusV4",
   },
   {
@@ -76,6 +79,7 @@ const VIDEO_ITEMS: Item[] = [
     date: "Himalayan Siddha Mahayog",
     tags: ["Dharma"],
     thumbnail: `${b}images/video-dharma-2.png`,
+    duration: "6 min",
     href: "https://youtu.be/-z1Gex5-x5A?si=xYXVKdLabV2FhvY4",
   },
 ];
