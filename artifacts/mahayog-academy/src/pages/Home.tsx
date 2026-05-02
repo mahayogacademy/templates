@@ -10,28 +10,28 @@ const PATHS = [
     sub: "Meditation & Inner Awakening",
     href: "/meditation",
     img: `${b}images/meditation-hero.png`,
-    desc: "A direct, living transmission of the Himalayan Siddha tradition — awakening kundalini and prana through breath, mantra, and silence.",
+    desc: "Receive Shaktipat initiation and experience the automatic awakening of Kundalini — effortlessly integrating all four yoga paths as taught by Siddhababa.",
   },
   {
     label: "Ashram & Sacred Life",
     sub: "Daily Seva · Puja · Community",
     href: "/ashram",
     img: `${b}images/ashram-satsang.png`,
-    desc: "Experience the rhythm of ashram life — morning puja, gau seva, satsang, and the deep peace of dwelling in a consecrated space.",
+    desc: "Immerse yourself in the daily rhythm of Barahachhetra — morning puja, gau seva, satsang, prasad, and the stillness of a consecrated Himalayan sanctuary.",
   },
   {
     label: "Vedanta Philosophy",
     sub: "Ancient Wisdom for Modern Minds",
     href: "/vedanta",
     img: `${b}images/vedanta-hero.png`,
-    desc: "Study the great scriptures of India — Upanishads, Gita, Brahma Sutras — in a structured, living context guided by authentic teachers.",
+    desc: "A 300-hour live course taught personally by Siddhababa — exploring Brahman, the Self, and the nature of Reality, practised alongside daily Mahayog meditation.",
   },
   {
     label: "Seva & Sacred Service",
     sub: "Gau Seva · Bhojan · Outreach",
     href: "/projects",
     img: `${b}images/ashram-seva.png`,
-    desc: "From feeding the poor to caring for cows and building temples, discover how selfless service becomes a path to liberation.",
+    desc: "From building Hanuman temples and caring for sacred cows to serving prasad and nurturing youth — selfless service as the highest spiritual practice.",
   },
 ];
 
