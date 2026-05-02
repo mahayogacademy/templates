@@ -53,6 +53,19 @@ export default function SignInPage() {
   return (
     <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
 
+      {/* ── Back link ── */}
+      <Link href="/">
+        <span
+          className="absolute top-5 left-6 z-20 flex items-center gap-2 text-sm cursor-pointer group transition-opacity opacity-70 hover:opacity-100"
+          style={{ color: "rgba(255,240,210,0.9)", fontFamily: "'Inter', sans-serif" }}
+        >
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M10 12L6 8l4-4" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+          Back to site
+        </span>
+      </Link>
+
       {/* ── Background ── */}
       <img
         src={`${b}images/academy-hero.png`}
