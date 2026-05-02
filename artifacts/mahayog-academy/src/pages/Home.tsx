@@ -342,34 +342,101 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── GURU DARSHAN INVITATION ── */}
-      <section className="relative py-28 px-6 overflow-hidden">
-        <img
-          src={`${b}images/gurudev-darshan-hero.jpg`}
-          alt="Guru Darshan"
-          className="absolute inset-0 w-full h-full object-cover object-center"
-        />
-        <div className="absolute inset-0 bg-[#1a0f05]/72" />
-        <div className="relative z-10 max-w-2xl mx-auto text-center">
-          <div className="flex items-center justify-center gap-3 mb-6">
-            <div className="h-px w-10 bg-[#e8c56a]/60" />
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
-              <path d="M12 2C12 2 15 9 22 12C22 12 15 15 12 22C12 22 9 15 2 12C2 12 9 9 12 2Z" stroke="#e8c56a" strokeWidth="1.5" fill="none"/>
-            </svg>
-            <div className="h-px w-10 bg-[#e8c56a]/60" />
+      {/* ── PROJECTS ── */}
+      <section className="py-24 px-6 bg-[#fdf6ec] border-t border-[#e8d8b8]">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <span className="uppercase tracking-[0.3em] text-xs text-[#b8892a] font-medium">Sacred Initiatives</span>
+            <h2 className="font-['Cormorant_Garamond'] text-4xl md:text-5xl font-light text-[#2e2820] mt-3">
+              Projects & Vision
+            </h2>
+            <div className="h-px w-12 bg-[#b8892a]/40 mx-auto mt-6" />
           </div>
-          <h2 className="font-['Cormorant_Garamond'] text-4xl md:text-5xl font-light text-white mb-5 leading-snug">
-            Seek the Guru's Blessing
-          </h2>
-          <p className="text-[#f0e4c8] text-base leading-relaxed mb-10 max-w-lg mx-auto">
-            Darshan — the auspicious sight of the Guru — is a profound gift available to all sincere seekers. Learn how to request a personal blessing or join a group satsang.
-          </p>
-          <Link href="/guru-darshan">
-            <span className="inline-flex items-center gap-2 bg-[#b8892a] hover:bg-[#9d7422] text-white text-sm px-8 py-3.5 rounded-full tracking-wider transition-colors duration-200 cursor-pointer shadow-lg shadow-black/30">
-              Arrange Darshan
-              <ArrowRight className="w-4 h-4" strokeWidth={1.5} />
-            </span>
-          </Link>
+
+          <div className="grid md:grid-cols-2 gap-8">
+
+            {/* Gurukul */}
+            <Link href="/gurukul">
+              <div className="group bg-white rounded-2xl border border-[#e8dece] hover:shadow-xl hover:shadow-[#b8892a]/10 hover:-translate-y-0.5 transition-all duration-300 overflow-hidden flex flex-col h-full cursor-pointer">
+                <div className="relative h-52 overflow-hidden">
+                  <img src={`${b}images/gurukul-hero.png`} alt="Gurukul" className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#1a0f05]/60 to-transparent" />
+                  <span className="absolute top-4 left-4 text-[10px] uppercase tracking-[0.25em] text-[#e8c56a] font-semibold bg-[#1a0f05]/50 px-3 py-1 rounded-full">Education</span>
+                </div>
+                <div className="p-7 flex flex-col flex-1">
+                  <h3 className="font-['Cormorant_Garamond'] text-2xl font-light text-[#2e2820] mb-3 leading-snug">Jagadguru Shriramanandacharya Gurukul</h3>
+                  <div className="h-px w-8 bg-[#b8892a]/40 mb-4" />
+                  <p className="text-sm text-[#6a6058] leading-relaxed flex-1">A residential Gurukul at Chataradham, Barahakshetra — blending Vedic values, Sanskrit, and meditation with a full modern curriculum for Grades 6–12, in a sattvic and disciplined environment.</p>
+                  <div className="flex items-center gap-1.5 mt-6 text-[#b8892a] text-xs font-medium uppercase tracking-wider group-hover:gap-2.5 transition-all">
+                    <span>Learn More</span>
+                    <ArrowRight className="w-3.5 h-3.5" strokeWidth={2} />
+                  </div>
+                </div>
+              </div>
+            </Link>
+
+            {/* Ram Mandir */}
+            <Link href="/projects">
+              <div className="group bg-white rounded-2xl border border-[#e8dece] hover:shadow-xl hover:shadow-[#b8892a]/10 hover:-translate-y-0.5 transition-all duration-300 overflow-hidden flex flex-col h-full cursor-pointer">
+                <div className="relative h-52 overflow-hidden">
+                  <img src={`${b}images/ram-mandir-1.jpg`} alt="Ram Mandir" className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#1a0f05]/60 to-transparent" />
+                  <span className="absolute top-4 left-4 text-[10px] uppercase tracking-[0.25em] text-[#e8c56a] font-semibold bg-[#1a0f05]/50 px-3 py-1 rounded-full">Sacred Architecture</span>
+                </div>
+                <div className="p-7 flex flex-col flex-1">
+                  <h3 className="font-['Cormorant_Garamond'] text-2xl font-light text-[#2e2820] mb-3 leading-snug">Ram Mandir — Dev Sabha</h3>
+                  <div className="h-px w-8 bg-[#b8892a]/40 mb-4" />
+                  <p className="text-sm text-[#6a6058] leading-relaxed flex-1">A nine-storey Sri Yantra temple rising at Chatara Dham, Sunsari — envisioned as a sacred replica of Dev Sabha, the divine assembly of the 33 koti devatas, with Lord Ram and Maa Sita at the centre.</p>
+                  <div className="flex items-center gap-1.5 mt-6 text-[#b8892a] text-xs font-medium uppercase tracking-wider group-hover:gap-2.5 transition-all">
+                    <span>Learn More</span>
+                    <ArrowRight className="w-3.5 h-3.5" strokeWidth={2} />
+                  </div>
+                </div>
+              </div>
+            </Link>
+
+            {/* 108 Hanuman Temples */}
+            <Link href="/projects">
+              <div className="group bg-white rounded-2xl border border-[#e8dece] hover:shadow-xl hover:shadow-[#b8892a]/10 hover:-translate-y-0.5 transition-all duration-300 overflow-hidden flex flex-col h-full cursor-pointer">
+                <div className="relative h-52 overflow-hidden">
+                  <img src={`${b}images/hanuman-temple-portrait.png`} alt="108 Hanuman Temples" className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#1a0f05]/60 to-transparent" />
+                  <span className="absolute top-4 left-4 text-[10px] uppercase tracking-[0.25em] text-[#e8c56a] font-semibold bg-[#1a0f05]/50 px-3 py-1 rounded-full">National Mission</span>
+                </div>
+                <div className="p-7 flex flex-col flex-1">
+                  <h3 className="font-['Cormorant_Garamond'] text-2xl font-light text-[#2e2820] mb-3 leading-snug">108 Hanuman Temples Across Nepal</h3>
+                  <div className="h-px w-8 bg-[#b8892a]/40 mb-4" />
+                  <p className="text-sm text-[#6a6058] leading-relaxed flex-1">A sacred vow to establish 108 Hanuman temples nationwide — each a vibrant community centre rooted in Sanatan Dharma, offering meditation, education, and cultural revival built alongside local communities.</p>
+                  <div className="flex items-center gap-1.5 mt-6 text-[#b8892a] text-xs font-medium uppercase tracking-wider group-hover:gap-2.5 transition-all">
+                    <span>Learn More</span>
+                    <ArrowRight className="w-3.5 h-3.5" strokeWidth={2} />
+                  </div>
+                </div>
+              </div>
+            </Link>
+
+            {/* Cultural & Ecological Advocacy */}
+            <div className="bg-white rounded-2xl border border-[#e8dece] overflow-hidden flex flex-col h-full">
+              <div className="relative h-52 overflow-hidden bg-[#f4ede0] flex items-center justify-center">
+                <div className="text-center px-6">
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" className="mx-auto mb-3 opacity-30">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z" fill="#b8892a"/>
+                    <circle cx="12" cy="12" r="10" stroke="#b8892a" strokeWidth="1.2" fill="none"/>
+                    <path d="M8 14c1-3 5-5 8-3" stroke="#b8892a" strokeWidth="1.2" strokeLinecap="round" fill="none"/>
+                    <path d="M7 10c2-2 6-2 8 0" stroke="#b8892a" strokeWidth="1.2" strokeLinecap="round" fill="none"/>
+                  </svg>
+                  <p className="text-[#b8892a]/50 text-xs uppercase tracking-widest">Vision for Nepal</p>
+                </div>
+                <span className="absolute top-4 left-4 text-[10px] uppercase tracking-[0.25em] text-[#b8892a] font-semibold bg-[#e8d8b8]/60 px-3 py-1 rounded-full">Forthcoming</span>
+              </div>
+              <div className="p-7 flex flex-col flex-1">
+                <h3 className="font-['Cormorant_Garamond'] text-2xl font-light text-[#2e2820] mb-3 leading-snug">Cultural & Ecological Advocacy</h3>
+                <div className="h-px w-8 bg-[#b8892a]/40 mb-4" />
+                <p className="text-sm text-[#6a6058] leading-relaxed flex-1">A Green Revolution for Nepal's agricultural self-reliance and the establishment of Nepal's first Ayurveda University — honouring the land, restoring ancient sciences, and empowering communities.</p>
+              </div>
+            </div>
+
+          </div>
         </div>
       </section>
 
