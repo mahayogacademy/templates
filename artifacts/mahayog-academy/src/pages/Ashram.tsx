@@ -629,13 +629,6 @@ export default function Ashram() {
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
-                    {a.type === "interview" && (
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="w-11 h-11 rounded-full bg-black/50 flex items-center justify-center backdrop-blur-sm border border-white/30">
-                          <Mic2 className="w-5 h-5 text-white" strokeWidth={1.5} />
-                        </div>
-                      </div>
-                    )}
                     <span className={`absolute top-3 left-3 text-[10px] uppercase tracking-[0.15em] font-semibold px-2.5 py-1 rounded-full ${a.type === "interview" ? "bg-[#5a4a8a]/90 text-white" : "bg-[#b8892a]/90 text-white"}`}>
                       {a.tag}
                     </span>
