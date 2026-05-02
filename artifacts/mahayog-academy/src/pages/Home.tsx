@@ -319,10 +319,10 @@ export default function Home() {
               </h2>
               <div className="h-px w-12 bg-[#b8892a]/40 mb-6" />
               <p className="text-base text-[#5a5248] leading-relaxed mb-5">
-                Born in the Himalayan foothills of Nepal and initiated into the Ramananda Sampraday, Siddhababa is a living master of Mahayog — the ancient science of awakening through prana, breath, and consciousness.
+                Born in the Himalayan foothills of Nepal, His Holiness has dedicated his life to the inner awakening of individuals and the well-being of society. He is a rare spiritual master with the ability to awaken Kundalini and transmit experiential knowledge of the chakra system and advanced states of consciousness.
               </p>
               <p className="text-base text-[#5a5248] leading-relaxed mb-8">
-                His life is marked by extraordinary yogic feats — including three medically witnessed Bhu Samadhi immersions — and an unwavering commitment to selfless service, teaching, and the upliftment of all beings.
+                His life reflects profound depth of yogic attainment, including publicly demonstrated Bhu Samadhis — underground burials in meditation. Through his teachings, a once-guarded Himalayan practice has been made accessible to the modern world, while preserving its authenticity and purpose.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="/founder-guru">
