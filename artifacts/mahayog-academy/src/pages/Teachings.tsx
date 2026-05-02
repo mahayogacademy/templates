@@ -525,20 +525,47 @@ export default function Teachings() {
       </section>
 
       {/* ── YOUTUBE CTA ── */}
-      <section className="py-16 px-6 bg-[#f4ede0]">
+      <section id="yt-cta" className="py-20 px-6 bg-[#1c1008]">
         <div className="max-w-3xl mx-auto text-center">
           <p className="text-[#b8892a] text-xs uppercase tracking-[0.3em] font-medium mb-3">Watch & Subscribe</p>
-          <h2 className="font-['Cormorant_Garamond'] text-3xl text-[#2c1a08] font-light mb-4">
-            Explore the Full Video Archive
+          <h2 className="font-['Cormorant_Garamond'] text-3xl text-white font-light mb-4">
+            Explore More Videos
           </h2>
-          <p className="text-[#6a5c48] text-sm leading-relaxed max-w-lg mx-auto mb-8">
-            Hundreds of satsangs, guided meditations, ceremony recordings, and discourses by Jagadguru Mahayogi Siddhababa are available on the Academy's YouTube channel.
+          <p className="text-white/60 text-sm leading-relaxed max-w-lg mx-auto mb-10">
+            Hundreds of satsangs (wisdom talks), ceremony recordings, and discourses by Jagadguru Mahayogi Siddhababa are available on the Academy's YouTube channel.
           </p>
-          <a href="https://www.youtube.com/@siddhamahayog" target="_blank" rel="noopener noreferrer">
-            <span className="inline-flex items-center gap-2 bg-[#b8892a] hover:bg-[#9d7422] text-white text-sm px-8 py-3.5 rounded-full tracking-wide transition-colors cursor-pointer shadow-md">
-              <Play size={15} fill="white" /> Visit YouTube Channel
-            </span>
+
+          {/* Channel preview card */}
+          <a
+            href="https://www.youtube.com/@siddhamahayog"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group inline-flex items-center gap-5 bg-white/8 hover:bg-white/12 border border-white/15 hover:border-[#b8892a]/50 rounded-2xl px-6 py-5 transition-all duration-200 cursor-pointer mb-8"
+          >
+            <img
+              src="https://yt3.googleusercontent.com/rVWRzjMusF6yCxNFnjmIvm4S1s2TmLLwHkFhM44rQksxGt26ipPdoEVAvT8R78mXJnc5ugEWPgg=s900-c-k-c0x00ffffff-no-rj"
+              alt="Himalayan Siddha Mahayog"
+              className="w-14 h-14 rounded-full object-cover ring-2 ring-[#b8892a]/40 shrink-0"
+            />
+            <div className="text-left">
+              <p className="text-white font-medium text-sm leading-snug">Himalayan Siddha Mahayog</p>
+              <p className="text-white/50 text-xs mt-0.5">@siddhamahayog · YouTube</p>
+            </div>
+            <div className="ml-auto shrink-0">
+              {/* YouTube icon */}
+              <svg viewBox="0 0 24 24" className="w-7 h-7 fill-[#FF0000] opacity-80 group-hover:opacity-100 transition-opacity" xmlns="http://www.w3.org/2000/svg">
+                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+              </svg>
+            </div>
           </a>
+
+          <div className="block">
+            <a href="https://www.youtube.com/@siddhamahayog" target="_blank" rel="noopener noreferrer">
+              <span className="inline-flex items-center gap-2 bg-[#b8892a] hover:bg-[#9d7422] text-white text-sm px-8 py-3.5 rounded-full tracking-wide transition-colors cursor-pointer shadow-md">
+                <Play size={15} fill="white" /> Visit YouTube Channel
+              </span>
+            </a>
+          </div>
         </div>
       </section>
     </div>
