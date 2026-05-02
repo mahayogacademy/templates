@@ -434,27 +434,40 @@ export default function Home() {
       </section>
 
       {/* ── DONATE CTA ── */}
-      <section className="py-20 px-6 bg-[#fdf6ec] border-t border-b border-[#e8d8b8]">
-        <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-10">
-          <div className="flex-1">
-            <span className="uppercase tracking-[0.25em] text-xs text-[#b8892a] font-medium">Support the Mission</span>
-            <h2 className="font-['Cormorant_Garamond'] text-3xl md:text-4xl font-light text-[#2e2820] mt-2 mb-4 leading-snug">
-              Every offering sustains a sacred flame
-            </h2>
-            <p className="text-base text-[#6a6058] leading-relaxed">
-              The Academy operates entirely through the generosity of devotees and well-wishers worldwide. Your gift — however modest — keeps the gau seva, prasad distribution, and spiritual education alive for all.
-            </p>
+      <section className="relative py-28 px-6 overflow-hidden">
+        <img
+          src={`${b}images/ashram-cows-sunset.jpg`}
+          alt=""
+          aria-hidden
+          className="absolute inset-0 w-full h-full object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#2a1505]/70 via-[#1a0f05]/65 to-[#1a0f05]/80" />
+
+        <div className="relative z-10 max-w-2xl mx-auto text-center">
+          <div className="flex items-center justify-center gap-3 mb-6">
+            <div className="h-px w-10 bg-[#e8c56a]/50" />
+            <Heart className="w-4 h-4 text-[#e8c56a]/70" strokeWidth={1.2} />
+            <div className="h-px w-10 bg-[#e8c56a]/50" />
           </div>
-          <div className="shrink-0 flex flex-col items-center gap-4">
+
+          <span className="uppercase tracking-[0.3em] text-xs text-[#e8c56a] font-medium">Support the Mission</span>
+          <h2 className="font-['Cormorant_Garamond'] text-4xl md:text-5xl font-light text-white mt-4 mb-6 leading-snug">
+            Every offering sustains<br className="hidden md:block" /> a sacred flame
+          </h2>
+          <p className="text-[#e8d8bc] text-base leading-relaxed mb-10 max-w-lg mx-auto">
+            The Academy runs entirely through the generosity of devotees and well-wishers worldwide. Your gift — however modest — keeps the gau seva, prasad, and spiritual education alive for all.
+          </p>
+
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link href="/donate">
-              <span className="inline-flex items-center gap-2 bg-[#b8892a] hover:bg-[#9d7422] text-white text-sm px-8 py-3.5 rounded-full tracking-wider transition-colors duration-200 cursor-pointer shadow-md shadow-[#b8892a]/20">
+              <span className="inline-flex items-center gap-2 bg-[#b8892a] hover:bg-[#9d7422] text-white text-sm px-9 py-3.5 rounded-full tracking-wider transition-colors duration-200 cursor-pointer shadow-lg shadow-black/30">
                 <Heart className="w-4 h-4" strokeWidth={1.5} />
                 Offer Dana
               </span>
             </Link>
             <Link href="/volunteer">
-              <span className="text-sm text-[#b8892a] hover:text-[#9d7422] underline underline-offset-2 cursor-pointer transition-colors tracking-wide">
-                Or volunteer your time
+              <span className="inline-flex items-center gap-2 border border-white/30 hover:border-[#e8c56a]/60 text-white/80 hover:text-[#e8c56a] text-sm px-9 py-3.5 rounded-full tracking-wider transition-all duration-200 cursor-pointer">
+                Volunteer Your Time
               </span>
             </Link>
           </div>
