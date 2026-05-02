@@ -30,7 +30,7 @@ const PATHS = [
     desc: "A 300-hour live course taught personally by Siddhababa — exploring Brahman, the Self, and the nature of Reality, practised alongside daily Mahayog meditation.",
   },
   {
-    label: "Selfless Service — Seva",
+    label: "Selfless Service",
     sub: "Gau Seva · Bhojan · Outreach",
     href: "/projects",
     img: `${b}images/ashram-seva.png`,
