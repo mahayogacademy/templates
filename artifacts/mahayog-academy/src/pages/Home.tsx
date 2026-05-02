@@ -322,7 +322,7 @@ export default function Home() {
                 Born in the Himalayan foothills of Nepal, His Holiness has an unwavering commitment to the inner awakening of all beings and collective human well-being. He is a rare spiritual master with the ability to awaken Kundalini and transmit experiential knowledge of the chakra system and advanced states of consciousness.
               </p>
               <p className="text-base text-[#5a5248] leading-relaxed mb-8">
-                His life reflects profound depth of yogic attainment, including publicly demonstrated Bhu Samadhis — underground burials in meditation. Through his teachings, a once-guarded Himalayan practice has been made accessible to the modern world, while preserving its authenticity and purpose.
+                His life reflects profound depth of yogic attainment, including publicly demonstrated Bhu Samadhis — underground burials in meditation. Through his teachings, once-guarded Himalayan practices have been made accessible to the modern world, while preserving their authenticity and purpose.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="/founder-guru">
