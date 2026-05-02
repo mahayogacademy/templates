@@ -78,7 +78,7 @@ export default function CustomTalks() {
             alt="Spiritual talk at Mahayogi Siddhababa Spiritual Academy with audience"
             className="w-full h-full object-cover object-[center_20%]"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#1a0803]/40 via-[#2c1205]/25 to-[#faf9f6]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#1a0803]/90 via-[#2c1205]/65 to-[#faf9f6]" />
         </div>
         <div className="relative z-10 text-center px-6 max-w-3xl mx-auto">
           <div className="flex items-center justify-center gap-3 mb-4">
