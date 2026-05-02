@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap');
+@layer theme, base, clerk, components, utilities;
 @import "tailwindcss";
 @import "tw-animate-css";
 @plugin "@tailwindcss/typography";
@@ -265,4 +266,20 @@ html {
   .border.hover-elevate:not(.no-hover-interaction-elevate)::after {
     inset: -1px;
   }
+}
+
+/* Clerk auth component overrides — outside any @layer to ensure specificity */
+.cl-formFieldInput::placeholder {
+  color: #9a8070;
+  opacity: 1;
+}
+.cl-formButtonPrimary:hover {
+  background-color: #a07820;
+}
+.cl-socialButtonsBlockButton:hover {
+  background-color: #faf9f6;
+  border-color: #b8892a;
+}
+.cl-footerActionLink:hover {
+  color: #9d7422;
 }
