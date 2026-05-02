@@ -114,7 +114,7 @@ export default function Home() {
             A living sanctuary where seekers from every corner of the world come to experience the depths of Vedic wisdom, Himalayan yoga, and sacred service.
           </p>
           <p className="text-base text-[#6a6058] leading-relaxed max-w-xl mx-auto">
-            Not-for-profit and volunteer-run, the Academy is rooted in the ancient lineage of the Ramananda Sampraday and guided by the direct grace of Jagadguru Mahayogi Siddhababa.
+            Rooted in the ancient lineage of the Ramananda Sampraday and held in the living grace of Jagadguru Mahayogi Siddhababa — offered freely, as a gift to all who seek.
           </p>
         </div>
       </section>
