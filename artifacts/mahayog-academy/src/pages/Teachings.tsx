@@ -41,7 +41,7 @@ const VIDEO_ITEMS: Item[] = [
   {
     id: "v0",
     type: "video",
-    title: "Description of Himalayan Siddha Mahayog Sadhana (Meditation)",
+    title: "What Is Himalayan Siddha Mahayog?",
     excerpt: "Jagadguru Mahayogi Siddhababa gives a direct and clear description of the Himalayan Siddha Mahayog meditation practice — what it is, how it works, and why it is unique among yogic paths.",
     date: "Himalayan Siddha Mahayog",
     tag: "Mahayog",
