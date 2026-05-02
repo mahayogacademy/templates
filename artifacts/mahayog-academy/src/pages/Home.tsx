@@ -70,12 +70,6 @@ export default function Home() {
             <div className="h-px w-14 bg-[#e8c56a]/80" />
           </div>
 
-          {/* Location */}
-          <div className="flex items-center justify-center gap-1.5 mb-5">
-            <MapPin className="w-3.5 h-3.5 text-[#e8c56a]/80" strokeWidth={1.5} />
-            <span className="text-[#e8c56a]/80 text-xs uppercase tracking-[0.3em] font-light">Barahachetra, Nepal</span>
-          </div>
-
           <h1 className="font-['Cormorant_Garamond'] text-5xl md:text-7xl lg:text-8xl font-light text-white leading-[1.05] mb-5 tracking-wide">
             Mahayogi Siddhababa<br/>
             <span className="text-[#e8c56a]">Spiritual Academy</span>
