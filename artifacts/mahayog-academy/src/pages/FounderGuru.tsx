@@ -166,7 +166,7 @@ export default function FounderGuru() {
                 Jagadguru Mahayogi Siddhababa, known as <span className="italic text-[#3d3830]">Gurudev</span> by his students, is a Himalayan yogi, Tridaṇḍa-dhārī sādhu, and master of yoga. Deeply versed in the scriptures, Kundalini yoga, classical yogic disciplines, and world religions, he embodies a life of renunciation, realization, and service.
               </p>
               <p className="text-base text-[#5a5248] leading-relaxed mb-8">
-                Through his teaching, personal guidance, and the institutions he has established, he guides individuals and communities seeking well-being, purpose, and inner peace, drawing seekers from across Nepal, India, and the world.
+                He is presently the sole Āchārya of the Siddha Mahayog technique, entrusted with carrying forward this living lineage. His life and work are dedicated to guiding seekers and preserving the authenticity and continuity of the yogic path.
               </p>
 
               {/* Central quote */}
@@ -291,7 +291,7 @@ export default function FounderGuru() {
                     Spiritual Foundations from a Young Age
                   </h3>
                   <p className="text-base text-[#5a5248] leading-relaxed mb-4">
-                    From a young age, Swami Ramakrishnacharya demonstrated a remarkable depth of yogic absorption. While still a young man, he achieved deep Samādhi, the highest state of meditative union, a feat that took most seekers a lifetime of practice.
+                    His Holiness was born in Nepal's Mountain region. From an early age, he undertook rigorous yogic discipline under the guidance of realized masters. Through sustained practice, deep meditation, and the grace of the Guru, he attained the capacity for samādhi in his youth—a state described in the yogic scriptures as the culmination of spiritual practice and the final limb of Patañjali's eightfold path of yoga.
                   </p>
                   <p className="text-base text-[#5a5248] leading-relaxed">
                     Drawn inward from early life, his path was not one of gradual accumulation but of direct realization. His bearing even then conveyed the stillness of a realized soul, long before the world came to know his name.
