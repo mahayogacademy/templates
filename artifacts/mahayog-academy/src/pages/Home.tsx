@@ -524,18 +524,18 @@ export default function Home() {
               ].map((item, i) => (
                 <Link key={i} href={item.href}>
                   <div className="flex items-start gap-5 py-5 group cursor-pointer">
-                    <div className="shrink-0 w-16 h-16 rounded-xl overflow-hidden">
+                    <div className="shrink-0 w-20 h-20 rounded-xl overflow-hidden">
                       <img src={item.thumb} alt="" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                     </div>
                     <div className="flex-1 min-w-0">
-                      <div className="flex items-center gap-2 mb-1.5">
-                        <span className="text-[10px] uppercase tracking-[0.2em] text-[#b8892a] font-semibold">{item.type}</span>
-                        {item.duration && <span className="text-[10px] text-[#9a8878]">· {item.duration}</span>}
+                      <div className="flex items-center gap-2 mb-2">
+                        <span className="text-xs uppercase tracking-[0.2em] text-[#b8892a] font-semibold">{item.type}</span>
+                        {item.duration && <span className="text-xs text-[#9a8878]">· {item.duration}</span>}
                       </div>
-                      <h3 className="font-['Cormorant_Garamond'] text-lg font-light text-[#2e2820] group-hover:text-[#b8892a] transition-colors leading-snug mb-1">{item.title}</h3>
-                      <p className="text-xs text-[#9a8878] leading-relaxed line-clamp-1">{item.excerpt}</p>
+                      <h3 className="font-['Cormorant_Garamond'] text-2xl font-light text-[#2e2820] group-hover:text-[#b8892a] transition-colors leading-snug mb-1.5">{item.title}</h3>
+                      <p className="text-sm text-[#9a8878] leading-relaxed line-clamp-1">{item.excerpt}</p>
                     </div>
-                    <ArrowRight className="w-4 h-4 text-[#b8892a]/40 group-hover:text-[#b8892a] shrink-0 mt-1.5 transition-colors" strokeWidth={1.5} />
+                    <ArrowRight className="w-5 h-5 text-[#b8892a]/40 group-hover:text-[#b8892a] shrink-0 mt-2 transition-colors" strokeWidth={1.5} />
                   </div>
                 </Link>
               ))}
