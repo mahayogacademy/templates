@@ -516,3 +516,9 @@ id = "9bmt48H8P4gLeMQpo0v79"
 uri = "file://artifacts/mahayog-academy/public/images/custom-talks-corporate.png"
 type = "image"
 title = "corporate mindfulness session"
+
+[[generated]]
+id = "g3vlNeJtaN87YVM_IJTS5"
+uri = "file://artifacts/mahayog-academy/public/images/custom-talks-community.png"
+type = "image"
+title = "spiritual community circle outdoor gathering"

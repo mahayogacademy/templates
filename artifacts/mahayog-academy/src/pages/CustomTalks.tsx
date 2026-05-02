@@ -202,8 +202,8 @@ export default function CustomTalks() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="rounded-3xl overflow-hidden shadow-md border border-[#e8dece]">
               <img
-                src={`${b}images/custom-talks-corporate.png`}
-                alt="Corporate mindfulness and wellness session"
+                src={`${b}images/custom-talks-community.png`}
+                alt="Diverse community gathered in a spiritual circle outdoors"
                 className="w-full h-full object-cover"
               />
             </div>
