@@ -10,18 +10,21 @@ const EXPLORE = [
   { label: "Lineage",            href: "/lineage" },
 ];
 
-const EXPERIENCE = [
+const COURSES = [
   { label: "Himalayan Siddha Mahayog Meditation", href: "/meditation" },
   { label: "Vedanta Philosophy Course",           href: "/vedanta" },
-  { label: "Ashram Life",                         href: "/ashram" },
-  { label: "Guru Darshan",                        href: "/guru-darshan" },
-  { label: "Events",                              href: "/events" },
   { label: "Gurukul",                             href: "/gurukul" },
-  { label: "Volunteer",                           href: "/volunteer" },
-  { label: "Custom Talks & Workshops",            href: "/custom-talks" },
 ];
 
-type MenuKey = "explore" | "experience" | null;
+const EXPERIENCE = [
+  { label: "Ashram Life",              href: "/ashram" },
+  { label: "Guru Darshan",             href: "/guru-darshan" },
+  { label: "Events",                   href: "/events" },
+  { label: "Volunteer",                href: "/volunteer" },
+  { label: "Custom Talks & Workshops", href: "/custom-talks" },
+];
+
+type MenuKey = "explore" | "courses" | "experience" | null;
 
 function DropdownMenu({ items }: { items: { label: string; href: string }[] }) {
   return (
@@ -87,6 +90,23 @@ export default function Nav() {
             {open === "explore" && (
               <div onMouseEnter={() => enter("explore")} onMouseLeave={leave}>
                 <DropdownMenu items={EXPLORE} />
+              </div>
+            )}
+          </div>
+
+          {/* Courses */}
+          <div
+            className="relative"
+            onMouseEnter={() => enter("courses")}
+            onMouseLeave={leave}
+          >
+            <button className="flex items-center gap-1 px-4 py-2 text-sm text-[#5a5248] hover:text-[#b8892a] transition-colors tracking-wide rounded-lg hover:bg-[#fdf6ec]">
+              Courses
+              <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${open === "courses" ? "rotate-180" : ""}`} strokeWidth={1.5} />
+            </button>
+            {open === "courses" && (
+              <div onMouseEnter={() => enter("courses")} onMouseLeave={leave}>
+                <DropdownMenu items={COURSES} />
               </div>
             )}
           </div>
