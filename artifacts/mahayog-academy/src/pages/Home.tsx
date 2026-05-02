@@ -125,8 +125,7 @@ export default function Home() {
             alt="Sacred symbols of the Ramanandi Vaishnava tradition"
             className="w-full h-auto max-h-52 object-contain"
             style={{
-              filter: "sepia(0.4) saturate(1.8) hue-rotate(-8deg) brightness(0.88) contrast(1.08)",
-              mixBlendMode: "multiply",
+              filter: "sepia(0.3) saturate(1.6) hue-rotate(-8deg) brightness(0.95) contrast(1.05)",
             }}
           />
         </div>
