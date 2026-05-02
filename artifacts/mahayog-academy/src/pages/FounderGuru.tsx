@@ -307,7 +307,7 @@ export default function FounderGuru() {
                     Underground Burial in Meditation
                   </h3>
                   <p className="text-base text-[#5a5248] leading-relaxed mb-4">
-                    At the request of students and devotees, His Holiness has publicly demonstrated <span className="italic">Bhu Samadhi</span>, the yogic practice of remaining in deep meditation underground, sealed within an enclosed space for multiple days. These demonstrations were performed across Nepal and witnessed by thousands.
+                    At the request of students and devotees, His Holiness has publicly demonstrated <span className="italic">Bhu Samadhi</span>, the yogic practice of remaining in deep meditation underground, sealed, without oxygen, for nine days, at a minimum. These demonstrations were performed across Nepal and witnessed by thousands.
                   </p>
                   <p className="text-base text-[#5a5248] leading-relaxed">
                     His Holiness entered sealed underground chambers, brick-lined pits covered and monitored, and remained in uninterrupted Samādhi for days. Witnesses recorded no signs of ordinary breath or movement. These events have kindled deep faith in the living reality of Vedic yoga, drawing sincere seekers from across the world to his guidance.
