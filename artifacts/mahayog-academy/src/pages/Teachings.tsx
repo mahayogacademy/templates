@@ -39,6 +39,16 @@ const ARTICLE_ITEMS: Item[] = ARTICLES.map((a, i) => ({
 /* ── Videos ── */
 const VIDEO_ITEMS: Item[] = [
   {
+    id: "v0",
+    type: "video",
+    title: "Description of Himalayan Siddha Mahayog Sadhana (Meditation)",
+    excerpt: "Jagadguru Mahayogi Siddhababa gives a direct and clear description of the Himalayan Siddha Mahayog meditation practice — what it is, how it works, and why it is unique among yogic paths.",
+    date: "Himalayan Siddha Mahayog",
+    tag: "Mahayog",
+    thumbnail: `${b}images/video-mahayog-sadhana.jpg`,
+    href: "https://www.youtube.com/watch?v=U2kbxV0zy-E&t=49s",
+  },
+  {
     id: "v1",
     type: "video",
     title: "Guided Mahayog Meditation — Morning Practice with Siddhababa",
