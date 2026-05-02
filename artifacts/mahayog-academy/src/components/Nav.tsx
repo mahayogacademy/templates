@@ -117,9 +117,9 @@ export default function Nav() {
               alt="Mahayogi Siddhababa Spiritual Academy logo"
               className="h-10 w-10 rounded-full object-cover shrink-0"
             />
-            <span className="font-['Cormorant_Garamond'] text-[#b8892a] tracking-wide group-hover:text-[#9d7422] transition-colors" style={{ lineHeight: 1.0 }}>
-              <span className="block text-lg font-semibold">Mahayogi Siddhababa</span>
-              <span className="block text-sm font-medium tracking-[0.12em] text-[#8a6518]" style={{ marginTop: "-4px" }}>Spiritual Academy</span>
+            <span className="text-[#b8892a] group-hover:text-[#9d7422] transition-colors" style={{ fontFamily: "'Inter', sans-serif", lineHeight: 1.15 }}>
+              <span className="block text-[15px] font-semibold tracking-tight" style={{ color: "#2c1a08" }}>Mahayogi Siddhababa</span>
+              <span className="block text-[11px] font-medium tracking-[0.18em] uppercase" style={{ color: "#b8892a", marginTop: "1px" }}>Spiritual Academy</span>
             </span>
           </span>
         </Link>

@@ -76,12 +76,12 @@ export default function SignInPage() {
                 alt="Mahayogi Siddhababa Spiritual Academy"
                 className="w-12 h-12 rounded-full object-cover"
               />
-              <span style={{ fontFamily: "'Cormorant Garamond', serif", lineHeight: 1.1 }}>
-                <span className="block text-base font-semibold group-hover:text-[#b8892a] transition-colors" style={{ color: "#2c1a08", letterSpacing: "0.04em" }}>
+              <span style={{ fontFamily: "'Inter', sans-serif", lineHeight: 1.15 }}>
+                <span className="block text-base font-semibold group-hover:text-[#b8892a] transition-colors tracking-tight" style={{ color: "#2c1a08" }}>
                   Mahayogi Siddhababa
                 </span>
-                <span className="block text-sm tracking-[0.12em]" style={{ color: "#b8892a" }}>
-                  SPIRITUAL ACADEMY
+                <span className="block text-xs font-medium tracking-[0.18em] uppercase" style={{ color: "#b8892a", marginTop: "1px" }}>
+                  Spiritual Academy
                 </span>
               </span>
             </span>
