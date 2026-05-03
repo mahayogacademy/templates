@@ -110,7 +110,7 @@ export default function Gurukul() {
             </Link>
             <Link
               href="/donate"
-              className="inline-flex items-center gap-2 border border-white text-white text-sm px-7 py-3 rounded-full tracking-wider transition-colors duration-200 hover:bg-white/15"
+              className="inline-flex items-center gap-2 bg-[#f5ede0]/90 hover:bg-[#f5ede0] text-[#3d3830] text-sm px-7 py-3 rounded-full tracking-wider transition-colors duration-200"
             >
               Sponsor a Child <ArrowRight className="w-4 h-4" strokeWidth={1.5} />
             </Link>
