@@ -229,7 +229,7 @@ export default function FounderGuru() {
 
           {/* ── SPIRITUAL CREDENTIALS ACCORDION ── */}
           <div className="mb-20">
-            <p className="text-xs uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-5">Titles &amp; Recognitions</p>
+            <p className="text-sm uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-5">Titles &amp; Recognitions</p>
             <div className="divide-y divide-[#e8dece] border border-[#e8dece] rounded-2xl overflow-hidden">
               {CREDENTIALS.map((c, i) => (
                 <div key={i} className="bg-white">
