@@ -552,7 +552,7 @@ function BenefitRow({ title, subtitle, desc, align, expanded, onToggle }: {
           className="overflow-hidden transition-all duration-400 ease-in-out"
           style={{ maxHeight: expanded ? "200px" : "0px", opacity: expanded ? 1 : 0, transition: "max-height 0.4s ease, opacity 0.3s ease" }}
         >
-          <p className="text-base text-[#5a5248] leading-relaxed mt-2">{desc}</p>
+          <p className="text-base text-[#5a5248] leading-relaxed mt-2 text-center">{desc}</p>
         </div>
       </div>
     </div>
