@@ -221,7 +221,11 @@ function CalendarView({ events }: { events: AnyEvent[] }) {
     setSelected(null);
   }
 
-  const selectedEvents = selected ? (eventsByDay[selected] ?? []) : [];
+  const allMonthEvents = Object.entries(eventsByDay)
+    .sort(([a], [b]) => Number(a) - Number(b))
+    .flatMap(([, evs]) => evs);
+
+  const selectedEvents = selected ? (eventsByDay[selected] ?? []) : allMonthEvents;
 
   return (
     <div className="space-y-4">
@@ -280,9 +284,17 @@ function CalendarView({ events }: { events: AnyEvent[] }) {
         </div>
       </div>
 
-      {/* Event detail popout */}
-      {selected && selectedEvents.length > 0 && (
+      {/* Event list — always visible */}
+      {selectedEvents.length > 0 && (
         <div className="rounded-xl border border-[#e8d8b8] bg-[#fdf6ec] p-5 space-y-3">
+          <div className="flex items-center justify-between mb-1">
+            <p className="text-xs uppercase tracking-[0.2em] text-[#9a8f84] font-medium">
+              {selected ? `Events on ${MONTH_NAMES[viewMonth]} ${selected}` : `All events · ${MONTH_NAMES[viewMonth]} ${viewYear}`}
+            </p>
+            {selected && (
+              <button onClick={() => setSelected(null)} className="text-xs text-[#b8892a] hover:underline cursor-pointer">Show all</button>
+            )}
+          </div>
           {selectedEvents.map(ev => (
             <div key={ev.id}>
               <p className="text-sm uppercase tracking-[0.2em] text-[#b8892a] font-medium mb-1">{ev.kindLabel}</p>
