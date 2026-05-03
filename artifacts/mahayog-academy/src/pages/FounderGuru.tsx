@@ -702,12 +702,14 @@ export default function FounderGuru() {
                   name: "Atirudri Mahāyajña",
                   desc: "Performed for the first time in Nepal's recorded history, within the sacred precincts of Pashupatinath Temple.",
                   href: "/events/historic/atirudri-mahayagya",
+                  img: "atirudri-hero.png",
                 },
                 {
                   year: "2024",
                   name: "Sankat Mochan Shree Hanumad Mahāyajña",
                   desc: "Conducted with the participation of Dhirendra Shastri Ji Maharaj (Bageshwar Dham Sarkar) as Guest of Honour.",
                   href: "/events/historic/hanumad-mahayagya",
+                  img: "hanumad-satsang-tent.jpg",
                 },
                 {
                   year: "2025",
@@ -720,6 +722,7 @@ export default function FounderGuru() {
                   name: "Shree Ramarchan Mahāyajña",
                   desc: "Performed an unprecedented 74 times within four months during the observance of 2024 Chaturmās.",
                   href: "/events/historic/ramarchan-mahayagya",
+                  img: "ramarchan-mahayagya.jpg",
                 },
               ].map((yajna: { year: string; name: string; desc: string; href: string | null; img?: string }, i) => {
                 const inner = (
