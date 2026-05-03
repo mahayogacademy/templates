@@ -694,39 +694,65 @@ export default function FounderGuru() {
                   year: "2019",
                   name: "Shree Ram Tārak Brahma Mahāyajña",
                   desc: "Conducted in Nepal after a gap of 705 years, marking a profound moment of spiritual revival.",
+                  href: "/events/historic/tarak-brahma-mahayagya",
                 },
                 {
                   year: "2023",
                   name: "Atirudri Mahāyajña",
                   desc: "Performed for the first time in Nepal's recorded history, within the sacred precincts of Pashupatinath Temple.",
+                  href: "/events/historic/atirudri-mahayagya",
                 },
                 {
                   year: "2024",
                   name: "Sankat Mochan Shree Hanumad Mahāyajña",
                   desc: "Conducted with the participation of Dhirendra Shastri Ji Maharaj (Bageshwar Dham Sarkar) as Guest of Honour.",
+                  href: "/events/historic/hanumad-mahayagya",
                 },
                 {
                   year: "2025",
                   name: "Ramchandi Mahāyajña",
                   desc: "Invoking Maa Chandi and Lord Ram for protection, inner transformation, and the welfare of all.",
+                  href: null,
                 },
                 {
                   year: "2017–Present",
                   name: "Shree Ramarchan Mahāyajña",
                   desc: "Performed an unprecedented 74 times within four months during the observance of 2024 Chaturmās.",
+                  href: "/events/historic/ramarchan-mahayagya",
                 },
-              ].map((yajna, i) => (
-                <div key={i} className="flex gap-6 items-start p-6 bg-white border border-[#e8dece] rounded-2xl">
-                  <div className="shrink-0 w-28 text-right">
-                    <span className="text-sm uppercase tracking-[0.2em] text-[#b8892a] font-semibold leading-none">{yajna.year}</span>
-                  </div>
-                  <div className="w-px bg-[#e8dece] self-stretch shrink-0" />
-                  <div>
-                    <p className="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#3d3830] mb-1">{yajna.name}</p>
-                    <p className="text-base text-[#7a7068] leading-relaxed">{yajna.desc}</p>
-                  </div>
-                </div>
-              ))}
+              ].map((yajna, i) => {
+                const inner = (
+                  <>
+                    <div className="shrink-0 w-28 text-right">
+                      <span className="text-sm uppercase tracking-[0.2em] text-[#b8892a] font-semibold leading-none">{yajna.year}</span>
+                    </div>
+                    <div className="w-px bg-[#e8dece] self-stretch shrink-0" />
+                    <div className="flex-1">
+                      <p className="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#3d3830] mb-1">{yajna.name}</p>
+                      <p className="text-base text-[#7a7068] leading-relaxed">{yajna.desc}</p>
+                      {yajna.href && (
+                        <span className="mt-2 inline-flex items-center gap-2 text-sm text-[#b8892a] font-medium tracking-wide">
+                          Learn more <ArrowRight className="w-4 h-4" strokeWidth={1.5} />
+                        </span>
+                      )}
+                    </div>
+                  </>
+                );
+                if (!yajna.href) {
+                  return (
+                    <div key={i} className="flex gap-6 items-start p-6 bg-white border border-[#e8dece] rounded-2xl">
+                      {inner}
+                    </div>
+                  );
+                }
+                return (
+                  <Link key={i} href={yajna.href} onClick={() => window.scrollTo(0, 0)}>
+                    <div className="flex gap-6 items-start p-6 bg-white border border-[#e8dece] rounded-2xl cursor-pointer hover:border-[#b8892a]/50 hover:shadow-md transition-all duration-300">
+                      {inner}
+                    </div>
+                  </Link>
+                );
+              })}
             </div>
 
             <div className="mt-10 border-l-2 border-[#b8892a]/40 pl-6 py-1 mb-10">
