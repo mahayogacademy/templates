@@ -138,11 +138,11 @@ export default function FounderGuru() {
             </svg>
             <div className="h-px w-10 bg-[#e8c56a]/60" />
           </div>
-          <p className="text-[#e8c56a] text-xs uppercase tracking-[0.3em] font-medium mb-3">Guru</p>
-          <h1 className="font-['Cormorant_Garamond'] text-5xl md:text-6xl font-light text-white leading-tight">
+          <p className="text-[#e8c56a] text-xs uppercase tracking-[0.3em] font-medium mb-3" style={{ textShadow: "0 1px 8px rgba(0,0,0,0.7)" }}>Guru</p>
+          <h1 className="font-['Cormorant_Garamond'] text-5xl md:text-6xl font-light text-white leading-tight" style={{ textShadow: "0 2px 16px rgba(0,0,0,0.75)" }}>
             Jagadguru Mahayogi Siddhababa
           </h1>
-          <p className="text-[#f0e4c8] text-base tracking-widest uppercase font-light mt-4">
+          <p className="text-[#f0e4c8] text-base tracking-widest uppercase font-light mt-4" style={{ textShadow: "0 1px 8px rgba(0,0,0,0.7)" }}>
             Founder &amp; Acharya
           </p>
         </div>
