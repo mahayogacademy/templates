@@ -154,14 +154,22 @@ export default function Nav() {
               className="h-10 w-10 sm:h-14 sm:w-14 rounded-full object-cover shrink-0 shadow-sm"
             />
             <span style={{ lineHeight: 1.15 }} className="min-w-0">
+              {/* Below lg: single inline line so the full name fits on one row */}
               <span
-                className="block group-hover:text-[#7a5518] transition-colors text-base sm:text-xl truncate"
+                className="lg:hidden block whitespace-nowrap group-hover:text-[#7a5518] transition-colors text-[11px] sm:text-base"
+                style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 500, color: "#2c1a08", letterSpacing: "0.02em" }}
+              >
+                Mahayogi Siddhababa Spiritual Academy
+              </span>
+              {/* lg+: two-line stacked layout */}
+              <span
+                className="hidden lg:block group-hover:text-[#7a5518] transition-colors text-xl truncate"
                 style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 500, color: "#2c1a08", letterSpacing: "0.03em" }}
               >
                 Mahayogi Siddhababa
               </span>
               <span
-                className="hidden sm:block"
+                className="hidden lg:block"
                 style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.65rem", fontWeight: 600, color: "#b8892a", letterSpacing: "0.16em", textTransform: "uppercase", marginTop: "3px" }}
               >
                 Spiritual Academy
