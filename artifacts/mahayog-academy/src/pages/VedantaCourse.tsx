@@ -88,7 +88,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
         />
       </button>
       <div className={`overflow-hidden transition-all duration-400 ${open ? "max-h-[600px] pb-5" : "max-h-0"}`}>
-        <p className="text-sm text-[#6b6158] leading-relaxed whitespace-pre-line">{a}</p>
+        <p className="text-base text-[#6b6158] leading-relaxed whitespace-pre-line">{a}</p>
       </div>
     </div>
   );
@@ -282,7 +282,7 @@ export default function VedantaCourse() {
                 <div className="mb-4">{h.icon}</div>
                 <p className="text-sm uppercase tracking-[0.2em] text-[#b8892a] font-medium mb-1">{h.sub}</p>
                 <h3 className="font-['Cormorant_Garamond'] text-xl font-light text-[#3d3830] mb-3">{h.title}</h3>
-                <p className="text-sm text-[#5a5248] leading-relaxed">{h.desc}</p>
+                <p className="text-base text-[#5a5248] leading-relaxed">{h.desc}</p>
               </div>
             ))}
           </div>
@@ -297,7 +297,7 @@ export default function VedantaCourse() {
             <h2 className="font-['Cormorant_Garamond'] text-4xl font-light text-[#3d3830] mt-2 mb-3">
               Personal Stories of Transformation
             </h2>
-            <p className="text-sm text-[#7a7068] max-w-xl mx-auto leading-relaxed">
+            <p className="text-base text-[#7a7068] max-w-xl mx-auto leading-relaxed">
               Students from all walks of life share how the Vedanta course and Mahayog practice have transformed their inner world.
             </p>
           </div>
@@ -330,7 +330,7 @@ export default function VedantaCourse() {
                   <p className="font-['Cormorant_Garamond'] text-base font-semibold text-[#3d3830] leading-snug group-hover:text-[#9d7422] transition-colors duration-150">
                     {s.name}
                   </p>
-                  <p className="text-[11px] text-[#9a8f84] leading-snug">{s.role}</p>
+                  <p className="text-sm text-[#9a8f84] leading-snug">{s.role}</p>
                 </div>
               </a>
             ))}
@@ -341,7 +341,7 @@ export default function VedantaCourse() {
               href={PLAYLIST_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-[#b8892a] hover:text-[#9d7422] text-sm tracking-wide transition-colors duration-150 border border-[#c8a050]/50 hover:border-[#b8892a] rounded-full px-6 py-2.5"
+              className="inline-flex items-center gap-2 text-[#b8892a] hover:text-[#9d7422] text-base tracking-wide transition-colors duration-150 border border-[#c8a050]/50 hover:border-[#b8892a] rounded-full px-6 py-2.5"
             >
               View Full Playlist on YouTube
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
