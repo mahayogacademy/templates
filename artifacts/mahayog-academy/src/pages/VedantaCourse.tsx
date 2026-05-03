@@ -36,8 +36,6 @@ const STUDENT_STORIES = [
   { id: "uB5iiXrEUAE", name: "Bibek Lamsal",            role: "MBBS" },
   { id: "dJaVxSPAV-A", name: "Basudev Marasini",        role: "Retired SSP" },
   { id: "ivbcuxNGiUE", name: "Agam Shrestha",           role: "MPhil / PhD Scholar & Sculptor" },
-  { id: "yTRzqZSV-Fs", name: "Madhav Upadhaya",         role: "Deputy CEO, Garima Bikas Bank" },
-  { id: "SyHv2C3E828", name: "Padma Gauli",             role: "Secondary Level Teacher" },
 ];
 
 const FAQS = [
@@ -341,7 +339,7 @@ export default function VedantaCourse() {
               href={PLAYLIST_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-[#b8892a] hover:text-[#9d7422] text-base tracking-wide transition-colors duration-150 border border-[#c8a050]/50 hover:border-[#b8892a] rounded-full px-6 py-2.5"
+              className="inline-flex items-center gap-2 bg-[#b8892a] hover:bg-[#7a5518] text-white text-base tracking-wide transition-colors duration-150 rounded-full px-6 py-2.5"
             >
               View Full Playlist on YouTube
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
