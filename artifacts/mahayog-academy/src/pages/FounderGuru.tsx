@@ -723,32 +723,30 @@ export default function FounderGuru() {
                 },
               ].map((yajna: { year: string; name: string; desc: string; href: string | null; img?: string }, i) => {
                 const inner = (
-                  <>
-                    {yajna.img && (
-                      <div className="h-48 overflow-hidden rounded-t-2xl -mx-6 -mt-6 mb-5">
-                        <img
-                          src={`${b}images/${yajna.img}`}
-                          alt={yajna.name}
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                    )}
-                    <div className="flex gap-6 items-start">
-                      <div className="shrink-0 w-28 text-right">
-                        <span className="text-sm uppercase tracking-[0.2em] text-[#b8892a] font-semibold leading-none">{yajna.year}</span>
-                      </div>
-                      <div className="w-px bg-[#e8dece] self-stretch shrink-0" />
-                      <div className="flex-1">
-                        <p className="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#3d3830] mb-1">{yajna.name}</p>
-                        <p className="text-base text-[#7a7068] leading-relaxed mb-3">{yajna.desc}</p>
-                        {yajna.href && (
-                          <span className="inline-flex items-center gap-2 px-4 py-1.5 border border-[#b8892a] text-[#b8892a] text-sm font-medium rounded-full">
-                            Learn more <ArrowRight className="w-4 h-4" strokeWidth={1.5} />
-                          </span>
-                        )}
-                      </div>
+                  <div className="flex gap-6 items-start">
+                    <div className="shrink-0 w-28 flex flex-col items-end gap-2">
+                      <span className="text-sm uppercase tracking-[0.2em] text-[#b8892a] font-semibold leading-none">{yajna.year}</span>
+                      {yajna.img && (
+                        <div className="w-16 h-16 rounded-xl overflow-hidden border border-[#e8dece] shadow-sm">
+                          <img
+                            src={`${b}images/${yajna.img}`}
+                            alt={yajna.name}
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                      )}
                     </div>
-                  </>
+                    <div className="w-px bg-[#e8dece] self-stretch shrink-0" />
+                    <div className="flex-1">
+                      <p className="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#3d3830] mb-1">{yajna.name}</p>
+                      <p className="text-base text-[#7a7068] leading-relaxed mb-3">{yajna.desc}</p>
+                      {yajna.href && (
+                        <span className="inline-flex items-center gap-2 px-4 py-1.5 border border-[#b8892a] text-[#b8892a] text-sm font-medium rounded-full">
+                          Learn more <ArrowRight className="w-4 h-4" strokeWidth={1.5} />
+                        </span>
+                      )}
+                    </div>
+                  </div>
                 );
                 if (!yajna.href) {
                   return (
