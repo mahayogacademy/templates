@@ -221,7 +221,7 @@ export default function Volunteer() {
               {QUALITIES.map((q) => (
                 <div key={q} className="flex items-start gap-3 bg-[#f4ede0] rounded-xl px-5 py-3.5">
                   <div className="w-2 h-2 rounded-full bg-[#b8892a] mt-1.5 flex-shrink-0" />
-                  <p className="text-[#4a3728] text-sm leading-relaxed">{q}</p>
+                  <p className="text-[#4a3728] text-base leading-relaxed">{q}</p>
                 </div>
               ))}
             </div>
