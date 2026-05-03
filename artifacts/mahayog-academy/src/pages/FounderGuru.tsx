@@ -601,6 +601,7 @@ export default function FounderGuru() {
                       style={{ objectPosition: item.pos ?? "center bottom", transform: "translateY(-30%) scale(1.1)" }}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+                    <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-black/70 to-transparent" />
                     <div className="absolute bottom-0 left-0 right-0 p-5">
                       <p className="font-['Cormorant_Garamond'] text-2xl font-semibold text-white leading-snug mb-1">{item.label}</p>
                       <p className="text-xs uppercase tracking-[0.25em] text-[#e8c56a] font-semibold">{item.note}</p>
