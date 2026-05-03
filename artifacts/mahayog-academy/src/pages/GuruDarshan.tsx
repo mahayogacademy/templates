@@ -54,7 +54,7 @@ const FAQS = [
   },
   {
     q: "Can I request a personal audience with His Holiness?",
-    a: "Yes. Personal audiences are granted at His Holiness's discretion, guided by the sincerity and readiness of the seeker. To request a personal audience, please reach out through the Contact page with a brief note about your spiritual background and what you seek. The Academy team will respond and coordinate as circumstances allow.",
+    a: "Yes. Personal audiences are granted at His Holiness's discretion, guided by the sincerity and readiness of the seeker. To request a personal audience, please reach out through the Contact page with a brief note about your spiritual background and what you seek. The Academy team will respond and coordinate with you.",
   },
   {
     q: "Is there a fee for darshan?",
