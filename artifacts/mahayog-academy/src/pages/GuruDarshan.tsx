@@ -251,8 +251,8 @@ export default function GuruDarshan() {
                 />
               </div>
               <div className="rounded-xl bg-[#fdf6ec] border border-[#e8dece] p-6">
-                <p className="text-xs uppercase tracking-[0.2em] text-[#b8892a] font-medium mb-3">A Note on Grace</p>
-                <p className="text-sm text-[#5a5248] leading-relaxed">
+                <p className="text-sm uppercase tracking-[0.2em] text-[#b8892a] font-medium mb-3">A Note on Grace</p>
+                <p className="text-base text-[#5a5248] leading-relaxed">
                   Darshan is ultimately an act of grace, it is not something that can be forced or engineered. Come as you are. The sincerity of your presence matters far more than outward formality. His Holiness receives all seekers with equal compassion, regardless of where they are on the path.
                 </p>
               </div>
