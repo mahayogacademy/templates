@@ -275,7 +275,7 @@ const FAQ_GROUPS: { theme: string; items: { q: string; a: string }[] }[] = [
       },
       {
         q: "What is the Chakra System?",
-        a: "Chakras are subtle energy centers, focal points of consciousness, formed at the junctions where the three main subtle energy channels (sushumna, ida, and pingala) converge.\n\nIn Mahayog, chakras are not stimulated or controlled. Through the natural rising of Kundalini, they are engaged as needed for the practitioner. While over 32,000 chakras exist, seven are considered primary:\n\nMuladhara (base of spine), Stability, grounding\nSvadhisthana (lower abdomen), Flow, creativity\nManipur (solar plexus), Will, inner strength\nAnahata (heart), Compassion, balance\nVishuddha (throat), Expression, truthfulness\nAjna (between eyebrows), Insight, perception\nSahasrara (crown), Stillness, unity, expanded awareness",
+        a: "Chakras are subtle energy centers, focal points of consciousness, formed at the junctions where the three main subtle energy channels (sushumna, ida, and pingala) converge.\n\nIn Mahayog, chakras are not stimulated or controlled. Through the natural rising of Kundalini, they are engaged as needed for the practitioner. While over 32,000 chakras exist, seven are considered primary:\n\n**Muladhara** (base of spine): Stability, grounding\n**Svadhisthana** (lower abdomen): Flow, creativity\n**Manipur** (solar plexus): Will, inner strength\n**Anahata** (heart): Compassion, balance\n**Vishuddha** (throat): Expression, truthfulness\n**Ajna** (between eyebrows): Insight, perception\n**Sahasrara** (crown): Stillness, unity, expanded awareness",
       },
     ],
   },
@@ -374,6 +374,22 @@ const FAQ_GROUPS: { theme: string; items: { q: string; a: string }[] }[] = [
   },
 ];
 
+function renderFAQAnswer(text: string) {
+  return text.split('\n').map((line, i, arr) => {
+    const parts = line.split(/\*\*(.*?)\*\*/g);
+    return (
+      <span key={i}>
+        {parts.map((part, j) =>
+          j % 2 === 1
+            ? <strong key={j} className="font-semibold text-[#4a3a28]">{part}</strong>
+            : part
+        )}
+        {i < arr.length - 1 && '\n'}
+      </span>
+    );
+  });
+}
+
 function FAQItem({ q, a }: { q: string; a: string }) {
   const [open, setOpen] = useState(false);
   return (
@@ -393,7 +409,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
       <div
         className={`overflow-hidden transition-all duration-500 ${open ? "max-h-[600px] pb-5" : "max-h-0"}`}
       >
-        <div className="text-base text-[#6b6158] leading-relaxed whitespace-pre-line">{a}</div>
+        <div className="text-base text-[#6b6158] leading-relaxed whitespace-pre-line">{renderFAQAnswer(a)}</div>
       </div>
     </div>
   );
