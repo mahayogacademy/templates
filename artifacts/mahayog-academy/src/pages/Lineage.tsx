@@ -31,7 +31,7 @@ function GoldDiamond() {
 
 function GuruCard({ guru }: { guru: typeof GURUS[number] }) {
   return (
-    <div className="flex flex-col items-center text-center w-48">
+    <div className="flex flex-col items-center text-center w-52">
       <div className="relative w-44 h-44 shrink-0">
         <div className="absolute inset-0 rounded-full shadow-[0_0_0_2px_#b8892a,0_0_0_6px_#f2ead8,0_0_0_8px_#c9a55a40]" />
         <img
@@ -40,7 +40,7 @@ function GuruCard({ guru }: { guru: typeof GURUS[number] }) {
           className="w-full h-full object-cover object-top rounded-full"
         />
       </div>
-      <p className="font-['Cormorant_Garamond'] text-[15px] font-medium text-[#4a4038] leading-snug mt-3 px-1">
+      <p className="font-['Cormorant_Garamond'] text-base font-medium text-[#4a4038] leading-snug mt-3 px-1">
         {guru.name}
       </p>
     </div>
@@ -108,7 +108,7 @@ export default function Lineage() {
             <p className="text-sm uppercase tracking-[0.35em] text-[#b8892a] font-semibold mb-2">The Disciplic Succession</p>
             <h2 className="font-['Cormorant_Garamond'] text-3xl font-light text-[#3d3830]">Guru Paramparā</h2>
             <div className="h-px w-12 bg-[#b8892a]/30 mx-auto mt-4" />
-            <p className="text-[11px] text-[#a89880] italic mt-3">Read left → right, top to bottom</p>
+            <p className="text-sm text-[#a89880] italic mt-3">Read left → right, top to bottom</p>
           </div>
 
           {/* Rows */}
@@ -170,8 +170,8 @@ export default function Lineage() {
                 <p className="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#3d3830] leading-snug max-w-sm mx-auto">
                   {lastGuru.name}
                 </p>
-                <p className="text-[11px] text-[#b8892a] font-semibold uppercase tracking-[0.22em] mt-2">{lastGuru.sub}</p>
-                <p className="text-xs text-[#a89880] mt-1 italic">Present Āchārya</p>
+                <p className="text-sm text-[#b8892a] font-semibold uppercase tracking-[0.22em] mt-2">{lastGuru.sub}</p>
+                <p className="text-sm text-[#a89880] mt-1 italic">Present Āchārya</p>
               </div>
             </div>
           </div>
