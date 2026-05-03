@@ -102,16 +102,16 @@ function OutlineItem({ item, index }: { item: typeof OUTLINE[0]; index: number }
         onClick={() => setOpen(!open)}
         className="w-full flex items-center gap-4 py-4 text-left hover:bg-[#fdf6ec]/50 px-1 transition-colors duration-150 rounded"
       >
-        <span className="text-xs text-[#b8892a] font-medium w-5 shrink-0 tabular-nums">{String(index + 1).padStart(2, "0")}</span>
-        <span className="flex-1 font-['Cormorant_Garamond'] text-lg font-light text-[#3d3830]">{item.title}</span>
-        <span className="text-xs text-[#9a8f84] mr-3 shrink-0">{item.lectures} lectures</span>
+        <span className="text-sm text-[#b8892a] font-medium w-5 shrink-0 tabular-nums">{String(index + 1).padStart(2, "0")}</span>
+        <span className="flex-1 font-['Cormorant_Garamond'] text-xl font-light text-[#3d3830]">{item.title}</span>
+        <span className="text-sm text-[#9a8f84] mr-3 shrink-0">{item.lectures} lectures</span>
         <ChevronDown
           className={`w-4 h-4 text-[#b8892a] shrink-0 transition-transform duration-200 ${open ? "rotate-180" : ""}`}
           strokeWidth={1.5}
         />
       </button>
       {open && (
-        <p className="text-sm text-[#7a7068] leading-relaxed pb-4 pl-9 pr-4">{item.desc}</p>
+        <p className="text-base text-[#7a7068] leading-relaxed pb-4 pl-9 pr-4">{item.desc}</p>
       )}
     </div>
   );
