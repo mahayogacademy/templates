@@ -230,8 +230,17 @@ export default function Volunteer() {
       </section>
 
       {/* ── APPLY FORM ── */}
-      <section className="py-20 px-6 bg-[#1a0c03]">
-        <div className="max-w-2xl mx-auto">
+      <section className="relative py-20 px-6 overflow-hidden">
+        {/* Background photo */}
+        <img
+          src={`${import.meta.env.BASE_URL}images/volunteer-hero.png`}
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 w-full h-full object-cover object-center"
+        />
+        {/* Warm dark overlay */}
+        <div className="absolute inset-0 bg-[#1a0c03]/80" />
+        <div className="relative z-10 max-w-2xl mx-auto">
           <div className="text-center mb-12">
             <p className="text-[#e8c56a] text-xs uppercase tracking-[0.3em] font-medium mb-3">Get Involved</p>
             <h2 className="font-['Cormorant_Garamond'] text-4xl text-white font-light">Express Your Interest</h2>
