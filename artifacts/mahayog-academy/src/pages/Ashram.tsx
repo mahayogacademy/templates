@@ -392,11 +392,11 @@ export default function Ashram() {
 
           {/* ── BOTTOM CAROUSEL, three tiles ── */}
           <div className="relative">
-            <div className="grid grid-cols-3 gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
               {[0, 1, 2].map((offset) => {
                 const img = GALLERY_BOT[(botIdx + offset) % nb];
                 return (
-                  <div key={offset} className="relative overflow-hidden rounded-2xl" style={{ height: "240px" }}>
+                  <div key={offset} className={`${offset > 0 ? "hidden sm:block " : ""}relative overflow-hidden rounded-2xl`} style={{ height: "240px" }}>
                     <img
                       src={`${b}images/${img.src}`}
                       alt={img.alt}
