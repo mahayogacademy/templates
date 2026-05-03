@@ -168,7 +168,7 @@ export default function CustomTalks() {
               </div>
             ))}
           </div>
-          <p className="text-center text-[#9a8070] text-xs mt-8 italic">
+          <p className="text-center text-[#9a8070] text-base mt-8 italic">
             Don't see your topic? Reach out — we are happy to develop bespoke content.
           </p>
         </div>
