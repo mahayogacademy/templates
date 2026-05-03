@@ -39,7 +39,7 @@ const UPCOMING: AnyEvent[] = [
     kind: "special" as EventKind,
     kindLabel: "Special Event",
     recurring: true,
-    title: "Guru Purnima Darshan Mahotsav",
+    title: "Guru Purnima Mahotsav",
     subtitle: "The Most Sacred Day of the Guru–Disciple Relationship",
     date: "29 July 2026",
     dateObj: new Date(2026, 6, 29),
