@@ -379,6 +379,12 @@ export default function Nav() {
                 )}
               </div>
 
+              {/* Language switcher — directly below action buttons */}
+              <div className="flex items-center gap-2 pt-1 pb-1 border-t border-[#e8dece]">
+                <Globe className="w-3.5 h-3.5 text-[#b8892a] shrink-0" strokeWidth={1.5} />
+                <LanguageSwitcher variant="mobile" />
+              </div>
+
               <MobileSection title={t("nav.explore")} items={EXPLORE} onNavigate={closeMobile} />
               <MobileSection title={t("nav.programs")} items={COURSES} onNavigate={closeMobile} />
               <MobileSection title={t("nav.experience")} items={EXPERIENCE} onNavigate={closeMobile} />
@@ -397,14 +403,6 @@ export default function Nav() {
                     </Link>
                   </li>
                 </ul>
-              </div>
-
-              <div className="pt-2 border-t border-[#e8dece]">
-                <p className="text-xs uppercase tracking-[0.25em] text-[#b8892a] font-semibold mb-3 flex items-center gap-1.5">
-                  <Globe className="w-3.5 h-3.5" strokeWidth={1.5} />
-                  {t("nav.language")}
-                </p>
-                <LanguageSwitcher variant="mobile" />
               </div>
 
               {/* Account (signed-in only) */}
