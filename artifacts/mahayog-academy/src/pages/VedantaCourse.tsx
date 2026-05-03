@@ -196,8 +196,8 @@ export default function VedantaCourse() {
                 { label: "Duration",      value: "300 hours · 267 lectures" },
               ].map((m) => (
                 <div key={m.label} className="flex gap-4">
-                  <span className="text-xs uppercase tracking-[0.2em] text-[#b8892a] font-medium w-28 shrink-0 pt-0.5">{m.label}</span>
-                  <span className="text-sm text-[#5a5248]">{m.value}</span>
+                  <span className="text-sm uppercase tracking-[0.2em] text-[#b8892a] font-medium w-32 shrink-0 pt-0.5">{m.label}</span>
+                  <span className="text-base text-[#5a5248]">{m.value}</span>
                 </div>
               ))}
             </div>
