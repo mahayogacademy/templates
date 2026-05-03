@@ -10,6 +10,12 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Devanagari script (Hindi / Nepali) — disable all letter-spacing globally */
+:lang(hi),
+:lang(ne) {
+  letter-spacing: 0 !important;
+}
+
 @theme inline {
   --color-background: hsl(var(--background));
   --color-foreground: hsl(var(--foreground));
