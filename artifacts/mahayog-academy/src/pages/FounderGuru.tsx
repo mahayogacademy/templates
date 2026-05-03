@@ -592,7 +592,7 @@ export default function FounderGuru() {
 
               const Card = ({ item, wide = false, overlay = false }: { item: Initiative; wide?: boolean; overlay?: boolean }) => {
                 const overlayInner = (
-                  <div className="relative h-56 overflow-hidden">
+                  <div className="relative h-56 overflow-hidden rounded-xl">
                     <img
                       src={`${b}images/${item.img}`}
                       alt=""
@@ -600,12 +600,12 @@ export default function FounderGuru() {
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                       style={{ objectPosition: item.pos ?? "center center" }}
                     />
-                    <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/20 to-transparent" />
-                    <div className="absolute top-0 left-0 right-0 p-5">
-                      <p className="text-xs uppercase tracking-[0.2em] text-[#e8c56a] font-semibold mb-1">{item.note}</p>
-                      <p className="text-base font-semibold text-white leading-snug">{item.label}</p>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+                    <div className="absolute bottom-0 left-0 right-0 p-5">
+                      <p className="font-['Cormorant_Garamond'] text-2xl font-semibold text-white leading-snug mb-1">{item.label}</p>
+                      <p className="text-xs uppercase tracking-[0.25em] text-[#e8c56a] font-semibold">{item.note}</p>
                       {item.href && (
-                        <span className="mt-2 inline-flex items-center gap-1.5 text-sm text-[#e8c56a] font-medium">
+                        <span className="mt-2 inline-flex items-center gap-1.5 text-sm text-white/80 font-medium">
                           Learn more <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" strokeWidth={1.5} />
                         </span>
                       )}
