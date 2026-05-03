@@ -126,7 +126,7 @@ export default function Home() {
             <div className="h-px w-14 bg-[#e8c56a]/80" />
           </div>
 
-          <h1 className="font-['Cormorant_Garamond'] text-4xl md:text-5xl lg:text-6xl font-light text-white leading-[1.05] mb-5 tracking-wide">
+          <h1 className="font-['Cormorant_Garamond'] text-5xl md:text-7xl lg:text-8xl font-light text-white leading-[1.05] mb-5 tracking-wide">
             Mahayogi Siddhababa<br/>
             <span className="text-[#e8c56a]">Spiritual Academy</span>
           </h1>
