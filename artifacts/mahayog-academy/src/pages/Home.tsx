@@ -461,7 +461,7 @@ export default function Home() {
             <Link href="/projects">
               <div className="group bg-white rounded-2xl border border-[#e8dece] hover:shadow-xl hover:shadow-[#b8892a]/10 hover:-translate-y-0.5 transition-all duration-300 overflow-hidden flex flex-col h-full cursor-pointer">
                 <div className="relative h-52 overflow-hidden">
-                  <img src={`${b}images/hanuman-temple-portrait.png`} alt="108 Hanuman Temples" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" style={{ objectPosition: "50% 100%" }} />
+                  <img src={`${b}images/hanuman-temple-portrait.png`} alt="108 Hanuman Temples" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" style={{ objectPosition: "50% 60%" }} />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#1a0f05]/60 to-transparent" />
                   <span className="absolute top-4 left-4 text-sm uppercase tracking-[0.25em] text-[#e8c56a] font-semibold bg-[#1a0f05]/50 px-3 py-1 rounded-full">National Mission</span>
                 </div>
