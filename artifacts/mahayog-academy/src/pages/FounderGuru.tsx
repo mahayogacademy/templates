@@ -716,6 +716,7 @@ export default function FounderGuru() {
                   name: "Ramchandi Mahāyajña",
                   desc: "Invoking Maa Chandi and Lord Ram for protection, inner transformation, and the welfare of all.",
                   href: null,
+                  img: "ramchandi-mahayajna.jpg",
                 },
                 {
                   year: "2017–Present",
