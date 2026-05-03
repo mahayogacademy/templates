@@ -87,11 +87,11 @@ export default function Contact() {
           {/* LEFT, Info */}
           <div className="md:col-span-2 space-y-8">
             <div>
-              <span className="uppercase tracking-[0.25em] text-xs text-[#b8892a] font-medium">Reach Out</span>
+              <span className="uppercase tracking-[0.25em] text-sm text-[#b8892a] font-medium">Reach Out</span>
               <h2 className="font-['Cormorant_Garamond'] text-3xl font-light text-[#3d3830] mt-2 mb-4 leading-snug">
                 How Can We Help?
               </h2>
-              <p className="text-sm leading-relaxed text-[#5a5248]">
+              <p className="text-base leading-relaxed text-[#5a5248]">
                 Whether you are planning a visit, exploring our programmes, or simply seeking guidance on the spiritual path, we would be glad to hear from you. Our team, a dedicated group of volunteers, will respond as soon as they can.
               </p>
             </div>
@@ -104,8 +104,8 @@ export default function Contact() {
                   <MapPin className="w-4 h-4 text-[#b8892a]" strokeWidth={1.5} />
                 </div>
                 <div>
-                  <p className="text-xs uppercase tracking-widest text-[#b8892a] font-medium mb-1">Address</p>
-                  <p className="text-sm text-[#5a5248] leading-relaxed">
+                  <p className="text-sm uppercase tracking-widest text-[#b8892a] font-medium mb-1">Address</p>
+                  <p className="text-base text-[#5a5248] leading-relaxed">
                     Shree Ram Tarak Brahma Peeth<br />
                     Chataradham, Barahachetra<br />
                     Sunsari, Nepal
@@ -118,8 +118,8 @@ export default function Contact() {
                   <Mail className="w-4 h-4 text-[#b8892a]" strokeWidth={1.5} />
                 </div>
                 <div>
-                  <p className="text-xs uppercase tracking-widest text-[#b8892a] font-medium mb-1">Email</p>
-                  <a href="mailto:info@siddhamahayog.org" className="text-sm text-[#5a5248] hover:text-[#b8892a] transition-colors">
+                  <p className="text-sm uppercase tracking-widest text-[#b8892a] font-medium mb-1">Email</p>
+                  <a href="mailto:info@siddhamahayog.org" className="text-base text-[#5a5248] hover:text-[#b8892a] transition-colors">
                     info@siddhamahayog.org
                   </a>
                 </div>
@@ -130,10 +130,10 @@ export default function Contact() {
                   <Phone className="w-4 h-4 text-[#b8892a]" strokeWidth={1.5} />
                 </div>
                 <div>
-                  <p className="text-xs uppercase tracking-widest text-[#b8892a] font-medium mb-1">Phone</p>
+                  <p className="text-sm uppercase tracking-widests text-[#b8892a] font-medium mb-1">Phone</p>
                   <div className="space-y-1">
-                    <a href="tel:+9779851126710" className="block text-sm text-[#5a5248] hover:text-[#b8892a] transition-colors">+977 985-1126710</a>
-                    <a href="tel:+9779767393900" className="block text-sm text-[#5a5248] hover:text-[#b8892a] transition-colors">+977 976-7393900</a>
+                    <a href="tel:+9779851126710" className="block text-base text-[#5a5248] hover:text-[#b8892a] transition-colors">+977 985-1126710</a>
+                    <a href="tel:+9779767393900" className="block text-base text-[#5a5248] hover:text-[#b8892a] transition-colors">+977 976-7393900</a>
                   </div>
                 </div>
               </div>
@@ -143,8 +143,8 @@ export default function Contact() {
                   <Clock className="w-4 h-4 text-[#b8892a]" strokeWidth={1.5} />
                 </div>
                 <div>
-                  <p className="text-xs uppercase tracking-widest text-[#b8892a] font-medium mb-1">Response Time</p>
-                  <p className="text-sm text-[#5a5248]">
+                  <p className="text-sm uppercase tracking-widest text-[#b8892a] font-medium mb-1">Response Time</p>
+                  <p className="text-base text-[#5a5248]">
                     We aim to respond within 3–5 working days. As a volunteer-run organization, we appreciate your patience.
                   </p>
                 </div>
@@ -163,12 +163,12 @@ export default function Contact() {
                 <h3 className="font-['Cormorant_Garamond'] text-3xl font-light text-[#3d3830] mb-3">
                   Thank You, {form.name.split(" ")[0]}
                 </h3>
-                <p className="text-sm text-[#5a5248] leading-relaxed max-w-sm">
+                <p className="text-base text-[#5a5248] leading-relaxed max-w-sm">
                   Your message has been received. A member of our team will be in touch with you soon. We appreciate your interest in the Academy.
                 </p>
                 <button
                   onClick={() => { setSubmitted(false); setForm({ name: "", email: "", purpose: "", message: "" }); }}
-                  className="mt-8 text-sm text-[#b8892a] hover:text-[#9d7422] transition-colors underline underline-offset-4"
+                  className="mt-8 text-base text-[#b8892a] hover:text-[#9d7422] transition-colors underline underline-offset-4"
                 >
                   Send another message
                 </button>
@@ -182,7 +182,7 @@ export default function Contact() {
                 <div className="grid sm:grid-cols-2 gap-6">
                   {/* Name */}
                   <div>
-                    <label className="block text-xs uppercase tracking-widest text-[#7a7068] font-medium mb-2">
+                    <label className="block text-sm uppercase tracking-widest text-[#7a7068] font-medium mb-2">
                       Full Name <span className="text-[#b8892a]">*</span>
                     </label>
                     <input
@@ -190,14 +190,14 @@ export default function Contact() {
                       value={form.name}
                       onChange={(e) => handleChange("name", e.target.value)}
                       placeholder="Your name"
-                      className={`w-full px-4 py-3 text-sm rounded-xl border bg-[#faf9f6] text-[#3d3830] placeholder-[#b8ad9e] outline-none transition-colors duration-200 focus:border-[#b8892a] focus:bg-white ${errors.name ? "border-red-300" : "border-[#e8dece]"}`}
+                      className={`w-full px-4 py-3 text-base rounded-xl border bg-[#faf9f6] text-[#3d3830] placeholder-[#b8ad9e] outline-none transition-colors duration-200 focus:border-[#b8892a] focus:bg-white ${errors.name ? "border-red-300" : "border-[#e8dece]"}`}
                     />
-                    {errors.name && <p className="mt-1.5 text-xs text-red-500">{errors.name}</p>}
+                    {errors.name && <p className="mt-1.5 text-sm text-red-500">{errors.name}</p>}
                   </div>
 
                   {/* Email */}
                   <div>
-                    <label className="block text-xs uppercase tracking-widest text-[#7a7068] font-medium mb-2">
+                    <label className="block text-sm uppercase tracking-widest text-[#7a7068] font-medium mb-2">
                       Email Address <span className="text-[#b8892a]">*</span>
                     </label>
                     <input
@@ -205,21 +205,21 @@ export default function Contact() {
                       value={form.email}
                       onChange={(e) => handleChange("email", e.target.value)}
                       placeholder="you@email.com"
-                      className={`w-full px-4 py-3 text-sm rounded-xl border bg-[#faf9f6] text-[#3d3830] placeholder-[#b8ad9e] outline-none transition-colors duration-200 focus:border-[#b8892a] focus:bg-white ${errors.email ? "border-red-300" : "border-[#e8dece]"}`}
+                      className={`w-full px-4 py-3 text-base rounded-xl border bg-[#faf9f6] text-[#3d3830] placeholder-[#b8ad9e] outline-none transition-colors duration-200 focus:border-[#b8892a] focus:bg-white ${errors.email ? "border-red-300" : "border-[#e8dece]"}`}
                     />
-                    {errors.email && <p className="mt-1.5 text-xs text-red-500">{errors.email}</p>}
+                    {errors.email && <p className="mt-1.5 text-sm text-red-500">{errors.email}</p>}
                   </div>
                 </div>
 
                 {/* Purpose */}
                 <div>
-                  <label className="block text-xs uppercase tracking-widest text-[#7a7068] font-medium mb-2">
+                  <label className="block text-sm uppercase tracking-widest text-[#7a7068] font-medium mb-2">
                     Purpose of Enquiry <span className="text-[#b8892a]">*</span>
                   </label>
                   <select
                     value={form.purpose}
                     onChange={(e) => handleChange("purpose", e.target.value)}
-                    className={`w-full px-4 py-3 text-sm rounded-xl border bg-[#faf9f6] text-[#3d3830] outline-none transition-colors duration-200 focus:border-[#b8892a] focus:bg-white appearance-none cursor-pointer ${!form.purpose ? "text-[#b8ad9e]" : ""} ${errors.purpose ? "border-red-300" : "border-[#e8dece]"}`}
+                    className={`w-full px-4 py-3 text-base rounded-xl border bg-[#faf9f6] text-[#3d3830] outline-none transition-colors duration-200 focus:border-[#b8892a] focus:bg-white appearance-none cursor-pointer ${!form.purpose ? "text-[#b8ad9e]" : ""} ${errors.purpose ? "border-red-300" : "border-[#e8dece]"}`}
                     style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23b8892a' stroke-width='2'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E")`, backgroundRepeat: "no-repeat", backgroundPosition: "right 16px center" }}
                   >
                     <option value="" disabled>Select a purpose…</option>
@@ -227,12 +227,12 @@ export default function Contact() {
                       <option key={p} value={p}>{p}</option>
                     ))}
                   </select>
-                  {errors.purpose && <p className="mt-1.5 text-xs text-red-500">{errors.purpose}</p>}
+                  {errors.purpose && <p className="mt-1.5 text-sm text-red-500">{errors.purpose}</p>}
                 </div>
 
                 {/* Message */}
                 <div>
-                  <label className="block text-xs uppercase tracking-widest text-[#7a7068] font-medium mb-2">
+                  <label className="block text-sm uppercase tracking-widest text-[#7a7068] font-medium mb-2">
                     Your Message <span className="text-[#b8892a]">*</span>
                   </label>
                   <textarea
@@ -240,18 +240,18 @@ export default function Contact() {
                     onChange={(e) => handleChange("message", e.target.value)}
                     rows={6}
                     placeholder="Share what brings you here, we would love to hear from you…"
-                    className={`w-full px-4 py-3 text-sm rounded-xl border bg-[#faf9f6] text-[#3d3830] placeholder-[#b8ad9e] outline-none transition-colors duration-200 focus:border-[#b8892a] focus:bg-white resize-none ${errors.message ? "border-red-300" : "border-[#e8dece]"}`}
+                    className={`w-full px-4 py-3 text-base rounded-xl border bg-[#faf9f6] text-[#3d3830] placeholder-[#b8ad9e] outline-none transition-colors duration-200 focus:border-[#b8892a] focus:bg-white resize-none ${errors.message ? "border-red-300" : "border-[#e8dece]"}`}
                   />
-                  {errors.message && <p className="mt-1.5 text-xs text-red-500">{errors.message}</p>}
+                  {errors.message && <p className="mt-1.5 text-sm text-red-500">{errors.message}</p>}
                 </div>
 
                 <div className="flex items-center justify-between gap-4 pt-2">
-                  <p className="text-xs text-[#9a8f84] leading-relaxed max-w-xs">
+                  <p className="text-sm text-[#9a8f84] leading-relaxed max-w-xs">
                     All fields marked <span className="text-[#b8892a]">*</span> are required. Your details are kept private.
                   </p>
                   <button
                     type="submit"
-                    className="shrink-0 inline-flex items-center gap-2 bg-[#b8892a] hover:bg-[#9d7422] text-white text-sm px-7 py-3 rounded-full tracking-wider transition-colors duration-200"
+                    className="shrink-0 inline-flex items-center gap-2 bg-[#b8892a] hover:bg-[#9d7422] text-white text-base px-7 py-3 rounded-full tracking-wider transition-colors duration-200"
                   >
                     Send Message
                     <ArrowRight className="w-4 h-4" strokeWidth={1.5} />
