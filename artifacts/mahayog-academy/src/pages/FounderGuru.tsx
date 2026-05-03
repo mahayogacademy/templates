@@ -817,7 +817,7 @@ export default function FounderGuru() {
             </div>
 
             {/* Head ashram callout */}
-            <div className="bg-[#faf9f6] border border-[#e8dece] rounded-2xl p-8 flex flex-col md:flex-row md:items-center justify-between gap-6">
+            <div className="bg-[#f5ede0] border border-[#d4a853]/40 rounded-2xl p-8 flex flex-col md:flex-row md:items-center justify-between gap-6">
               <div>
                 <p className="text-sm uppercase tracking-[0.25em] text-[#b8892a] font-semibold mb-2">Head Ashram</p>
                 <p className="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#3d3830] mb-1">
