@@ -2,7 +2,7 @@ import { useState } from "react";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import { Link, useLocation } from "wouter";
-import { ArrowRight, ChevronLeft, ChevronRight, ChevronDown, Flame, Heart, Shield, Sparkles, Users } from "lucide-react";
+import { ArrowRight, ChevronLeft, ChevronRight, ChevronDown, Flame, Heart, Shield, Sparkles, Users, Play } from "lucide-react";
 
 const b = import.meta.env.BASE_URL;
 
@@ -834,23 +834,71 @@ export default function FounderGuru() {
 
             <div className="h-px bg-[#e8dece] mb-8" />
 
-            <div className="flex flex-col md:flex-row md:items-center justify-between gap-8 bg-white border border-[#e8dece] rounded-2xl p-8">
-              <div className="max-w-xl">
-                <p className="text-base text-[#5a5248] leading-relaxed mb-4">
-                  Conversations with His Holiness on spiritual practice, Vedic wisdom, and the path to inner realization — drawn from television appearances, public dialogues, and satsang recordings.
-                </p>
-                <p className="text-base text-[#5a5248] leading-relaxed">
-                  Topics include Mahayog Meditation, Shaktipat, the nature of samādhi, Vedāntic philosophy, and living the Vedic path in modern life.
-                </p>
-              </div>
-              <div className="shrink-0">
-                <Link href="/teachings" onClick={() => window.scrollTo(0, 0)}>
-                  <span className="inline-flex items-center gap-2 px-7 py-3 bg-[#b8892a] text-white text-sm rounded-full hover:bg-[#9d7422] transition-colors cursor-pointer whitespace-nowrap">
-                    Explore Teachings <ArrowRight className="w-4 h-4" strokeWidth={1.5} />
-                  </span>
-                </Link>
-              </div>
+            <p className="text-base text-[#5a5248] leading-relaxed max-w-2xl mb-10">
+              Conversations with His Holiness on spiritual practice, Vedic wisdom, and the path to inner realization — drawn from television appearances, public dialogues, and satsang recordings.
+            </p>
+
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-10">
+              {[
+                {
+                  title: "Reviving Nepal's Ancient Wisdom: Yoga, Āyurveda & Nāḍī Science",
+                  excerpt: "A rich Malaku TV conversation on Nepal's ancient knowledge systems — the science of yoga, the healing arts of Āyurveda, and the profound diagnostic tradition of Nāḍī Science.",
+                  source: "Malaku TV",
+                  duration: "49 min",
+                  thumbnail: "https://i.ytimg.com/vi/-L3KEFytQ9I/hqdefault.jpg",
+                  href: "https://www.youtube.com/watch?v=-L3KEFytQ9I",
+                },
+                {
+                  title: "A Great Yogi's Journey",
+                  excerpt: "Journalist Narayan Poudel speaks with Jagadguru Mahayogi Siddhababa on Himalaya TV about his extraordinary life — his early calling, years of Himalayan tapasyā, and the mission that unfolded from it.",
+                  source: "Himalaya TV",
+                  duration: "44 min",
+                  thumbnail: "https://i.ytimg.com/vi/DxnTrk8PuB8/hqdefault.jpg",
+                  href: "https://www.youtube.com/watch?v=DxnTrk8PuB8",
+                },
+                {
+                  title: "The Future of Nepal, Sanātana Dharma & Global Spirituality",
+                  excerpt: "A wide-ranging Prime TV conversation on Nepal's spiritual heritage, the global future of Sanātana Dharma, and the role of yoga and meditation in transforming the world.",
+                  source: "Prime TV",
+                  duration: "47 min",
+                  thumbnail: "https://i.ytimg.com/vi/rtuBBVxlXF4/hqdefault.jpg",
+                  href: "https://www.youtube.com/watch?v=rtuBBVxlXF4",
+                },
+              ].map((item, i) => (
+                <a
+                  key={i}
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex flex-col bg-white rounded-2xl border border-[#e8dece] shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 overflow-hidden cursor-pointer"
+                >
+                  <div className="relative aspect-[16/9] overflow-hidden">
+                    <img src={item.thumbnail} alt={item.title} className="w-full h-full object-cover" />
+                    <div className="absolute inset-0 bg-black/10" />
+                    <span className="absolute top-3 left-3 text-xs font-semibold uppercase tracking-[0.18em] px-2.5 py-1 rounded-full bg-[#5a4a8a]/90 text-white">
+                      Interview
+                    </span>
+                    <span className="absolute bottom-2 right-2 bg-black/70 text-white text-xs px-2 py-0.5 rounded-full font-medium">
+                      {item.duration}
+                    </span>
+                  </div>
+                  <div className="flex flex-col flex-1 p-5">
+                    <p className="text-xs uppercase tracking-[0.2em] text-[#9a8070] font-medium mb-2">{item.source} · {item.duration}</p>
+                    <h3 className="font-['Cormorant_Garamond'] text-xl text-[#2c1a08] font-medium leading-snug mb-2 line-clamp-2 flex-1">{item.title}</h3>
+                    <p className="text-sm text-[#6a5c48] leading-relaxed line-clamp-2 mb-4">{item.excerpt}</p>
+                    <span className="inline-flex items-center gap-1.5 text-sm font-medium text-[#5a4a8a]">
+                      Watch <ChevronRight className="w-3.5 h-3.5" strokeWidth={2} />
+                    </span>
+                  </div>
+                </a>
+              ))}
             </div>
+
+            <Link href="/teachings" onClick={() => window.scrollTo(0, 0)}>
+              <span className="inline-flex items-center gap-2 text-sm text-[#b8892a] border border-[#b8892a]/40 rounded-full px-6 py-2.5 hover:bg-[#b8892a] hover:text-white transition-colors cursor-pointer font-medium">
+                View all interviews <ArrowRight className="w-4 h-4" strokeWidth={1.5} />
+              </span>
+            </Link>
 
           </div>
         </div>
