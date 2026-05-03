@@ -144,7 +144,7 @@ const MEDITATION_STEPS = [
 
 const ic = "w-full bg-white/70 border border-[#c8a050]/40 text-[#3d3830] placeholder-[#b0956a] rounded-xl px-4 py-3 text-base focus:outline-none focus:border-[#b8892a] transition-colors";
 const sc = `${ic} appearance-none`;
-const lc = "block font-['Cormorant_Garamond'] text-lg font-semibold text-[#7a4a08] mb-2 leading-snug";
+const lc = "block text-base font-semibold text-[#7a4a08] mb-2 leading-snug";
 const plc = "block text-sm uppercase tracking-[0.2em] text-[#7a4a08] mb-1.5 font-medium";
 const hc = "font-['Cormorant_Garamond'] text-2xl font-light text-[#3d2008] mb-2";
 const hint = "text-sm text-[#7a5a30]";
@@ -356,7 +356,7 @@ export default function EnrolmentForm({ program }: { program: Program }) {
           {slot === "m-health" && <>
             <p className={hc}>Voluntary Health Information</p>
             <div>
-              <label className="block font-['Cormorant_Garamond'] text-lg font-semibold text-[#7a4a08] mb-2 leading-snug">Do you have any injuries or limitations that may affect sitting, movement, or breathwork? *</label>
+              <label className="block text-base font-semibold text-[#7a4a08] mb-2 leading-snug">Do you have any injuries or limitations that may affect sitting, movement, or breathwork? *</label>
               <div className="flex gap-6 mt-2">
                 {["Yes", "No"].map(v => (
                   <label key={v} className="flex items-center gap-2 cursor-pointer">
@@ -373,7 +373,7 @@ export default function EnrolmentForm({ program }: { program: Program }) {
               </div>
             )}
             <div>
-              <label className="block font-['Cormorant_Garamond'] text-lg font-semibold text-[#7a4a08] mb-2 leading-snug">Is there anything about your physical or mental well-being the instructor should be aware of?</label>
+              <label className="block text-base font-semibold text-[#7a4a08] mb-2 leading-snug">Is there anything about your physical or mental well-being the instructor should be aware of?</label>
               <textarea rows={3} className={`${ic} resize-none`} placeholder="This helps the instructor better support your practice…" value={form.instructorAwareness} onChange={e => set("instructorAwareness", e.target.value)} />
             </div>
             <div className="bg-[#f5ece0]/70 border border-[#c8a050]/20 rounded-xl p-4 space-y-2.5">
