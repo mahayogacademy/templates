@@ -210,17 +210,22 @@ export default function FounderGuru() {
             {[
               { label: "Life",             anchor: "#life"         },
               { label: "Teachings",        anchor: "#teachings"    },
-              { label: "Key Initiatives",  anchor: "#initiatives"  },
+              { label: "Key Initiatives",  shortLabel: "Initiatives", anchor: "#initiatives"  },
               { label: "Yajñas",           anchor: "#yajnas"       },
               { label: "Ashrams",          anchor: "#ashrams"      },
-            ].map(({ label, anchor }) => (
+            ].map(({ label, shortLabel, anchor }) => (
               <a
                 key={anchor}
                 href={anchor}
                 onClick={e => { e.preventDefault(); document.querySelector(anchor)?.scrollIntoView({ behavior: "smooth" }); }}
                 className="flex-1 text-center py-2.5 text-[#5c4e38] hover:text-white hover:bg-[#3d3020] transition-colors duration-150 cursor-pointer"
               >
-                {label}
+                {shortLabel ? (
+                  <>
+                    <span className="lg:hidden">{shortLabel}</span>
+                    <span className="hidden lg:inline">{label}</span>
+                  </>
+                ) : label}
               </a>
             ))}
           </nav>
