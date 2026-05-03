@@ -328,7 +328,7 @@ export default function FounderGuru() {
 
               {/* Row 2, Bhu Samadhi (carousel + text) */}
               <div className="grid md:grid-cols-[1fr_340px] gap-10 items-center">
-                <div>
+                <div className="order-2 md:order-1">
                   <p className="text-sm uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-3">Bhu Samadhi</p>
                   <h3 className="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#3d3830] mb-4 leading-snug">
                     Underground Burial in Meditation
@@ -351,7 +351,7 @@ export default function FounderGuru() {
                 </div>
 
                 {/* Static image */}
-                <div className="rounded-2xl overflow-hidden shadow-sm shadow-[#b8892a]/10" style={{ height: "400px" }}>
+                <div className="order-1 md:order-2 rounded-2xl overflow-hidden shadow-sm shadow-[#b8892a]/10" style={{ height: "400px" }}>
                   <img
                     src={`${b}images/${SAMADHI_SLIDES[0].src}`}
                     alt={SAMADHI_SLIDES[0].alt}
