@@ -717,13 +717,13 @@ export default function FounderGuru() {
                 },
               ].map((yajna, i) => (
                 <div key={i} className="flex gap-6 items-start p-6 bg-white border border-[#e8dece] rounded-2xl">
-                  <div className="shrink-0 w-24 text-right">
-                    <span className="text-xs uppercase tracking-[0.2em] text-[#b8892a] font-semibold leading-none">{yajna.year}</span>
+                  <div className="shrink-0 w-28 text-right">
+                    <span className="text-sm uppercase tracking-[0.2em] text-[#b8892a] font-semibold leading-none">{yajna.year}</span>
                   </div>
                   <div className="w-px bg-[#e8dece] self-stretch shrink-0" />
                   <div>
-                    <p className="font-['Cormorant_Garamond'] text-xl font-semibold text-[#3d3830] mb-1">{yajna.name}</p>
-                    <p className="text-sm text-[#7a7068] leading-relaxed">{yajna.desc}</p>
+                    <p className="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#3d3830] mb-1">{yajna.name}</p>
+                    <p className="text-base text-[#7a7068] leading-relaxed">{yajna.desc}</p>
                   </div>
                 </div>
               ))}
