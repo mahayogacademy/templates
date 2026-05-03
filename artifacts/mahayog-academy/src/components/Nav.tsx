@@ -238,13 +238,13 @@ export default function Nav() {
           </Show>
 
           <Link href="/register">
-            <span className="ml-1 px-5 py-2 text-sm border border-[#b8892a] text-[#b8892a] rounded-full hover:bg-[#9d7422] hover:border-[#9d7422] hover:text-white transition-colors duration-200 tracking-wide font-medium cursor-pointer">
+            <span className="ml-1 px-5 py-2 text-sm bg-[#b8892a] text-white rounded-full hover:bg-[#7a5518] transition-colors tracking-wide font-medium cursor-pointer">
               Join
             </span>
           </Link>
 
           <Link href="/donate">
-            <span className="ml-2 px-5 py-2 text-sm bg-[#b8892a] text-white rounded-full hover:bg-[#7a5518] transition-colors tracking-wide cursor-pointer">
+            <span className="ml-2 px-5 py-2 text-sm border border-[#b8892a] text-[#b8892a] rounded-full hover:bg-[#9d7422] hover:border-[#9d7422] hover:text-white transition-colors duration-200 tracking-wide cursor-pointer">
               Donate
             </span>
           </Link>
@@ -288,6 +288,16 @@ export default function Nav() {
             <div className="px-5 py-6 space-y-7">
               {/* Top CTAs */}
               <div className="flex gap-2">
+                <Link href="/register">
+                  <span onClick={closeMobile} className="flex-1 inline-block text-center px-3 py-2.5 text-sm bg-[#b8892a] text-white rounded-full tracking-wide cursor-pointer">
+                    Join
+                  </span>
+                </Link>
+                <Link href="/donate">
+                  <span onClick={closeMobile} className="flex-1 inline-block text-center px-3 py-2.5 text-sm border border-[#b8892a] text-[#b8892a] rounded-full font-medium tracking-wide cursor-pointer">
+                    Donate
+                  </span>
+                </Link>
                 {!isSignedIn && (
                   <Link href="/sign-in">
                     <span onClick={closeMobile} className="flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2.5 text-sm text-[#5a5248] border border-[#d4c4b0] rounded-full tracking-wide cursor-pointer">
@@ -296,16 +306,6 @@ export default function Nav() {
                     </span>
                   </Link>
                 )}
-                <Link href="/register">
-                  <span onClick={closeMobile} className="flex-1 inline-block text-center px-3 py-2.5 text-sm border border-[#b8892a] text-[#b8892a] rounded-full font-medium tracking-wide cursor-pointer">
-                    Join
-                  </span>
-                </Link>
-                <Link href="/donate">
-                  <span onClick={closeMobile} className="flex-1 inline-block text-center px-3 py-2.5 text-sm bg-[#b8892a] text-white rounded-full tracking-wide cursor-pointer">
-                    Donate
-                  </span>
-                </Link>
               </div>
 
               <MobileSection title="Explore" items={EXPLORE} onNavigate={closeMobile} />
