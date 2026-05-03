@@ -354,7 +354,7 @@ export default function VedantaCourse() {
 
       {/* ── FAQ ── */}
       <section className="py-20 px-6 bg-gradient-to-b from-[#e8dcc8] via-[#ede3cf] to-[#e2d4b8]">
-        <div className="max-w-2xl mx-auto">
+        <div className="max-w-3xl mx-auto">
           <div className="text-center mb-12">
             <div className="flex items-center justify-center gap-3 mb-4">
               <div className="h-px w-10 bg-[#b8892a]/40" />
