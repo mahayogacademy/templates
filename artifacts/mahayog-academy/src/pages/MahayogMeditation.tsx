@@ -267,7 +267,7 @@ const FAQ_GROUPS: { theme: string; items: { q: string; a: string }[] }[] = [
       },
       {
         q: "What happens once Kundalini is Awakened?",
-        a: "After awakening, the practitioner becomes the observer during meditation. Experiences depend on where the Kundalini focuses across the three body types:\n\n• Physical Body, Gross sensations such as automatic asanas, mudras, shaking, and mantra recitation.\n• Subtle Body, Inner visualizations, energy flow through the 72,000 nāḍīs (energy channels).\n• Causal Body, Deep internal transformation through the cleansing of Samskaras, felt as growing contentment and inner peace.\n\nEach individual's experience will be unique, as the Kundalini moves through the chakra system according to the practitioner's individual constitution.",
+        a: "After awakening, the practitioner becomes the observer during meditation. Experiences depend on where the Kundalini focuses across the three body types:\n\n• Physical Body: Gross sensations such as automatic asanas, mudras, shaking, and mantra recitation.\n• Subtle Body: Inner visualizations, energy flow through the 72,000 nāḍīs (energy channels).\n• Causal Body: Deep internal transformation through the cleansing of Samskaras, felt as growing contentment and inner peace.\n\nEach individual's experience will be unique, as the Kundalini moves through the chakra system according to the practitioner's individual constitution.",
       },
       {
         q: "What are the Stages of Kundalini Awakening?",
