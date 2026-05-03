@@ -220,12 +220,15 @@ export default function Register() {
       {/* ── FORM ── */}
       <section className="relative py-14 px-6 overflow-hidden">
         <img
-          src={`${b}images/hero-nepal-landscape.png`}
+          src={`${b}images/register-form-mountains.png`}
           alt=""
           aria-hidden="true"
           className="absolute inset-0 w-full h-full object-cover object-center"
         />
-        <div className="absolute inset-0 bg-[#faf9f6]/82" />
+        {/* Subtle light overlay */}
+        <div className="absolute inset-0 bg-[#faf9f6]/75" />
+        {/* White fade from top */}
+        <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-[#faf9f6] to-transparent" />
         <div className="relative z-10">
           <div className="max-w-2xl mx-auto text-center mb-8">
             <span className="uppercase tracking-[0.25em] text-xs text-[#b8892a] font-medium">

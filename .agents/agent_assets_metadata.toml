@@ -780,3 +780,9 @@ id = "I91Uvcn0OcTwBjv9cv06c"
 uri = "file://artifacts/mahayog-academy/public/images/meditation-center.png"
 type = "image"
 title = "woman upright meditation indoor"
+
+[[generated]]
+id = "ooackrs48tn-ReqZ3VRyU"
+uri = "file://artifacts/mahayog-academy/public/images/register-form-mountains.png"
+type = "image"
+title = "generated_image"

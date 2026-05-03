@@ -43,7 +43,7 @@ function CountryCombobox({ value, onChange, selectClass, inputClass }: {
             <li
               key={c}
               onMouseDown={() => select(c)}
-              className={`px-4 py-2 text-sm cursor-pointer hover:bg-[#b8892a]/10 text-[#3d2008] ${c === value ? "font-medium text-[#7a4a08]" : ""}`}
+              className={`px-4 py-2 text-base cursor-pointer hover:bg-[#b8892a]/10 text-[#3d2008] ${c === value ? "font-medium text-[#7a4a08]" : ""}`}
             >
               {c}
             </li>
@@ -142,12 +142,12 @@ const MEDITATION_STEPS = [
   { num: 7, label: "Login",       slot: "login" },
 ];
 
-const ic = "w-full bg-white/70 border border-[#c8a050]/40 text-[#3d3830] placeholder-[#b0956a] rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#b8892a] transition-colors";
+const ic = "w-full bg-white/70 border border-[#c8a050]/40 text-[#3d3830] placeholder-[#b0956a] rounded-xl px-4 py-3 text-base focus:outline-none focus:border-[#b8892a] transition-colors";
 const sc = `${ic} appearance-none`;
-const lc = "block font-['Cormorant_Garamond'] text-base font-semibold text-[#7a4a08] mb-2 leading-snug";
+const lc = "block font-['Cormorant_Garamond'] text-lg font-semibold text-[#7a4a08] mb-2 leading-snug";
 const plc = "block text-sm uppercase tracking-[0.2em] text-[#7a4a08] mb-1.5 font-medium";
-const hc = "font-['Cormorant_Garamond'] text-xl font-light text-[#3d2008] mb-2";
-const hint = "text-xs text-[#7a5a30]";
+const hc = "font-['Cormorant_Garamond'] text-2xl font-light text-[#3d2008] mb-2";
+const hint = "text-sm text-[#7a5a30]";
 
 export default function EnrolmentForm({ program }: { program: Program }) {
   const STEPS = program === "vedanta" ? VEDANTA_STEPS : MEDITATION_STEPS;
@@ -193,7 +193,7 @@ export default function EnrolmentForm({ program }: { program: Program }) {
           <div className="h-px w-10 bg-[#b8892a]" />
         </div>
         <p className="font-['Cormorant_Garamond'] text-2xl font-light text-[#3d3830]">Registration Submitted</p>
-        <p className="text-sm text-[#7a7068] mt-3">Your registration has been received. We will be in touch soon with your access details.</p>
+        <p className="text-base text-[#7a7068] mt-3">Your registration has been received. We will be in touch soon with your access details.</p>
       </div>
     );
   }
@@ -206,12 +206,12 @@ export default function EnrolmentForm({ program }: { program: Program }) {
         {STEPS.map((s, i) => (
           <div key={s.num} className="flex items-center flex-1 last:flex-none">
             <div className="flex flex-col items-center gap-1">
-              <div className={`w-8 h-8 rounded-full flex items-center justify-center text-xs font-semibold transition-colors duration-200 ${
+              <div className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-semibold transition-colors duration-200 ${
                 step > s.num ? "bg-[#2e1405] text-white" : step === s.num ? "bg-[#2e1405] text-white ring-2 ring-[#2e1405]/30" : "bg-white text-[#a09080] border border-[#ddd0b8]"
               }`}>
                 {step > s.num ? "✓" : s.num}
               </div>
-              <span className={`text-[9px] uppercase tracking-wider hidden sm:block ${step === s.num ? "text-[#2e1405]" : "text-[#5a3010]"}`}>{s.label}</span>
+              <span className={`text-xs uppercase tracking-wider hidden sm:block ${step === s.num ? "text-[#2e1405]" : "text-[#5a3010]"}`}>{s.label}</span>
             </div>
             {i < STEPS.length - 1 && (
               <div className={`flex-1 h-px mx-1 mb-4 transition-colors duration-200 ${step > s.num ? "bg-[#7a4a08]" : "bg-[#2e1405]/25"}`} />
@@ -268,7 +268,7 @@ export default function EnrolmentForm({ program }: { program: Program }) {
             <div>
               <div className="flex items-baseline gap-2">
                 <label className={plc}>Languages Spoken</label>
-                <span className="text-[11px] text-[#a07840] italic">Select all that apply</span>
+                <span className="text-sm text-[#a07840] italic">Select all that apply</span>
               </div>
               <div className="flex flex-wrap gap-2 mt-1">
                 {LANGUAGE_OPTIONS.map(l => (
@@ -276,14 +276,14 @@ export default function EnrolmentForm({ program }: { program: Program }) {
                     form.languages.includes(l) ? "border-[#b8892a] bg-[#b8892a]/10" : "border-[#c8a050]/40 bg-white/40 hover:border-[#b8892a]/50"
                   }`}>
                     <input type="checkbox" checked={form.languages.includes(l)} onChange={() => toggleLanguage(l)} className="accent-[#b8892a] w-4 h-4 shrink-0" />
-                    <span className="text-sm text-[#3d2008]">{l}</span>
+                    <span className="text-base text-[#3d2008]">{l}</span>
                   </label>
                 ))}
                 <label className={`flex items-center gap-2 cursor-pointer px-3 py-2 rounded-xl border transition-colors ${
                   form.languages.includes("Other") ? "border-[#b8892a] bg-[#b8892a]/10" : "border-[#c8a050]/40 bg-white/40 hover:border-[#b8892a]/50"
                 }`}>
                   <input type="checkbox" checked={form.languages.includes("Other")} onChange={() => toggleLanguage("Other")} className="accent-[#b8892a] w-4 h-4 shrink-0" />
-                  <span className="text-sm text-[#3d2008]">Other</span>
+                  <span className="text-base text-[#3d2008]">Other</span>
                 </label>
               </div>
               {form.languages.includes("Other") && (
@@ -322,7 +322,7 @@ export default function EnrolmentForm({ program }: { program: Program }) {
                 {["Yes", "No"].map(v => (
                   <label key={v} className="flex items-center gap-2 cursor-pointer">
                     <input type="radio" required name="meditatedBefore" value={v} checked={form.meditatedBefore === v} onChange={() => set("meditatedBefore", v)} className="accent-[#b8892a] w-4 h-4" />
-                    <span className="text-sm text-[#3d2008]">{v}</span>
+                    <span className="text-base text-[#3d2008]">{v}</span>
                   </label>
                 ))}
               </div>
@@ -341,7 +341,7 @@ export default function EnrolmentForm({ program }: { program: Program }) {
                     form.goals.includes(g) ? "border-[#b8892a] bg-[#b8892a]/10" : "border-[#c8a050]/40 bg-white/40 hover:border-[#b8892a]/50"
                   }`}>
                     <input type="checkbox" checked={form.goals.includes(g)} onChange={() => toggleGoal(g)} className="accent-[#b8892a] w-4 h-4 shrink-0" />
-                    <span className="text-sm text-[#3d2008]">{g}</span>
+                    <span className="text-base text-[#3d2008]">{g}</span>
                   </label>
                 ))}
               </div>
@@ -356,12 +356,12 @@ export default function EnrolmentForm({ program }: { program: Program }) {
           {slot === "m-health" && <>
             <p className={hc}>Voluntary Health Information</p>
             <div>
-              <label className="block font-['Cormorant_Garamond'] text-base font-semibold text-[#7a4a08] mb-2 leading-snug">Do you have any injuries or limitations that may affect sitting, movement, or breathwork? *</label>
+              <label className="block font-['Cormorant_Garamond'] text-lg font-semibold text-[#7a4a08] mb-2 leading-snug">Do you have any injuries or limitations that may affect sitting, movement, or breathwork? *</label>
               <div className="flex gap-6 mt-2">
                 {["Yes", "No"].map(v => (
                   <label key={v} className="flex items-center gap-2 cursor-pointer">
                     <input type="radio" required name="hasInjuries" value={v} checked={form.hasInjuries === v} onChange={() => set("hasInjuries", v)} className="accent-[#b8892a] w-4 h-4" />
-                    <span className="text-sm text-[#3d2008]">{v}</span>
+                    <span className="text-base text-[#3d2008]">{v}</span>
                   </label>
                 ))}
               </div>
@@ -373,14 +373,14 @@ export default function EnrolmentForm({ program }: { program: Program }) {
               </div>
             )}
             <div>
-              <label className="block font-['Cormorant_Garamond'] text-base font-semibold text-[#7a4a08] mb-2 leading-snug">Is there anything about your physical or mental well-being the instructor should be aware of?</label>
+              <label className="block font-['Cormorant_Garamond'] text-lg font-semibold text-[#7a4a08] mb-2 leading-snug">Is there anything about your physical or mental well-being the instructor should be aware of?</label>
               <textarea rows={3} className={`${ic} resize-none`} placeholder="This helps the instructor better support your practice…" value={form.instructorAwareness} onChange={e => set("instructorAwareness", e.target.value)} />
             </div>
             <div className="bg-[#f5ece0]/70 border border-[#c8a050]/20 rounded-xl p-4 space-y-2.5">
-              <p className="text-[11px] text-[#7a5a30] leading-relaxed">
+              <p className="text-sm text-[#7a5a30] leading-relaxed">
                 This information is shared voluntarily and will only be used to support your comfort and safety during meditation sessions.
               </p>
-              <p className="text-[11px] text-[#7a5a30] leading-relaxed">
+              <p className="text-sm text-[#7a5a30] leading-relaxed">
                 The practices shared in this programme are intended to support general well-being and inner growth. They are not a substitute for medical or psychological care and are not intended to diagnose, treat, or cure any condition. If you have health concerns, we encourage you to seek guidance from a qualified healthcare professional. By participating, you acknowledge that you do so voluntarily and assume responsibility for your own health and well-being.
               </p>
             </div>
@@ -393,7 +393,7 @@ export default function EnrolmentForm({ program }: { program: Program }) {
             <div className="space-y-4">
               {[{ label: "Nepal", list: NEPAL_CENTERS_LIST }, { label: "International", list: INTL_CENTERS_LIST }].map(group => (
                 <div key={group.label}>
-                  <p className="text-sm uppercase tracking-[0.2em] text-[#b8892a] font-medium mb-2">{group.label}</p>
+                  <p className="text-base uppercase tracking-[0.2em] text-[#b8892a] font-medium mb-2">{group.label}</p>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     {group.list.map(c => (
                       <button
@@ -406,8 +406,8 @@ export default function EnrolmentForm({ program }: { program: Program }) {
                             : "border-[#c8a050]/40 bg-white/50 hover:border-[#b8892a]/60"
                         }`}
                       >
-                        <p className={`text-sm font-medium ${form.center === c.id ? "text-[#7a4a08]" : "text-[#3d2008]"}`}>{c.name}</p>
-                        {c.loc && <p className="text-[11px] text-[#7a5a30] mt-0.5">{c.loc}</p>}
+                        <p className={`text-base font-medium ${form.center === c.id ? "text-[#7a4a08]" : "text-[#3d2008]"}`}>{c.name}</p>
+                        {c.loc && <p className="text-sm text-[#7a5a30] mt-0.5">{c.loc}</p>}
                       </button>
                     ))}
                   </div>
@@ -441,103 +441,79 @@ export default function EnrolmentForm({ program }: { program: Program }) {
                     }`}
                   >
                     <div>
-                      <p className={`font-['Cormorant_Garamond'] text-base font-semibold ${form.workshopDate === w.key ? "text-[#7a4a08]" : "text-[#3d2008]"}`}>{w.label}</p>
-                      <p className="text-[11px] text-[#7a5a30] mt-0.5">{isNepal ? "In Person · 5 Days" : "Online · 5 Days"}</p>
+                      <p className={`font-['Cormorant_Garamond'] text-lg font-semibold ${form.workshopDate === w.key ? "text-[#7a4a08]" : "text-[#3d2008]"}`}>{w.label}</p>
+                      <p className="text-sm text-[#7a5a30] mt-0.5">{isNepal ? "In Person · 5 Days" : "Online · 5 Days"}</p>
                     </div>
                     {form.workshopDate === w.key && (
                       <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                        <path d="M12 2C12 2 15 9 22 12C22 12 15 15 12 22C12 22 9 15 2 12C2 12 9 9 12 2Z" stroke="#b8892a" strokeWidth="1.5" fill="#b8892a" fillOpacity="0.3"/>
+                        <path d="M20 6L9 17l-5-5" stroke="#b8892a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                       </svg>
                     )}
                   </button>
                 ))}
-              </div>
-
-              <div className="bg-[#fdf6ec] border border-[#c8a050]/40 rounded-xl overflow-hidden mt-1">
-                <div className="bg-[#b8892a]/10 border-b border-[#c8a050]/30 px-4 py-3 flex gap-2.5 items-start">
-                  <span className="text-[#b8892a] text-xs mt-0.5 shrink-0">◆</span>
-                  <p className="text-xs font-semibold text-[#5a3005] leading-relaxed">
-                    Full attendance across all 5 days is required for completion of the meditation program and to receive initiation.
-                  </p>
-                </div>
-                <div className="px-4 py-3 space-y-2">
-                  {isNepal ? <>
-                    <p className="text-xs text-[#5a3c10] leading-relaxed">
-                      There is no fixed fee for initiation. Donations (<span className="font-semibold">Guru dakshina</span>) are welcome.
-                    </p>
-                    <p className="text-xs text-[#5a3c10] leading-relaxed">
-                      A <span className="font-semibold">physical registration form</span> is also available at your center for those who prefer not to register online.
-                    </p>
-                  </> : (
-                    <p className="text-xs text-[#5a3c10] leading-relaxed">
-                      A <span className="font-semibold">Zoom link</span> will be shared with you by email before the workshop begins. There is no fixed fee for initiation. Donations (<span className="font-semibold">Guru dakshina</span>) are welcome.
-                    </p>
-                  )}
-                </div>
               </div>
             </>;
           })()}
 
           {/* ── SHARED: Reference ── */}
           {slot === "reference" && <>
-            <p className={hc}>Reference <span className="text-sm text-[#7a5a30] font-sans font-normal">(Optional)</span></p>
-            <p className={`${hint} mb-4`}>If someone referred you, please share their details.</p>
+            <p className={hc}>Referred By</p>
+            <p className={`${hint} mb-3`}>If someone introduced you to the Academy or referred you to this programme, please share their details below. This is optional.</p>
             <div>
-              <label className={lc}>Referrer's Name</label>
+              <label className={plc}>Referrer's Full Name</label>
               <input className={ic} value={form.refererName} onChange={e => set("refererName", e.target.value)} />
             </div>
             <div>
-              <label className={lc}>Relation to Referrer</label>
-              <input className={ic} placeholder="e.g. Friend, Sister…" value={form.refererRelation} onChange={e => set("refererRelation", e.target.value)} />
+              <label className={plc}>Relationship to You</label>
+              <input className={ic} placeholder="e.g. Friend, Teacher, Family member…" value={form.refererRelation} onChange={e => set("refererRelation", e.target.value)} />
             </div>
             <div>
-              <label className={lc}>Referrer's Mobile</label>
-              <input className={ic} value={form.refererMobile} onChange={e => set("refererMobile", e.target.value)} />
+              <label className={plc}>Referrer's Mobile</label>
+              <input className={ic} placeholder="+1 555 000 0000" value={form.refererMobile} onChange={e => set("refererMobile", e.target.value)} />
             </div>
           </>}
 
           {/* ── SHARED: Login ── */}
           {slot === "login" && <>
-            <p className={hc}>Login Details</p>
-            <p className={`${hint} mb-1`}>These credentials give you access to your student portal. Please save them carefully.</p>
+            <p className={hc}>Create Your Account</p>
+            <p className={`${hint} mb-3`}>These credentials will be used to access your programme portal.</p>
             <div>
-              <label className={lc}>Email Address *</label>
-              <input required type="email" className={ic} value={form.email} onChange={e => set("email", e.target.value)} />
+              <label className={plc}>Email Address *</label>
+              <input required type="email" className={ic} placeholder="you@email.com" value={form.email} onChange={e => set("email", e.target.value)} />
             </div>
             <div>
-              <label className={lc}>Password *</label>
-              <input required type="password" className={ic} placeholder="Minimum 8 characters" minLength={8} value={form.password} onChange={e => set("password", e.target.value)} />
+              <label className={plc}>Choose a Password *</label>
+              <input required type="password" className={ic} placeholder="Min. 8 characters" value={form.password} onChange={e => set("password", e.target.value)} />
             </div>
           </>}
 
         </div>
 
         {/* Navigation */}
-        <div className="flex items-center justify-between mt-6">
+        <div className="flex justify-between mt-6">
           {step > 1 ? (
             <button
               type="button"
               onClick={() => setStep(s => s - 1)}
-              className="px-6 py-3 rounded-full border border-[#c8a050]/50 text-[#7a4a08] text-sm hover:border-[#b8892a] transition-colors bg-white/40"
+              className="px-6 py-2.5 rounded-full border border-[#c8a050]/50 text-base text-[#7a4a08] hover:border-[#b8892a] transition-colors"
             >
               ← Back
             </button>
           ) : <div />}
-
           {step < STEPS.length ? (
             <button
               type="button"
               onClick={() => setStep(s => s + 1)}
-              className="px-8 py-3 rounded-full bg-[#2e1405] hover:bg-[#1a0c03] text-white text-sm tracking-wider transition-colors"
+              className="px-8 py-2.5 rounded-full bg-[#2e1405] text-white text-base hover:bg-[#4a2008] transition-colors"
             >
               Continue →
             </button>
           ) : (
             <button
               type="submit"
-              className="px-8 py-3 rounded-full bg-[#2e1405] hover:bg-[#1a0c03] text-white text-sm tracking-wider transition-colors font-medium"
+              className="px-8 py-2.5 rounded-full bg-[#b8892a] text-white text-base hover:bg-[#9d7422] transition-colors shadow-md"
             >
-              Complete Registration
+              Submit Registration
             </button>
           )}
         </div>
