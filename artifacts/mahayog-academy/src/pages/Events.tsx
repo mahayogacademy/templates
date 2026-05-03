@@ -501,7 +501,7 @@ export default function Events() {
                       /* ── Featured card (rich Academy events), same size as compact tiles ── */
                       if (isRich) return (
                         <div key={ev.id}
-                          className="rounded-xl overflow-hidden border border-[#c8b898] bg-white hover:border-[#a8884a] hover:shadow-md transition-all duration-200 flex items-stretch group">
+                          className="rounded-xl overflow-hidden border border-[#c8b898] bg-white hover:border-[#a8884a] hover:shadow-md transition-all duration-200 flex flex-wrap items-stretch group">
                           {/* Date box, same as compact tiles */}
                           <div className="shrink-0 w-16 flex flex-col items-center justify-center py-5 px-2 border-r border-[#ece5d8]">
                             <span className="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#2c1a08] leading-none">{dateNum}</span>
@@ -532,7 +532,7 @@ export default function Events() {
                           </div>
                           {/* CTA button */}
                           {ev.cta && (
-                            <div className="shrink-0 flex items-center pr-5 pl-2">
+                            <div className="shrink-0 flex items-center w-full md:w-auto px-5 pb-4 md:pb-0 md:pl-2 md:pr-5 border-t md:border-t-0 border-[#ece5d8] pt-3 md:pt-0">
                               <Link href={ev.cta.href}>
                                 <span className="inline-flex items-center gap-1.5 bg-[#b8892a] hover:bg-[#c9981f] text-white text-[11px] px-4 py-2 rounded-full tracking-widest uppercase transition-all duration-200 cursor-pointer shadow-sm whitespace-nowrap">
                                   {ev.cta.label} <ArrowRight size={11} />
