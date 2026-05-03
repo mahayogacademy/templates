@@ -898,7 +898,7 @@ export default function MahayogMeditation() {
               <p className="text-base leading-relaxed text-[#5a5248] mb-8">
                 Over time, this inner yogic science became esoteric, surviving only among a few Himalayan sages for 200–400 years, rarely taught openly. Its contemporary resurgence is considered a divine blessing for humanity.
               </p>
-              <div className="bg-white/70 backdrop-blur-sm border border-[#e0d0b8] rounded-2xl p-7 flex gap-6 items-start">
+              <div className="bg-white/70 backdrop-blur-sm border border-[#e0d0b8] rounded-2xl p-7 flex flex-col-reverse md:flex-row gap-6 items-center md:items-start">
                 <div className="flex-1">
                   <span className="uppercase tracking-[0.2em] text-xs text-[#b8892a] font-semibold block mb-3">Revival by the Guru</span>
                   <p className="text-base leading-relaxed text-[#5a5248]">
