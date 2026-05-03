@@ -188,9 +188,9 @@ export default function CustomTalks() {
                 <div className="w-10 h-10 rounded-full bg-[#b8892a]/10 flex items-center justify-center mb-4">
                   <Icon size={18} className="text-[#b8892a]" />
                 </div>
-                <p className="text-[#b8892a] text-xs uppercase tracking-[0.2em] font-medium mb-1">{duration}</p>
+                <p className="text-[#b8892a] text-sm uppercase tracking-[0.2em] font-medium mb-1">{duration}</p>
                 <h3 className="font-['Cormorant_Garamond'] text-xl text-[#2c1a08] font-medium mb-3">{title}</h3>
-                <p className="text-[#6a5c48] text-sm leading-relaxed">{desc}</p>
+                <p className="text-[#6a5c48] text-base leading-relaxed">{desc}</p>
               </div>
             ))}
           </div>
