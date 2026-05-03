@@ -209,14 +209,14 @@ export default function VedantaCourse() {
             <h3 className="font-['Cormorant_Garamond'] text-2xl font-light text-[#3d3830] mt-2 mb-4 leading-snug">
               Vishishtadvaita Vedanta
             </h3>
-            <p className="text-sm text-[#5a5248] leading-relaxed mb-6">
+            <p className="text-base text-[#5a5248] leading-relaxed mb-6">
               Vishishtadvaita, "qualified non-dualism", holds that individual souls and the universe are real but exist as attributes of Brahman, the Supreme Reality. It unites devotion, knowledge, and action into a single path of liberation.
             </p>
             <div className="border-t border-[#e2d0b8] pt-5 space-y-2">
               {["Nature of Reality", "Individual Soul & Supreme Soul", "Path to Liberation (Moksha)", "Role of Devotion (Bhakti)"].map((t) => (
                 <div key={t} className="flex items-center gap-3">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#b8892a] shrink-0" />
-                  <span className="text-sm text-[#5a5248]">{t}</span>
+                  <span className="text-base text-[#5a5248]">{t}</span>
                 </div>
               ))}
             </div>
