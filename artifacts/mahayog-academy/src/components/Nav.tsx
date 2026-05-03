@@ -117,6 +117,7 @@ export default function Nav() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const { signOut } = useClerk();
+  const { isSignedIn } = useUser();
   const basePath = import.meta.env.BASE_URL.replace(/\/$/, "");
 
   function enter(key: MenuKey) {
@@ -286,14 +287,22 @@ export default function Nav() {
 
             <div className="px-5 py-6 space-y-7">
               {/* Top CTAs */}
-              <div className="flex gap-3">
+              <div className="flex gap-2">
+                {!isSignedIn && (
+                  <Link href="/sign-in">
+                    <span onClick={closeMobile} className="flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2.5 text-sm text-[#5a5248] border border-[#d4c4b0] rounded-full tracking-wide cursor-pointer">
+                      <UserCircle2 className="w-4 h-4" strokeWidth={1.5} />
+                      Log in
+                    </span>
+                  </Link>
+                )}
                 <Link href="/register">
-                  <span onClick={closeMobile} className="flex-1 inline-block text-center px-4 py-2.5 text-sm border border-[#b8892a] text-[#b8892a] rounded-full font-medium tracking-wide cursor-pointer">
+                  <span onClick={closeMobile} className="flex-1 inline-block text-center px-3 py-2.5 text-sm border border-[#b8892a] text-[#b8892a] rounded-full font-medium tracking-wide cursor-pointer">
                     Join
                   </span>
                 </Link>
                 <Link href="/donate">
-                  <span onClick={closeMobile} className="flex-1 inline-block text-center px-4 py-2.5 text-sm bg-[#b8892a] text-white rounded-full tracking-wide cursor-pointer">
+                  <span onClick={closeMobile} className="flex-1 inline-block text-center px-3 py-2.5 text-sm bg-[#b8892a] text-white rounded-full tracking-wide cursor-pointer">
                     Donate
                   </span>
                 </Link>
@@ -319,17 +328,9 @@ export default function Nav() {
                 </ul>
               </div>
 
-              {/* Account */}
-              <div className="pt-4 border-t border-[#e8dece]">
-                <Show when="signed-out">
-                  <Link href="/sign-in">
-                    <span onClick={closeMobile} className="flex items-center gap-2 py-2 text-base text-[#3d3830] hover:text-[#7a5518] cursor-pointer">
-                      <UserCircle2 className="w-5 h-5" strokeWidth={1.5} />
-                      Log in
-                    </span>
-                  </Link>
-                </Show>
-                <Show when="signed-in">
+              {/* Account (signed-in only) */}
+              <Show when="signed-in">
+                <div className="pt-4 border-t border-[#e8dece]">
                   <Link href="/dashboard">
                     <span onClick={closeMobile} className="flex items-center gap-2 py-2 text-base text-[#3d3830] hover:text-[#7a5518] cursor-pointer">
                       <UserCircle2 className="w-5 h-5" strokeWidth={1.5} />
@@ -343,8 +344,8 @@ export default function Nav() {
                     <LogOut className="w-5 h-5" strokeWidth={1.5} />
                     Sign out
                   </button>
-                </Show>
-              </div>
+                </div>
+              </Show>
             </div>
           </div>
         </div>,
