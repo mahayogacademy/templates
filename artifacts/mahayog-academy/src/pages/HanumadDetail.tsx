@@ -362,7 +362,7 @@ export default function HanumadDetail() {
           </blockquote>
           <p className="text-[#e8c56a] text-sm tracking-widest uppercase">— Manojavam Shloka</p>
           <div className="mt-10">
-            <Link href="/events">
+            <Link href="/events#historic">
               <button className="inline-flex items-center gap-2 border border-[#e8c56a]/50 text-[#e8c56a] px-6 py-3 rounded-full text-sm hover:bg-[#e8c56a]/10 transition-colors">
                 <ArrowLeft size={15} />
                 All Historic Events

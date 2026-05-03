@@ -413,7 +413,7 @@ export default function TarakBrahmaDetail() {
       {/* ── FOOTER NAV ── */}
       <section className="bg-[#faf9f6] py-12 px-6 border-t border-[#e8dece]">
         <div className="max-w-3xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-          <Link href="/events"
+          <Link href="/events#historic"
             className="inline-flex items-center gap-2 text-sm text-[#8a7860] hover:text-[#b8892a] transition-colors">
             <ArrowLeft size={14} />
             All Historic Events

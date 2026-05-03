@@ -1,4 +1,4 @@
-import { useState, type ComponentType } from "react";
+import { useState, useEffect, type ComponentType } from "react";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import { Link } from "wouter";
@@ -335,6 +335,16 @@ function CalendarView({ events }: { events: AnyEvent[] }) {
 export default function Events() {
   const [filter, setFilter] = useState<EventKind>("all");
   const [view, setView] = useState<ViewMode>("list");
+
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (hash) {
+      const id = hash.replace("#", "");
+      setTimeout(() => {
+        document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 50);
+    }
+  }, []);
 
   const visible = filter === "all"
     ? UPCOMING.filter(e => e.kind !== "ekadashi")

@@ -559,7 +559,7 @@ export default function BhuSamadhiDetail() {
         <div className="max-w-3xl mx-auto">
           <div className="h-px bg-[#e8dece] mb-10" />
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
-            <Link href="/events"
+            <Link href="/events#historic"
               className="inline-flex items-center gap-2 text-sm text-[#8a7860] hover:text-[#b8892a] transition-colors">
               <ArrowLeft size={14} />
               All Historic Events
