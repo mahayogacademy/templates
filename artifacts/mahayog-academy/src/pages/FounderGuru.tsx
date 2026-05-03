@@ -770,7 +770,7 @@ export default function FounderGuru() {
             </div>
 
             <div className="mt-10 border-l-2 border-[#b8892a]/40 pl-6 py-1 mb-10">
-              <p className="text-xl text-[#5a5248] leading-relaxed font-['Cormorant_Garamond']">
+              <p className="text-xl text-[#1a1714] leading-relaxed font-['Inter']">
                 Across all these initiatives, His Holiness emphasizes that spiritual realization finds its fullest expression in service, to humanity, to culture, and to the natural world.
               </p>
             </div>
