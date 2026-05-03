@@ -1,0 +1,38 @@
+{
+  "nav": {
+    "explore": "अन्वेषण",
+    "programs": "कार्यक्रमहरू",
+    "experience": "अनुभव",
+    "teachings": "शिक्षाहरू",
+    "contact": "सम्पर्क",
+    "login": "लग इन",
+    "join": "सामेल हुनुहोस्",
+    "donate": "दान दिनुहोस्",
+    "menu": "मेनु",
+    "more": "थप",
+    "signOut": "साइन आउट",
+    "dashboard": "ड्यासबोर्ड",
+    "signedInAs": "यसरूपमा साइन इन",
+    "account": "खाता",
+    "language": "भाषा",
+    "exploreItems": {
+      "about": "अकादमीको बारेमा",
+      "ashram": "आश्रम र केन्द्रहरू",
+      "projects": "परियोजनाहरू",
+      "founderGuru": "संस्थापक गुरु",
+      "lineage": "गुरु परम्परा"
+    },
+    "programItems": {
+      "meditation": "हिमालयन सिद्ध महायोग ध्यान",
+      "vedanta": "वेदान्त दर्शन पाठ्यक्रम",
+      "gurukul": "गुरुकुल"
+    },
+    "experienceItems": {
+      "ashramLife": "आश्रम जीवन",
+      "guruDarshan": "गुरु दर्शन",
+      "events": "कार्यक्रमहरू",
+      "volunteer": "स्वयंसेवक बन्नुहोस्",
+      "customTalks": "विशेष प्रवचन र कार्यशालाहरू"
+    }
+  }
+}

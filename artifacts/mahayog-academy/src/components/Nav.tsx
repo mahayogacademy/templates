@@ -1,41 +1,46 @@
 import { useState, useRef, useEffect } from "react";
 import { createPortal } from "react-dom";
 import { Link } from "wouter";
-import { ChevronDown, UserCircle2, LogOut, Menu, X } from "lucide-react";
+import { ChevronDown, UserCircle2, LogOut, Menu, X, Globe } from "lucide-react";
 import { useUser, useClerk, Show } from "@clerk/react";
+import { useTranslation } from "react-i18next";
+import { SUPPORTED_LANGUAGES } from "@/i18n";
 
-const EXPLORE = [
-  { label: "About the Academy",  href: "/about" },
-  { label: "Ashram & Centers",   href: "/ashram" },
-  { label: "Projects",           href: "/projects" },
-  { label: "Founder Guru",       href: "/founder-guru" },
-  { label: "Lineage",            href: "/lineage" },
+type MenuItem = { i18nKey: string; href: string };
+
+const EXPLORE: MenuItem[] = [
+  { i18nKey: "nav.exploreItems.about",       href: "/about" },
+  { i18nKey: "nav.exploreItems.ashram",      href: "/ashram" },
+  { i18nKey: "nav.exploreItems.projects",    href: "/projects" },
+  { i18nKey: "nav.exploreItems.founderGuru", href: "/founder-guru" },
+  { i18nKey: "nav.exploreItems.lineage",     href: "/lineage" },
 ];
 
-const COURSES = [
-  { label: "Himalayan Siddha Mahayog Meditation", href: "/meditation" },
-  { label: "Vedanta Philosophy Course",           href: "/vedanta" },
-  { label: "Gurukul",                             href: "/gurukul" },
+const COURSES: MenuItem[] = [
+  { i18nKey: "nav.programItems.meditation", href: "/meditation" },
+  { i18nKey: "nav.programItems.vedanta",    href: "/vedanta" },
+  { i18nKey: "nav.programItems.gurukul",    href: "/gurukul" },
 ];
 
-const EXPERIENCE = [
-  { label: "Ashram Life",              href: "/ashram" },
-  { label: "Guru Darshan",             href: "/guru-darshan" },
-  { label: "Events",                   href: "/events" },
-  { label: "Volunteer",                href: "/volunteer" },
-  { label: "Custom Talks & Workshops", href: "/custom-talks" },
+const EXPERIENCE: MenuItem[] = [
+  { i18nKey: "nav.experienceItems.ashramLife",   href: "/ashram" },
+  { i18nKey: "nav.experienceItems.guruDarshan",  href: "/guru-darshan" },
+  { i18nKey: "nav.experienceItems.events",       href: "/events" },
+  { i18nKey: "nav.experienceItems.volunteer",    href: "/volunteer" },
+  { i18nKey: "nav.experienceItems.customTalks",  href: "/custom-talks" },
 ];
 
-type MenuKey = "explore" | "courses" | "experience" | "user" | null;
+type MenuKey = "explore" | "courses" | "experience" | "user" | "lang" | null;
 
-function DropdownMenu({ items }: { items: { label: string; href: string }[] }) {
+function DropdownMenu({ items }: { items: MenuItem[] }) {
+  const { t } = useTranslation();
   return (
     <div className="absolute top-full left-0 pt-2 min-w-[220px] z-50">
       <div className="bg-white/98 backdrop-blur-sm border border-[#e8dece] rounded-xl shadow-xl shadow-[#b8892a]/8 overflow-hidden py-2">
         {items.map((item) => (
           <Link key={item.href} href={item.href}>
             <span className="block px-5 py-2.5 text-sm text-[#5a5248] hover:bg-[#eddfc8] hover:text-[#7a5518] transition-colors duration-150 cursor-pointer tracking-wide font-medium">
-              {item.label}
+              {t(item.i18nKey)}
             </span>
           </Link>
         ))}
@@ -44,9 +49,60 @@ function DropdownMenu({ items }: { items: { label: string; href: string }[] }) {
   );
 }
 
+function LanguageSwitcher({ variant = "desktop" }: { variant?: "desktop" | "mobile" }) {
+  const { i18n } = useTranslation();
+  const current = (i18n.resolvedLanguage || i18n.language || "en").slice(0, 2);
+
+  if (variant === "mobile") {
+    return (
+      <div className="flex items-center gap-2 flex-wrap">
+        {SUPPORTED_LANGUAGES.map((l) => {
+          const active = current === l.code;
+          return (
+            <button
+              key={l.code}
+              onClick={() => i18n.changeLanguage(l.code)}
+              className={`inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs tracking-wide border transition-colors cursor-pointer ${
+                active
+                  ? "bg-[#b8892a] text-white border-[#b8892a]"
+                  : "bg-white text-[#5a5248] border-[#d4c4b0] hover:border-[#b8892a] hover:text-[#7a5518]"
+              }`}
+            >
+              {l.nativeLabel}
+            </button>
+          );
+        })}
+      </div>
+    );
+  }
+
+  return (
+    <div className="flex items-center gap-1 ml-2">
+      {SUPPORTED_LANGUAGES.map((l) => {
+        const active = current === l.code;
+        return (
+          <button
+            key={l.code}
+            onClick={() => i18n.changeLanguage(l.code)}
+            aria-label={`Switch language to ${l.nativeLabel}`}
+            className={`px-2 py-1 text-xs rounded-md transition-colors cursor-pointer min-w-[2.25rem] ${
+              active
+                ? "bg-[#b8892a] text-white"
+                : "text-[#5a5248] hover:bg-[#eddfc8] hover:text-[#7a5518]"
+            }`}
+          >
+            {l.label}
+          </button>
+        );
+      })}
+    </div>
+  );
+}
+
 function UserMenu() {
   const { user } = useUser();
   const { signOut } = useClerk();
+  const { t } = useTranslation();
   const [open, setOpen] = useState(false);
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const basePath = import.meta.env.BASE_URL.replace(/\/$/, "");
@@ -59,7 +115,7 @@ function UserMenu() {
     timerRef.current = setTimeout(() => setOpen(false), 150);
   }
 
-  const displayName = user?.firstName || user?.emailAddresses[0]?.emailAddress?.split("@")[0] || "Account";
+  const displayName = user?.firstName || user?.emailAddresses[0]?.emailAddress?.split("@")[0] || t("nav.account");
 
   return (
     <div className="relative ml-2" onMouseEnter={enter} onMouseLeave={leave}>
@@ -76,7 +132,7 @@ function UserMenu() {
         <div onMouseEnter={enter} onMouseLeave={leave} className="absolute top-full right-0 pt-2 min-w-[180px] z-50">
           <div className="bg-white/98 backdrop-blur-sm border border-[#e8dece] rounded-xl shadow-xl shadow-[#b8892a]/8 overflow-hidden py-2">
             <div className="px-5 py-2.5 border-b border-[#e8dece] mb-1">
-              <p className="text-xs text-[#9a8070] tracking-wide">Signed in as</p>
+              <p className="text-xs text-[#9a8070] tracking-wide">{t("nav.signedInAs")}</p>
               <p className="text-sm font-medium text-[#2c1a08] truncate max-w-[140px]">{displayName}</p>
             </div>
             <button
@@ -84,7 +140,7 @@ function UserMenu() {
               className="w-full flex items-center gap-2 px-5 py-2.5 text-sm text-[#5a5248] hover:bg-[#eddfc8] hover:text-[#7a5518] transition-colors duration-150 cursor-pointer tracking-wide font-medium"
             >
               <LogOut className="w-3.5 h-3.5" strokeWidth={1.5} />
-              Sign out
+              {t("nav.signOut")}
             </button>
           </div>
         </div>
@@ -93,7 +149,8 @@ function UserMenu() {
   );
 }
 
-function MobileSection({ title, items, onNavigate }: { title: string; items: { label: string; href: string }[]; onNavigate: () => void }) {
+function MobileSection({ title, items, onNavigate }: { title: string; items: MenuItem[]; onNavigate: () => void }) {
+  const { t } = useTranslation();
   return (
     <div>
       <p className="text-xs uppercase tracking-[0.25em] text-[#b8892a] font-semibold mb-3">{title}</p>
@@ -102,7 +159,7 @@ function MobileSection({ title, items, onNavigate }: { title: string; items: { l
           <li key={it.href}>
             <Link href={it.href}>
               <span onClick={onNavigate} className="block py-2 text-base text-[#3d3830] hover:text-[#7a5518] cursor-pointer">
-                {it.label}
+                {t(it.i18nKey)}
               </span>
             </Link>
           </li>
@@ -118,6 +175,7 @@ export default function Nav() {
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const { signOut } = useClerk();
   const { isSignedIn } = useUser();
+  const { t } = useTranslation();
   const basePath = import.meta.env.BASE_URL.replace(/\/$/, "");
 
   function enter(key: MenuKey) {
@@ -184,7 +242,7 @@ export default function Nav() {
           {/* Explore */}
           <div className="relative" onMouseEnter={() => enter("explore")} onMouseLeave={leave}>
             <button className="flex items-center gap-1 px-4 py-2 text-sm text-[#5a5248] hover:text-[#7a5518] hover:bg-[#eddfc8] transition-colors tracking-wide rounded-lg">
-              Explore
+              {t("nav.explore")}
               <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${open === "explore" ? "rotate-180" : ""}`} strokeWidth={1.5} />
             </button>
             {open === "explore" && (
@@ -197,7 +255,7 @@ export default function Nav() {
           {/* Courses */}
           <div className="relative" onMouseEnter={() => enter("courses")} onMouseLeave={leave}>
             <button className="flex items-center gap-1 px-4 py-2 text-sm text-[#5a5248] hover:text-[#7a5518] hover:bg-[#eddfc8] transition-colors tracking-wide rounded-lg">
-              Programs
+              {t("nav.programs")}
               <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${open === "courses" ? "rotate-180" : ""}`} strokeWidth={1.5} />
             </button>
             {open === "courses" && (
@@ -210,7 +268,7 @@ export default function Nav() {
           {/* Experience */}
           <div className="relative" onMouseEnter={() => enter("experience")} onMouseLeave={leave}>
             <button className="flex items-center gap-1 px-4 py-2 text-sm text-[#5a5248] hover:text-[#7a5518] hover:bg-[#eddfc8] transition-colors tracking-wide rounded-lg">
-              Experience
+              {t("nav.experience")}
               <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${open === "experience" ? "rotate-180" : ""}`} strokeWidth={1.5} />
             </button>
             {open === "experience" && (
@@ -222,13 +280,13 @@ export default function Nav() {
 
           <Link href="/teachings">
             <span className="px-4 py-2 text-sm text-[#5a5248] hover:text-[#7a5518] hover:bg-[#eddfc8] transition-colors tracking-wide rounded-lg cursor-pointer">
-              Teachings
+              {t("nav.teachings")}
             </span>
           </Link>
 
           <Link href="/contact">
             <span className="px-4 py-2 text-sm text-[#5a5248] hover:text-[#7a5518] hover:bg-[#eddfc8] transition-colors tracking-wide rounded-lg cursor-pointer">
-              Contact
+              {t("nav.contact")}
             </span>
           </Link>
 
@@ -236,7 +294,7 @@ export default function Nav() {
             <Link href="/sign-in">
               <span className="ml-2 flex items-center gap-1.5 px-4 py-2 text-sm text-[#5a5248] hover:text-[#7a5518] hover:bg-[#eddfc8] transition-colors tracking-wide rounded-lg cursor-pointer">
                 <UserCircle2 className="w-4 h-4" strokeWidth={1.5} />
-                Log in
+                {t("nav.login")}
               </span>
             </Link>
           </Show>
@@ -247,15 +305,20 @@ export default function Nav() {
 
           <Link href="/register">
             <span className="ml-1 px-5 py-2 text-sm bg-[#b8892a] text-white rounded-full hover:bg-[#7a5518] transition-colors tracking-wide font-medium cursor-pointer">
-              Join
+              {t("nav.join")}
             </span>
           </Link>
 
           <Link href="/donate">
             <span className="ml-2 px-5 py-2 text-sm border border-[#b8892a] text-[#b8892a] rounded-full hover:bg-[#9d7422] hover:border-[#9d7422] hover:text-white transition-colors duration-200 tracking-wide cursor-pointer">
-              Donate
+              {t("nav.donate")}
             </span>
           </Link>
+
+          <div className="ml-2 pl-2 border-l border-[#e8dece] flex items-center text-[#9a8070]">
+            <Globe className="w-3.5 h-3.5 mr-1" strokeWidth={1.5} />
+            <LanguageSwitcher variant="desktop" />
+          </div>
         </div>
 
         {/* ── Mobile hamburger ── */}
@@ -282,7 +345,7 @@ export default function Nav() {
               <span
                 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "1.1rem", fontWeight: 500, color: "#2c1a08" }}
               >
-                Menu
+                {t("nav.menu")}
               </span>
               <button
                 aria-label="Close menu"
@@ -298,42 +361,50 @@ export default function Nav() {
               <div className="flex gap-2">
                 <Link href="/register">
                   <span onClick={closeMobile} className="flex-1 inline-block text-center px-3 py-2.5 text-sm bg-[#b8892a] text-white rounded-full tracking-wide cursor-pointer">
-                    Join
+                    {t("nav.join")}
                   </span>
                 </Link>
                 <Link href="/donate">
                   <span onClick={closeMobile} className="flex-1 inline-block text-center px-3 py-2.5 text-sm border border-[#b8892a] text-[#b8892a] rounded-full font-medium tracking-wide cursor-pointer">
-                    Donate
+                    {t("nav.donate")}
                   </span>
                 </Link>
                 {!isSignedIn && (
                   <Link href="/sign-in">
                     <span onClick={closeMobile} className="flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2.5 text-sm text-[#5a5248] border border-[#d4c4b0] rounded-full tracking-wide cursor-pointer">
                       <UserCircle2 className="w-4 h-4" strokeWidth={1.5} />
-                      Log in
+                      {t("nav.login")}
                     </span>
                   </Link>
                 )}
               </div>
 
-              <MobileSection title="Explore" items={EXPLORE} onNavigate={closeMobile} />
-              <MobileSection title="Programs" items={COURSES} onNavigate={closeMobile} />
-              <MobileSection title="Experience" items={EXPERIENCE} onNavigate={closeMobile} />
+              <MobileSection title={t("nav.explore")} items={EXPLORE} onNavigate={closeMobile} />
+              <MobileSection title={t("nav.programs")} items={COURSES} onNavigate={closeMobile} />
+              <MobileSection title={t("nav.experience")} items={EXPERIENCE} onNavigate={closeMobile} />
 
               <div>
-                <p className="text-xs uppercase tracking-[0.25em] text-[#b8892a] font-semibold mb-3">More</p>
+                <p className="text-xs uppercase tracking-[0.25em] text-[#b8892a] font-semibold mb-3">{t("nav.more")}</p>
                 <ul className="space-y-1">
                   <li>
                     <Link href="/teachings">
-                      <span onClick={closeMobile} className="block py-2 text-base text-[#3d3830] hover:text-[#7a5518] cursor-pointer">Teachings</span>
+                      <span onClick={closeMobile} className="block py-2 text-base text-[#3d3830] hover:text-[#7a5518] cursor-pointer">{t("nav.teachings")}</span>
                     </Link>
                   </li>
                   <li>
                     <Link href="/contact">
-                      <span onClick={closeMobile} className="block py-2 text-base text-[#3d3830] hover:text-[#7a5518] cursor-pointer">Contact</span>
+                      <span onClick={closeMobile} className="block py-2 text-base text-[#3d3830] hover:text-[#7a5518] cursor-pointer">{t("nav.contact")}</span>
                     </Link>
                   </li>
                 </ul>
+              </div>
+
+              <div className="pt-2 border-t border-[#e8dece]">
+                <p className="text-xs uppercase tracking-[0.25em] text-[#b8892a] font-semibold mb-3 flex items-center gap-1.5">
+                  <Globe className="w-3.5 h-3.5" strokeWidth={1.5} />
+                  {t("nav.language")}
+                </p>
+                <LanguageSwitcher variant="mobile" />
               </div>
 
               {/* Account (signed-in only) */}
@@ -342,7 +413,7 @@ export default function Nav() {
                   <Link href="/dashboard">
                     <span onClick={closeMobile} className="flex items-center gap-2 py-2 text-base text-[#3d3830] hover:text-[#7a5518] cursor-pointer">
                       <UserCircle2 className="w-5 h-5" strokeWidth={1.5} />
-                      Dashboard
+                      {t("nav.dashboard")}
                     </span>
                   </Link>
                   <button
@@ -350,7 +421,7 @@ export default function Nav() {
                     className="flex items-center gap-2 py-2 text-base text-[#3d3830] hover:text-[#7a5518] cursor-pointer"
                   >
                     <LogOut className="w-5 h-5" strokeWidth={1.5} />
-                    Sign out
+                    {t("nav.signOut")}
                   </button>
                 </div>
               </Show>

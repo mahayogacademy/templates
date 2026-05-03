@@ -1,0 +1,38 @@
+{
+  "nav": {
+    "explore": "Explore",
+    "programs": "Programs",
+    "experience": "Experience",
+    "teachings": "Teachings",
+    "contact": "Contact",
+    "login": "Log in",
+    "join": "Join",
+    "donate": "Donate",
+    "menu": "Menu",
+    "more": "More",
+    "signOut": "Sign out",
+    "dashboard": "Dashboard",
+    "signedInAs": "Signed in as",
+    "account": "Account",
+    "language": "Language",
+    "exploreItems": {
+      "about": "About the Academy",
+      "ashram": "Ashram & Centers",
+      "projects": "Projects",
+      "founderGuru": "Founder Guru",
+      "lineage": "Lineage"
+    },
+    "programItems": {
+      "meditation": "Himalayan Siddha Mahayog Meditation",
+      "vedanta": "Vedanta Philosophy Course",
+      "gurukul": "Gurukul"
+    },
+    "experienceItems": {
+      "ashramLife": "Ashram Life",
+      "guruDarshan": "Guru Darshan",
+      "events": "Events",
+      "volunteer": "Volunteer",
+      "customTalks": "Custom Talks & Workshops"
+    }
+  }
+}
