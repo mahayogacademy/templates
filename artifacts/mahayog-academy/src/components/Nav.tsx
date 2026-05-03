@@ -237,7 +237,7 @@ export default function Nav() {
         </Link>
 
         {/* ── Desktop Menu (hidden on mobile) ── */}
-        <div className="hidden lg:flex items-center">
+        <div className="hidden lg:flex items-center ml-16">
 
           {/* Explore */}
           <div className="relative" onMouseEnter={() => enter("explore")} onMouseLeave={leave}>
