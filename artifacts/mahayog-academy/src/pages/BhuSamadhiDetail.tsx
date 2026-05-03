@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "wouter";
 import Nav from "@/components/Nav";
-import { ArrowLeft, ChevronDown } from "lucide-react";
+import { ArrowLeft, ArrowRight, ChevronDown } from "lucide-react";
 
 const b = import.meta.env.BASE_URL;
 
@@ -562,9 +562,10 @@ export default function BhuSamadhiDetail() {
             <ArrowLeft size={14} />
             All Historic Events
           </Link>
-          <Link href="/contact"
-            className="sm:ml-auto text-sm bg-[#b8892a] hover:bg-[#9a6e1a] text-white px-5 py-2.5 rounded-full transition-colors">
-            Contact the Academy
+          <Link href="/events/historic/tarak-brahma-mahayagya"
+            className="sm:ml-auto inline-flex items-center gap-2 text-sm text-[#8a7860] hover:text-[#b8892a] transition-colors">
+            Next: Tarak Brahma Mahayagya
+            <ArrowRight size={14} />
           </Link>
         </div>
       </section>
