@@ -217,7 +217,7 @@ export default function CustomTalks() {
                 {WHO.map((item) => (
                   <div key={item} className="flex items-center gap-3 bg-white rounded-xl px-5 py-3 border border-[#e8dece]">
                     <div className="w-1.5 h-1.5 rounded-full bg-[#b8892a] flex-shrink-0" />
-                    <p className="text-[#4a3728] text-sm">{item}</p>
+                    <p className="text-[#4a3728] text-base">{item}</p>
                   </div>
                 ))}
               </div>
