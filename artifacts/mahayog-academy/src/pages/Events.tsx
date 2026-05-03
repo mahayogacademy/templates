@@ -295,8 +295,9 @@ function CalendarView({ events }: { events: AnyEvent[] }) {
               <button onClick={() => setSelected(null)} className="text-xs text-[#b8892a] hover:underline cursor-pointer">Show all</button>
             )}
           </div>
-          {selectedEvents.map(ev => (
+          {selectedEvents.map((ev, idx) => (
             <div key={ev.id}>
+              {idx > 0 && <div className="border-t border-[#e8d8b8] my-4" />}
               <p className="text-sm uppercase tracking-[0.2em] text-[#b8892a] font-medium mb-1">{ev.kindLabel}</p>
               <p className="font-['Cormorant_Garamond'] text-xl font-semibold text-[#2c1a08] mb-1">{ev.title}</p>
               {ev.compact ? (
@@ -310,7 +311,7 @@ function CalendarView({ events }: { events: AnyEvent[] }) {
                   {ev.desc && <p className="text-base text-[#5a5248] leading-relaxed mb-3">{ev.desc}</p>}
                   {ev.cta && (
                     <Link href={ev.cta.href}>
-                      <span className="inline-flex items-center gap-1.5 text-sm text-[#b8892a] hover:text-[#8a6420] font-medium cursor-pointer">
+                      <span className="inline-flex items-center gap-1.5 text-sm border border-[#b8892a] text-[#b8892a] hover:bg-[#b8892a] hover:text-white rounded-full px-4 py-1.5 font-medium cursor-pointer transition-colors duration-200">
                         {ev.cta.label} <ArrowRight size={13} />
                       </span>
                     </Link>
