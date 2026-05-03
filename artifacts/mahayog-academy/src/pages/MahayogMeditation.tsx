@@ -898,6 +898,19 @@ export default function MahayogMeditation() {
               <p className="text-base leading-relaxed text-[#5a5248] mb-8">
                 Over time, this inner yogic science became esoteric, surviving only among a few Himalayan sages for 200–400 years, rarely taught openly. Its contemporary resurgence is considered a divine blessing for humanity.
               </p>
+              {/* Mobile-only: Ramanandacharya card placed before Revival box */}
+              <div className="md:hidden bg-white/70 backdrop-blur-sm border border-[#e0d0b8] rounded-2xl p-4 flex gap-4 items-center mb-6">
+                <img
+                  src={`${import.meta.env.BASE_URL}images/saint-ramananda.jpg`}
+                  alt="Jagadguru Ramanandacharya"
+                  className="w-20 h-24 rounded-xl object-cover object-top shadow-md border border-[#e0d0b8] shrink-0"
+                />
+                <div>
+                  <p className="font-['Cormorant_Garamond'] text-xl font-semibold text-[#3d3830] leading-tight">Jagadguru Ramanandacharya</p>
+                  <p className="text-sm text-[#9a8878] mt-1">c. 1400 CE</p>
+                  <p className="text-base text-[#5a5248] mt-2 leading-relaxed">Propagator of Surat-Śhabda Yoga for the upliftment of humanity</p>
+                </div>
+              </div>
               <div className="bg-white/70 backdrop-blur-sm border border-[#e0d0b8] rounded-2xl p-7 flex flex-col-reverse md:flex-row gap-6 items-center md:items-start">
                 <div className="flex-1">
                   <span className="uppercase tracking-[0.2em] text-xs text-[#b8892a] font-semibold block mb-3">Revival by the Guru</span>
@@ -923,7 +936,7 @@ export default function MahayogMeditation() {
             {/* Right: saint portraits */}
             <div className="flex flex-col gap-3">
               {/* Featured Ramanandacharya portrait */}
-              <div className="bg-white/70 backdrop-blur-sm border border-[#e0d0b8] rounded-2xl p-4 flex gap-4 items-center mb-2">
+              <div className="hidden md:flex bg-white/70 backdrop-blur-sm border border-[#e0d0b8] rounded-2xl p-4 gap-4 items-center mb-2">
                 <img
                   src={`${import.meta.env.BASE_URL}images/saint-ramananda.jpg`}
                   alt="Jagadguru Ramanandacharya"
