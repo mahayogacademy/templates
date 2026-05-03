@@ -126,7 +126,7 @@ export default function Projects() {
       </section>
 
       {/* ── SECTION ANCHOR NAV ── */}
-      <div className="sticky top-0 z-30 bg-[#faf9f6]/95 backdrop-blur-sm border-b border-[#e8dece] px-6 py-3">
+      <div className="md:sticky md:top-0 z-30 bg-[#faf9f6]/95 backdrop-blur-sm border-b border-[#e8dece] px-6 py-3">
         <nav className="max-w-3xl mx-auto flex flex-col md:flex-row items-stretch rounded-2xl md:rounded-full border border-[#d8cebb] bg-[#f4ede0] overflow-hidden divide-y md:divide-y-0 md:divide-x divide-[#d8cebb] text-sm font-medium">
           {[
             { label: "108 Hanuman Temples", anchor: "#project-01" },
