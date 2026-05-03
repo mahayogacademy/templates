@@ -441,7 +441,7 @@ export default function EnrolmentForm({ program }: { program: Program }) {
                     }`}
                   >
                     <div>
-                      <p className={`font-['Cormorant_Garamond'] text-lg font-semibold ${form.workshopDate === w.key ? "text-[#7a4a08]" : "text-[#3d2008]"}`}>{w.label}</p>
+                      <p className={`text-base font-semibold ${form.workshopDate === w.key ? "text-[#7a4a08]" : "text-[#3d2008]"}`}>{w.label}</p>
                       <p className="text-sm text-[#7a5a30] mt-0.5">{isNepal ? "In Person · 5 Days" : "Online · 5 Days"}</p>
                     </div>
                     {form.workshopDate === w.key && (
