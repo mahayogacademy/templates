@@ -600,8 +600,8 @@ export default function FounderGuru() {
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                       style={{ objectPosition: item.pos ?? "center bottom", transform: "translateY(-30%) scale(1.1)" }}
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#1e0f05]/85 via-[#1e0f05]/30 to-transparent" />
-                    <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#1e0f05]/80 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#0f0703]/95 via-[#0f0703]/40 to-transparent" />
+                    <div className="absolute inset-x-0 bottom-0 h-44 bg-gradient-to-t from-[#0f0703]/95 to-transparent" />
                     <div className="absolute bottom-0 left-0 right-0 p-5">
                       <p className="font-['Cormorant_Garamond'] text-2xl font-semibold text-white leading-snug mb-1">{item.label}</p>
                       <p className="text-xs uppercase tracking-[0.25em] text-[#e8c56a] font-semibold">{item.note}</p>
