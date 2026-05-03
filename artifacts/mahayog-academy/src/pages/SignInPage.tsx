@@ -68,7 +68,7 @@ export default function SignInPage() {
 
       {/* ── Background ── */}
       <img
-        src={`${b}images/academy-hero.png`}
+        src={`${b}images/hero-nepal-landscape.png`}
         alt=""
         aria-hidden="true"
         className="absolute inset-0 w-full h-full object-cover object-center"
