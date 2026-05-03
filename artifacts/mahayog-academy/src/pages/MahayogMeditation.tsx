@@ -484,6 +484,146 @@ function HorizontalSectionNav() {
 }
 
 
+const LEFT_BENEFITS = [
+  {
+    title: "Inner Peace",
+    subtitle: "Emotional Balance",
+    desc: "Restless thoughts slow; peace emerges from within. Compassion, equanimity, and a felt sense of divine grace naturally develop in daily life.",
+  },
+  {
+    title: "Positive Transformation",
+    subtitle: "Renewed Outlook",
+    desc: "Negative habits lose their grip; joy, optimism, and resilience arise, not as forced attitudes, but as the result of genuine inner fulfillment.",
+  },
+  {
+    title: "Relief from Suffering",
+    subtitle: "Dissolving Blockages",
+    desc: "Sorrows, fears, and anxieties gradually diminish. Lifelong phobias often fade as Kundalini dissolves mental and physical blockages.",
+  },
+];
+
+const RIGHT_BENEFITS = [
+  {
+    title: "Ajapa Japa",
+    subtitle: "Effortless Divine Name",
+    desc: "The sacred primordial Name (Rām) begins reverberating inside continuously. 'Without japa, the japa happens' — whether working, resting, or sleeping.",
+  },
+  {
+    title: "Anahad Nāda",
+    subtitle: "Inner Divine Sound",
+    desc: "The mystic unstruck sound of the universe becomes audible, often perceived as a flute, bell, harp, or cosmic roar, lifting awareness to higher states.",
+  },
+  {
+    title: "Accelerated Growth",
+    subtitle: "Under the Guru's Grace",
+    desc: "What might otherwise take lifetimes of effort unfolds in an accelerated, protected manner through Shaktipat and the Guru's ongoing guidance.",
+  },
+];
+
+function CheckCircle() {
+  return (
+    <span className="shrink-0 w-10 h-10 rounded-full flex items-center justify-center shadow-md"
+      style={{ background: "#b8892a" }}>
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <path d="M3 8.5L6.5 12L13 4.5" stroke="white" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    </span>
+  );
+}
+
+function BenefitRow({ title, subtitle, desc, align, expanded, onToggle }: {
+  title: string; subtitle: string; desc: string;
+  align: "left" | "right"; expanded: boolean; onToggle: () => void;
+}) {
+  const isLeft = align === "left";
+  return (
+    <div className={`flex gap-3 ${isLeft ? "flex-row-reverse" : "flex-row"}`}>
+      <button onClick={onToggle} className="mt-0.5 shrink-0 hover:opacity-80 transition-opacity">
+        <CheckCircle />
+      </button>
+      <div className={`flex-1 ${isLeft ? "text-right" : "text-left"}`}>
+        <button onClick={onToggle} className="w-full text-inherit">
+          <h3 className={`font-['Cormorant_Garamond'] text-xl font-bold leading-snug transition-colors ${expanded ? "text-[#b8892a]" : "text-[#2d2011] hover:text-[#b8892a]"}`}>
+            {title}
+          </h3>
+          <p className="text-sm text-[#9a8068] uppercase tracking-[0.15em] mt-0.5">{subtitle}</p>
+        </button>
+        <div
+          className="overflow-hidden transition-all duration-400 ease-in-out"
+          style={{ maxHeight: expanded ? "200px" : "0px", opacity: expanded ? 1 : 0, transition: "max-height 0.4s ease, opacity 0.3s ease" }}
+        >
+          <p className="text-base text-[#5a5248] leading-relaxed mt-2">{desc}</p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function BenefitsRadial() {
+  const [expanded, setExpanded] = useState<string | null>(null);
+  const toggle = (title: string) => setExpanded((p) => (p === title ? null : title));
+  const b = import.meta.env.BASE_URL;
+
+  return (
+    <>
+      {/* Desktop radial layout */}
+      <div className="hidden md:grid grid-cols-[1fr_280px_1fr] xl:grid-cols-[1fr_320px_1fr] gap-6 xl:gap-10 items-center">
+        {/* Left column */}
+        <div className="flex flex-col gap-8">
+          {LEFT_BENEFITS.map((item) => (
+            <BenefitRow key={item.title} {...item} align="left"
+              expanded={expanded === item.title} onToggle={() => toggle(item.title)} />
+          ))}
+        </div>
+
+        {/* Centre image */}
+        <div className="relative flex items-center justify-center">
+          <div className="absolute inset-0 rounded-full bg-[#f2ead8] scale-90 blur-sm opacity-60" />
+          <img
+            src={`${b}images/meditation-radial.png`}
+            alt="Meditation"
+            className="relative w-full object-contain drop-shadow-md"
+          />
+        </div>
+
+        {/* Right column */}
+        <div className="flex flex-col gap-8">
+          {RIGHT_BENEFITS.map((item) => (
+            <BenefitRow key={item.title} {...item} align="right"
+              expanded={expanded === item.title} onToggle={() => toggle(item.title)} />
+          ))}
+        </div>
+      </div>
+
+      {/* Mobile accordion */}
+      <div className="md:hidden flex flex-col gap-3">
+        {[...LEFT_BENEFITS, ...RIGHT_BENEFITS].map((item) => {
+          const isOpen = expanded === item.title;
+          return (
+            <div key={item.title} className="border border-[#e8dece] rounded-xl overflow-hidden bg-white">
+              <button
+                onClick={() => toggle(item.title)}
+                className="w-full flex items-center gap-3 p-4 text-left"
+              >
+                <CheckCircle />
+                <span className="font-['Cormorant_Garamond'] text-xl font-bold text-[#2d2011] flex-1 leading-snug">
+                  {item.title}
+                </span>
+                <span className="text-[#b8892a] text-xl font-light">{isOpen ? "−" : "+"}</span>
+              </button>
+              {isOpen && (
+                <div className="px-4 pb-4 pt-0">
+                  <p className="text-base text-[#5a5248] leading-relaxed">{item.desc}</p>
+                </div>
+              )}
+            </div>
+          );
+        })}
+      </div>
+    </>
+  );
+}
+
 export default function MahayogMeditation() {
   return (
     <div className="bg-[#faf9f6] text-[#3d3830]" style={{ scrollBehavior: "smooth" }}>
@@ -710,55 +850,7 @@ export default function MahayogMeditation() {
               These changes happen gradually and organically through awakened Kundalini and the Guru's grace.
             </p>
           </div>
-
-          {BENEFIT_CATEGORIES.map((cat) => (
-            <div key={cat.label} className="mb-12 last:mb-0">
-              {/* Category heading */}
-              <div className="flex items-center gap-3 mb-6">
-                <span
-                  className="h-0.5 w-8 rounded-full shrink-0"
-                  style={{ background: cat.color }}
-                />
-                <span
-                  className="text-sm font-semibold uppercase tracking-[0.2em]"
-                  style={{ color: cat.color }}
-                >
-                  {cat.label}
-                </span>
-                <span className="h-px flex-1 bg-[#e8dece]" />
-              </div>
-
-              {/* Cards */}
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-                {cat.items.map((b) => (
-                  <div
-                    key={b.title}
-                    className="flex flex-col gap-4 p-6 bg-white rounded-2xl border border-[#e8dece] shadow-sm hover:shadow-md hover:border-[#c4a872] transition-all duration-300"
-                    style={{ borderLeftWidth: "3px", borderLeftColor: cat.color }}
-                  >
-                    {/* Icon */}
-                    <div
-                      className="w-12 h-12 rounded-full flex items-center justify-center shrink-0"
-                      style={{ background: `${cat.color}25`, border: `1.5px solid ${cat.color}60` }}
-                    >
-                      <BenefitIcon type={b.icon} />
-                    </div>
-
-                    {/* Title + subtitle */}
-                    <div>
-                      <h3 className="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#2d2011] leading-tight mb-1">
-                        {b.title}
-                      </h3>
-                      <p className="text-sm uppercase tracking-[0.15em] text-[#9a8068]">{b.subtitle}</p>
-                    </div>
-
-                    {/* Description — always visible */}
-                    <p className="text-base text-[#5a5248] leading-relaxed">{b.desc}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          ))}
+          <BenefitsRadial />
         </div>
       </section>
 
