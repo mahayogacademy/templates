@@ -391,7 +391,7 @@ export default function Teachings() {
             Teachings &amp; <span className="text-[#e8c56a]">Updates</span>
           </h1>
           <p className="text-white/70 text-base leading-relaxed max-w-xl mx-auto">
-            Articles, discourses, ceremony recordings, and Academy news — a living archive of Vedic wisdom for seekers everywhere.
+            Articles, discourses, videos, and Academy news — a living archive of Vedic wisdom for seekers everywhere.
           </p>
         </div>
       </section>
