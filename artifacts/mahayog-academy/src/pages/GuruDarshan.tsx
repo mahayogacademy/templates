@@ -74,7 +74,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
         className="w-full text-left py-5 flex items-start justify-between gap-4 group"
         onClick={() => setOpen(!open)}
       >
-        <span className="font-['Cormorant_Garamond'] text-lg font-light text-[#3d3830] group-hover:text-[#b8892a] transition-colors leading-snug">
+        <span className="font-['Cormorant_Garamond'] text-xl font-semibold text-[#3d3830] group-hover:text-[#9d7422] transition-colors duration-200 leading-snug">
           {q}
         </span>
         <ChevronDown
@@ -84,7 +84,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
       </button>
       {open && (
         <div className="pb-5 pr-8">
-          <p className="text-sm text-[#5a5248] leading-relaxed whitespace-pre-line">{a}</p>
+          <p className="text-base text-[#5a5248] leading-relaxed whitespace-pre-line">{a}</p>
         </div>
       )}
     </div>
