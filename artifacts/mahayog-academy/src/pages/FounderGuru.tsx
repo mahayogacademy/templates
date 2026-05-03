@@ -776,7 +776,7 @@ export default function FounderGuru() {
             </div>
 
             <Link href="/events">
-              <span className="inline-flex items-center gap-2 px-6 py-3 border border-[#b8892a] text-[#b8892a] text-sm rounded-full hover:bg-[#b8892a] hover:text-white transition-colors cursor-pointer">
+              <span className="inline-flex items-center gap-2 px-6 py-3 bg-[#b8892a] text-white text-sm rounded-full hover:bg-[#a07820] transition-colors cursor-pointer">
                 View Upcoming Events <ArrowRight className="w-4 h-4" strokeWidth={1.5} />
               </span>
             </Link>
