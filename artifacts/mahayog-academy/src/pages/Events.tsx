@@ -300,18 +300,18 @@ function CalendarView({ events }: { events: AnyEvent[] }) {
               <p className="text-sm uppercase tracking-[0.2em] text-[#b8892a] font-medium mb-1">{ev.kindLabel}</p>
               <p className="font-['Cormorant_Garamond'] text-xl font-semibold text-[#2c1a08] mb-1">{ev.title}</p>
               {ev.compact ? (
-                <p className="text-xs text-[#7a6e5a]">{ev.date} · Nepal Standard Time</p>
+                <p className="text-sm text-[#7a6e5a]">{ev.date} · Nepal Standard Time</p>
               ) : (
                 <>
                   <div className="flex flex-wrap gap-3 mb-2">
-                    {ev.time && <span className="flex items-center gap-1 text-xs text-[#7a6e5a]"><Clock size={11} className="text-[#b8892a]" />{ev.time}</span>}
-                    {ev.locationIcon && ev.location && (() => { const Icon = ev.locationIcon!; return <span className="flex items-center gap-1 text-xs text-[#7a6e5a]"><Icon size={11} className="text-[#b8892a]" />{ev.location}</span>; })()}
+                    {ev.time && <span className="flex items-center gap-1 text-sm text-[#7a6e5a]"><Clock size={13} className="text-[#b8892a]" />{ev.time}</span>}
+                    {ev.locationIcon && ev.location && (() => { const Icon = ev.locationIcon!; return <span className="flex items-center gap-1 text-sm text-[#7a6e5a]"><Icon size={13} className="text-[#b8892a]" />{ev.location}</span>; })()}
                   </div>
-                  {ev.desc && <p className="text-sm text-[#5a5248] leading-relaxed mb-3">{ev.desc}</p>}
+                  {ev.desc && <p className="text-base text-[#5a5248] leading-relaxed mb-3">{ev.desc}</p>}
                   {ev.cta && (
                     <Link href={ev.cta.href}>
-                      <span className="inline-flex items-center gap-1.5 text-xs text-[#b8892a] hover:text-[#8a6420] font-medium cursor-pointer">
-                        {ev.cta.label} <ArrowRight size={12} />
+                      <span className="inline-flex items-center gap-1.5 text-sm text-[#b8892a] hover:text-[#8a6420] font-medium cursor-pointer">
+                        {ev.cta.label} <ArrowRight size={13} />
                       </span>
                     </Link>
                   )}
