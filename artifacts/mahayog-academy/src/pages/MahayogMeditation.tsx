@@ -567,7 +567,7 @@ function BenefitsRadial() {
   return (
     <>
       {/* Desktop radial layout */}
-      <div className="hidden md:grid grid-cols-[1fr_280px_1fr] xl:grid-cols-[1fr_320px_1fr] gap-6 xl:gap-10 items-center">
+      <div className="hidden md:grid grid-cols-[1fr_300px_1fr] xl:grid-cols-[1fr_360px_1fr] gap-6 xl:gap-10 items-center">
         {/* Left column */}
         <div className="flex flex-col gap-8">
           {LEFT_BENEFITS.map((item) => (
