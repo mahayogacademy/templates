@@ -914,9 +914,9 @@ export default function MahayogMeditation() {
                   className="w-20 h-24 rounded-xl object-cover object-top shadow-md border border-[#e0d0b8] shrink-0"
                 />
                 <div>
-                  <p className="font-['Cormorant_Garamond'] text-base font-semibold text-[#3d3830] leading-tight">Jagadguru Ramanandacharya</p>
-                  <p className="text-[11px] text-[#9a8878] mt-1">c. 1400 CE</p>
-                  <p className="text-xs text-[#5a5248] mt-2 leading-relaxed">Propagator of Surat-Śhabda Yoga for the upliftment of humanity</p>
+                  <p className="font-['Cormorant_Garamond'] text-xl font-semibold text-[#3d3830] leading-tight">Jagadguru Ramanandacharya</p>
+                  <p className="text-sm text-[#9a8878] mt-1">c. 1400 CE</p>
+                  <p className="text-base text-[#5a5248] mt-2 leading-relaxed">Propagator of Surat-Śhabda Yoga for the upliftment of humanity</p>
                 </div>
               </div>
               <p className="text-sm uppercase tracking-[0.25em] text-[#b8892a] font-medium mb-1">Prominent Practitioners</p>
@@ -926,14 +926,14 @@ export default function MahayogMeditation() {
                 { name: "Tulsidas", img: `${import.meta.env.BASE_URL}images/saint-tulsidas.jpg`, years: "c. 1532–1623" },
                 { name: "Mira Bai", img: `${import.meta.env.BASE_URL}images/saint-mirabai.jpg`, years: "c. 1498–1547" },
               ].map((s) => (
-                <div key={s.name} className="flex items-center gap-3 bg-white/60 backdrop-blur-sm border border-[#e0d0b8] rounded-xl p-2.5 hover:bg-white/80 transition-all duration-200">
+                <div key={s.name} className="flex items-center gap-3 bg-white/60 backdrop-blur-sm border border-[#e0d0b8] rounded-xl p-3 hover:bg-white/80 transition-all duration-200">
                   <img
                     src={s.img}
                     alt={s.name}
-                    className="w-12 h-12 rounded-lg object-cover object-top shrink-0 shadow-sm"
+                    className="w-14 h-14 rounded-lg object-cover object-top shrink-0 shadow-sm"
                   />
                   <div>
-                    <p className="font-['Cormorant_Garamond'] text-sm font-semibold text-[#3d3830] leading-tight">{s.name}</p>
+                    <p className="font-['Cormorant_Garamond'] text-xl font-semibold text-[#3d3830] leading-tight">{s.name}</p>
                     <p className="text-sm text-[#9a8878] mt-0.5">{s.years}</p>
                   </div>
                 </div>
