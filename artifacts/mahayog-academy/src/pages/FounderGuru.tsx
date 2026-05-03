@@ -824,17 +824,12 @@ export default function FounderGuru() {
         <div className="max-w-5xl mx-auto">
           <div id="interviews" className="scroll-mt-24">
 
-            <div className="flex items-start gap-6 mb-10">
-              <span className="font-['Cormorant_Garamond'] text-8xl font-light text-[#e8dece] leading-none select-none shrink-0">VI</span>
-              <div className="pt-4">
-                <p className="text-sm uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-1">Explore Further</p>
-                <h2 className="font-['Cormorant_Garamond'] text-4xl font-light text-[#3d3830] leading-tight">Related Teachings</h2>
-              </div>
+            <div className="text-center mb-10">
+              <p className="text-sm uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-3">Explore Further</p>
+              <h2 className="font-['Cormorant_Garamond'] text-4xl md:text-5xl font-light text-[#3d3830] leading-tight">Related Teachings</h2>
             </div>
 
-            <div className="h-px bg-[#e8dece] mb-8" />
-
-            <p className="text-base text-[#5a5248] leading-relaxed max-w-2xl mb-10">
+            <p className="text-base text-[#5a5248] leading-relaxed max-w-2xl mx-auto text-center mb-10">
               Conversations with His Holiness on spiritual practice, Vedic wisdom, and the path to inner realization — drawn from television appearances, public dialogues, and satsang recordings.
             </p>
 
