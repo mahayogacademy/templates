@@ -227,8 +227,15 @@ export default function CustomTalks() {
       </section>
 
       {/* ── QUOTE BANNER ── */}
-      <section className="py-16 px-6 bg-[#1a0c03]">
-        <div className="max-w-3xl mx-auto text-center">
+      <section className="relative py-16 px-6 overflow-hidden">
+        <img
+          src={`${b}images/quote-banner-bg.png`}
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 w-full h-full object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-[#1a0c03]/70" />
+        <div className="relative z-10 max-w-3xl mx-auto text-center">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" className="mx-auto mb-6">
             <path d="M12 2C12 2 15 9 22 12C22 12 15 15 12 22C12 22 9 15 2 12C2 12 9 9 12 2Z" stroke="#e8c56a" strokeWidth="1.2" fill="none"/>
           </svg>
@@ -240,13 +247,13 @@ export default function CustomTalks() {
       </section>
 
       {/* ── ENQUIRE CTA ── */}
-      <section className="py-20 px-6 bg-[#faf9f6]">
+      <section className="py-20 px-6 bg-[#1e1208]">
         <div className="max-w-3xl mx-auto text-center">
-          <p className="text-[#b8892a] text-xs uppercase tracking-[0.3em] font-medium mb-3">Get in Touch</p>
-          <h2 className="font-['Cormorant_Garamond'] text-4xl text-[#2c1a08] font-light mb-5">
+          <p className="text-[#e8c56a] text-xs uppercase tracking-[0.3em] font-medium mb-3">Get in Touch</p>
+          <h2 className="font-['Cormorant_Garamond'] text-4xl text-white font-light mb-5">
             Ready to Bring This to Your Community?
           </h2>
-          <p className="text-[#6a5c48] text-base leading-relaxed max-w-xl mx-auto mb-10">
+          <p className="text-[#c4b49a] text-base leading-relaxed max-w-xl mx-auto mb-10">
             Write to us with a brief description of your organisation, the size and nature of your audience, and what you are hoping to offer them. We will be in touch to explore the possibilities together.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -256,7 +263,7 @@ export default function CustomTalks() {
               </span>
             </Link>
             <Link href="/founder-guru">
-              <span className="inline-flex items-center gap-2 border border-[#b8892a]/40 text-[#b8892a] hover:bg-[#b8892a]/8 text-sm px-8 py-3.5 rounded-full tracking-wider transition-colors duration-200 cursor-pointer">
+              <span className="inline-flex items-center gap-2 border border-[#b8892a]/40 text-[#e8c56a] hover:bg-[#b8892a]/10 text-sm px-8 py-3.5 rounded-full tracking-wider transition-colors duration-200 cursor-pointer">
                 About the Teacher
               </span>
             </Link>
