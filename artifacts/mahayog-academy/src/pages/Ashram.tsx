@@ -404,7 +404,7 @@ export default function Ashram() {
                       style={{ filter: "brightness(1.06) saturate(1.15) contrast(1.02)", objectPosition: img.objectPosition ?? "center" }}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
-                    <p className="absolute bottom-3 left-3 text-[10px] text-white/85 tracking-[0.15em] uppercase">{img.caption}</p>
+                    <p className="absolute bottom-3 left-3 text-sm text-white/85 tracking-[0.15em] uppercase">{img.caption}</p>
                   </div>
                 );
               })}
@@ -495,7 +495,7 @@ export default function Ashram() {
         </div>
         <div className="relative z-10 max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <p className="text-[10px] uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-3">Continuous since 2010</p>
+            <p className="text-sm uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-3">Continuous since 2010</p>
             <h2 className="font-['Cormorant_Garamond'] text-4xl font-light text-[#2e2820] leading-snug mb-6">
               Akhanda Kīrtan
             </h2>
@@ -511,7 +511,7 @@ export default function Ashram() {
             <div className="w-36 h-36 rounded-full border border-[#b8892a]/50 flex items-center justify-center mb-6 bg-white/60 backdrop-blur-sm">
               <div className="text-center">
                 <p className="font-['Cormorant_Garamond'] text-5xl font-light text-[#b8892a] leading-none">24</p>
-                <p className="text-[10px] uppercase tracking-[0.3em] text-[#6a6058] mt-1">hrs / day</p>
+                <p className="text-sm uppercase tracking-[0.3em] text-[#6a6058] mt-1">hrs / day</p>
               </div>
             </div>
             <p className="font-['Cormorant_Garamond'] text-2xl italic text-[#2e2820] mb-2">Rām Nām</p>
@@ -533,7 +533,7 @@ export default function Ashram() {
             />
             <div className="p-8">
               <h3 className="font-['Cormorant_Garamond'] text-3xl font-semibold text-[#b8892a] mb-1">Seva</h3>
-              <p className="text-[10px] uppercase tracking-[0.2em] text-[#9a8f84] font-medium mb-4">Selfless Service</p>
+              <p className="text-sm uppercase tracking-[0.2em] text-[#9a8f84] font-medium mb-4">Selfless Service</p>
               <div className="h-px w-8 bg-[#d4a843]/50 mb-4" />
               <p className="text-base leading-relaxed text-[#5a5248] mb-4">
                 Seva plays a central role in spiritual growth, cultivating humility and reducing ego through selfless action. Seekers can offer seva according to their interests, skills, and professional experience.
@@ -554,7 +554,7 @@ export default function Ashram() {
             />
             <div className="p-8">
               <h3 className="font-['Cormorant_Garamond'] text-3xl font-semibold text-[#b8892a] mb-1">Satsang</h3>
-              <p className="text-[10px] uppercase tracking-[0.2em] text-[#9a8f84] font-medium mb-4">Spiritual Discourse & Guidance</p>
+              <p className="text-sm uppercase tracking-[0.2em] text-[#9a8f84] font-medium mb-4">Spiritual Discourse & Guidance</p>
               <div className="h-px w-8 bg-[#d4a843]/50 mb-4" />
               <p className="text-base leading-relaxed text-[#5a5248] mb-4">
                 During Satsang, seekers gather to receive guidance and wisdom from Gurudev. This sacred space allows individuals to ask questions, reflect, and deepen understanding.
@@ -672,13 +672,13 @@ export default function Ashram() {
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
-                    <span className={`absolute top-3 left-3 text-[10px] uppercase tracking-[0.15em] font-semibold px-2.5 py-1 rounded-full ${a.type === "interview" ? "bg-[#5a4a8a]/90 text-white" : "bg-[#b8892a]/90 text-white"}`}>
+                    <span className={`absolute top-3 left-3 text-sm uppercase tracking-[0.15em] font-semibold px-2.5 py-1 rounded-full ${a.type === "interview" ? "bg-[#5a4a8a]/90 text-white" : "bg-[#b8892a]/90 text-white"}`}>
                       {a.tag}
                     </span>
                   </div>
                   {/* Body */}
                   <div className="p-5 flex flex-col flex-1">
-                    <p className="text-[10px] uppercase tracking-[0.15em] text-[#9a8f84] mb-2">{a.date}</p>
+                    <p className="text-sm uppercase tracking-[0.15em] text-[#9a8f84] mb-2">{a.date}</p>
                     <h3 className="font-['Cormorant_Garamond'] text-lg font-semibold text-[#3d3830] mb-2 leading-snug group-hover:text-[#9d7422] transition-colors duration-200 flex-1">
                       {a.title}
                     </h3>
@@ -725,7 +725,7 @@ export default function Ashram() {
 
               {/* Head Ashram */}
               <div className="mb-7 pb-7 border-b border-white/20">
-                <span className="text-[10px] uppercase tracking-[0.2em] text-white bg-[#b8892a] px-2.5 py-1 rounded font-medium inline-block mb-3">Head Ashram</span>
+                <span className="text-sm uppercase tracking-[0.2em] text-white bg-[#b8892a] px-2.5 py-1 rounded font-medium inline-block mb-3">Head Ashram</span>
                 <p className="font-['Cormorant_Garamond'] text-xl font-light text-white leading-snug">
                   Jagadguru Ramanadacharya Seva Peeth
                 </p>

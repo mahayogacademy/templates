@@ -97,7 +97,7 @@ export default function NewsDetail() {
           />
           <div className="absolute inset-0 bg-gradient-to-b from-[#1a0803]/70 via-[#1a0803]/55 to-[#faf9f6]" />
           <div className="absolute inset-0 flex flex-col items-center justify-center px-6 text-center">
-            <span className="inline-flex items-center gap-1.5 bg-[#4a7a5a]/90 text-white text-[10px] uppercase tracking-[0.2em] px-3 py-1.5 rounded-full mb-4">
+            <span className="inline-flex items-center gap-1.5 bg-[#4a7a5a]/90 text-white text-sm uppercase tracking-[0.2em] px-3 py-1.5 rounded-full mb-4">
               <Newspaper size={10} /> News
             </span>
             <h1 className="font-['Cormorant_Garamond'] text-4xl md:text-5xl text-white font-light max-w-3xl leading-tight mb-2">
@@ -119,7 +119,7 @@ export default function NewsDetail() {
         </Link>
         <div className="flex items-center gap-3">
           {article.tags.map(tag => (
-            <span key={tag} className="text-[10px] uppercase tracking-[0.18em] px-2.5 py-1 rounded-full bg-[#4a7a5a]/10 text-[#4a7a5a] font-semibold">
+            <span key={tag} className="text-sm uppercase tracking-[0.18em] px-2.5 py-1 rounded-full bg-[#4a7a5a]/10 text-[#4a7a5a] font-semibold">
               {tag}
             </span>
           ))}

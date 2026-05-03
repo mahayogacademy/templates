@@ -423,7 +423,7 @@ export default function Home() {
                 <div className="relative h-52 overflow-hidden">
                   <img src={`${b}images/gurukul-hero.png`} alt="Gurukul" className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#1a0f05]/60 to-transparent" />
-                  <span className="absolute top-4 left-4 text-[10px] uppercase tracking-[0.25em] text-[#e8c56a] font-semibold bg-[#1a0f05]/50 px-3 py-1 rounded-full">Education</span>
+                  <span className="absolute top-4 left-4 text-sm uppercase tracking-[0.25em] text-[#e8c56a] font-semibold bg-[#1a0f05]/50 px-3 py-1 rounded-full">Education</span>
                 </div>
                 <div className="p-7 flex flex-col flex-1">
                   <h3 className="font-['Cormorant_Garamond'] text-2xl font-light text-[#2e2820] mb-3 leading-snug">Jagadguru Shree Ramanandacharya Gurukul</h3>
@@ -443,7 +443,7 @@ export default function Home() {
                 <div className="relative h-52 overflow-hidden">
                   <img src={`${b}images/ram-mandir-1.jpg`} alt="Ram Mandir" className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#1a0f05]/60 to-transparent" />
-                  <span className="absolute top-4 left-4 text-[10px] uppercase tracking-[0.25em] text-[#e8c56a] font-semibold bg-[#1a0f05]/50 px-3 py-1 rounded-full">Sacred Architecture</span>
+                  <span className="absolute top-4 left-4 text-sm uppercase tracking-[0.25em] text-[#e8c56a] font-semibold bg-[#1a0f05]/50 px-3 py-1 rounded-full">Sacred Architecture</span>
                 </div>
                 <div className="p-7 flex flex-col flex-1">
                   <h3 className="font-['Cormorant_Garamond'] text-2xl font-light text-[#2e2820] mb-3 leading-snug">Ram Mandir — Dev Sabha</h3>
@@ -463,7 +463,7 @@ export default function Home() {
                 <div className="relative h-52 overflow-hidden">
                   <img src={`${b}images/hanuman-temple-portrait.png`} alt="108 Hanuman Temples" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" style={{ objectPosition: "50% 100%" }} />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#1a0f05]/60 to-transparent" />
-                  <span className="absolute top-4 left-4 text-[10px] uppercase tracking-[0.25em] text-[#e8c56a] font-semibold bg-[#1a0f05]/50 px-3 py-1 rounded-full">National Mission</span>
+                  <span className="absolute top-4 left-4 text-sm uppercase tracking-[0.25em] text-[#e8c56a] font-semibold bg-[#1a0f05]/50 px-3 py-1 rounded-full">National Mission</span>
                 </div>
                 <div className="p-7 flex flex-col flex-1">
                   <h3 className="font-['Cormorant_Garamond'] text-2xl font-light text-[#2e2820] mb-3 leading-snug">108 Hanuman Temples Across Nepal</h3>
@@ -482,7 +482,7 @@ export default function Home() {
               <div className="relative h-52 overflow-hidden">
                 <img src={`${b}images/initiative-green-revolution.png`} alt="Green Revolution and Ayurveda" className="w-full h-full object-cover object-center" />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1a0f05]/60 to-transparent" />
-                <span className="absolute top-4 left-4 text-[10px] uppercase tracking-[0.25em] text-[#e8c56a] font-semibold bg-[#1a0f05]/50 px-3 py-1 rounded-full">Vision for Nepal</span>
+                <span className="absolute top-4 left-4 text-sm uppercase tracking-[0.25em] text-[#e8c56a] font-semibold bg-[#1a0f05]/50 px-3 py-1 rounded-full">Vision for Nepal</span>
               </div>
               <div className="p-7 flex flex-col flex-1">
                 <h3 className="font-['Cormorant_Garamond'] text-2xl font-light text-[#2e2820] mb-3 leading-snug">Cultural & Ecological Advocacy</h3>

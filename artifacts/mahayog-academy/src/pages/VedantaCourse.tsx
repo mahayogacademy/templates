@@ -164,7 +164,7 @@ export default function VedantaCourse() {
             { label: "Language",  value: "Nepali" },
           ].map((s) => (
             <div key={s.label} className="flex flex-col items-center px-8 py-5 gap-0.5">
-              <span className="text-[10px] uppercase tracking-[0.25em] text-[#c8a050] font-medium">{s.label}</span>
+              <span className="text-sm uppercase tracking-[0.25em] text-[#c8a050] font-medium">{s.label}</span>
               <span className="font-['Cormorant_Garamond'] text-lg font-light text-white">{s.value}</span>
             </div>
           ))}
@@ -205,7 +205,7 @@ export default function VedantaCourse() {
 
           {/* Vishishtadvaita callout card */}
           <div className="rounded-2xl bg-[#f5ece0] border border-[#e2d0b8] p-8">
-            <span className="text-[10px] uppercase tracking-[0.25em] text-[#b8892a] font-medium">Philosophical Foundation</span>
+            <span className="text-sm uppercase tracking-[0.25em] text-[#b8892a] font-medium">Philosophical Foundation</span>
             <h3 className="font-['Cormorant_Garamond'] text-2xl font-light text-[#3d3830] mt-2 mb-4 leading-snug">
               Vishishtadvaita Vedanta
             </h3>
@@ -280,7 +280,7 @@ export default function VedantaCourse() {
             ].map((h) => (
               <div key={h.title} className="rounded-2xl bg-[#f5ece0] border border-[#e2d0b8] p-7">
                 <div className="mb-4">{h.icon}</div>
-                <p className="text-[10px] uppercase tracking-[0.2em] text-[#b8892a] font-medium mb-1">{h.sub}</p>
+                <p className="text-sm uppercase tracking-[0.2em] text-[#b8892a] font-medium mb-1">{h.sub}</p>
                 <h3 className="font-['Cormorant_Garamond'] text-xl font-light text-[#3d3830] mb-3">{h.title}</h3>
                 <p className="text-sm text-[#5a5248] leading-relaxed">{h.desc}</p>
               </div>

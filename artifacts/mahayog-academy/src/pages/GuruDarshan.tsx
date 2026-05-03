@@ -180,7 +180,7 @@ export default function GuruDarshan() {
                     <Icon className="w-5 h-5 text-[#b8892a]" strokeWidth={1.5} />
                   </div>
                   <p className="font-['Cormorant_Garamond'] text-xl font-light text-[#3d3830] mb-1">{w.title}</p>
-                  <p className="text-[10px] uppercase tracking-[0.2em] text-[#b8892a] font-medium mb-4">{w.sub}</p>
+                  <p className="text-sm uppercase tracking-[0.2em] text-[#b8892a] font-medium mb-4">{w.sub}</p>
                   <p className="text-sm text-[#5a5248] leading-relaxed mb-4 flex-1">{w.desc}</p>
                   <p className="text-xs text-[#7a6e64] italic leading-relaxed mb-5">{w.detail}</p>
                   <Link href={w.cta.href}>

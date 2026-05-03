@@ -121,7 +121,7 @@ export default function AboutAcademy() {
                     {p.title}
                   </h3>
                   <p
-                    className="text-[10px] uppercase tracking-widest text-[#f0d47a] mb-2 font-semibold"
+                    className="text-sm uppercase tracking-widest text-[#f0d47a] mb-2 font-semibold"
                     style={{ textShadow: "0 1px 4px rgba(0,0,0,0.5)" }}
                   >
                     {p.label}
@@ -199,7 +199,7 @@ export default function AboutAcademy() {
                     />
                   </div>
                   <div className="flex-1 min-w-0">
-                    <span className="text-[10px] uppercase tracking-[0.2em] text-[#b8892a] font-semibold mb-1 block">
+                    <span className="text-sm uppercase tracking-[0.2em] text-[#b8892a] font-semibold mb-1 block">
                       {item.tag}
                     </span>
                     <h3 className="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#3d3830] leading-snug mb-1 group-hover:text-[#9d7422] transition-colors duration-300">

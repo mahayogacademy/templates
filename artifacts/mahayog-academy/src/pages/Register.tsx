@@ -196,7 +196,7 @@ export default function Register() {
                   </div>
 
                   {/* tag */}
-                  <span className={`text-[10px] uppercase tracking-[0.22em] font-medium mb-2 transition-colors duration-300 ${selected ? "text-[#b8892a]" : "text-[#b8892a]/60"}`}>
+                  <span className={`text-sm uppercase tracking-[0.22em] font-medium mb-2 transition-colors duration-300 ${selected ? "text-[#b8892a]" : "text-[#b8892a]/60"}`}>
                     {p.tag}
                   </span>
 

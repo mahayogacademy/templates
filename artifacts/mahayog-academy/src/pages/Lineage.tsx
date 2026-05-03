@@ -105,7 +105,7 @@ export default function Lineage() {
         <div className="max-w-3xl mx-auto">
 
           <div className="text-center mb-10 pt-10">
-            <p className="text-[10px] uppercase tracking-[0.35em] text-[#b8892a] font-semibold mb-2">The Disciplic Succession</p>
+            <p className="text-sm uppercase tracking-[0.35em] text-[#b8892a] font-semibold mb-2">The Disciplic Succession</p>
             <h2 className="font-['Cormorant_Garamond'] text-3xl font-light text-[#3d3830]">Guru Paramparā</h2>
             <div className="h-px w-12 bg-[#b8892a]/30 mx-auto mt-4" />
             <p className="text-[11px] text-[#a89880] italic mt-3">Read left → right, top to bottom</p>

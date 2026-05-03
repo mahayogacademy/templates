@@ -111,7 +111,7 @@ function CopyField({ label, value }: { label: string; value: string }) {
   return (
     <div className="flex items-center justify-between py-3 border-b border-[#e8dece] last:border-b-0 gap-4">
       <div>
-        <p className="text-[10px] uppercase tracking-[0.2em] text-[#9a8f84] font-medium mb-0.5">{label}</p>
+        <p className="text-sm uppercase tracking-[0.2em] text-[#9a8f84] font-medium mb-0.5">{label}</p>
         <p className="text-base text-[#2e2820] font-medium">{value}</p>
       </div>
       <button
@@ -222,7 +222,7 @@ function ReferenceBuilder() {
       {/* Generated reference */}
       <div className="rounded-xl border border-[#e2d0b8] bg-[#fdf6ec] p-4 flex items-center justify-between gap-4">
         <div className="flex-1 min-w-0">
-          <p className="text-[10px] uppercase tracking-[0.2em] text-[#9a8f84] font-medium mb-1">Your Payment Reference</p>
+          <p className="text-sm uppercase tracking-[0.2em] text-[#9a8f84] font-medium mb-1">Your Payment Reference</p>
           <p className={`text-lg font-semibold font-['Cormorant_Garamond'] truncate ${isReady ? "text-[#2e2820]" : "text-[#b8a898] italic"}`}>
             {displayReference}
           </p>

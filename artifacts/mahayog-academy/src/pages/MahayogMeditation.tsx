@@ -408,7 +408,7 @@ function FAQGroup({ theme, items }: { theme: string; items: { q: string; a: stri
         className="w-full flex items-center justify-between px-6 py-5 text-left group"
       >
         <div className="flex items-center gap-3">
-          <span className={`text-[10px] transition-colors duration-300 ${open ? "text-[#b8892a]" : "text-[#b8892a]/50"}`}>◆</span>
+          <span className={`text-sm transition-colors duration-300 ${open ? "text-[#b8892a]" : "text-[#b8892a]/50"}`}>◆</span>
           <span className={`uppercase tracking-[0.2em] text-sm font-medium transition-colors duration-300 ${open ? "text-[#7a4a10]" : "text-[#9a7040]"}`}>{theme}</span>
         </div>
         <ChevronDown
@@ -727,7 +727,7 @@ export default function MahayogMeditation() {
                 {i < 2 && (
                   <div className="md:hidden text-[#b8892a]/70 text-3xl mb-6">↓</div>
                 )}
-                <span className="text-[10px] uppercase tracking-[0.25em] text-white/60 font-medium mb-2">{item.sub}</span>
+                <span className="text-sm uppercase tracking-[0.25em] text-white/60 font-medium mb-2">{item.sub}</span>
                 <h4 className="font-['Cormorant_Garamond'] text-3xl font-semibold text-[#f0d898] mb-3 leading-snug">{item.title}</h4>
                 <p className="text-sm text-white/75 leading-relaxed max-w-[220px]">{item.desc}</p>
               </div>
@@ -804,7 +804,7 @@ export default function MahayogMeditation() {
                         <h3 className="font-['Cormorant_Garamond'] text-xl font-semibold text-[#2d2011] leading-tight">
                           {b.title}
                         </h3>
-                        <p className="text-[10px] uppercase tracking-[0.15em] text-[#7a5014]">{b.subtitle}</p>
+                        <p className="text-sm uppercase tracking-[0.15em] text-[#7a5014]">{b.subtitle}</p>
                       </div>
                     </div>
 
@@ -889,7 +889,7 @@ export default function MahayogMeditation() {
                   <p className="text-xs text-[#5a5248] mt-2 leading-relaxed">Propagator of Surat-Śhabda Yoga for the upliftment of humanity</p>
                 </div>
               </div>
-              <p className="text-[10px] uppercase tracking-[0.25em] text-[#b8892a] font-medium mb-1">Prominent Practitioners</p>
+              <p className="text-sm uppercase tracking-[0.25em] text-[#b8892a] font-medium mb-1">Prominent Practitioners</p>
               {[
                 { name: "Kabir", img: `${import.meta.env.BASE_URL}images/saint-kabir.jpg`, years: "c. 1440–1518" },
                 { name: "Ravidas", img: `${import.meta.env.BASE_URL}images/saint-ravidas.jpg`, years: "c. 1450–1520" },
@@ -904,7 +904,7 @@ export default function MahayogMeditation() {
                   />
                   <div>
                     <p className="font-['Cormorant_Garamond'] text-sm font-semibold text-[#3d3830] leading-tight">{s.name}</p>
-                    <p className="text-[10px] text-[#9a8878] mt-0.5">{s.years}</p>
+                    <p className="text-sm text-[#9a8878] mt-0.5">{s.years}</p>
                   </div>
                 </div>
               ))}

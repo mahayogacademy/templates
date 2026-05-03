@@ -232,7 +232,7 @@ const FILTERS: { key: ContentType; label: string }[] = [
 function TypeBadge({ type }: { type: Item["type"] }) {
   const { label, color, bg } = TYPE_LABELS[type];
   return (
-    <span className={`text-[10px] font-semibold uppercase tracking-[0.18em] px-2.5 py-1 rounded-full ${bg} ${color}`}>
+    <span className={`text-sm font-semibold uppercase tracking-[0.18em] px-2.5 py-1 rounded-full ${bg} ${color}`}>
       {label}
     </span>
   );
@@ -254,7 +254,7 @@ function CardThumbnail({ item }: { item: Item }) {
         </div>
       )}
       {item.duration && (
-        <span className="absolute bottom-2 right-2 bg-black/70 text-white text-[10px] px-2 py-0.5 rounded-full">
+        <span className="absolute bottom-2 right-2 bg-black/70 text-white text-sm px-2 py-0.5 rounded-full">
           {item.duration}
         </span>
       )}
@@ -313,7 +313,7 @@ function FeaturedCard({ item }: { item: Item }) {
             <div className={`w-full h-full bg-gradient-to-br ${item.thumbnailGradient}`} />
           )}
           <div className="absolute top-4 left-4">
-            <span className="bg-[#b8892a] text-white text-[10px] font-semibold uppercase tracking-[0.2em] px-3 py-1.5 rounded-full">
+            <span className="bg-[#b8892a] text-white text-sm font-semibold uppercase tracking-[0.2em] px-3 py-1.5 rounded-full">
               Featured
             </span>
           </div>
@@ -433,7 +433,7 @@ export default function Teachings() {
         {/* Row 2: tag filters */}
         <div className="max-w-6xl mx-auto px-6 pb-2.5 overflow-x-auto">
           <div className="flex items-center gap-1.5 min-w-max">
-            <span className="text-[10px] uppercase tracking-[0.2em] text-[#9a8070] mr-1 shrink-0">Topic</span>
+            <span className="text-sm uppercase tracking-[0.2em] text-[#9a8070] mr-1 shrink-0">Topic</span>
             <button
               onClick={() => setActiveTag("")}
               className={`px-3 py-1 rounded-full text-xs transition-all duration-150 ${

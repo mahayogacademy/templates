@@ -157,7 +157,7 @@ export default function FounderGuru() {
 
             {/* Left: bio intro */}
             <div>
-              <p className="text-[10px] uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-3">Meet Siddhababa</p>
+              <p className="text-sm uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-3">Meet Siddhababa</p>
               <h2 className="font-['Cormorant_Garamond'] text-4xl md:text-5xl font-light text-[#3d3830] leading-tight mb-6">
                 A Realized Saint of the<br />Ramanandi Tradition
               </h2>
@@ -265,7 +265,7 @@ export default function FounderGuru() {
             <div className="flex items-start gap-6 mb-10">
               <span className="font-['Cormorant_Garamond'] text-8xl font-light text-[#e8dece] leading-none select-none shrink-0">I</span>
               <div className="pt-4">
-                <p className="text-[10px] uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-1">Biography</p>
+                <p className="text-sm uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-1">Biography</p>
                 <h2 className="font-['Cormorant_Garamond'] text-4xl font-light text-[#3d3830] leading-tight">Life</h2>
               </div>
             </div>
@@ -286,7 +286,7 @@ export default function FounderGuru() {
                   />
                 </div>
                 <div>
-                  <p className="text-[10px] uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-3">Early Life</p>
+                  <p className="text-sm uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-3">Early Life</p>
                   <h3 className="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#3d3830] mb-4 leading-snug">
                     Spiritual Foundations from a Young Age
                   </h3>
@@ -302,7 +302,7 @@ export default function FounderGuru() {
               {/* Row 2, Bhu Samadhi (carousel + text) */}
               <div className="grid md:grid-cols-[1fr_340px] gap-10 items-center">
                 <div>
-                  <p className="text-[10px] uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-3">Bhu Samadhi</p>
+                  <p className="text-sm uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-3">Bhu Samadhi</p>
                   <h3 className="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#3d3830] mb-4 leading-snug">
                     Underground Burial in Meditation
                   </h3>
@@ -380,7 +380,7 @@ export default function FounderGuru() {
                   </div>
                 </div>
                 <div>
-                  <p className="text-[10px] uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-3">Recognition · 2019</p>
+                  <p className="text-sm uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-3">Recognition · 2019</p>
                   <h3 className="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#3d3830] mb-4 leading-snug">
                     Honored as Jagadguru
                   </h3>
@@ -408,7 +408,7 @@ export default function FounderGuru() {
                 />
               </div>
               <div className="flex-1 text-center md:text-left">
-                <p className="text-[10px] uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-2">Darshan</p>
+                <p className="text-sm uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-2">Darshan</p>
                 <h3 className="font-['Cormorant_Garamond'] text-3xl font-light text-[#3d3830] mb-2 leading-snug">
                   Meet Siddhababa
                 </h3>
@@ -433,7 +433,7 @@ export default function FounderGuru() {
             <div className="flex items-start gap-6 mb-10">
               <span className="font-['Cormorant_Garamond'] text-8xl font-light text-[#e8dece] leading-none select-none shrink-0">II</span>
               <div className="pt-4">
-                <p className="text-[10px] uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-1">Philosophy & Practice</p>
+                <p className="text-sm uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-1">Philosophy & Practice</p>
                 <h2 className="font-['Cormorant_Garamond'] text-4xl font-light text-[#3d3830] leading-tight">Teachings</h2>
               </div>
             </div>
@@ -492,7 +492,7 @@ export default function FounderGuru() {
                 <div className="absolute top-0 left-0 w-1 h-full bg-[#b8892a]" />
                 <div className="flex flex-col md:flex-row md:items-center justify-between gap-8 px-10 py-9 pl-12">
                   <div>
-                    <p className="text-[10px] uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-3">Featured Course</p>
+                    <p className="text-sm uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-3">Featured Course</p>
                     <h3 className="font-['Cormorant_Garamond'] text-3xl font-semibold text-[#3d3830] mb-2">
                       Vedanta Philosophy
                     </h3>
@@ -516,7 +516,7 @@ export default function FounderGuru() {
                 <div className="absolute top-0 left-0 w-1 h-full bg-[#b8892a]" />
                 <div className="flex flex-col md:flex-row md:items-center justify-between gap-8 px-10 py-9 pl-12">
                   <div>
-                    <p className="text-[10px] uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-3">Featured Course</p>
+                    <p className="text-sm uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-3">Featured Course</p>
                     <h3 className="font-['Cormorant_Garamond'] text-3xl font-semibold text-[#3d3830] mb-2">
                       Himalayan Siddha Mahayog Meditation
                     </h3>
@@ -569,7 +569,7 @@ export default function FounderGuru() {
             <div className="flex items-start gap-6 mb-10">
               <span className="font-['Cormorant_Garamond'] text-8xl font-light text-[#e8dece] leading-none select-none shrink-0">III</span>
               <div className="pt-4">
-                <p className="text-[10px] uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-1">Spiritual, Educational & Cultural Work</p>
+                <p className="text-sm uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-1">Spiritual, Educational & Cultural Work</p>
                 <h2 className="font-['Cormorant_Garamond'] text-4xl font-light text-[#3d3830] leading-tight">Key Initiatives &amp; Projects</h2>
               </div>
             </div>
@@ -602,7 +602,7 @@ export default function FounderGuru() {
                       />
                     </div>
                     <div className="p-5 flex flex-col flex-1">
-                      <p className="text-[10px] uppercase tracking-[0.2em] text-[#b8892a] font-semibold mb-2">{item.note}</p>
+                      <p className="text-sm uppercase tracking-[0.2em] text-[#b8892a] font-semibold mb-2">{item.note}</p>
                       <p className="text-sm text-[#3d3830] leading-relaxed flex-1">{item.label}</p>
                       {item.href && (
                         <span className="mt-3 inline-flex items-center gap-1 text-[11px] text-[#b8892a] font-medium tracking-wide opacity-0 group-hover:opacity-100 transition-opacity">
@@ -660,7 +660,7 @@ export default function FounderGuru() {
             <div className="flex items-start gap-6 mb-10">
               <span className="font-['Cormorant_Garamond'] text-8xl font-light text-[#e8dece] leading-none select-none shrink-0">IV</span>
               <div className="pt-4">
-                <p className="text-[10px] uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-1">Ancient Vedic Observances</p>
+                <p className="text-sm uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-1">Ancient Vedic Observances</p>
                 <h2 className="font-['Cormorant_Garamond'] text-4xl font-light text-[#3d3830] leading-tight">Revival of Historic Yajñas</h2>
               </div>
             </div>
@@ -741,7 +741,7 @@ export default function FounderGuru() {
             <div className="flex items-start gap-6 mb-10">
               <span className="font-['Cormorant_Garamond'] text-8xl font-light text-[#e8dece] leading-none select-none shrink-0">V</span>
               <div className="pt-4">
-                <p className="text-[10px] uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-1">Centers of Practice</p>
+                <p className="text-sm uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-1">Centers of Practice</p>
                 <h2 className="font-['Cormorant_Garamond'] text-4xl font-light text-[#3d3830] leading-tight">
                   Ashrams &amp; Global Presence
                 </h2>
@@ -758,7 +758,7 @@ export default function FounderGuru() {
             <div className="flex flex-col sm:flex-row gap-y-3 gap-x-10 mb-12 flex-wrap">
               {CENTERS.map((region) => (
                 <div key={region.region} className="flex items-baseline gap-3 text-sm">
-                  <span className="text-[10px] uppercase tracking-[0.25em] text-[#b8892a] font-semibold shrink-0">{region.region}</span>
+                  <span className="text-sm uppercase tracking-[0.25em] text-[#b8892a] font-semibold shrink-0">{region.region}</span>
                   <span className="text-[#5a5248]">{region.cities.join(" · ")}</span>
                 </div>
               ))}
@@ -767,7 +767,7 @@ export default function FounderGuru() {
             {/* Head ashram callout */}
             <div className="bg-[#faf9f6] border border-[#e8dece] rounded-2xl p-8 flex flex-col md:flex-row md:items-center justify-between gap-6">
               <div>
-                <p className="text-[10px] uppercase tracking-[0.25em] text-[#b8892a] font-semibold mb-2">Head Ashram</p>
+                <p className="text-sm uppercase tracking-[0.25em] text-[#b8892a] font-semibold mb-2">Head Ashram</p>
                 <p className="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#3d3830] mb-1">
                   Jagadguru Ramanandacharya Sewa Pith
                 </p>
@@ -798,7 +798,7 @@ export default function FounderGuru() {
             </div>
             {/* Text + button */}
             <div>
-              <p className="text-[10px] uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-2">For Devotees</p>
+              <p className="text-sm uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-2">For Devotees</p>
               <h3 className="font-['Cormorant_Garamond'] text-3xl font-light text-[#3d3830] mb-3 leading-snug">
                 Blessings Photo of His Holiness
               </h3>

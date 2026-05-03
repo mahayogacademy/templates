@@ -55,7 +55,7 @@ export default function Footer() {
 
           {/* Explore */}
           <div>
-            <p className="text-[10px] uppercase tracking-[0.25em] text-[#b8892a] font-semibold mb-5">Explore</p>
+            <p className="text-sm uppercase tracking-[0.25em] text-[#b8892a] font-semibold mb-5">Explore</p>
             <ul className="space-y-3">
               {EXPLORE.map((l) => (
                 <li key={l.href}>
@@ -69,7 +69,7 @@ export default function Footer() {
 
           {/* Learn & Join */}
           <div>
-            <p className="text-[10px] uppercase tracking-[0.25em] text-[#b8892a] font-semibold mb-5">Learn & Join</p>
+            <p className="text-sm uppercase tracking-[0.25em] text-[#b8892a] font-semibold mb-5">Learn & Join</p>
             <ul className="space-y-3">
               {LEARN.map((l) => (
                 <li key={l.href}>
@@ -83,7 +83,7 @@ export default function Footer() {
 
           {/* Connect */}
           <div>
-            <p className="text-[10px] uppercase tracking-[0.25em] text-[#b8892a] font-semibold mb-5">Connect</p>
+            <p className="text-sm uppercase tracking-[0.25em] text-[#b8892a] font-semibold mb-5">Connect</p>
             <ul className="space-y-3">
               {CONNECT.map((l) => (
                 <li key={l.href}>

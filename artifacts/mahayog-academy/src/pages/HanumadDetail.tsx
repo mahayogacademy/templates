@@ -85,7 +85,7 @@ export default function HanumadDetail() {
           ].map(({ value, label }) => (
             <div key={label}>
               <p className="font-['Cormorant_Garamond'] text-3xl md:text-4xl text-[#e8c56a] font-light">{value}</p>
-              <p className="text-[#c8a96a]/70 text-[10px] uppercase tracking-[0.2em] mt-1">{label}</p>
+              <p className="text-[#c8a96a]/70 text-sm uppercase tracking-[0.2em] mt-1">{label}</p>
             </div>
           ))}
         </div>
@@ -143,15 +143,15 @@ export default function HanumadDetail() {
             </div>
             <div className="space-y-4">
               <div className="bg-[#faf9f6] rounded-xl border border-[#e8dece] p-5">
-                <p className="text-[#b8892a] text-[10px] uppercase tracking-[0.2em] font-semibold mb-1">1 Crore Ahutis</p>
+                <p className="text-[#b8892a] text-sm uppercase tracking-[0.2em] font-semibold mb-1">1 Crore Ahutis</p>
                 <p className="text-[#3a2f28] text-sm leading-relaxed">Ten million fire offerings with the Hanuman mantra — continuous from 6 AM to noon each day across seven days, with additional Sundarkanda, Chalisa, and Sahasranama recitations.</p>
               </div>
               <div className="bg-[#faf9f6] rounded-xl border border-[#e8dece] p-5">
-                <p className="text-[#b8892a] text-[10px] uppercase tracking-[0.2em] font-semibold mb-1">The Sacred Ground</p>
+                <p className="text-[#b8892a] text-sm uppercase tracking-[0.2em] font-semibold mb-1">The Sacred Ground</p>
                 <p className="text-[#3a2f28] text-sm leading-relaxed">The Varaha Purana states that twelve thousand years of penance at other pilgrimage sites is equalled by a single continuous twenty-four-hour penance at Shree Ram Tarak Brahma Peeth, Barahakshetra.</p>
               </div>
               <div className="bg-[#faf9f6] rounded-xl border border-[#e8dece] p-5">
-                <p className="text-[#b8892a] text-[10px] uppercase tracking-[0.2em] font-semibold mb-1">The Kaushiki River</p>
+                <p className="text-[#b8892a] text-sm uppercase tracking-[0.2em] font-semibold mb-1">The Kaushiki River</p>
                 <p className="text-[#3a2f28] text-sm leading-relaxed">The ceremony was held on the banks of the sacred Kaushiki river — where the sage Vishwamitra and countless Siddhas performed their austerities. This land is considered Prachin Haridwar, the ancient Haridwar of Nepal.</p>
               </div>
             </div>
@@ -171,18 +171,18 @@ export default function HanumadDetail() {
             {/* Phase 1 */}
             <div className="bg-[#f4ede0] rounded-2xl border border-[#e8dece] overflow-hidden">
               <div className="bg-[#2c1a08] px-5 py-4">
-                <p className="text-[#e8c56a] text-[10px] uppercase tracking-[0.25em] font-medium">Opening · April 9–16</p>
+                <p className="text-[#e8c56a] text-sm uppercase tracking-[0.25em] font-medium">Opening · April 9–16</p>
                 <p className="font-['Cormorant_Garamond'] text-xl text-white font-light mt-0.5">The Invitation</p>
               </div>
               <div className="px-5 py-5 space-y-4">
                 <div>
-                  <p className="text-[#b8892a] text-[10px] uppercase tracking-[0.2em] font-semibold">April 9</p>
+                  <p className="text-[#b8892a] text-sm uppercase tracking-[0.2em] font-semibold">April 9</p>
                   <p className="text-[#2c1a08] text-sm font-medium mt-0.5">Kalas Yatra — Holy Procession</p>
                   <p className="text-[#6a5c48] text-xs mt-0.5 leading-relaxed">Opening procession consecrating the sacred ground · 7:30 AM</p>
                 </div>
                 <div className="w-full h-px bg-[#e8dece]" />
                 <div>
-                  <p className="text-[#b8892a] text-[10px] uppercase tracking-[0.2em] font-semibold">April 9–16</p>
+                  <p className="text-[#b8892a] text-sm uppercase tracking-[0.2em] font-semibold">April 9–16</p>
                   <p className="text-[#2c1a08] text-sm font-medium mt-0.5">Shri Ram Katha</p>
                   <p className="text-[#6a5c48] text-xs mt-0.5 leading-relaxed">Eight days of Ram's story by Shree Chandrakala Sakhi · 3–6 PM daily</p>
                 </div>
@@ -192,33 +192,33 @@ export default function HanumadDetail() {
             {/* Phase 2 — highlight */}
             <div className="bg-[#f4ede0] rounded-2xl border-2 border-[#b8892a] overflow-hidden">
               <div className="bg-[#2c1a08] px-5 py-4">
-                <p className="text-[#e8c56a] text-[10px] uppercase tracking-[0.25em] font-medium">Core Ceremony · April 17–23</p>
+                <p className="text-[#e8c56a] text-sm uppercase tracking-[0.25em] font-medium">Core Ceremony · April 17–23</p>
                 <p className="font-['Cormorant_Garamond'] text-xl text-white font-semibold mt-0.5">The Mahayagya</p>
               </div>
               <div className="px-5 py-5 space-y-4">
                 <div>
-                  <p className="text-[#b8892a] text-[10px] uppercase tracking-[0.2em] font-semibold">April 17</p>
+                  <p className="text-[#b8892a] text-sm uppercase tracking-[0.2em] font-semibold">April 17</p>
                   <p className="text-[#2c1a08] text-sm font-medium mt-0.5">Arrival of Bageshwardham Sarkar · Ram Navami · Temple Foundation Stone</p>
                   <p className="text-[#6a5c48] text-xs mt-0.5">Maha-Aarati at 12 PM</p>
                 </div>
                 <div className="w-full h-px bg-[#e8dece]" />
                 <div>
-                  <p className="text-[#b8892a] text-[10px] uppercase tracking-[0.2em] font-semibold">April 17–23 · 6 AM–12 PM</p>
+                  <p className="text-[#b8892a] text-sm uppercase tracking-[0.2em] font-semibold">April 17–23 · 6 AM–12 PM</p>
                   <p className="text-[#2c1a08] text-sm font-medium mt-0.5">Kotihom — 1 Crore Hanuman Mantra Ahutis</p>
                 </div>
                 <div className="w-full h-px bg-[#e8dece]" />
                 <div>
-                  <p className="text-[#b8892a] text-[10px] uppercase tracking-[0.2em] font-semibold">April 17–21 · 2–6 PM</p>
+                  <p className="text-[#b8892a] text-sm uppercase tracking-[0.2em] font-semibold">April 17–21 · 2–6 PM</p>
                   <p className="text-[#2c1a08] text-sm font-medium mt-0.5">Hanuman Katha by Bageshwardham Sarkar</p>
                 </div>
                 <div className="w-full h-px bg-[#e8dece]" />
                 <div>
-                  <p className="text-[#b8892a] text-[10px] uppercase tracking-[0.2em] font-semibold">April 19 · 1 PM</p>
+                  <p className="text-[#b8892a] text-sm uppercase tracking-[0.2em] font-semibold">April 19 · 1 PM</p>
                   <p className="text-[#2c1a08] text-sm font-medium mt-0.5">Divine Darshan — Congregation of Saints</p>
                 </div>
                 <div className="w-full h-px bg-[#e8dece]" />
                 <div>
-                  <p className="text-[#b8892a] text-[10px] uppercase tracking-[0.2em] font-semibold">April 23 · 12 PM</p>
+                  <p className="text-[#b8892a] text-sm uppercase tracking-[0.2em] font-semibold">April 23 · 12 PM</p>
                   <p className="text-[#2c1a08] text-sm font-medium mt-0.5">Purnahuti — Final Offerings · Hanuman Jayanti · Maha-Aarati</p>
                 </div>
               </div>
@@ -227,18 +227,18 @@ export default function HanumadDetail() {
             {/* Phase 3 */}
             <div className="bg-[#f4ede0] rounded-2xl border border-[#e8dece] overflow-hidden">
               <div className="bg-[#2c1a08] px-5 py-4">
-                <p className="text-[#e8c56a] text-[10px] uppercase tracking-[0.25em] font-medium">Closing · April 24–May 9</p>
+                <p className="text-[#e8c56a] text-sm uppercase tracking-[0.25em] font-medium">Closing · April 24–May 9</p>
                 <p className="font-['Cormorant_Garamond'] text-xl text-white font-light mt-0.5">The Integration</p>
               </div>
               <div className="px-5 py-5 space-y-4">
                 <div>
-                  <p className="text-[#b8892a] text-[10px] uppercase tracking-[0.2em] font-semibold">April 24</p>
+                  <p className="text-[#b8892a] text-sm uppercase tracking-[0.2em] font-semibold">April 24</p>
                   <p className="text-[#2c1a08] text-sm font-medium mt-0.5">Phulpati Bisarjan & Farewell</p>
                   <p className="text-[#6a5c48] text-xs mt-0.5 leading-relaxed">Ceremonial immersion of sacred flowers, closing rites</p>
                 </div>
                 <div className="w-full h-px bg-[#e8dece]" />
                 <div>
-                  <p className="text-[#b8892a] text-[10px] uppercase tracking-[0.2em] font-semibold">April 25–May 9</p>
+                  <p className="text-[#b8892a] text-sm uppercase tracking-[0.2em] font-semibold">April 25–May 9</p>
                   <p className="text-[#2c1a08] text-sm font-medium mt-0.5">Guided Mahayog Meditation</p>
                   <p className="text-[#6a5c48] text-xs mt-0.5 leading-relaxed">Extended meditation retreat under Gurudev's personal instructions · Daily</p>
                 </div>
@@ -272,7 +272,7 @@ export default function HanumadDetail() {
           </div>
           {/* World Book of Records callout */}
           <div className="mt-10 bg-[#6b3a00] rounded-2xl p-8 text-center border-2 border-[#b8892a]/50">
-            <p className="text-[#e8c56a] text-[10px] uppercase tracking-[0.3em] font-medium mb-2">World Book of Records</p>
+            <p className="text-[#e8c56a] text-sm uppercase tracking-[0.3em] font-medium mb-2">World Book of Records</p>
             <p className="font-['Cormorant_Garamond'] text-2xl text-white font-light leading-snug">
               The Sankat Mochan Shree Hanumad Mahayagya was recognised with a World Book of Records — Certificate of Excellence, awarded to Jagadguru Mahayogi Siddhababa during the ceremony.
             </p>

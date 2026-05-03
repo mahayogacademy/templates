@@ -161,7 +161,7 @@ export default function CustomTalks() {
                 <div className="w-2 h-2 rounded-full bg-[#b8892a] flex-shrink-0" />
                 <p className="text-[#2c1a08] text-sm font-medium flex-1">{title}</p>
                 {tag && (
-                  <span className="text-[10px] uppercase tracking-[0.2em] px-2.5 py-1 rounded-full bg-[#b8892a]/10 text-[#b8892a] font-medium flex-shrink-0">
+                  <span className="text-sm uppercase tracking-[0.2em] px-2.5 py-1 rounded-full bg-[#b8892a]/10 text-[#b8892a] font-medium flex-shrink-0">
                     {tag}
                   </span>
                 )}

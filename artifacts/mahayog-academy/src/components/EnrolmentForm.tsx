@@ -145,7 +145,7 @@ const MEDITATION_STEPS = [
 const ic = "w-full bg-white/70 border border-[#c8a050]/40 text-[#3d3830] placeholder-[#b0956a] rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#b8892a] transition-colors";
 const sc = `${ic} appearance-none`;
 const lc = "block font-['Cormorant_Garamond'] text-base font-semibold text-[#7a4a08] mb-2 leading-snug";
-const plc = "block text-[10px] uppercase tracking-[0.2em] text-[#7a4a08] mb-1.5 font-medium";
+const plc = "block text-sm uppercase tracking-[0.2em] text-[#7a4a08] mb-1.5 font-medium";
 const hc = "font-['Cormorant_Garamond'] text-xl font-light text-[#3d2008] mb-2";
 const hint = "text-xs text-[#7a5a30]";
 
@@ -393,7 +393,7 @@ export default function EnrolmentForm({ program }: { program: Program }) {
             <div className="space-y-4">
               {[{ label: "Nepal", list: NEPAL_CENTERS_LIST }, { label: "International", list: INTL_CENTERS_LIST }].map(group => (
                 <div key={group.label}>
-                  <p className="text-[10px] uppercase tracking-[0.2em] text-[#b8892a] font-medium mb-2">{group.label}</p>
+                  <p className="text-sm uppercase tracking-[0.2em] text-[#b8892a] font-medium mb-2">{group.label}</p>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     {group.list.map(c => (
                       <button

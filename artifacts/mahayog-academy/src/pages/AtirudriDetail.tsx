@@ -193,7 +193,7 @@ export default function AtirudriDetail() {
                   { label: "Presiding Master", value: "Jagadguru Mahayogi Siddhababa" },
                 ].map(({ label, value }) => (
                   <div key={label} className="rounded-xl bg-[#f4ede0] border border-[#d8cebb] p-4">
-                    <p className="text-[10px] uppercase tracking-[0.15em] text-[#b8892a] font-medium mb-1">{label}</p>
+                    <p className="text-sm uppercase tracking-[0.15em] text-[#b8892a] font-medium mb-1">{label}</p>
                     <p className="text-[#2c1a08] text-sm font-light leading-snug">{value}</p>
                   </div>
                 ))}

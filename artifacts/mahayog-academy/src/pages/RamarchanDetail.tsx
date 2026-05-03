@@ -106,7 +106,7 @@ export default function RamarchanDetail() {
           ].map(({ value, label }) => (
             <div key={label}>
               <p className="font-['Cormorant_Garamond'] text-3xl md:text-4xl text-[#e8c56a] font-light">{value}</p>
-              <p className="text-[#c8a96a]/70 text-[10px] uppercase tracking-[0.2em] mt-1">{label}</p>
+              <p className="text-[#c8a96a]/70 text-sm uppercase tracking-[0.2em] mt-1">{label}</p>
             </div>
           ))}
         </div>
@@ -166,15 +166,15 @@ export default function RamarchanDetail() {
             </div>
             <div className="space-y-4">
               <div className="bg-[#faf9f6] rounded-xl border border-[#e8dece] p-5">
-                <p className="text-[#b8892a] text-[10px] uppercase tracking-[0.2em] font-semibold mb-1">The Name</p>
+                <p className="text-[#b8892a] text-sm uppercase tracking-[0.2em] font-semibold mb-1">The Name</p>
                 <p className="text-[#3a2f28] text-sm leading-relaxed">In the Vedic tradition, the name of Ram is considered equal in power to the thousand names of Vishnu. Tulsidas wrote: <em>"Ram naam manas kī chutakī" — the name Ram is the key that unlocks the mind."</em></p>
               </div>
               <div className="bg-[#faf9f6] rounded-xl border border-[#e8dece] p-5">
-                <p className="text-[#b8892a] text-[10px] uppercase tracking-[0.2em] font-semibold mb-1">The Number</p>
+                <p className="text-[#b8892a] text-sm uppercase tracking-[0.2em] font-semibold mb-1">The Number</p>
                 <p className="text-[#3a2f28] text-sm leading-relaxed">108 is the sacred number of completion in Vedic cosmology — the number of beads on the mala, the number of Upanishads, the ratio between Earth, Sun, and Moon.</p>
               </div>
               <div className="bg-[#faf9f6] rounded-xl border border-[#e8dece] p-5">
-                <p className="text-[#b8892a] text-[10px] uppercase tracking-[0.2em] font-semibold mb-1">The Purpose</p>
+                <p className="text-[#b8892a] text-sm uppercase tracking-[0.2em] font-semibold mb-1">The Purpose</p>
                 <p className="text-[#3a2f28] text-sm leading-relaxed">Performed for the welfare of all humanity — peace, liberation, the healing of collective sorrow — and as an act of pure gratitude for the life and sacrifice of Maryada Purushottam Shri Ram.</p>
               </div>
             </div>

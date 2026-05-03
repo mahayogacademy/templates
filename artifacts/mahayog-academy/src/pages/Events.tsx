@@ -242,7 +242,7 @@ function CalendarView({ events }: { events: AnyEvent[] }) {
       <div className="rounded-2xl border border-[#e8dece] overflow-hidden bg-white/60">
         <div className="grid grid-cols-7 border-b border-[#e8dece]">
           {DAY_NAMES.map(d => (
-            <div key={d} className="py-2 text-center text-[10px] uppercase tracking-[0.15em] text-[#9a8f84] font-medium">{d}</div>
+            <div key={d} className="py-2 text-center text-sm uppercase tracking-[0.15em] text-[#9a8f84] font-medium">{d}</div>
           ))}
         </div>
         <div className="grid grid-cols-7">
@@ -285,7 +285,7 @@ function CalendarView({ events }: { events: AnyEvent[] }) {
         <div className="rounded-xl border border-[#e8d8b8] bg-[#fdf6ec] p-5 space-y-3">
           {selectedEvents.map(ev => (
             <div key={ev.id}>
-              <p className="text-[10px] uppercase tracking-[0.2em] text-[#b8892a] font-medium mb-1">{ev.kindLabel}</p>
+              <p className="text-sm uppercase tracking-[0.2em] text-[#b8892a] font-medium mb-1">{ev.kindLabel}</p>
               <p className="font-['Cormorant_Garamond'] text-xl font-semibold text-[#2c1a08] mb-1">{ev.title}</p>
               {ev.compact ? (
                 <p className="text-xs text-[#7a6e5a]">{ev.date} · Nepal Standard Time</p>
@@ -493,7 +493,7 @@ export default function Events() {
                           {/* Date box, same as compact tiles */}
                           <div className="shrink-0 w-16 flex flex-col items-center justify-center py-5 px-2 border-r border-[#ece5d8]">
                             <span className="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#2c1a08] leading-none">{dateNum}</span>
-                            <span className="text-[10px] uppercase tracking-[0.15em] text-[#b8892a] font-semibold leading-none mt-1">{dateMon}</span>
+                            <span className="text-sm uppercase tracking-[0.15em] text-[#b8892a] font-semibold leading-none mt-1">{dateMon}</span>
                           </div>
                           {/* Content */}
                           <div className="flex-1 px-5 py-4 flex flex-col justify-center">
@@ -539,7 +539,7 @@ export default function Events() {
                           {/* Date box */}
                           <div className="shrink-0 w-16 flex flex-col items-center justify-center py-5 px-2 border-r border-[#ece5d8]">
                             <span className="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#2c1a08] leading-none">{dateNum}</span>
-                            <span className="text-[10px] uppercase tracking-[0.15em] text-[#b8892a] font-semibold leading-none mt-1">{dateMon}</span>
+                            <span className="text-sm uppercase tracking-[0.15em] text-[#b8892a] font-semibold leading-none mt-1">{dateMon}</span>
                           </div>
 
                           {/* Text */}
