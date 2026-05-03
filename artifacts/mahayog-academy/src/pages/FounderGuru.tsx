@@ -348,7 +348,7 @@ export default function FounderGuru() {
                       />
                     ))}
                     {/* Caption */}
-                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent px-4 pb-4 pt-10">
+                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/95 via-black/70 to-transparent px-4 pb-4 pt-14">
                       <p className="text-white text-sm font-light tracking-wide leading-snug">{JAGADGURU_SLIDES[jagadguruSlide].caption}</p>
                     </div>
                     {/* Prev/Next */}
