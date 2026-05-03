@@ -83,10 +83,10 @@ export default function Lineage() {
       {/* ── INTRO + PARAMPARA CHAIN (shared bg) ── */}
       <section className="px-6 bg-[#f2ead8]">
         <div className="max-w-2xl mx-auto text-center py-16">
-          <p className="text-lg text-[#5a5248] leading-relaxed mb-5">
+          <p className="text-base text-[#5a5248] leading-relaxed mb-5">
             Himalayan Siddha Mahayog arises from a living lineage of Himalayan Siddha Yogis who refined a precise science of meditation and inner awakening through direct experience.
           </p>
-          <p className="text-lg text-[#5a5248] leading-relaxed">
+          <p className="text-base text-[#5a5248] leading-relaxed">
             For thousands of years, this knowledge has been transmitted from realized teacher to prepared student, preserving wisdom with clarity, responsibility, and depth of practice. This lineage is currently entrusted to His Holiness Jagadguru Ramanandacharya Swami Ramakrishnacharya Ji Maharaj (Mahayogi Siddhababa), as the present Āchārya.
           </p>
         </div>
