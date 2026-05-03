@@ -296,7 +296,7 @@ const FAQ_GROUPS: { theme: string; items: { q: string; a: string }[] }[] = [
       },
       {
         q: "What should I wear or bring?",
-        a: "Comfortable, loose-fitting clothing in natural fabrics is recommended. White or soft, neutral tones are traditional for meditation practice, though not required. A shawl or light wrap can be useful for seated sessions. All essential materials will be provided by the center.",
+        a: "Comfortable, loose-fitting clothing in natural fabrics is recommended. White or soft, neutral tones are traditional for meditation practice, though not required. A shawl or light wrap can be useful for seated sessions.\n\nYou may also wish to bring an asana — a personal meditation mat or seat, traditionally made from natural materials such as wool, cotton, or kusha grass. In yogic practice, an asana is kept solely for meditation and helps build and preserve one's personal energy field over time. All other essential materials will be provided by the center.",
       },
       {
         q: "What languages are sessions conducted in?",
