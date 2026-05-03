@@ -590,10 +590,10 @@ export default function FounderGuru() {
                 { label: "Green Revolution for Nepal's agricultural empowerment and independence", note: "Ecology",             img: "initiative-green-revolution.png", pos: "center 70%", href: null },
               ];
 
-              const Row = ({ item }: { item: Initiative }) => {
+              const Card = ({ item }: { item: Initiative }) => {
                 const inner = (
-                  <div className="flex items-center gap-5 bg-white border border-[#e8dece] rounded-2xl p-4 group hover:border-[#b8892a]/40 hover:shadow-sm transition-all duration-300">
-                    <div className="shrink-0 w-20 h-20 rounded-xl overflow-hidden border border-[#e8dece]">
+                  <div className="flex flex-col bg-white border border-[#e8dece] rounded-2xl overflow-hidden group hover:border-[#b8892a]/40 hover:shadow-md transition-all duration-300">
+                    <div className="h-40 overflow-hidden shrink-0">
                       <img
                         src={`${b}images/${item.img}`}
                         alt=""
@@ -602,11 +602,11 @@ export default function FounderGuru() {
                         style={{ objectPosition: item.pos ?? "center center" }}
                       />
                     </div>
-                    <div className="flex-1 min-w-0">
-                      <p className="text-xs uppercase tracking-[0.2em] text-[#b8892a] font-semibold mb-1">{item.note}</p>
-                      <p className="text-base font-semibold text-[#3d3830] leading-snug mb-2">{item.label}</p>
+                    <div className="p-5 flex flex-col flex-1">
+                      <p className="text-xs uppercase tracking-[0.2em] text-[#b8892a] font-semibold mb-2">{item.note}</p>
+                      <p className="text-base font-semibold text-[#3d3830] leading-snug flex-1">{item.label}</p>
                       {item.href && (
-                        <span className="inline-flex items-center gap-1.5 text-sm text-[#b8892a] font-medium">
+                        <span className="mt-3 inline-flex items-center gap-1.5 text-sm text-[#b8892a] font-medium">
                           Learn more <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" strokeWidth={1.5} />
                         </span>
                       )}
@@ -626,8 +626,8 @@ export default function FounderGuru() {
               };
 
               return (
-                <div className="flex flex-col gap-3">
-                  {ITEMS.map((item, i) => <Row key={i} item={item} />)}
+                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                  {ITEMS.map((item, i) => <Card key={i} item={item} />)}
                 </div>
               );
             })()}
