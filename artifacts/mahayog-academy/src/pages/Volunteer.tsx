@@ -140,14 +140,14 @@ export default function Volunteer() {
 
               {/* What you receive */}
               <div className="bg-[#f4ede0] rounded-2xl px-6 py-5 space-y-3 mt-2">
-                <p className="text-[#b8892a] text-xs uppercase tracking-[0.25em] font-medium">What Volunteers Receive</p>
+                <p className="text-[#b8892a] text-sm uppercase tracking-[0.25em] font-medium">What Volunteers Receive</p>
                 {[
                   "Deepened connection to authentic Vedic wisdom",
                   "Personal guidance and mentorship from Academy teachers",
                   "Access to teachings, courses, and retreat programmes",
                   "A global community of sincere spiritual seekers",
                 ].map((item) => (
-                  <div key={item} className="flex items-start gap-2 text-sm text-[#4a3728]">
+                  <div key={item} className="flex items-start gap-2 text-base text-[#4a3728]">
                     <div className="w-1.5 h-1.5 rounded-full bg-[#b8892a] mt-1.5 flex-shrink-0" />
                     <p>{item}</p>
                   </div>
