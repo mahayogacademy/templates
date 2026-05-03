@@ -1019,7 +1019,7 @@ export default function MahayogMeditation() {
               <path d="M5 12h14M12 5l7 7-7 7"/>
             </svg>
           </Link>
-          <p className="text-[#7a6248] text-xs mt-6 tracking-wide">No prior experience required · Open to all seekers · No fee</p>
+          <p className="text-[#7a6248] text-base mt-6 tracking-wide">No prior experience required · Open to all seekers · No fee</p>
         </div>
       </section>
 
