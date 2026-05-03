@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from "react";
+import { createPortal } from "react-dom";
 import { Link } from "wouter";
 import { ChevronDown, UserCircle2, LogOut, Menu, X } from "lucide-react";
 import { useUser, useClerk, Show } from "@clerk/react";
@@ -258,9 +259,9 @@ export default function Nav() {
         </button>
       </div>
 
-      {/* ── Mobile drawer ── */}
-      {mobileOpen && (
-        <div className="lg:hidden fixed inset-0 z-[60]">
+      {/* ── Mobile drawer (portaled to body to escape nav's backdrop-filter containing block) ── */}
+      {mobileOpen && createPortal(
+        <div className="lg:hidden fixed inset-0 z-[100]">
           {/* backdrop */}
           <div
             className="absolute inset-0 bg-[#1a0f05]/60 backdrop-blur-sm"
@@ -346,7 +347,8 @@ export default function Nav() {
               </div>
             </div>
           </div>
-        </div>
+        </div>,
+        document.body
       )}
     </nav>
   );
