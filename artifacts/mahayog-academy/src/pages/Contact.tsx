@@ -245,13 +245,13 @@ export default function Contact() {
                   {errors.message && <p className="mt-1.5 text-sm text-red-500">{errors.message}</p>}
                 </div>
 
-                <div className="flex items-center justify-between gap-4 pt-2">
-                  <p className="text-sm text-[#9a8f84] leading-relaxed max-w-xs">
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 pt-2">
+                  <p className="text-sm text-[#9a8f84] leading-relaxed md:max-w-xs">
                     All fields marked <span className="text-[#b8892a]">*</span> are required. Your details are kept private.
                   </p>
                   <button
                     type="submit"
-                    className="shrink-0 inline-flex items-center gap-2 bg-[#b8892a] hover:bg-[#9d7422] text-white text-base px-7 py-3 rounded-full tracking-wider transition-colors duration-200"
+                    className="shrink-0 inline-flex items-center justify-center gap-2 bg-[#b8892a] hover:bg-[#9d7422] text-white text-base px-7 py-3 rounded-full tracking-wider transition-colors duration-200"
                   >
                     Send Message
                     <ArrowRight className="w-4 h-4" strokeWidth={1.5} />
