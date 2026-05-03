@@ -292,7 +292,7 @@ const FAQ_GROUPS: { theme: string; items: { q: string; a: string }[] }[] = [
       },
       {
         q: "Are there health or age requirements?",
-        a: "There is no strict age minimum, though participants under 18 may be asked to attend with a parent or guardian. The voluntary health section in the registration form helps the instructor be aware of any relevant conditions so appropriate support can be offered.\n\nThose with significant medical or psychiatric conditions are encouraged to consult a healthcare provider before attending, and to share relevant details in the health section of the form.",
+        a: "There is no strict age minimum, though participants under 18 may be asked to have the consent of their parent or guardian. The voluntary health section in the registration form helps the instructor be aware of any relevant conditions so appropriate support can be offered.\n\nThose with significant medical or psychiatric conditions are encouraged to consult a healthcare provider before attending, and to share relevant details in the health section of the form.",
       },
       {
         q: "What should I wear or bring?",
