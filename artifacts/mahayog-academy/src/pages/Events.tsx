@@ -300,9 +300,8 @@ function CalendarView({ events }: { events: AnyEvent[] }) {
               {idx > 0 && <div className="border-t border-[#e8d8b8] my-4" />}
               <p className="text-sm uppercase tracking-[0.2em] text-[#b8892a] font-medium mb-1">{ev.kindLabel}</p>
               <p className="font-['Cormorant_Garamond'] text-xl font-semibold text-[#2c1a08] mb-1">{ev.title}</p>
-              {ev.compact ? (
-                <p className="text-sm text-[#7a6e5a]">{ev.date} · Nepal Standard Time</p>
-              ) : (
+              <p className="text-sm text-[#7a6e5a] mb-1">{ev.date}{ev.compact ? " · Nepal Standard Time" : ""}</p>
+              {!ev.compact && (
                 <>
                   <div className="flex flex-wrap gap-3 mb-2">
                     {ev.time && <span className="flex items-center gap-1 text-sm text-[#7a6e5a]"><Clock size={13} className="text-[#b8892a]" />{ev.time}</span>}
