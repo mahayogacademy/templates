@@ -579,43 +579,21 @@ export default function FounderGuru() {
             </p>
 
             {(() => {
-              type Initiative = { label: string; note: string; img: string; pos?: string; href: string | null; wide?: boolean };
+              type Initiative = { label: string; note: string; img: string; pos?: string; href: string | null };
               const ITEMS: Initiative[] = [
-                { label: "Himalayan Siddha Mahayog Meditation", note: "Inner Awakening", img: "initiative-meditation.png", pos: "center 60%", href: "/meditation" },
-                { label: "Restoration of the Cow as Nepal's National Animal",              note: "Cultural & Ecological Advocacy", img: "ashram-cows-sunset.jpg",          pos: "center 60%",   href: null },
-                { label: "Jagadguru Shriramanandacharya Gurukul (Grades 6–12)",           note: "Education",                     img: "initiative-gurukul.png",          pos: "center 70%",   href: "/gurukul", wide: true },
-                { label: "A historic Ram Temple in Nepal",                                 note: "Sacred Infrastructure",          img: "ram-mandir-1.jpg",                pos: "center 60%",   href: "/projects#project-02" },
-                { label: "108 Hanuman Temples across Nepal",                              note: "Sacred Infrastructure",          img: "initiative-hanuman-temples.jpg",  pos: "center 60%",   href: "/projects#project-01" },
-                { label: "Nepal's first Ayurveda University",                             note: "Education",                     img: "initiative-ayurveda.png",         pos: "center 70%",   href: null },
-                { label: "Green Revolution for Nepal's agricultural empowerment and independence", note: "Ecology",             img: "initiative-green-revolution.png", pos: "center 70%",   href: null },
+                { label: "Himalayan Siddha Mahayog Meditation",                            note: "Inner Awakening",               img: "initiative-meditation.png",       pos: "center 60%", href: "/meditation" },
+                { label: "Restoration of the Cow as Nepal's National Animal",              note: "Cultural & Ecological Advocacy", img: "ashram-cows-sunset.jpg",          pos: "center 60%", href: null },
+                { label: "Jagadguru Shriramanandacharya Gurukul (Grades 6–12)",           note: "Education",                     img: "initiative-gurukul.png",          pos: "center 70%", href: "/gurukul" },
+                { label: "A historic Ram Temple in Nepal",                                 note: "Sacred Infrastructure",          img: "ram-mandir-1.jpg",                pos: "center 60%", href: "/projects#project-02" },
+                { label: "108 Hanuman Temples across Nepal",                              note: "Sacred Infrastructure",          img: "initiative-hanuman-temples.jpg",  pos: "center 60%", href: "/projects#project-01" },
+                { label: "Nepal's first Ayurveda University",                             note: "Education",                     img: "initiative-ayurveda.png",         pos: "center 70%", href: null },
+                { label: "Green Revolution for Nepal's agricultural empowerment and independence", note: "Ecology",             img: "initiative-green-revolution.png", pos: "center 70%", href: null },
               ];
 
-              const Card = ({ item, wide = false, overlay = false }: { item: Initiative; wide?: boolean; overlay?: boolean }) => {
-                const overlayInner = (
-                  <div className="relative h-56 overflow-hidden rounded-xl">
-                    <img
-                      src={`${b}images/${item.img}`}
-                      alt=""
-                      aria-hidden
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                      style={{ objectPosition: item.pos ?? "center center" }}
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#0f0703]/95 via-[#0f0703]/40 to-transparent" />
-                    <div className="absolute inset-x-0 bottom-0 h-44 bg-gradient-to-t from-[#0f0703]/95 to-transparent" />
-                    <div className="absolute bottom-0 left-0 right-0 p-5">
-                      <p className="font-['Cormorant_Garamond'] text-2xl font-semibold text-white leading-snug mb-1">{item.label}</p>
-                      <p className="text-xs uppercase tracking-[0.25em] text-[#e8c56a] font-semibold">{item.note}</p>
-                      {item.href && (
-                        <span className="mt-2 inline-flex items-center gap-1.5 text-sm text-white/80 font-medium">
-                          Learn more <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" strokeWidth={1.5} />
-                        </span>
-                      )}
-                    </div>
-                  </div>
-                );
-                const standardInner = (
-                  <>
-                    <div className={`${wide ? "h-48" : "h-36"} overflow-hidden shrink-0`}>
+              const Row = ({ item }: { item: Initiative }) => {
+                const inner = (
+                  <div className="flex items-center gap-5 bg-white border border-[#e8dece] rounded-2xl p-4 group hover:border-[#b8892a]/40 hover:shadow-sm transition-all duration-300">
+                    <div className="shrink-0 w-20 h-20 rounded-xl overflow-hidden border border-[#e8dece]">
                       <img
                         src={`${b}images/${item.img}`}
                         alt=""
@@ -624,53 +602,32 @@ export default function FounderGuru() {
                         style={{ objectPosition: item.pos ?? "center center" }}
                       />
                     </div>
-                    <div className="p-5 flex flex-col flex-1">
-                      <p className="text-sm uppercase tracking-[0.2em] text-[#b8892a] font-semibold mb-2">{item.note}</p>
-                      <p className="text-base font-bold text-[#3d3830] leading-snug flex-1">{item.label}</p>
+                    <div className="flex-1 min-w-0">
+                      <p className="text-xs uppercase tracking-[0.2em] text-[#b8892a] font-semibold mb-1">{item.note}</p>
+                      <p className="text-base font-semibold text-[#3d3830] leading-snug mb-2">{item.label}</p>
                       {item.href && (
-                        <span className="mt-3 inline-flex items-center gap-2 text-sm text-[#b8892a] font-medium tracking-wide">
-                          Learn more <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" strokeWidth={1.5} />
+                        <span className="inline-flex items-center gap-1.5 text-sm text-[#b8892a] font-medium">
+                          Learn more <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" strokeWidth={1.5} />
                         </span>
                       )}
                     </div>
-                  </>
+                  </div>
                 );
-                const inner = overlay ? overlayInner : standardInner;
-                const baseClass = overlay
-                  ? `rounded-xl overflow-hidden group`
-                  : `flex flex-col bg-[#faf9f6] border border-[#e8dece] rounded-xl overflow-hidden group`;
-                const clickClass = `cursor-pointer hover:shadow-md transition-all duration-300`;
-                if (!item.href) return <div className={baseClass}>{inner}</div>;
+                if (!item.href) return <div>{inner}</div>;
                 const [path, anchor] = item.href.split('#');
                 if (anchor) return (
-                  <div className={`${baseClass} ${clickClass}`} onClick={() => goToAnchor(path, anchor)}>{inner}</div>
+                  <div className="cursor-pointer" onClick={() => goToAnchor(path, anchor)}>{inner}</div>
                 );
                 return (
                   <Link href={item.href} onClick={() => window.scrollTo(0, 0)}>
-                    <div className={`${baseClass} ${clickClass}`}>{inner}</div>
+                    <div className="cursor-pointer">{inner}</div>
                   </Link>
                 );
               };
 
               return (
-                <div className="flex flex-col gap-4">
-                  {/* Row 1: two cards */}
-                  <div className="grid sm:grid-cols-2 gap-4">
-                    <Card item={ITEMS[0]} overlay />
-                    <Card item={ITEMS[1]} overlay />
-                  </div>
-                  {/* Row 2: one full-width card */}
-                  <Card item={ITEMS[2]} overlay wide />
-                  {/* Row 3: two cards */}
-                  <div className="grid sm:grid-cols-2 gap-4">
-                    <Card item={ITEMS[3]} overlay />
-                    <Card item={ITEMS[4]} overlay />
-                  </div>
-                  {/* Row 4: two cards */}
-                  <div className="grid sm:grid-cols-2 gap-4">
-                    <Card item={ITEMS[5]} overlay />
-                    <Card item={ITEMS[6]} overlay />
-                  </div>
+                <div className="flex flex-col gap-3">
+                  {ITEMS.map((item, i) => <Row key={i} item={item} />)}
                 </div>
               );
             })()}
