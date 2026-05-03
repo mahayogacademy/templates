@@ -850,6 +850,10 @@ export default function MahayogMeditation() {
               These changes happen gradually and organically through awakened Kundalini and the Guru's grace.
             </p>
           </div>
+          <p className="text-sm text-[#a89880] text-center mb-8 flex items-center justify-center gap-2">
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M8 2v12M2 8h12" stroke="#a89880" strokeWidth="1.5" strokeLinecap="round"/></svg>
+            Click any topic to learn more
+          </p>
           <BenefitsRadial />
         </div>
       </section>
