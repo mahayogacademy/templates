@@ -834,85 +834,22 @@ export default function FounderGuru() {
 
             <div className="h-px bg-[#e8dece] mb-8" />
 
-            <p className="text-base text-[#5a5248] leading-relaxed max-w-2xl mb-10">
-              Conversations with His Holiness on spiritual practice, Vedic wisdom, and the path to inner realization — drawn from television appearances, public dialogues, and satsang recordings.
-            </p>
-
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-              {[
-                {
-                  videoId: "dQw4w9WgXcQ",
-                  title: "The Nature of Mahayog Meditation",
-                  channel: "Spiritual Dialogue",
-                  duration: "42 min",
-                },
-                {
-                  videoId: "dQw4w9WgXcQ",
-                  title: "Shaktipat: The Transmission of Awakening",
-                  channel: "Nepal Television",
-                  duration: "28 min",
-                },
-                {
-                  videoId: "dQw4w9WgXcQ",
-                  title: "Bhu Samadhi: Science and the Yogic State",
-                  channel: "Himalayan Satsang",
-                  duration: "35 min",
-                },
-                {
-                  videoId: "dQw4w9WgXcQ",
-                  title: "Living the Vedic Path in Modern Times",
-                  channel: "Dharma Talks",
-                  duration: "51 min",
-                },
-                {
-                  videoId: "dQw4w9WgXcQ",
-                  title: "Seva, Sumiran, Samarpan — The Three Pillars",
-                  channel: "Siddha Ashram",
-                  duration: "39 min",
-                },
-                {
-                  videoId: "dQw4w9WgXcQ",
-                  title: "On the Guru-Disciple Relationship",
-                  channel: "Vedanta Conversations",
-                  duration: "44 min",
-                },
-              ].map((item, i) => (
-                <a
-                  key={i}
-                  href={`https://www.youtube.com/watch?v=${item.videoId}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex flex-col bg-white border border-[#e8dece] rounded-2xl overflow-hidden group hover:border-[#b8892a]/40 hover:shadow-md transition-all duration-300"
-                >
-                  {/* Thumbnail */}
-                  <div className="relative h-40 overflow-hidden shrink-0 bg-[#1a0f05]">
-                    <img
-                      src={`https://img.youtube.com/vi/${item.videoId}/hqdefault.jpg`}
-                      alt=""
-                      aria-hidden
-                      className="w-full h-full object-cover opacity-70 transition-opacity duration-300 group-hover:opacity-80"
-                    />
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="w-12 h-12 rounded-full bg-white/20 backdrop-blur-sm border border-white/30 flex items-center justify-center group-hover:bg-[#b8892a]/80 transition-colors duration-300">
-                        <svg className="w-5 h-5 text-white ml-0.5" fill="currentColor" viewBox="0 0 24 24">
-                          <path d="M8 5v14l11-7z" />
-                        </svg>
-                      </div>
-                    </div>
-                    <div className="absolute bottom-2 right-2 bg-black/70 text-white text-xs px-2 py-0.5 rounded font-medium tracking-wide">
-                      {item.duration}
-                    </div>
-                  </div>
-                  {/* Text */}
-                  <div className="p-4 flex flex-col flex-1">
-                    <p className="text-xs uppercase tracking-[0.2em] text-[#b8892a] font-semibold mb-2">{item.channel}</p>
-                    <p className="text-base font-semibold text-[#3d3830] leading-snug line-clamp-2 flex-1">{item.title}</p>
-                    <span className="mt-3 inline-flex items-center gap-1.5 text-sm text-[#b8892a] font-medium">
-                      Watch <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" strokeWidth={1.5} />
-                    </span>
-                  </div>
-                </a>
-              ))}
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-8 bg-white border border-[#e8dece] rounded-2xl p-8">
+              <div className="max-w-xl">
+                <p className="text-base text-[#5a5248] leading-relaxed mb-4">
+                  Conversations with His Holiness on spiritual practice, Vedic wisdom, and the path to inner realization — drawn from television appearances, public dialogues, and satsang recordings.
+                </p>
+                <p className="text-base text-[#5a5248] leading-relaxed">
+                  Topics include Mahayog Meditation, Shaktipat, the nature of samādhi, Vedāntic philosophy, and living the Vedic path in modern life.
+                </p>
+              </div>
+              <div className="shrink-0">
+                <Link href="/teachings" onClick={() => window.scrollTo(0, 0)}>
+                  <span className="inline-flex items-center gap-2 px-7 py-3 bg-[#b8892a] text-white text-sm rounded-full hover:bg-[#9d7422] transition-colors cursor-pointer whitespace-nowrap">
+                    Explore Teachings <ArrowRight className="w-4 h-4" strokeWidth={1.5} />
+                  </span>
+                </Link>
+              </div>
             </div>
 
           </div>
