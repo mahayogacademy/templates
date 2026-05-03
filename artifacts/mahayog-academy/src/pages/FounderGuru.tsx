@@ -396,7 +396,7 @@ export default function FounderGuru() {
           </div>
 
           {/* ── MEET SIDDHABABA CTA ── */}
-          <div className="mb-12 rounded-2xl border border-[#e8dece] bg-white overflow-hidden">
+          <div className="mb-12 rounded-2xl border border-[#e8dece] bg-[#f5efe3] overflow-hidden">
             <div className="flex flex-col md:flex-row">
               <div className="flex-1 flex flex-col justify-center px-8 py-8">
                 <p className="text-sm uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-2">Darshan</p>
