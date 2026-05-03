@@ -108,7 +108,7 @@ export default function Lineage() {
             <p className="text-sm uppercase tracking-[0.35em] text-[#b8892a] font-semibold mb-2">The Disciplic Succession</p>
             <h2 className="font-['Cormorant_Garamond'] text-3xl font-light text-[#3d3830]">Guru Paramparā</h2>
             <div className="h-px w-12 bg-[#b8892a]/30 mx-auto mt-4" />
-            <p className="text-sm text-[#a89880] italic mt-3">Read left → right, top to bottom</p>
+            <p className="text-sm text-[#a89880] italic mt-3"><span className="hidden md:inline">Read left → right, top to bottom</span><span className="md:hidden">Read top to bottom</span></p>
           </div>
 
           {/* Rows */}
@@ -116,11 +116,19 @@ export default function Lineage() {
             {rows.map((row, rowIdx) => (
               <div key={rowIdx} className="flex flex-col items-center w-full">
                 {/* Row of 2 gurus with arrow */}
-                <div className="flex items-center justify-center gap-4 w-full">
+                <div className="flex flex-col md:flex-row items-center justify-center gap-4 w-full">
                   <GuruCard guru={row[0]} />
 
-                  {/* Horizontal arrow */}
-                  <div className="flex items-center gap-1 shrink-0 pb-10">
+                  {/* Connector between two cards: vertical on mobile, horizontal on desktop */}
+                  <div className="md:hidden flex flex-col items-center my-3">
+                    <div className="w-px h-5 bg-[#c9a55a]/40" />
+                    <GoldDiamond />
+                    <div className="w-px h-5 bg-[#c9a55a]/40" />
+                    <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+                      <path d="M6 8L1 1h10L6 8z" fill="#c9a55a" fillOpacity="0.5"/>
+                    </svg>
+                  </div>
+                  <div className="hidden md:flex items-center gap-1 shrink-0 pb-10">
                     <div className="h-px w-8 bg-[#c9a55a]/60" />
                     <svg width="20" height="12" viewBox="0 0 20 12" fill="none">
                       <path d="M1 6h15M12 1l5 5-5 5" stroke="#b8892a" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
