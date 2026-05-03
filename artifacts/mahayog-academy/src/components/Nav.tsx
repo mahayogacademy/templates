@@ -77,7 +77,7 @@ function LanguageSwitcher({ variant = "desktop" }: { variant?: "desktop" | "mobi
   }
 
   return (
-    <div className="flex items-center gap-1 ml-2">
+    <div className="flex items-center gap-1.5 ml-2">
       {SUPPORTED_LANGUAGES.map((l) => {
         const active = current === l.code;
         return (
@@ -85,10 +85,10 @@ function LanguageSwitcher({ variant = "desktop" }: { variant?: "desktop" | "mobi
             key={l.code}
             onClick={() => i18n.changeLanguage(l.code)}
             aria-label={`Switch language to ${l.nativeLabel}`}
-            className={`px-2 py-1 text-xs rounded-md transition-colors cursor-pointer min-w-[2.25rem] ${
+            className={`px-3 py-1.5 text-sm font-semibold rounded-md transition-colors cursor-pointer min-w-[2.75rem] border ${
               active
-                ? "bg-[#b8892a] text-white"
-                : "text-[#5a5248] hover:bg-[#eddfc8] hover:text-[#7a5518]"
+                ? "bg-[#b8892a] text-white border-[#b8892a]"
+                : "text-[#5a5248] border-[#d4c4b0]/60 hover:bg-[#eddfc8] hover:text-[#7a5518] hover:border-[#b8892a]"
             }`}
           >
             {l.label}
