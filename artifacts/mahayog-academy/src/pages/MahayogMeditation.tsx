@@ -368,7 +368,7 @@ const FAQ_GROUPS: { theme: string; items: { q: string; a: string }[] }[] = [
       },
       {
         q: "Is there ongoing support after initiation?",
-        a: "Yes. Mahayog is not a one-time event, it is a living practice. Your local center provides regular satsang (community gatherings) and access to the Guru's teachings. International participants are also supported through online satsang and the global Mahayog network.",
+        a: "Yes. Mahayog is not a one-time event, it is a living practice. Your local center provides regular satsang (community gatherings) and access to the Guru's teachings.",
       },
     ],
   },
