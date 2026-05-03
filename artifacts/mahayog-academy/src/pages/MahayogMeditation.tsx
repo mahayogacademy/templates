@@ -580,7 +580,7 @@ function BenefitsRadial() {
         <div className="relative flex items-center justify-center">
           <div className="absolute inset-0 rounded-full bg-[#f2ead8] scale-90 blur-sm opacity-60" />
           <img
-            src={`${b}images/meditation-radial.png`}
+            src={`${b}images/meditation-center.png`}
             alt="Meditation"
             className="relative w-full object-contain drop-shadow-md"
           />
