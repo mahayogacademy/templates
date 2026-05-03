@@ -129,7 +129,7 @@ export default function FounderGuru() {
             style={{ objectPosition: "center 40%" }}
           />
           <div className="absolute inset-0 bg-[#1a0f05]/55" />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#1a0f05]/60 via-[#1a0f05]/30 to-[#faf9f6]" />
+          <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-b from-transparent to-[#faf9f6]" />
         </div>
         <div className="relative z-10 text-center px-6">
           <div className="flex items-center justify-center gap-3 mb-5">
