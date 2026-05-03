@@ -581,13 +581,13 @@ export default function FounderGuru() {
             {(() => {
               type Initiative = { label: string; note: string; img: string; pos?: string; href: string | null; wide?: boolean };
               const ITEMS: Initiative[] = [
-                { label: "Himalayan Siddha Mahayog Meditation", note: "Inner Awakening", img: "initiative-meditation.png", href: "/meditation" },
-                { label: "Restoration of the Cow as Nepal's National Animal",              note: "Cultural & Ecological Advocacy", img: "ashram-cows-sunset.jpg",          href: null },
-                { label: "Jagadguru Shriramanandacharya Gurukul (Grades 6–12)",           note: "Education",                     img: "initiative-gurukul.png",          href: "/gurukul", wide: true },
-                { label: "A historic Ram Temple in Nepal",                                 note: "Sacred Infrastructure",          img: "ram-mandir-1.jpg",                href: "/projects#project-02" },
-                { label: "108 Hanuman Temples across Nepal",                              note: "Sacred Infrastructure",          img: "initiative-hanuman-temples.jpg",  href: "/projects#project-01" },
-                { label: "Nepal's first Ayurveda University",                             note: "Education",                     img: "initiative-ayurveda.png",         href: null },
-                { label: "Green Revolution for Nepal's agricultural empowerment and independence", note: "Ecology",             img: "initiative-green-revolution.png", href: null },
+                { label: "Himalayan Siddha Mahayog Meditation", note: "Inner Awakening", img: "initiative-meditation.png", pos: "center 60%", href: "/meditation" },
+                { label: "Restoration of the Cow as Nepal's National Animal",              note: "Cultural & Ecological Advocacy", img: "ashram-cows-sunset.jpg",          pos: "center 60%",   href: null },
+                { label: "Jagadguru Shriramanandacharya Gurukul (Grades 6–12)",           note: "Education",                     img: "initiative-gurukul.png",          pos: "center 70%",   href: "/gurukul", wide: true },
+                { label: "A historic Ram Temple in Nepal",                                 note: "Sacred Infrastructure",          img: "ram-mandir-1.jpg",                pos: "center 60%",   href: "/projects#project-02" },
+                { label: "108 Hanuman Temples across Nepal",                              note: "Sacred Infrastructure",          img: "initiative-hanuman-temples.jpg",  pos: "center 60%",   href: "/projects#project-01" },
+                { label: "Nepal's first Ayurveda University",                             note: "Education",                     img: "initiative-ayurveda.png",         pos: "center 70%",   href: null },
+                { label: "Green Revolution for Nepal's agricultural empowerment and independence", note: "Ecology",             img: "initiative-green-revolution.png", pos: "center 70%",   href: null },
               ];
 
               const Card = ({ item, wide = false, overlay = false }: { item: Initiative; wide?: boolean; overlay?: boolean }) => {
@@ -598,7 +598,7 @@ export default function FounderGuru() {
                       alt=""
                       aria-hidden
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                      style={{ objectPosition: item.pos ?? "center bottom", transform: "translateY(-30%) scale(1.1)" }}
+                      style={{ objectPosition: item.pos ?? "center center" }}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#0f0703]/95 via-[#0f0703]/40 to-transparent" />
                     <div className="absolute inset-x-0 bottom-0 h-44 bg-gradient-to-t from-[#0f0703]/95 to-transparent" />
