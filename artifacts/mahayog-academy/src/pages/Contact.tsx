@@ -100,8 +100,8 @@ export default function Contact() {
 
             <div className="space-y-5">
               <div className="flex gap-4 items-start">
-                <div className="shrink-0 w-9 h-9 rounded-full bg-[#fdf6ec] border border-[#e8c56a]/50 flex items-center justify-center mt-0.5">
-                  <MapPin className="w-4 h-4 text-[#b8892a]" strokeWidth={1.5} />
+                <div className="shrink-0 w-9 h-9 rounded-full bg-[#b8892a] flex items-center justify-center mt-0.5">
+                  <MapPin className="w-4 h-4 text-white" strokeWidth={1.5} />
                 </div>
                 <div>
                   <p className="text-sm uppercase tracking-widest text-[#b8892a] font-medium mb-1">Address</p>
@@ -114,8 +114,8 @@ export default function Contact() {
               </div>
 
               <div className="flex gap-4 items-start">
-                <div className="shrink-0 w-9 h-9 rounded-full bg-[#fdf6ec] border border-[#e8c56a]/50 flex items-center justify-center mt-0.5">
-                  <Mail className="w-4 h-4 text-[#b8892a]" strokeWidth={1.5} />
+                <div className="shrink-0 w-9 h-9 rounded-full bg-[#b8892a] flex items-center justify-center mt-0.5">
+                  <Mail className="w-4 h-4 text-white" strokeWidth={1.5} />
                 </div>
                 <div>
                   <p className="text-sm uppercase tracking-widest text-[#b8892a] font-medium mb-1">Email</p>
@@ -126,8 +126,8 @@ export default function Contact() {
               </div>
 
               <div className="flex gap-4 items-start">
-                <div className="shrink-0 w-9 h-9 rounded-full bg-[#fdf6ec] border border-[#e8c56a]/50 flex items-center justify-center mt-0.5">
-                  <Phone className="w-4 h-4 text-[#b8892a]" strokeWidth={1.5} />
+                <div className="shrink-0 w-9 h-9 rounded-full bg-[#b8892a] flex items-center justify-center mt-0.5">
+                  <Phone className="w-4 h-4 text-white" strokeWidth={1.5} />
                 </div>
                 <div>
                   <p className="text-sm uppercase tracking-widests text-[#b8892a] font-medium mb-1">Phone</p>
@@ -139,8 +139,8 @@ export default function Contact() {
               </div>
 
               <div className="flex gap-4 items-start">
-                <div className="shrink-0 w-9 h-9 rounded-full bg-[#fdf6ec] border border-[#e8c56a]/50 flex items-center justify-center mt-0.5">
-                  <Clock className="w-4 h-4 text-[#b8892a]" strokeWidth={1.5} />
+                <div className="shrink-0 w-9 h-9 rounded-full bg-[#b8892a] flex items-center justify-center mt-0.5">
+                  <Clock className="w-4 h-4 text-white" strokeWidth={1.5} />
                 </div>
                 <div>
                   <p className="text-sm uppercase tracking-widest text-[#b8892a] font-medium mb-1">Response Time</p>
