@@ -213,7 +213,7 @@ export default function FounderGuru() {
               { label: "Key Initiatives",  anchor: "#initiatives"  },
               { label: "Yajñas",           anchor: "#yajnas"       },
               { label: "Ashrams",          anchor: "#ashrams"      },
-              { label: "Interviews",       anchor: "#interviews"   },
+              { label: "Related Teachings", anchor: "#interviews"   },
             ].map(({ label, anchor }) => (
               <a
                 key={anchor}
@@ -827,8 +827,8 @@ export default function FounderGuru() {
             <div className="flex items-start gap-6 mb-10">
               <span className="font-['Cormorant_Garamond'] text-8xl font-light text-[#e8dece] leading-none select-none shrink-0">VI</span>
               <div className="pt-4">
-                <p className="text-sm uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-1">From the Teachings</p>
-                <h2 className="font-['Cormorant_Garamond'] text-4xl font-light text-[#3d3830] leading-tight">Interviews</h2>
+                <p className="text-sm uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-1">Explore Further</p>
+                <h2 className="font-['Cormorant_Garamond'] text-4xl font-light text-[#3d3830] leading-tight">Related Teachings</h2>
               </div>
             </div>
 
