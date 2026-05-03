@@ -31,8 +31,8 @@ function GoldDiamond() {
 
 function GuruCard({ guru }: { guru: typeof GURUS[number] }) {
   return (
-    <div className="flex flex-col items-center text-center w-52">
-      <div className="relative w-44 h-44 shrink-0">
+    <div className="flex flex-col items-center text-center w-60">
+      <div className="relative w-52 h-52 shrink-0">
         <div className="absolute inset-0 rounded-full shadow-[0_0_0_2px_#b8892a,0_0_0_6px_#f2ead8,0_0_0_8px_#c9a55a40]" />
         <img
           src={`${b}images/${guru.img}`}
@@ -40,7 +40,7 @@ function GuruCard({ guru }: { guru: typeof GURUS[number] }) {
           className="w-full h-full object-cover object-top rounded-full"
         />
       </div>
-      <p className="font-['Cormorant_Garamond'] text-base font-medium text-[#4a4038] leading-snug mt-3 px-1">
+      <p className="font-['Cormorant_Garamond'] text-lg font-medium text-[#4a4038] leading-snug mt-3 px-1">
         {guru.name}
       </p>
     </div>
@@ -157,7 +157,7 @@ export default function Lineage() {
 
             {/* Last guru, full width, prominent */}
             <div className="flex flex-col items-center text-center">
-              <div className="relative w-64 h-64 shrink-0">
+              <div className="relative w-72 h-72 shrink-0">
                 <div className="absolute inset-0 rounded-full shadow-[0_0_0_2px_#b8892a,0_0_0_6px_#f2ead8,0_0_0_8px_#c9a55a40]" />
                 <img
                   src={`${b}images/siddhababa-portrait.jpg`}
@@ -167,11 +167,11 @@ export default function Lineage() {
                 />
               </div>
               <div className="mt-5">
-                <p className="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#3d3830] leading-snug max-w-sm mx-auto">
+                <p className="font-['Cormorant_Garamond'] text-3xl font-semibold text-[#3d3830] leading-snug max-w-sm mx-auto">
                   {lastGuru.name}
                 </p>
-                <p className="text-sm text-[#b8892a] font-semibold uppercase tracking-[0.22em] mt-2">{lastGuru.sub}</p>
-                <p className="text-sm text-[#a89880] mt-1 italic">Present Āchārya</p>
+                <p className="text-base text-[#b8892a] font-semibold uppercase tracking-[0.22em] mt-2">{lastGuru.sub}</p>
+                <p className="text-base text-[#a89880] mt-1 italic">Present Āchārya</p>
               </div>
             </div>
           </div>
