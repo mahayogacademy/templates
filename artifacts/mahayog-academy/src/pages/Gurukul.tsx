@@ -419,8 +419,8 @@ export default function Gurukul() {
                         <div className="w-1.5 h-1.5 rounded-full bg-[#b8892a]" />
                       </div>
                       <div>
-                        <p className="text-[#2c1a08] text-sm font-medium leading-snug">{label}</p>
-                        <p className="text-[#9a8070] text-xs mt-0.5">{detail}</p>
+                        <p className="text-[#2c1a08] text-base font-medium leading-snug">{label}</p>
+                        <p className="text-[#9a8070] text-sm mt-0.5">{detail}</p>
                       </div>
                     </div>
                   ))}
