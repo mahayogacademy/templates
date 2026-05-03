@@ -724,7 +724,7 @@ export default function Ashram() {
               <p className="text-xs uppercase tracking-[0.25em] text-[#e8c56a] font-medium mb-7">Nepal</p>
 
               {/* Head Ashram */}
-              <div className="mb-7 pb-7 border-b border-white/20 bg-[#b8892a]/15 border border-[#b8892a]/40 rounded-xl p-5">
+              <div className="mb-7 pb-7 border-b border-white/20">
                 <span className="text-sm uppercase tracking-[0.2em] text-white bg-[#b8892a] px-2.5 py-1 rounded font-medium inline-block mb-3">Head Ashram</span>
                 <p className="font-['Cormorant_Garamond'] text-xl font-light text-white leading-snug">
                   Jagadguru Ramanadacharya Seva Peeth
