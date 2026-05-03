@@ -348,8 +348,8 @@ export default function FounderGuru() {
                       />
                     ))}
                     {/* Caption */}
-                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent px-4 py-3">
-                      <p className="text-white text-xs font-light tracking-wide">{JAGADGURU_SLIDES[jagadguruSlide].caption}</p>
+                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent px-4 pb-4 pt-10">
+                      <p className="text-white text-sm font-light tracking-wide leading-snug">{JAGADGURU_SLIDES[jagadguruSlide].caption}</p>
                     </div>
                     {/* Prev/Next */}
                     <button
