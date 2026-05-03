@@ -220,18 +220,18 @@ export default function Register() {
       {/* ── FORM ── */}
       <section className="relative py-14 px-6 overflow-hidden">
         <img
-          src={`${b}images/cta-meditation-dawn.png`}
+          src={`${b}images/hero-nepal-landscape.png`}
           alt=""
           aria-hidden="true"
           className="absolute inset-0 w-full h-full object-cover object-center"
         />
-        <div className="absolute inset-0 bg-[#1a0f05]/78" />
+        <div className="absolute inset-0 bg-[#faf9f6]/82" />
         <div className="relative z-10">
           <div className="max-w-2xl mx-auto text-center mb-8">
-            <span className="uppercase tracking-[0.25em] text-xs text-[#e8c56a]/80 font-medium">
+            <span className="uppercase tracking-[0.25em] text-xs text-[#b8892a] font-medium">
               {program === "vedanta" ? "Enrolment Form" : "Registration Form"}
             </span>
-            <h2 className="font-['Cormorant_Garamond'] text-3xl font-light text-white mt-1">
+            <h2 className="font-['Cormorant_Garamond'] text-3xl font-light text-[#2c1a08] mt-1">
               {active.label}
             </h2>
           </div>
