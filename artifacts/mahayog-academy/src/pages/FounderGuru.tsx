@@ -838,7 +838,7 @@ export default function FounderGuru() {
 
 
       {/* ── DARK CTA BANNER ── */}
-      <section className="bg-[#2e2820] py-20 px-6">
+      <section className="bg-[#1e1208] py-20 px-6">
         <div className="max-w-5xl mx-auto text-center">
           <div className="flex items-center justify-center gap-3 mb-6">
             <div className="h-px w-10 bg-[#e8c56a]/40" />
