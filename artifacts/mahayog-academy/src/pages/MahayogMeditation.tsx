@@ -393,7 +393,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
       <div
         className={`overflow-hidden transition-all duration-500 ${open ? "max-h-[600px] pb-5" : "max-h-0"}`}
       >
-        <div className="text-sm text-[#6b6158] leading-relaxed whitespace-pre-line">{a}</div>
+        <div className="text-base text-[#6b6158] leading-relaxed whitespace-pre-line">{a}</div>
       </div>
     </div>
   );
