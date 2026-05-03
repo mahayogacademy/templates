@@ -151,7 +151,7 @@ export default function CustomTalks() {
             <p className="text-[#b8892a] text-xs uppercase tracking-[0.3em] font-medium mb-3">Subject Areas</p>
             <h2 className="font-['Cormorant_Garamond'] text-4xl text-[#2c1a08] font-light">Topics We Offer</h2>
             <div className="w-12 h-px bg-[#b8892a]/40 mx-auto mt-4" />
-            <p className="text-[#6a5c48] text-sm mt-4 max-w-xl mx-auto">
+            <p className="text-[#6a5c48] text-base mt-4 max-w-xl mx-auto">
               All topics can be adapted in depth, language, and format for your specific audience — from complete beginners to experienced practitioners.
             </p>
           </div>
@@ -159,7 +159,7 @@ export default function CustomTalks() {
             {TOPICS.map(({ title, tag }) => (
               <div key={title} className="flex items-center gap-3 bg-white rounded-2xl px-6 py-4 border border-[#e8dece] shadow-sm">
                 <div className="w-2 h-2 rounded-full bg-[#b8892a] flex-shrink-0" />
-                <p className="text-[#2c1a08] text-sm font-medium flex-1">{title}</p>
+                <p className="text-[#2c1a08] text-base font-medium flex-1">{title}</p>
                 {tag && (
                   <span className="text-sm uppercase tracking-[0.2em] px-2.5 py-1 rounded-full bg-[#b8892a]/10 text-[#b8892a] font-medium flex-shrink-0">
                     {tag}
