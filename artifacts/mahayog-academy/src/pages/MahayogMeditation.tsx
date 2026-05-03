@@ -364,7 +364,7 @@ const FAQ_GROUPS: { theme: string; items: { q: string; a: string }[] }[] = [
       },
       {
         q: "How do I continue my practice?",
-        a: "Participants receive instruction in Mahayog self-practice, which can be maintained at home without additional equipment or guidance. Ongoing resources, including teachings, group sittings (satsang), and access to the broader Mahayog community, are available through your center and through this website.",
+        a: "Participants receive instruction in Mahayog self-practice, which can be maintained at home. Ongoing resources, including teachings, group sittings (satsang), and access to the broader Mahayog community, are available through your center and through this website.",
       },
       {
         q: "Is there ongoing support after initiation?",
