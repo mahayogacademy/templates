@@ -156,8 +156,8 @@ export default function Gurukul() {
               {/* Admission contact */}
               <div className="mt-4 border-t border-[#b8892a]/20 pt-5 space-y-3">
                 <p className="text-[#b8892a] text-xs uppercase tracking-[0.25em] font-medium">Admissions · Limited Seats</p>
-                <div className="flex items-start gap-2 text-sm text-[#4a3728]">
-                  <Phone size={14} className="text-[#b8892a] mt-0.5 flex-shrink-0" />
+                <div className="flex items-start gap-2 text-base text-[#4a3728]">
+                  <Phone size={16} className="text-[#b8892a] mt-0.5 flex-shrink-0" />
                   <div className="space-y-2">
                     {[
                       { display: "+977 985-1126710", tel: "+9779851126710", wa: "9779851126710" },
