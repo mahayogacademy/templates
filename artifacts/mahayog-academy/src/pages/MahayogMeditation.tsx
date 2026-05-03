@@ -798,7 +798,7 @@ export default function MahayogMeditation() {
           </div>
 
           {/* Steps */}
-          <div className="flex flex-col md:flex-row items-start gap-6 md:gap-0 relative mb-16">
+          <div className="flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-0 relative mb-16">
             {/* Connecting lines desktop, two segments that stop at each circle's edge */}
             <div className="hidden md:block absolute top-[48px] left-[calc(16.66%+48px)] w-[calc(33.33%-96px)] h-px bg-gradient-to-r from-white/20 to-white/50" />
             <div className="hidden md:block absolute top-[48px] left-[calc(50%+48px)] w-[calc(33.33%-96px)] h-px bg-gradient-to-r from-white/50 to-white/20" />
