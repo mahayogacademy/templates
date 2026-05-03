@@ -34,5 +34,500 @@
       "volunteer": "Volunteer",
       "customTalks": "Custom Talks & Workshops"
     }
+  },
+  "common": {
+    "explore": "Explore",
+    "learnMore": "Learn More",
+    "discover": "Discover",
+    "register": "Register",
+    "registerAria": "Go to registration form",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "footer": {
+    "brandLine1": "Mahayogi Siddhababa",
+    "brandLine2": "Spiritual Academy",
+    "brandAlt": "Academy logo",
+    "tagline": "A not-for-profit, volunteer-run organization dedicated to Vedic wisdom, holistic living, and selfless service.",
+    "headingExplore": "Explore",
+    "headingLearn": "Learn & Join",
+    "headingConnect": "Connect",
+    "linksShort": {
+      "meditation": "Mahayog Meditation",
+      "vedanta": "Vedanta Course",
+      "customTalks": "Custom Talks"
+    },
+    "copyright": "© {{year}} Mahayogi Siddhababa Spiritual Academy, Nepal. All rights reserved.",
+    "location": "Barahachetra, Sunsari, Nepal"
+  },
+  "home": {
+    "hero": {
+      "title1": "Mahayogi Siddhababa",
+      "title2": "Spiritual Academy",
+      "tagline": "Ancient Wisdom · Holistic Living · Inner Awakening",
+      "ctaExplore": "Explore the Academy",
+      "ctaDiscover": "Discover Mahayog"
+    },
+    "mission": {
+      "eyebrow": "Our Purpose",
+      "lead": "A living sanctuary where seekers from every corner of the world come to experience the depths of Vedic wisdom, Himalayan yoga, and sacred service.",
+      "support": "A Not-for-profit and volunteer-run organization, rooted in the ancient Ramanandi lineage and guided by the direct grace of Enlightened Guru, His Holiness Jagadguru Mahayogi Siddhababa."
+    },
+    "pillars": {
+      "mahayog": {
+        "title": "Mahayog",
+        "desc": "The ancient meditation of automatic Kundalini awakening",
+        "cta": "Explore"
+      },
+      "mahayogi": {
+        "title": "Mahayogi",
+        "alt": "Jagadguru Mahayogi Siddhababa",
+        "desc": "His Holiness Jagadguru Mahayogi Siddhababa — living master and guide",
+        "cta": "Meet the Guru"
+      },
+      "forMankind": {
+        "title": "For Mankind",
+        "alt": "For Mankind",
+        "desc": "Sacred service, selfless giving and the upliftment of all beings",
+        "cta": "Discover"
+      }
+    },
+    "paths": {
+      "eyebrow": "Your Path Awaits",
+      "heading": "Explore the Academy",
+      "cta": "Explore",
+      "items": {
+        "meditation": {
+          "label": "Himalayan Siddha Mahayog",
+          "sub": "Meditation & Inner Awakening",
+          "desc": "Receive Shaktipat initiation and experience the automatic awakening of Kundalini — effortlessly integrating all four yoga paths as taught by Siddhababa."
+        },
+        "ashram": {
+          "label": "Ashram and Yogic Life",
+          "sub": "Daily Seva · Puja · Community",
+          "desc": "Immerse yourself in the daily rhythm of Barahachhetra — morning puja, gau seva, satsang, prasad, and the stillness of a consecrated Himalayan sanctuary."
+        },
+        "vedanta": {
+          "label": "Vedanta Philosophy",
+          "sub": "Ancient Wisdom for Modern Minds",
+          "desc": "A 300-hour live course taught personally by Siddhababa — exploring Brahman, the Self, and the nature of Reality, practised alongside daily Mahayog meditation."
+        },
+        "service": {
+          "label": "Selfless Service",
+          "sub": "Gau Seva · Bhojan · Outreach",
+          "desc": "From building Vedic learning centers and caring for sacred cows to serving daily free meals and nurturing youth — selfless service as the highest spiritual practice."
+        }
+      }
+    },
+    "guru": {
+      "eyebrow": "The Guru",
+      "heading": "Jagadguru Mahayogi Siddhababa",
+      "alt": "Jagadguru Mahayogi Siddhababa",
+      "para1": "Born in the Himalayan foothills of Nepal, His Holiness has an unwavering commitment to the inner awakening of all beings and collective human welfare. He is a rare spiritual master with the ability to awaken Kundalini and transmit experiential knowledge of the chakra system and advanced states of consciousness.",
+      "para2": "His life reflects profound depth of yogic attainment, including publicly demonstrated Bhu Samadhis — underground burials in meditation. Through his teachings, once-guarded Himalayan practices have been made accessible to the modern world, while preserving their authenticity and purpose.",
+      "ctaLearn": "Learn More",
+      "ctaMeet": "Meet"
+    },
+    "gallery": {
+      "eyebrow": "Moments & Gatherings",
+      "heading": "A Glimpse Within",
+      "cta": "View Events & Gatherings",
+      "captions": [
+        "Ganesh Chaturthi puja at the ashram",
+        "Siddhababa with youth seekers after satsang",
+        "Mass Mahayog meditation session",
+        "Kalash Yatra procession at a sacred gathering",
+        "Gau Seva at sunset — caring for sacred cows",
+        "Bhu Samadhi — a medically witnessed yogic feat",
+        "Students learning Mahayog meditation",
+        "With Dada Gurudev at the Jagadguru announcement",
+        "Night satsang at the ashram",
+        "Gathering of saints and mahants",
+        "A newborn calf at the Goshala",
+        "Gurukul students offering prayers",
+        "With Bageshwar Dham Sarkar",
+        "Devotees at the Mahayagya",
+        "Meeting with former Prime Minister Prachanda",
+        "Teaching Mahayog to Nepal Army personnel",
+        "Meeting with former King Gyanendra Shah",
+        "Temple inauguration ceremony",
+        "Prasad distribution to devotees",
+        "Koshi River at Barahachhetra",
+        "With Param Pujya Rajendra Das Ji Maharaj",
+        "With Yog Guru Swami Ramdev at Kumbh Mela",
+        "Siddhababa giving Shaktipat Deeksha"
+      ]
+    },
+    "projects": {
+      "eyebrow": "Sacred Initiatives",
+      "heading": "Projects & Vision",
+      "cta": "Learn More",
+      "gurukul": {
+        "tag": "Education",
+        "alt": "Gurukul",
+        "title": "Jagadguru Ramanandacharya Gurukul",
+        "desc": "A residential Gurukul at Chataradham, Barahakshetra — blending Vedic values, Sanskrit, and meditation with a full modern curriculum for Grades 6–12, in a sattvic and disciplined environment."
+      },
+      "ramMandir": {
+        "tag": "Sacred Architecture",
+        "alt": "Ram Mandir",
+        "title": "Ram Mandir — Dev Sabha",
+        "desc": "A nine-storey Sri Yantra temple rising at Chatara Dham, Sunsari — envisioned as a sacred replica of Dev Sabha, the divine assembly of the 33 koti devatas, with Lord Ram and Maa Sita at the centre."
+      },
+      "hanuman": {
+        "tag": "National Mission",
+        "alt": "108 Hanuman Temples",
+        "title": "108 Hanuman Temples Across Nepal",
+        "desc": "A sacred vow to establish 108 Hanuman temples nationwide — each a vibrant community centre rooted in Sanatan Dharma, offering meditation, education, and cultural revival built alongside local communities."
+      },
+      "cultural": {
+        "tag": "Vision for Nepal",
+        "alt": "Green Revolution and Ayurveda",
+        "title": "Cultural & Ecological Advocacy",
+        "desc": "A Green Revolution for Nepal's agricultural self-reliance and the establishment of Nepal's first Ayurveda University — honouring the land, restoring ancient sciences, and empowering communities."
+      }
+    },
+    "teachingsGlimpse": {
+      "eyebrow": "Teachings",
+      "heading": "Siddhababa Wisdom",
+      "typeArticle": "Article",
+      "typeVideo": "Video",
+      "items": {
+        "barahachhetra": {
+          "title": "The Spiritual Significance of Barahachhetra",
+          "excerpt": "Where the Koshi meets the sacred confluence — a living tirtha that has drawn seekers, kings, and siddhas for millennia."
+        },
+        "kundalini": {
+          "title": "Kundalini, the Chakras, and the Inner Science of Awakening",
+          "excerpt": "An exploration of the subtle body, the dormant energy within, and the authentic Vedic understanding of spiritual unfoldment."
+        },
+        "mahayogVideo": {
+          "title": "What Is Himalayan Siddha Mahayog?",
+          "excerpt": "Siddhababa gives a direct and clear description of this unique meditation practice — what it is, how it works, and why it differs from other paths.",
+          "duration": "34 min"
+        },
+        "guruSoul": {
+          "title": "The Guru and the Imperishable Soul",
+          "excerpt": "Understanding the conscious principle within — and why the relationship with a living Guru is central to the path of realisation."
+        }
+      },
+      "cta": "Explore All Teachings"
+    },
+    "donate": {
+      "eyebrow": "Support the Mission",
+      "headingLine1": "Every offering sustains",
+      "headingLine2": "a sacred flame",
+      "body": "The Academy runs entirely through the generosity of devotees and well-wishers worldwide. Your gift — however modest — allows us to continue serving.",
+      "ctaDana": "Offer Dana",
+      "ctaVolunteer": "Volunteer Your Time"
+    },
+    "closing": {
+      "quote": "\"True change begins not in the world outside — it begins in the silence and sincerity of the seeker within.\"",
+      "cta": "Get in Touch"
+    }
+  },
+  "about": {
+    "hero": {
+      "eyebrowAlt": "Himalayan mountain valley",
+      "title": "About the Academy",
+      "subtitle": "Holistic Living and Inner Awakening",
+      "ctaExplore": "Explore"
+    },
+    "foundation": {
+      "eyebrow": "Our Foundation & Approach",
+      "heading": "Ancient Wisdom for the Modern World",
+      "imgAlt": "Ancient Sanskrit manuscripts and sacred texts by lamplight",
+      "p1": "Mahayogi Siddhababa Spiritual Academy is a not-for-profit, volunteer-run organization based in Nepal, dedicated to preserving and sharing an authentic tradition of yoga and meditation.",
+      "p2": "The Academy focuses on sharing Vedic knowledge and offering direct practice of meditation and self-inquiry, alongside core principles of selfless service, ethical living, and personal responsibility. Its approach is practical and lived, integrating inner development with everyday life.",
+      "p3": "Through its programs, teachings, and community initiatives, the Academy supports individuals in developing clarity of mind, stability of being, and a deeper understanding of themselves, while contributing meaningfully to the world around them.",
+      "dimensions": ["Physical", "Mental", "Emotional", "Social", "Spiritual", "Environmental"]
+    },
+    "pillars": {
+      "eyebrow": "Guiding Principles",
+      "heading": "Six Pillars of Service",
+      "intro": "The Academy's work is rooted in six interconnected pillars of service, which guide its programs, projects, and practices.",
+      "items": {
+        "swastha":   { "title": "Swastha",   "label": "Holistic Health",      "desc": "Cultivating vitality across all dimensions of existence." },
+        "sikshya":   { "title": "Sikshya",   "label": "Authentic Education",  "desc": "Awakening inner intelligence through sacred Vedic learning." },
+        "sanskar":   { "title": "Sanskar",   "label": "Character & Values",   "desc": "Refining the self through positive impressions and ritual." },
+        "sadvritta": { "title": "Sadvritta", "label": "Ethical Conduct",      "desc": "Living in harmony with natural laws and universal truth." },
+        "samriddhi": { "title": "Samriddhi", "label": "Collective Prosperity","desc": "Fostering abundance that uplifts the welfare of all." },
+        "shanti":    { "title": "Shanti",    "label": "Peace",                "desc": "Realising the profound stillness at the core of all being." }
+      }
+    },
+    "discover": {
+      "eyebrow": "Continue Your Journey",
+      "heading": "Discover More",
+      "items": {
+        "meditation": { "tag": "Practice",   "title": "Mahayog Meditation",          "desc": "Explore Mahayog, a complete, time-tested system for inner transformation rooted in the Vedic tradition." },
+        "vedanta":    { "tag": "Philosophy", "title": "Vedanta Philosophy Course",   "desc": "Explore the timeless teachings of Vedanta — the philosophy of non-duality, self-inquiry, and the nature of ultimate reality." },
+        "ashram":     { "tag": "Retreat",    "title": "The Ashram",                  "desc": "Step into a place of stillness and renewal, our Ashram offers a sanctuary for deep practice and retreat." },
+        "guru":       { "tag": "Lineage",    "title": "Enlightened Guru Siddhababa", "desc": "Learn about the life and divine mission of His Holiness Jagadguru Mahayogi Siddhababa, the heart of the Academy." }
+      }
+    }
+  },
+  "lineage": {
+    "hero": {
+      "eyebrow": "Guru Paramparā",
+      "title": "A Living Himalayan Lineage",
+      "subtitle": "The Disciplic Succession"
+    },
+    "intro": {
+      "p1": "Himalayan Siddha Mahayog arises from a living lineage of Himalayan Siddha Yogis who refined a precise science of meditation and inner awakening through direct experience.",
+      "p2": "For thousands of years, this knowledge has been transmitted from realized teacher to prepared student, preserving wisdom with clarity, responsibility, and depth of practice. This lineage is currently entrusted to His Holiness Jagadguru Ramanandacharya Swami Ramakrishnacharya Ji Maharaj (Mahayogi Siddhababa), as the present Āchārya."
+    },
+    "chain": {
+      "eyebrow": "The Disciplic Succession",
+      "heading": "Guru Paramparā",
+      "readingLong": "Read left → right, top to bottom",
+      "readingShort": "Read top to bottom"
+    },
+    "gurus": [
+      "Jagadguru Ramanandacharya",
+      "Shree Maniramdas Ji Maharaj",
+      "Shree Vaishnavdas Ji Maharaj",
+      "Shree Ramcharandas Ji Maharaj",
+      "Shree Ramsobhadas Ji Maharaj",
+      "Shree Rammanohar Das Ji Maharaj",
+      "Shree Nritya Gopal Das Ji Maharaj",
+      "Shree Narayandas Ji Maharaj",
+      "Shree Vaishnav Bhagawandas Ji Maharaj",
+      "Jagadguru Shree Ramanandacharya Swami Ramakrishnacharya Ji Maharaj"
+    ],
+    "siddhababaSub": "Mahayogi Siddhababa",
+    "presentAcharya": "Present Āchārya",
+    "closingQuote": "\"The Guru is the grace that flows through an unbroken chain of awakening.\""
+  },
+  "ashram": {
+    "hero": {
+      "imgAlt": "The Guru Ashram at Barahachetra, Nepal",
+      "title": "Ashram & Centers",
+      "subtitle": "A Spiritual Home for All",
+      "ctaPlanVisit": "Plan a Visit"
+    },
+    "whatIsLead": "Āśrama",
+    "whatIs": " — a Sanskrit word for a place of refuge, effort, and inner work. An Ashram is a living community centred around spiritual practice, selfless service, and the guidance of a Guru, open to all sincere seekers.",
+    "guruAshram": {
+      "eyebrow": "The Guru Ashram",
+      "heading": "On the Banks of the Sacred Koshi River",
+      "p1": "Situated on the banks of the sacred Kaushiki (Koshi) River, the Guru Ashram spans over 10 acres in Chataradham, Barahachetra, Nepal. Surrounded by hills, rivers, and natural beauty, the ashram offers the ideal environment for peace, reflection, and deep meditation.",
+      "p2": "Open to visitors and spiritual seekers from all walks of life, the Guru Ashram serves as a spiritual home, supporting sincere practice and quiet contemplation.",
+      "tags": ["Chataradham, Nepal", "10+ Acres", "All Seekers Welcome"],
+      "imgAlt": "The sacred Kaushiki (Koshi) River flowing through the misty hills of Nepal"
+    },
+    "transformation": {
+      "eyebrow": "Sacred Ground",
+      "heading": "A Place of Transformation",
+      "p1": "The Ashram follows traditional Vedic principles while providing modern amenities for visiting seekers. Daily meditation sessions, satsangs, and seva opportunities create a complete spiritual immersion experience.",
+      "p2": "Whether you are visiting for a day or staying for an extended retreat, the Ashram offers the space and support for sincere spiritual practice.",
+      "imgAlt": "Seekers meditating in the ashram grounds before the Hanuman statue"
+    },
+    "pillars": {
+      "eyebrow": "The Foundation of Practice",
+      "heading": "Three Pillars of Practice",
+      "intro": "The Guru Ashram is a rare place where seekers can engage in all three together in a supportive and loving setting.",
+      "items": {
+        "sumiran": { "sanskrit": "Sumiran", "title": "Meditation & Remembrance", "desc": "The practice of inner stillness, turning the mind toward the divine through daily meditation, mantra, and conscious remembrance of the eternal self." },
+        "seva":    { "sanskrit": "Seva",    "title": "Selfless Service",         "desc": "Sacred action performed without attachment to reward. Seva purifies the heart, dissolves ego, and transforms everyday work into a form of worship." },
+        "satsang": { "sanskrit": "Satsang", "title": "Spiritual Discourse",      "desc": "Gathering in the company of truth, receiving wisdom from the Guru and senior practitioners, asking questions, and deepening understanding through sacred dialogue." }
+      }
+    },
+    "gallery": {
+      "eyebrow": "Life at the Ashram",
+      "heading": "A Glimpse Within",
+      "top": ["Ramanandacharya Sewa Pith · Nepal", "Ashram at Sunset", "Ashram Grounds", "Evening Satsang"],
+      "bottom": ["Tulsi Garden", "Caring for the Sacred", "Prasad Seva", "The Hanuman Temple", "Community Satsang", "New Life", "The Sacred Altar", "Panchamukhi Hanuman", "Prasad Preparation", "Herb Garden Harvest", "Gau Seva", "Prasad Distribution", "Seva in the Fields", "Divine Bond", "Sacred Land", "Garden Path", "Joy by the River", "River Aarti", "River Stones", "Ashram Grounds", "Temple Grounds", "Sacred Procession"]
+    },
+    "life": {
+      "eyebrow": "Community Living",
+      "heading": "Ashram Life",
+      "intro": "Experience the rhythm of spiritual community living.",
+      "items": [
+        { "title": "Sacred Living Spaces", "desc": "Simple, serene accommodations designed to support spiritual practice, inner contemplation, and a life free from unnecessary distraction." },
+        { "title": "Daily Satsang",        "desc": "Regular spiritual discourses and Q&A sessions with Gurudev and senior practitioners, guidance for every stage of the path." },
+        { "title": "Seva Opportunities",   "desc": "Contribute meaningfully to ashram life through selfless service, a powerful spiritual practice in its own right. All forms of seva are equally valued." },
+        { "title": "Sattvic Meals",        "desc": "Nourishing vegetarian meals prepared with love, following Ayurvedic principles, food as medicine, offered as prasad." }
+      ]
+    },
+    "schedule": {
+      "eyebrow": "The Rhythm of the Day",
+      "heading": "Daily Schedule",
+      "items": ["Wake Up", "Morning Group Meditation", "Aarti and Stuti", "Bal Bhog Prashad (Breakfast)", "Seva", "Raj Bhog Prashad (Lunch)", "Seva / Rest", "Sanskrit Class", "Rest", "Seva", "Biharu Prashad (Light Dinner)", "Evening Aarti & Stuti", "Ramcharitmanas / Bhajan", "Satsang", "Rest"]
+    },
+    "akhanda": {
+      "eyebrow": "Continuous since 2010",
+      "heading": "Akhanda Kīrtan",
+      "p1": "The Hanuman Temple at the Ashram holds an unbroken stream of devotional chanting. The Ram mantra has been recited continuously, 24 hours a day, without interruption since 2010.",
+      "p2Lead": "Akhanda",
+      "p2": " means \"unbroken\" — this living practice embodies the ideal of constant remembrance, filling the ashram with an ever-present current of sacred sound that supports all who enter.",
+      "hoursDay": "hrs / day",
+      "ramnam": "Rām Nām",
+      "ramnamSub": "Unbroken · Continuous · Since 2010"
+    },
+    "sevaSection": {
+      "title": "Seva",
+      "sub": "Selfless Service",
+      "imgAlt": "Seva at the ashram",
+      "p1": "Seva plays a central role in spiritual growth, cultivating humility and reducing ego through selfless action. Seekers can offer seva according to their interests, skills, and professional experience.",
+      "p2": "All forms of seva are valued equally, no service is considered superior or inferior."
+    },
+    "satsangSection": {
+      "title": "Satsang",
+      "sub": "Spiritual Discourse & Guidance",
+      "imgAlt": "Satsang gathering at the ashram",
+      "p1": "During Satsang, seekers gather to receive guidance and wisdom from Gurudev. This sacred space allows individuals to ask questions, reflect, and deepen understanding.",
+      "p2": "Sitting in the presence of enlightened Jagadguru Mahayogi Siddhababa offers itself clarity and inner insight, an essential support for every sincere seeker."
+    },
+    "sevaCta": {
+      "eyebrow": "Offer Your Support",
+      "heading": "Participate in Ashram Seva",
+      "intro": "The ashram is sustained entirely through the generosity and devotion of seekers. By contributing, you become part of this sacred mission — supporting spiritual education, daily prasad, gau seva, and the care of this living spiritual home.",
+      "options": [
+        { "name": "Gau Seva",        "sub": "Care of Sacred Cows" },
+        { "name": "Hanuman Pūjā",    "sub": "Temple Worship" },
+        { "name": "Akhanda Kīrtan",  "sub": "Continuous Chanting" },
+        { "name": "Brahmand Bhojan", "sub": "Prasad Distribution" }
+      ],
+      "cta": "Offer Seva"
+    },
+    "visit": {
+      "heading": "Plan a Visit",
+      "intro": "The Guru Ashram welcomes sincere seekers from all backgrounds. Whether for a day visit, a weekend, or an extended stay, come and experience a place where ancient wisdom is lived.",
+      "cta": "Get in Touch"
+    },
+    "related": {
+      "eyebrow": "Explore Further",
+      "heading": "Related Teachings",
+      "readLabel": "Read",
+      "watchLabel": "Watch",
+      "items": [
+        { "tag": "Sacred Places", "title": "The Spiritual Significance of Barahachhetra", "excerpt": "In the sacred geography of Sanātan Dharma, certain lands do not merely witness divinity. They hold it. Barahachhetra is one such land — revered across ages by gods, rishis, avatars, ancestors, and saints.", "date": "20 April 2025" },
+        { "tag": "Sacred Places", "title": "Nepal: Spirituality's Beating Heart", "excerpt": "Nepal is described in sacred traditions as a land where the divine is not distant but actively present. Siddhababa reveals Nepal as Bhū-Vaikuṇṭha — an earthly expression of the divine realm.", "date": "1 April 2025" },
+        { "tag": "Interview", "title": "Reviving Nepal's Ancient Wisdom: Yoga, Āyurveda & Nāḍī Science", "excerpt": "A rich Malaku TV conversation on Nepal's ancient knowledge systems — the science of yoga, the healing arts of Āyurveda, and the profound diagnostic tradition of Nāḍī Science.", "date": "Malaku TV · 49 min" }
+      ]
+    },
+    "centers": {
+      "eyebrow": "A Growing Community",
+      "heading": "Centers & Ashrams",
+      "nepalLabel": "Nepal",
+      "internationalLabel": "International",
+      "headBadge": "Head Ashram",
+      "headName": "Jagadguru Ramanadacharya Seva Peeth",
+      "headAka": "Shree Ram Tarak Brahma Peeth",
+      "headLocation": "Baharachettra, Sunsari, Nepal",
+      "comingSoon": "Details coming soon",
+      "nepalOthers": [
+        { "city": "Kathmandu", "note": "Naya Bazar, Balaju (next to Bishumati Bridge)" },
+        { "city": "Pokhara",   "note": "Narayanthan, Nadipur" },
+        { "city": "Chitwan",   "note": "" },
+        { "city": "Surkhet",   "note": "" }
+      ],
+      "international": [
+        { "country": "India",          "cities": "Jaipur" },
+        { "country": "Canada",         "cities": "Ottawa · Calgary · Edmonton · Vancouver" },
+        { "country": "United States",  "cities": "Dallas · Lubbock" },
+        { "country": "United Kingdom", "cities": "London · Reading · Dartford" },
+        { "country": "Denmark",        "cities": "Copenhagen" },
+        { "country": "Australia",      "cities": "Sydney · Adelaide" }
+      ]
+    }
+  },
+  "projects": {
+    "hero": {
+      "eyebrow": "Sacred Initiatives",
+      "title": "Our Projects",
+      "subtitle": "Building for Future Generations"
+    },
+    "nav": { "p1": "108 Hanuman Temples", "p2": "Ram Mandir" },
+    "lightboxAlt": "Enlarged rendering",
+    "supportCta": "Support the Mission",
+    "hanuman": {
+      "number": "01",
+      "eyebrow": "National Mission · Nepal",
+      "title": "108 Hanuman Temples",
+      "sub": "A Sacred Sat-Sankalpa",
+      "intro": "Jagadguru Mahayogi Siddhababa has undertaken a sacred vow to establish 108 Hanuman Temples across Nepal, a visionary initiative dedicated to spiritual renewal, cultural preservation, and social upliftment. These temples are envisioned not only as places of worship, but as vibrant community centers rooted in Sanatan Dharma, built with and managed by local communities.",
+      "portraitAlt": "Lord Hanuman statue at a Nepali temple",
+      "features": [
+        { "title": "Multi-Purpose Hall",         "desc": "A 200–250 person hall adaptable for satsang, group meditation, cultural celebrations, youth programs, and community gatherings." },
+        { "title": "Mahayog Meditation Center",  "desc": "Each temple doubles as a teaching center offering meditation, Vedic science, Sanatan Dharma philosophy, and sadhana programs." },
+        { "title": "Community Infrastructure",   "desc": "Dedicated rooms for worship, seva kitchen (Anna Seva), pujari preparation, storage, and an administrative office." }
+      ],
+      "programsLabel": "Programs Offered at Each Hanuman Temple",
+      "programs": [
+        "Teachings on Sanatan Dharma and Hindu philosophy",
+        "Yogic and Vedic science education",
+        "Himalayan Siddha Mahayog practice",
+        "Youth character development initiatives",
+        "Cultural education in sanskar and sanskriti",
+        "Regular satsang and group sadhana"
+      ],
+      "banner": {
+        "heading": "A Sacred Legacy in the Making",
+        "intro": "Your gift becomes a lasting legacy, each temple a living center of prayer, learning, and community, rooted in dharma for generations to come.",
+        "types": [
+          { "kind": "Land",    "title": "Land Contribution",  "desc": "Donate private land, facilitate government allocation, or help identify and restore historic temple sites across Nepal.", "imgAlt": "Land contribution" },
+          { "kind": "Finance", "title": "Financial Support",  "desc": "Monetary or in-kind donations toward construction, educational programming, sadhana activities, and ongoing temple maintenance.", "imgAlt": "Financial support" }
+        ]
+      },
+      "quote": {
+        "text": "The body is temporary; it will pass. Let us leave behind something of lasting value that teaches sanskar and sanskriti to future generations.",
+        "cite": "Jagadguru Mahayogi Siddhababa"
+      }
+    },
+    "ramMandir": {
+      "number": "02",
+      "eyebrow": "Chatara Dham · Sunsari, Nepal",
+      "title": "Ram Mandir",
+      "sub": "Dev Sabha, The Divine Assembly",
+      "featureImgAlt": "Ram Mandir architectural rendering with Hanuman statue",
+      "p1": "A historic Ram Mandir will be built at Jagadguru Ramanadacharya Seva Peeth (Tarak Brahma Peeth), Chatara Dham, envisioned as a sacred replica of Dev Sabha, the divine assembly of the 33 koti devatas, with Lord Ram, Maa Sita and their divine family at the center.",
+      "p2": "This temple will not only be a place of worship, but a living spiritual and cosmological experience, its architecture based on the structure of the universe as described in Vedic scripture and realized through the spiritual insight of Jagadguru Mahayogi Siddhababa.",
+      "journeyLabel": "A Journey Through Creation",
+      "journey": [
+        { "stage": "I",   "name": "Primordial Nothingness", "desc": "The state before creation, pure unmanifest consciousness." },
+        { "stage": "II",  "name": "Tri-Guna",               "desc": "The emergence of Sattva, Rajas, and Tamas, the three fundamental qualities of nature." },
+        { "stage": "III", "name": "Prakriti",               "desc": "The manifestation of primordial nature, the source of the material universe." },
+        { "stage": "IV",  "name": "Mahat",                  "desc": "The arising of cosmic intelligence, the first great principle of creation." },
+        { "stage": "V",   "name": "Ahankar",                "desc": "The formation of individual identity and ego as creation becomes individuated." },
+        { "stage": "VI",  "name": "The Present Age",        "desc": "The full unfolding of creation and the journey through the four Yugas into Kali Yuga." }
+      ],
+      "yugasLabel": "The Four Yugas, Cycle of Time",
+      "yugas": ["Satya Yuga", "Treta Yuga", "Dwapar Yuga", "Kali Yuga"],
+      "archLabel": "Architectural Highlights",
+      "arch": [
+        { "title": "Nine-Storey Structure",     "desc": "A majestic nine-storey temple symbolizing ascent through layers of consciousness and existence." },
+        { "title": "Sri Yantra Architecture",   "desc": "The entire design is based on sacred geometry of the Sri Yantra, the union of cosmic energies and structure of creation." },
+        { "title": "33 Koti Devatas",           "desc": "Arranged according to universal Vastu principles from Vedic scripture, with Lord Ram and His divine family at the spiritual center." },
+        { "title": "Nepal's Cultural Heritage", "desc": "A living model integrating elements from Nepal's diverse communities, with curated representations of the nation's spiritual and historical evolution." }
+      ],
+      "galleryLabel": "Architectural Renderings",
+      "galleryHint": "Click any image to enlarge",
+      "galleryAlts": [
+        "Ram Mandir, aerial perspective",
+        "Ram Mandir, top-down yantra view",
+        "Ram Mandir, front view with Hanuman statue",
+        "Ram Mandir, wide campus view",
+        "Ram Mandir, panoramic rendering"
+      ],
+      "landmarkLabel": "A Spiritual and Educational Landmark",
+      "landmarkItems": [
+        "A center for devotion",
+        "A hub for Vedic knowledge",
+        "A cultural preservation initiative",
+        "A sacred architectural landmark",
+        "A spiritual pilgrimage destination",
+        "A symbol of science, spirituality, and culture"
+      ],
+      "banner": {
+        "heading": "Help Bring This Vision to Life",
+        "intro": "This temple is a gift to Nepal and to the world. Whether through expertise, cultural knowledge, or financial support, your contribution shapes something that will endure for centuries.",
+        "types": [
+          { "kind": "Expertise", "title": "Professional Skills",   "desc": "Architecture, engineering, construction, Vastu, design, and related professional fields.",  "imgAlt": "Professional skills" },
+          { "kind": "Culture",   "title": "Cultural Knowledge",    "desc": "Documentation and contribution of Nepal's diverse cultural traditions and heritage.",      "imgAlt": "Cultural knowledge" },
+          { "kind": "Finance",   "title": "Financial Support",     "desc": "Monetary donations or in-kind support toward construction and development.",                "imgAlt": "Financial support" }
+        ]
+      }
+    }
   }
 }
