@@ -688,7 +688,7 @@ export default function FounderGuru() {
               </p>
             </div>
 
-            <div className="space-y-4">
+            <div className="space-y-5">
               {[
                 {
                   year: "2019",
@@ -735,14 +735,14 @@ export default function FounderGuru() {
                 );
                 if (!yajna.href) {
                   return (
-                    <div key={i} className="flex gap-6 items-start p-6 bg-white border border-[#e8dece] rounded-2xl">
+                    <div key={i} className="flex gap-6 items-start p-6 bg-white border border-[#d4c8b5] rounded-2xl shadow-sm">
                       {inner}
                     </div>
                   );
                 }
                 return (
                   <Link key={i} href={yajna.href} onClick={() => window.scrollTo(0, 0)}>
-                    <div className="flex gap-6 items-start p-6 bg-white border border-[#e8dece] rounded-2xl cursor-pointer hover:border-[#b8892a]/50 hover:shadow-md transition-all duration-300">
+                    <div className="flex gap-6 items-start p-6 bg-white border border-[#d4c8b5] rounded-2xl shadow-sm cursor-pointer hover:border-[#b8892a]/60 hover:shadow-md transition-all duration-300">
                       {inner}
                     </div>
                   </Link>
