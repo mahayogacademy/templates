@@ -724,7 +724,7 @@ export default function FounderGuru() {
               ].map((yajna: { year: string; name: string; desc: string; href: string | null; img?: string }, i) => {
                 const inner = (
                   <div className="flex gap-6 items-start">
-                    <div className="shrink-0 w-28 flex flex-col items-end gap-2">
+                    <div className="shrink-0 w-28 flex flex-col items-center gap-2">
                       <span className="text-sm uppercase tracking-[0.2em] text-[#b8892a] font-semibold leading-none">{yajna.year}</span>
                       {yajna.img && (
                         <div className="w-24 h-24 rounded-xl overflow-hidden border border-[#e8dece] shadow-sm">
