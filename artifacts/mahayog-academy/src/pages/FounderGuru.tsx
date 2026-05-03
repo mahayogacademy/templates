@@ -213,7 +213,6 @@ export default function FounderGuru() {
               { label: "Key Initiatives",  anchor: "#initiatives"  },
               { label: "Yajñas",           anchor: "#yajnas"       },
               { label: "Ashrams",          anchor: "#ashrams"      },
-              { label: "Related Teachings", anchor: "#interviews"   },
             ].map(({ label, anchor }) => (
               <a
                 key={anchor}
