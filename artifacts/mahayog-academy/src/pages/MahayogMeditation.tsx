@@ -436,21 +436,23 @@ const NAV_SECTIONS = [
 ];
 
 function HorizontalSectionNav() {
-  const [active, setActive] = useState<string>("");
+  const [active, setActive] = useState<string>(NAV_SECTIONS[0].id);
 
   useEffect(() => {
-    const observers: IntersectionObserver[] = [];
-    NAV_SECTIONS.forEach(({ id }) => {
-      const el = document.getElementById(id);
-      if (!el) return;
-      const obs = new IntersectionObserver(
-        ([entry]) => { if (entry.isIntersecting) setActive(id); },
-        { rootMargin: "-35% 0px -55% 0px", threshold: 0 }
-      );
-      obs.observe(el);
-      observers.push(obs);
-    });
-    return () => observers.forEach((o) => o.disconnect());
+    const handleScroll = () => {
+      const triggerY = window.scrollY + window.innerHeight * 0.35;
+      let current = NAV_SECTIONS[0].id;
+      for (const { id } of NAV_SECTIONS) {
+        const el = document.getElementById(id);
+        if (el && el.offsetTop <= triggerY) {
+          current = id;
+        }
+      }
+      setActive(current);
+    };
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
