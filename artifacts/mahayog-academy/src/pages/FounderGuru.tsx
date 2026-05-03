@@ -398,13 +398,6 @@ export default function FounderGuru() {
           {/* ── MEET SIDDHABABA CTA ── */}
           <div className="mb-12 rounded-2xl border border-[#e8dece] bg-white overflow-hidden">
             <div className="flex flex-col md:flex-row">
-              <div className="md:w-2/5 h-56 md:h-auto shrink-0 overflow-hidden">
-                <img
-                  src={`${b}images/guru-darshan-card.jpg`}
-                  alt="His Holiness Jagadguru Mahayogi Siddhababa giving darshan"
-                  className="w-full h-full object-cover object-center"
-                />
-              </div>
               <div className="flex-1 flex flex-col justify-center px-8 py-8">
                 <p className="text-sm uppercase tracking-[0.3em] text-[#b8892a] font-semibold mb-2">Darshan</p>
                 <h3 className="font-['Cormorant_Garamond'] text-3xl font-light text-[#3d3830] mb-3 leading-snug">
@@ -418,6 +411,13 @@ export default function FounderGuru() {
                     Get Darshan <ArrowRight className="w-4 h-4" strokeWidth={1.5} />
                   </span>
                 </Link>
+              </div>
+              <div className="md:w-2/5 h-56 md:h-auto shrink-0 overflow-hidden order-first md:order-last">
+                <img
+                  src={`${b}images/guru-darshan-card.jpg`}
+                  alt="His Holiness Jagadguru Mahayogi Siddhababa giving darshan"
+                  className="w-full h-full object-cover object-center"
+                />
               </div>
             </div>
           </div>
