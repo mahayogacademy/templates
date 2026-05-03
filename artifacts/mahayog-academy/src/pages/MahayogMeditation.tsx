@@ -263,7 +263,7 @@ const FAQ_GROUPS: { theme: string; items: { q: string; a: string }[] }[] = [
       },
       {
         q: "How to Awaken the Kundalini Safely?",
-        a: "Through Guru Grace (The Automatic Method): Jagadguru Mahayogi Siddhababa can awaken a seeker's Kundalini through touch, sight, mantra, or pure intention. This initiation, known as Shaktipat, sparks automatic deep purification, heightened awareness, and accelerated transformation.\n\nWith the guidance of an enlightened Master, Kundalini rises naturally, safely, and in alignment with the seeker's individual journey.\n\nPersonal Effort (The Manual Method): Many attempt to awaken Kundalini through books or online guides. This approach carries significant risks without proper guidance, the energy is potent and can cause physical, emotional, and psychological imbalances if not properly directed.",
+        a: "Through Guru Grace (The Automatic Method): Jagadguru Mahayogi Siddhababa can awaken a seeker's Kundalini through touch, sight, mantra, or pure intention. This initiation, known as Shaktipat, sparks automatic deep purification, heightened awareness, and accelerated transformation.\n\nWith the guidance of an enlightened Master, Kundalini rises naturally, safely, and in alignment with the seeker's individual journey.\n\nPersonal Effort (The Manual Method): Many attempt to awaken Kundalini through books or online guides. This approach carries significant risks without proper guidance. The energy is potent and can cause physical, emotional, and psychological imbalances if not properly directed.",
       },
       {
         q: "What happens once Kundalini is Awakened?",
