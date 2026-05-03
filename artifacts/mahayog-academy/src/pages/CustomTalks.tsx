@@ -197,6 +197,26 @@ export default function CustomTalks() {
         </div>
       </section>
 
+      {/* ── QUOTE BANNER ── */}
+      <section className="relative py-16 px-6 overflow-hidden">
+        <img
+          src={`${b}images/quote-banner-bg.png`}
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 w-full h-full object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-[#1a0c03]/70" />
+        <div className="relative z-10 max-w-3xl mx-auto text-center">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" className="mx-auto mb-6">
+            <path d="M12 2C12 2 15 9 22 12C22 12 15 15 12 22C12 22 9 15 2 12C2 12 9 9 12 2Z" stroke="#e8c56a" strokeWidth="1.2" fill="none"/>
+          </svg>
+          <p className="font-['Cormorant_Garamond'] text-2xl md:text-3xl text-white font-light italic leading-snug mb-4">
+            "Wisdom shared is wisdom multiplied. When one lamp lights another, neither loses its flame."
+          </p>
+          <p className="text-[#e8c56a] text-xs tracking-widest uppercase">— Jagadguru Mahayogi Siddhababa</p>
+        </div>
+      </section>
+
       {/* ── WHO IS THIS FOR ── */}
       <section className="py-20 px-6 bg-[#f4ede0]">
         <div className="max-w-5xl mx-auto">
@@ -223,26 +243,6 @@ export default function CustomTalks() {
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* ── QUOTE BANNER ── */}
-      <section className="relative py-16 px-6 overflow-hidden">
-        <img
-          src={`${b}images/quote-banner-bg.png`}
-          alt=""
-          aria-hidden="true"
-          className="absolute inset-0 w-full h-full object-cover object-center"
-        />
-        <div className="absolute inset-0 bg-[#1a0c03]/70" />
-        <div className="relative z-10 max-w-3xl mx-auto text-center">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" className="mx-auto mb-6">
-            <path d="M12 2C12 2 15 9 22 12C22 12 15 15 12 22C12 22 9 15 2 12C2 12 9 9 12 2Z" stroke="#e8c56a" strokeWidth="1.2" fill="none"/>
-          </svg>
-          <p className="font-['Cormorant_Garamond'] text-2xl md:text-3xl text-white font-light italic leading-snug mb-4">
-            "Wisdom shared is wisdom multiplied. When one lamp lights another, neither loses its flame."
-          </p>
-          <p className="text-[#e8c56a] text-xs tracking-widest uppercase">— Jagadguru Mahayogi Siddhababa</p>
         </div>
       </section>
 
