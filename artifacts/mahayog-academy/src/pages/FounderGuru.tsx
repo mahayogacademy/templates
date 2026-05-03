@@ -741,7 +741,7 @@ export default function FounderGuru() {
                   );
                 }
                 return (
-                  <Link key={i} href={yajna.href} onClick={() => window.scrollTo(0, 0)}>
+                  <Link key={i} href={yajna.href} onClick={() => window.scrollTo(0, 0)} className="block">
                     <div className="flex gap-6 items-start p-6 bg-white border border-[#d4c8b5] rounded-2xl shadow-sm cursor-pointer hover:border-[#b8892a]/60 hover:shadow-md transition-all duration-300">
                       {inner}
                     </div>
