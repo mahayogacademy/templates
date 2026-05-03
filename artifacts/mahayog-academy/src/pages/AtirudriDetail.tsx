@@ -1,6 +1,6 @@
 import Nav from "@/components/Nav";
 import { Link } from "wouter";
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 
 const b = import.meta.env.BASE_URL;
 
@@ -277,23 +277,16 @@ export default function AtirudriDetail() {
       </section>
 
       {/* ── FOOTER NAV ── */}
-      <section className="bg-[#faf9f6] border-t border-[#e8dece] py-12 px-6">
-        <div className="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
-          <Link href="/events">
-            <span className="inline-flex items-center gap-2 text-sm text-[#7a6e5a] hover:text-[#b8892a] transition-colors cursor-pointer font-medium">
-              <ArrowLeft size={15} />
-              All Events
-            </span>
+      <section className="bg-[#faf9f6] py-12 px-6 border-t border-[#e8dece]">
+        <div className="max-w-3xl mx-auto flex flex-col sm:flex-row items-start sm:items-center gap-4">
+          <Link href="/events#historic"
+            className="inline-flex items-center gap-2 text-sm text-[#8a7860] hover:text-[#b8892a] transition-colors">
+            <ArrowLeft size={14} />
+            All Historic Events
           </Link>
-          <div className="text-center">
-            <p className="text-xs uppercase tracking-[0.2em] text-[#b8892a] font-medium mb-1">Continue Exploring</p>
-            <p className="font-['Cormorant_Garamond'] text-lg text-[#2c1a08] font-light">Historic Milestones of the Academy</p>
-          </div>
-          <Link href="/events/historic/covid-anusthan">
-            <span className="inline-flex items-center gap-2 text-sm text-[#7a6e5a] hover:text-[#b8892a] transition-colors cursor-pointer font-medium">
-              COVID-19 Anusthan
-              <ArrowRight size={15} />
-            </span>
+          <Link href="/contact"
+            className="sm:ml-auto text-sm bg-[#b8892a] hover:bg-[#9a6e1a] text-white px-5 py-2.5 rounded-full transition-colors">
+            Contact the Academy
           </Link>
         </div>
       </section>

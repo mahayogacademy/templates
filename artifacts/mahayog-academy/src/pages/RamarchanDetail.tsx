@@ -1,6 +1,6 @@
 import Nav from "@/components/Nav";
 import { Link } from "wouter";
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 
 const b = import.meta.env.BASE_URL;
 
@@ -257,20 +257,21 @@ export default function RamarchanDetail() {
             "Those who participated in the 108 Ramarchan Mahayagya carried home not merely memories, but a tangible shift in their inner state — the fruit of days spent in the current of sacred intention, mantra, and the Guru's grace."
           </blockquote>
           <p className="text-[#e8c56a] text-sm tracking-widest uppercase">— Mahayogi Siddhababa Spiritual Academy</p>
-          <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/events#historic">
-              <button className="inline-flex items-center gap-2 border border-[#e8c56a]/50 text-[#e8c56a] px-6 py-3 rounded-full text-sm hover:bg-[#e8c56a]/10 transition-colors">
-                <ArrowLeft size={15} />
-                All Historic Events
-              </button>
-            </Link>
-            <Link href="/events/historic/hanumad-mahayagya">
-              <button className="inline-flex items-center gap-2 bg-[#b8892a] text-white px-6 py-3 rounded-full text-sm hover:bg-[#9a6f1e] transition-colors">
-                Next: Hanumad Mahayagya
-                <ArrowRight size={15} />
-              </button>
-            </Link>
-          </div>
+        </div>
+      </section>
+
+      {/* ── FOOTER NAV ── */}
+      <section className="bg-[#faf9f6] py-12 px-6 border-t border-[#e8dece]">
+        <div className="max-w-3xl mx-auto flex flex-col sm:flex-row items-start sm:items-center gap-4">
+          <Link href="/events#historic"
+            className="inline-flex items-center gap-2 text-sm text-[#8a7860] hover:text-[#b8892a] transition-colors">
+            <ArrowLeft size={14} />
+            All Historic Events
+          </Link>
+          <Link href="/contact"
+            className="sm:ml-auto text-sm bg-[#b8892a] hover:bg-[#9a6e1a] text-white px-5 py-2.5 rounded-full transition-colors">
+            Contact the Academy
+          </Link>
         </div>
       </section>
     </div>

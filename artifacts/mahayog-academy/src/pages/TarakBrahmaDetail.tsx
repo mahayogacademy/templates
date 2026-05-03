@@ -412,14 +412,14 @@ export default function TarakBrahmaDetail() {
 
       {/* ── FOOTER NAV ── */}
       <section className="bg-[#faf9f6] py-12 px-6 border-t border-[#e8dece]">
-        <div className="max-w-3xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="max-w-3xl mx-auto flex flex-col sm:flex-row items-start sm:items-center gap-4">
           <Link href="/events#historic"
             className="inline-flex items-center gap-2 text-sm text-[#8a7860] hover:text-[#b8892a] transition-colors">
             <ArrowLeft size={14} />
             All Historic Events
           </Link>
           <Link href="/contact"
-            className="text-sm bg-[#b8892a] hover:bg-[#9a6e1a] text-white px-6 py-2.5 rounded-full transition-colors">
+            className="sm:ml-auto text-sm bg-[#b8892a] hover:bg-[#9a6e1a] text-white px-5 py-2.5 rounded-full transition-colors">
             Contact the Academy
           </Link>
         </div>
