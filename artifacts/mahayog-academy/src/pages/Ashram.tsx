@@ -374,7 +374,7 @@ export default function Ashram() {
               style={{ filter: "brightness(1.06) saturate(1.18) contrast(1.02)" }}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/35 to-transparent" />
-            <p className="absolute bottom-4 left-5 text-xs text-white/90 tracking-[0.2em] uppercase font-medium">
+            <p className="absolute bottom-3 left-3 sm:bottom-4 sm:left-5 text-[10px] sm:text-xs text-white/90 tracking-[0.1em] sm:tracking-[0.2em] uppercase font-medium">
               {GALLERY_TOP[topIdx].caption}
             </p>
             <button onClick={prevTop} className="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-black/30 hover:bg-black/50 flex items-center justify-center transition-colors">
@@ -404,7 +404,7 @@ export default function Ashram() {
                       style={{ filter: "brightness(1.06) saturate(1.15) contrast(1.02)", objectPosition: img.objectPosition ?? "center" }}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
-                    <p className="absolute bottom-3 left-3 text-sm text-white/85 tracking-[0.15em] uppercase">{img.caption}</p>
+                    <p className="absolute bottom-2 left-2 right-2 sm:bottom-3 sm:left-3 sm:right-3 text-[9px] sm:text-sm text-white/85 tracking-[0.05em] sm:tracking-[0.15em] uppercase leading-tight">{img.caption}</p>
                   </div>
                 );
               })}
