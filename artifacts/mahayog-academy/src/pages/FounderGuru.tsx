@@ -807,7 +807,7 @@ export default function FounderGuru() {
             </p>
 
             {/* Centers inline list */}
-            <div className="flex flex-col sm:flex-row gap-y-3 gap-x-10 mb-12 flex-wrap">
+            <div className="flex flex-col gap-y-3 mb-12">
               {CENTERS.map((region) => (
                 <div key={region.region} className="flex items-baseline gap-3 text-sm">
                   <span className="text-sm uppercase tracking-[0.25em] text-[#b8892a] font-semibold shrink-0">{region.region}</span>
