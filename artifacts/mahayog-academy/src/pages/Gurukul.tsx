@@ -84,7 +84,7 @@ export default function Gurukul() {
             alt="Jagadguru Shriramanandacharya Gurukul — sacred learning at Barahakshetra"
             className="w-full h-full object-cover object-center"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#1a0803]/80 via-[#2c1205]/30 to-[#faf9f6]/50" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#1a0803]/80 via-[#2c1205]/50 to-[#faf9f6]" />
         </div>
         <div className="relative z-10 text-center px-6 max-w-3xl mx-auto">
           <div className="flex items-center justify-center gap-3 mb-4">
