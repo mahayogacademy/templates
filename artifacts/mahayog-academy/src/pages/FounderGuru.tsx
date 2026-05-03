@@ -206,7 +206,7 @@ export default function FounderGuru() {
           </div>
 
           {/* ── SECTION ANCHOR NAV ── */}
-          <nav className="flex items-stretch rounded-full border border-[#d8cebb] bg-[#f4ede0] overflow-hidden divide-x divide-[#d8cebb] text-sm font-medium mb-12">
+          <nav className="flex flex-col md:flex-row items-stretch rounded-2xl md:rounded-full border border-[#d8cebb] bg-[#f4ede0] overflow-hidden divide-y md:divide-y-0 md:divide-x divide-[#d8cebb] text-sm font-medium mb-12">
             {[
               { label: "Life",             anchor: "#life"         },
               { label: "Teachings",        anchor: "#teachings"    },

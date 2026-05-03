@@ -472,8 +472,8 @@ function HorizontalSectionNav() {
   }, []);
 
   return (
-    <div className="sticky top-[60px] z-30 flex justify-center px-6 py-3 bg-[#faf9f6]/95 backdrop-blur-sm border-b border-[#e8dece]">
-      <nav className="flex w-full max-w-4xl items-stretch rounded-full border border-[#d8cebb] bg-[#f4ede0] overflow-hidden divide-x divide-[#d8cebb] text-sm font-medium">
+    <div className="md:sticky md:top-[60px] z-30 flex justify-center px-6 py-3 bg-[#faf9f6]/95 backdrop-blur-sm border-b border-[#e8dece]">
+      <nav className="flex flex-col md:flex-row w-full max-w-4xl items-stretch rounded-2xl md:rounded-full border border-[#d8cebb] bg-[#f4ede0] overflow-hidden divide-y md:divide-y-0 md:divide-x divide-[#d8cebb] text-sm font-medium">
         {NAV_SECTIONS.map(({ id, short }) => {
           const isActive = active === id;
           return (
