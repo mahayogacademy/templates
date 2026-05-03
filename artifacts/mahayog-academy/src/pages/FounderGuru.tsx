@@ -657,19 +657,19 @@ export default function FounderGuru() {
                   {/* Row 1: two cards */}
                   <div className="grid sm:grid-cols-2 gap-4">
                     <Card item={ITEMS[0]} overlay />
-                    <Card item={ITEMS[1]} />
+                    <Card item={ITEMS[1]} overlay />
                   </div>
                   {/* Row 2: one full-width card */}
-                  <Card item={ITEMS[2]} wide />
+                  <Card item={ITEMS[2]} overlay wide />
                   {/* Row 3: two cards */}
                   <div className="grid sm:grid-cols-2 gap-4">
-                    <Card item={ITEMS[3]} />
-                    <Card item={ITEMS[4]} />
+                    <Card item={ITEMS[3]} overlay />
+                    <Card item={ITEMS[4]} overlay />
                   </div>
                   {/* Row 4: two cards */}
                   <div className="grid sm:grid-cols-2 gap-4">
-                    <Card item={ITEMS[5]} />
-                    <Card item={ITEMS[6]} />
+                    <Card item={ITEMS[5]} overlay />
+                    <Card item={ITEMS[6]} overlay />
                   </div>
                 </div>
               );
