@@ -727,14 +727,9 @@ export default function FounderGuru() {
                       <span className="text-sm uppercase tracking-[0.2em] text-[#b8892a] font-semibold leading-none">{yajna.year}</span>
                     </div>
                     <div className="w-px bg-[#e8dece] self-stretch shrink-0" />
-                    <div className="flex-1">
+                    <div>
                       <p className="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#3d3830] mb-1">{yajna.name}</p>
                       <p className="text-base text-[#7a7068] leading-relaxed">{yajna.desc}</p>
-                      {yajna.href && (
-                        <span className="mt-2 inline-flex items-center gap-2 text-sm text-[#b8892a] font-medium tracking-wide">
-                          Learn more <ArrowRight className="w-4 h-4" strokeWidth={1.5} />
-                        </span>
-                      )}
                     </div>
                   </>
                 );
