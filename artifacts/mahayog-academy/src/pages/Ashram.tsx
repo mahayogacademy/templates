@@ -183,13 +183,18 @@ const INTERNATIONAL_CENTERS = [
 export default function Ashram() {
   const [topIdx, setTopIdx] = useState(0);
   const [botIdx, setBotIdx] = useState(0);
+  const [mIdx, setMIdx] = useState(0);
 
   const nt = GALLERY_TOP.length;
   const nb = GALLERY_BOT.length;
+  const GALLERY_ALL = [...GALLERY_TOP, ...GALLERY_BOT];
+  const nm = GALLERY_ALL.length;
   const prevTop = () => setTopIdx((i) => (i - 1 + nt) % nt);
   const nextTop = () => setTopIdx((i) => (i + 1) % nt);
   const prevBot = () => setBotIdx((i) => (i - 1 + nb) % nb);
   const nextBot = () => setBotIdx((i) => (i + 1) % nb);
+  const prevM = () => setMIdx((i) => (i - 1 + nm) % nm);
+  const nextM = () => setMIdx((i) => (i + 1) % nm);
 
   return (
     <div className="bg-[#faf9f6] text-[#3d3830]" style={{ scrollBehavior: "smooth" }}>
@@ -364,8 +369,36 @@ export default function Ashram() {
             <h2 className="font-['Cormorant_Garamond'] text-4xl font-light text-[#3d3830] mt-2">A Glimpse Within</h2>
           </div>
 
-          {/* ── TOP CAROUSEL, full-width banner ── */}
-          <div className="relative overflow-hidden rounded-2xl mb-3" style={{ height: "360px" }}>
+          {/* ── MOBILE-ONLY COMBINED CAROUSEL ── */}
+          <div className="md:hidden relative">
+            <div className="relative overflow-hidden rounded-2xl" style={{ height: "320px" }}>
+              <img
+                key={mIdx}
+                src={`${b}images/${GALLERY_ALL[mIdx].src}`}
+                alt={GALLERY_ALL[mIdx].alt}
+                className="w-full h-full object-cover transition-opacity duration-500"
+                style={{ filter: "brightness(1.06) saturate(1.18) contrast(1.02)", objectPosition: GALLERY_ALL[mIdx].objectPosition ?? "center" }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+              <p className="absolute bottom-3 left-3 right-3 text-[10px] text-white/90 tracking-[0.1em] uppercase font-medium leading-tight">
+                {GALLERY_ALL[mIdx].caption}
+              </p>
+              <button onClick={prevM} className="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-black/30 hover:bg-black/50 flex items-center justify-center transition-colors">
+                <ChevronLeft className="w-5 h-5 text-white" strokeWidth={1.5} />
+              </button>
+              <button onClick={nextM} className="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-black/30 hover:bg-black/50 flex items-center justify-center transition-colors">
+                <ChevronRight className="w-5 h-5 text-white" strokeWidth={1.5} />
+              </button>
+            </div>
+            <div className="flex justify-center flex-wrap gap-1.5 mt-3">
+              {GALLERY_ALL.map((_, i) => (
+                <button key={i} onClick={() => setMIdx(i)} className={`w-1.5 h-1.5 rounded-full transition-all ${i === mIdx ? "bg-[#b8892a] scale-125" : "bg-[#d4a843]/30"}`} />
+              ))}
+            </div>
+          </div>
+
+          {/* ── TOP CAROUSEL, full-width banner (desktop only) ── */}
+          <div className="hidden md:block relative overflow-hidden rounded-2xl mb-3" style={{ height: "360px" }}>
             <img
               key={topIdx}
               src={`${b}images/${GALLERY_TOP[topIdx].src}`}
@@ -390,8 +423,8 @@ export default function Ashram() {
             </div>
           </div>
 
-          {/* ── BOTTOM CAROUSEL, three tiles ── */}
-          <div className="relative">
+          {/* ── BOTTOM CAROUSEL, three tiles (desktop only) ── */}
+          <div className="hidden md:block relative">
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
               {[0, 1, 2].map((offset) => {
                 const img = GALLERY_BOT[(botIdx + offset) % nb];
