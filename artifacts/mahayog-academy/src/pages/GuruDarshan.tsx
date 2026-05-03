@@ -230,12 +230,12 @@ export default function GuruDarshan() {
               <div className="space-y-7">
                 {ETIQUETTE.map((e, i) => (
                   <div key={i} className="flex items-start gap-4">
-                    <div className="w-6 h-6 rounded-full bg-[#b8892a]/12 flex items-center justify-center shrink-0 mt-0.5">
-                      <span className="font-['Cormorant_Garamond'] text-xs text-[#b8892a] font-semibold">{i + 1}</span>
+                    <div className="w-7 h-7 rounded-full bg-[#b8892a]/12 flex items-center justify-center shrink-0 mt-0.5">
+                      <span className="font-['Cormorant_Garamond'] text-sm text-[#b8892a] font-semibold">{i + 1}</span>
                     </div>
                     <div>
-                      <p className="text-sm font-medium text-[#3d3830] mb-1">{e.title}</p>
-                      <p className="text-sm text-[#6a6258] leading-relaxed">{e.desc}</p>
+                      <p className="text-base font-medium text-[#3d3830] mb-1">{e.title}</p>
+                      <p className="text-base text-[#6a6258] leading-relaxed">{e.desc}</p>
                     </div>
                   </div>
                 ))}
