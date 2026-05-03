@@ -182,7 +182,7 @@ export default function Home() {
             <span className="uppercase tracking-[0.3em] text-xs text-[#b8892a] font-medium">Our Purpose</span>
             <div className="h-px w-10 bg-[#b8892a]/40" />
           </div>
-          <p className="font-['Cormorant_Garamond'] text-3xl md:text-4xl font-light text-[#3d3830] leading-relaxed mb-8">
+          <p className="font-['Cormorant_Garamond'] text-2xl md:text-3xl font-light text-[#3d3830] leading-relaxed mb-8">
             A living sanctuary where seekers from every corner of the world come to experience the depths of Vedic wisdom, Himalayan yoga, and sacred service.
           </p>
           <p className="text-base text-[#6a6058] leading-relaxed max-w-xl mx-auto border-t border-b border-[#b8892a]/30 py-5 tracking-wide">
