@@ -701,79 +701,64 @@ export default function MahayogMeditation() {
       {/* ── BENEFITS ── */}
       <section id="benefits" className="py-14 px-6">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-10">
+          <div className="text-center mb-12">
             <span className="uppercase tracking-[0.25em] text-xs text-[#b8892a] font-medium">What Unfolds</span>
             <h2 className="font-['Cormorant_Garamond'] text-4xl font-light text-[#3d3830] mt-2 mb-3">
               Benefits of the Practice
             </h2>
-            <p className="text-sm text-[#7a7068] max-w-xl mx-auto leading-relaxed">
+            <p className="text-base text-[#7a7068] max-w-xl mx-auto leading-relaxed">
               These changes happen gradually and organically through awakened Kundalini and the Guru's grace.
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 items-start">
-            {(() => {
-              // Build a lookup of items by title for flexible ordering
-              const flat = BENEFIT_CATEGORIES.flatMap((cat) =>
-                cat.items.map((b) => ({ ...b, catLabel: cat.label, catColor: cat.color }))
-              );
-              const byTitle = Object.fromEntries(flat.map((x) => [x.title, x]));
-              const order = [
-                "Positive Transformation",
-                "Relief from Suffering",
-                "Inner Peace",
-                "Ajapa Japa",
-                "Anahad Nāda",
-                "Accelerated Growth",
-              ];
-              return order.map((title) => {
-                const b = byTitle[title];
-                return (
+          {BENEFIT_CATEGORIES.map((cat) => (
+            <div key={cat.label} className="mb-12 last:mb-0">
+              {/* Category heading */}
+              <div className="flex items-center gap-3 mb-6">
+                <span
+                  className="h-0.5 w-8 rounded-full shrink-0"
+                  style={{ background: cat.color }}
+                />
+                <span
+                  className="text-sm font-semibold uppercase tracking-[0.2em]"
+                  style={{ color: cat.color }}
+                >
+                  {cat.label}
+                </span>
+                <span className="h-px flex-1 bg-[#e8dece]" />
+              </div>
+
+              {/* Cards */}
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                {cat.items.map((b) => (
                   <div
                     key={b.title}
-                    className="flex flex-col p-5 bg-white rounded-xl border-2 border-[#c4a872] shadow-sm hover:shadow-md hover:border-[#b8892a] transition-all duration-300 group"
+                    className="flex flex-col gap-4 p-6 bg-white rounded-2xl border border-[#e8dece] shadow-sm hover:shadow-md hover:border-[#c4a872] transition-all duration-300"
+                    style={{ borderLeftWidth: "3px", borderLeftColor: cat.color }}
                   >
-                    {/* Category tag */}
-                    <span
-                      className="inline-block text-[9px] uppercase tracking-[0.2em] font-semibold px-2 py-0.5 rounded-full mb-3 self-start"
-                      style={{ color: b.catColor, background: `${b.catColor}22` }}
+                    {/* Icon */}
+                    <div
+                      className="w-12 h-12 rounded-full flex items-center justify-center shrink-0"
+                      style={{ background: `${cat.color}25`, border: `1.5px solid ${cat.color}60` }}
                     >
-                      {b.catLabel}
-                    </span>
-
-                    {/* Icon + title */}
-                    <div className="flex items-center gap-3 mb-3">
-                      <div
-                        className="shrink-0 w-10 h-10 rounded-full flex items-center justify-center transition-transform duration-300 group-hover:scale-110"
-                        style={{ background: `${b.catColor}30`, border: `1.5px solid ${b.catColor}70` }}
-                      >
-                        <BenefitIcon type={b.icon} />
-                      </div>
-                      <div>
-                        <h3 className="font-['Cormorant_Garamond'] text-xl font-semibold text-[#2d2011] leading-tight">
-                          {b.title}
-                        </h3>
-                        <p className="text-sm uppercase tracking-[0.15em] text-[#7a5014]">{b.subtitle}</p>
-                      </div>
+                      <BenefitIcon type={b.icon} />
                     </div>
 
-                    {/* Read more hint, collapses on hover */}
-                    <div className="overflow-hidden max-h-6 group-hover:max-h-0 transition-all duration-300 ease-in-out">
-                      <p className="mt-2 text-[11px] text-[#b8892a] tracking-wide flex items-center gap-1 opacity-100 group-hover:opacity-0 transition-opacity duration-200">
-                        <span>Read more</span>
-                        <span>›</span>
-                      </p>
+                    {/* Title + subtitle */}
+                    <div>
+                      <h3 className="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#2d2011] leading-tight mb-1">
+                        {b.title}
+                      </h3>
+                      <p className="text-sm uppercase tracking-[0.15em] text-[#9a8068]">{b.subtitle}</p>
                     </div>
 
-                    {/* Description, slides in on hover */}
-                    <div className="overflow-hidden max-h-0 group-hover:max-h-48 transition-all duration-500 ease-in-out">
-                      <p className="text-sm text-[#5a5248] leading-relaxed pt-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-150">{b.desc}</p>
-                    </div>
+                    {/* Description — always visible */}
+                    <p className="text-base text-[#5a5248] leading-relaxed">{b.desc}</p>
                   </div>
-                );
-              });
-            })()}
-          </div>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
