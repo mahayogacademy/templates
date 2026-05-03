@@ -79,7 +79,7 @@ function VennDiagram() {
               x={y.labelX} y={y.labelY}
               textAnchor="middle"
               fontFamily="'Cormorant Garamond', serif"
-              fontSize="20"
+              fontSize="26"
               fontWeight="700"
               fill={hovered === y.id ? "#2a1f08" : "#3d3830"}
               style={{ pointerEvents: "none", transition: "fill 0.2s" }}
@@ -87,10 +87,10 @@ function VennDiagram() {
               {y.name.split(" ")[0]}
             </text>
             <text
-              x={y.labelX} y={y.labelY + 24}
+              x={y.labelX} y={y.labelY + 30}
               textAnchor="middle"
               fontFamily="'Cormorant Garamond', serif"
-              fontSize="17"
+              fontSize="22"
               fill={hovered === y.id ? "#5a3e10" : "#6b5a3e"}
               style={{ pointerEvents: "none", transition: "fill 0.2s" }}
             >
