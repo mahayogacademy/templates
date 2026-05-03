@@ -108,12 +108,12 @@ function VennDiagram() {
           onMouseEnter={() => setHovered("mahayog")}
           onMouseLeave={() => setHovered(null)}
         />
-        <text x="250" y="241" textAnchor="middle" fontFamily="'Cormorant Garamond', serif"
-          fontSize="20" fill="white" fontStyle="italic" style={{ pointerEvents: "none" }}>
+        <text x="250" y="238" textAnchor="middle" fontFamily="'Cormorant Garamond', serif"
+          fontSize="26" fill="white" fontStyle="italic" style={{ pointerEvents: "none" }}>
           Mahāyog
         </text>
-        <text x="250" y="264" textAnchor="middle" fontFamily="'Cormorant Garamond', serif"
-          fontSize="13" fill="#e8c56a" letterSpacing="2" style={{ pointerEvents: "none" }}>
+        <text x="250" y="265" textAnchor="middle" fontFamily="'Cormorant Garamond', serif"
+          fontSize="17" fill="#e8c56a" letterSpacing="2" style={{ pointerEvents: "none" }}>
           MEDITATION
         </text>
       </svg>
