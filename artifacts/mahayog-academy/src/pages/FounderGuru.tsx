@@ -581,7 +581,7 @@ export default function FounderGuru() {
             {(() => {
               type Initiative = { label: string; note: string; img: string; pos?: string; href: string | null; wide?: boolean };
               const ITEMS: Initiative[] = [
-                { label: "Spiritual Revival through Himalayan Siddha Mahayog Meditation", note: "Spiritual Revival",            img: "initiative-meditation.png",       href: "/meditation" },
+                { label: "Himalayan Siddha Mahayog Meditation", note: "Inner Awakening", img: "initiative-meditation.png", href: "/meditation" },
                 { label: "Restoration of the Cow as Nepal's National Animal",              note: "Cultural & Ecological Advocacy", img: "ashram-cows-sunset.jpg",          href: null },
                 { label: "Jagadguru Shriramanandacharya Gurukul (Grades 6–12)",           note: "Education",                     img: "initiative-gurukul.png",          href: "/gurukul", wide: true },
                 { label: "A historic Ram Temple in Nepal",                                 note: "Sacred Infrastructure",          img: "ram-mandir-1.jpg",                href: "/projects#project-02" },
