@@ -347,7 +347,7 @@ export default function Projects() {
             {/* Yugas */}
             <div className="mt-5">
               <p className="text-sm text-[#9a8f84] mb-4 uppercase tracking-[0.15em] font-medium">The Four Yugas, Cycle of Time</p>
-              <div className="grid grid-cols-4 divide-x divide-[#e8dece] border border-[#e8dece] rounded-xl overflow-hidden">
+              <div className="grid grid-cols-2 sm:grid-cols-4 sm:divide-x divide-[#e8dece] border border-[#e8dece] rounded-xl overflow-hidden">
                 {YUGAS.map((y, i) => (
                   <div key={i} className="flex flex-col items-center py-5 px-3 bg-[#fdf6ec]">
                     <span className="font-['Cormorant_Garamond'] text-3xl font-light text-[#b8892a]/40 leading-none mb-2">

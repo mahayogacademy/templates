@@ -194,7 +194,7 @@ export default function Home() {
       {/* ── THREE PILLARS CARDS ── */}
       <section className="relative py-6 pb-28 px-6">
         <div className="max-w-5xl mx-auto">
-          <div className="grid grid-cols-3 gap-5 items-end">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 items-end">
 
             {/* Mahayog */}
             <Link href="/meditation">
@@ -218,7 +218,7 @@ export default function Home() {
 
             {/* Mahayogi — centre, rises above side cards */}
             <Link href="/founder-guru">
-              <div className="group relative rounded-3xl overflow-hidden h-[510px] md:h-[580px] -mt-12 cursor-pointer shadow-2xl hover:shadow-[#b8892a]/30 transition-all duration-500 ring-1 ring-[#b8892a]/40">
+              <div className="group relative rounded-3xl overflow-hidden h-[510px] md:h-[580px] md:-mt-12 cursor-pointer shadow-2xl hover:shadow-[#b8892a]/30 transition-all duration-500 ring-1 ring-[#b8892a]/40">
                 <img
                   src={`${b}images/gurudev-darshan-smile.jpg`}
                   alt="Jagadguru Mahayogi Siddhababa"

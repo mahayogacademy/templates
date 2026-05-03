@@ -40,10 +40,10 @@ export default function Footer() {
       </div>
 
       <div className="max-w-6xl mx-auto">
-        <div className="grid md:grid-cols-5 gap-10 mb-12">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 md:gap-10 mb-12">
 
           {/* Brand */}
-          <div className="md:col-span-2">
+          <div className="col-span-2 md:col-span-2">
             <img src={`${b}images/logo.png`} alt="Academy logo" className="h-12 w-auto mb-4 opacity-90" />
             <p className="font-['Cormorant_Garamond'] text-xl font-light text-[#e8c56a] mb-3 leading-snug">
               Mahayogi Siddhababa<br />Spiritual Academy

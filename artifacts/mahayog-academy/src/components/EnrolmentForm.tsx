@@ -419,7 +419,7 @@ export default function EnrolmentForm({ program }: { program: Program }) {
           {/* ── SHARED: Personal ── */}
           {slot === "personal" && <>
             <p className={hc}>Personal Details</p>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
                 <label className={plc}>First Name *</label>
                 <input required className={ic} value={form.firstName} onChange={e => set("firstName", e.target.value)} />
@@ -429,7 +429,7 @@ export default function EnrolmentForm({ program }: { program: Program }) {
                 <input required className={ic} value={form.lastName} onChange={e => set("lastName", e.target.value)} />
               </div>
             </div>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
                 <label className={plc}>Gender *</label>
                 <select required className={sc} value={form.gender} onChange={e => set("gender", e.target.value)}>
