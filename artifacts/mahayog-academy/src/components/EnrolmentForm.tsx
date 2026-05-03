@@ -414,7 +414,7 @@ export default function EnrolmentForm({ program }: { program: Program }) {
       </div>
 
       <form onSubmit={handleSubmit}>
-        <div className="bg-[#fdf6ec]/90 backdrop-blur-sm border border-[#c8a050]/30 rounded-2xl p-7 space-y-5">
+        <div className="bg-[#fdf6ec]/90 backdrop-blur-sm border border-[#c8a050]/30 rounded-2xl p-7 space-y-5 min-h-[520px] flex flex-col justify-start">
 
           {/* ── SHARED: Personal ── */}
           {slot === "personal" && <>
