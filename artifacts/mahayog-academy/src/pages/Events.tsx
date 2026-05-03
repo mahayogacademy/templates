@@ -441,7 +441,7 @@ export default function Events() {
               <button
                 key={k.value}
                 onClick={() => setFilter(k.value)}
-                className={`whitespace-nowrap px-4 py-1.5 md:px-6 md:py-2.5 rounded-full text-[11px] md:text-sm font-semibold uppercase tracking-[0.12em] md:tracking-[0.14em] border-2 transition-all duration-200 cursor-pointer shadow-sm ${
+                className={`whitespace-nowrap px-3.5 py-1.5 md:px-4 md:py-2 rounded-full text-[11px] md:text-xs font-semibold uppercase tracking-[0.12em] border-2 transition-all duration-200 cursor-pointer shadow-sm ${
                   filter === k.value
                     ? "bg-[#3d3020] text-white border-[#3d3020]"
                     : "bg-white text-[#6a5c48] border-[#d8cebb] hover:border-[#b8892a] hover:text-[#3d3020]"
