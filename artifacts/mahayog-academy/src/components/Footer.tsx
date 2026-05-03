@@ -49,7 +49,7 @@ export default function Footer() {
               Mahayogi Siddhababa<br />Spiritual Academy
             </p>
             <p className="text-sm text-[#9a8878] leading-relaxed max-w-xs">
-              A not-for-profit, volunteer-run sanctuary dedicated to Vedic wisdom, holistic living, and selfless service — rooted in Nepal, open to the world.
+              A not-for-profit, volunteer-run organization dedicated to Vedic wisdom, holistic living, and selfless service.
             </p>
           </div>
 
