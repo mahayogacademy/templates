@@ -606,8 +606,8 @@ export default function FounderGuru() {
                       <p className="text-sm uppercase tracking-[0.2em] text-[#b8892a] font-semibold mb-2">{item.note}</p>
                       <p className="text-base font-bold text-[#3d3830] leading-snug flex-1">{item.label}</p>
                       {item.href && (
-                        <span className="mt-3 inline-flex items-center gap-1 text-[11px] text-[#b8892a] font-medium tracking-wide">
-                          Learn more <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" strokeWidth={2} />
+                        <span className="mt-3 inline-flex items-center gap-2 text-sm text-[#b8892a] font-medium tracking-wide">
+                          Learn more <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" strokeWidth={1.5} />
                         </span>
                       )}
                     </div>
