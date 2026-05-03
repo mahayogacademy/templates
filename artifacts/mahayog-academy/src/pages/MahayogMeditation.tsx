@@ -942,9 +942,9 @@ export default function MahayogMeditation() {
           </div>
 
           {/* Bottom CTA, links to future Lineage page */}
-          <div className="mt-14 pt-10 border-t border-[#e0d0b8] flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="mt-14 rounded-2xl bg-[#f2ead8] border border-[#e0d0b8] px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
             <div>
-              <p className="font-['Cormorant_Garamond'] text-xl text-[#b8892a] font-light">Discover the Full Lineage of the Tradition</p>
+              <p className="font-['Cormorant_Garamond'] text-xl text-[#3d3830] font-light">Discover the Full Lineage of the Tradition</p>
               <p className="text-sm text-[#9a8878] mt-1">Explore the unbroken chain of masters from ancient times to the present day.</p>
             </div>
             <a
