@@ -271,7 +271,7 @@ const FAQ_GROUPS: { theme: string; items: { q: string; a: string }[] }[] = [
       },
       {
         q: "What are the Stages of Kundalini Awakening?",
-        a: "Kundalini awakening is not a single moment, but a gradual inner unfolding through three broad phases:\n\n1. Awakening Begins, During Mahayog Meditation training, the Guru raises the Kundalini from its dormant position. Practitioners often report increased clarity, sensitivity, and awareness of inner movement.\n\n2. Purification, As inner energy becomes active, unresolved impressions surface. The Kundalini purifies body and mind. Emotional patterns begin to be released; dreams become more vivid; awareness refines.\n\n3. Integration, The flow of energy stabilizes. Awareness becomes naturally expressed through daily life, characterized by steadiness, discernment, and ease. Inner silence and clarity begin to inform relationships, work, and service.",
+        a: "Kundalini awakening is not a single moment, but a gradual inner unfolding through three broad phases:\n\n1. Awakening Begins: During Mahayog Meditation training, the Guru raises the Kundalini from its dormant position. Practitioners often report increased clarity, sensitivity, and awareness of inner movement.\n\n2. Purification: As inner energy becomes active, unresolved impressions surface. The Kundalini purifies body and mind. Emotional patterns begin to be released; dreams may become more vivid; awareness refines.\n\n3. Integration: The flow of energy stabilizes. Awareness becomes naturally expressed through daily life, characterized by steadiness, discernment, and ease. Inner silence and clarity begin to inform relationships, work, and service.",
       },
       {
         q: "What is the Chakra System?",
