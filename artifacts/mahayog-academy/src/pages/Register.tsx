@@ -220,7 +220,7 @@ export default function Register() {
       {/* ── FORM ── */}
       <section className="relative py-14 px-6 overflow-hidden">
         <img
-          src={`${b}images/register-hero.png`}
+          src={`${b}images/cta-meditation-dawn.png`}
           alt=""
           aria-hidden="true"
           className="absolute inset-0 w-full h-full object-cover object-center"
