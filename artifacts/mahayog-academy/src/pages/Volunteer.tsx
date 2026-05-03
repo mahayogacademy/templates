@@ -321,7 +321,7 @@ export default function Volunteer() {
                 Send My Expression of Interest
               </button>
 
-              <p className="text-white/30 text-xs text-center">
+              <p className="text-[#7a6e5a] text-sm text-center">
                 As a volunteer-run organisation, we aim to respond within 3–5 working days.
               </p>
             </form>
