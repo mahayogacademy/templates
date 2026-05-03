@@ -292,8 +292,8 @@ export default function Nav() {
 
           <Show when="signed-out">
             <Link href="/sign-in">
-              <span className="ml-2 flex items-center gap-1.5 px-4 py-2 text-sm text-[#5a5248] hover:text-[#7a5518] hover:bg-[#eddfc8] transition-colors tracking-wide rounded-lg cursor-pointer">
-                <UserCircle2 className="w-4 h-4" strokeWidth={1.5} />
+              <span className="ml-2 flex items-center gap-1.5 px-4 py-2 text-sm text-[#5a5248] hover:text-[#7a5518] hover:bg-[#eddfc8] transition-colors tracking-wide rounded-lg cursor-pointer whitespace-nowrap">
+                <UserCircle2 className="w-4 h-4 shrink-0" strokeWidth={1.5} />
                 {t("nav.login")}
               </span>
             </Link>
