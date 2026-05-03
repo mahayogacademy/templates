@@ -590,8 +590,29 @@ export default function FounderGuru() {
                 { label: "Green Revolution for Nepal's agricultural empowerment and independence", note: "Ecology",             img: "initiative-green-revolution.png", href: null },
               ];
 
-              const Card = ({ item, wide = false }: { item: Initiative; wide?: boolean }) => {
-                const inner = (
+              const Card = ({ item, wide = false, overlay = false }: { item: Initiative; wide?: boolean; overlay?: boolean }) => {
+                const overlayInner = (
+                  <div className="relative h-56 overflow-hidden">
+                    <img
+                      src={`${b}images/${item.img}`}
+                      alt=""
+                      aria-hidden
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      style={{ objectPosition: item.pos ?? "center center" }}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
+                    <div className="absolute bottom-0 left-0 right-0 p-5">
+                      <p className="text-xs uppercase tracking-[0.2em] text-[#e8c56a] font-semibold mb-1">{item.note}</p>
+                      <p className="text-base font-semibold text-white leading-snug">{item.label}</p>
+                      {item.href && (
+                        <span className="mt-2 inline-flex items-center gap-1.5 text-sm text-[#e8c56a] font-medium">
+                          Learn more <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" strokeWidth={1.5} />
+                        </span>
+                      )}
+                    </div>
+                  </div>
+                );
+                const standardInner = (
                   <>
                     <div className={`${wide ? "h-48" : "h-36"} overflow-hidden shrink-0`}>
                       <img
@@ -613,8 +634,11 @@ export default function FounderGuru() {
                     </div>
                   </>
                 );
-                const baseClass = `flex flex-col bg-[#faf9f6] border border-[#e8dece] rounded-xl overflow-hidden group`;
-                const clickClass = `cursor-pointer hover:border-[#b8892a]/50 hover:shadow-md transition-all duration-300`;
+                const inner = overlay ? overlayInner : standardInner;
+                const baseClass = overlay
+                  ? `rounded-xl overflow-hidden group`
+                  : `flex flex-col bg-[#faf9f6] border border-[#e8dece] rounded-xl overflow-hidden group`;
+                const clickClass = `cursor-pointer hover:shadow-md transition-all duration-300`;
                 if (!item.href) return <div className={baseClass}>{inner}</div>;
                 const [path, anchor] = item.href.split('#');
                 if (anchor) return (
@@ -631,7 +655,7 @@ export default function FounderGuru() {
                 <div className="flex flex-col gap-4">
                   {/* Row 1: two cards */}
                   <div className="grid sm:grid-cols-2 gap-4">
-                    <Card item={ITEMS[0]} />
+                    <Card item={ITEMS[0]} overlay />
                     <Card item={ITEMS[1]} />
                   </div>
                   {/* Row 2: one full-width card */}
