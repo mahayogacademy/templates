@@ -218,19 +218,25 @@ export default function Register() {
       </section>
 
       {/* ── FORM ── */}
-      <section
-        className="py-14 px-6"
-        style={{ background: "radial-gradient(ellipse at 50% 0%, #f0a832 0%, #d4821a 45%, #a85c10 100%)" }}
-      >
-        <div className="max-w-2xl mx-auto text-center mb-8">
-          <span className="uppercase tracking-[0.25em] text-xs text-[#5a2e04]/70 font-medium">
-            {program === "vedanta" ? "Enrolment Form" : "Registration Form"}
-          </span>
-          <h2 className="font-['Cormorant_Garamond'] text-3xl font-light text-[#2e1405] mt-1">
-            {active.label}
-          </h2>
+      <section className="relative py-14 px-6 overflow-hidden">
+        <img
+          src={`${b}images/register-hero.png`}
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 w-full h-full object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-[#1a0f05]/78" />
+        <div className="relative z-10">
+          <div className="max-w-2xl mx-auto text-center mb-8">
+            <span className="uppercase tracking-[0.25em] text-xs text-[#e8c56a]/80 font-medium">
+              {program === "vedanta" ? "Enrolment Form" : "Registration Form"}
+            </span>
+            <h2 className="font-['Cormorant_Garamond'] text-3xl font-light text-white mt-1">
+              {active.label}
+            </h2>
+          </div>
+          <EnrolmentForm program={program} key={program} />
         </div>
-        <EnrolmentForm program={program} key={program} />
       </section>
 
       {/* ── FAQ ── */}
