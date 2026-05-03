@@ -87,7 +87,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
         />
       </button>
       <div className={`overflow-hidden transition-all duration-400 ${open ? "max-h-[600px] pb-5" : "max-h-0"}`}>
-        <p className="text-sm text-[#6b6158] leading-relaxed whitespace-pre-line">{a}</p>
+        <p className="text-base text-[#6b6158] leading-relaxed whitespace-pre-line">{a}</p>
       </div>
     </div>
   );
