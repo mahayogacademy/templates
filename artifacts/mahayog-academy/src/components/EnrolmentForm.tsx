@@ -1,4 +1,7 @@
 import { useState, useRef, useEffect } from "react";
+import { SignUp, useUser } from "@clerk/react";
+
+const basePath = import.meta.env.BASE_URL.replace(/\/$/, "");
 
 type Program = "vedanta" | "meditation";
 
@@ -148,6 +151,62 @@ const lc = "block text-base font-semibold text-[#7a4a08] mb-2 leading-snug";
 const plc = "block text-sm uppercase tracking-[0.2em] text-[#7a4a08] mb-1.5 font-medium";
 const hc = "font-['Cormorant_Garamond'] text-2xl font-light text-[#3d2008] mb-2";
 const hint = "text-sm text-[#7a5a30]";
+
+function LoginStep({ program }: { program: Program }) {
+  const { isSignedIn, user } = useUser();
+
+  useEffect(() => {
+    localStorage.setItem("msap_registered_program", program);
+    localStorage.setItem("msap_registered_at", new Date().toISOString());
+  }, [program]);
+
+  if (isSignedIn) {
+    return (
+      <div className="text-center py-4 space-y-4">
+        <div className="w-14 h-14 rounded-full bg-[#b8892a] flex items-center justify-center mx-auto">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M5 13l4 4L19 7" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+        </div>
+        <p className="font-['Cormorant_Garamond'] text-2xl font-light text-[#3d2008]">
+          You're already signed in, {user?.firstName || "dear seeker"}
+        </p>
+        <p className="text-base text-[#7a6252]">
+          You're logged in as <span className="text-[#b8892a] font-medium">{user?.primaryEmailAddress?.emailAddress}</span>.
+          Your registration details have been saved.
+        </p>
+        <a
+          href={`${basePath}/dashboard`}
+          className="inline-block mt-2 px-7 py-2.5 rounded-full bg-[#b8892a] text-white text-base font-medium hover:bg-[#9d7422] transition-colors shadow-md"
+        >
+          Go to my Dashboard →
+        </a>
+      </div>
+    );
+  }
+
+  return (
+    <div>
+      <p className="font-['Cormorant_Garamond'] text-2xl font-light text-[#3d2008] mb-1">Create Your Account</p>
+      <p className="text-sm text-[#7a5a30] mb-5">Sign in or create a free account to access your programme portal. After signing in you'll be taken to your personal dashboard.</p>
+      <div className="flex justify-center">
+        <SignUp
+          routing="hash"
+          forceRedirectUrl={`${basePath}/dashboard`}
+          signInForceRedirectUrl={`${basePath}/dashboard`}
+          appearance={{
+            elements: {
+              rootBox: "w-full",
+              cardBox: "shadow-none border-0 w-full max-w-full rounded-none",
+              card: "!shadow-none !border-0 !rounded-none !p-0 !bg-transparent",
+              footer: "!shadow-none !bg-transparent",
+            },
+          }}
+        />
+      </div>
+    </div>
+  );
+}
 
 export default function EnrolmentForm({ program }: { program: Program }) {
   const STEPS = program === "vedanta" ? VEDANTA_STEPS : MEDITATION_STEPS;
@@ -474,24 +533,42 @@ export default function EnrolmentForm({ program }: { program: Program }) {
           </>}
 
           {/* ── SHARED: Login ── */}
-          {slot === "login" && <>
-            <p className={hc}>Create Your Account</p>
-            <p className={`${hint} mb-3`}>These credentials will be used to access your programme portal.</p>
-            <div>
-              <label className={plc}>Email Address *</label>
-              <input required type="email" className={ic} placeholder="you@email.com" value={form.email} onChange={e => set("email", e.target.value)} />
-            </div>
-            <div>
-              <label className={plc}>Choose a Password *</label>
-              <input required type="password" className={ic} placeholder="Min. 8 characters" value={form.password} onChange={e => set("password", e.target.value)} />
-            </div>
-          </>}
+          {slot === "login" && <LoginStep program={program} />}
 
         </div>
 
-        {/* Navigation */}
-        <div className="flex justify-between mt-6">
-          {step > 1 ? (
+        {/* Navigation — hidden on login step (Clerk handles submission) */}
+        {slot !== "login" && (
+          <div className="flex justify-between mt-6">
+            {step > 1 ? (
+              <button
+                type="button"
+                onClick={() => setStep(s => s - 1)}
+                className="px-6 py-2.5 rounded-full border border-[#c8a050]/50 text-base text-[#7a4a08] hover:border-[#b8892a] transition-colors"
+              >
+                ← Back
+              </button>
+            ) : <div />}
+            {step < STEPS.length ? (
+              <button
+                type="button"
+                onClick={() => setStep(s => s + 1)}
+                className="px-8 py-2.5 rounded-full bg-[#2e1405] text-white text-base hover:bg-[#4a2008] transition-colors"
+              >
+                Continue →
+              </button>
+            ) : (
+              <button
+                type="submit"
+                className="px-8 py-2.5 rounded-full bg-[#b8892a] text-white text-base hover:bg-[#9d7422] transition-colors shadow-md"
+              >
+                Submit Registration
+              </button>
+            )}
+          </div>
+        )}
+        {slot === "login" && step > 1 && (
+          <div className="mt-4">
             <button
               type="button"
               onClick={() => setStep(s => s - 1)}
@@ -499,24 +576,8 @@ export default function EnrolmentForm({ program }: { program: Program }) {
             >
               ← Back
             </button>
-          ) : <div />}
-          {step < STEPS.length ? (
-            <button
-              type="button"
-              onClick={() => setStep(s => s + 1)}
-              className="px-8 py-2.5 rounded-full bg-[#2e1405] text-white text-base hover:bg-[#4a2008] transition-colors"
-            >
-              Continue →
-            </button>
-          ) : (
-            <button
-              type="submit"
-              className="px-8 py-2.5 rounded-full bg-[#b8892a] text-white text-base hover:bg-[#9d7422] transition-colors shadow-md"
-            >
-              Submit Registration
-            </button>
-          )}
-        </div>
+          </div>
+        )}
       </form>
     </div>
   );

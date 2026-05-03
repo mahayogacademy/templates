@@ -35,6 +35,7 @@ import NewsDetail from "@/pages/NewsDetail";
 import SignInPage from "@/pages/SignInPage";
 import SignUpPage from "@/pages/SignUpPage";
 import Donate from "@/pages/Donate";
+import Dashboard from "@/pages/Dashboard";
 import ScrollToTop from "@/components/ScrollToTop";
 
 const queryClient = new QueryClient();
@@ -162,6 +163,7 @@ function Router() {
       <Route path="/teachings" component={Teachings} />
       <Route path="/teachings/:id" component={ArticleDetail} />
       <Route path="/donate" component={Donate} />
+      <Route path="/dashboard" component={Dashboard} />
       <Route path="/news/:id" component={NewsDetail} />
       <Route path="/events/historic/:slug" component={HistoricEventDetail} />
       <Route component={NotFound} />
