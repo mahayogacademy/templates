@@ -727,7 +727,7 @@ export default function FounderGuru() {
                     <div className="shrink-0 w-28 flex flex-col items-end gap-2">
                       <span className="text-sm uppercase tracking-[0.2em] text-[#b8892a] font-semibold leading-none">{yajna.year}</span>
                       {yajna.img && (
-                        <div className="w-16 h-16 rounded-xl overflow-hidden border border-[#e8dece] shadow-sm">
+                        <div className="w-24 h-24 rounded-xl overflow-hidden border border-[#e8dece] shadow-sm">
                           <img
                             src={`${b}images/${yajna.img}`}
                             alt={yajna.name}
