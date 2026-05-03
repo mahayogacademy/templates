@@ -128,8 +128,7 @@ export default function FounderGuru() {
             className="w-full h-full object-cover"
             style={{ objectPosition: "center 58%" }}
           />
-          <div className="absolute inset-0 bg-[#1a0f05]/55" />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#1a0f05]/60 via-[#1a0f05]/30 to-[#faf9f6]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#2a1205]/50 via-[#2a1205]/20 to-[#faf9f6]" />
         </div>
         <div className="relative z-10 text-center px-6">
           <div className="flex items-center justify-center gap-3 mb-5">
