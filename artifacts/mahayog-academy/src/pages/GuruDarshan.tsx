@@ -50,7 +50,7 @@ const ETIQUETTE = [
 const FAQS = [
   {
     q: "Do I need to be a registered student to attend darshan?",
-    a: "No registration is required to attend darshan in person at the ashram — sincere seekers of any background are welcome. It is advisable to contact the ashram in advance to confirm His Holiness's availability and schedule. For online darshan and satsang, registration in one of the Academy's programmes is generally required.",
+    a: "No registration is required to attend darshan in person at the ashram — sincere seekers of any background are welcome. It is advisable to contact the ashram in advance to confirm His Holiness's availability and schedule.\n\nFor online darshan and satsang, registration in one of the Academy's programmes is generally required.",
   },
   {
     q: "Can I request a personal audience with His Holiness?",
