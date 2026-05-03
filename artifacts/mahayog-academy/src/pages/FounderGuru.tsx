@@ -578,19 +578,22 @@ export default function FounderGuru() {
               Under his guidance, numerous spiritual, educational, and cultural initiatives are being established, each grounded in the conviction that inner realization must serve the world.
             </p>
 
-            <div className="grid sm:grid-cols-2 gap-4">
-              {[
-                { label: "Spiritual Revival through Himalayan Siddha Mahayog Meditation", note: "Spiritual Revival", img: "initiative-meditation.png", href: "/meditation" },
-                { label: "Green Revolution for Nepal's agricultural empowerment and independence", note: "Ecology", img: "initiative-green-revolution.png", href: null },
-                { label: "Jagadguru Shriramanandacharya Gurukul (Grades 6–12)", note: "Education", img: "initiative-gurukul.png", href: "/gurukul" },
-                { label: "Nepal's first Ayurveda University", note: "Education", img: "initiative-ayurveda.png", href: null },
-                { label: "Restoration of the Cow as Nepal's National Animal", note: "Cultural & Ecological Advocacy", img: "ashram-cows-sunset.jpg", pos: "center center", href: null },
-                { label: "108 Hanuman Temples across Nepal", note: "Sacred Infrastructure", img: "initiative-hanuman-temples.jpg", pos: "center center", href: "/projects#project-01" },
-                { label: "A historic Ram Temple in Nepal", note: "Sacred Infrastructure", img: "ram-mandir-1.jpg", pos: "center center", href: "/projects#project-02" },
-              ].map((item, i) => {
+            {(() => {
+              type Initiative = { label: string; note: string; img: string; pos?: string; href: string | null; wide?: boolean };
+              const ITEMS: Initiative[] = [
+                { label: "Spiritual Revival through Himalayan Siddha Mahayog Meditation", note: "Spiritual Revival",            img: "initiative-meditation.png",       href: "/meditation" },
+                { label: "Restoration of the Cow as Nepal's National Animal",              note: "Cultural & Ecological Advocacy", img: "ashram-cows-sunset.jpg",          href: null },
+                { label: "Jagadguru Shriramanandacharya Gurukul (Grades 6–12)",           note: "Education",                     img: "initiative-gurukul.png",          href: "/gurukul", wide: true },
+                { label: "A historic Ram Temple in Nepal",                                 note: "Sacred Infrastructure",          img: "ram-mandir-1.jpg",                href: "/projects#project-02" },
+                { label: "108 Hanuman Temples across Nepal",                              note: "Sacred Infrastructure",          img: "initiative-hanuman-temples.jpg",  href: "/projects#project-01" },
+                { label: "Nepal's first Ayurveda University",                             note: "Education",                     img: "initiative-ayurveda.png",         href: null },
+                { label: "Green Revolution for Nepal's agricultural empowerment and independence", note: "Ecology",             img: "initiative-green-revolution.png", href: null },
+              ];
+
+              const Card = ({ item, wide = false }: { item: Initiative; wide?: boolean }) => {
                 const inner = (
                   <>
-                    <div className="h-36 overflow-hidden shrink-0">
+                    <div className={`${wide ? "h-48" : "h-36"} overflow-hidden shrink-0`}>
                       <img
                         src={`${b}images/${item.img}`}
                         alt=""
@@ -610,31 +613,42 @@ export default function FounderGuru() {
                     </div>
                   </>
                 );
-                if (!item.href) {
-                  return (
-                    <div key={i} className="flex flex-col bg-[#faf9f6] border border-[#e8dece] rounded-xl overflow-hidden group">
-                      {inner}
-                    </div>
-                  );
-                }
+                const baseClass = `flex flex-col bg-[#faf9f6] border border-[#e8dece] rounded-xl overflow-hidden group`;
+                const clickClass = `cursor-pointer hover:border-[#b8892a]/50 hover:shadow-md transition-all duration-300`;
+                if (!item.href) return <div className={baseClass}>{inner}</div>;
                 const [path, anchor] = item.href.split('#');
-                return anchor ? (
-                  <div
-                    key={i}
-                    className="flex flex-col bg-[#faf9f6] border border-[#e8dece] rounded-xl overflow-hidden group cursor-pointer hover:border-[#b8892a]/50 hover:shadow-md transition-all duration-300"
-                    onClick={() => goToAnchor(path, anchor)}
-                  >
-                    {inner}
-                  </div>
-                ) : (
-                  <Link key={i} href={item.href} onClick={() => window.scrollTo(0, 0)}>
-                    <div className="flex flex-col bg-[#faf9f6] border border-[#e8dece] rounded-xl overflow-hidden group cursor-pointer hover:border-[#b8892a]/50 hover:shadow-md transition-all duration-300">
-                      {inner}
-                    </div>
+                if (anchor) return (
+                  <div className={`${baseClass} ${clickClass}`} onClick={() => goToAnchor(path, anchor)}>{inner}</div>
+                );
+                return (
+                  <Link href={item.href} onClick={() => window.scrollTo(0, 0)}>
+                    <div className={`${baseClass} ${clickClass}`}>{inner}</div>
                   </Link>
                 );
-              })}
-            </div>
+              };
+
+              return (
+                <div className="flex flex-col gap-4">
+                  {/* Row 1: two cards */}
+                  <div className="grid sm:grid-cols-2 gap-4">
+                    <Card item={ITEMS[0]} />
+                    <Card item={ITEMS[1]} />
+                  </div>
+                  {/* Row 2: one full-width card */}
+                  <Card item={ITEMS[2]} wide />
+                  {/* Row 3: two cards */}
+                  <div className="grid sm:grid-cols-2 gap-4">
+                    <Card item={ITEMS[3]} />
+                    <Card item={ITEMS[4]} />
+                  </div>
+                  {/* Row 4: two cards */}
+                  <div className="grid sm:grid-cols-2 gap-4">
+                    <Card item={ITEMS[5]} />
+                    <Card item={ITEMS[6]} />
+                  </div>
+                </div>
+              );
+            })()}
 
           </div>
         </div>
