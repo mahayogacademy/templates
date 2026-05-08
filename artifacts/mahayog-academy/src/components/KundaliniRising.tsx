@@ -142,22 +142,22 @@ export default function KundaliniRising() {
         {/* ── Main layout ── */}
         <div className="flex flex-col md:flex-row items-center gap-10 md:gap-12 justify-center">
 
-          {/* LEFT — state description (hidden on desktop in before state) */}
-          <div className={`w-full md:w-56 text-center flex-shrink-0 ${!isAfter ? "md:hidden" : ""}`}>
+          {/* LEFT — state description */}
+          <div className={`w-full text-center flex-shrink-0 ${!isAfter ? "md:max-w-lg" : "md:w-56"}`}>
             {!isAfter ? (
               <div key="b" style={{ animation: "kr-fade .5s ease" }}>
-                <p className="uppercase tracking-[0.24em] text-[10px] mb-2" style={{ color: "#7a6040" }}>
+                <p className="md:hidden uppercase tracking-[0.24em] text-[10px] mb-2" style={{ color: "#7a6040" }}>
                   Dormant · Head Facing Down
                 </p>
-                <p className="font-['Cormorant_Garamond'] font-light leading-tight mb-1" style={{ fontSize: "clamp(1.6rem,5vw,1.9rem)", color: "#e0ccaa" }}>
+                <p className="md:hidden font-['Cormorant_Garamond'] font-light leading-tight mb-1" style={{ fontSize: "clamp(1.6rem,5vw,1.9rem)", color: "#e0ccaa" }}>
                   Dormant Kundalini
                 </p>
-                <p className="font-['Cormorant_Garamond'] italic mb-3" style={{ fontSize: 14, color: "#8a7040" }}>
+                <p className="md:hidden font-['Cormorant_Garamond'] italic mb-3" style={{ fontSize: 14, color: "#8a7040" }}>
                   सुप्त कुण्डलिनी
                 </p>
-                <div className="h-px w-7 mx-auto mb-4" style={{ background: "#3a2e18" }} />
+                <div className="md:hidden h-px w-7 mx-auto mb-4" style={{ background: "#3a2e18" }} />
                 <p className="text-sm leading-relaxed" style={{ color: "#9a7e54", lineHeight: 1.9 }}>
-                  The Kundalini Shakti lies coiled three and a half times at the base of the spine — like a sleeping serpent. Her head faces downward, consciousness absorbed in the material world. Her immense power sleeps, awaiting the Guru's touch.
+                  The Kundalini Shakti lies coiled three and a half times at the base of the spine — like a sleeping serpent. Her head faces downward, consciousness absorbed in the material world. Her immense power sleeps, awaiting the Guru's grace.
                 </p>
                 <p className="text-sm mt-4 leading-loose" style={{ color: "#9a8050", lineHeight: 1.9 }}>
                   In the average person, Kundalini remains dormant throughout life. Only through a rare Enlightened Master can this power be instantly and safely awakened.
@@ -182,8 +182,8 @@ export default function KundaliniRising() {
             )}
           </div>
 
-          {/* CENTRE — SVG spine (hidden on mobile in before state) */}
-          <div className={`flex-shrink-0 ${!isAfter ? "hidden md:block" : ""}`}>
+          {/* CENTRE — SVG spine (hidden in before state) */}
+          <div className={`flex-shrink-0 ${!isAfter ? "hidden" : ""}`}>
             <svg viewBox="0 0 260 670" width={220} height={567} overflow="visible">
               <defs>
                 {CHAKRAS.map((c, i) => (
