@@ -37,18 +37,27 @@ export default function Home() {
   const [galleryReady, setGalleryReady] = useState(false);
   useEffect(() => { setGalleryReady(true); }, []);
 
-  // Paths carousel (mobile auto-scroll)
+  // Paths carousel (mobile auto-scroll + manual arrows)
   const pathsRef = useRef<HTMLDivElement>(null);
+  const [pathIdx, setPathIdx] = useState(0);
+  const PATH_COUNT = 4;
+  function pathScroll(dir: 1 | -1) {
+    const next = Math.max(0, Math.min(PATH_COUNT - 1, pathIdx + dir));
+    setPathIdx(next);
+    const el = pathsRef.current;
+    if (!el) return;
+    el.scrollTo({ left: next * el.clientWidth, behavior: "smooth" });
+  }
   useEffect(() => {
     const el = pathsRef.current;
     if (!el) return;
     const interval = setInterval(() => {
-      const cardWidth = el.scrollWidth / 4;
-      const atEnd = el.scrollLeft + el.clientWidth >= el.scrollWidth - 8;
-      el.scrollTo({ left: atEnd ? 0 : el.scrollLeft + cardWidth, behavior: "smooth" });
+      const next = pathIdx + 1 >= PATH_COUNT ? 0 : pathIdx + 1;
+      setPathIdx(next);
+      el.scrollTo({ left: next * el.clientWidth, behavior: "smooth" });
     }, 3000);
     return () => clearInterval(interval);
-  }, []);
+  }, [pathIdx]);
 
   // Projects carousel (mobile manual arrows)
   const projRef = useRef<HTMLDivElement>(null);
@@ -330,11 +339,11 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Mobile: auto-scrolling carousel */}
-        <div className="md:hidden overflow-hidden">
+        {/* Mobile: auto-scrolling carousel with arrows */}
+        <div className="md:hidden relative px-6">
           <div
             ref={pathsRef}
-            className="flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-smooth px-6 pb-4"
+            className="flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-4"
             style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
           >
             {PATHS.map((path) => {
@@ -342,7 +351,7 @@ export default function Home() {
               const desc = t(`home.paths.items.${path.key}.desc`);
               return (
                 <Link key={path.href} href={path.href}>
-                  <div className="snap-start shrink-0 w-[80vw] group cursor-pointer bg-white rounded-2xl overflow-hidden border border-[#e8dece] flex flex-col">
+                  <div className="snap-start shrink-0 w-[82vw] group cursor-pointer bg-white rounded-2xl overflow-hidden border border-[#e8dece] flex flex-col">
                     <div className="relative h-48 overflow-hidden">
                       <img src={path.img} alt={label} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                       <div className={`absolute inset-0 ${path.overlay}`} />
@@ -359,6 +368,33 @@ export default function Home() {
                 </Link>
               );
             })}
+          </div>
+
+          {/* Arrow controls */}
+          <div className="flex items-center justify-between mt-5">
+            <button
+              onClick={() => pathScroll(-1)}
+              disabled={pathIdx === 0}
+              className="flex items-center justify-center w-10 h-10 rounded-full border border-[#b8892a]/40 text-[#b8892a] disabled:opacity-30 disabled:cursor-not-allowed hover:bg-[#b8892a] hover:text-white transition-colors cursor-pointer"
+            >
+              <ChevronLeft className="w-5 h-5" strokeWidth={1.5} />
+            </button>
+            <div className="flex gap-1.5">
+              {Array.from({ length: PATH_COUNT }).map((_, i) => (
+                <button
+                  key={i}
+                  onClick={() => { setPathIdx(i); pathsRef.current?.scrollTo({ left: i * pathsRef.current.clientWidth, behavior: "smooth" }); }}
+                  className={`w-1.5 h-1.5 rounded-full transition-colors cursor-pointer ${i === pathIdx ? "bg-[#b8892a]" : "bg-[#b8892a]/25"}`}
+                />
+              ))}
+            </div>
+            <button
+              onClick={() => pathScroll(1)}
+              disabled={pathIdx === PATH_COUNT - 1}
+              className="flex items-center justify-center w-10 h-10 rounded-full border border-[#b8892a]/40 text-[#b8892a] disabled:opacity-30 disabled:cursor-not-allowed hover:bg-[#b8892a] hover:text-white transition-colors cursor-pointer"
+            >
+              <ChevronRight className="w-5 h-5" strokeWidth={1.5} />
+            </button>
           </div>
         </div>
 
