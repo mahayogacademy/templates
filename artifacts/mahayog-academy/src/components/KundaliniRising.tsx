@@ -149,12 +149,19 @@ export default function KundaliniRising() {
                 <p className="uppercase tracking-[0.24em] text-[10px] mb-2" style={{ color: "#7a6040" }}>
                   Dormant · Head Facing Down
                 </p>
-                <p className="font-['Cormorant_Garamond'] italic mb-3 leading-snug" style={{ fontSize: 26, color: "#c0a060" }}>
+                <p className="font-['Cormorant_Garamond'] font-light leading-tight mb-1" style={{ fontSize: "clamp(1.6rem,5vw,1.9rem)", color: "#e0ccaa" }}>
+                  Dormant Kundalini
+                </p>
+                <p className="font-['Cormorant_Garamond'] italic mb-3" style={{ fontSize: 14, color: "#8a7040" }}>
                   सुप्त कुण्डलिनी
                 </p>
                 <div className="h-px w-7 mx-auto mb-4" style={{ background: "#3a2e18" }} />
                 <p className="text-sm leading-relaxed" style={{ color: "#9a7e54", lineHeight: 1.9 }}>
                   The Kundalini Shakti lies coiled three and a half times at the base of the spine — like a sleeping serpent. Her head faces downward, consciousness absorbed in the material world. Her immense power sleeps, awaiting the Guru's touch.
+                </p>
+                {/* On mobile this sits right after the paragraph; on desktop it lives in the bottom quote */}
+                <p className="md:hidden text-sm mt-4 leading-loose" style={{ color: "#9a8050", lineHeight: 1.9 }}>
+                  In the average person, Kundalini remains dormant throughout life. Only through a rare Enlightened Master can this power be instantly and safely awakened.
                 </p>
               </div>
             ) : (
@@ -162,7 +169,10 @@ export default function KundaliniRising() {
                 <p className="uppercase tracking-[0.24em] text-[10px] mb-2" style={{ color: "#b8892a" }}>
                   Awakened · Rising Through Sushumna
                 </p>
-                <p className="font-['Cormorant_Garamond'] italic mb-3 leading-snug" style={{ fontSize: 26, color: "#e8c87a" }}>
+                <p className="font-['Cormorant_Garamond'] font-light leading-tight mb-1" style={{ fontSize: "clamp(1.6rem,5vw,1.9rem)", color: "#e0ccaa" }}>
+                  Awakened Kundalini
+                </p>
+                <p className="font-['Cormorant_Garamond'] italic mb-3" style={{ fontSize: 14, color: "#b8892a" }}>
                   जागृत कुण्डलिनी
                 </p>
                 <div className="h-px w-7 mx-auto mb-4" style={{ background: "#4a3a18" }} />
@@ -287,7 +297,7 @@ export default function KundaliniRising() {
           </div>
 
           {/* RIGHT — chakra name list */}
-          <div className="w-full md:w-52 flex-shrink-0">
+          <div className="w-full md:w-52 flex-shrink-0 pl-8 md:pl-0">
             {CHAKRAS.map((c, i) => {
               const act = activeChakras.has(i);
               return (
@@ -323,12 +333,16 @@ export default function KundaliniRising() {
 
         {/* ── Bottom quote ── */}
         <div className="mt-10 text-center max-w-xl mx-auto pt-6" style={{ borderTop: "1px solid #2a2018" }}>
-          <p className="text-sm leading-loose tracking-wide transition-colors duration-500"
-            style={{ color: isAfter ? "#8a7040" : "#9a8050", lineHeight: 1.95 }}>
-            {isAfter
-              ? "When Kundalini reaches the Sahasrara, individual consciousness merges with universal consciousness — this is Samadhi, the ultimate aim of all Yoga."
-              : "In the average person, Kundalini remains dormant throughout life. Only through a rare Enlightened Master can this power be instantly and safely awakened."}
-          </p>
+          {isAfter ? (
+            <p className="text-sm leading-loose tracking-wide" style={{ color: "#8a7040", lineHeight: 1.95 }}>
+              When Kundalini reaches the Sahasrara, individual consciousness merges with universal consciousness — this is Samadhi, the ultimate aim of all Yoga.
+            </p>
+          ) : (
+            /* hidden on mobile — this text appears inline in the left panel above */
+            <p className="hidden md:block text-sm leading-loose tracking-wide" style={{ color: "#9a8050", lineHeight: 1.95 }}>
+              In the average person, Kundalini remains dormant throughout life. Only through a rare Enlightened Master can this power be instantly and safely awakened.
+            </p>
+          )}
         </div>
 
       </div>
