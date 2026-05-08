@@ -346,7 +346,7 @@ export default function KundaliniRising() {
         {/* ── Bottom quote ── */}
         <div className="mt-10 text-center max-w-xl mx-auto pt-6" style={{ borderTop: "1px solid #2a2018" }}>
           {isAfter ? (
-            <p className="text-sm leading-loose tracking-wide" style={{ color: "#ffffff", lineHeight: 1.95 }}>
+            <p className="font-['Cormorant_Garamond'] text-lg md:text-xl font-light leading-loose tracking-wide italic" style={{ color: "#ffffff", lineHeight: 2, textShadow: "0 1px 12px rgba(0,0,0,0.9), 0 0 30px rgba(0,0,0,0.8)" }}>
               When Kundalini reaches the Sahasrara, individual consciousness merges with universal consciousness — this is Samadhi, the ultimate aim of all Yoga.
             </p>
           ) : null}
