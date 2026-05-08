@@ -309,7 +309,7 @@ export default function Home() {
             <span className="uppercase tracking-[0.3em] text-xs text-[#b8892a] font-medium">{t("home.mission.eyebrow")}</span>
             <div className="h-px w-10 bg-[#b8892a]/40" />
           </div>
-          <h2 className="font-['Cormorant_Garamond'] text-2xl md:text-3xl lg:text-4xl font-light text-[#3d3830] leading-tight mb-2 whitespace-nowrap">
+          <h2 className="font-['Cormorant_Garamond'] text-2xl md:text-3xl lg:text-4xl font-light text-[#3d3830] leading-tight mb-2 md:whitespace-nowrap">
             {t("home.mission.lead")}
           </h2>
           <p className="font-['Cormorant_Garamond'] text-3xl md:text-4xl lg:text-5xl font-light italic text-[#b8892a] leading-tight mb-8">
