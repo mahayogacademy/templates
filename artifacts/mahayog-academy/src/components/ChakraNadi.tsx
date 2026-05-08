@@ -2,7 +2,7 @@ import { useState } from "react";
 
 const CHAKRA_Y = [460, 390, 320, 250, 180, 110, 40];
 const CX = 100;
-const SVG_H = 500;
+const SVG_H = 560; // extra room for snake below root
 
 const chakras = [
   { name: "Muladhara",    english: "Root",         sanskrit: "मूलाधार",      color: "#c0392b", glow: "#e74c3c", element: "Earth (Prithvi)",    quality: "Stability · Grounding · Survival" },
@@ -24,8 +24,30 @@ function serpentinePath(startLeft: boolean): string {
   return d;
 }
 
-const idaPath = serpentinePath(true);
-const pingalaPath = serpentinePath(false);
+// Kundalini: Archimedean spiral, 3 coils, starting from top (toward Muladhara)
+function kundaliniSpiralPath(cx: number, cy: number): string {
+  const steps = 240;
+  const coils = 3;
+  const totalAngle = coils * 2 * Math.PI;
+  const innerR = 3.5;
+  const outerR = 27;
+  let d = "";
+  for (let i = 0; i <= steps; i++) {
+    const t = (i / steps) * totalAngle;
+    const angle = -Math.PI / 2 + t; // start pointing up
+    const r = innerR + (outerR - innerR) * (t / totalAngle);
+    const x = (cx + r * Math.cos(angle)).toFixed(2);
+    const y = (cy + r * Math.sin(angle)).toFixed(2);
+    d += i === 0 ? `M ${x},${y}` : ` L ${x},${y}`;
+  }
+  return d;
+}
+
+const idaPath      = serpentinePath(true);
+const pingalaPath  = serpentinePath(false);
+// Snake center: 45px below Muladhara
+const SNAKE_CY     = CHAKRA_Y[0] + 48;
+const snakePath    = kundaliniSpiralPath(CX, SNAKE_CY);
 
 export default function ChakraNadi() {
   const [hovered, setHovered] = useState<number | null>(null);
@@ -34,9 +56,9 @@ export default function ChakraNadi() {
   return (
     <section id="inner-cosmos" className="py-24 px-6 relative overflow-hidden" style={{ background: "#f6f0e8" }}>
       <style>{`
-        @keyframes cn-orb-pulse {
-          0%, 100% { opacity: 0.75; transform: scale(1); }
-          50%       { opacity: 1;    transform: scale(1.22); }
+        @keyframes cn-orb-glow {
+          0%, 100% { opacity: 0.65; }
+          50%       { opacity: 1;   }
         }
         @keyframes cn-spine-dim {
           0%, 100% { opacity: 0.45; }
@@ -45,6 +67,10 @@ export default function ChakraNadi() {
         @keyframes cn-card-in {
           from { opacity: 0; transform: translateX(-12px) scale(0.97); }
           to   { opacity: 1; transform: translateX(0)     scale(1); }
+        }
+        @keyframes cn-snake-shimmer {
+          0%, 100% { opacity: 0.55; }
+          50%       { opacity: 0.85; }
         }
       `}</style>
 
@@ -78,8 +104,8 @@ export default function ChakraNadi() {
         {/* ── Desktop: LEFT card | CENTRE spine | RIGHT legend ── */}
         <div className="hidden md:flex items-center gap-6">
 
-          {/* LEFT — chakra card (shown on hover) */}
-          <div className="flex-1 min-h-[360px] flex items-center">
+          {/* LEFT — chakra card on hover */}
+          <div className="flex-1 min-h-[420px] flex items-center">
             {active ? (
               <div
                 key={hovered}
@@ -91,16 +117,13 @@ export default function ChakraNadi() {
                   boxShadow: `0 4px 28px ${active.color}18`,
                 }}
               >
-                {/* Header row */}
                 <div className="flex items-start justify-between mb-5">
                   <div className="flex items-center gap-3">
-                    <div
-                      className="w-5 h-5 rounded-full flex-shrink-0 mt-0.5"
+                    <div className="w-5 h-5 rounded-full flex-shrink-0 mt-0.5"
                       style={{
                         background: `radial-gradient(circle at 35% 35%, ${active.glow}, ${active.color})`,
                         boxShadow: `0 0 12px ${active.color}80`,
-                      }}
-                    />
+                      }} />
                     <div>
                       <p className="font-['Cormorant_Garamond'] text-2xl text-[#2e2820] leading-tight">{active.name}</p>
                       <p className="uppercase tracking-[0.2em] text-[10px] text-[#9a8070] font-medium">{active.english}</p>
@@ -110,15 +133,9 @@ export default function ChakraNadi() {
                     {active.sanskrit}
                   </p>
                 </div>
-
-                {/* Divider */}
                 <div className="h-px mb-5" style={{ background: `${active.color}25` }} />
-
-                {/* Element */}
                 <p className="uppercase tracking-[0.22em] text-[10px] text-[#9a8070] font-medium mb-1">Element</p>
                 <p className="font-['Cormorant_Garamond'] text-2xl text-[#2e2820] mb-5 leading-tight">{active.element}</p>
-
-                {/* Qualities */}
                 <p className="uppercase tracking-[0.22em] text-[10px] text-[#9a8070] font-medium mb-1">Qualities</p>
                 <p className="font-['Cormorant_Garamond'] text-2xl text-[#2e2820] leading-snug">{active.quality}</p>
               </div>
@@ -146,8 +163,14 @@ export default function ChakraNadi() {
                     <stop offset="100%" stopColor={c.color} />
                   </radialGradient>
                 ))}
+                <linearGradient id="cn-snake-grad" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%"   stopColor="#b8892a" />
+                  <stop offset="50%"  stopColor="#c8a96e" />
+                  <stop offset="100%" stopColor="#8a6020" />
+                </linearGradient>
               </defs>
 
+              {/* Nadi paths */}
               <path d={pingalaPath} fill="none" stroke="#e8a840" strokeWidth={2} strokeLinecap="round" opacity={0.85} />
               <path d={idaPath}     fill="none" stroke="#74b9ff" strokeWidth={2} strokeLinecap="round" opacity={0.85} />
               <line
@@ -156,6 +179,32 @@ export default function ChakraNadi() {
                 style={{ animation: "cn-spine-dim 3s ease-in-out infinite" }}
               />
 
+              {/* ── Kundalini snake — 3-coil spiral at base ── */}
+              {/* Body spiral */}
+              <path
+                d={snakePath}
+                fill="none"
+                stroke="url(#cn-snake-grad)"
+                strokeWidth={2.2}
+                strokeLinecap="round"
+                style={{ animation: "cn-snake-shimmer 4s ease-in-out infinite" }}
+              />
+              {/* Head — small pointed oval, sitting at center-top of the coil, facing Muladhara */}
+              <ellipse
+                cx={CX} cy={SNAKE_CY - 6.5}
+                rx={3.5} ry={5.5}
+                fill="#b8892a"
+                style={{ animation: "cn-snake-shimmer 4s ease-in-out infinite" }}
+              />
+              {/* Eyes */}
+              <circle cx={CX - 1.8} cy={SNAKE_CY - 8.5} r={0.9} fill="#3a2010" />
+              <circle cx={CX + 1.8} cy={SNAKE_CY - 8.5} r={0.9} fill="#3a2010" />
+              {/* Forked tongue */}
+              <line x1={CX}     y1={SNAKE_CY - 12} x2={CX - 2.5} y2={SNAKE_CY - 15} stroke="#c0392b" strokeWidth={0.8} strokeLinecap="round" />
+              <line x1={CX}     y1={SNAKE_CY - 12} x2={CX + 2.5} y2={SNAKE_CY - 15} stroke="#c0392b" strokeWidth={0.8} strokeLinecap="round" />
+              <line x1={CX - 1} y1={SNAKE_CY - 11} x2={CX}       y2={SNAKE_CY - 12} stroke="#c0392b" strokeWidth={0.8} strokeLinecap="round" />
+
+              {/* Chakra orbs */}
               {chakras.map((c, i) => {
                 const cy = CHAKRA_Y[i];
                 const isHov = hovered === i;
@@ -164,32 +213,33 @@ export default function ChakraNadi() {
                     onMouseEnter={() => setHovered(i)}
                     onMouseLeave={() => setHovered(null)}>
 
-                    {/* Glow ring */}
+                    {/* Static soft halo — no animation, no scaling */}
                     <circle
-                      cx={CX} cy={cy} r={isHov ? 22 : 17}
-                      fill={c.glow} opacity={isHov ? 0.3 : 0.15}
-                      style={{
-                        transition: "r 0.25s, opacity 0.25s",
-                        animation: `cn-orb-pulse ${2.2 + i * 0.15}s ease-in-out infinite`,
-                        animationDelay: `${i * 0.3}s`,
-                        transformOrigin: `${CX}px ${cy}px`,
-                      }}
+                      cx={CX} cy={cy}
+                      r={isHov ? 19 : 15}
+                      fill={c.glow}
+                      opacity={isHov ? 0.25 : 0.12}
+                      style={{ transition: "r 0.25s, opacity 0.25s" }}
                     />
-                    {/* Orb */}
+
+                    {/* Orb — gentle opacity glow only, no scaling */}
                     <circle
-                      cx={CX} cy={cy} r={isHov ? 13 : 10}
+                      cx={CX} cy={cy}
+                      r={isHov ? 13 : 10}
                       fill={`url(#cn-grad-${i})`}
                       stroke={isHov ? c.glow : c.color}
                       strokeWidth={isHov ? 2 : 1.2}
                       style={{
-                        transition: "r 0.25s, stroke-width 0.25s",
-                        animation: `cn-orb-pulse ${2.2 + i * 0.15}s ease-in-out infinite`,
-                        animationDelay: `${i * 0.3}s`,
-                        filter: isHov ? `drop-shadow(0 0 8px ${c.glow})` : `drop-shadow(0 0 3px ${c.color}80)`,
+                        transition: "r 0.25s, stroke-width 0.25s, filter 0.25s",
+                        animation: `cn-orb-glow ${2.5 + i * 0.2}s ease-in-out infinite`,
+                        animationDelay: `${i * 0.35}s`,
+                        filter: isHov
+                          ? `drop-shadow(0 0 8px ${c.glow})`
+                          : `drop-shadow(0 0 3px ${c.color}70)`,
                       }}
                     />
 
-                    {/* Labels — pushed right of orb */}
+                    {/* Labels */}
                     <text x={CX + 34} y={cy - 3} fontSize={13}
                       fill={isHov ? c.color : "#2e2820"}
                       fontFamily="'Cormorant Garamond', serif"
@@ -237,7 +287,6 @@ export default function ChakraNadi() {
                 boxShadow: hovered === i ? `0 4px 20px ${c.color}18` : "none",
               }}
               onClick={() => setHovered(hovered === i ? null : i)}>
-              {/* Header */}
               <div className="flex items-start justify-between">
                 <div className="flex items-center gap-3">
                   <div className="w-5 h-5 rounded-full flex-shrink-0"
@@ -252,7 +301,6 @@ export default function ChakraNadi() {
                 </div>
                 <p className="font-['Cormorant_Garamond'] text-xl leading-tight" style={{ color: c.color }}>{c.sanskrit}</p>
               </div>
-              {/* Expanded content */}
               {hovered === i && (
                 <div className="mt-4 pt-4 space-y-3" style={{ borderTop: `1px solid ${c.color}25` }}>
                   <div>
