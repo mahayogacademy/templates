@@ -786,3 +786,9 @@ id = "ooackrs48tn-ReqZ3VRyU"
 uri = "file://artifacts/mahayog-academy/public/images/register-form-mountains.png"
 type = "image"
 title = "generated_image"
+
+[[generated]]
+id = "IGyP4UFkdCcyT3hT4cgze"
+uri = "file://attached_assets/generated_images/kundalini-dormant-bg.png"
+type = "image"
+title = "kundalini dormant background"

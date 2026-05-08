@@ -86,6 +86,15 @@ export default function KundaliniRising() {
       className="relative py-20 px-6 overflow-hidden"
       style={{ background: "#1e1710" }}
     >
+      {/* Background image overlay */}
+      <div className="absolute inset-0 pointer-events-none">
+        <img
+          src={`${import.meta.env.BASE_URL}images/kundalini-dormant-bg.png`}
+          alt=""
+          className="w-full h-full object-cover object-center opacity-30"
+        />
+        <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, #1e1710 0%, transparent 25%, transparent 75%, #1e1710 100%)" }} />
+      </div>
       <style>{`
         @keyframes kr-burst { 0%{transform:scale(.5);opacity:0} 45%{transform:scale(1.55);opacity:1} 100%{transform:scale(1);opacity:1} }
         @keyframes kr-glow  { 0%,100%{opacity:.55} 50%{opacity:1} }
