@@ -183,8 +183,8 @@ export default function KundaliniRising() {
             )}
           </div>
 
-          {/* CENTRE — SVG spine */}
-          <div className="flex-shrink-0">
+          {/* CENTRE — SVG spine (hidden on mobile in before state) */}
+          <div className={`flex-shrink-0 ${!isAfter ? "hidden md:block" : ""}`}>
             <svg viewBox="0 0 260 670" width={220} height={567} overflow="visible">
               <defs>
                 {CHAKRAS.map((c, i) => (
@@ -297,7 +297,7 @@ export default function KundaliniRising() {
           </div>
 
           {/* RIGHT — chakra name list */}
-          <div className="w-full md:w-52 flex-shrink-0 pl-8 md:pl-0">
+          <div className={`w-full md:w-52 flex-shrink-0 pl-8 md:pl-0 ${!isAfter ? "hidden md:block" : ""}`}>
             {CHAKRAS.map((c, i) => {
               const act = activeChakras.has(i);
               return (
