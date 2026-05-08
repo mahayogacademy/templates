@@ -42,7 +42,7 @@ export default function Home() {
   const [pathIdx, setPathIdx] = useState(0);
   const PATH_COUNT = 4;
   function pathScroll(dir: 1 | -1) {
-    const next = Math.max(0, Math.min(PATH_COUNT - 1, pathIdx + dir));
+    const next = (pathIdx + dir + PATH_COUNT) % PATH_COUNT;
     setPathIdx(next);
     const el = pathsRef.current;
     if (!el) return;
@@ -64,7 +64,7 @@ export default function Home() {
   const [projIdx, setProjIdx] = useState(0);
   const PROJ_COUNT = 4;
   function projScroll(dir: 1 | -1) {
-    const next = Math.max(0, Math.min(PROJ_COUNT - 1, projIdx + dir));
+    const next = (projIdx + dir + PROJ_COUNT) % PROJ_COUNT;
     setProjIdx(next);
     const el = projRef.current;
     if (!el) return;
@@ -390,8 +390,7 @@ export default function Home() {
             </div>
             <button
               onClick={() => pathScroll(1)}
-              disabled={pathIdx === PATH_COUNT - 1}
-              className="flex items-center justify-center w-10 h-10 rounded-full border border-[#b8892a]/40 text-[#b8892a] disabled:opacity-30 disabled:cursor-not-allowed hover:bg-[#b8892a] hover:text-white transition-colors cursor-pointer"
+              className="flex items-center justify-center w-10 h-10 rounded-full border border-[#b8892a]/40 text-[#b8892a] hover:bg-[#b8892a] hover:text-white transition-colors cursor-pointer"
             >
               <ChevronRight className="w-5 h-5" strokeWidth={1.5} />
             </button>
@@ -642,8 +641,7 @@ export default function Home() {
             </div>
             <button
               onClick={() => projScroll(1)}
-              disabled={projIdx === PROJ_COUNT - 1}
-              className="flex items-center justify-center w-10 h-10 rounded-full border border-[#b8892a]/40 text-[#b8892a] disabled:opacity-30 disabled:cursor-not-allowed hover:bg-[#b8892a] hover:text-white transition-colors cursor-pointer"
+              className="flex items-center justify-center w-10 h-10 rounded-full border border-[#b8892a]/40 text-[#b8892a] hover:bg-[#b8892a] hover:text-white transition-colors cursor-pointer"
             >
               <ChevronRight className="w-5 h-5" strokeWidth={1.5} />
             </button>
