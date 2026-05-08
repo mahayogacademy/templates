@@ -152,31 +152,31 @@ export function KundaliniRising() {
       <div style={{ display: "flex", alignItems: "center", gap: 44, maxWidth: 1020, width: "100%" }}>
 
         {/* LEFT — description */}
-        <div style={{ width: 230, flexShrink: 0 }}>
+        <div style={{ width: 230, flexShrink: 0, textAlign: "center" }}>
           {!isAfter ? (
             <div key="b" style={{ animation: "kr-fade .5s ease" }}>
-              <p style={{ fontFamily: "'Cormorant Garamond', serif", fontStyle: "italic", fontSize: 30, color: "#7a6038", marginBottom: 10, lineHeight: 1.2 }}>
-                सुप्त कुण्डलिनी
-              </p>
-              <p style={{ textTransform: "uppercase", letterSpacing: "0.24em", fontSize: 10, color: "#4a3820", marginBottom: 14 }}>
+              <p style={{ textTransform: "uppercase", letterSpacing: "0.24em", fontSize: 10, color: "#7a6040", marginBottom: 10 }}>
                 Dormant · Head Facing Down
               </p>
-              <div style={{ width: 28, height: 1, background: "#2e2418", marginBottom: 16 }} />
-              <p style={{ fontSize: 14, color: "#5a4830", lineHeight: 1.85 }}>
+              <p style={{ fontFamily: "'Cormorant Garamond', serif", fontStyle: "italic", fontSize: 28, color: "#c0a060", marginBottom: 14, lineHeight: 1.2 }}>
+                सुप्त कुण्डलिनी
+              </p>
+              <div style={{ width: 28, height: 1, background: "#3a2e18", marginBottom: 16, margin: "0 auto 16px" }} />
+              <p style={{ fontSize: 14, color: "#9a7e54", lineHeight: 1.9 }}>
                 The Kundalini Shakti lies coiled three and a half times at the base of the spine — like a sleeping serpent. Her head faces downward, consciousness absorbed in the material world. Her immense power sleeps, awaiting the Guru's touch.
               </p>
             </div>
           ) : (
             <div key="a" style={{ animation: "kr-fade .5s ease" }}>
-              <p style={{ fontFamily: "'Cormorant Garamond', serif", fontStyle: "italic", fontSize: 30, color: "#e8c87a", marginBottom: 10, lineHeight: 1.2 }}>
-                जागृत कुण्डलिनी
-              </p>
-              <p style={{ textTransform: "uppercase", letterSpacing: "0.24em", fontSize: 10, color: "#b8892a", marginBottom: 14 }}>
+              <p style={{ textTransform: "uppercase", letterSpacing: "0.24em", fontSize: 10, color: "#b8892a", marginBottom: 10 }}>
                 Awakened · Rising Through Sushumna
               </p>
-              <div style={{ width: 28, height: 1, background: "#4a3a18", marginBottom: 16 }} />
-              <p style={{ fontSize: 14, color: "#c0a060", lineHeight: 1.85 }}>
-                Through the Guru's Shaktipat, Kundalini awakens and turns upward. She rises through the Sushumna Nadi, piercing each chakra, dissolving all veils, until she merges with Shiva at the Crown in eternal Samadhi.
+              <p style={{ fontFamily: "'Cormorant Garamond', serif", fontStyle: "italic", fontSize: 28, color: "#e8c87a", marginBottom: 14, lineHeight: 1.2 }}>
+                जागृत कुण्डलिनी
+              </p>
+              <div style={{ width: 28, height: 1, background: "#4a3a18", marginBottom: 16, margin: "0 auto 16px" }} />
+              <p style={{ fontSize: 14, color: "#c0a060", lineHeight: 1.9 }}>
+                Through the Guru's Shaktipat, Kundalini awakens and turns upward. She rises through the Sushumna Nadi, piercing each chakra, dissolving all veils, until she merges with Shiva at the Crown in Samadhi.
               </p>
             </div>
           )}
