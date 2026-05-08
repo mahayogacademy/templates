@@ -145,14 +145,14 @@ export default function Home() {
 
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto pt-16 md:pt-0">
           {/* Sacred symbols */}
-          <div className="flex justify-center mb-6">
+          <div className="flex justify-center mb-3 md:mb-6">
             <RecolouredSymbol
               src={`${b}images/dhanush-band.png`}
               className="h-20 w-auto object-contain"
             />
           </div>
           {/* Ornament */}
-          <div className="flex items-center justify-center gap-4 mb-8">
+          <div className="flex items-center justify-center gap-4 mb-4 md:mb-8">
             <div className="h-px w-14 bg-[#e8c56a]/80" />
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
               <path d="M12 2C12 2 15 9 22 12C22 12 15 15 12 22C12 22 9 15 2 12C2 12 9 9 12 2Z" stroke="#e8c56a" strokeWidth="1.2" fill="none"/>
@@ -200,13 +200,13 @@ export default function Home() {
         </svg>
 
       {/* ── THREE PILLARS CARDS ── */}
-      <section className="relative pt-14 pb-12 px-6">
+      <section className="relative pt-6 pb-6 md:pt-14 md:pb-12 px-6">
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5 items-end">
 
             {/* Mahayog */}
             <Link href="/meditation">
-              <div className="group relative rounded-3xl overflow-hidden h-[440px] md:h-[500px] cursor-pointer shadow-lg hover:shadow-2xl hover:shadow-[#b8892a]/20 transition-all duration-500 ring-1 ring-[#b8892a]/40">
+              <div className="group relative rounded-3xl overflow-hidden h-[300px] md:h-[500px] cursor-pointer shadow-lg hover:shadow-2xl hover:shadow-[#b8892a]/20 transition-all duration-500 ring-1 ring-[#b8892a]/40">
                 <img
                   src={`${b}images/mahayog-diksha-jap.jpg`}
                   alt={t("home.pillars.mahayog.title")}
@@ -226,7 +226,7 @@ export default function Home() {
 
             {/* Mahayogi — centre */}
             <Link href="/founder-guru">
-              <div className="group relative rounded-3xl overflow-hidden h-[440px] md:h-[500px] cursor-pointer shadow-lg hover:shadow-2xl hover:shadow-[#b8892a]/20 transition-all duration-500 ring-1 ring-[#b8892a]/40">
+              <div className="group relative rounded-3xl overflow-hidden h-[300px] md:h-[500px] cursor-pointer shadow-lg hover:shadow-2xl hover:shadow-[#b8892a]/20 transition-all duration-500 ring-1 ring-[#b8892a]/40">
                 <img
                   src={`${b}images/gurudev-darshan-smile.jpg`}
                   alt={t("home.pillars.mahayogi.alt")}
@@ -246,7 +246,7 @@ export default function Home() {
 
             {/* For Mankind */}
             <Link href="/about">
-              <div className="group relative rounded-3xl overflow-hidden h-[440px] md:h-[500px] cursor-pointer shadow-lg hover:shadow-2xl hover:shadow-[#b8892a]/20 transition-all duration-500 ring-1 ring-[#b8892a]/40">
+              <div className="group relative rounded-3xl overflow-hidden h-[300px] md:h-[500px] cursor-pointer shadow-lg hover:shadow-2xl hover:shadow-[#b8892a]/20 transition-all duration-500 ring-1 ring-[#b8892a]/40">
                 <img
                   src={`${b}images/ashram-prasad-1.jpg`}
                   alt={t("home.pillars.forMankind.alt")}
@@ -268,9 +268,9 @@ export default function Home() {
         </div>
       </section>
       {/* ── MISSION STATEMENT ── */}
-      <section className="relative py-24 px-6">
+      <section className="relative py-10 md:py-24 px-6">
         <div className="max-w-3xl mx-auto text-center">
-          <div className="flex items-center justify-center gap-4 mb-8">
+          <div className="flex items-center justify-center gap-4 mb-4 md:mb-8">
             <div className="h-px w-10 bg-[#b8892a]/40" />
             <span className="uppercase tracking-[0.3em] text-xs text-[#b8892a] font-medium">{t("home.mission.eyebrow")}</span>
             <div className="h-px w-10 bg-[#b8892a]/40" />
@@ -278,7 +278,7 @@ export default function Home() {
           <h2 className="font-['Cormorant_Garamond'] text-2xl md:text-3xl lg:text-4xl font-light text-[#3d3830] leading-tight mb-2 md:whitespace-nowrap">
             {t("home.mission.lead")}
           </h2>
-          <p className="font-['Cormorant_Garamond'] text-3xl md:text-4xl lg:text-5xl font-light italic text-[#b8892a] leading-tight mb-8">
+          <p className="font-['Cormorant_Garamond'] text-3xl md:text-4xl lg:text-5xl font-light italic text-[#b8892a] leading-tight mb-4 md:mb-8">
             {t("home.mission.leadSub")}
           </p>
           <div className="text-base text-[#6a6058] leading-relaxed max-w-xl mx-auto border-t border-b border-[#b8892a]/30 py-5 tracking-wide space-y-4">
@@ -291,9 +291,9 @@ export default function Home() {
       </div>{/* end decorative background wrapper */}
 
       {/* ── EXPLORE PATHS ── */}
-      <section className="py-24 bg-[#f5ece0]">
+      <section className="py-10 md:py-24 bg-[#f5ece0]">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center mb-14">
+          <div className="text-center mb-6 md:mb-14">
             <span className="uppercase tracking-[0.3em] text-xs text-[#b8892a] font-medium">{t("home.paths.eyebrow")}</span>
             <h2 className="font-['Cormorant_Garamond'] text-4xl md:text-5xl font-light text-[#2e2820] mt-3">
               {t("home.paths.heading")}
@@ -393,7 +393,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 items-center">
             {/* Image */}
-            <div className="relative h-[520px] md:h-[640px]">
+            <div className="relative h-[300px] md:h-[640px]">
               <img
                 src={`${b}images/gurudev-photo.png`}
                 alt={t("home.guru.alt")}
@@ -403,7 +403,7 @@ export default function Home() {
             </div>
 
             {/* Text */}
-            <div className="px-10 md:px-16 py-16 bg-[#faf9f6]">
+            <div className="px-6 md:px-16 py-8 md:py-16 bg-[#faf9f6]">
               <span className="uppercase tracking-[0.3em] text-xs text-[#b8892a] font-medium">{t("home.guru.eyebrow")}</span>
               <h2 className="font-['Cormorant_Garamond'] text-4xl md:text-5xl font-light text-[#2e2820] mt-3 mb-6 leading-snug">
                 {t("home.guru.heading")}
@@ -438,8 +438,8 @@ export default function Home() {
       <KundaliniRising />
 
       {/* ── PHOTO GALLERY CAROUSEL ── */}
-      <section className="py-20 overflow-hidden">
-        <div className="max-w-6xl mx-auto px-6 mb-10 text-center">
+      <section className="py-10 md:py-20 overflow-hidden">
+        <div className="max-w-6xl mx-auto px-6 mb-5 md:mb-10 text-center">
           <span className="uppercase tracking-[0.3em] text-xs text-[#b8892a] font-medium">{t("home.gallery.eyebrow")}</span>
           <h2 className="font-['Cormorant_Garamond'] text-4xl font-light text-[#2e2820] mt-3">{t("home.gallery.heading")}</h2>
         </div>
@@ -498,9 +498,9 @@ export default function Home() {
       </section>
 
       {/* ── PROJECTS ── */}
-      <section className="py-24 bg-[#fdf6ec] border-t border-[#e8d8b8]">
+      <section className="py-10 md:py-24 bg-[#fdf6ec] border-t border-[#e8d8b8]">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center mb-16">
+          <div className="text-center mb-8 md:mb-16">
             <span className="uppercase tracking-[0.3em] text-xs text-[#b8892a] font-medium">{t("home.projects.eyebrow")}</span>
             <h2 className="font-['Cormorant_Garamond'] text-4xl md:text-5xl font-light text-[#2e2820] mt-3">
               {t("home.projects.heading")}
@@ -684,7 +684,7 @@ export default function Home() {
       </section>
 
       {/* ── DONATE CTA ── */}
-      <section className="relative py-28 px-6 overflow-hidden">
+      <section className="relative py-14 md:py-28 px-6 overflow-hidden">
         <img
           src={`${b}images/ashram-cows-sunset.jpg`}
           alt=""
@@ -726,7 +726,7 @@ export default function Home() {
 
       {/* ── CLOSING QUOTE + FOOTER ── */}
       <div style={{ background: "radial-gradient(ellipse at 60% 30%, #2c1708 0%, #1a0d04 55%, #0f0702 100%)" }}>
-      <section className="relative py-28 px-6 overflow-hidden">
+      <section className="relative py-14 md:py-28 px-6 overflow-hidden">
         {/* Subtle SVG mandala watermark */}
         <svg
           className="absolute inset-0 w-full h-full opacity-[0.04]"
