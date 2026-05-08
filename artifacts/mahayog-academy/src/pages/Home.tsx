@@ -41,6 +41,7 @@ export default function Home() {
   // Paths carousel (mobile auto-scroll + manual arrows)
   const pathsRef = useRef<HTMLDivElement>(null);
   const [pathIdx, setPathIdx] = useState(0);
+  const [pathsPaused, setPathsPaused] = useState(false);
   const PATH_COUNT = 4;
   function pathScroll(dir: 1 | -1) {
     const next = (pathIdx + dir + PATH_COUNT) % PATH_COUNT;
@@ -50,15 +51,16 @@ export default function Home() {
     el.scrollTo({ left: next * el.clientWidth, behavior: "smooth" });
   }
   useEffect(() => {
+    if (pathsPaused) return;
     const el = pathsRef.current;
     if (!el) return;
     const interval = setInterval(() => {
       const next = pathIdx + 1 >= PATH_COUNT ? 0 : pathIdx + 1;
       setPathIdx(next);
       el.scrollTo({ left: next * el.clientWidth, behavior: "smooth" });
-    }, 3000);
+    }, 3500);
     return () => clearInterval(interval);
-  }, [pathIdx]);
+  }, [pathIdx, pathsPaused]);
 
   // Projects carousel (mobile manual arrows)
   const projRef = useRef<HTMLDivElement>(null);
@@ -303,7 +305,13 @@ export default function Home() {
         </div>
 
         {/* Mobile: auto-scrolling carousel with arrows */}
-        <div className="md:hidden relative px-6">
+        <div
+          className="md:hidden relative px-6"
+          onMouseEnter={() => setPathsPaused(true)}
+          onMouseLeave={() => setPathsPaused(false)}
+          onTouchStart={() => setPathsPaused(true)}
+          onTouchEnd={() => setTimeout(() => setPathsPaused(false), 4000)}
+        >
           <div
             ref={pathsRef}
             className="flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-4"
