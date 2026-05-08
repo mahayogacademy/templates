@@ -86,7 +86,6 @@ export default function KundaliniRising() {
       className="relative py-20 px-6 overflow-hidden"
       style={{ background: "#1e1710" }}
     >
-      <div className="absolute inset-x-0 top-0 h-16 pointer-events-none z-10" style={{ background: "linear-gradient(to bottom, rgba(245,239,230,0.55), transparent)" }} />
       <style>{`
         @keyframes kr-burst { 0%{transform:scale(.5);opacity:0} 45%{transform:scale(1.55);opacity:1} 100%{transform:scale(1);opacity:1} }
         @keyframes kr-glow  { 0%,100%{opacity:.55} 50%{opacity:1} }
