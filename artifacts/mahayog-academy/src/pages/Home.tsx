@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import ChakraNadi from "@/components/ChakraNadi";
+import KundaliniRising from "@/components/KundaliniRising";
 import { Link } from "wouter";
 import { ArrowRight, MapPin, Heart, ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -479,6 +480,9 @@ export default function Home() {
 
       {/* ── CHAKRA & NADI SYSTEM ── */}
       <ChakraNadi />
+
+      {/* ── KUNDALINI RISING ── */}
+      <KundaliniRising />
 
       {/* ── PHOTO GALLERY CAROUSEL ── */}
       <section className="py-20 overflow-hidden">
