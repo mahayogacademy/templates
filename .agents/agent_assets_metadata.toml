@@ -792,3 +792,9 @@ id = "IGyP4UFkdCcyT3hT4cgze"
 uri = "file://attached_assets/generated_images/kundalini-dormant-bg.png"
 type = "image"
 title = "kundalini dormant background"
+
+[[generated]]
+id = "yCAqpIc3q4Wd4FMioum2e"
+uri = "file://attached_assets/generated_images/kundalini-serene-bg.png"
+type = "image"
+title = "kundalini serene background"

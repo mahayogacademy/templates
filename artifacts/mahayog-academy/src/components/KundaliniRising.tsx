@@ -89,9 +89,9 @@ export default function KundaliniRising() {
       {/* Background image overlay */}
       <div className="absolute inset-0 pointer-events-none">
         <img
-          src={`${import.meta.env.BASE_URL}images/kundalini-dormant-bg.png`}
+          src={`${import.meta.env.BASE_URL}images/kundalini-serene-bg.png`}
           alt=""
-          className="w-full h-full object-cover object-center opacity-30"
+          className="w-full h-full object-cover object-center opacity-55"
         />
         <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, #1e1710 0%, transparent 25%, transparent 75%, #1e1710 100%)" }} />
       </div>
