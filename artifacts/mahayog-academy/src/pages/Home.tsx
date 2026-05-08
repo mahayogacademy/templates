@@ -235,7 +235,7 @@ export default function Home() {
                   alt={t("home.pillars.mahayogi.alt")}
                   className="w-full h-full object-cover object-bottom md:object-[50%_15%] group-hover:scale-105 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#1a0f05] via-[#1a0f05]/75 to-[#1a0f05]/10" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#1a0f05] via-[#1a0f05]/40 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-4 md:p-7">
                   <div className="h-px w-8 bg-[#b8892a] mb-2 md:mb-4" />
                   <h3 className="font-['Cormorant_Garamond'] text-3xl md:text-4xl font-light text-white mb-1 md:mb-2 leading-tight">{t("home.pillars.mahayogi.title")}</h3>
