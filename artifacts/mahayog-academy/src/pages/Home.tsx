@@ -265,7 +265,7 @@ export default function Home() {
 
             {/* Mahayog */}
             <Link href="/meditation">
-              <div className="group relative rounded-3xl overflow-hidden h-[440px] md:h-[500px] cursor-pointer shadow-lg hover:shadow-2xl hover:shadow-[#b8892a]/20 transition-all duration-500">
+              <div className="group relative rounded-3xl overflow-hidden h-[440px] md:h-[500px] cursor-pointer shadow-lg hover:shadow-2xl hover:shadow-[#b8892a]/20 transition-all duration-500 ring-1 ring-[#b8892a]/40">
                 <img
                   src={`${b}images/mahayog-diksha-jap.jpg`}
                   alt={t("home.pillars.mahayog.title")}
@@ -285,7 +285,7 @@ export default function Home() {
 
             {/* Mahayogi — centre */}
             <Link href="/founder-guru">
-              <div className="group relative rounded-3xl overflow-hidden h-[440px] md:h-[500px] cursor-pointer shadow-lg hover:shadow-2xl hover:shadow-[#b8892a]/20 transition-all duration-500">
+              <div className="group relative rounded-3xl overflow-hidden h-[440px] md:h-[500px] cursor-pointer shadow-lg hover:shadow-2xl hover:shadow-[#b8892a]/20 transition-all duration-500 ring-1 ring-[#b8892a]/40">
                 <img
                   src={`${b}images/gurudev-darshan-smile.jpg`}
                   alt={t("home.pillars.mahayogi.alt")}
@@ -305,7 +305,7 @@ export default function Home() {
 
             {/* For Mankind */}
             <Link href="/about">
-              <div className="group relative rounded-3xl overflow-hidden h-[440px] md:h-[500px] cursor-pointer shadow-lg hover:shadow-2xl hover:shadow-[#b8892a]/20 transition-all duration-500">
+              <div className="group relative rounded-3xl overflow-hidden h-[440px] md:h-[500px] cursor-pointer shadow-lg hover:shadow-2xl hover:shadow-[#b8892a]/20 transition-all duration-500 ring-1 ring-[#b8892a]/40">
                 <img
                   src={`${b}images/ashram-prasad-1.jpg`}
                   alt={t("home.pillars.forMankind.alt")}
