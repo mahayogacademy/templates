@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import { Link } from "wouter";
-import { ArrowRight, MapPin, Heart } from "lucide-react";
+import { ArrowRight, MapPin, Heart, ChevronLeft, ChevronRight } from "lucide-react";
 
 const b = import.meta.env.BASE_URL;
 
@@ -36,6 +36,31 @@ export default function Home() {
   const { t } = useTranslation();
   const [galleryReady, setGalleryReady] = useState(false);
   useEffect(() => { setGalleryReady(true); }, []);
+
+  // Paths carousel (mobile auto-scroll)
+  const pathsRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const el = pathsRef.current;
+    if (!el) return;
+    const interval = setInterval(() => {
+      const cardWidth = el.scrollWidth / 4;
+      const atEnd = el.scrollLeft + el.clientWidth >= el.scrollWidth - 8;
+      el.scrollTo({ left: atEnd ? 0 : el.scrollLeft + cardWidth, behavior: "smooth" });
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
+
+  // Projects carousel (mobile manual arrows)
+  const projRef = useRef<HTMLDivElement>(null);
+  const [projIdx, setProjIdx] = useState(0);
+  const PROJ_COUNT = 4;
+  function projScroll(dir: 1 | -1) {
+    const next = Math.max(0, Math.min(PROJ_COUNT - 1, projIdx + dir));
+    setProjIdx(next);
+    const el = projRef.current;
+    if (!el) return;
+    el.scrollTo({ left: next * el.clientWidth, behavior: "smooth" });
+  }
 
   const PATHS = [
     {
@@ -295,15 +320,50 @@ export default function Home() {
       </div>{/* end decorative background wrapper */}
 
       {/* ── EXPLORE PATHS ── */}
-      <section className="py-24 px-6 bg-[#f5ece0]">
-        <div className="max-w-6xl mx-auto">
+      <section className="py-24 bg-[#f5ece0]">
+        <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-14">
             <span className="uppercase tracking-[0.3em] text-xs text-[#b8892a] font-medium">{t("home.paths.eyebrow")}</span>
             <h2 className="font-['Cormorant_Garamond'] text-4xl md:text-5xl font-light text-[#2e2820] mt-3">
               {t("home.paths.heading")}
             </h2>
           </div>
+        </div>
 
+        {/* Mobile: auto-scrolling carousel */}
+        <div className="md:hidden overflow-hidden">
+          <div
+            ref={pathsRef}
+            className="flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-smooth px-6 pb-4"
+            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+          >
+            {PATHS.map((path) => {
+              const label = t(`home.paths.items.${path.key}.label`);
+              const desc = t(`home.paths.items.${path.key}.desc`);
+              return (
+                <Link key={path.href} href={path.href}>
+                  <div className="snap-start shrink-0 w-[80vw] group cursor-pointer bg-white rounded-2xl overflow-hidden border border-[#e8dece] flex flex-col">
+                    <div className="relative h-48 overflow-hidden">
+                      <img src={path.img} alt={label} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                      <div className={`absolute inset-0 ${path.overlay}`} />
+                    </div>
+                    <div className="p-5 flex flex-col flex-1">
+                      <h3 className="font-['Cormorant_Garamond'] text-xl font-semibold text-[#2e2820] mb-2 leading-snug">{label}</h3>
+                      <p className="text-sm text-[#6a6058] leading-relaxed flex-1">{desc}</p>
+                      <div className="flex items-center gap-1.5 mt-4 text-[#b8892a] text-xs font-medium uppercase tracking-wider">
+                        <span>{t("home.paths.cta")}</span>
+                        <ArrowRight className="w-3.5 h-3.5" strokeWidth={2} />
+                      </div>
+                    </div>
+                  </div>
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* Desktop: grid */}
+        <div className="hidden md:block max-w-6xl mx-auto px-6">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {PATHS.map((path) => {
               const label = t(`home.paths.items.${path.key}.label`);
@@ -312,11 +372,7 @@ export default function Home() {
                 <Link key={path.href} href={path.href}>
                   <div className="group cursor-pointer bg-white rounded-2xl overflow-hidden border border-[#e8dece] hover:shadow-2xl hover:shadow-[#b8892a]/12 hover:-translate-y-1 transition-all duration-300 h-full flex flex-col">
                     <div className="relative h-52 overflow-hidden">
-                      <img
-                        src={path.img}
-                        alt={label}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      />
+                      <img src={path.img} alt={label} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                       <div className={`absolute inset-0 ${path.overlay}`} />
                     </div>
                     <div className="p-6 flex flex-col flex-1">
@@ -442,8 +498,8 @@ export default function Home() {
       </section>
 
       {/* ── PROJECTS ── */}
-      <section className="py-24 px-6 bg-[#fdf6ec] border-t border-[#e8d8b8]">
-        <div className="max-w-6xl mx-auto">
+      <section className="py-24 bg-[#fdf6ec] border-t border-[#e8d8b8]">
+        <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-16">
             <span className="uppercase tracking-[0.3em] text-xs text-[#b8892a] font-medium">{t("home.projects.eyebrow")}</span>
             <h2 className="font-['Cormorant_Garamond'] text-4xl md:text-5xl font-light text-[#2e2820] mt-3">
@@ -451,10 +507,116 @@ export default function Home() {
             </h2>
             <div className="h-px w-12 bg-[#b8892a]/40 mx-auto mt-6" />
           </div>
+        </div>
 
+        {/* Mobile: manual carousel with arrows */}
+        <div className="md:hidden relative px-6">
+          <div
+            ref={projRef}
+            className="flex overflow-x-auto snap-x snap-mandatory scroll-smooth gap-5 pb-4"
+            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+          >
+            {/* Card 1 — Gurukul */}
+            <Link href="/gurukul">
+              <div className="snap-start shrink-0 w-[82vw] group bg-white rounded-2xl border border-[#e8dece] overflow-hidden flex flex-col cursor-pointer">
+                <div className="relative h-48 overflow-hidden">
+                  <img src={`${b}images/gurukul-hero.png`} alt={t("home.projects.gurukul.alt")} className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#1a0f05]/60 to-transparent" />
+                  <span className="absolute top-4 left-4 text-xs uppercase tracking-[0.2em] text-[#e8c56a] font-semibold bg-[#1a0f05]/50 px-2.5 py-1 rounded-full">{t("home.projects.gurukul.tag")}</span>
+                </div>
+                <div className="p-5 flex flex-col flex-1">
+                  <h3 className="font-['Cormorant_Garamond'] text-xl font-light text-[#2e2820] mb-2 leading-snug">{t("home.projects.gurukul.title")}</h3>
+                  <div className="h-px w-8 bg-[#b8892a]/40 mb-3" />
+                  <p className="text-sm text-[#6a6058] leading-relaxed flex-1">{t("home.projects.gurukul.desc")}</p>
+                  <div className="flex items-center gap-1.5 mt-4 text-[#b8892a] text-xs font-medium uppercase tracking-wider">
+                    <span>{t("home.projects.cta")}</span><ArrowRight className="w-3.5 h-3.5" strokeWidth={2} />
+                  </div>
+                </div>
+              </div>
+            </Link>
+            {/* Card 2 — Ram Mandir */}
+            <Link href="/projects">
+              <div className="snap-start shrink-0 w-[82vw] group bg-white rounded-2xl border border-[#e8dece] overflow-hidden flex flex-col cursor-pointer">
+                <div className="relative h-48 overflow-hidden">
+                  <img src={`${b}images/ram-mandir-1.jpg`} alt={t("home.projects.ramMandir.alt")} className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#1a0f05]/60 to-transparent" />
+                  <span className="absolute top-4 left-4 text-xs uppercase tracking-[0.2em] text-[#e8c56a] font-semibold bg-[#1a0f05]/50 px-2.5 py-1 rounded-full">{t("home.projects.ramMandir.tag")}</span>
+                </div>
+                <div className="p-5 flex flex-col flex-1">
+                  <h3 className="font-['Cormorant_Garamond'] text-xl font-light text-[#2e2820] mb-2 leading-snug">{t("home.projects.ramMandir.title")}</h3>
+                  <div className="h-px w-8 bg-[#b8892a]/40 mb-3" />
+                  <p className="text-sm text-[#6a6058] leading-relaxed flex-1">{t("home.projects.ramMandir.desc")}</p>
+                  <div className="flex items-center gap-1.5 mt-4 text-[#b8892a] text-xs font-medium uppercase tracking-wider">
+                    <span>{t("home.projects.cta")}</span><ArrowRight className="w-3.5 h-3.5" strokeWidth={2} />
+                  </div>
+                </div>
+              </div>
+            </Link>
+            {/* Card 3 — Hanuman */}
+            <Link href="/projects">
+              <div className="snap-start shrink-0 w-[82vw] group bg-white rounded-2xl border border-[#e8dece] overflow-hidden flex flex-col cursor-pointer">
+                <div className="relative h-48 overflow-hidden">
+                  <img src={`${b}images/hanuman-temple-portrait.png`} alt={t("home.projects.hanuman.alt")} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" style={{ objectPosition: "50% 30%" }} />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#1a0f05]/60 to-transparent" />
+                  <span className="absolute top-4 left-4 text-xs uppercase tracking-[0.2em] text-[#e8c56a] font-semibold bg-[#1a0f05]/50 px-2.5 py-1 rounded-full">{t("home.projects.hanuman.tag")}</span>
+                </div>
+                <div className="p-5 flex flex-col flex-1">
+                  <h3 className="font-['Cormorant_Garamond'] text-xl font-light text-[#2e2820] mb-2 leading-snug">{t("home.projects.hanuman.title")}</h3>
+                  <div className="h-px w-8 bg-[#b8892a]/40 mb-3" />
+                  <p className="text-sm text-[#6a6058] leading-relaxed flex-1">{t("home.projects.hanuman.desc")}</p>
+                  <div className="flex items-center gap-1.5 mt-4 text-[#b8892a] text-xs font-medium uppercase tracking-wider">
+                    <span>{t("home.projects.cta")}</span><ArrowRight className="w-3.5 h-3.5" strokeWidth={2} />
+                  </div>
+                </div>
+              </div>
+            </Link>
+            {/* Card 4 — Cultural */}
+            <div className="snap-start shrink-0 w-[82vw] bg-white rounded-2xl border border-[#e8dece] overflow-hidden flex flex-col">
+              <div className="relative h-48 overflow-hidden">
+                <img src={`${b}images/initiative-green-revolution.png`} alt={t("home.projects.cultural.alt")} className="w-full h-full object-cover object-center" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#1a0f05]/60 to-transparent" />
+                <span className="absolute top-4 left-4 text-xs uppercase tracking-[0.2em] text-[#e8c56a] font-semibold bg-[#1a0f05]/50 px-2.5 py-1 rounded-full">{t("home.projects.cultural.tag")}</span>
+              </div>
+              <div className="p-5 flex flex-col flex-1">
+                <h3 className="font-['Cormorant_Garamond'] text-xl font-light text-[#2e2820] mb-2 leading-snug">{t("home.projects.cultural.title")}</h3>
+                <div className="h-px w-8 bg-[#b8892a]/40 mb-3" />
+                <p className="text-sm text-[#6a6058] leading-relaxed flex-1">{t("home.projects.cultural.desc")}</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Arrow controls */}
+          <div className="flex items-center justify-between mt-5">
+            <button
+              onClick={() => projScroll(-1)}
+              disabled={projIdx === 0}
+              className="flex items-center justify-center w-10 h-10 rounded-full border border-[#b8892a]/40 text-[#b8892a] disabled:opacity-30 disabled:cursor-not-allowed hover:bg-[#b8892a] hover:text-white transition-colors cursor-pointer"
+            >
+              <ChevronLeft className="w-5 h-5" strokeWidth={1.5} />
+            </button>
+            {/* Dot indicators */}
+            <div className="flex gap-1.5">
+              {Array.from({ length: PROJ_COUNT }).map((_, i) => (
+                <button
+                  key={i}
+                  onClick={() => { setProjIdx(i); projRef.current?.scrollTo({ left: i * projRef.current.clientWidth, behavior: "smooth" }); }}
+                  className={`w-1.5 h-1.5 rounded-full transition-colors cursor-pointer ${i === projIdx ? "bg-[#b8892a]" : "bg-[#b8892a]/25"}`}
+                />
+              ))}
+            </div>
+            <button
+              onClick={() => projScroll(1)}
+              disabled={projIdx === PROJ_COUNT - 1}
+              className="flex items-center justify-center w-10 h-10 rounded-full border border-[#b8892a]/40 text-[#b8892a] disabled:opacity-30 disabled:cursor-not-allowed hover:bg-[#b8892a] hover:text-white transition-colors cursor-pointer"
+            >
+              <ChevronRight className="w-5 h-5" strokeWidth={1.5} />
+            </button>
+          </div>
+        </div>
+
+        {/* Desktop: 2-col grid */}
+        <div className="hidden md:block max-w-6xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-8">
-
-            {/* Gurukul */}
             <Link href="/gurukul">
               <div className="group bg-white rounded-2xl border border-[#e8dece] hover:shadow-xl hover:shadow-[#b8892a]/10 hover:-translate-y-0.5 transition-all duration-300 overflow-hidden flex flex-col h-full cursor-pointer">
                 <div className="relative h-52 overflow-hidden">
@@ -467,14 +629,11 @@ export default function Home() {
                   <div className="h-px w-8 bg-[#b8892a]/40 mb-4" />
                   <p className="text-base text-[#6a6058] leading-relaxed flex-1">{t("home.projects.gurukul.desc")}</p>
                   <div className="flex items-center gap-1.5 mt-6 text-[#b8892a] text-xs font-medium uppercase tracking-wider group-hover:gap-2.5 transition-all">
-                    <span>{t("home.projects.cta")}</span>
-                    <ArrowRight className="w-3.5 h-3.5" strokeWidth={2} />
+                    <span>{t("home.projects.cta")}</span><ArrowRight className="w-3.5 h-3.5" strokeWidth={2} />
                   </div>
                 </div>
               </div>
             </Link>
-
-            {/* Ram Mandir */}
             <Link href="/projects">
               <div className="group bg-white rounded-2xl border border-[#e8dece] hover:shadow-xl hover:shadow-[#b8892a]/10 hover:-translate-y-0.5 transition-all duration-300 overflow-hidden flex flex-col h-full cursor-pointer">
                 <div className="relative h-52 overflow-hidden">
@@ -487,14 +646,11 @@ export default function Home() {
                   <div className="h-px w-8 bg-[#b8892a]/40 mb-4" />
                   <p className="text-base text-[#6a6058] leading-relaxed flex-1">{t("home.projects.ramMandir.desc")}</p>
                   <div className="flex items-center gap-1.5 mt-6 text-[#b8892a] text-xs font-medium uppercase tracking-wider group-hover:gap-2.5 transition-all">
-                    <span>{t("home.projects.cta")}</span>
-                    <ArrowRight className="w-3.5 h-3.5" strokeWidth={2} />
+                    <span>{t("home.projects.cta")}</span><ArrowRight className="w-3.5 h-3.5" strokeWidth={2} />
                   </div>
                 </div>
               </div>
             </Link>
-
-            {/* 108 Hanuman Temples */}
             <Link href="/projects">
               <div className="group bg-white rounded-2xl border border-[#e8dece] hover:shadow-xl hover:shadow-[#b8892a]/10 hover:-translate-y-0.5 transition-all duration-300 overflow-hidden flex flex-col h-full cursor-pointer">
                 <div className="relative h-52 overflow-hidden">
@@ -507,14 +663,11 @@ export default function Home() {
                   <div className="h-px w-8 bg-[#b8892a]/40 mb-4" />
                   <p className="text-base text-[#6a6058] leading-relaxed flex-1">{t("home.projects.hanuman.desc")}</p>
                   <div className="flex items-center gap-1.5 mt-6 text-[#b8892a] text-xs font-medium uppercase tracking-wider group-hover:gap-2.5 transition-all">
-                    <span>{t("home.projects.cta")}</span>
-                    <ArrowRight className="w-3.5 h-3.5" strokeWidth={2} />
+                    <span>{t("home.projects.cta")}</span><ArrowRight className="w-3.5 h-3.5" strokeWidth={2} />
                   </div>
                 </div>
               </div>
             </Link>
-
-            {/* Cultural & Ecological Advocacy */}
             <div className="bg-white rounded-2xl border border-[#e8dece] overflow-hidden flex flex-col h-full">
               <div className="relative h-52 overflow-hidden">
                 <img src={`${b}images/initiative-green-revolution.png`} alt={t("home.projects.cultural.alt")} className="w-full h-full object-cover object-center" />
@@ -527,7 +680,6 @@ export default function Home() {
                 <p className="text-base text-[#6a6058] leading-relaxed flex-1">{t("home.projects.cultural.desc")}</p>
               </div>
             </div>
-
           </div>
         </div>
       </section>
