@@ -28,11 +28,11 @@ const idaPath = serpentinePath(true);
 const pingalaPath = serpentinePath(false);
 
 export default function ChakraNadi() {
-  const [hovered, setHovered] = useState<number | null>(3);
+  const [hovered, setHovered] = useState<number | null>(null);
   const active = hovered !== null ? chakras[hovered] : null;
 
   return (
-    <section className="py-24 px-6 relative overflow-hidden" style={{ background: "#f6f0e8" }}>
+    <section id="inner-cosmos" className="py-24 px-6 relative overflow-hidden" style={{ background: "#f6f0e8" }}>
       <style>{`
         @keyframes cn-orb-pulse {
           0%, 100% { opacity: 0.75; transform: scale(1); }
@@ -42,16 +42,12 @@ export default function ChakraNadi() {
           0%, 100% { opacity: 0.45; }
           50%       { opacity: 0.75; }
         }
-        @keyframes cn-reveal {
-          from { opacity: 0; transform: translateX(10px); }
+        @keyframes cn-reveal-left {
+          from { opacity: 0; transform: translateX(-10px); }
           to   { opacity: 1; transform: translateX(0); }
         }
         .cn-orb-group { cursor: pointer; }
-        .cn-orb-circle {
-          transition: r 0.25s, stroke-width 0.25s;
-          transform-box: fill-box;
-          transform-origin: center;
-        }
+        .cn-orb-circle { transition: r 0.25s, stroke-width 0.25s; transform-box: fill-box; transform-origin: center; }
       `}</style>
 
       {/* Mandala ring ornaments */}
@@ -60,52 +56,70 @@ export default function ChakraNadi() {
           position: "absolute", top: "50%", left: "50%",
           transform: "translate(-50%,-50%)",
           width: s, height: s, borderRadius: "50%",
-          border: "1px solid rgba(184,137,42,0.08)",
-          pointerEvents: "none",
+          border: "1px solid rgba(184,137,42,0.08)", pointerEvents: "none",
         }} />
       ))}
 
       <div className="max-w-5xl mx-auto relative z-10">
 
-        {/* Heading */}
+        {/* ── Heading ── */}
         <div className="text-center mb-12">
           <div className="flex items-center justify-center gap-4 mb-5">
             <div className="h-px w-10 bg-[#b8892a]/40" />
             <span className="uppercase tracking-[0.3em] text-xs text-[#b8892a] font-medium">The Inner Cosmos</span>
             <div className="h-px w-10 bg-[#b8892a]/40" />
           </div>
-          <h2 className="font-['Cormorant_Garamond'] text-4xl md:text-5xl font-light text-[#1e1a14] leading-tight mb-3">
+          <h2 className="font-['Cormorant_Garamond'] text-4xl md:text-5xl font-light text-[#2e2820] leading-tight mb-3">
             The Sacred Architecture Within
           </h2>
-          <p className="text-sm text-[#6e6050] tracking-[0.04em]">
+          <p className="text-sm text-[#6a6058] tracking-[0.04em]">
             Seven Energy Centers &nbsp;·&nbsp; 72,000 Energy Channels &nbsp;·&nbsp; One Awakening
           </p>
         </div>
 
-        {/* Main layout — hidden on mobile, shown on md+ */}
-        <div className="hidden md:flex items-center gap-8">
+        {/* ── Desktop layout: LEFT panel | CENTRE spine | RIGHT legend ── */}
+        <div className="hidden md:flex items-center gap-6">
 
-          {/* Left — nadi legend */}
-          <div style={{ width: 168, flexShrink: 0 }}>
-            {[
-              { stroke: "2px solid #74b9ff",  name: "Ida Nadi",     sub: "Lunar · Left",      desc: "Cooling, feminine force — governs the mind, emotions, and inner stillness." },
-              { stroke: "2px dashed #c8a96e", name: "Sushumna",     sub: "Central · Supreme", desc: "The path of Kundalini's ascent — channel of liberation and divine union." },
-              { stroke: "2px solid #fdcb6e",  name: "Pingala Nadi", sub: "Solar · Right",     desc: "Warming, masculine force — governs vitality, action, and transformation." },
-            ].map(n => (
-              <div key={n.name} className="mb-5 pt-3 border-t border-[#b8892a]/20">
-                <div className="flex items-center gap-2 mb-1.5">
-                  <div style={{ width: 24, height: 0, border: n.stroke, borderTopWidth: 2, flexShrink: 0 }} />
-                  <p className="font-['Cormorant_Garamond'] text-base text-[#1e1a14] leading-none">{n.name}</p>
-                </div>
-                <p className="text-[9.5px] text-[#b8892a] tracking-[0.18em] uppercase mb-1.5">{n.sub}</p>
-                <p className="text-xs text-[#5a5040] leading-relaxed">{n.desc}</p>
+          {/* LEFT — chakra detail panel (shown on hover) */}
+          <div className="flex-1 min-h-[360px] flex flex-col justify-center pr-4">
+            {active ? (
+              <div key={hovered} style={{ animation: "cn-reveal-left 0.22s ease" }}>
+                <p className="uppercase tracking-[0.3em] text-xs text-[#b8892a] font-medium mb-4">
+                  Chakra {hovered! + 1} of 7
+                </p>
+                <h3 className="font-['Cormorant_Garamond'] text-5xl font-light leading-none mb-2"
+                  style={{ color: active.glow }}>
+                  {active.name}
+                </h3>
+                <p className="font-['Cormorant_Garamond'] italic text-2xl text-[#6a6058] mb-3">
+                  {active.english} Centre
+                </p>
+                <p className="font-['Cormorant_Garamond'] text-3xl mb-6" style={{ color: active.color }}>
+                  {active.sanskrit}
+                </p>
+                <div className="h-px w-10 mb-6" style={{ background: `${active.color}70` }} />
+                <p className="uppercase tracking-[0.25em] text-xs text-[#9a8070] font-medium mb-2">Element</p>
+                <p className="font-['Cormorant_Garamond'] text-2xl text-[#2e2820] mb-5">{active.element}</p>
+                <p className="uppercase tracking-[0.25em] text-xs text-[#9a8070] font-medium mb-2">Qualities</p>
+                <p className="font-['Cormorant_Garamond'] text-2xl text-[#2e2820] leading-relaxed">{active.quality}</p>
               </div>
-            ))}
+            ) : (
+              <div>
+                <p className="uppercase tracking-[0.3em] text-xs text-[#b8892a] font-medium mb-5">Explore</p>
+                <p className="font-['Cormorant_Garamond'] italic text-3xl text-[#3d3020] leading-relaxed mb-5">
+                  Hover over a chakra to discover its element, Sanskrit name, and qualities.
+                </p>
+                <div className="h-px w-9 bg-[#b8892a]/40 mb-5" />
+                <p className="text-base text-[#5a5248] leading-loose">
+                  Each energy centre governs a different dimension of our physical, emotional, and spiritual experience. Through Mahayog, all seven are awakened and illuminated.
+                </p>
+              </div>
+            )}
           </div>
 
-          {/* Centre — SVG spine */}
-          <div style={{ flexShrink: 0, width: 280, display: "flex", justifyContent: "center" }}>
-            <svg width={280} height={SVG_H} viewBox={`-30 0 280 ${SVG_H}`} overflow="visible">
+          {/* CENTRE — SVG spine */}
+          <div style={{ flexShrink: 0, width: 300, display: "flex", justifyContent: "center" }}>
+            <svg width={300} height={SVG_H} viewBox={`-30 0 300 ${SVG_H}`} overflow="visible">
               <defs>
                 {chakras.map((c, i) => (
                   <radialGradient key={i} id={`cn-grad-${i}`} cx="38%" cy="35%">
@@ -127,7 +141,7 @@ export default function ChakraNadi() {
                 style={{ animation: "cn-spine-dim 3s ease-in-out infinite" }}
               />
 
-              {/* Chakra orbs */}
+              {/* Chakra orbs + labels */}
               {chakras.map((c, i) => {
                 const cy = CHAKRA_Y[i];
                 const isHov = hovered === i;
@@ -140,7 +154,7 @@ export default function ChakraNadi() {
                     <circle
                       cx={CX} cy={cy} r={isHov ? 22 : 17}
                       fill={c.glow}
-                      opacity={isHov ? 0.28 : 0.14}
+                      opacity={isHov ? 0.3 : 0.15}
                       style={{
                         transition: "r 0.25s, opacity 0.25s",
                         animation: `cn-orb-pulse ${2.2 + i * 0.15}s ease-in-out infinite`,
@@ -151,28 +165,33 @@ export default function ChakraNadi() {
                     {/* Main orb */}
                     <circle
                       className="cn-orb-circle"
-                      cx={CX} cy={cy} r={isHov ? 13 : 10}
+                      cx={CX} cy={cy}
+                      r={isHov ? 13 : 10}
                       fill={`url(#cn-grad-${i})`}
                       stroke={isHov ? c.glow : c.color}
                       strokeWidth={isHov ? 2 : 1.2}
                       style={{
                         animation: `cn-orb-pulse ${2.2 + i * 0.15}s ease-in-out infinite`,
                         animationDelay: `${i * 0.3}s`,
-                        filter: isHov ? `drop-shadow(0 0 6px ${c.glow})` : `drop-shadow(0 0 3px ${c.color}80)`,
+                        filter: isHov ? `drop-shadow(0 0 7px ${c.glow})` : `drop-shadow(0 0 3px ${c.color}80)`,
                       }}
                     />
 
-                    {/* Always-visible name label */}
-                    <text x={CX + 22} y={cy - 3} fontSize={12}
-                      fill={isHov ? c.color : "#3d3020"}
+                    {/* Name label — pushed further right */}
+                    <text
+                      x={CX + 34} y={cy - 3}
+                      fontSize={13}
+                      fill={isHov ? c.color : "#2e2820"}
                       fontFamily="'Cormorant Garamond', serif"
                       fontWeight={isHov ? "400" : "300"}>
                       {c.name}
                     </text>
-                    <text x={CX + 22} y={cy + 10} fontSize={9}
+                    <text
+                      x={CX + 34} y={cy + 11}
+                      fontSize={9}
                       fill={isHov ? c.color : "#9a8070"}
                       fontFamily="'Inter', sans-serif"
-                      letterSpacing="0.12em">
+                      letterSpacing="0.14em">
                       {c.english.toUpperCase()}
                     </text>
                   </g>
@@ -181,46 +200,28 @@ export default function ChakraNadi() {
             </svg>
           </div>
 
-          {/* Right — detail panel */}
-          <div style={{ flex: 1, minHeight: 360, paddingLeft: 8 }}>
-            {active ? (
-              <div key={hovered} style={{ animation: "cn-reveal 0.22s ease" }}>
-                <p className="text-[10px] tracking-[0.32em] text-[#b8892a] uppercase mb-3">
-                  Chakra {hovered! + 1} of 7
-                </p>
-                <h3 className="font-['Cormorant_Garamond'] font-light leading-none mb-1"
-                  style={{ fontSize: 42, color: active.glow }}>
-                  {active.name}
-                </h3>
-                <p className="font-['Cormorant_Garamond'] italic text-xl text-[#6e6050] mb-2">
-                  {active.english} Centre
-                </p>
-                <p className="font-['Cormorant_Garamond'] text-3xl mb-5" style={{ color: active.color }}>
-                  {active.sanskrit}
-                </p>
-                <div className="h-px w-10 mb-5" style={{ background: `${active.color}80` }} />
-                <p className="text-[10px] tracking-[0.28em] text-[#9a8070] uppercase mb-1.5">Element</p>
-                <p className="font-['Cormorant_Garamond'] text-xl text-[#1e1a14] mb-5">{active.element}</p>
-                <p className="text-[10px] tracking-[0.28em] text-[#9a8070] uppercase mb-1.5">Qualities</p>
-                <p className="font-['Cormorant_Garamond'] text-xl text-[#1e1a14] leading-relaxed">{active.quality}</p>
+          {/* RIGHT — nadi legend */}
+          <div style={{ width: 200, flexShrink: 0 }}>
+            {[
+              { stroke: "2px solid #74b9ff",  name: "Ida Nadi",     sub: "Lunar · Left",      desc: "Cooling, feminine force — governs the mind, emotions, and inner stillness." },
+              { stroke: "2px dashed #c8a96e", name: "Sushumna",     sub: "Central · Supreme", desc: "The path of Kundalini's ascent — channel of liberation and divine union." },
+              { stroke: "2px solid #fdcb6e",  name: "Pingala Nadi", sub: "Solar · Right",     desc: "Warming, masculine force — governs vitality, action, and transformation." },
+            ].map(n => (
+              <div key={n.name} className="mb-6 pt-4 border-t border-[#b8892a]/20">
+                <div className="flex items-center gap-2 mb-1.5">
+                  <div style={{ width: 24, height: 0, border: n.stroke, borderTopWidth: 2, flexShrink: 0 }} />
+                  <p className="font-['Cormorant_Garamond'] text-lg text-[#2e2820] leading-none">{n.name}</p>
+                </div>
+                <p className="uppercase tracking-[0.18em] text-[10px] text-[#b8892a] font-medium mb-2">{n.sub}</p>
+                <p className="text-sm text-[#5a5248] leading-relaxed">{n.desc}</p>
               </div>
-            ) : (
-              <div>
-                <p className="text-[10px] tracking-[0.32em] text-[#b8892a] uppercase mb-5">Explore</p>
-                <p className="font-['Cormorant_Garamond'] italic text-2xl text-[#3d3020] leading-relaxed mb-5">
-                  Hover over a chakra to discover its element, Sanskrit name, and qualities.
-                </p>
-                <div className="h-px w-9 bg-[#b8892a]/40 mb-5" />
-                <p className="text-sm text-[#6e6050] leading-loose">
-                  Each energy centre governs a different dimension of our physical, emotional, and spiritual experience. Through Mahayog, all seven are awakened and illuminated.
-                </p>
-              </div>
-            )}
+            ))}
           </div>
+
         </div>
 
-        {/* Mobile — stacked list */}
-        <div className="md:hidden space-y-4">
+        {/* ── Mobile — accordion list ── */}
+        <div className="md:hidden space-y-3">
           {chakras.map((c, i) => (
             <div key={i}
               className="border rounded-xl p-5 cursor-pointer transition-all duration-300"
@@ -233,17 +234,21 @@ export default function ChakraNadi() {
                 <div className="w-5 h-5 rounded-full flex-shrink-0"
                   style={{ background: `radial-gradient(circle at 35% 35%, ${c.glow}, ${c.color})`, boxShadow: `0 0 10px ${c.color}60` }} />
                 <div>
-                  <p className="font-['Cormorant_Garamond'] text-xl text-[#1e1a14]">{c.name}</p>
-                  <p className="text-xs text-[#9a8070] tracking-widest uppercase">{c.english}</p>
+                  <p className="font-['Cormorant_Garamond'] text-xl text-[#2e2820]">{c.name}</p>
+                  <p className="uppercase text-xs text-[#9a8070] tracking-widest">{c.english}</p>
                 </div>
-                <p className="ml-auto font-['Cormorant_Garamond'] text-lg" style={{ color: c.color }}>{c.sanskrit}</p>
+                <p className="ml-auto font-['Cormorant_Garamond'] text-xl" style={{ color: c.color }}>{c.sanskrit}</p>
               </div>
               {hovered === i && (
-                <div className="mt-4 pt-4 border-t space-y-2" style={{ borderColor: `${c.color}30` }}>
-                  <p className="text-xs text-[#9a8070] uppercase tracking-widest">Element</p>
-                  <p className="font-['Cormorant_Garamond'] text-lg text-[#1e1a14]">{c.element}</p>
-                  <p className="text-xs text-[#9a8070] uppercase tracking-widest mt-2">Qualities</p>
-                  <p className="font-['Cormorant_Garamond'] text-lg text-[#1e1a14]">{c.quality}</p>
+                <div className="mt-4 pt-4 border-t space-y-3" style={{ borderColor: `${c.color}30` }}>
+                  <div>
+                    <p className="uppercase text-xs text-[#9a8070] tracking-widest mb-1">Element</p>
+                    <p className="font-['Cormorant_Garamond'] text-xl text-[#2e2820]">{c.element}</p>
+                  </div>
+                  <div>
+                    <p className="uppercase text-xs text-[#9a8070] tracking-widest mb-1">Qualities</p>
+                    <p className="font-['Cormorant_Garamond'] text-xl text-[#2e2820]">{c.quality}</p>
+                  </div>
                 </div>
               )}
             </div>
@@ -257,7 +262,7 @@ export default function ChakraNadi() {
             <span className="text-[#b8892a] text-xs">✦</span>
             <div className="h-px w-12 bg-[#b8892a]/30" />
           </div>
-          <p className="text-xs text-[#5a5040] leading-loose tracking-wide">
+          <p className="text-sm text-[#5a5248] leading-loose tracking-wide">
             Through Shaktipat initiation, Kundalini rises through the Sushumna,<br className="hidden md:block" />
             purifying all 72,000 nadis and illuminating each energy centre.
           </p>
