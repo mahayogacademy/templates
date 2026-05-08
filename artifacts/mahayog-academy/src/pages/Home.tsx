@@ -317,12 +317,16 @@ export default function Home() {
             <span className="uppercase tracking-[0.3em] text-xs text-[#b8892a] font-medium">{t("home.mission.eyebrow")}</span>
             <div className="h-px w-10 bg-[#b8892a]/40" />
           </div>
-          <h2 className="font-['Cormorant_Garamond'] text-3xl md:text-4xl lg:text-5xl font-light text-[#3d3830] leading-tight mb-8">
+          <h2 className="font-['Cormorant_Garamond'] text-3xl md:text-4xl lg:text-5xl font-light text-[#3d3830] leading-tight mb-2">
             {t("home.mission.lead")}
           </h2>
-          <p className="text-base text-[#6a6058] leading-relaxed max-w-xl mx-auto border-t border-b border-[#b8892a]/30 py-5 tracking-wide">
-            {t("home.mission.support")}
+          <p className="font-['Cormorant_Garamond'] text-3xl md:text-4xl lg:text-5xl font-light italic text-[#b8892a] leading-tight mb-8">
+            {t("home.mission.leadSub")}
           </p>
+          <div className="text-base text-[#6a6058] leading-relaxed max-w-xl mx-auto border-t border-b border-[#b8892a]/30 py-5 tracking-wide space-y-4">
+            <p>{t("home.mission.support")}</p>
+            <p>{t("home.mission.support2")}</p>
+          </div>
         </div>
       </section>
 

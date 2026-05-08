@@ -70,8 +70,10 @@
     },
     "mission": {
       "eyebrow": "Our Purpose",
-      "lead": "There Is a Dormant Force Within You. Himalayan Siddha Mahayog Awakens It.",
-      "support": "Himalayan Siddha Mahayog is a rare and complete science of meditation in which Kundalini, the life-force sleeping within, is awakened automatically through Shaktipat initiation. This living transmission flows through His Holiness Jagadguru Mahayogi Siddhababa, a rare realized Yogi who has devoted his life to the awakening of all beings."
+      "lead": "Awakening the Dormant Force Within You.",
+      "leadSub": "Himalayan Siddha Mahayog Meditation",
+      "support": "Experience Himalayan Siddha Mahayog — a rare and complete meditation science in which Kundalini, the life-force sleeping within, is awakened automatically through Shaktipat initiation.",
+      "support2": "This living transmission flows through His Holiness Jagadguru Mahayogi Siddhababa, a rare Enlightened Yogi of the Himalayas."
     },
     "pillars": {
       "mahayog": {
