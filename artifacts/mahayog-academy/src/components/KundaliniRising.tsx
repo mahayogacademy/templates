@@ -91,7 +91,7 @@ export default function KundaliniRising() {
         <img
           src={`${import.meta.env.BASE_URL}images/kundalini-serene-bg.png`}
           alt=""
-          className="w-full h-full object-cover object-center opacity-55"
+          className="w-full h-full object-cover object-center opacity-15"
         />
         <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, #1e1710 0%, transparent 25%, transparent 75%, #1e1710 100%)" }} />
       </div>
