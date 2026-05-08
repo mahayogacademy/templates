@@ -142,8 +142,8 @@ export default function KundaliniRising() {
         {/* ── Main layout ── */}
         <div className="flex flex-col md:flex-row items-center gap-10 md:gap-12 justify-center">
 
-          {/* LEFT — state description */}
-          <div className="w-full md:w-56 text-center flex-shrink-0">
+          {/* LEFT — state description (hidden on desktop in before state) */}
+          <div className={`w-full md:w-56 text-center flex-shrink-0 ${!isAfter ? "md:hidden" : ""}`}>
             {!isAfter ? (
               <div key="b" style={{ animation: "kr-fade .5s ease" }}>
                 <p className="uppercase tracking-[0.24em] text-[10px] mb-2" style={{ color: "#7a6040" }}>
@@ -159,8 +159,7 @@ export default function KundaliniRising() {
                 <p className="text-sm leading-relaxed" style={{ color: "#9a7e54", lineHeight: 1.9 }}>
                   The Kundalini Shakti lies coiled three and a half times at the base of the spine — like a sleeping serpent. Her head faces downward, consciousness absorbed in the material world. Her immense power sleeps, awaiting the Guru's touch.
                 </p>
-                {/* On mobile this sits right after the paragraph; on desktop it lives in the bottom quote */}
-                <p className="md:hidden text-sm mt-4 leading-loose" style={{ color: "#9a8050", lineHeight: 1.9 }}>
+                <p className="text-sm mt-4 leading-loose" style={{ color: "#9a8050", lineHeight: 1.9 }}>
                   In the average person, Kundalini remains dormant throughout life. Only through a rare Enlightened Master can this power be instantly and safely awakened.
                 </p>
               </div>
@@ -297,7 +296,7 @@ export default function KundaliniRising() {
           </div>
 
           {/* RIGHT — chakra name list */}
-          <div className={`w-full md:w-52 flex-shrink-0 pl-8 md:pl-0 ${!isAfter ? "hidden md:block" : ""}`}>
+          <div className={`w-full md:w-52 flex-shrink-0 pl-8 md:pl-0 ${!isAfter ? "hidden" : ""}`}>
             {CHAKRAS.map((c, i) => {
               const act = activeChakras.has(i);
               return (
@@ -337,12 +336,7 @@ export default function KundaliniRising() {
             <p className="text-sm leading-loose tracking-wide" style={{ color: "#c0a060", lineHeight: 1.95 }}>
               When Kundalini reaches the Sahasrara, individual consciousness merges with universal consciousness — this is Samadhi, the ultimate aim of all Yoga.
             </p>
-          ) : (
-            /* hidden on mobile — this text appears inline in the left panel above */
-            <p className="hidden md:block text-sm leading-loose tracking-wide" style={{ color: "#9a8050", lineHeight: 1.95 }}>
-              In the average person, Kundalini remains dormant throughout life. Only through a rare Enlightened Master can this power be instantly and safely awakened.
-            </p>
-          )}
+          ) : null}
         </div>
 
       </div>
