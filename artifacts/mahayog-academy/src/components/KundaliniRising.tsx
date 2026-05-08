@@ -297,7 +297,7 @@ export default function KundaliniRising() {
           </div>
 
           {/* RIGHT — chakra name list */}
-          <div className="w-full md:w-52 flex-shrink-0 pl-8 md:pl-0">
+          <div className="w-auto max-w-[260px] md:max-w-none mx-auto md:mx-0 md:w-52 flex-shrink-0 pl-0 md:pl-0">
             {CHAKRAS.map((c, i) => {
               const act = activeChakras.has(i);
               return (
