@@ -230,7 +230,7 @@ export default function Home() {
                 <img
                   src={`${b}images/gurudev-darshan-smile.jpg`}
                   alt={t("home.pillars.mahayogi.alt")}
-                  className="w-full h-full object-cover object-[50%_80%] md:object-top group-hover:scale-105 transition-transform duration-700"
+                  className="w-full h-full object-cover object-bottom md:object-top group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1a0f05]/95 via-[#1a0f05]/30 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-7">
