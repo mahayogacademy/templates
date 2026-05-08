@@ -241,25 +241,8 @@ export default function Home() {
           </g>
         </svg>
 
-      {/* ── MISSION STATEMENT ── */}
-      <section className="relative py-24 px-6">
-        <div className="max-w-3xl mx-auto text-center">
-          <div className="flex items-center justify-center gap-4 mb-8">
-            <div className="h-px w-10 bg-[#b8892a]/40" />
-            <span className="uppercase tracking-[0.3em] text-xs text-[#b8892a] font-medium">{t("home.mission.eyebrow")}</span>
-            <div className="h-px w-10 bg-[#b8892a]/40" />
-          </div>
-          <p className="font-['Cormorant_Garamond'] text-2xl md:text-3xl font-light text-[#3d3830] leading-relaxed mb-8">
-            {t("home.mission.lead")}
-          </p>
-          <p className="text-base text-[#6a6058] leading-relaxed max-w-xl mx-auto border-t border-b border-[#b8892a]/30 py-5 tracking-wide">
-            {t("home.mission.support")}
-          </p>
-        </div>
-      </section>
-
       {/* ── THREE PILLARS CARDS ── */}
-      <section className="relative py-6 pb-28 px-6">
+      <section className="relative pt-14 pb-12 px-6">
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5 items-end">
 
@@ -326,6 +309,23 @@ export default function Home() {
           </div>
         </div>
       </section>
+      {/* ── MISSION STATEMENT ── */}
+      <section className="relative py-24 px-6">
+        <div className="max-w-3xl mx-auto text-center">
+          <div className="flex items-center justify-center gap-4 mb-8">
+            <div className="h-px w-10 bg-[#b8892a]/40" />
+            <span className="uppercase tracking-[0.3em] text-xs text-[#b8892a] font-medium">{t("home.mission.eyebrow")}</span>
+            <div className="h-px w-10 bg-[#b8892a]/40" />
+          </div>
+          <h2 className="font-['Cormorant_Garamond'] text-3xl md:text-4xl lg:text-5xl font-light text-[#3d3830] leading-tight mb-8">
+            {t("home.mission.lead")}
+          </h2>
+          <p className="text-base text-[#6a6058] leading-relaxed max-w-xl mx-auto border-t border-b border-[#b8892a]/30 py-5 tracking-wide">
+            {t("home.mission.support")}
+          </p>
+        </div>
+      </section>
+
       </div>{/* end decorative background wrapper */}
 
       {/* ── EXPLORE PATHS ── */}
