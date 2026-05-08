@@ -736,51 +736,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── CLOSING QUOTE + FOOTER ── */}
-      <div style={{ background: "radial-gradient(ellipse at 60% 30%, #2c1708 0%, #1a0d04 55%, #0f0702 100%)" }}>
-      <section className="relative py-14 md:py-28 px-6 overflow-hidden">
-        {/* Subtle SVG mandala watermark */}
-        <svg
-          className="absolute inset-0 w-full h-full opacity-[0.04]"
-          viewBox="0 0 800 400"
-          preserveAspectRatio="xMidYMid slice"
-          aria-hidden
-        >
-          <g transform="translate(400,200)">
-            {[0,30,60,90,120,150,180,210,240,270,300,330].map((deg, i) => (
-              <g key={i} transform={`rotate(${deg})`}>
-                <ellipse cx="0" cy="-80" rx="18" ry="40" fill="none" stroke="#e8c56a" strokeWidth="0.6"/>
-                <ellipse cx="0" cy="-140" rx="10" ry="22" fill="none" stroke="#e8c56a" strokeWidth="0.4"/>
-              </g>
-            ))}
-            <circle cx="0" cy="0" r="40" fill="none" stroke="#e8c56a" strokeWidth="0.6"/>
-            <circle cx="0" cy="0" r="80" fill="none" stroke="#e8c56a" strokeWidth="0.4"/>
-            <circle cx="0" cy="0" r="120" fill="none" stroke="#e8c56a" strokeWidth="0.3"/>
-            <circle cx="0" cy="0" r="160" fill="none" stroke="#e8c56a" strokeWidth="0.2"/>
-          </g>
-        </svg>
-        <div className="relative z-10 max-w-2xl mx-auto text-center">
-          <div className="flex items-center justify-center gap-3 mb-8">
-            <div className="h-px w-10 bg-[#e8c56a]/60" />
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
-              <path d="M12 2C12 2 15 9 22 12C22 12 15 15 12 22C12 22 9 15 2 12C2 12 9 9 12 2Z" stroke="#e8c56a" strokeWidth="1.5" fill="none"/>
-            </svg>
-            <div className="h-px w-10 bg-[#e8c56a]/60" />
-          </div>
-          <p className="font-['Cormorant_Garamond'] text-3xl md:text-4xl font-light text-white italic leading-relaxed mb-10">
-            {t("home.closing.quote")}
-          </p>
-          <Link href="/contact">
-            <span className="inline-flex items-center gap-2 border border-[#e8c56a]/60 hover:border-[#e8c56a] text-[#e8c56a] hover:text-white text-sm px-8 py-3.5 rounded-full tracking-wider transition-all duration-200 cursor-pointer">
-              {t("home.closing.cta")}
-              <ArrowRight className="w-4 h-4" strokeWidth={1.5} />
-            </span>
-          </Link>
-        </div>
-      </section>
-
       <Footer />
-      </div>
     </div>
   );
 }
