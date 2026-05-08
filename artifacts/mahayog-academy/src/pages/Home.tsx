@@ -177,7 +177,7 @@ export default function Home() {
         {/* Dark overlay fading to cream at the bottom */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#1a0f05]/55 via-[#1a0f05]/60 via-[65%] to-[#faf9f6]" />
 
-        <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
+        <div className="relative z-10 text-center px-6 max-w-4xl mx-auto pt-16 md:pt-0">
           {/* Sacred symbols */}
           <div className="flex justify-center mb-6">
             <RecolouredSymbol
@@ -199,20 +199,11 @@ export default function Home() {
             <span className="text-[#e8c56a]">{t("home.hero.title2")}</span>
           </h1>
 
-          <p className="text-base md:text-lg text-[#f0e4c8] tracking-[0.2em] uppercase font-light mb-12">
-            {t("home.hero.tagline")}
-          </p>
-
           <div className="flex items-center justify-center gap-4 flex-wrap">
             <Link href="/about">
               <span className="inline-flex items-center gap-2 bg-[#b8892a] hover:bg-[#9d7422] text-white text-sm px-8 py-3.5 rounded-full tracking-wider transition-all duration-200 cursor-pointer shadow-lg shadow-[#b8892a]/30">
                 {t("home.hero.ctaExplore")}
                 <ArrowRight className="w-4 h-4" strokeWidth={1.5} />
-              </span>
-            </Link>
-            <Link href="/meditation">
-              <span className="inline-flex items-center gap-2 border border-white/50 hover:border-[#e8c56a] text-white hover:text-[#e8c56a] text-sm px-8 py-3.5 rounded-full tracking-wider transition-all duration-200 cursor-pointer backdrop-blur-sm">
-                {t("home.hero.ctaDiscover")}
               </span>
             </Link>
           </div>
