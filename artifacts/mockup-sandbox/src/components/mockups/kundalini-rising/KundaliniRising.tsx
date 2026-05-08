@@ -96,7 +96,7 @@ export function KundaliniRising() {
 
   return (
     <div style={{
-      background: "#0d0b08", width: "100%", minHeight: "100vh",
+      background: "#1e1710", width: "100%", minHeight: "100vh",
       display: "flex", flexDirection: "column", alignItems: "center",
       padding: "36px 24px 48px",
       fontFamily: "'Inter', sans-serif", color: "#e8d5b4",
@@ -342,7 +342,7 @@ export function KundaliniRising() {
 
       {/* Bottom quote */}
       <div style={{ marginTop: 32, textAlign: "center", maxWidth: 560, borderTop: "1px solid #1e1810", paddingTop: 24 }}>
-        <p style={{ fontSize: 13, color: isAfter ? "#6a5030" : "#3a2e18", lineHeight: 1.95, letterSpacing: "0.03em", transition: "color .6s" }}>
+        <p style={{ fontSize: 13, color: isAfter ? "#8a7040" : "#9a8050", lineHeight: 1.95, letterSpacing: "0.03em", transition: "color .6s" }}>
           {isAfter
             ? "When Kundalini reaches the Sahasrara, individual consciousness merges with universal consciousness — this is Samadhi, the ultimate aim of all Yoga."
             : "In the average person, Kundalini remains dormant throughout life. Only through a rare Enlightened Master can this power be instantly and safely awakened."}
