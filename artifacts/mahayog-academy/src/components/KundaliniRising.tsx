@@ -93,7 +93,7 @@ export default function KundaliniRising() {
           alt=""
           className="w-full h-full object-cover object-center opacity-15"
         />
-        <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, #1e1710 0%, transparent 25%, transparent 75%, #1e1710 100%)" }} />
+        <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, #1e1710 0%, transparent 25%)" }} />
       </div>
       <style>{`
         @keyframes kr-burst { 0%{transform:scale(.5);opacity:0} 45%{transform:scale(1.55);opacity:1} 100%{transform:scale(1);opacity:1} }
