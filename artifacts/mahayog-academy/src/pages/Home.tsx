@@ -128,40 +128,6 @@ export default function Home() {
   const captions = (t("home.gallery.captions", { returnObjects: true }) as string[]) ?? [];
   const GALLERY = GALLERY_SRCS.map((src, i) => ({ src, caption: captions[i] ?? "" }));
 
-  const TEACHINGS = [
-    {
-      typeKey: "home.teachingsGlimpse.typeArticle",
-      titleKey: "home.teachingsGlimpse.items.barahachhetra.title",
-      excerptKey: "home.teachingsGlimpse.items.barahachhetra.excerpt",
-      thumb: `${b}images/teachings-prana.png`,
-      href: "/teachings/barahachhetra",
-      duration: "",
-    },
-    {
-      typeKey: "home.teachingsGlimpse.typeArticle",
-      titleKey: "home.teachingsGlimpse.items.kundalini.title",
-      excerptKey: "home.teachingsGlimpse.items.kundalini.excerpt",
-      thumb: `${b}images/teachings-kundalini.png`,
-      href: "/teachings/kundalini-chakras",
-      duration: "",
-    },
-    {
-      typeKey: "home.teachingsGlimpse.typeVideo",
-      titleKey: "home.teachingsGlimpse.items.mahayogVideo.title",
-      excerptKey: "home.teachingsGlimpse.items.mahayogVideo.excerpt",
-      thumb: `${b}images/video-mahayog-sadhana.jpg`,
-      href: "https://www.youtube.com/watch?v=U2kbxV0zy-E&t=49s",
-      duration: t("home.teachingsGlimpse.items.mahayogVideo.duration"),
-    },
-    {
-      typeKey: "home.teachingsGlimpse.typeArticle",
-      titleKey: "home.teachingsGlimpse.items.guruSoul.title",
-      excerptKey: "home.teachingsGlimpse.items.guruSoul.excerpt",
-      thumb: `${b}images/teachings-guru-soul.png`,
-      href: "/teachings/guru-imperishable-soul",
-      duration: "",
-    },
-  ];
 
   return (
     <div className="bg-[#faf9f6] text-[#3d3830] min-h-screen">
@@ -713,56 +679,6 @@ export default function Home() {
                 <p className="text-base text-[#6a6058] leading-relaxed flex-1">{t("home.projects.cultural.desc")}</p>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── TEACHINGS GLIMPSE ── */}
-      <section className="py-24 px-6 bg-[#faf9f6]">
-        <div className="max-w-3xl mx-auto">
-          <div className="text-center mb-12">
-            <div className="flex items-center justify-center gap-4 mb-4">
-              <div className="h-px w-10 bg-[#b8892a]/40" />
-              <span className="uppercase tracking-[0.3em] text-xs text-[#b8892a] font-medium">{t("home.teachingsGlimpse.eyebrow")}</span>
-              <div className="h-px w-10 bg-[#b8892a]/40" />
-            </div>
-            <h2 className="font-['Cormorant_Garamond'] text-4xl md:text-5xl font-light text-[#2e2820]">{t("home.teachingsGlimpse.heading")}</h2>
-          </div>
-
-          {/* Preview rows with fade-out */}
-          <div className="relative">
-            <div className="space-y-0 divide-y divide-[#e8dece]">
-              {TEACHINGS.map((item, i) => (
-                <Link key={i} href={item.href}>
-                  <div className="flex items-start gap-5 py-5 group cursor-pointer">
-                    <div className="shrink-0 w-20 h-20 rounded-xl overflow-hidden">
-                      <img src={item.thumb} alt="" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <div className="flex items-center gap-2 mb-2">
-                        <span className="text-xs uppercase tracking-[0.2em] text-[#b8892a] font-semibold">{t(item.typeKey)}</span>
-                        {item.duration && <span className="text-xs text-[#9a8878]">· {item.duration}</span>}
-                      </div>
-                      <h3 className="font-['Cormorant_Garamond'] text-2xl font-light text-[#2e2820] group-hover:text-[#b8892a] transition-colors leading-snug mb-1.5">{t(item.titleKey)}</h3>
-                      <p className="text-sm text-[#9a8878] leading-relaxed line-clamp-1">{t(item.excerptKey)}</p>
-                    </div>
-                    <ArrowRight className="w-5 h-5 text-[#b8892a]/40 group-hover:text-[#b8892a] shrink-0 mt-2 transition-colors" strokeWidth={1.5} />
-                  </div>
-                </Link>
-              ))}
-            </div>
-
-            {/* Fade-out gradient */}
-            <div className="absolute bottom-0 left-0 right-0 h-28 bg-gradient-to-t from-[#faf9f6] to-transparent pointer-events-none" />
-          </div>
-
-          <div className="text-center mt-4">
-            <Link href="/teachings">
-              <span className="inline-flex items-center gap-2 text-sm text-[#b8892a] hover:text-[#9d7422] font-medium tracking-wide transition-colors cursor-pointer border-b border-[#b8892a]/40 hover:border-[#b8892a] pb-0.5">
-                {t("home.teachingsGlimpse.cta")}
-                <ArrowRight className="w-4 h-4" strokeWidth={1.5} />
-              </span>
-            </Link>
           </div>
         </div>
       </section>
