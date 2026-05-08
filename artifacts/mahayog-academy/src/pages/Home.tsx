@@ -78,6 +78,7 @@ export default function Home() {
       href: "/meditation",
       img: `${b}images/mahayog-group-meditation.jpg`,
       overlay: "bg-gradient-to-t from-[#1a0f05]/50 to-transparent",
+      mobilePos: "50% 30%",
     },
     {
       key: "ashram",
@@ -315,7 +316,7 @@ export default function Home() {
                 <Link key={path.href} href={path.href}>
                   <div className="snap-start shrink-0 w-[82vw] group cursor-pointer bg-white rounded-2xl overflow-hidden border border-[#e8dece] flex flex-col">
                     <div className="relative h-48 overflow-hidden">
-                      <img src={path.img} alt={label} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                      <img src={path.img} alt={label} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" style={path.mobilePos ? { objectPosition: path.mobilePos } : undefined} />
                       <div className={`absolute inset-0 ${path.overlay}`} />
                     </div>
                     <div className="p-5 flex flex-col flex-1">
