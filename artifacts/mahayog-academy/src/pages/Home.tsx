@@ -78,7 +78,7 @@ export default function Home() {
       href: "/meditation",
       img: `${b}images/mahayog-group-meditation.jpg`,
       overlay: "bg-gradient-to-t from-[#1a0f05]/50 to-transparent",
-      mobilePos: "50% 30%",
+      mobilePos: "50% 50%",
     },
     {
       key: "ashram",
