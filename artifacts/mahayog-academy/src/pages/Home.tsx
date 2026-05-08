@@ -212,11 +212,11 @@ export default function Home() {
                   alt={t("home.pillars.mahayog.title")}
                   className="w-full h-full object-cover object-bottom md:object-left group-hover:scale-105 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#1a0f05]/95 via-[#1a0f05]/40 to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-7">
-                  <div className="h-px w-8 bg-[#b8892a] mb-4" />
-                  <h3 className="font-['Cormorant_Garamond'] text-4xl font-light text-white mb-2 leading-tight">{t("home.pillars.mahayog.title")}</h3>
-                  <p className="text-sm text-white/65 leading-relaxed mb-5">{t("home.pillars.mahayog.desc")}</p>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#1a0f05] via-[#1a0f05]/75 to-[#1a0f05]/10" />
+                <div className="absolute bottom-0 left-0 right-0 p-4 md:p-7">
+                  <div className="h-px w-8 bg-[#b8892a] mb-2 md:mb-4" />
+                  <h3 className="font-['Cormorant_Garamond'] text-3xl md:text-4xl font-light text-white mb-1 md:mb-2 leading-tight">{t("home.pillars.mahayog.title")}</h3>
+                  <p className="text-sm text-white/85 leading-relaxed mb-3 md:mb-5">{t("home.pillars.mahayog.desc")}</p>
                   <span className="inline-flex items-center gap-2 text-[#c9a24e] text-xs tracking-[0.15em] uppercase font-medium group-hover:gap-3 transition-all duration-300">
                     {t("home.pillars.mahayog.cta")} <ArrowRight className="w-3.5 h-3.5" strokeWidth={1.5} />
                   </span>
@@ -232,11 +232,11 @@ export default function Home() {
                   alt={t("home.pillars.mahayogi.alt")}
                   className="w-full h-full object-cover object-bottom md:object-top group-hover:scale-105 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#1a0f05]/95 via-[#1a0f05]/30 to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-7">
-                  <div className="h-px w-8 bg-[#b8892a] mb-4" />
-                  <h3 className="font-['Cormorant_Garamond'] text-4xl font-light text-white mb-2 leading-tight">{t("home.pillars.mahayogi.title")}</h3>
-                  <p className="text-sm text-white/65 leading-relaxed mb-5">{t("home.pillars.mahayogi.desc")}</p>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#1a0f05] via-[#1a0f05]/75 to-[#1a0f05]/10" />
+                <div className="absolute bottom-0 left-0 right-0 p-4 md:p-7">
+                  <div className="h-px w-8 bg-[#b8892a] mb-2 md:mb-4" />
+                  <h3 className="font-['Cormorant_Garamond'] text-3xl md:text-4xl font-light text-white mb-1 md:mb-2 leading-tight">{t("home.pillars.mahayogi.title")}</h3>
+                  <p className="text-sm text-white/85 leading-relaxed mb-3 md:mb-5">{t("home.pillars.mahayogi.desc")}</p>
                   <span className="inline-flex items-center gap-2 text-[#c9a24e] text-xs tracking-[0.15em] uppercase font-medium group-hover:gap-3 transition-all duration-300">
                     {t("home.pillars.mahayogi.cta")} <ArrowRight className="w-3.5 h-3.5" strokeWidth={1.5} />
                   </span>
@@ -252,11 +252,11 @@ export default function Home() {
                   alt={t("home.pillars.forMankind.alt")}
                   className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#1a0f05]/95 via-[#1a0f05]/40 to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-7">
-                  <div className="h-px w-8 bg-[#b8892a] mb-4" />
-                  <h3 className="font-['Cormorant_Garamond'] text-4xl font-light text-white mb-2 leading-tight">{t("home.pillars.forMankind.title")}</h3>
-                  <p className="text-sm text-white/65 leading-relaxed mb-5">{t("home.pillars.forMankind.desc")}</p>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#1a0f05] via-[#1a0f05]/75 to-[#1a0f05]/10" />
+                <div className="absolute bottom-0 left-0 right-0 p-4 md:p-7">
+                  <div className="h-px w-8 bg-[#b8892a] mb-2 md:mb-4" />
+                  <h3 className="font-['Cormorant_Garamond'] text-3xl md:text-4xl font-light text-white mb-1 md:mb-2 leading-tight">{t("home.pillars.forMankind.title")}</h3>
+                  <p className="text-sm text-white/85 leading-relaxed mb-3 md:mb-5">{t("home.pillars.forMankind.desc")}</p>
                   <span className="inline-flex items-center gap-2 text-[#c9a24e] text-xs tracking-[0.15em] uppercase font-medium group-hover:gap-3 transition-all duration-300">
                     {t("home.pillars.forMankind.cta")} <ArrowRight className="w-3.5 h-3.5" strokeWidth={1.5} />
                   </span>
