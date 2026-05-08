@@ -283,9 +283,9 @@ export default function Home() {
               </div>
             </Link>
 
-            {/* Mahayogi — centre, rises above side cards */}
+            {/* Mahayogi — centre */}
             <Link href="/founder-guru">
-              <div className="group relative rounded-3xl overflow-hidden h-[510px] md:h-[580px] md:-mt-12 cursor-pointer shadow-2xl hover:shadow-[#b8892a]/30 transition-all duration-500 ring-1 ring-[#b8892a]/40">
+              <div className="group relative rounded-3xl overflow-hidden h-[440px] md:h-[500px] cursor-pointer shadow-lg hover:shadow-2xl hover:shadow-[#b8892a]/20 transition-all duration-500">
                 <img
                   src={`${b}images/gurudev-darshan-smile.jpg`}
                   alt={t("home.pillars.mahayogi.alt")}
