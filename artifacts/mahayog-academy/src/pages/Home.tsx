@@ -169,12 +169,12 @@ export default function Home() {
           </h1>
 
           <div className="flex items-center justify-center gap-4 flex-wrap">
-            <Link href="/about">
+            <a href="#explore-paths" onClick={e => { e.preventDefault(); document.getElementById("explore-paths")?.scrollIntoView({ behavior: "smooth" }); }}>
               <span className="inline-flex items-center gap-2 bg-[#b8892a] hover:bg-[#9d7422] text-white text-sm px-8 py-3.5 rounded-full tracking-wider transition-all duration-200 cursor-pointer shadow-lg shadow-[#b8892a]/30">
                 {t("home.hero.ctaExplore")}
                 <ArrowRight className="w-4 h-4" strokeWidth={1.5} />
               </span>
-            </Link>
+            </a>
           </div>
         </div>
 
@@ -297,7 +297,7 @@ export default function Home() {
       </div>{/* end decorative background wrapper */}
 
       {/* ── EXPLORE PATHS ── */}
-      <section className="py-10 md:py-24 bg-[#f5ece0]">
+      <section id="explore-paths" className="py-10 md:py-24 bg-[#f5ece0]">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-6 md:mb-14">
             <span className="uppercase tracking-[0.3em] text-xs text-[#b8892a] font-medium">{t("home.paths.eyebrow")}</span>
