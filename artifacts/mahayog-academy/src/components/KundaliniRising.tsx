@@ -81,10 +81,11 @@ export default function KundaliniRising() {
   const isAfter = phase === 1 || phase === 2;
 
   return (
-    <section id="kundalini-rising" style={{ background: "#1e1710" }} className="relative py-20 px-6 overflow-hidden">
-      {/* Desktop fade edges — top and bottom */}
-      <div className="hidden md:block absolute inset-x-0 top-0 h-24 pointer-events-none z-10" style={{ background: "linear-gradient(to bottom, #f5efe6, transparent)" }} />
-      <div className="hidden md:block absolute inset-x-0 bottom-0 h-24 pointer-events-none z-10" style={{ background: "linear-gradient(to top, #f5efe6, transparent)" }} />
+    <section
+      id="kundalini-rising"
+      className="relative py-20 px-6 overflow-hidden"
+      style={{ background: "linear-gradient(to bottom, #f5efe6 0%, #1e1710 12%, #1e1710 88%, #f5efe6 100%)" }}
+    >
       <style>{`
         @keyframes kr-burst { 0%{transform:scale(.5);opacity:0} 45%{transform:scale(1.55);opacity:1} 100%{transform:scale(1);opacity:1} }
         @keyframes kr-glow  { 0%,100%{opacity:.55} 50%{opacity:1} }
