@@ -9,8 +9,8 @@ export const modules: ModuleMap = {
   "./components/mockups/chakra-nadi-preserved/ChakraNadi.tsx": () => import("../components/mockups/chakra-nadi-preserved/ChakraNadi.tsx"),
   "./components/mockups/hero-variants/Banner.tsx": () => import("../components/mockups/hero-variants/Banner.tsx"),
   "./components/mockups/hero-variants/Compact.tsx": () => import("../components/mockups/hero-variants/Compact.tsx"),
-  "./components/mockups/kundalini-rising/KundaliniRising.tsx": () => import("../components/mockups/kundalini-rising/KundaliniRising.tsx"),
   "./components/mockups/initiative-cards/OptionA.tsx": () => import("../components/mockups/initiative-cards/OptionA.tsx"),
   "./components/mockups/initiative-cards/OptionB.tsx": () => import("../components/mockups/initiative-cards/OptionB.tsx"),
-  "./components/mockups/initiative-cards/OptionC.tsx": () => import("../components/mockups/initiative-cards/OptionC.tsx")
+  "./components/mockups/initiative-cards/OptionC.tsx": () => import("../components/mockups/initiative-cards/OptionC.tsx"),
+  "./components/mockups/kundalini-rising/KundaliniRising.tsx": () => import("../components/mockups/kundalini-rising/KundaliniRising.tsx")
 };
